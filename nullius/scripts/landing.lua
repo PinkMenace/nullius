@@ -97,7 +97,7 @@ end
 function landing_site(surface, loc, frc)
   for _, entity in pairs (surface.find_entities_filtered{
       area = {{loc.x - 32, loc.y - 24}, {loc.x + 32, loc.y + 24}},
-      force = "neutral", collision_mask = "player-layer"}) do
+      force = "neutral", collision_mask = "player"}) do
     if entity.valid then
       entity.destroy()
     end

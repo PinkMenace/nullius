@@ -136,7 +136,7 @@ local function landfill_map(fillname, goalname)
   end
 
   if ((variation == nil) or (variation < 1) or (variation > 9)) then
-    local proto = game.tile_prototypes[goalname]
+    local proto = prototypes.tile[goalname]
 	if (proto ~= nil) then
 	  variation = (proto.layer % 9) + 1
 	else
@@ -190,7 +190,7 @@ local function landfill_map(fillname, goalname)
     end
   end
 
-  if ((newname == nil) or (game.tile_prototypes[newname] == nil)) then
+  if ((newname == nil) or (prototypes.tile[newname] == nil)) then
     newname = fillname
   end
   return newname
@@ -221,13 +221,16 @@ function blank_surface(surface, newname)
     richness = 0
   }
 
-  for tn, _ in pairs(game.tile_prototypes) do
+  for tn, _ in pairs(prototypes.tile) do
     if tn:find("water") then
       mapgen.property_expression_names["tile:"..tn..":probability"] = -200
     end
   end
 
   game.create_surface(newname, mapgen)
+  for _, force in pairs(game.forces) do
+    force.set_surface_hidden(newname, true)
+  end
   return game.surfaces[newname]
 end
 
@@ -685,7 +688,7 @@ function beach_tile(oldtile)
 	local variation = tonumber(string.sub(oldtile, -1, -1))
 	local newvar = math.floor((variation + 1) / 2)
 	local sandname = (string.sub(oldtile, 1, -7) .. "sand-" .. newvar)
-	if (game.tile_prototypes[sandname] ~= nil) then
+	if (prototypes.tile[sandname] ~= nil) then
 	  return sandname
 	end
   end
@@ -1105,7 +1108,7 @@ function grass_area(surface, center, fillsurface)
 
   local grass_matrix = init_grass_matrix()
   local land_tiles = surface.find_tiles_filtered{
-      area=a128, collision_mask="ground-tile"}
+      area=a128, collision_mask="ground_tile"}
   local candidates = { }
   local candtiles = { }
   local candnum = 0
@@ -1258,9 +1261,9 @@ end
 
 
 function update_grass()
-  if (global.nullius_grass_queue == nil) then return end
+  if (storage.nullius_grass_queue == nil) then return end
   if ((game.tick % 3) ~= 1) then return end
-  local q = global.nullius_grass_queue[global.nullius_grass_head]
+  local q = storage.nullius_grass_queue[storage.nullius_grass_head]
   local qx = q.center.x / 32
   local qy = q.center.y / 32
   local fs = q.fillsurface
@@ -1271,10 +1274,10 @@ function update_grass()
 	  local chunkbound = {x=(qx+i), y=(qy+j)}
 	  if (not (fs.is_chunk_generated(chunkbound) and
           qs.is_chunk_generated(chunkbound))) then
-	    if (global.nullius_grass_timer < 20) then
-		  global.nullius_grass_timer = global.nullius_grass_timer + 1
+	    if (storage.nullius_grass_timer < 20) then
+		  storage.nullius_grass_timer = storage.nullius_grass_timer + 1
 		else
-		  global.nullius_grass_timer = 0
+		  storage.nullius_grass_timer = 0
 		  fs.force_generate_chunk_requests()
 		end
 		return
@@ -1290,10 +1293,10 @@ function update_grass()
     bump_mission_goal(4, score, q.force)
   end
 
-  global.nullius_grass_queue[global.nullius_grass_head] = nil
-  global.nullius_grass_head = global.nullius_grass_head + 1
-  global.nullius_grass_timer = 0
-  if (global.nullius_grass_head > global.nullius_grass_tail) then
-    global.nullius_grass_queue = nil
+  storage.nullius_grass_queue[storage.nullius_grass_head] = nil
+  storage.nullius_grass_head = storage.nullius_grass_head + 1
+  storage.nullius_grass_timer = 0
+  if (storage.nullius_grass_head > storage.nullius_grass_tail) then
+    storage.nullius_grass_queue = nil
   end
 end

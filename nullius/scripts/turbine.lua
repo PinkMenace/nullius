@@ -33,9 +33,9 @@ function build_turbine(entity)
   if (not (entity.valid and entity.supports_direction)) then return end
 
   local entry = { }
-  if (global.nullius_turbines == nil) then
-    global.nullius_turbines = { }
-  elseif (global.nullius_turbines[entity.unit_number] == entry) then
+  if (storage.nullius_turbines == nil) then
+    storage.nullius_turbines = { }
+  elseif (storage.nullius_turbines[entity.unit_number] == entry) then
     return
   end
 
@@ -49,8 +49,8 @@ function build_turbine(entity)
   local priority = turbine_priority(entity.name)
   if ((typestr == nil) or (priority == nil)) then return end
 
-  script.register_on_entity_destroyed(entity)
-  global.nullius_turbines[entity.unit_number] = entry
+  script.register_on_object_destroyed(entity)
+  storage.nullius_turbines[entity.unit_number] = entry
 
   local pos = entity.position
   entry.connector = entity.surface.create_entity{
@@ -80,10 +80,10 @@ local function destroy_if_valid(entity)
 end
 
 function remove_turbine(unit)
-  if (global.nullius_turbines == nil) then return false end
-  local entry = global.nullius_turbines[unit]
+  if (storage.nullius_turbines == nil) then return false end
+  local entry = storage.nullius_turbines[unit]
   if (entry == nil) then return false end
-  global.nullius_turbines[unit] = nil
+  storage.nullius_turbines[unit] = nil
   destroy_if_valid(entry.connector)
   destroy_if_valid(entry.generator)
   destroy_if_valid(entry.vent)
@@ -95,7 +95,7 @@ local function replace_turbine(entity, force, newname)
   local furnace_contents = save_fluid_contents(entity)
   local connector_contents = nil
   local generator_contents = nil
-  local entry = global.nullius_turbines[entity.unit_number]
+  local entry = storage.nullius_turbines[entity.unit_number]
   if (entry ~= nil) then
     connector_contents = save_fluid_contents(entry.connector)
 	generator_contents = save_fluid_contents(entry.generator)
@@ -114,7 +114,7 @@ local function replace_turbine(entity, force, newname)
 
   build_turbine(entity)
   restore_fluid_contents(entity, furnace_contents)
-  local newentry = global.nullius_turbines[entity.unit_number]
+  local newentry = storage.nullius_turbines[entity.unit_number]
   if (newentry ~= nil) then
     restore_fluid_contents(newentry.connector, connector_contents)
 	restore_fluid_contents(newentry.generator, generator_contents)
@@ -284,20 +284,20 @@ script.on_event(defines.events.on_entity_settings_pasted, entity_paste_event)
 
 
 function dolly_moved_entity(event)
-  if (global.nullius_turbines == nil) then return end
+  if (storage.nullius_turbines == nil) then return end
   if (event == nil) then return end
   local entity = event.moved_entity
   if ((entity == nil) or (not entity.valid)) then return end
   if (string.sub(entity.name, 1, 16) ~= "nullius-turbine-") then return end
-  local entry = global.nullius_turbines[entity.unit_number]
+  local entry = storage.nullius_turbines[entity.unit_number]
   if (entry == nil) then return end
   replace_turbine(entity, force, nil)
 end
 
 
 function convert_all_turbines()
-  if (global.nullius_turbines == nil) then
-    global.nullius_turbines = { }
+  if (storage.nullius_turbines == nil) then
+    storage.nullius_turbines = { }
   end
   for _,surface in pairs(game.surfaces) do
     local turbines = surface.find_entities_filtered{name=

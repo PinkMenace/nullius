@@ -1,6 +1,6 @@
 function entity_added(entity, handbuilt)
   if (entity.type == "spider-vehicle") then
-	mecha_added(entity)
+	  mecha_added(entity)
     return
   end
   if (string.sub(entity.name, 1, 8) ~= "nullius-") then
@@ -64,10 +64,10 @@ end
 
 
 function entity_hand_built(event)
-  entity_added(event.created_entity, event)
+  entity_added(event.entity, event)
 end
 function entity_bot_built(event)
-  entity_added(event.created_entity, nil)
+  entity_added(event.entity, nil)
 end
 function entity_raised(event)
   entity_added(event.entity, nil)
@@ -96,7 +96,7 @@ script.on_event(defines.events.script_raised_revive, entity_raised)
 script.on_event(defines.events.on_player_mined_entity, entity_mined)
 script.on_event(defines.events.on_robot_mined_entity, entity_mined)
 script.on_event(defines.events.on_entity_died, entity_died)
-script.on_event(defines.events.on_entity_destroyed, entity_destroyed)
+script.on_event(defines.events.on_object_destroyed, entity_destroyed)
 
 
 function update_tick()

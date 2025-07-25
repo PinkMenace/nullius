@@ -7,7 +7,7 @@ rotate_right = {
 
 
 function update_build_statistics(entity, force, deconstruct)
-  force.entity_build_count_statistics.on_flow(entity.name,
+  force.get_entity_build_count_statistics("nauvis").on_flow(entity.name,
       ((deconstruct and -1) or 1))
 end
 
@@ -31,7 +31,7 @@ end
 
 
 function replace_fluid_entity(entity, newname, force, dir)
-  if (game.entity_prototypes[newname] == nil) then return nil end
+  if (prototypes.entity[newname] == nil) then return nil end
   if (dir == nil) then dir = entity.direction end
   if (entity.type == "entity-ghost") then
     local pos = entity.position
@@ -172,24 +172,24 @@ local function match_pipette(pipette, player, event)
 end
   
 function check_pipette(event)
-  if ((event == nil) or (global.nullius_pipette == nil)) then return nil end
+  if ((event == nil) or (storage.nullius_pipette == nil)) then return nil end
   local player = game.players[event.player_index]
   if ((player == nil) or (not player.valid)) then return nil end
-  local pipette = global.nullius_pipette[player.index]
+  local pipette = storage.nullius_pipette[player.index]
   if (pipette == nil) then return nil end
   local ret = match_pipette(pipette, player, event)
   if (ret ~= nil) then return ret end
-  global.nullius_pipette[player.index] = nil
+  storage.nullius_pipette[player.index] = nil
   return nil
 end
 
 function pipette_event(event)
   local player = game.players[event.player_index]
   if ((player == nil) or (not player.valid)) then return end
-  if (global.nullius_pipette == nil) then
-    global.nullius_pipette = { }
+  if (storage.nullius_pipette == nil) then
+    storage.nullius_pipette = { }
   end
-  global.nullius_pipette[player.index] = nil
+  storage.nullius_pipette[player.index] = nil
 
   local target = player.selected
   if ((target == nil) or (not target.valid)) then return end
@@ -207,7 +207,7 @@ function pipette_event(event)
   if (item.place_result.name == proto.name) then return end
   if (string.sub(proto.name, 1, 8) ~= "nullius-") then return end
 
-  global.nullius_pipette[player.index] = {
+  storage.nullius_pipette[player.index] = {
     item = item,
 	entity = proto,
 	tick = event.tick

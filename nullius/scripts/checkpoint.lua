@@ -174,17 +174,17 @@ local broken_data = {
 }
 
 function init_broken()
-  if ((global.nullius_broken_status == nil) or
-      (not global.nullius_alignment)) then
-    global.nullius_broken_status = {}
+  if ((storage.nullius_broken_status == nil) or
+      (not storage.nullius_alignment)) then
+    storage.nullius_broken_status = {}
   end
-  if (global.nullius_alignment) then
+  if (storage.nullius_alignment) then
 	broken_data["align-transponder"] = 1
   end
   for suffix, count in pairs(broken_data) do
     local ind = "nullius-broken-" .. suffix
-	local cur = (global.nullius_broken_status[ind] or 0)
-    global.nullius_broken_status[ind] = (count + cur)
+	local cur = (storage.nullius_broken_status[ind] or 0)
+    storage.nullius_broken_status[ind] = (count + cur)
   end
 end
 
@@ -209,8 +209,8 @@ function reset_checkpoints(force)
 	end
   end
 
-  if ((global.nullius_broken_status ~= nil) and
-      (not global.nullius_alignment)) then
+  if ((storage.nullius_broken_status ~= nil) and
+      (not storage.nullius_alignment)) then
     for suffix, count in pairs(broken_data) do
       local broken_name = "nullius-broken-" .. suffix
 	  if (not broken_disabled(broken_name)) then
@@ -221,8 +221,8 @@ function reset_checkpoints(force)
 	end
   end
 
-  global.checkpoint_list[force.index] = checkset
-  global.checkpoint_number[force.index] = checknum
+  storage.checkpoint_list[force.index] = checkset
+  storage.checkpoint_number[force.index] = checknum
 end
 
 function init_force_checkpoints(force)
@@ -241,8 +241,8 @@ function init_force_checkpoints(force)
 end
 
 function update_checkpoint_list(techname)
-  if (global.checkpoint_prereqs == nil) then return end
-  if (global.checkpoint_prereqs[techname] == true) then
+  if (storage.checkpoint_prereqs == nil) then return end
+  if (storage.checkpoint_prereqs[techname] == true) then
     for _, force in pairs(game.forces) do
 	  if (force.research_enabled) then
         reset_checkpoints(force)
@@ -255,15 +255,15 @@ function init_checkpoint_prereqs()
   local prereqs = { }
   for suffix, check in pairs(checkpoint_data) do
     local techname = "nullius-checkpoint-" .. suffix
-    local tech = game.technology_prototypes[techname]
+    local tech = prototypes.technology[techname]
     for _, prereq in pairs(tech.prerequisites) do
       prereqs[prereq.name] = true
 	end
   end
 
-  global.checkpoint_prereqs = prereqs
-  global.checkpoint_list = { }
-  global.checkpoint_number = { }
+  storage.checkpoint_prereqs = prereqs
+  storage.checkpoint_list = { }
+  storage.checkpoint_number = { }
 end
 
 
@@ -303,27 +303,27 @@ local function test_checkpoint_req(force, req)
   local list = req[4]
   local stats = nil
   if (ctyp == CHK_ITEM) then
-    stats = force.item_production_statistics
+    stats = force.get_item_production_statistics("nauvis")
   elseif (ctyp == CHK_FLUID) then
-    stats = force.fluid_production_statistics
+    stats = force.get_fluid_production_statistics("nauvis")
   elseif (ctyp == CHK_BUILD) then
-    stats = force.entity_build_count_statistics
+    stats = force.get_entity_build_count_statistics("nauvis")
   elseif (ctyp == CHK_OBJECTIVE) then
-    if (global.nullius_mission_status == nil) then return 0 end
-    if (global.nullius_mission_complete) then return 1 end
+    if (storage.nullius_mission_status == nil) then return 0 end
+    if (storage.nullius_mission_complete) then return 1 end
 	return math.min(1, math.max(0,
-	    (global.nullius_mission_status[calc] / goal)))
+	    (storage.nullius_mission_status[calc] / goal)))
   elseif (ctyp == CHK_SPECIAL) then
     if (calc == 1) then
-	  if (global.nullius_switch_body_count == nil) then return 0 end
-	  local count = global.nullius_switch_body_count[force.name]
+	  if (storage.nullius_switch_body_count == nil) then return 0 end
+	  local count = storage.nullius_switch_body_count[force.name]
 	  if (count == nil) then return 0 end
 	  return math.min(1, math.max(0, (count / goal)))
 	elseif (calc == 2) then
 	  local count = count_req_list(list[1],
-	          force.fluid_production_statistics, STT_CONSUME) +
+	          force.get_fluid_production_statistics("nauvis"), STT_CONSUME) +
 		  count_req_list(list[2],
-	          force.item_production_statistics, STT_PRODUCE)
+	          force.get_item_production_statistics("nauvis"), STT_PRODUCE)
       return math.min(math.max((count / goal), 0), 1)
     else
       return 0
@@ -337,25 +337,25 @@ local function test_checkpoint_req(force, req)
 end
 
 local function update_checkpoint_force(force, tick)
-  local num = global.checkpoint_number[force.index]
+  local num = storage.checkpoint_number[force.index]
   if ((num == nil) or (num < 1)) then return end
 
   local ind = (tick % num) + 1
-  local lst = global.checkpoint_list[force.index]
+  local lst = storage.checkpoint_list[force.index]
   local check = lst[ind]
   local tech = nil
   if (check.category == CAT_BROKEN) then
     if (broken_disabled(check.name)) then
       reset_checkpoints(force)
-	  return	
-	end
+	    return
+	  end
   else
     tech = force.technologies[check.name]
     if (tech == nil) then return end
     if ((not tech.enabled) or tech.researched) then
       reset_checkpoints(force)
-	  return
-    end
+	    return
+      end
   end
 
   local progress = 0
@@ -372,8 +372,7 @@ local function update_checkpoint_force(force, tick)
 	    force.print({"technology-description.nullius-complete-checkpoint",
 		    "[technology="..tech.name.."]"}, {1, 0.75, 0.4})
 	  end
-	  if (force.research_queue_enabled and (force.current_research ~= nil) and
-          (force.current_research.name ~= tech.name)) then
+	  if ((force.current_research ~= nil) and (force.current_research.name ~= tech.name)) then
 		-- When checkpoint is in research queue, researching item
 		-- clears anything else in queue that has it as a dependency.
 		-- Try to restore the original queue afterwards.
@@ -408,7 +407,8 @@ local function update_checkpoint_force(force, tick)
         (force.current_research.name == tech.name)) then
 	  force.research_progress = progress
     else
-      force.set_saved_technology_progress(tech, progress)
+      -- force.set_saved_technology_progress(tech, progress)
+      force.technologies[tech.name].saved_progress = progress
     end
   end
 end
