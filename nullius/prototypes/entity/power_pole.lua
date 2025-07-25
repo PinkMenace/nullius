@@ -8,7 +8,7 @@ data:extend({
     type = "electric-pole",
     name = "nullius-power-pole-3",
     icons = data.raw.item["nullius-power-pole-3"].icons,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.2, result = "nullius-power-pole-3"},
     max_health = 125,
     maximum_wire_distance = 14.5,
@@ -22,7 +22,7 @@ data:extend({
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["electric-pole"]["medium-electric-pole"].damaged_trigger_effect,
-    drawing_box = {{-0.5, -2.8}, {0.5, 0.5}},
+    
     vehicle_impact_sound = data.raw["electric-pole"]["medium-electric-pole"].vehicle_impact_sound,
     open_sound = data.raw["electric-pole"]["medium-electric-pole"].open_sound,
     close_sound = data.raw["electric-pole"]["medium-electric-pole"].close_sound,
@@ -33,7 +33,7 @@ data:extend({
     pictures = {
       layers = {
         {
-          filename = ENTITYPATH .. "poles/hr-pole3.png",
+          filename = ENTITYPATH .. "poles/pole3.png",
           priority = "extra-high",
           width = 84,
           height = 252,
@@ -50,7 +50,7 @@ data:extend({
     type = "electric-pole",
     name = "nullius-power-pole-4",
     icons = data.raw.item["nullius-power-pole-4"].icons,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.5, result = "nullius-power-pole-4"},
     max_health = 150,
     maximum_wire_distance = 17.5,
@@ -63,7 +63,7 @@ data:extend({
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["electric-pole"]["medium-electric-pole"].damaged_trigger_effect,
-    drawing_box = {{-0.5, -2.8}, {0.5, 0.5}},
+    
     vehicle_impact_sound = data.raw["electric-pole"]["medium-electric-pole"].vehicle_impact_sound,
     open_sound = data.raw["electric-pole"]["medium-electric-pole"].open_sound,
     close_sound = data.raw["electric-pole"]["medium-electric-pole"].close_sound,
@@ -77,7 +77,7 @@ data:extend({
     type = "electric-pole",
     name = "nullius-pylon-2",
     icons = data.raw.item["nullius-pylon-2"].icons,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.6, result = "nullius-pylon-2"},
     max_health = 200,
     maximum_wire_distance = 48.5,
@@ -90,7 +90,7 @@ data:extend({
     collision_box = {{-0.65, -0.65}, {0.65, 0.65}},
     selection_box = {{-1, -1}, {1, 1}},
     damaged_trigger_effect = data.raw["electric-pole"]["big-electric-pole"].damaged_trigger_effect,
-    drawing_box = {{-1, -3}, {1, 0.5}},
+    
 
     vehicle_impact_sound = data.raw["electric-pole"]["big-electric-pole"].vehicle_impact_sound,
     open_sound = data.raw["electric-pole"]["big-electric-pole"].open_sound,
@@ -101,7 +101,7 @@ data:extend({
     pictures = {
       layers = {
         {
-          filename = BASEENTITY .. "big-electric-pole/hr-big-electric-pole.png",
+          filename = BASEENTITY .. "big-electric-pole/big-electric-pole.png",
           priority = "extra-high",
           width = 148,
           height = 312,
@@ -110,7 +110,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "big-electric-pole/hr-big-electric-pole-shadow.png",
+          filename = BASEENTITY .. "big-electric-pole/big-electric-pole-shadow.png",
           priority = "extra-high",
           width = 374,
           height = 94,
@@ -127,7 +127,7 @@ data:extend({
     type = "electric-pole",
     name = "nullius-pylon-3",
     icons = data.raw.item["nullius-pylon-3"].icons,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 2, result = "nullius-pylon-3"},
     max_health = 250,
     maximum_wire_distance = 64,
@@ -139,7 +139,7 @@ data:extend({
     collision_box = {{-0.65, -0.65}, {0.65, 0.65}},
     selection_box = {{-1, -1}, {1, 1}},
     damaged_trigger_effect = data.raw["electric-pole"]["big-electric-pole"].damaged_trigger_effect,
-    drawing_box = {{-1, -3}, {1, 0.5}},
+    
     vehicle_impact_sound = data.raw["electric-pole"]["big-electric-pole"].vehicle_impact_sound,
     open_sound = data.raw["electric-pole"]["big-electric-pole"].open_sound,
     close_sound = data.raw["electric-pole"]["big-electric-pole"].close_sound,
@@ -180,7 +180,7 @@ data:extend({
     resistances = {{ type = "impact", decrease = 100, percent = 90 }},
     collision_box = {{-0.65, -0.65}, {0.65, 0.65}},
     selection_box = {{-1, -1}, {1, 1}},
-    drawing_box = {{-1, -3}, {1, 1}},
+    
     damaged_trigger_effect = data.raw["electric-pole"]["substation"].damaged_trigger_effect,
     vehicle_impact_sound = data.raw["electric-pole"]["substation"].vehicle_impact_sound,
     open_sound = data.raw["electric-pole"]["substation"].open_sound,
@@ -208,7 +208,7 @@ data:extend({
     resistances = {{ type = "impact", decrease = 100, percent = 90 }},
     collision_box = {{-0.65, -0.65}, {0.65, 0.65}},
     selection_box = {{-1, -1}, {1, 1}},
-    drawing_box = {{-1, -3}, {1, 1}},
+    
     damaged_trigger_effect = data.raw["electric-pole"]["substation"].damaged_trigger_effect,
     vehicle_impact_sound = data.raw["electric-pole"]["substation"].vehicle_impact_sound,
     open_sound = data.raw["electric-pole"]["substation"].open_sound,

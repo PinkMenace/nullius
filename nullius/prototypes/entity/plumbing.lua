@@ -5,6 +5,9 @@ local BASEENTITY = "__base__/graphics/entity/"
 
 require("pipe_graphics")
 
+-- TODO: handle valves correctly
+data.raw["storage-tank"]["valve-return"] = table.deepcopy(data.raw["storage-tank"]["storage-tank"])
+data.raw["storage-tank"]["valve-return"].name = "valve-return"
 
 local op = data.raw["offshore-pump"]["offshore-pump"]
 local si1 = {
@@ -13,7 +16,7 @@ local si1 = {
   icons = data.raw.item["nullius-seawater-intake-1"].icons,
   minable = {mining_time = 0.5, result = "nullius-seawater-intake-1"},
   flags = {"placeable-neutral", "player-creation"},
-  collision_mask = {"object-layer", "ground-tile"},
+  collision_mask = { layers = {object = true, ground_tile = true}},
   crafting_categories = {"seawater-pumping"},
   crafting_speed = 1,
   fixed_recipe = "nullius-seawater",
@@ -21,9 +24,9 @@ local si1 = {
   show_recipe_icon_on_map = false,
   energy_source = {
     type = "electric",
-	usage_priority = "secondary-input",
-	emissions = 0.01,
-	drain = "10kW"
+	  usage_priority = "secondary-input",
+	  emissions = 0.01,
+	  drain = "10kW"
   },
   energy_usage = "190kW",
   ingredient_count = 1,
@@ -37,23 +40,20 @@ local si1 = {
     { type = "fire", decrease = 100, percent = 90 }
   },
   fluid_boxes = {{
-	production_type = "output",
-    base_area = 8,
-    base_level = 4,
+	  production_type = "output",
+    volume = 500,
     pipe_covers = pipecoverspictures(),
     filter = "nullius-seawater",
-    pipe_connections = {{position = {0, 2}, type = "output"}}
+    pipe_connections = {{position = {0, 1}, flow_direction = "output", direction = defines.direction.south}}
   }},
   pipe_covers = pipecoverspictures(),
-  module_specification = {
-    module_slots = 1,
-	module_info_icon_shift = { 0, 0 }
-  },
+  module_slots = 1,
   allowed_effects = {"speed", "consumption", "pollution"},
   fast_replaceable_group = "seawater-intake",
   next_upgrade = "nullius-seawater-intake-2",
   working_sound = op.working_sound,
-  vehicle_impact_sound = op.vehicle_impact_sound
+  vehicle_impact_sound = op.vehicle_impact_sound,
+  graphics_set = {}
 }
 
 si2 = util.table.deepcopy(si1)
@@ -65,11 +65,10 @@ si2.energy_source.drain = "50kW"
 si2.energy_usage = "750kW"
 si2.next_upgrade = nil
 si2.max_health = 300
-si2.fluid_boxes[1].base_level = 6
-si2.fluid_boxes[1].height = 2
-si2.module_specification.module_slots = 2
+si2.fluid_boxes[1].volume = 500
+si2.module_slots = 2
 
-si2.animation = {
+si2.graphics_set.animation = {
   north = scale_image({ layers = {
     animate_frame(op.graphics_set.glass_pictures.north),
     animate_frame(op.graphics_set.base_pictures.north),
@@ -100,7 +99,7 @@ si2.animation = {
   }}, 1.2, { x = 0.9, y = 0 })
 }
 
-si2.working_visualisations = {{
+si2.graphics_set.working_visualisations = {{
   apply_recipe_tint = "primary",
   north_animation = scale_image(op.graphics_set.fluid_animation.north,
       1.2, { x = 0, y = 0.9 }),
@@ -112,15 +111,15 @@ si2.working_visualisations = {{
       1.2, { x = 0.9, y = 0 })
 }}
 
-si1.animation = {
-  north = scale_image(si2.animation.north, 0.75, { x = 0, y = 0.38 }),
-  east = scale_image(si2.animation.east, 0.75, { x = -0.38, y = 0 }),
-  south = scale_image(si2.animation.south, 0.75, { x = 0, y = -0.38 }),
-  west = scale_image(si2.animation.west, 0.75, { x = 0.38, y = 0 })
+si1.graphics_set.animation = {
+  north = scale_image(si2.graphics_set.animation.north, 0.75, { x = 0, y = 0.38 }),
+  east = scale_image(si2.graphics_set.animation.east, 0.75, { x = -0.38, y = 0 }),
+  south = scale_image(si2.graphics_set.animation.south, 0.75, { x = 0, y = -0.38 }),
+  west = scale_image(si2.graphics_set.animation.west, 0.75, { x = 0.38, y = 0 })
 }
 
-local si2wv = si2.working_visualisations[1]
-si1.working_visualisations = {{
+local si2wv = si2.graphics_set.working_visualisations[1]
+si1.graphics_set.working_visualisations = {{
   apply_recipe_tint = "primary",
   north_animation = scale_image(si2wv.north_animation, 0.75, { x = 0, y = 0.38 }),
   east_animation = scale_image(si2wv.east_animation, 0.75, { x = -0.38, y = 0 }),
@@ -135,20 +134,21 @@ data:extend({
   {
     type = "offshore-pump",
     name = "nullius-legacy-seawater-intake-1",
-	localised_name = {"entity-name.nullius-legacy",
+	  localised_name = {"entity-name.nullius-legacy",
 	    {"entity-name.nullius-seawater-intake-1"}},
     localised_description = {"entity-description.nullius-seawater-intake-1"},
     icons = data.raw.item["nullius-legacy-seawater-intake-1"].icons,
     flags = {"placeable-neutral", "player-creation", "filter-directions",
-	    "hidden", "not-upgradable", "not-blueprintable"},
-    collision_mask = { "object-layer", "train-layer" },
-    center_collision_mask = { "water-tile", "object-layer", "player-layer" },
-    fluid_box_tile_collision_test = { "ground-tile" },
-    adjacent_tile_collision_test = { "water-tile" },
-    adjacent_tile_collision_mask = { "ground-tile" },
-    adjacent_tile_collision_box = { { -1, -2 }, { 1, -1 } },
+	    "not-upgradable", "not-blueprintable"},
+	  hidden = true,
+	  energy_source = {
+	    type = "void"
+	  },
+	  energy_usage = "60kW",
+	  fluid_source_offset = data.raw["offshore-pump"]["offshore-pump"].fluid_source_offset,
+    collision_mask = { layers = {object = true, train = true}},
     minable = {mining_time = 0.5, result = "nullius-seawater-intake-1"},
-	placeable_by = {item = "nullius-legacy-seawater-intake-1", count = 1},
+	  placeable_by = {item = "nullius-legacy-seawater-intake-1", count = 1},
     max_health = 150,
     corpse = "small-remnants",
     dying_explosion = "offshore-pump-explosion",
@@ -157,12 +157,11 @@ data:extend({
     selection_box = {{-1, -1.49}, {1, 0.49}},
     pumping_speed = 2,
     fluid_box = {
-      base_area = 8,
-      base_level = 4,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
       filter = "nullius-seawater",
-      pipe_connections = {{position = {0, 1}, type = "output"}}
+      pipe_connections = {{position = {0, 0}, flow_direction = "output", direction = defines.direction.south}}
     },
     tile_width = 1,
     tile_height = 1,
@@ -445,20 +444,21 @@ data:extend({
   {
     type = "offshore-pump",
     name = "nullius-legacy-seawater-intake-2",
-	localised_name = {"entity-name.nullius-legacy",
+	  localised_name = {"entity-name.nullius-legacy",
 	    {"entity-name.nullius-seawater-intake-2"}},
     localised_description = {"entity-description.nullius-seawater-intake-2"},
-	icons = data.raw.item["nullius-legacy-seawater-intake-2"].icons,
+	  icons = data.raw.item["nullius-legacy-seawater-intake-2"].icons,
     flags = {"placeable-neutral", "player-creation", "filter-directions",
-	    "hidden", "not-upgradable", "not-blueprintable"},
-    collision_mask = { "object-layer", "train-layer" },
-    center_collision_mask = { "water-tile", "object-layer", "player-layer" },
-    fluid_box_tile_collision_test = { "ground-tile" },
-    adjacent_tile_collision_test = { "water-tile" },
-    adjacent_tile_collision_mask = { "ground-tile" },
-    adjacent_tile_collision_box = { { -1, -2 }, { 1, -1 } },
+	    "not-upgradable", "not-blueprintable"},
+	  hidden = true,
+	  energy_source = {
+	    type = "void"
+	  },
+	  energy_usage = "60kW",
+	  fluid_source_offset = data.raw["offshore-pump"]["offshore-pump"].fluid_source_offset,
+    collision_mask = { layers = {object = true, train = true}},
     minable = {mining_time = 0.8, result = "nullius-seawater-intake-2"},
-	placeable_by = {item = "nullius-legacy-seawater-intake-2", count = 1},
+	  placeable_by = {item = "nullius-legacy-seawater-intake-2", count = 1},
     max_health = 300,
     corpse = "small-remnants",
     dying_explosion = "offshore-pump-explosion",
@@ -467,13 +467,11 @@ data:extend({
     selection_box = {{-1, -1.49}, {1, 0.49}},
     pumping_speed = 10,
     fluid_box = {
-      base_area = 6,
-      base_level = 5,
-      height = 2,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       production_type = "output",
       filter = "nullius-seawater",
-      pipe_connections = {{position = {0, 1}, type = "output"}}
+      pipe_connections = {{position = {0, 0}, flow_direction = "output", direction = defines.direction.south}}
     },
     tile_width = 1,
     tile_height = 1,
@@ -522,221 +520,221 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "output",
-        base_area = 10,
-        base_level = 0,
-        height = 4,
+        volume = 500,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
-          { positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} } }
+          { positions = { {1, -1}, {1, -1}, {-1, 1}, {-1, 1} }, direction = defines.direction.north }
         }
       }
     },
     pipe_covers = pipecoverspictures(),
-    module_specification = { module_slots = 1 },
+    module_slots = 1,
     allowed_effects = {"speed", "consumption", "pollution"},
     fast_replaceable_group = "well",
     next_upgrade = "nullius-well-2",
 
-    animation = {
-      north = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.4,
-            scale = 0.5,
-            tint = {0.48, 0.84, 1},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.4,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.4,
+              scale = 0.5,
+              tint = {0.48, 0.84, 1},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.4,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
-        }
-      },
-      east = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            x = 261,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            x = 220,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.4,
-            scale = 0.5,
-            tint = {0.48, 0.84, 1},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.4,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+        },
+        east = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              x = 261,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              x = 220,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.4,
+              scale = 0.5,
+              tint = {0.48, 0.84, 1},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.4,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
-        }
-      },
-      south = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            x = 522,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            x = 440,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.4,
-            scale = 0.5,
-            tint = {0.48, 0.84, 1},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.4,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+        },
+        south = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              x = 522,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              x = 440,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.4,
+              scale = 0.5,
+              tint = {0.48, 0.84, 1},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.4,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
-        }
-      },
-      west = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            x = 783,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            x = 660,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.4,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.4,
-            scale = 0.5,
-            tint = {0.48, 0.84, 1},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.4,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+        },
+        west = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              x = 783,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              x = 660,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.4,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.4,
+              scale = 0.5,
+              tint = {0.48, 0.84, 1},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.4,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
         }
       }
@@ -774,220 +772,220 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "output",
-        base_area = 10,
-        base_level = 0,
-        height = 6,
+        volume = 500,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
-          { positions = { {1, -2}, {2, -1}, {-1, 2}, {-2, 1} } }
+          { positions = { {1, -1}, {1, -1}, {-1, 1}, {-1, 1} }, direction = defines.direction.north }
         }
       }
     },
     pipe_covers = pipecoverspictures(),
-    module_specification = { module_slots = 2 },
+    module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
     fast_replaceable_group = "well",
 
-    animation = {
-      north = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.6,
-            tint = {0.45, 0.45, 1},
-            scale = 0.5,
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.6,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.6,
+              tint = {0.45, 0.45, 1},
+              scale = 0.5,
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.6,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
-        }
-      },
-      east = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            x = 261,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            x = 220,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.6,
-            scale = 0.5,
-            tint = {0.45, 0.45, 1},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.6,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+        },
+        east = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              x = 261,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              x = 220,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.6,
+              scale = 0.5,
+              tint = {0.45, 0.45, 1},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.6,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
-        }
-      },
-      south = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            x = 522,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            x = 440,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.6,
-            scale = 0.5,
-            tint = {0.45, 0.45, 1},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.6,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+        },
+        south = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              x = 522,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              x = 440,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.6,
+              scale = 0.5,
+              tint = {0.45, 0.45, 1},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.6,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
-        }
-      },
-      west = {
-        layers = {
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
-            priority = "extra-high",
-            width = 261,
-            height = 273,
-            x = 783,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(-2.25, -4.75),
-            scale = 0.5
-          },
-          {
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
-            priority = "extra-high",
-            width = 220,
-            height = 220,
-            x = 660,
-            scale = 0.5,
-            draw_as_shadow = true,
-            repeat_count = 40,
-            animation_speed = 0.6,
-            shift = util.by_pixel(6, 0.5)
-          },
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
-            animation_speed = 0.6,
-            scale = 0.5,
-            tint = {0.45, 0.45, 1},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-4, -24)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
-            animation_speed = 0.6,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.5,
-            shift = util.by_pixel(17.75, 14.5)
+        },
+        west = {
+          layers = {
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
+              priority = "extra-high",
+              width = 261,
+              height = 273,
+              x = 783,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(-2.25, -4.75),
+              scale = 0.5
+            },
+            {
+              filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
+              priority = "extra-high",
+              width = 220,
+              height = 220,
+              x = 660,
+              scale = 0.5,
+              draw_as_shadow = true,
+              repeat_count = 40,
+              animation_speed = 0.6,
+              shift = util.by_pixel(6, 0.5)
+            },
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.6,
+              scale = 0.5,
+              tint = {0.45, 0.45, 1},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-4, -24)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.6,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.5,
+              shift = util.by_pixel(17.75, 14.5)
+            }
           }
         }
       }
@@ -999,7 +997,8 @@ local lw1 = util.table.deepcopy(data.raw["assembling-machine"]["nullius-well-1"]
 lw1.name = "nullius-legacy-well-1"
 lw1.localised_name = {"entity-name.nullius-legacy", {"entity-name.nullius-well-1"}}
 lw1.icons = data.raw.item["nullius-legacy-well-1"].icons
-lw1.flags = {"placeable-neutral", "player-creation", "hidden", "not-upgradable", "not-blueprintable"}
+lw1.flags = {"placeable-neutral", "player-creation", "not-upgradable", "not-blueprintable"}
+lw1.hidden = true
 lw1.placeable_by = {item = "nullius-legacy-well-1", count = 1}
 lw1.fast_replaceable_group = nil
 lw1.next_upgrade = nil
@@ -1011,7 +1010,8 @@ local lw2 = util.table.deepcopy(data.raw["assembling-machine"]["nullius-well-2"]
 lw2.name = "nullius-legacy-well-2"
 lw2.localised_name = {"entity-name.nullius-legacy", {"entity-name.nullius-well-2"}}
 lw2.icons = data.raw.item["nullius-legacy-well-2"].icons
-lw2.flags = {"placeable-neutral", "player-creation", "hidden", "not-upgradable", "not-blueprintable"}
+lw2.flags = {"placeable-neutral", "player-creation", "not-upgradable", "not-blueprintable"}
+lw2.hidden = true
 lw2.placeable_by = {item = "nullius-legacy-well-2", count = 1}
 lw2.fast_replaceable_group = nil
 lw2.energy_source = {type="electric", usage_priority="secondary-input", emissions=0.02, drain="5kW"}
@@ -1030,11 +1030,11 @@ data:extend({
     crafting_speed = 1,
     fixed_recipe = "nullius-air-filtration",
     energy_source = {
-	  type = "electric",
-	  usage_priority = "secondary-input",
-	  emissions = 0.01,
-	  drain = "5kW"
-	},
+	    type = "electric",
+	    usage_priority = "secondary-input",
+	    emissions = 0.01,
+	    drain = "5kW"
+	  },
     energy_usage = "115kW",
     ingredient_count = 1,
     minable = {mining_time = 0.6, result = "nullius-air-filter-1"},
@@ -1045,46 +1045,48 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "air-filter",
     next_upgrade = "nullius-air-filter-2",
-    animation = {
-      north = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2, -0.4+0.25},
-        animation_speed = 0.5,
-        scale = 0.5
-      },
-      east = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2-0.25, -0.4},
-        animation_speed = 0.5,
-        scale = 0.5
-      },
-      south = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2, -0.4-0.25},
-        animation_speed = 0.5,
-        scale = 0.5
-      },
-      west = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2+0.25, -0.4},
-        animation_speed = 0.5,
-        scale = 0.5
+    graphics_set = {
+      animation = {
+        north = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2, -0.4+0.25},
+          animation_speed = 0.5,
+          scale = 0.5
+        },
+        east = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2-0.25, -0.4},
+          animation_speed = 0.5,
+          scale = 0.5
+        },
+        south = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2, -0.4-0.25},
+          animation_speed = 0.5,
+          scale = 0.5
+        },
+        west = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2+0.25, -0.4},
+          animation_speed = 0.5,
+          scale = 0.5
+        }
       }
     },
     resistances = {
@@ -1097,10 +1099,8 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 2,
-        base_level = 3,
-        height = 2,
-        pipe_connections = {{ position = {0, 2}, type = "output" }}
+        volume = 500,
+        pipe_connections = {{ position = {0, 1}, flow_direction = "output", direction = defines.direction.south }}
       },
     },
     pipe_covers = pipecoverspictures()
@@ -1130,53 +1130,55 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "air-filter",
     next_upgrade = "nullius-air-filter-3",
-    animation = {
-      north = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2, -0.4+0.125},
-        animation_speed = 0.5,
-        scale = 0.55
-      },
-      east = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2-0.125, -0.4},
-        animation_speed = 0.5,
-        scale = 0.55
-      },
-      south = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2, -0.4-0.125},
-        animation_speed = 0.5,
-        scale = 0.55
-      },
-      west = {
-        filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-        width = 256,
-        height = 256,
-        frame_count = 36,
-        line_length = 6,
-        shift = {0.2+0.125, -0.4},
-        animation_speed = 0.5,
-        scale = 0.55
+    graphics_set = {
+      animation = {
+        north = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2, -0.4+0.125},
+          animation_speed = 0.5,
+          scale = 0.55
+        },
+        east = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2-0.125, -0.4},
+          animation_speed = 0.5,
+          scale = 0.55
+        },
+        south = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2, -0.4-0.125},
+          animation_speed = 0.5,
+          scale = 0.55
+        },
+        west = {
+          filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+          width = 256,
+          height = 256,
+          frame_count = 36,
+          line_length = 6,
+          shift = {0.2+0.125, -0.4},
+          animation_speed = 0.5,
+          scale = 0.55
+        }
       }
     },
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
     },
-    module_specification = { module_slots = 1 },
+    module_slots = 1,
     allowed_effects = {"speed", "consumption", "pollution"},
     working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -1184,10 +1186,8 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 5,
-        base_level = 4,
-        height = 2,
-        pipe_connections = {{ position = {0, 2}, type = "output" }}
+        volume = 500,
+        pipe_connections = {{ position = {0, 1}, flow_direction = "output", direction = defines.direction.south }}
       },
     },
     pipe_covers = pipecoverspictures()
@@ -1216,21 +1216,23 @@ data:extend({
     collision_box = {{-1.1, -1.1}, {1.1, 1.1}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "air-filter",
-    animation = {
-      filename = "__angelspetrochem__/graphics/entity/air-filter/air-filter.png",
-      width = 256,
-      height = 256,
-      frame_count = 36,
-      line_length = 6,
-      shift = {0.3, -0.4},
-      animation_speed = 0.6,
-      scale = 0.6
+    graphics_set = {
+      animation = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
+        width = 256,
+        height = 256,
+        frame_count = 36,
+        line_length = 6,
+        shift = {0.3, -0.4},
+        animation_speed = 0.6,
+        scale = 0.6
+      }
     },
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
     },
-    module_specification = { module_slots = 2 },
+    module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
     working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
@@ -1238,10 +1240,8 @@ data:extend({
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        base_level = 5,
-        height = 3,
-        pipe_connections = {{ position = {0, 2}, type = "output" }}
+        volume = 500,
+        pipe_connections = {{ position = {0, 1}, flow_direction = "output", direction = defines.direction.south }}
       },
     },
     pipe_covers = pipecoverspictures()
@@ -1250,7 +1250,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "nullius-priority-valve",
-    icon = "__angelspetrochem__/graphics/icons/valve-inspector.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-inspector.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.6, mining_time = 0.2, result = "nullius-priority-valve"},
@@ -1265,12 +1265,10 @@ data:extend({
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      base_area = 1,
-      base_level = 1.25,
-      height = 5,
+      volume = 500,
       pipe_connections = {
-        { position = {0, 1}, type="output"},
-        { position = {0, -1} }
+        { position = {0, 0.1}, direction = defines.direction.south},
+        { position = {0, -0.1}, direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -1286,7 +1284,7 @@ data:extend({
         north = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1294,7 +1292,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
               priority = "extra-high",
               frames = 1,
               width = 64,
@@ -1303,7 +1301,7 @@ data:extend({
 		  }
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -1314,7 +1312,7 @@ data:extend({
         south = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1322,7 +1320,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
               priority = "extra-high",
               x = 128,
               frames = 1,
@@ -1333,7 +1331,7 @@ data:extend({
 		  }
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-inspector.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -1352,7 +1350,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "nullius-one-way-valve",
-    icon = "__angelspetrochem__/graphics/icons/valve-overflow.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.5, mining_time = 0.2, result = "nullius-one-way-valve"},
@@ -1367,11 +1365,10 @@ data:extend({
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      base_area = 1,
-      height = 6.25,
+      volume = 500,
       pipe_connections = {
-        { position = {0, 1}, type="output"},
-        { position = {0, -1} }
+        { position = {0, 0.1}, direction = defines.direction.south},
+        { position = {0, -0.1}, direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -1387,7 +1384,7 @@ data:extend({
         north = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1395,7 +1392,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
               priority = "extra-high",
               frames = 1,
               width = 64,
@@ -1404,7 +1401,7 @@ data:extend({
 		  }
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -1415,7 +1412,7 @@ data:extend({
         south = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1423,7 +1420,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
               priority = "extra-high",
               x = 128,
               frames = 1,
@@ -1434,7 +1431,7 @@ data:extend({
 		  }
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-overflow.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -1453,7 +1450,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "nullius-top-up-valve",
-    icon = "__angelspetrochem__/graphics/icons/valve-converter.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-converter.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.6, mining_time = 0.2, result = "nullius-top-up-valve"},
@@ -1468,11 +1465,10 @@ data:extend({
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      base_area = 1,
-      height = 2.5,
+      volume = 500,
       pipe_connections = {
-        { position = {0, 1}, type="output"},
-        { position = {0, -1} }
+        { position = {0, 0.1}, direction = defines.direction.south},
+        { position = {0, -0.1}, direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -1488,7 +1484,7 @@ data:extend({
         north = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1496,7 +1492,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
               priority = "extra-high",
               frames = 1,
               width = 64,
@@ -1505,7 +1501,7 @@ data:extend({
 		  }
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -1516,7 +1512,7 @@ data:extend({
         south = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1524,7 +1520,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
               priority = "extra-high",
               x = 128,
               frames = 1,
@@ -1535,7 +1531,7 @@ data:extend({
 		  }
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-converter.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -1554,7 +1550,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "nullius-relief-valve",
-    icon = "__angelspetrochem__/graphics/icons/valve-return.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-return.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.6, mining_time = 0.2, result = "nullius-relief-valve"},
@@ -1569,12 +1565,10 @@ data:extend({
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      base_area = 1,
-      base_level = 3.75,
-      height = 2.5,
+      volume = 500,
       pipe_connections = {
-        { position = {0, 1}, type="output"},
-        { position = {0, -1} }
+        { position = {0, 0.1}, direction = defines.direction.south},
+        { position = {0, -0.1}, direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -1590,7 +1584,7 @@ data:extend({
         north = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1598,7 +1592,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
               priority = "extra-high",
               frames = 1,
               width = 64,
@@ -1607,7 +1601,7 @@ data:extend({
 		  }
         },
         east = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
           priority = "extra-high",
           x = 64,
           frames = 1,
@@ -1618,7 +1612,7 @@ data:extend({
         south = {
 		  layers = {
 		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
               frames = 1,
               width = 128,
               height = 64,
@@ -1626,7 +1620,7 @@ data:extend({
 			  shift = {0, -0.5}
 			},
 		    {
-              filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
               priority = "extra-high",
               x = 128,
               frames = 1,
@@ -1637,7 +1631,7 @@ data:extend({
 		  }
         },
         west = {
-          filename = "__angelspetrochem__/graphics/entity/valve/valve-return.png",
+          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
           priority = "extra-high",
           x = 192,
           frames = 1,
@@ -1667,14 +1661,13 @@ data:extend({
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box = {
-      height = 4.5,
-      base_area = 66.6666667,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {-1, -2} },
-        { position = {2, 1} },
-        { position = {1, 2} },
-        { position = {-2, -1} }
+        { position = {-1, -1},  direction = defines.direction.north },
+        { position = {1, 1},    direction = defines.direction.east },
+        { position = {1, 1},    direction = defines.direction.south },
+        { position = {-1, -1},  direction = defines.direction.west }
       }
     },
     two_direction_only = true,
@@ -1705,15 +1698,7 @@ data:extend({
             scale = 0.5
           },
           {
-            filename = BASEENTITY .. "storage-tank/storage-tank-shadow.png",
-            priority = "extra-high",
-            frames = 2,
-            width = 146,
-            height = 77,
-            shift = util.by_pixel(30, 22.5),
-            draw_as_shadow = true,
-            hr_version = {
-              filename = BASEENTITY .. "storage-tank/hr-storage-tank-shadow.png",
+              filename = BASEENTITY .. "storage-tank/storage-tank-shadow.png",
               priority = "extra-high",
               frames = 2,
               width = 291,
@@ -1721,7 +1706,6 @@ data:extend({
               shift = util.by_pixel(29.75, 22.25),
               scale = 0.5,
               draw_as_shadow = true
-            }
           }
         }
       },
@@ -1745,14 +1729,13 @@ data:extend({
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box = {
-      height = 5,
-      base_area = 120,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {-1, -2} },
-        { position = {2, 1} },
-        { position = {1, 2} },
-        { position = {-2, -1} }
+        { position = {-1, -1},  direction = defines.direction.north },
+        { position = {1, 1},    direction = defines.direction.east },
+        { position = {1, 1},    direction = defines.direction.south },
+        { position = {-1, -1},  direction = defines.direction.west }
       }
     },
     two_direction_only = true,
@@ -1781,15 +1764,7 @@ data:extend({
             scale = 0.5
           },
           {
-            filename = BASEENTITY .. "storage-tank/storage-tank-shadow.png",
-            priority = "extra-high",
-            frames = 2,
-            width = 146,
-            height = 77,
-            shift = util.by_pixel(30, 22.5),
-            draw_as_shadow = true,
-            hr_version = {
-              filename = BASEENTITY .. "storage-tank/hr-storage-tank-shadow.png",
+              filename = BASEENTITY .. "storage-tank/storage-tank-shadow.png",
               priority = "extra-high",
               frames = 2,
               width = 291,
@@ -1797,7 +1772,6 @@ data:extend({
               shift = util.by_pixel(29.75, 22.25),
               scale = 0.5,
               draw_as_shadow = true
-            }
           }
         }
       },
@@ -1820,13 +1794,12 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     two_direction_only = false,
     fluid_box = {
-      height = 4.5,
-      base_area = 22.2222223,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0.5, -1.5} },
-        { position = {0.5, 1.5} },
-        { position = {-1.5, 0.5} }
+        { position = {0.5, -0.5}, direction = defines.direction.north },
+        { position = {0.5, 0.5},  direction = defines.direction.south },
+        { position = {-0.5, 0.5}, direction = defines.direction.west }
       }
     },
     resistances = {
@@ -1841,7 +1814,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 0,
               width = 142,
@@ -1851,7 +1824,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 142,
 			  y = 117,
@@ -1862,7 +1835,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 171,
 			  y = 141,
@@ -1873,7 +1846,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
 			{
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
               priority = "extra-high",
               x = 0,
               width = 207,
@@ -1887,7 +1860,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 142,
               width = 142,
@@ -1897,7 +1870,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
 			{
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
               priority = "extra-high",
               x = 207,
               width = 207,
@@ -1911,7 +1884,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 284,
               width = 142,
@@ -1921,7 +1894,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 559,
 			  y = 48,
@@ -1932,7 +1905,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
 			{
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
               priority = "extra-high",
               x = 414,
               width = 207,
@@ -1946,7 +1919,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 426,
               width = 142,
@@ -1956,7 +1929,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
             {
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank.png",
               priority = "extra-high",
               x = 74,
 			  y = 136,
@@ -1967,7 +1940,7 @@ data:extend({
               tint = {0.8, 0.8, 0.4}
             },
 			{
-              filename = "__angelspetrochem__/graphics/entity/petrochem-inline-tank/hr-petrochem-inline-tank-shadow.png",
+              filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-inline-tank/petrochem-inline-tank-shadow.png",
               priority = "extra-high",
               x = 621,
               width = 207,
@@ -2007,13 +1980,12 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     two_direction_only = false,
     fluid_box = {
-      height = 5,
-      base_area = 40,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0.5, -1.5} },
-        { position = {0.5, 1.5} },
-        { position = {-1.5, 0.5} }
+        { position = {0.5, -0.5}, direction = defines.direction.north },
+        { position = {0.5, 0.5},  direction = defines.direction.south},
+        { position = {-0.5, 0.5}, direction = defines.direction.west }
       }
     },
     resistances = {
@@ -2055,14 +2027,13 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     two_direction_only = false,
     fluid_box = {
-      height = 5,
-      base_area = 250,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -3} },
-        { position = {3, 0} },
-        { position = {-3, 0} },
-        { position = {0, 3} },
+        { position = {0, -2}, direction = defines.direction.north },
+        { position = {2, 0},  direction = defines.direction.east },
+        { position = {-2, 0}, direction = defines.direction.west },
+        { position = {0, 2},  direction = defines.direction.south },
       },
     },
     fast_replaceable_group = "large-tank",
@@ -2089,14 +2060,13 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     two_direction_only = false,
     fluid_box = {
-      height = 5.5,
-      base_area = 454.545454546,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -3} },
-        { position = {3, 0} },
-        { position = {-3, 0} },
-        { position = {0, 3} },
+        { position = {0, -2}, direction = defines.direction.north },
+        { position = {2, 0},  direction = defines.direction.east },
+        { position = {-2, 0}, direction = defines.direction.west },
+        { position = {0, 2},  direction = defines.direction.south },
       },
     },
     fast_replaceable_group = "large-tank",
@@ -2123,14 +2093,13 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     two_direction_only = false,
     fluid_box = {
-      height = 6.25,
-      base_area = 800,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -3} },
-        { position = {3, 0} },
-        { position = {-3, 0} },
-        { position = {0, 3} },
+        { position = {0, -2}, direction = defines.direction.north },
+        { position = {2, 0},  direction = defines.direction.east },
+        { position = {-2, 0}, direction = defines.direction.west },
+        { position = {0, 2},  direction = defines.direction.south },
       },
     },
     fast_replaceable_group = "large-tank",
@@ -2149,13 +2118,6 @@ data.raw["storage-tank"]["nullius-large-tank-1"].pictures.
     picture.sheets[1].tint = {0.75, 0.75, 0.6}
 data.raw["storage-tank"]["nullius-large-tank-2"].pictures.
     picture.sheets[1].tint = {0.85, 0.85, 0.95}
-if (data.raw["storage-tank"]["nullius-large-tank-1"].pictures.
-      picture.sheets[1].hr_version ~= nil) then
-  data.raw["storage-tank"]["nullius-large-tank-1"].pictures.
-      picture.sheets[1].hr_version.tint = {0.75, 0.75, 0.6}
-  data.raw["storage-tank"]["nullius-large-tank-2"].pictures.
-      picture.sheets[1].hr_version.tint = {0.85, 0.85, 0.95}  
-end
 
 
 data:extend({
@@ -2173,19 +2135,18 @@ data:extend({
     dying_explosion = "pumpjack-explosion",
     collision_box = {{ -1.7, -1.7}, {1.7, 1.7}},
     selection_box = {{ -2, -2}, {2, 2}},
-    drawing_box = {{-2.67, -4.2}, {2.5, 2.67}},
+    
     energy_source = {
       type = "electric",
-      emissions_per_minute = 5,
+      emissions_per_minute = {pollution = 5},
       usage_priority = "secondary-input",
       drain = "10kW"
     },
     output_fluid_box = {
-      base_area = 5,
-      base_level = 4,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { positions = { {1.5, -2.5}, {2.5, -1.5}, {-1.5, 2.5}, {-2.5, 1.5} } }
+        { positions = { {1.5, -1.5}, {1.5, -1.5}, {-1.5, 1.5}, {-1.5, 1.5} }, direction = defines.direction.north }
       }
     },
     energy_usage = "390kW",
@@ -2202,7 +2163,7 @@ data:extend({
     close_sound = data.raw["mining-drill"]["pumpjack"].close_sound,
     working_sound = data.raw["mining-drill"]["pumpjack"].working_sound,
     fast_replaceable_group = "geothermal-pump",
-    module_specification = { module_slots = 1 },
+    module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -2217,7 +2178,7 @@ data:extend({
     base_picture = {
       sheets = {
         {
-          filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
+          filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
           priority = "extra-high",
           width = 261,
           height = 273,
@@ -2225,7 +2186,7 @@ data:extend({
           scale = 0.66667
         },
         {
-          filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
+          filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
           width = 220,
           height = 220,
           scale = 0.66667,
@@ -2239,7 +2200,7 @@ data:extend({
         layers = {
           {
             priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
+            filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
             animation_speed = 0.4,
             scale = 0.66667,
             tint = {0.98, 0.58, 0.24},
@@ -2251,7 +2212,7 @@ data:extend({
           },
           {
             priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
+            filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
             animation_speed = 0.66667,
             draw_as_shadow = true,
             line_length = 8,
@@ -2279,20 +2240,18 @@ data:extend({
     dying_explosion = "pumpjack-explosion",
     collision_box = {{ -1.7, -1.7}, {1.7, 1.7}},
     selection_box = {{ -2, -2}, {2, 2}},
-    drawing_box = {{-2.67, -4.2}, {2.5, 2.67}},
+    
     energy_source = {
       type = "electric",
-      emissions_per_minute = 10,
+      emissions_per_minute = {pollution = 10},
       usage_priority = "secondary-input",
       drain = "25kW"
     },
     output_fluid_box = {
-      base_area = 10,
-      base_level = 5,
-      height = 2,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { positions = { {1.5, -2.5}, {2.5, -1.5}, {-1.5, 2.5}, {-2.5, 1.5} } }
+        { positions = { {1.5, -1.5}, {1.5, -1.5}, {-1.5, 1.5}, {-1.5, 1.5} }, direction = defines.direction.north }
       }
     },
     energy_usage = "775kW",
@@ -2309,7 +2268,7 @@ data:extend({
     close_sound = data.raw["mining-drill"]["pumpjack"].close_sound,
     working_sound = data.raw["mining-drill"]["pumpjack"].working_sound,
     fast_replaceable_group = "geothermal-pump",
-    module_specification = { module_slots = 2 },
+    module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -2324,7 +2283,7 @@ data:extend({
     base_picture = {
       sheets = {
         {
-          filename = BASEENTITY .. "pumpjack/hr-pumpjack-base.png",
+          filename = BASEENTITY .. "pumpjack/pumpjack-base.png",
           priority = "extra-high",
           width = 261,
           height = 273,
@@ -2332,7 +2291,7 @@ data:extend({
           scale = 0.66667
         },
         {
-          filename = BASEENTITY .. "pumpjack/hr-pumpjack-base-shadow.png",
+          filename = BASEENTITY .. "pumpjack/pumpjack-base-shadow.png",
           width = 220,
           height = 220,
           scale = 0.66667,
@@ -2346,7 +2305,7 @@ data:extend({
         layers = {
           {
             priority = "high",
-            filename = ENTITYPATH .. "wells/hr-pumpjack-decolorized.png",
+            filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
             animation_speed = 0.6,
             scale = 0.66667,
             tint = {0.99,0.25,0.39},
@@ -2358,7 +2317,7 @@ data:extend({
           },
           {
             priority = "high",
-            filename = BASEENTITY .. "pumpjack/hr-pumpjack-horsehead-shadow.png",
+            filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
             animation_speed = 0.66667,
             draw_as_shadow = true,
             line_length = 8,
@@ -2391,11 +2350,11 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0.5,
+      emissions_per_minute = {pollution = 0.5},
       drain = "1kW"
     },
     energy_usage = "24kW",
-    module_specification = { module_slots = 1 },
+    module_slots = 1,
     allowed_effects = {"speed", "consumption", "pollution"},
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
@@ -2413,70 +2372,70 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 5,
-        base_level = -2,
-        pipe_connections = {{type = "input", position = {0, 2}}}
+        volume = 500,
+        pipe_connections = {{flow_direction = "input", position = {0, 1}, direction = defines.direction.south}}
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-		base_area = 5,
-        base_level = 5,
-        pipe_connections = {{type="output", position = {0, -2}}}
+        volume = 500,
+        pipe_connections = {{flow_direction ="output", position = {0, -1}, direction = defines.direction.north}}
       }
     },
     pipe_covers = pipecoverspictures(),
 
-    animation = {
-      north = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        tint = {0.6, 0.8, 0.8}
-      },
-      east = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        x = 480,
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        tint = {0.6, 0.8, 0.8}
-      },
-      south = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        x = 320,
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        tint = {0.6, 0.8, 0.8}
-      },
-      west = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        x = 160,
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        tint = {0.6, 0.8, 0.8}
-      }
-    },
-    working_visualisations = {
-      {
-        north_position = {0, 0},
-        east_position = {0, -0.1},
-        south_position = {0, -0.25},
-        west_position = {0, -0.15},
-        animation = {
-          filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump-animation.png",
-          frame_count = 36,
-          line_length = 6,
-          width = 64,
-          height = 64,
-          animation_speed = 0.2,
-          run_mode = "forward",
+    graphics_set = {
+      animation = {
+        north = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          width = 160,
+          height = 160,
+          frame_count = 1,
           tint = {0.6, 0.8, 0.8}
         },
-        light = {intensity = 0.4, size = 6}
+        east = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          x = 480,
+          width = 160,
+          height = 160,
+          frame_count = 1,
+          tint = {0.6, 0.8, 0.8}
+        },
+        south = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          x = 320,
+          width = 160,
+          height = 160,
+          frame_count = 1,
+          tint = {0.6, 0.8, 0.8}
+        },
+        west = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          x = 160,
+          width = 160,
+          height = 160,
+          frame_count = 1,
+          tint = {0.6, 0.8, 0.8}
+        }
+      },
+      working_visualisations = {
+        {
+          north_position = {0, 0},
+          east_position = {0, -0.1},
+          south_position = {0, -0.25},
+          west_position = {0, -0.15},
+          animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump-animation.png",
+            frame_count = 36,
+            line_length = 6,
+            width = 64,
+            height = 64,
+            animation_speed = 0.2,
+            run_mode = "forward",
+            tint = {0.6, 0.8, 0.8}
+          },
+          light = {intensity = 0.4, size = 6}
+        }
       }
     }
   },
@@ -2498,11 +2457,11 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = {pollution = 1},
       drain = "2kW"
     },
     energy_usage = "58kW",
-    module_specification = { module_slots = 2 },
+    module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
@@ -2520,71 +2479,69 @@ data:extend({
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
-        base_area = 5,
-        base_level = -3,
-		height = 2,
-        pipe_connections = {{type = "input", position = {0, 2}}}
+        volume = 500,
+        pipe_connections = {{flow_direction = "input", position = {0, 1}, direction = defines.direction.south}}
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
-        base_area = 5,
-        base_level = 6,
-		height = 2,
-        pipe_connections = {{type="output", position = {0, -2}}}
+        volume = 500,
+        pipe_connections = {{flow_direction ="output", position = {0, -1}, direction = defines.direction.north}}
       }
     },
     pipe_covers = pipecoverspictures(),
-    animation = {
-      north = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        shift = {0, 0}
-      },
-      east = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        x = 480,
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        shift = {0, 0}
-      },
-      south = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        x = 320,
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        shift = {0, 0}
-      },
-      west = {
-        filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump.png",
-        x = 160,
-        width = 160,
-        height = 160,
-        frame_count = 1,
-        shift = {0, 0}
-      }
-    },
-    working_visualisations = {
-      {
-        north_position = {0, 0},
-        east_position = {0, -0.1},
-        south_position = {0, -0.25},
-        west_position = {0, -0.15},
-        animation = {
-          filename = "__angelsrefining__/graphics/entity/barreling-pump/barreling-pump-animation.png",
-          frame_count = 36,
-          line_length = 6,
-          width = 64,
-          height = 64,
-          shift = {0, 0},
-          animation_speed = 0.25,
-          run_mode = "forward"
+    graphics_set = {
+      animation = {
+        north = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          width = 160,
+          height = 160,
+          frame_count = 1,
+          shift = {0, 0}
         },
-        light = {intensity = 0.4, size = 6}
+        east = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          x = 480,
+          width = 160,
+          height = 160,
+          frame_count = 1,
+          shift = {0, 0}
+        },
+        south = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          x = 320,
+          width = 160,
+          height = 160,
+          frame_count = 1,
+          shift = {0, 0}
+        },
+        west = {
+          filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump.png",
+          x = 160,
+          width = 160,
+          height = 160,
+          frame_count = 1,
+          shift = {0, 0}
+        }
+      },
+      working_visualisations = {
+        {
+          north_position = {0, 0},
+          east_position = {0, -0.1},
+          south_position = {0, -0.25},
+          west_position = {0, -0.15},
+          animation = {
+            filename = "__angelsrefininggraphics__/graphics/entity/barreling-pump/barreling-pump-animation.png",
+            frame_count = 36,
+            line_length = 6,
+            width = 64,
+            height = 64,
+            shift = {0, 0},
+            animation_speed = 0.25,
+            run_mode = "forward"
+          },
+          light = {intensity = 0.4, size = 6}
+        }
       }
     }
   },
@@ -2610,13 +2567,12 @@ data:extend({
       { type = "fire", decrease = 20, percent = 50 }
     },
     fluid_box = {
-      base_area = 1,
-      height = 7,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {0, -1.5}, type = "output" },
-        { position = {0, 1.5}, type = "input" }
+        { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
+        { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
       }
     },
     energy_source = {
@@ -2641,7 +2597,7 @@ data:extend({
       north = {
         layers = {
 	      {
-            filename = "__base__/graphics/entity/pipe-covers/hr-pipe-cover-north.png",
+            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
             width = 128,
             height = 128,
             scale = 0.5,
@@ -2651,7 +2607,7 @@ data:extend({
 			shift = {0, -1.46}
           },
           {
-            filename = BASEENTITY .. "pump/hr-pump-north.png",
+            filename = BASEENTITY .. "pump/pump-north.png",
             width = 103,
             height = 164,
             scale = 0.5,
@@ -2675,7 +2631,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = BASEENTITY .. "pump/hr-pump-east.png",
+            filename = BASEENTITY .. "pump/pump-east.png",
             width = 130,
             height = 109,
             scale = 0.5,
@@ -2699,7 +2655,7 @@ data:extend({
       south = {
         layers = {
 	      {
-            filename = "__base__/graphics/entity/pipe-covers/hr-pipe-cover-north.png",
+            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
             width = 128,
             height = 128,
             scale = 0.5,
@@ -2709,7 +2665,7 @@ data:extend({
 			shift = {0, -1.5}
           },
           {
-            filename = BASEENTITY .. "pump/hr-pump-south.png",
+            filename = BASEENTITY .. "pump/pump-south.png",
             width = 114,
             height = 160,
             scale = 0.5,
@@ -2733,7 +2689,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = BASEENTITY .. "pump/hr-pump-west.png",
+            filename = BASEENTITY .. "pump/pump-west.png",
             width = 131,
             height = 111,
             scale = 0.5,
@@ -2778,13 +2734,12 @@ data:extend({
       { type = "fire", decrease = 20, percent = 50 }
     },
     fluid_box = {
-      base_area = 1,
-      height = 8,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { position = {0, -1.5}, type = "output" },
-        { position = {0, 1.5}, type = "input" }
+        { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
+        { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
       }
     },
     energy_source = {
@@ -2809,7 +2764,7 @@ data:extend({
       north = {
         layers = {
 	      {
-            filename = "__base__/graphics/entity/pipe-covers/hr-pipe-cover-north.png",
+            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
             width = 128,
             height = 128,
             scale = 0.5,
@@ -2819,7 +2774,7 @@ data:extend({
 			shift = {0, -1.46}
           },
           {
-            filename = BASEENTITY .. "pump/hr-pump-north.png",
+            filename = BASEENTITY .. "pump/pump-north.png",
             width = 103,
             height = 164,
             scale = 0.5,
@@ -2843,7 +2798,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = BASEENTITY .. "pump/hr-pump-east.png",
+            filename = BASEENTITY .. "pump/pump-east.png",
             width = 130,
             height = 109,
             scale = 0.5,
@@ -2867,7 +2822,7 @@ data:extend({
       south = {
         layers = {
 	      {
-            filename = "__base__/graphics/entity/pipe-covers/hr-pipe-cover-north.png",
+            filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
             width = 128,
             height = 128,
             scale = 0.5,
@@ -2877,7 +2832,7 @@ data:extend({
 			shift = {0, -1.5}
           },
           {
-            filename = BASEENTITY .. "pump/hr-pump-south.png",
+            filename = BASEENTITY .. "pump/pump-south.png",
             width = 114,
             height = 160,
             scale = 0.5,
@@ -2901,7 +2856,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = BASEENTITY .. "pump/hr-pump-west.png",
+            filename = BASEENTITY .. "pump/pump-west.png",
             width = 131,
             height = 111,
             scale = 0.5,
@@ -2945,11 +2900,10 @@ data:extend({
       { type = "fire", decrease = 20, percent = 50 }
     },
     fluid_box = {
-      base_area = 1,
-      height = 6.5,
+      volume = 500,
       pipe_connections = {
-        { position = {0, 1}, type = "output" },
-        { position = {0, -1}, type = "input" }
+        { position = {0, 0.1}, flow_direction = "output", direction = defines.direction.south },
+        { position = {0, -0.1}, flow_direction = "input", direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -2970,7 +2924,7 @@ data:extend({
       north = {
 		layers = {
 		  {
-            filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
@@ -2979,7 +2933,7 @@ data:extend({
 			shift = {0, -0.5}
 		  },
 		  {
-            filename = "__angelsrefining__/graphics/entity/water-pump/pump-north.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-north.png",
             priority = "extra-high",
             frame_count = 16,
 			line_length = 4,
@@ -2992,7 +2946,7 @@ data:extend({
 		}
       },
       east = {
-        filename = "__angelsrefining__/graphics/entity/water-pump/pump-east.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-east.png",
         priority = "extra-high",
 		frame_count = 16,
 		line_length = 4,
@@ -3004,7 +2958,7 @@ data:extend({
       south = {
 		layers = {
 		  {
-            filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
@@ -3013,7 +2967,7 @@ data:extend({
 			shift = {0, -0.5}
 		  },
 		  {
-            filename = "__angelsrefining__/graphics/entity/water-pump/pump-south.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-south.png",
             priority = "extra-high",
 			frame_count = 16,
 			line_length = 4,
@@ -3026,7 +2980,7 @@ data:extend({
 		}
       },
       west = {
-        filename = "__angelsrefining__/graphics/entity/water-pump/pump-west.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-west.png",
         priority = "extra-high",
 		frame_count = 16,
 		line_length = 4,
@@ -3057,11 +3011,10 @@ data:extend({
       { type = "fire", decrease = 20, percent = 50 }
     },
     fluid_box = {
-      base_area = 1,
-      height = 7.5,
+      volume = 500,
       pipe_connections = {
-        { position = {0, 1}, type = "output" },
-        { position = {0, -1}, type = "input" }
+        { position = {0, 0.1}, flow_direction = "output", direction = defines.direction.south },
+        { position = {0, -0.1}, flow_direction = "input", direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -3082,7 +3035,7 @@ data:extend({
       north = {
 		layers = {
 		  {
-            filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
@@ -3091,7 +3044,7 @@ data:extend({
 			shift = {0, -0.5}
 		  },
 		  {
-            filename = "__angelsrefining__/graphics/entity/water-pump/pump-north.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-north.png",
             priority = "extra-high",
             frame_count = 16,
 			line_length = 4,
@@ -3104,7 +3057,7 @@ data:extend({
 		}
       },
       east = {
-        filename = "__angelsrefining__/graphics/entity/water-pump/pump-east.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-east.png",
         priority = "extra-high",
 		frame_count = 16,
 		line_length = 4,
@@ -3116,7 +3069,7 @@ data:extend({
       south = {
 		layers = {
 		  {
-            filename = "__boblogistics__/graphics/entity/pipe/steel/hr-pipe-straight-vertical.png",
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
@@ -3125,7 +3078,7 @@ data:extend({
 			shift = {0, -0.5}
 		  },
 		  {
-            filename = "__angelsrefining__/graphics/entity/water-pump/pump-south.png",
+            filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-south.png",
             priority = "extra-high",
 			frame_count = 16,
 			line_length = 4,
@@ -3138,7 +3091,7 @@ data:extend({
 		}
       },
       west = {
-        filename = "__angelsrefining__/graphics/entity/water-pump/pump-west.png",
+        filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-west.png",
         priority = "extra-high",
 		frame_count = 16,
 		line_length = 4,
@@ -3153,9 +3106,9 @@ data:extend({
   {
     type = "pipe",
     name = "nullius-pipe-2",
-	localised_description = {"entity-description.nullius-pipe", 60, 4360, 1260},
+	  localised_description = {"entity-description.nullius-pipe", tostring(60), tostring(4360), tostring(1260)},
     icons = data.raw.item["nullius-pipe-2"].icons,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.3, result = "nullius-pipe-2"},
     max_health = 150,
     corpse = "pipe-remnants",
@@ -3170,13 +3123,12 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
-      height = 3,
-      base_area = 1.333334,
+      volume = 500,
       pipe_connections = {
-        { position = {0, -1} },
-        { position = {1, 0} },
-        { position = {0, 1} },
-        { position = {-1, 0} }
+        { position = {0, -0.1}, direction = defines.direction.north },
+        { position = {0.1, 0},  direction = defines.direction.east },
+        { position = {0, 0.1},  direction = defines.direction.south },
+        { position = {-0.1, 0}, direction = defines.direction.west }
       }
     },
     vehicle_impact_sound = data.raw["pipe"]["pipe"].vehicle_impact_sound,
@@ -3189,9 +3141,9 @@ data:extend({
   {
     type = "pipe",
     name = "nullius-pipe-3",
-	localised_description = {"entity-description.nullius-pipe", 80, 5370, 4260},
+	localised_description = {"entity-description.nullius-pipe", tostring(80), tostring(5370), tostring(4260)},
     icons = data.raw.item["nullius-pipe-3"].icons,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.4, result = "nullius-pipe-3"},
     max_health = 200,
     corpse = "pipe-remnants",
@@ -3206,28 +3158,27 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
-      height = 4,
-      base_area = 1,
+      volume = 500,
       pipe_connections = {
-        { position = {0, -1} },
-        { position = {1, 0} },
-        { position = {0, 1} },
-        { position = {-1, 0} }
+        { position = {0, -0.1}, direction = defines.direction.north },
+        { position = {0.1, 0},  direction = defines.direction.east },
+        { position = {0, 0.1},  direction = defines.direction.south },
+        { position = {-0.1, 0}, direction = defines.direction.west }
       }
     },
     vehicle_impact_sound = data.raw["pipe"]["pipe"].vehicle_impact_sound,
     working_sound = data.raw["pipe"]["pipe"].working_sound,
     horizontal_window_bounding_box = {{-0.25, -0.25}, {0.25, 0.15625}},
     vertical_window_bounding_box = {{-0.28125, -0.40625}, {0.03125, 0.125}},
-    pictures = data.raw["pipe"]["plastic-pipe"].pictures
+    pictures = data.raw["pipe"]["bob-plastic-pipe"].pictures
   },
 
   {
     type = "pipe",
     name = "nullius-pipe-4",
-	localised_description = {"entity-description.nullius-pipe", 100, 6720, 5180},
+	localised_description = {"entity-description.nullius-pipe", tostring(100), tostring(6720), tostring(5180)},
     icons = data.raw.item["nullius-pipe-4"].icons,
-    flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
+    flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "nullius-pipe-4"},
     max_health = 250,
     corpse = "pipe-remnants",
@@ -3241,13 +3192,12 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
-      height = 5,
-      base_area = 0.8,
+      volume = 500,
       pipe_connections = {
-        { position = {0, -1} },
-        { position = {1, 0} },
-        { position = {0, 1} },
-        { position = {-1, 0} }
+        { position = {0, -0.1}, direction = defines.direction.north },
+        { position = {0.1, 0},  direction = defines.direction.east },
+        { position = {0, 0.1},  direction = defines.direction.south },
+        { position = {-0.1, 0}, direction = defines.direction.west }
       }
     },
     vehicle_impact_sound = data.raw["pipe"]["pipe"].vehicle_impact_sound,
@@ -3260,7 +3210,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "nullius-underground-pipe-2",
-	localised_description = {"entity-description.nullius-underground-pipe", 60},
+	  localised_description = {"entity-description.nullius-underground-pipe", tostring(60)},
     icons = data.raw.item["nullius-underground-pipe-2"].icons,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.6, result = "nullius-underground-pipe-2"},
@@ -3277,14 +3227,15 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe-to-ground"]["pipe-to-ground"].damaged_trigger_effect,
     fluid_box = {
-      height = 3,
-      base_area = 1.333334,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -1} },
+        { position = {0, -0.1}, direction = defines.direction.north },
         {
-          position = {0, 1},
-          max_underground_distance = 15
+          connection_type = "underground",
+          position = {0, 0.1},
+          max_underground_distance = 15,
+          direction = defines.direction.south
         }
       }
     },
@@ -3295,7 +3246,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "nullius-underground-pipe-3",
-	localised_description = {"entity-description.nullius-underground-pipe", 80},
+	localised_description = {"entity-description.nullius-underground-pipe", tostring(80)},
     icons = data.raw.item["nullius-underground-pipe-3"].icons,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.8, result = "nullius-underground-pipe-3"},
@@ -3312,25 +3263,26 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe-to-ground"]["pipe-to-ground"].damaged_trigger_effect,
     fluid_box = {
-      height = 4,
-      base_area = 1,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -1} },
+        { position = {0, -0.1}, direction = defines.direction.north },
         {
-          position = {0, 1},
-          max_underground_distance = 19
+          connection_type = "underground",
+          position = {0, 0.1},
+          max_underground_distance = 19,
+          direction = defines.direction.south
         }
       }
     },
     vehicle_impact_sound = data.raw["pipe-to-ground"]["pipe-to-ground"].vehicle_impact_sound,
-    pictures = data.raw["pipe-to-ground"]["plastic-pipe-to-ground"].pictures
+    pictures = data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].pictures
   },
 
   {
     type = "pipe-to-ground",
     name = "nullius-underground-pipe-4",
-	localised_description = {"entity-description.nullius-underground-pipe", 100},
+	  localised_description = {"entity-description.nullius-underground-pipe", tostring(100)},
     icons = data.raw.item["nullius-underground-pipe-4"].icons,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "nullius-underground-pipe-4"},
@@ -3346,14 +3298,15 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe-to-ground"]["pipe-to-ground"].damaged_trigger_effect,
     fluid_box = {
-      height = 5,
-      base_area = 0.8,
+      volume = 500,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -1} },
+        { position = {0, -0.1}, direction = defines.direction.north },
         {
-          position = {0, 1},
-          max_underground_distance = 23
+          position = {0, 0.1},
+          connection_type = "underground",
+          max_underground_distance = 23, 
+          direction = defines.direction.south
         }
       }
     },

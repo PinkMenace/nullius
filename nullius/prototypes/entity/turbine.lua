@@ -9,7 +9,7 @@ local invisible = {
 local turbine_graphics = {
   [false] = { layers = {
     {
-      filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H.png",
+      filename = "__base__/graphics/entity/steam-turbine/steam-turbine-H.png",
       width = 320,
       height = 245,
       frame_count = 1,
@@ -24,7 +24,7 @@ local turbine_graphics = {
       shift = util.by_pixel(0, -2.75),
       scale = 0.5
     }, {
-      filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H-shadow.png",
+      filename = "__base__/graphics/entity/steam-turbine/steam-turbine-H-shadow.png",
       width = 435,
       height = 150,
       frame_count = 1,
@@ -36,7 +36,7 @@ local turbine_graphics = {
   }},
   [true] = { layers = {
     {
-      filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V.png",
+      filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V.png",
       width = 217,
       height = 347,
       frame_count = 1,
@@ -51,7 +51,7 @@ local turbine_graphics = {
       shift = util.by_pixel(4.75, 6.75),
       scale = 0.5
     }, {
-      filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V-shadow.png",
+      filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V-shadow.png",
       width = 302,
       height = 260,
       frame_count = 1,
@@ -103,9 +103,9 @@ local function finish_furnace(furnace, generator, overlay,
   local midfix = openness .. "-" .. priority
   local suffix = midfix .. "-" .. tier
   furnace.name = "nullius-turbine-" .. suffix
-  furnace.localised_name = {"", {"entity-name.nullius-turbine-" .. midfix}, " ", tier}
+  furnace.localised_name = {"", {"entity-name.nullius-turbine-" .. midfix}, " ", tostring(tier)}
   furnace.localised_description = {"entity-description.nullius-turbine-info",
-	  power, (generator.effectivity * 100),
+	  tostring(power), tostring(generator.effectivity * 100),
 	  {"entity-description.nullius-turbine-entity",
 	      {"entity-description.nullius-turbine-" .. openness},
 	      {"entity-description.nullius-turbine-" .. priority}}}
@@ -137,10 +137,10 @@ local function turbine_variants(tier, furnacecb, generatorob,
   furnaceob.placeable_by.item = "nullius-turbine-open-" .. tier
   furnaceob.crafting_categories = {"turbine-open"}
   furnaceob.fluid_boxes[3] = nil
-  furnaceob.fluid_boxes[1].height = (furnacecb.fluid_boxes[1].height * 2)
+  furnaceob.fluid_boxes[1].volume = 500
   furnaceob.fluid_boxes[1].pipe_connections = {
-    { type = "input-output", position = {0, 3} },
-    { type = "input-output", position = {0, -3} }
+    { flow_direction = "input-output", position = {0, 2}, direction = defines.direction.south },
+    { flow_direction = "input-output", position = {0, -2}, direction = defines.direction.north }
   }
 
   local furnacecs = util.table.deepcopy(furnacecb)
@@ -201,7 +201,7 @@ local furnace1cb = {
   fast_replaceable_group = "nullius-turbine",
   selection_box = {{-1.4, -2.4}, {1.4, 2.4}},
   collision_box = {{-1.25, -2.05}, {1.25, 2.05}},
-  drawing_box = {{-1.5, -3}, {1.5, 4}},
+  
   alert_icon_shift = util.by_pixel(0, -12),
   energy_source = { type = "void" },
   energy_usage = "1W",
@@ -232,29 +232,23 @@ local furnace1cb = {
   fluid_boxes = {
     {
       production_type = "input",
-	  pipe_connections = {{ type = "input", position = {0, -3} }},
+	    pipe_connections = {{ flow_direction = "input", position = {0, -2}, direction = defines.direction.north }},
       pipe_covers = pipecoverspictures(),
-      base_area = 5,
-      base_level = -2,
-	  height = 2,
+      volume = 500,
       secondary_draw_orders = { north = -1 }
     },
     {
-	  filter = "nullius-energy",
+	    filter = "nullius-energy",
       production_type = "output",
-	  pipe_connections = {{ type = "output", position = {1, -2.1} }},
-      base_area = 2,
-      base_level = 2,
-	  height = 2,
+	    pipe_connections = {{ flow_direction = "output", position = {1, -1.1}, direction = defines.direction.north }},
+      volume = 500,
 	  hide_connection_info = true
     },
     {
       production_type = "output",
-	  pipe_connections = {{ type = "output", position = {0, 3} }},
+	    pipe_connections = {{ flow_direction = "output", position = {0, 2}, direction = defines.direction.south }},
       pipe_covers = pipecoverspictures(),
-      base_area = 6,
-      base_level = 5,
-	  height = 4,
+      volume = 500,
       secondary_draw_orders = { north = -1 }
     }
   }
@@ -265,37 +259,26 @@ furnace2cb.minable = {mining_time = 1.2, result = "nullius-turbine-closed-2"}
 furnace2cb.placeable_by = {item = "nullius-turbine-closed-2", count = 1}
 furnace2cb.max_health = 400
 furnace2cb.crafting_speed = 2.4
-furnace2cb.fluid_boxes[1].base_area = 8
-furnace2cb.fluid_boxes[1].base_level = -4
-furnace2cb.fluid_boxes[1].height = 4
-furnace2cb.fluid_boxes[2].base_area = 4
-furnace2cb.fluid_boxes[2].base_level = 3
-furnace2cb.fluid_boxes[2].height = 3
-furnace2cb.fluid_boxes[3].base_area = 10
-furnace2cb.fluid_boxes[3].base_level = 8
-furnace2cb.fluid_boxes[3].height = 8
+furnace2cb.fluid_boxes[1].volume = 500
+furnace2cb.fluid_boxes[2].volume = 500
+furnace2cb.fluid_boxes[3].volume = 500
 
 local furnace3cb = util.table.deepcopy(furnace1cb)
 furnace3cb.minable = {mining_time = 1.6, result = "nullius-turbine-closed-3"}
 furnace3cb.placeable_by = {item = "nullius-turbine-closed-3", count = 1}
 furnace3cb.max_health = 500
 furnace3cb.crafting_speed = 5.4
-furnace3cb.fluid_boxes[1].base_area = 10
-furnace3cb.fluid_boxes[1].base_level = -8
-furnace3cb.fluid_boxes[1].height = 8
-furnace3cb.fluid_boxes[2].base_area = 6
-furnace3cb.fluid_boxes[2].base_level = 5
-furnace3cb.fluid_boxes[2].height = 5
-furnace3cb.fluid_boxes[3].base_area = 15
-furnace3cb.fluid_boxes[3].base_level = 10
-furnace3cb.fluid_boxes[3].height = 15
+furnace3cb.fluid_boxes[1].volume = 500
+furnace3cb.fluid_boxes[2].volume = 500
+furnace3cb.fluid_boxes[3].volume = 500
 
 
 local generator1ob = {
   type = "generator",
   flags = { "placeable-neutral", "player-creation", "not-on-map",
       "not-blueprintable", "not-deconstructable",
-	  "hidden", "hide-alt-info", "not-upgradable" },
+	    "hide-alt-info", "not-upgradable" },
+	hidden = true,
   max_power_output = "1MW",
   effectivity = 0.9,
   fluid_usage_per_tick = 2,
@@ -307,7 +290,7 @@ local generator1ob = {
   allow_copy_paste = false,
   selection_box = {{-1.4, -2.4}, {1.4, 2.4}},
   collision_box = {{-1.25, -2.05}, {1.25, 2.05}},
-  collision_mask = { "not-colliding-with-itself" },
+  collision_mask = { layers = {}, not_colliding_with_itself = true},
   alert_icon_shift = util.by_pixel(0, -12),
   energy_source = { type = "electric", usage_priority = "tertiary" },
   smoke = data.raw.generator["steam-turbine"].smoke,
@@ -319,14 +302,12 @@ local generator1ob = {
   fluid_box = {
     filter = "nullius-energy",
     production_type = "input",
-	pipe_connections = {
-	  { type = "input-output", position = {-1, -2.1} },
-	  { type = "input-output", position = {1, 2.1} }
-	},
-    base_area = 1,
-    base_level = -2,
-	height = 4,
-	hide_connection_info = true
+	  pipe_connections = {
+	    { flow_direction = "input-output", position = {-1, -1.1}, direction = defines.direction.north },
+	    { flow_direction = "input-output", position = {1, 1.1}, direction = defines.direction.south }
+	  },
+    volume = 500,
+	  hide_connection_info = true
   }
 }
 
@@ -335,18 +316,14 @@ generator2ob.max_power_output = "2.5MW"
 generator2ob.effectivity = 0.95
 generator2ob.fluid_usage_per_tick = 5
 generator2ob.maximum_temperature = 1800
-generator2ob.fluid_box.base_area = 1.5
-generator2ob.fluid_box.base_level = -5
-generator2ob.fluid_box.height = 8
+generator2ob.fluid_box.volume = 500
 
 local generator3ob = util.table.deepcopy(generator1ob)
 generator3ob.max_power_output = "6MW"
 generator3ob.effectivity = 1
 generator3ob.fluid_usage_per_tick = 11
 generator3ob.maximum_temperature = 2000
-generator3ob.fluid_box.base_area = 2
-generator3ob.fluid_box.base_level = -11
-generator3ob.fluid_box.height = 16
+generator3ob.fluid_box.volume = 500
 
 
 local connector = {
@@ -355,16 +332,16 @@ local connector = {
   icons = {{
     icon = "__base__/graphics/icons/steam-turbine.png",
     icon_size = 64,
-    icon_mipmaps = 4
   }},
   flags = { "placeable-neutral", "player-creation", "not-on-map",
-      "not-blueprintable", "not-deconstructable", "hidden",
+      "not-blueprintable", "not-deconstructable",
 	  "hide-alt-info", "not-upgradable", "placeable-off-grid" },
+	hidden = true,
   selectable_in_game = false,
   allow_copy_paste = false,
   selection_box = {{-1.4, -0.3}, {1.4, 0.3}},
   collision_box = {{-1.25, -0.05}, {1.25, 0.05}},
-  collision_mask = {"not-colliding-with-itself"},
+  collision_mask = { layers = {}, not_colliding_with_itself = true},
   window_bounding_box = {{0, 0}, {0, 0}},
   flow_length_in_ticks = 360,
   pictures = {
@@ -376,13 +353,11 @@ local connector = {
   },
   fluid_box = {
     filter = "nullius-energy",
-    base_area = 2,
-    base_level = 0,
-	height = 2,
-	hide_connection_info = true,
+    volume = 500,
+	  hide_connection_info = true,
     pipe_connections = {
-      { position = {1, 0.7} },
-      { position = {-1, 0.7} }
+      { position = {1, 0.04}, direction = defines.direction.east },
+      { position = {-1, 0.04}, direction = defines.direction.west }
     }
   }
 }
@@ -394,7 +369,7 @@ local vent1 = {
   flags = connector.flags,
   collision_box = connector.collision_box,
   selection_box = connector.selection_box,
-  collision_mask = { "not-colliding-with-itself" },
+  collision_mask = { layers = {}, not_colliding_with_itself = true},
   selectable_in_game = false,
   allow_copy_paste = false,
   bottleneck_ignore = true,
@@ -405,13 +380,11 @@ local vent1 = {
   crafting_speed = 1,
   source_inventory_size = 0,
   fluid_boxes = {{
-	filter = "nullius-energy",
+	  filter = "nullius-energy",
     production_type = "input",
-    base_area = 3,
-    base_level = 1,
-	height = 1,
-	hide_connection_info = true,
-    pipe_connections = {{ type="input-output", position = {-1, 0.7} }}
+    volume = 500,
+	  hide_connection_info = true,
+    pipe_connections = {{ flow_direction ="input-output", position = {-1, 0.04}, direction = defines.direction.west }}
   }},
   energy_source = {type = "void"},
   energy_usage = "1W"
@@ -420,13 +393,11 @@ local vent1 = {
 local vent2 = util.table.deepcopy(vent1)
 vent2.name = "nullius-turbine-vent-2"
 vent2.crafting_speed = 2.5
-vent2.fluid_boxes[1].base_area = 4
-vent2.fluid_boxes[1].height = 2
+vent2.fluid_boxes[1].volume = 500
 local vent3 = util.table.deepcopy(vent1)
 vent3.name = "nullius-turbine-vent-3"
 vent3.crafting_speed = 6
-vent3.fluid_boxes[1].base_area = 5
-vent3.fluid_boxes[1].height = 4
+vent3.fluid_boxes[1].volume = 500
 
 
 turbine_variants(1, furnace1cb, generator1ob, 1, 0.25, 0.4, 0.6)

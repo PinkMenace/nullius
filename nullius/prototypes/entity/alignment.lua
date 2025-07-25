@@ -23,7 +23,6 @@ radar.integration_patch = scale_image(radar.integration_patch, 2)
 radar.pictures = scale_image(radar.pictures, 2)
 radar.water_reflection = scale_image(radar.water_reflection, 2)
 radar.pictures.layers[1].tint = {0.6, 0.7, 1}
-radar.pictures.layers[1].hr_version.tint = {0.6, 0.7, 1}
 radar.minable.mining_time = 1
 radar.minable.result = "nullius-align-concordance-transmitter"
 radar.max_health = 600
@@ -149,11 +148,11 @@ data:extend({
   {
     type = "tile",
     name = "nullius-stars",
-    collision_mask = {"ground-tile"},
+    collision_mask = {layers = {ground_tile = true}},
     layer = 234,
     map_color={r=8, g=8, b=32},
     walking_speed_modifier = 0.2,
-    pollution_absorption_per_second = 0,
+    absorption_per_second = 0,
     variants = {
       main = {
 	    {

@@ -6,7 +6,6 @@ local BASEENTITY = "__base__/graphics/entity/"
 local wreck_flags = {
   "placeable-player",
   "player-creation",
-  "hidden",
   "not-rotatable",
   "placeable-off-grid",
   "not-blueprintable",
@@ -20,8 +19,9 @@ data:extend({
     name = "nullius-landing-main",
     icon = "__base__/graphics/icons/crash-site-spaceship.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+    hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 600,
     alert_when_damaged = false,
@@ -42,7 +42,7 @@ data:extend({
     dying_explosion = "nuke-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-ground.png",
       priority = "very-low",
       width = 1330,
       height = 786,
@@ -56,7 +56,7 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship.png",
           priority = "very-low",
           width = 1228,
           height = 790,
@@ -66,7 +66,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-shadow.png",
           priority = "very-low",
           width = 1340,
           height = 842,
@@ -85,8 +85,9 @@ data:extend({
     name = "nullius-landing-tail",
     icon = "__base__/graphics/icons/crash-site-spaceship-wreck-big-1.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+    hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 200,
     alert_when_damaged = false,
@@ -106,7 +107,7 @@ data:extend({
     dying_explosion = "big-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-big-1-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-big-1-ground.png",
       priority="high",
       width = 348,
       height = 136,
@@ -118,14 +119,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-big-1.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-big-1.png",
           width = 234,
           height = 280,
           shift = util.by_pixel(-7, -8),
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-big-1-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-big-1-shadow.png",
           width = 256,
           height = 44,
           shift = util.by_pixel(37, 26),
@@ -141,8 +142,9 @@ data:extend({
     name = "nullius-landing-propulsion",
     icon = "__base__/graphics/icons/crash-site-spaceship-wreck-big-2.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+    hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 200,
     alert_when_damaged = false,
@@ -165,7 +167,7 @@ data:extend({
     dying_explosion = "big-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-big-2-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-big-2-ground.png",
       priority="high",
       width = 450,
       height = 296,
@@ -177,14 +179,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-big-2.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-big-2.png",
           width = 242,
           height = 258,
           shift = util.by_pixel(-13, -7),
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-big-2-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-big-2-shadow.png",
           width = 294,
           height = 228,
           shift = util.by_pixel(27, -12),
@@ -200,8 +202,9 @@ data:extend({
     name = "nullius-landing-vent",
     icon = "__base__/graphics/icons/crash-site-spaceship-wreck-medium-1.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+    hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 100,
     alert_when_damaged = false,
@@ -221,7 +224,7 @@ data:extend({
     dying_explosion = "big-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-1-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-1-ground.png",
       priority="high",
       width = 352,
       height = 206,
@@ -233,14 +236,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-1.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-1.png",
           width = 228,
           height = 120,
           shift = util.by_pixel(-14, -4),
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-1-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-1-shadow.png",
           width = 206,
           height = 114,
           shift = util.by_pixel(16, -1),
@@ -256,8 +259,9 @@ data:extend({
     name = "nullius-landing-intake",
     icon = "__base__/graphics/icons/crash-site-spaceship-wreck-medium-2.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+    hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 100,
     alert_when_damaged = false,
@@ -277,7 +281,7 @@ data:extend({
     dying_explosion = "big-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-2-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-2-ground.png",
       priority="high",
       width = 396,
       height = 214,
@@ -290,14 +294,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-2.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-2.png",
           width = 194,
           height = 150,
           shift = util.by_pixel(-15, 8),
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-2-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-2-shadow.png",
           width = 196,
           height = 114,
           shift = util.by_pixel(22, 15),
@@ -313,8 +317,9 @@ data:extend({
     name = "nullius-landing-wing",
     icon = "__base__/graphics/icons/crash-site-spaceship-wreck-medium-3.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 100,
     alert_when_damaged = false,
@@ -334,7 +339,7 @@ data:extend({
     dying_explosion = "big-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-3-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-3-ground.png",
       priority="high",
       width = 350,
       height = 284,
@@ -347,14 +352,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-3.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-3.png",
           width = 224,
           height = 236,
           shift = util.by_pixel(-30, 4),
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-medium-3-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-medium-3-shadow.png",
           width = 104,
           height = 178,
           shift = util.by_pixel(6, 0),
@@ -370,8 +375,9 @@ data:extend({
     name = "nullius-landing-duct",
     icon = "__base__/graphics/icons/crash-site-spaceship-wreck-small-3.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 50,
     alert_when_damaged = false,
@@ -394,7 +400,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-small-3-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-small-3-ground.png",
       priority="high",
       width = 274,
       height = 172,
@@ -407,14 +413,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-small-3.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-small-3.png",
           width = 164,
           height = 148,
           shift = util.by_pixel(5, -1),
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-small-3-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-small-3-shadow.png",
           width = 156,
           height = 114,
           shift = util.by_pixel(9, -1),
@@ -430,8 +436,9 @@ data:extend({
     name = "nullius-landing-shielding",
     icon = "__base__/graphics/icons/crash-site-spaceship-wreck-small-4.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 50,
     alert_when_damaged = false,
@@ -448,7 +455,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-small-4-ground.png",
+      filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-small-4-ground.png",
       priority="high",
       width = 256,
       height = 150,
@@ -461,14 +468,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-small-4.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-small-4.png",
           width = 168,
           height = 142,
           shift = util.by_pixel(1, -3),
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-spaceship/hr-spaceship-wreck-small-4-shadow.png",
+          filename = BASEENTITY .. "crash-site-spaceship/spaceship-wreck-small-4-shadow.png",
           width = 164,
           height = 100,
           shift = util.by_pixel(19, -5),
@@ -485,17 +492,18 @@ data:extend({
     icon = ENTICONPATH .. "crash-site-lab-broken.png",
     icon_size = 64,
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 100,
     alert_when_damaged = false,
     allow_copy_paste = false,
 	localised_description = {"entity-description.nullius-minable",
-	    "[item=nullius-lab-1] 20x[item=red-wire] 2x[item=nullius-broken-sensor-node]"},
+	    "[item=nullius-lab-1] 20x[item=nullius-red-wire] 2x[item=nullius-broken-sensor-node]"},
     minable = {
       mining_time = 1,
       results = {
         {type="item", name="nullius-lab-1", amount=1},
-        {type="item", name="red-wire", amount=20},
+        {type="item", name="nullius-red-wire", amount=20},
         {type="item", name="nullius-broken-sensor-node", amount=2}
       }
     },
@@ -505,7 +513,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = ENTITYPATH .. "crash/hr-crash-site-lab-ground.png",
+      filename = ENTITYPATH .. "crash/crash-site-lab-ground.png",
       priority = crash_site_sprite_priority,
       width = 700,
       height = 344,
@@ -518,14 +526,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-lab-repaired.png",
+          filename = ENTITYPATH .. "crash/crash-site-lab-repaired.png",
           width = 488,
           height = 252,
           shift = util.by_pixel(-18, 14),
           scale = 0.5
         },
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-lab-repaired-shadow.png",
+          filename = ENTITYPATH .. "crash/crash-site-lab-repaired-shadow.png",
           width = 696,
           height = 302,
           shift = util.by_pixel(-11, 12),
@@ -542,6 +550,7 @@ data:extend({
     icon = ENTICONPATH .. "crash-site-generator.png",
     icon_size = 64,
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 50,
     alert_when_damaged = false,
@@ -564,7 +573,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = ENTITYPATH .. "crash/hr-crash-site-generator-ground.png",
+      filename = ENTITYPATH .. "crash/crash-site-generator-ground.png",
       priority = crash_site_sprite_priority,
       width = 384,
       height = 360,
@@ -577,14 +586,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-generator.png",
+          filename = ENTITYPATH .. "crash/crash-site-generator.png",
           width = 286,
           height = 252,
           shift = util.by_pixel(-11, -23),
           scale = 0.5
         },
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-generator-shadow.png",
+          filename = ENTITYPATH .. "crash/crash-site-generator-shadow.png",
           width = 474,
           height = 152,
           draw_as_shadow = true,
@@ -600,8 +609,9 @@ data:extend({
     name = "nullius-landing-pod-1",
     icon = "__base__/graphics/icons/crash-site-chest.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 200,
     alert_when_damaged = false,
@@ -619,7 +629,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-chests/hr-crash-site-chest-1-ground.png",
+      filename = BASEENTITY .. "crash-site-chests/crash-site-chest-1-ground.png",
       priority = crash_site_sprite_priority,
       width = 220,
       height = 148,
@@ -631,7 +641,7 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-chests/hr-crash-site-chest-1.png",
+          filename = BASEENTITY .. "crash-site-chests/crash-site-chest-1.png",
           priority = "extra-high",
           width = 120,
           height = 76,
@@ -639,7 +649,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-chests/hr-crash-site-chest-1-shadow.png",
+          filename = BASEENTITY .. "crash-site-chests/crash-site-chest-1-shadow.png",
           priority = "extra-high",
           width = 210,
           height = 128,
@@ -656,8 +666,9 @@ data:extend({
     name = "nullius-landing-pod-2",
     icon = "__base__/graphics/icons/crash-site-chest.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 200,
     alert_when_damaged = false,
@@ -675,7 +686,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = BASEENTITY .. "crash-site-chests/hr-crash-site-chest-2-ground.png",
+      filename = BASEENTITY .. "crash-site-chests/crash-site-chest-2-ground.png",
       priority = crash_site_sprite_priority,
       width = 218,
       height = 186,
@@ -687,7 +698,7 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = BASEENTITY .. "crash-site-chests/hr-crash-site-chest-2.png",
+          filename = BASEENTITY .. "crash-site-chests/crash-site-chest-2.png",
           priority = "extra-high",
           width = 116,
           height = 88,
@@ -695,7 +706,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = BASEENTITY .. "crash-site-chests/hr-crash-site-chest-2-shadow.png",
+          filename = BASEENTITY .. "crash-site-chests/crash-site-chest-2-shadow.png",
           priority = "extra-high",
           width = 188,
           height = 126,
@@ -713,6 +724,7 @@ data:extend({
     icon = ENTICONPATH .. "crash-site-assembling-machine-1-repaired.png",
     icon_size = 64,
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 100,
     alert_when_damaged = false,
@@ -732,7 +744,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch = {
-      filename = ENTITYPATH .. "crash/hr-crash-site-assembling-machine-1-ground.png",
+      filename = ENTITYPATH .. "crash/crash-site-assembling-machine-1-ground.png",
       priority = crash_site_sprite_priority,
       width = 446,
       height = 234,
@@ -745,14 +757,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-assembling-machine-1-repaired.png",
+          filename = ENTITYPATH .. "crash/crash-site-assembling-machine-1-repaired.png",
           width = 282,
           height = 182,
           shift = util.by_pixel(-12, 3),
           scale = 0.5
         },
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-assembling-machine-1-repaired-shadow.png",
+          filename = ENTITYPATH .. "crash/crash-site-assembling-machine-1-repaired-shadow.png",
           width = 278,
           height = 168,
           draw_as_shadow = true,
@@ -769,6 +781,7 @@ data:extend({
     icon = ENTICONPATH .. "crash-site-assembling-machine-2-repaired.png",
     icon_size = 64,
     flags = wreck_flags,
+		hidden = true,
     map_color = {r = 0, g = 0.365, b = 0.58, a = 1},
     max_health = 100,
     alert_when_damaged = false,
@@ -790,7 +803,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     integration_patch_render_layer = "decals",
     integration_patch ={
-      filename = ENTITYPATH .. "crash/hr-crash-site-assembling-machine-2-ground.png",
+      filename = ENTITYPATH .. "crash/crash-site-assembling-machine-2-ground.png",
       priority = crash_site_sprite_priority,
       width = 290,
       height = 238,
@@ -803,14 +816,14 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-assembling-machine-2-repaired.png",
+          filename = ENTITYPATH .. "crash/crash-site-assembling-machine-2-repaired.png",
           width = 198,
           height = 200,
           shift = util.by_pixel(-4, -11),
           scale = 0.5
         },
         {
-          filename = ENTITYPATH .. "crash/hr-crash-site-assembling-machine-2-repaired-shadow.png",
+          filename = ENTITYPATH .. "crash/crash-site-assembling-machine-2-repaired-shadow.png",
           width = 208,
           height = 174,
           draw_as_shadow = true,
