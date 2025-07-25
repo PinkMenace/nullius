@@ -1,0 +1,6 @@
+{
+  "recipe":
+  [
+	["nullius-empty-canister", "nullius-canister"]
+  ]
+}

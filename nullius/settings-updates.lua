@@ -74,6 +74,7 @@ if data.raw['int-setting']['bobmods-logistics-pipeperlevel'] then
 end
 if data.raw['int-setting']['bobmods-logistics-fluidwagonbase'] then
    data.raw['int-setting']['bobmods-logistics-fluidwagonbase'].hidden = true
+   data.raw['int-setting']['bobmods-logistics-fluidwagonbase'].default_value = 25
    data.raw['int-setting']['bobmods-logistics-fluidwagonbase'].allowed_values = {25}
 end
 if data.raw['int-setting']['bobmods-logistics-storagetankbase'] then
@@ -81,6 +82,9 @@ if data.raw['int-setting']['bobmods-logistics-storagetankbase'] then
    data.raw['int-setting']['bobmods-logistics-storagetankbase'].allowed_values = {25}
 end
 
+if not data.raw['string-setting'] then
+   data.raw['string-setting'] = {}
+end
 
 if data.raw['string-setting']['alien-biomes-disable-vegetation'] then
    data.raw['string-setting']['alien-biomes-disable-vegetation'].hidden = true

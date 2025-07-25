@@ -14,9 +14,11 @@ require("prototypes.item.recipe")
 require("prototypes.item.alignment")
 require("prototypes.item.broken")
 require("prototypes.item.void")
-require("prototypes.item.landfill")
+require("prototypes.item.landfill") -- TODO: remove empty_transitions = true, and implement variants.transitions maybe
 require("prototypes.item.boxing")
-require("prototypes.entity.furnace")
+
+-- TODO: set the appropriate volume for fluid_boxes
+require("prototypes.entity.furnace") 
 require("prototypes.entity.assembler")
 require("prototypes.entity.miner")
 require("prototypes.entity.plumbing")
@@ -47,4 +49,3 @@ require("prototypes.inputs")
 require("prototypes.achievements")
 
 data.raw["map-settings"]["map-settings"].pollution.enabled = false
-data.raw["map-settings"]["map-settings"].difficulty_settings.research_queue_setting = "always"
