@@ -22,7 +22,7 @@ local function boxed_icons(itemname, suffix)
   if (base_item == nil) then return nil end
 
   local base_icon = base_item.icon
-  local base_size = base_item.icon_size
+  local base_size = base_item.icon_size or 64
   local base_tint = nil
   local icons = base_item.icons
   if ((icons ~= nil) and (icons[1] ~= nil)) then
@@ -96,7 +96,7 @@ end
 for _,recipe in pairs(data.raw.recipe) do
   if (string.sub(recipe.name, 1, 14) == "nullius-unbox-") then
     local suffix = string.sub(recipe.name, 15, -1)
-    local icons = boxed_icons(recipe.result, suffix)
+    local icons = boxed_icons(recipe.results[1].name, suffix)
     if (icons ~= nil) then
       data.raw.item["nullius-box-"..suffix].icons = icons.boxed
       recipe.icons = icons.unboxed
@@ -105,9 +105,9 @@ for _,recipe in pairs(data.raw.recipe) do
 	  end
     end
   elseif ((string.sub(recipe.name, 1, 14) == "nullius-boxed-") and
-      (recipe.result ~= nil) and
-      (string.sub(recipe.result, 1, 12) ~= "nullius-box-")) then
-    local icons = boxed_icons(recipe.result)
+      (recipe.results ~= nil) and
+      (string.sub(recipe.results[1].name, 1, 12) ~= "nullius-box-")) then
+    local icons = boxed_icons(recipe.results[1].name)
     if (icons ~= nil) then
       recipe.icons = icons.boxed
 	  if (data.raw["virtual-signal"][recipe.name] ~= nil) then

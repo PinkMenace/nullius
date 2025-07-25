@@ -10,7 +10,6 @@ local function create_turbine_recipe(fluidname, exhaust, energy, counto, countc,
 	icons = fluid.icons,
 	icon = fluid.icon,
     icon_size = fluid.icon_size,
-    icon_mipmaps = fluid.icon_mipmaps,
 	crafting_machine_tint = { primary = fluid.flow_color },
     category = "turbine-open",
     subgroup = "turbine-open",
@@ -59,21 +58,21 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-open-1",
-	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", 1},
+	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(1)},
 	localised_description = {"entity-description.nullius-turbine-info",
-	    1, 90, {"entity-description.nullius-turbine-item",
+	    tostring(1), tostring(90), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-open"}}},
     icons = {
 	  {
 	    icon = "__base__/graphics/icons/steam-turbine.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         tint = {0.7, 0.7, 0.6, 1}
       },
 	  {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.32,
         shift = {1, -8},
         tint = {0.75, 0.75, 0.75, 0.8}
@@ -87,21 +86,21 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-open-2",
-	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", 2},
+	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(2)},
 	localised_description = {"entity-description.nullius-turbine-info",
-	    2.5, 95, {"entity-description.nullius-turbine-item",
+	    tostring(2.5), tostring(95), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-open"}}},
     icons = {
 	  {
 	    icon = "__base__/graphics/icons/steam-turbine.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         tint = {0.85, 0.85, 0.75, 1}
       },
 	  {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.32,
         shift = {1, -8},
         tint = {0.8, 0.8, 0.8, 0.82}
@@ -115,21 +114,21 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-open-3",
-	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", 3},
+	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(3)},
 	localised_description = {"entity-description.nullius-turbine-info",
-	    6, 100, {"entity-description.nullius-turbine-item",
+	    tostring(6), tostring(100), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-open"}}},
     icons = {
 	  {
 	    icon = "__base__/graphics/icons/steam-turbine.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         tint = {1, 1, 0.9, 1}
       },
 	  {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.32,
         shift = {1, -8},
         tint = {0.85, 0.85, 0.85, 0.85}
@@ -143,14 +142,14 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-closed-1",
-	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", 1},
+	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(1)},
 	localised_description = {"entity-description.nullius-turbine-info",
-	    1, 85, {"entity-description.nullius-turbine-item",
+	    tostring(1), tostring(85), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-closed"}}},
     icons = {{
 	  icon = "__base__/graphics/icons/steam-turbine.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.6, 0.6, 0.7, 1}
     }},
     subgroup = "energy-backup",
@@ -161,14 +160,14 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-closed-2",
-	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", 2},
+	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(2)},
 	localised_description = {"entity-description.nullius-turbine-info",
-	    2.5, 90, {"entity-description.nullius-turbine-item",
+	    tostring(2.5), tostring(90), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-closed"}}},
     icons = {{
 	  icon = "__base__/graphics/icons/steam-turbine.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.75, 0.75, 0.85, 1}
     }},
     subgroup = "energy-backup",
@@ -179,14 +178,14 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-closed-3",
-	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", 3},
+	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(3)},
 	localised_description = {"entity-description.nullius-turbine-info",
-	    6, 95, {"entity-description.nullius-turbine-item",
+	    tostring(6), tostring(95), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-closed"}}},
     icons = {{
 	  icon = "__base__/graphics/icons/steam-turbine.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.9, 0.9, 1, 1}
     }},
     subgroup = "energy-backup",
@@ -208,7 +207,9 @@ data:extend({
       {"nullius-iron-gear", 1},
       {"pipe", 2}
     },
-    result = "nullius-turbine-open-1"
+    results = {
+      {type = "item", name = "nullius-turbine-open-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -224,7 +225,9 @@ data:extend({
       {"nullius-box-iron-gear", 1},
       {"nullius-box-pipe-1", 2}
     },
-    result = "nullius-box-turbine-open-1"
+    results = {
+      {type = "item", name = "nullius-box-turbine-open-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -238,7 +241,9 @@ data:extend({
       {"nullius-small-tank-1", 1},
 	  {"nullius-top-up-valve", 1}
     },
-    result = "nullius-turbine-closed-1"
+    results = {
+      {type = "item", name = "nullius-turbine-closed-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -253,7 +258,9 @@ data:extend({
 	  {"nullius-box-small-tank-1", 1},
 	  {"nullius-box-top-up-valve", 1}
     },
-    result = "nullius-box-turbine-closed-1"
+    results = {
+      {type = "item", name = "nullius-box-turbine-closed-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -269,7 +276,9 @@ data:extend({
       {"nullius-steel-gear", 3},
       {"nullius-capacitor", 1}
     },
-    result = "nullius-turbine-open-2"
+    results = {
+      {type = "item", name = "nullius-turbine-open-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -286,7 +295,9 @@ data:extend({
       {"nullius-box-steel-gear", 3},
       {"nullius-box-capacitor", 1}
     },
-    result = "nullius-box-turbine-open-2"
+    results = {
+      {type = "item", name = "nullius-box-turbine-open-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -300,7 +311,9 @@ data:extend({
       {"nullius-turbine-closed-1", 1},
       {"nullius-small-pump-1", 1}
     },
-    result = "nullius-turbine-closed-2"
+    results = {
+      {type = "item", name = "nullius-turbine-closed-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -315,7 +328,9 @@ data:extend({
       {"nullius-box-turbine-closed-1", 1},
       {"nullius-box-small-pump-1", 1}
     },
-    result = "nullius-box-turbine-closed-2"
+    results = {
+      {type = "item", name = "nullius-box-turbine-closed-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -331,7 +346,9 @@ data:extend({
       {"nullius-bearing", 6},
       {"nullius-transformer", 1}
     },
-    result = "nullius-turbine-open-3"
+    results = {
+      {type = "item", name = "nullius-turbine-open-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -348,7 +365,9 @@ data:extend({
       {"nullius-box-bearing", 6},
       {"nullius-box-transformer", 1}
     },
-    result = "nullius-box-turbine-open-3"
+    results = {
+      {type = "item", name = "nullius-box-turbine-open-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -363,7 +382,9 @@ data:extend({
       {"nullius-small-tank-2", 1},
       {"nullius-small-pump-2", 1}
     },
-    result = "nullius-turbine-closed-3"
+    results = {
+      {type = "item", name = "nullius-turbine-closed-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -379,6 +400,8 @@ data:extend({
       {"nullius-box-small-tank-2", 1},
       {"nullius-box-small-pump-2", 1}
     },
-    result = "nullius-box-turbine-closed-3"
+    results = {
+      {type = "item", name = "nullius-box-turbine-closed-3", amount = 1}
+    }
   }
 })

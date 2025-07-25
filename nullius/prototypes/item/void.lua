@@ -12,7 +12,7 @@ data:extend({
         tint = {r=0.7, g=0.7, b=0.7, a=1}
       }
     },
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "other",
     stack_size = 100
   },
@@ -25,7 +25,7 @@ data:extend({
         icon_size = 64
       }
     },
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "other",
     stack_size = 100
   },
@@ -33,7 +33,7 @@ data:extend({
     type = "item",
     name = "nullius-power-sink",
 	icons = data.raw.fluid["nullius-energy"].icons,
-    flags = {"hidden"},
+    hidden = true,
     subgroup = "other",
     stack_size = 100
   },
@@ -589,8 +589,8 @@ data:extend({
     category = "nullius-power-sink",
     subgroup = "nullius-power-sink",
     hide_from_player_crafting = true,
-	hide_from_stats = true,
-	hidden = true,
+	  hide_from_stats = true,
+	  hidden = true,
     energy_required = 2.5,
     ingredients = {{type="fluid", name="nullius-energy", amount=150}},
     results = {{type="item", name="nullius-power-sink", amount=1, probability=0}}

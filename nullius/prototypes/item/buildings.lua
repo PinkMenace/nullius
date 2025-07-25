@@ -9,7 +9,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/stone-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "furnace",
     order = "nullius-bbb",
@@ -28,7 +28,9 @@ data:extend({
       {"nullius-iron-wire", 2},
       {"nullius-iron-plate", 1}
     },
-    result = "nullius-small-furnace-1"
+    results = {
+      {type = "item", name = "nullius-small-furnace-1", amount = 1}
+    }
   },
 
   {
@@ -56,7 +58,9 @@ data:extend({
       {"nullius-crucible", 1},
       {"nullius-steel-plate", 1}
     },
-    result = "nullius-small-furnace-2"
+    results = {
+      {type = "item", name = "nullius-small-furnace-2", amount = 1}
+    }
   },
 
   {
@@ -87,7 +91,9 @@ data:extend({
       {"nullius-aluminum-wire", 6},
       {"nullius-sensor-1", 1}
     },
-    result = "nullius-small-furnace-3"
+    results = {
+      {type = "item", name = "nullius-small-furnace-3", amount = 1}
+    }
   },
 
   {
@@ -96,7 +102,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/steel-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "furnace",
     order = "nullius-bcb",
@@ -114,7 +120,9 @@ data:extend({
       {"nullius-small-furnace-2", 2},
       {"nullius-chimney-1", 1}
     },
-    result = "nullius-medium-furnace-1"
+    results = {
+      {type = "item", name = "nullius-medium-furnace-1", amount = 1}
+    }
   },
 
   {
@@ -143,7 +151,9 @@ data:extend({
       {"nullius-combustion-chamber-2", 1},
       {"nullius-heat-pipe-1", 3}
     },
-    result = "nullius-medium-furnace-2"
+    results = {
+      {type = "item", name = "nullius-medium-furnace-2", amount = 1}
+    }
   },
 
   {
@@ -174,7 +184,9 @@ data:extend({
       {"nullius-box-titanium-plate", 1},
       {"nullius-box-wall", 1}
     },
-    result = "nullius-medium-furnace-3"
+    results = {
+      {type = "item", name = "nullius-medium-furnace-3", amount = 1}
+    }
   },
 
   {
@@ -183,7 +195,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/electric-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.65, 0.65, 0.8}
     }},
     subgroup = "furnace",
@@ -203,7 +215,9 @@ data:extend({
       {"nullius-steel-beam", 8},
       {"concrete", 20}
     },
-    result = "nullius-large-furnace-1"
+    results = {
+      {type = "item", name = "nullius-large-furnace-1", amount = 1}
+    }
   },
 
   {
@@ -212,7 +226,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/electric-furnace.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "furnace",
     order = "nullius-bdc",
@@ -233,7 +247,9 @@ data:extend({
       {"nullius-box-insulation", 2},
       {"nullius-box-belt-4", 1}
     },
-    result = "nullius-large-furnace-2"
+    results = {
+      {type = "item", name = "nullius-large-furnace-2", amount = 1}
+    }
   },
 
   {
@@ -285,7 +301,9 @@ data:extend({
       {"wooden-chest", 1},
       {"nullius-fabrication-tool-1", 1}
     },
-    result = "nullius-small-assembler-1"
+    results = {
+      {type = "item", name = "nullius-small-assembler-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -302,7 +320,9 @@ data:extend({
       {"transport-belt", 1},
       {"wooden-chest", 1}
     },
-    result = "nullius-small-assembler-1"
+    results = {
+      {type = "item", name = "nullius-small-assembler-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -317,7 +337,9 @@ data:extend({
       {"splitter", 1},
       {"iron-chest", 1}
     },
-    result = "nullius-small-assembler-2"
+    results = {
+      {type = "item", name = "nullius-small-assembler-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -335,7 +357,9 @@ data:extend({
       {"splitter", 1},
       {"iron-chest", 2}
     },
-    result = "nullius-small-assembler-2"
+    results = {
+      {type = "item", name = "nullius-small-assembler-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -351,10 +375,11 @@ data:extend({
       {"nullius-hangar-1", 1},
       {"nullius-construction-bot-2", 1},
       {"nullius-large-buffer-chest-1", 1},
-      {"express-stack-filter-inserter", 1}
+      {"bob-express-bulk-inserter", 1}
     },
-    result = "nullius-small-assembler-3",
-    result_count = 3
+    results = {
+      {type = "item", name = "nullius-small-assembler-3", amount = 3}
+    }
   },
 
   {
@@ -404,7 +429,9 @@ data:extend({
       {"nullius-small-assembler-1", 2},
       {"nullius-steel-beam", 1}
     },
-    result = "nullius-medium-assembler-1"
+    results = {
+      {type = "item", name = "nullius-medium-assembler-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -417,9 +444,11 @@ data:extend({
       {"nullius-medium-assembler-1", 1},
       {"nullius-small-assembler-2", 1},
       {"nullius-aluminum-sheet", 6},
-      {"red-wire", 4}
+      {"nullius-red-wire", 4}
     },
-    result = "nullius-medium-assembler-2"
+    results = {
+      {type = "item", name = "nullius-medium-assembler-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -438,8 +467,9 @@ data:extend({
       {"express-transport-belt", 4},
       {"stone-wall", 6}
     },
-    result = "nullius-medium-assembler-3",
-	result_count = 2
+	  results = {
+      {type = "item", name = "nullius-medium-assembler-3", amount = 2}
+    }
   },
 
   {
@@ -448,7 +478,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/assembling-machine-2.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "assembler",
     order = "nullius-db",
@@ -461,7 +491,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/assembling-machine-3.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "assembler",
     order = "nullius-dc",
@@ -481,7 +511,9 @@ data:extend({
       {"nullius-mortar", 3},
       {"fast-transport-belt", 6}
     },
-    result = "nullius-large-assembler-1"
+    results = {
+      {type = "item", name = "nullius-large-assembler-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -497,15 +529,17 @@ data:extend({
       {"gate", 2},
       {"nullius-substation-2", 1}
     },
-    result = "nullius-large-assembler-2"
+    results = {
+      {type = "item", name = "nullius-large-assembler-2", amount = 1}
+    }
   },
 
   {
     type = "item",
     name = "nullius-boxer",
 	icons = {{
-      icon = "__angelssmelting__/graphics/icons/powder-mixer-ico.png",
-      icon_size = 64, icon_mipmaps = 4,
+      icon = "__angelssmeltinggraphics__/graphics/icons/powder-mixer-ico.png",
+      icon_size = 64, 
       scale = 0.5
     }},
     subgroup = "assembler",
@@ -522,10 +556,12 @@ data:extend({
     energy_required = 8,
     ingredients = {
       {"nullius-small-assembler-2", 1},
-      {"stack-inserter", 1},
+      {"bulk-inserter", 1},
       {"nullius-speed-module-1", 1}
     },
-    result = "nullius-boxer"
+    results = {
+      {type = "item", name = "nullius-boxer", amount = 1}
+    }
   },
 
   {
@@ -579,7 +615,9 @@ data:extend({
       {"nullius-iron-gear", 1},
       {"nullius-mining-tool-1", 1}
     },
-    result = "nullius-small-miner-1"
+    results = {
+      {type = "item", name = "nullius-small-miner-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -598,8 +636,9 @@ data:extend({
       {"nullius-iron-gear", 2},
       {"nullius-iron-plate", 3}
     },
-    result = "nullius-small-miner-1",
-    result_count = 2
+    results = {
+      {type = "item", name = "nullius-small-miner-1", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -614,7 +653,9 @@ data:extend({
       {"nullius-steel-plate", 5},
       {"nullius-aluminum-carbide", 2}
     },
-    result = "nullius-small-miner-2"
+    results = {
+      {type = "item", name = "nullius-small-miner-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -632,8 +673,9 @@ data:extend({
       {type="item", name="nullius-box-ceramic-powder", amount=3},
       {type="item", name="express-splitter", amount=1}
     },
-    result = "nullius-small-miner-3",
-	result_count = 2
+	  results = {
+      {type = "item", name = "nullius-small-miner-3", amount = 2}
+    }
   },
 
   {
@@ -642,7 +684,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/burner-mining-drill.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "miner",
     order = "nullius-cb",
@@ -685,7 +727,9 @@ data:extend({
       {"nullius-small-miner-1", 2},
       {"nullius-steel-beam", 1}
     },
-    result = "nullius-medium-miner-1"
+    results = {
+      {type = "item", name = "nullius-medium-miner-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -700,7 +744,9 @@ data:extend({
       {"nullius-steel-gear", 4},
       {"nullius-aluminum-plate", 2}
     },
-    result = "nullius-medium-miner-2"
+    results = {
+      {type = "item", name = "nullius-medium-miner-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -717,7 +763,9 @@ data:extend({
       {type="item", name="nullius-transformer", amount=1},
       {type="fluid", name="nullius-lubricant", amount=50}
     },
-    result = "nullius-medium-miner-3"
+    results = {
+      {type = "item", name = "nullius-medium-miner-3", amount = 1}
+    }
   },
 
   {
@@ -726,7 +774,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/electric-mining-drill.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.6, 0.7, 0.8}
     }},
     subgroup = "miner",
@@ -740,7 +788,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/electric-mining-drill.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "miner",
     order = "nullius-dc",
@@ -759,7 +807,9 @@ data:extend({
       {"nullius-steel-cable", 6},
       {"nullius-steel-sheet", 4}
     },
-    result = "nullius-large-miner-1"
+    results = {
+      {type = "item", name = "nullius-large-miner-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -775,7 +825,9 @@ data:extend({
       {"nullius-cargo-wagon-1", 1},
       {"nullius-locomotive-1", 1}
     },
-    result = "nullius-large-miner-2"
+    results = {
+      {type = "item", name = "nullius-large-miner-2", amount = 1}
+    }
   },
 
   {
@@ -825,7 +877,9 @@ data:extend({
       {"nullius-turbine-open-1", 2},
       {"small-electric-pole", 2}
     },
-    result = "nullius-wind-turbine-1"
+    results = {
+      {type = "item", name = "nullius-wind-turbine-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -839,7 +893,9 @@ data:extend({
       {"nullius-box-turbine-open-1", 2},
       {"nullius-box-power-pole-1", 2}
     },
-    result = "nullius-box-wind-turbine-1"
+    results = {
+      {type = "item", name = "nullius-box-wind-turbine-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -855,7 +911,9 @@ data:extend({
       {"nullius-steel-cable", 5},
       {"concrete", 10}
     },
-    result = "nullius-wind-turbine-2"
+    results = {
+      {type = "item", name = "nullius-wind-turbine-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -872,7 +930,9 @@ data:extend({
       {"nullius-box-steel-cable", 5},
       {"nullius-box-concrete", 5}
     },
-    result = "nullius-box-wind-turbine-2"
+    results = {
+      {type = "item", name = "nullius-box-wind-turbine-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -888,7 +948,9 @@ data:extend({
       {"nullius-carbon-composite", 10},
       {"refined-concrete", 16}
     },
-    result = "nullius-wind-turbine-3"
+    results = {
+      {type = "item", name = "nullius-wind-turbine-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -905,14 +967,16 @@ data:extend({
       {"nullius-box-carbon-composite", 10},
       {"nullius-box-reinforced-concrete", 8}
     },
-    result = "nullius-box-wind-turbine-3"
+    results = {
+      {type = "item", name = "nullius-box-wind-turbine-3", amount = 1}
+    }
   },
 
   {
     type = "item",
     name = "nullius-foundry-1",
     icons = {{
-      icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
       icon_size = 64,
       tint = {0.6, 0.8, 0.7}
     }},
@@ -925,7 +989,7 @@ data:extend({
     type = "item",
     name = "nullius-foundry-2",
     icons = {{
-      icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
       icon_size = 64,
       tint = {0.7, 0.8, 1}
     }},
@@ -938,7 +1002,7 @@ data:extend({
     type = "item",
     name = "nullius-foundry-3",
     icons = {{
-      icon = "__angelssmelting__/graphics/icons/casting-machine.png",
+      icon = "__angelssmeltinggraphics__/graphics/icons/casting-machine.png",
       icon_size = 64
     }},
     subgroup = "ore-processing",
@@ -958,7 +1022,9 @@ data:extend({
       {"inserter", 2},
       {"nullius-iron-plate", 3}
     },
-    result = "nullius-foundry-1"
+    results = {
+      {type = "item", name = "nullius-foundry-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -971,10 +1037,12 @@ data:extend({
       {"nullius-foundry-1", 1},
       {"nullius-medium-furnace-1", 1},
       {"nullius-crucible", 2},
-      {"turbo-filter-inserter", 2},
+      {"bob-turbo-inserter", 2},
       {"fast-transport-belt", 3}
     },
-    result = "nullius-foundry-2"
+    results = {
+      {type = "item", name = "nullius-foundry-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -989,15 +1057,17 @@ data:extend({
       {"nullius-medium-assembler-3", 1},
       {"nullius-thermal-tank-2", 1}
     },
-    result = "nullius-foundry-3"
+    results = {
+      {type = "item", name = "nullius-foundry-3", amount = 1}
+    }
   },
 
   {
     type = "item",
     name = "nullius-crusher-1",
     icons = {{
-      icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
-      icon_size = 64, icon_mipmaps = 4,
+      icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+      icon_size = 64, 
 	  tint = {0.6, 0.6, 0.6}
     }},
     subgroup = "ore-processing",
@@ -1009,8 +1079,8 @@ data:extend({
     type = "item",
     name = "nullius-crusher-2",
     icons = {{
-      icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
-      icon_size = 64, icon_mipmaps = 4,
+      icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+      icon_size = 64, 
 	  tint = {0.6, 0.65, 0.85}
     }},
     subgroup = "ore-processing",
@@ -1022,8 +1092,8 @@ data:extend({
     type = "item",
     name = "nullius-crusher-3",
     icons = {{
-      icon = "__angelsrefining__/graphics/icons/ore-crusher.png",
-      icon_size = 64, icon_mipmaps = 4
+      icon = "__angelsrefininggraphics__/graphics/icons/ore-crusher.png",
+      icon_size = 64, 
     }},
     subgroup = "ore-processing",
     order = "nullius-bd",
@@ -1043,7 +1113,9 @@ data:extend({
       {"nullius-iron-wire", 3},
       {"stone-brick", 8}
     },
-    result = "nullius-crusher-1"
+    results = {
+      {type = "item", name = "nullius-crusher-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1060,8 +1132,9 @@ data:extend({
       {"copper-cable", 8},
       {"fast-splitter", 1}
     },
-    result = "nullius-crusher-2",
-	result_count = 2
+	  results = {
+      {type = "item", name = "nullius-crusher-2", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -1073,11 +1146,13 @@ data:extend({
     ingredients = {
       {"nullius-crusher-2", 1},
       {"nullius-medium-miner-3", 1},
-      {"ultimate-splitter", 1},
+      {"bob-ultimate-splitter", 1},
       {"nullius-box-wall", 2},
-	  {"nullius-trash-compactor", 1}
+	    {"nullius-trash-compactor", 1}
     },
-    result = "nullius-crusher-3"
+    results = {
+      {type = "item", name = "nullius-crusher-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1092,10 +1167,12 @@ data:extend({
     ingredients = {
       {"nullius-crusher-2", 2},
       {"nullius-medium-miner-3", 1},
-      {"ultimate-splitter", 1},
+      {"bob-ultimate-splitter", 1},
       {"nullius-box-wall", 2}
     },
-    result = "nullius-crusher-3"
+    results = {
+      {type = "item", name = "nullius-crusher-3", amount = 1}
+    }
   },
 
   {
@@ -1109,7 +1186,9 @@ data:extend({
       {"nullius-iron-sheet", 2},
       {"nullius-iron-rod", 1}
     },
-    result = "wooden-chest"
+    results = {
+      {type = "item", name = "wooden-chest", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1124,7 +1203,9 @@ data:extend({
       {"nullius-steel-rod", 2},
       {"nullius-rubber", 1}
     },
-    result = "iron-chest"
+    results = {
+      {type = "item", name = "iron-chest", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1139,7 +1220,9 @@ data:extend({
       {type="item", name="nullius-titanium-rod", amount=2},
       {type="fluid", name="nullius-epoxy", amount=4, fluidbox_index=1}
     },
-    result = "steel-chest"
+    results = {
+      {type = "item", name = "steel-chest", amount = 1}
+    }
   },
 
   {
@@ -1148,7 +1231,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/steel-chest.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "storage",
     order = "nullius-cb",
@@ -1178,7 +1261,9 @@ data:extend({
       {"iron-chest", 4},
       {"nullius-aluminum-plate", 3}
     },
-    result = "nullius-large-chest-1"
+    results = {
+      {type = "item", name = "nullius-large-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1192,7 +1277,9 @@ data:extend({
       {"steel-chest", 2},
       {"nullius-titanium-plate", 2}
     },
-    result = "nullius-large-chest-2"
+    results = {
+      {type = "item", name = "nullius-large-chest-2", amount = 1}
+    }
   },
 
   {
@@ -1249,9 +1336,9 @@ data:extend({
     type = "item",
     name = "nullius-large-storage-chest-2",
     icons = {{
-      icon = "__base__/graphics/icons/logistic-chest-storage.png",
+      icon = "__base__/graphics/icons/storage-chest.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "large-logistic-storage",
     order = "nullius-bc",
@@ -1270,7 +1357,9 @@ data:extend({
       {"programmable-speaker", 1},
       {"arithmetic-combinator", 1}
     },
-    result = "nullius-small-storage-chest-1"
+    results = {
+      {type = "item", name = "nullius-small-storage-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1283,9 +1372,11 @@ data:extend({
       {"nullius-small-storage-chest-1", 1},
       {"nullius-large-chest-1", 1},
       {"nullius-sensor-1", 1},
-      {"red-wire", 4}
+      {"nullius-red-wire", 4}
     },
-    result = "nullius-large-storage-chest-1"
+    results = {
+      {type = "item", name = "nullius-large-storage-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1300,7 +1391,9 @@ data:extend({
       {"nullius-relay-2", 1},
       {"nullius-processor-2", 1}
     },
-    result = "logistic-chest-storage"
+    results = {
+      {type = "item", name = "storage-chest", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1313,12 +1406,13 @@ data:extend({
     energy_required = 20,
     ingredients = {
       {"nullius-large-storage-chest-1", 1},
-      {"logistic-chest-storage", 1},
+      {"storage-chest", 1},
       {"nullius-large-chest-2", 1},
-      {"express-stack-filter-inserter", 1}
+      {"bob-express-bulk-inserter", 1}
     },
-    result = "nullius-large-storage-chest-2",
-	result_count = 2
+	  results = {
+      {type = "item", name = "nullius-large-storage-chest-2", amount = 2}
+    }
   },
 
   {
@@ -1375,9 +1469,9 @@ data:extend({
     type = "item",
     name = "nullius-large-supply-chest-2",
     icons = {{
-      icon = "__base__/graphics/icons/logistic-chest-passive-provider.png",
+      icon = "__base__/graphics/icons/passive-provider-chest.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "large-logistic-storage",
     order = "nullius-cc",
@@ -1393,9 +1487,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       {"nullius-small-storage-chest-1", 1},
-      {"red-wire", 1}
+      {"nullius-red-wire", 1}
     },
-    result = "nullius-small-supply-chest-1"
+    results = {
+      {type = "item", name = "nullius-small-supply-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1408,7 +1504,9 @@ data:extend({
       {"nullius-large-storage-chest-1", 1},
       {"nullius-small-supply-chest-1", 1}
     },
-    result = "nullius-large-supply-chest-1"
+    results = {
+      {type = "item", name = "nullius-large-supply-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1419,9 +1517,11 @@ data:extend({
     energy_required = 4,
     ingredients = {
       {"nullius-small-supply-chest-1", 1},
-      {"logistic-chest-storage", 1}
+      {"storage-chest", 1}
     },
-    result = "logistic-chest-passive-provider"
+    results = {
+      {type = "item", name = "passive-provider-chest", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1434,7 +1534,9 @@ data:extend({
       {"nullius-large-supply-chest-1", 1},
       {"nullius-large-storage-chest-2", 1}
     },
-    result = "nullius-large-supply-chest-2"
+    results = {
+      {type = "item", name = "nullius-large-supply-chest-2", amount = 1}
+    }
   },
 
   {
@@ -1491,9 +1593,9 @@ data:extend({
     type = "item",
     name = "nullius-large-demand-chest-2",
     icons = {{
-      icon = "__base__/graphics/icons/logistic-chest-requester.png",
+      icon = "__base__/graphics/icons/requester-chest.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "large-logistic-storage",
     order = "nullius-dc",
@@ -1511,7 +1613,9 @@ data:extend({
       {"nullius-small-storage-chest-1", 1},
       {"nullius-sensor-1", 1}
     },
-    result = "nullius-small-demand-chest-1"
+    results = {
+      {type = "item", name = "nullius-small-demand-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1524,7 +1628,9 @@ data:extend({
       {"nullius-large-storage-chest-1", 1},
       {"nullius-small-demand-chest-1", 1}
     },
-    result = "nullius-large-demand-chest-1"
+    results = {
+      {type = "item", name = "nullius-large-demand-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1535,9 +1641,11 @@ data:extend({
     energy_required = 4,
     ingredients = {
       {"nullius-small-demand-chest-1", 1},
-      {"logistic-chest-storage", 1}
+      {"storage-chest", 1}
     },
-    result = "logistic-chest-requester"
+    results = {
+      {type = "item", name = "requester-chest", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1550,7 +1658,9 @@ data:extend({
       {"nullius-large-demand-chest-1", 1},
       {"nullius-large-storage-chest-2", 1}
     },
-    result = "nullius-large-demand-chest-2"
+    results = {
+      {type = "item", name = "nullius-large-demand-chest-2", amount = 1}
+    }
   },
 
   {
@@ -1607,9 +1717,9 @@ data:extend({
     type = "item",
     name = "nullius-large-buffer-chest-2",
     icons = {{
-      icon = "__base__/graphics/icons/logistic-chest-buffer.png",
+      icon = "__base__/graphics/icons/buffer-chest.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "large-logistic-storage",
     order = "nullius-ec",
@@ -1625,9 +1735,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       {"nullius-small-demand-chest-1", 1},
-      {"green-wire", 2}
+      {"nullius-green-wire", 2}
     },
-    result = "nullius-small-buffer-chest-1"
+    results = {
+      {type = "item", name = "nullius-small-buffer-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1640,7 +1752,9 @@ data:extend({
       {"nullius-large-storage-chest-1", 1},
       {"nullius-small-buffer-chest-1", 1}
     },
-    result = "nullius-large-buffer-chest-1"
+    results = {
+      {type = "item", name = "nullius-large-buffer-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1651,9 +1765,11 @@ data:extend({
     energy_required = 4,
     ingredients = {
       {"nullius-small-buffer-chest-1", 1},
-      {"logistic-chest-storage", 1}
+      {"storage-chest", 1}
     },
-    result = "logistic-chest-buffer"
+    results = {
+      {type = "item", name = "buffer-chest", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1666,7 +1782,9 @@ data:extend({
       {"nullius-large-buffer-chest-1", 1},
       {"nullius-large-storage-chest-2", 1}
     },
-    result = "nullius-large-buffer-chest-2"
+    results = {
+      {type = "item", name = "nullius-large-buffer-chest-2", amount = 1}
+    }
   },
 
   {
@@ -1723,9 +1841,9 @@ data:extend({
     type = "item",
     name = "nullius-large-dispatch-chest-2",
     icons = {{
-      icon = "__base__/graphics/icons/logistic-chest-active-provider.png",
+      icon = "__base__/graphics/icons/active-provider-chest.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "large-logistic-storage",
     order = "nullius-fc",
@@ -1741,9 +1859,11 @@ data:extend({
     energy_required = 2,
     ingredients = {
       {"nullius-small-supply-chest-1", 1},
-      {"green-wire", 1}
+      {"nullius-green-wire", 1}
     },
-    result = "nullius-small-dispatch-chest-1"
+    results = {
+      {type = "item", name = "nullius-small-dispatch-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1756,7 +1876,9 @@ data:extend({
       {"nullius-large-storage-chest-1", 1},
       {"nullius-small-dispatch-chest-1", 1}
     },
-    result = "nullius-large-dispatch-chest-1"
+    results = {
+      {type = "item", name = "nullius-large-dispatch-chest-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1767,9 +1889,11 @@ data:extend({
     energy_required = 4,
     ingredients = {
       {"nullius-small-dispatch-chest-1", 1},
-      {"logistic-chest-storage", 1}
+      {"storage-chest", 1}
     },
-    result = "logistic-chest-active-provider"
+    results = {
+      {type = "item", name = "active-provider-chest", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1782,7 +1906,9 @@ data:extend({
       {"nullius-large-dispatch-chest-1", 1},
       {"nullius-large-storage-chest-2", 1}
     },
-    result = "nullius-large-dispatch-chest-2"
+    results = {
+      {type = "item", name = "nullius-large-dispatch-chest-2", amount = 1}
+    }
   },
 
   {
@@ -1791,7 +1917,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.9, 0.85, 0.7}
     }},
     subgroup = "energy",
@@ -1805,7 +1931,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "energy",
     order = "nullius-fc",
@@ -1818,7 +1944,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/accumulator.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {1, 0.85, 1}
     }},
     subgroup = "energy",
@@ -1841,7 +1967,9 @@ data:extend({
       {"nullius-capacitor", 3},
       {"nullius-transformer", 1}
     },
-    result = "nullius-grid-battery-1"
+    results = {
+      {type = "item", name = "nullius-grid-battery-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1859,7 +1987,9 @@ data:extend({
       {"nullius-box-capacitor", 3},
       {"nullius-box-transformer", 1}
     },
-    result = "nullius-box-grid-battery-1"
+    results = {
+      {type = "item", name = "nullius-box-grid-battery-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1876,7 +2006,9 @@ data:extend({
       {"nullius-power-pole-4", 1},
       {"nullius-heat-pipe-2", 2}
     },
-    result = "nullius-grid-battery-2"
+    results = {
+      {type = "item", name = "nullius-grid-battery-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1894,7 +2026,9 @@ data:extend({
       {"nullius-box-power-pole-4", 1},
       {"nullius-box-heat-pipe-2", 2}
     },
-    result = "nullius-box-grid-battery-2"
+    results = {
+      {type = "item", name = "nullius-box-grid-battery-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1907,7 +2041,9 @@ data:extend({
       {"nullius-box-grid-battery-2", 1},
       {"nullius-battery-3", 3}
     },
-    result = "nullius-grid-battery-3"
+    results = {
+      {type = "item", name = "nullius-grid-battery-3", amount = 1}
+    }
   },
 
   {
@@ -1936,7 +2072,9 @@ data:extend({
       {"inserter", 3},
       {"small-lamp", 2}
     },
-    result = "nullius-lab-1"
+    results = {
+      {type = "item", name = "nullius-lab-1", amount = 1}
+    }
   },
 
   {
@@ -1963,11 +2101,13 @@ data:extend({
       {"radar", 1},
       {"nullius-beacon-1", 1},
       {"nullius-processor-1", 8},
-      {"stack-filter-inserter", 2},
+      {"bulk-inserter", 2},
       {"stone-wall", 6},
       {"gate", 2}
     },
-    result = "nullius-lab-2"
+    results = {
+      {type = "item", name = "nullius-lab-2", amount = 1}
+    }
   },
 
   {
@@ -1996,7 +2136,9 @@ data:extend({
       {"nullius-box-processor-2", 2},
       {"nullius-logistic-bot-3", 2}
     },
-    result = "nullius-lab-3"
+    results = {
+      {type = "item", name = "nullius-lab-3", amount = 1}
+    }
   },
 
   {
@@ -2020,12 +2162,14 @@ data:extend({
     energy_required = 150,
     ingredients = {
       {"nullius-lab-2", 3},
-	  {"nullius-sensor-node-2", 1},
+	    {"nullius-sensor-node-2", 1},
       {"nullius-nanofabricator-1", 1},
-	  {"nullius-logistic-bot-2", 2},
+	    {"nullius-logistic-bot-2", 2},
       {"nullius-box-insulation", 10}
     },
-    result = "nullius-biology-lab"
+    results = {
+      {type = "item", name = "nullius-biology-lab", amount = 1}
+    }
   },
 
   {
@@ -2055,7 +2199,9 @@ data:extend({
       {"nullius-iron-sheet", 2},
       {"nullius-capacitor", 1}
     },
-    result = "nullius-beacon-1"
+    results = {
+      {type = "item", name = "nullius-beacon-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2088,8 +2234,9 @@ data:extend({
       {"nullius-box-iron-sheet", 2},
       {"nullius-box-capacitor", 1}
     },
-    result = "nullius-beacon-1",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-beacon-1", amount = 5}
+    }
   },
 
   {
@@ -2119,7 +2266,9 @@ data:extend({
       {"nullius-relay-1", 1},
       {"substation", 1}
     },
-    result = "nullius-beacon-2"
+    results = {
+      {type = "item", name = "nullius-beacon-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2152,8 +2301,9 @@ data:extend({
       {"nullius-box-relay-1", 1},
       {"substation", 5}
     },
-    result = "nullius-beacon-2",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-beacon-2", amount = 5}
+    }
   },
 
   {
@@ -2183,8 +2333,9 @@ data:extend({
       {"nullius-relay-3", 1},
       {"nullius-substation-2", 1}
     },
-    result = "nullius-beacon-3",
-	result_count = 2
+	  results = {
+      {type = "item", name = "nullius-beacon-3", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -2215,8 +2366,9 @@ data:extend({
       {"nullius-box-relay-3", 1},
       {"nullius-substation-2", 5}
     },
-    result = "nullius-beacon-3",
-    result_count = 10
+    results = {
+      {type = "item", name = "nullius-beacon-3", amount = 10}
+    }
   },
 
   {
@@ -2238,7 +2390,7 @@ data:extend({
     icons = {{
       icon =  "__base__/graphics/icons/beacon.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "beacon",
     order = "nullius-cc",
@@ -2260,8 +2412,9 @@ data:extend({
       {"nullius-relay-2", 1},
       {"nullius-productivity-module-1", 1}
     },
-    result = "nullius-large-beacon-1",
-	result_count = 2
+	  results = {
+      {type = "item", name = "nullius-large-beacon-1", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -2279,8 +2432,9 @@ data:extend({
       {"nullius-sensor-node-3", 1},
       {"nullius-productivity-module-2", 1}
     },
-    result = "nullius-large-beacon-2",
-	result_count = 3
+	  results = {
+      {type = "item", name = "nullius-large-beacon-2", amount = 3}
+    }
   },
   {
     type = "recipe",
@@ -2298,12 +2452,15 @@ data:extend({
       {"nullius-sensor-node-3", 1},
       {"nullius-productivity-module-2", 1}
     },
-    result = "nullius-large-beacon-2"
+    results = {
+      {type = "item", name = "nullius-large-beacon-2", amount = 1}
+    }
   },
 
   {
     type = "recipe",
     name = "nullius-sensor-node-1",
+    localised_name = {"entity-name.nullius-sensor-node-1"},
     enabled = false,
     category = "large-crafting",
     always_show_made_in = true,
@@ -2315,7 +2472,9 @@ data:extend({
       {"nullius-iron-sheet", 3},
       {"nullius-motor-2", 1}
     },
-    result = "radar"
+    results = {
+      {type = "item", name = "radar", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2348,8 +2507,9 @@ data:extend({
       {"nullius-box-iron-sheet", 3},
       {"nullius-box-motor-2", 1}
     },
-    result = "radar",
-    result_count = 5
+    results = {
+      {type = "item", name = "radar", amount = 5}
+    }
   },
 
   {
@@ -2358,7 +2518,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/radar.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.8, 0.8, 1}
     }},
     subgroup = "laboratory",
@@ -2380,7 +2540,9 @@ data:extend({
       {"nullius-fiberglass", 4},
       {"nullius-optical-cable", 6}
     },
-    result = "nullius-sensor-node-2"
+    results = {
+      {type = "item", name = "nullius-sensor-node-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2413,8 +2575,9 @@ data:extend({
       {"nullius-box-fiberglass", 4},
       {"nullius-box-optical-cable", 6}
     },
-    result = "nullius-sensor-node-2",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-sensor-node-2", amount = 5}
+    }
   },
 
   {
@@ -2423,7 +2586,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/radar.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "laboratory",
     order = "nullius-dd",
@@ -2444,12 +2607,15 @@ data:extend({
       {"nullius-yield-module-3", 1},
       {"nullius-box-reinforced-concrete", 1}
     },
-    result = "nullius-sensor-node-3"
+    results = {
+      {type = "item", name = "nullius-sensor-node-3", amount = 1}
+    }
   },
 
   {
     type = "recipe",
     name = "nullius-logic-circuit",
+    localised_name = {"entity-name.nullius-logic-circuit"},
     enabled = false,
     show_amount_in_title = false,
     always_show_products = true,
@@ -2461,8 +2627,9 @@ data:extend({
       {"nullius-polycrystalline-silicon", 2},
       {"nullius-graphite", 1}
     },
-    result = "decider-combinator",
-    result_count = 3
+    results = {
+      {type = "item", name = "decider-combinator", amount = 3}
+    }
   },
   {
     type = "recipe",
@@ -2480,13 +2647,14 @@ data:extend({
       {"nullius-box-polycrystalline-silicon", 2},
       {"nullius-box-graphite", 1}
     },
-    result = "nullius-box-logic-circuit",
-    result_count = 3
+    results = {
+      {type = "item", name = "nullius-box-logic-circuit", amount = 3}
+    }
   },
   {
     type = "recipe",
     name = "nullius-logic-circuit-2",
-    localised_name = {"", {"item-name.nullius-box", {"entity-name.nullius-logic-circuit"}}, " ", 2},
+    localised_name = {"", {"item-name.nullius-box", {"entity-name.nullius-logic-circuit"}}, " ", tostring(2)},
     icons = {
       {
         icon = ICONPATH .. "crate.png",
@@ -2512,12 +2680,14 @@ data:extend({
       {type="item", name="nullius-box-graphite", amount=1},
       {type="fluid", name="nullius-argon", amount=2, fluidbox_index=1}
     },
-    result = "nullius-box-logic-circuit",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-box-logic-circuit", amount = 5}
+    }
   },
   {
     type = "recipe",
     name = "nullius-memory-circuit",
+    localised_name = {"entity-name.nullius-memory-circuit"},
     enabled = false,
     category = "tiny-crafting",
     always_show_made_in = true,
@@ -2528,8 +2698,9 @@ data:extend({
       {"decider-combinator", 2},
       {"nullius-capacitor", 3}
     },
-    result = "constant-combinator",
-    result_count = 4
+    results = {
+      {type = "item", name = "constant-combinator", amount = 4}
+    }
   },
   {
     type = "recipe",
@@ -2546,13 +2717,14 @@ data:extend({
       {"nullius-box-logic-circuit", 2},
       {"nullius-box-capacitor", 3}
     },
-    result = "nullius-box-memory-circuit",
-    result_count = 4
+    results = {
+      {type = "item", name = "nullius-box-memory-circuit", amount = 4}
+    }
   },
   {
     type = "recipe",
     name = "nullius-memory-circuit-2",
-    localised_name = {"", {"item-name.nullius-box", {"entity-name.nullius-memory-circuit"}}, " ", 2},
+    localised_name = {"", {"item-name.nullius-box", {"entity-name.nullius-memory-circuit"}}, " ", tostring(2)},
     icons = {
       {
         icon = ICONPATH .. "crate.png",
@@ -2577,12 +2749,14 @@ data:extend({
       {type="item", name="nullius-box-capacitor", amount=3},
       {type="fluid", name="nullius-argon", amount=1, fluidbox_index=1}
     },
-    result = "nullius-box-memory-circuit",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-box-memory-circuit", amount = 5}
+    }
   },
   {
     type = "recipe",
     name = "nullius-arithmetic-circuit",
+    localised_name = {"entity-name.nullius-arithmetic-circuit"},
     enabled = false,
     category = "tiny-crafting",
     always_show_made_in = true,
@@ -2592,7 +2766,9 @@ data:extend({
       {"constant-combinator", 1},
       {"nullius-aluminum-wire", 1}
     },
-    result = "arithmetic-combinator"
+    results = {
+      {type = "item", name = "arithmetic-combinator", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2607,22 +2783,27 @@ data:extend({
       {"nullius-box-memory-circuit", 1},
       {"nullius-box-aluminum-wire", 1}
     },
-    result = "nullius-box-arithmetic-circuit"
+    results = {
+      {type = "item", name = "nullius-box-arithmetic-circuit", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-antenna",
+    localised_name = {"entity-name.nullius-antenna"},
     enabled = false,
     category = "small-crafting",
     always_show_made_in = true,
     energy_required = 6,
     ingredients = {
       {"nullius-aluminum-rod", 2},
-      {"red-wire", 1},
+      {"nullius-red-wire", 1},
       {"nullius-rubber", 1},
       {"nullius-capacitor", 1}
     },
-    result = "programmable-speaker"
+    results = {
+      {type = "item", name = "programmable-speaker", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2638,7 +2819,9 @@ data:extend({
       {"nullius-box-rubber", 1},
       {"nullius-box-capacitor", 1}
     },
-    result = "nullius-box-antenna"
+    results = {
+      {type = "item", name = "nullius-box-antenna", amount = 1}
+    }
   },
 
   {
@@ -2664,7 +2847,9 @@ data:extend({
       {"nullius-glass", 1},
       {"nullius-iron-sheet", 1}
     },
-    result = "small-lamp"
+    results = {
+      {type = "item", name = "small-lamp", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2693,8 +2878,9 @@ data:extend({
       {"nullius-glass", 2},
       {"nullius-aluminum-sheet", 2}
     },
-    result = "small-lamp",
-    result_count = 5
+    results = {
+      {type = "item", name = "small-lamp", amount = 5}
+    }
   },
   {
     type = "recipe",
@@ -2711,8 +2897,9 @@ data:extend({
       {"nullius-box-glass", 2},
       {"nullius-box-aluminum-sheet", 2}
     },
-    result = "nullius-box-lamp-1",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-box-lamp-1", amount = 5}
+    }
   },
   {
     type = "recipe",
@@ -2728,11 +2915,12 @@ data:extend({
       {type="item", name="nullius-hard-glass", amount=2},
       {type="item", name="nullius-sodium", amount=1},
       {type="item", name="nullius-ceramic-powder", amount=1},
-      {type="item", name="green-wire", amount=2},
+      {type="item", name="nullius-green-wire", amount=2},
       {type="fluid", name="nullius-compressed-argon", amount=10, fluidbox_index=1}
     },
-    result = "nullius-lamp-2",
-    result_count = 2
+    results = {
+      {type = "item", name = "nullius-lamp-2", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -2752,8 +2940,9 @@ data:extend({
       {type="item", name="nullius-box-green-wire", amount=2},
       {type="fluid", name="nullius-compressed-argon", amount=50, fluidbox_index=1}
     },
-    result = "nullius-box-lamp-2",
-    result_count = 2
+    results = {
+      {type = "item", name = "nullius-box-lamp-2", amount = 2}
+    }
   },
 
   {
@@ -2773,7 +2962,7 @@ data:extend({
     name = "nullius-power-pole-4",
     icons = {{
       icon = "__base__/graphics/icons/medium-electric-pole.png",
-      icon_size = 64, icon_mipmaps = 4
+      icon_size = 64, 
     }},
     subgroup = "electric-pole",
     order = "nullius-be",
@@ -2785,7 +2974,7 @@ data:extend({
     name = "nullius-pylon-2",
     icons = {{
       icon = "__base__/graphics/icons/big-electric-pole.png",
-      icon_size = 64, icon_mipmaps = 4
+      icon_size = 64, 
     }},
     subgroup = "electric-pole",
     order = "nullius-cc",
@@ -2809,7 +2998,7 @@ data:extend({
     name = "nullius-substation-2",
     icons = {{
       icon = "__base__/graphics/icons/substation.png",
-      icon_size = 64, icon_mipmaps = 4
+      icon_size = 64, 
     }},
     subgroup = "electric-pole",
     order = "nullius-dc",
@@ -2841,7 +3030,9 @@ data:extend({
       {"nullius-iron-rod", 1},
       {"nullius-plastic", 1}
     },
-    result = "small-electric-pole"
+    results = {
+      {type = "item", name = "small-electric-pole", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2857,8 +3048,9 @@ data:extend({
       {"nullius-box-insulated-wire", 2},
       {"nullius-box-steel-rod", 1}
     },
-    result = "nullius-box-power-pole-1",
-    result_count = 2
+    results = {
+      {type = "item", name = "nullius-box-power-pole-1", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -2872,7 +3064,9 @@ data:extend({
       {"copper-cable", 2},
       {"nullius-aluminum-rod", 1}
     },
-    result = "medium-electric-pole"
+    results = {
+      {type = "item", name = "medium-electric-pole", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2887,7 +3081,9 @@ data:extend({
       {"nullius-box-insulated-wire", 2},
       {"nullius-box-aluminum-rod", 1}
     },
-    result = "nullius-box-power-pole-2"
+    results = {
+      {type = "item", name = "nullius-box-power-pole-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2898,11 +3094,13 @@ data:extend({
     energy_required = 5,
     ingredients = {
       {"medium-electric-pole", 1},
-      {"red-wire", 3},
+      {"nullius-red-wire", 3},
       {"nullius-fiberglass", 2},
       {"nullius-ceramic-powder", 1}
     },
-    result = "nullius-power-pole-3"
+    results = {
+      {type = "item", name = "nullius-power-pole-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2918,7 +3116,9 @@ data:extend({
       {"nullius-box-fiberglass", 2},
       {"nullius-box-ceramic-powder", 1}
     },
-    result = "nullius-box-power-pole-3"
+    results = {
+      {type = "item", name = "nullius-box-power-pole-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2935,7 +3135,9 @@ data:extend({
       {"power-switch", 1},
       {"concrete", 2}
     },
-    result = "nullius-power-pole-4"
+    results = {
+      {type = "item", name = "nullius-power-pole-4", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2953,7 +3155,9 @@ data:extend({
       {"nullius-box-power-switch", 1},
       {"nullius-box-concrete", 1}
     },
-    result = "nullius-box-power-pole-4"
+    results = {
+      {type = "item", name = "nullius-box-power-pole-4", amount = 1}
+    }
   },
 
   {
@@ -2968,7 +3172,9 @@ data:extend({
       {"copper-cable", 3},
       {"nullius-steel-beam", 2}
     },
-    result = "big-electric-pole"
+    results = {
+      {type = "item", name = "big-electric-pole", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2983,7 +3189,9 @@ data:extend({
       {"nullius-box-insulated-wire", 3},
       {"nullius-box-steel-beam", 2}
     },
-    result = "nullius-box-pylon-1"
+    results = {
+      {type = "item", name = "nullius-box-pylon-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3000,7 +3208,9 @@ data:extend({
       {"nullius-transformer", 1},
       {"concrete", 4}
     },
-    result = "nullius-pylon-2"
+    results = {
+      {type = "item", name = "nullius-pylon-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3018,7 +3228,9 @@ data:extend({
       {"nullius-box-transformer", 1},
       {"nullius-box-concrete", 2}
     },
-    result = "nullius-box-pylon-2"
+    results = {
+      {type = "item", name = "nullius-box-pylon-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3034,7 +3246,9 @@ data:extend({
       {"nullius-efficiency-module-1", 1},
       {"refined-concrete", 6}
     },
-    result = "nullius-pylon-3"
+    results = {
+      {type = "item", name = "nullius-pylon-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3051,7 +3265,9 @@ data:extend({
       {"nullius-box-efficiency-module-1", 1},
       {"nullius-box-reinforced-concrete", 3}
     },
-    result = "nullius-box-pylon-3"
+    results = {
+      {type = "item", name = "nullius-box-pylon-3", amount = 1}
+    }
   },
 
   {
@@ -3068,7 +3284,9 @@ data:extend({
       {"concrete", 6},
       {"nullius-transformer", 1}
     },
-    result = "substation"
+    results = {
+      {type = "item", name = "substation", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3100,8 +3318,9 @@ data:extend({
       {"nullius-box-concrete", 3},
       {"nullius-box-transformer", 1}
     },
-    result = "substation",
-    result_count = 5
+    results = {
+      {type = "item", name = "substation", amount = 5}
+    }
   },
   {
     type = "recipe",
@@ -3117,7 +3336,9 @@ data:extend({
       {"nullius-sensor-1", 2},
       {"nullius-battery-1", 2}
     },
-    result = "nullius-substation-2"
+    results = {
+      {type = "item", name = "nullius-substation-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3149,8 +3370,9 @@ data:extend({
       {"nullius-box-sensor-1", 2},
       {"nullius-box-battery-1", 2}
     },
-    result = "nullius-substation-2",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-substation-2", amount = 5}
+    }
   },
   {
     type = "recipe",
@@ -3167,7 +3389,9 @@ data:extend({
       {"nullius-grid-battery-1", 1},
       {"refined-concrete", 20}
     },
-    result = "nullius-substation-3"
+    results = {
+      {type = "item", name = "nullius-substation-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3200,8 +3424,9 @@ data:extend({
       {"nullius-box-grid-battery-1", 1},
       {"nullius-box-reinforced-concrete", 10}
     },
-    result = "nullius-substation-3",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-substation-3", amount = 5}
+    }
   },
 
   {
@@ -3209,7 +3434,7 @@ data:extend({
     name = "nullius-reactor",
     icon = "__base__/graphics/icons/nuclear-reactor.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     subgroup = "nuclear",
     order = "nullius-b",
     place_result = "nullius-reactor",
@@ -3230,7 +3455,9 @@ data:extend({
       {type="item", name="nullius-large-furnace-2", amount=1},
       {type="item", name="nullius-box-processor-2", amount=1}
     },
-    result = "nullius-reactor"
+    results = {
+      {type = "item", name = "nullius-reactor", amount = 1}
+    }
   },
 
   {
@@ -3238,7 +3465,7 @@ data:extend({
     name = "nullius-silo",
     icon = "__base__/graphics/icons/rocket-silo.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     subgroup = "space",
     order = "nullius-b",
     place_result = "nullius-silo",
@@ -3261,13 +3488,15 @@ data:extend({
       {type="item", name="nullius-box-productivity-module-2", amount=1},
       {type="item", name="nullius-lab-3", amount=1}
     },
-    result = "nullius-silo"
+    results = {
+      {type = "item", name = "nullius-silo", amount = 1}
+    }
   },
 
   {
     type = "item",
     name = "nullius-solar-collector-1",
-    localised_name = {"", {"entity-name.nullius-solar-collector"}, " ", 1},
+    localised_name = {"", {"entity-name.nullius-solar-collector"}, " ", tostring(1)},
     icons = {{
       icon = ENTICONPATH .. "collector1.png",
       icon_size = 64
@@ -3280,7 +3509,7 @@ data:extend({
   {
     type = "item",
     name = "nullius-solar-collector-2",
-    localised_name = {"", {"entity-name.nullius-solar-collector"}, " ", 2},
+    localised_name = {"", {"entity-name.nullius-solar-collector"}, " ", tostring(2)},
     icons = {{
       icon = ENTICONPATH .. "collector2.png",
       icon_size = 64
@@ -3293,7 +3522,7 @@ data:extend({
   {
     type = "item",
     name = "nullius-solar-collector-3",
-    localised_name = {"", {"entity-name.nullius-solar-collector"}, " ", 3},
+    localised_name = {"", {"entity-name.nullius-solar-collector"}, " ", tostring(3)},
     icons = {{
       icon = ENTICONPATH .. "collector3.png",
       icon_size = 64
@@ -3316,7 +3545,9 @@ data:extend({
       {"nullius-steel-rod", 3},
       {"nullius-heat-pipe-1", 4}
     },
-    result = "nullius-solar-collector-1"
+    results = {
+      {type = "item", name = "nullius-solar-collector-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3332,7 +3563,9 @@ data:extend({
       {"nullius-box-steel-rod", 3},
       {"nullius-box-heat-pipe-1", 4}
     },
-    result = "nullius-box-solar-collector-1"
+    results = {
+      {type = "item", name = "nullius-box-solar-collector-1", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3348,7 +3581,9 @@ data:extend({
       {"nullius-steel-cable", 4},
       {"nullius-titanium-sheet", 5}
     },
-    result = "nullius-solar-collector-2"
+    results = {
+      {type = "item", name = "nullius-solar-collector-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3365,7 +3600,9 @@ data:extend({
       {"nullius-box-steel-cable", 4},
       {"nullius-box-titanium-sheet", 5}
     },
-    result = "nullius-box-solar-collector-2"
+    results = {
+      {type = "item", name = "nullius-box-solar-collector-2", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3382,7 +3619,9 @@ data:extend({
       {"nullius-sensor-1", 1},
       {"nullius-monocrystalline-silicon", 12}
     },
-    result = "nullius-solar-collector-3"
+    results = {
+      {type = "item", name = "nullius-solar-collector-3", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -3400,7 +3639,9 @@ data:extend({
       {"nullius-box-sensor-1", 1},
       {"nullius-box-monocrystalline-silicon", 12}
     },
-    result = "nullius-box-solar-collector-3"
+    results = {
+      {type = "item", name = "nullius-box-solar-collector-3", amount = 1}
+    }
   }
 })
 
@@ -3409,15 +3650,15 @@ if mods["reskins-bobs"] then
 data.raw.item["nullius-grid-battery-1"].icons = {
   {
     icon = "__reskins-bobs__/graphics/icons/power/accumulator/accumulator-3-icon-base.png",
-    icon_size = 64, icon_mipmaps = 4
+    icon_size = 64, 
   },
   {
     icon = "__reskins-bobs__/graphics/icons/power/accumulator/accumulator-icon-mask.png",
-    icon_size = 64, icon_mipmaps = 4, tint = tiercolor("red")
+    icon_size = 64,  tint = tiercolor("red")
   },
   {
     icon = "__reskins-bobs__/graphics/icons/power/accumulator/accumulator-icon-highlights.png",
-    icon_size = 64, icon_mipmaps = 4, tint = {1, 1, 1, 0}
+    icon_size = 64,  tint = {1, 1, 1, 0}
   }
 }
 data.raw.item["nullius-grid-battery-2"].icons =
@@ -3551,15 +3792,15 @@ data.raw.item["nullius-large-beacon-2"].icons = {
 data.raw.item["radar"].icons = {
   {
     icon = "__reskins-bobs__/graphics/icons/warfare/radar/radar-icon-base.png",
-    icon_size = 64, icon_mipmaps = 4
+    icon_size = 64, 
   },
   {
     icon = "__reskins-bobs__/graphics/icons/warfare/radar/radar-icon-mask.png",
-    icon_size = 64, icon_mipmaps = 4, tint = tiercolor("yellow")
+    icon_size = 64,  tint = tiercolor("yellow")
   },
   {
     icon = "__reskins-bobs__/graphics/icons/warfare/radar/radar-icon-highlights.png",
-    icon_size = 64, icon_mipmaps = 4, tint = {1, 1, 1, 0}
+    icon_size = 64,  tint = {1, 1, 1, 0}
   }
 }
 data.raw.item["nullius-sensor-node-2"].icons =

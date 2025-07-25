@@ -49,7 +49,7 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, flar
 
   local lname = nil
   if (number ~= nil) then
-    lname = {"", {"item-name."..prefix.."-drone"..suffix1}, " ", number}
+    lname = {"", {"item-name."..prefix.."-drone"..suffix1}, " ", tostring(number)}
   end
 
   data:extend({
@@ -61,8 +61,8 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, flar
       subgroup = group,
       order = "nullius-"..suborder,
       stack_size = stack,
+      ammo_category = flare,
       ammo_type = {
-        category = flare,
         target_type = "position",
         action = {
           type = "direct",
@@ -100,7 +100,9 @@ local function create_terraform(suffix, tile, suborder)
         {"rocket-fuel", 2},
         {"nullius-box-land-fill-"..tile, 200}
       },
-      result = "nullius-terraforming-drone-"..suffix
+      results = {
+			  {type="item", name="nullius-terraforming-drone-"..suffix, amount = 1}
+      }
     },
     {
       type = "recipe",
@@ -114,7 +116,9 @@ local function create_terraform(suffix, tile, suborder)
         {"nullius-shallow-excavation-remote", 1},
         {"nullius-productivity-module-1", 1}
       },
-      result = "nullius-terraforming-remote-"..suffix
+      results = {
+				{type="item", name="nullius-terraforming-remote-"..suffix, amount = 1}
+			}
     }
   })
 end
@@ -138,7 +142,9 @@ local function create_paving(suffix, landfill, suborder, tile)
         {"rocket-fuel", 1},
         {"nullius-box-"..tile.."-concrete", 300}
       },
-      result = "nullius-paving-drone-"..suffix
+      results = {
+				{type="item", name="nullius-paving-drone-"..suffix, amount = 1}
+			}
     },
     {
       type = "recipe",
@@ -152,7 +158,9 @@ local function create_paving(suffix, landfill, suborder, tile)
         {"nullius-terraforming-remote-"..landfill, 1},
         {"nullius-productivity-module-2", 1}
       },
-      result = "nullius-paving-remote-"..suffix
+      results = {
+				{type="item", name="nullius-paving-remote-"..suffix, amount = 1}
+			}
     }
   })
 end
@@ -225,7 +233,9 @@ local function create_miner(mineral, suborder, group, landfill, iname, isize, it
         {"nullius-terraforming-remote-"..landfill, 1},
         {"nullius-yield-module-3", 1}
       },
-      result = "nullius-guide-remote-"..mineral
+      results = {
+				{type="item", name="nullius-guide-remote-"..mineral, amount = 1}
+			}
     },
     {
       type = "recipe",
@@ -258,7 +268,9 @@ local function create_miner(mineral, suborder, group, landfill, iname, isize, it
         {"nullius-guide-drone-"..mineral.."-1", 2},
         {"nullius-box-astronomy-pack", 1}
       },
-      result = "nullius-asteroid-miner-1"
+      results = {
+				{type="item", name="nullius-asteroid-miner-1", amount = 1}
+			}
     },
     {
       type = "recipe",
@@ -272,7 +284,9 @@ local function create_miner(mineral, suborder, group, landfill, iname, isize, it
         {"nullius-guide-drone-"..mineral.."-1", 40},
         {"nullius-relay-3", 1}
       },
-      result = "nullius-guide-drone-"..mineral.."-2"
+      results = {
+				{type="item", name="nullius-guide-drone-"..mineral.."-2", amount = 1}
+			}
     }
   })
 end
@@ -283,7 +297,7 @@ local function create_bio_drone(base, suborder, iname)
     {
       icon = "__base__/graphics/icons/defender.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     },
     {
       icon = iname,
@@ -325,7 +339,9 @@ local function create_farmer(base, suborder, species, spore, spore_count,
         {"nullius-"..spore, spore_count},
         cost1, cost2, cost3, cost4
       },
-      result = "nullius-"..base.."-drone"
+      results = {
+				{type="item", name="nullius-"..base.."-drone", amount = 1}
+			}
     },
     {
       type = "recipe",
@@ -339,7 +355,9 @@ local function create_farmer(base, suborder, species, spore, spore_count,
         {"nullius-"..remote, 1},
         {"nullius-"..modtype, 1}
       },
-      result = "nullius-"..base.."-remote"
+      results = {
+				{type="item", name="nullius-"..base.."-remote", amount = 1}
+			}
     }
   })
 end
@@ -370,10 +388,10 @@ create_paving("hazard", "tan", "k")
 
 create_miner("iron", "b", 1, "red", "__base__/graphics/icons/iron-ore.png", 64)
 create_miner("sandstone", "c", 1, "tan",
-    "__angelsrefining__/graphics/icons/angels-ore6/angels-ore6-2.png", 64, {184, 125, 73})
-create_miner("bauxite", "d", 1, "brown", "__angelssmelting__/graphics/icons/ore-bauxite.png", 32)
+    "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-2.png", 64, {184, 125, 73})
+create_miner("bauxite", "d", 1, "brown", "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png", 32)
 create_miner("limestone", "e", 2, "beige",
-    "__angelsrefining__/graphics/icons/angels-ore6/angels-ore6-3.png", 64, {0.898, 0.773, 0.688})
+    "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-3.png", 64, {0.898, 0.773, 0.688})
 create_miner("copper", "f", 2, "grey", "__base__/graphics/icons/copper-ore.png", 64)
 create_miner("uranium", "g", 2, "grey", "__base__/graphics/icons/uranium-ore.png", 64)
 
@@ -414,7 +432,9 @@ data:extend({
       {"nullius-sensor-2", 1},
       {"nullius-missile-1", 1}
     },
-    result = "nullius-scout-drone-1"
+    results = {
+				{type="item", name="nullius-scout-drone-1", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -428,7 +448,9 @@ data:extend({
       {"nullius-robot-frame-2", 1},
       {"nullius-processor-2", 2}
     },
-    result = "nullius-scout-drone-2"
+    results = {
+				{type="item", name="nullius-scout-drone-2", amount = 1}
+			}
   },
 
   {
@@ -455,7 +477,9 @@ data:extend({
       {"nullius-sensor-2", 1},
       {"programmable-speaker", 1}
     },
-    result = "nullius-scout-remote"
+    results = {
+				{type="item", name="nullius-scout-remote", amount = 1}
+			}
   },
 
   {
@@ -471,7 +495,9 @@ data:extend({
       {"nullius-box-missile-1", 2},
       {"nullius-rock-picker", 1}
     },
-    result = "nullius-demolition-drone"
+    results = {
+				{type="item", name="nullius-demolition-drone", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -488,7 +514,9 @@ data:extend({
       {"nullius-missile-launcher", 1},
       {"nullius-box-missile-1", 2}
     },
-    result = "nullius-demolition-drone"
+    results = {
+				{type="item", name="nullius-demolition-drone", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -502,7 +530,9 @@ data:extend({
       {"nullius-scout-remote", 1},
       {"nullius-processor-1", 1}
     },
-    result = "nullius-demolition-remote"
+    results = {
+				{type="item", name="nullius-demolition-remote", amount = 1}
+			}
   },
 
   {
@@ -518,7 +548,9 @@ data:extend({
       {"nullius-trash-compactor", 1},
       {"nullius-large-cargo-pod-2", 2}
     },
-    result = "nullius-shallow-excavation-drone"
+    results = {
+				{type="item", name="nullius-shallow-excavation-drone", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -532,7 +564,9 @@ data:extend({
       {"nullius-shallow-excavation-drone", 1},
       {"nullius-missile-2", 2}
     },
-    result = "nullius-excavation-drone"
+    results = {
+				{type="item", name="nullius-excavation-drone", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -548,7 +582,9 @@ data:extend({
       {"nullius-demolition-drone", 1},
       {"nullius-box-missile-2", 1}
     },
-    result = "nullius-excavation-drone"
+    results = {
+				{type="item", name="nullius-excavation-drone", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -562,7 +598,9 @@ data:extend({
       {"nullius-demolition-remote", 1},
       {"nullius-processor-2", 1}
     },
-    result = "nullius-shallow-excavation-remote"
+    results = {
+				{type="item", name="nullius-shallow-excavation-remote", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -574,9 +612,11 @@ data:extend({
     energy_required = 3,
     ingredients = {
       {"nullius-shallow-excavation-remote", 1},
-      {"red-wire", 1}
+      {"nullius-red-wire", 1}
     },
-    result = "nullius-excavation-remote"
+    results = {
+				{type="item", name="nullius-excavation-remote", amount = 1}
+			}
   },
 
   {
@@ -585,7 +625,6 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/artillery-turret.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       tint = {0.7, 0.7, 0.9}
     }},
     subgroup = "drone-launcher",
@@ -608,7 +647,9 @@ data:extend({
       {"nullius-motor-2", 2},
       {"nullius-bearing", 3}
     },
-    result = "nullius-drone-launcher-1"
+    results = {
+				{type="item", name="nullius-drone-launcher-1", amount = 1}
+			}
   },
 
   {
@@ -617,7 +658,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/artillery-turret.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "drone-launcher",
     order = "nullius-ec",
@@ -637,7 +678,9 @@ data:extend({
       {"nullius-hangar-2", 1},
       {"nullius-productivity-module-1", 1}
     },
-    result = "nullius-drone-launcher-2"
+    results = {
+				{type="item", name="nullius-drone-launcher-2", amount = 1}
+			}
   },
 
   {
@@ -646,7 +689,6 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/artillery-wagon.png",
       icon_size = 64,
-      icon_mipmaps = 4,
       tint = {0.7, 0.7, 0.9}
     }},
     subgroup = "drone-launcher",
@@ -665,7 +707,9 @@ data:extend({
       {"nullius-cargo-wagon-2", 1},
       {"nullius-drone-launcher-1", 1}
     },
-    result = "nullius-drone-carrier-1"
+    results = {
+				{type="item", name="nullius-drone-carrier-1", amount = 1}
+			}
   },
 
   {
@@ -674,7 +718,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/artillery-wagon.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "drone-launcher",
     order = "nullius-fc",
@@ -693,7 +737,9 @@ data:extend({
       {"nullius-cargo-wagon-3", 1},
       {"nullius-drone-launcher-2", 1}
     },
-    result = "nullius-drone-carrier-2"
+    results = {
+				{type="item", name="nullius-drone-carrier-2", amount = 1}
+			}
   },
 
   {
@@ -732,7 +778,9 @@ data:extend({
       {"nullius-box-astronomy-pack", 6},
       {"nullius-large-buffer-chest-2", 4}
     },
-    result = "nullius-asteroid-miner-1"
+    results = {
+				{type="item", name="nullius-asteroid-miner-1", amount = 1}
+			}
   },
 
   {
@@ -770,12 +818,14 @@ data:extend({
       {"nullius-construction-bot-4", 3},
 	  {"nullius-trash-compactor-2", 2}
     },
-    result = "nullius-asteroid-miner-2"
+    results = {
+				{type="item", name="nullius-asteroid-miner-2", amount = 1}
+			}
   },
   {
     type = "item",
     name = "nullius-android-1",
-    localised_name = {"", {"item-name.nullius-android"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-android"}, " ", tostring(1)},
     localised_description = {"item-description.nullius-android"},
     icons = {{
       icon = ICONPATH .. "android1.png",
@@ -789,7 +839,7 @@ data:extend({
   {
     type = "item",
     name = "nullius-android-2",
-    localised_name = {"", {"item-name.nullius-android"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-android"}, " ", tostring(2)},
     localised_description = {"item-description.nullius-android"},
     icons = {{
       icon = ICONPATH .. "android2.png",
@@ -817,7 +867,9 @@ data:extend({
       {"nullius-night-vision-2", 2},
       {"nullius-large-cargo-pod-2", 2}
     },
-    result = "nullius-android-1"
+    results = {
+				{type="item", name="nullius-android-1", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -838,9 +890,11 @@ data:extend({
       {"nullius-solar-panel-2", 3},
       {"nullius-night-vision-2", 2},
       {"nullius-hangar-2", 1},
-      {"express-stack-filter-inserter", 4}
+      {"bob-express-bulk-inserter", 4}
     },
-    result = "nullius-android-1"
+    results = {
+				{type="item", name="nullius-android-1", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -858,7 +912,9 @@ data:extend({
       {"nullius-battery-2", 4},
       {"nullius-solar-panel-3", 3}
     },
-    result = "nullius-android-2"
+    results = {
+				{type="item", name="nullius-android-2", amount = 1}
+			}
   },
   {
     type = "recipe",
@@ -882,7 +938,9 @@ data:extend({
       {"nullius-heat-pipe-3", 2},
       {"nullius-hangar-3", 1}
     },
-    result = "nullius-android-2"
+    results = {
+				{type="item", name="nullius-android-2", amount = 1}
+			}
   }
 })
 

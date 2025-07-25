@@ -105,7 +105,6 @@ data:extend({
 	icons = {{
       icon = "__base__/graphics/icons/rocket-part.png",
       icon_size = 64,
-	  icon_mipmaps = 4
     }},
     subgroup = "alignment",
     order = "nullius-db",
@@ -154,14 +153,13 @@ data:extend({
 	icons = {{
       icon = "__base__/graphics/icons/piercing-shotgun-shell.png",
       icon_size = 64,
-	  icon_mipmaps = 4
     }},
     subgroup = "alignment",
     order = "nullius-e",
     magazine_size = 100,
     stack_size = 20,
+    ammo_category = "nullius-conscription",
     ammo_type = {
-      category = "nullius-conscription",
       target_type = "position",
       action = {
         {
@@ -185,7 +183,6 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/combat-shotgun.png",
       icon_size = 64,
-	  icon_mipmaps = 4
     }},
     subgroup = "alignment",
     order = "nullius-f",
@@ -209,7 +206,6 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/gun-turret.png",
       icon_size = 64,
-	  icon_mipmaps = 4
     }},
     subgroup = "alignment",
     order = "nullius-g",
@@ -249,7 +245,6 @@ data:extend({
       {
 	    icon = "__base__/graphics/icons/rocket-part.png",
         icon_size = 64,
-	    icon_mipmaps = 4
       },
       {
         icon = "__nullius__/graphics/icons/broken.png",
@@ -283,7 +278,9 @@ data:extend({
       {"nullius-broken-align-transponder", 1},
       {"nullius-iron-wire", 1}
     },
-    result = "nullius-align-transponder"
+    results = {
+			{type="item", name="nullius-align-transponder", amount = 1}
+		}
   },
 
   {
@@ -298,7 +295,9 @@ data:extend({
       {"nullius-steel-sheet", 1},
       {"nullius-plastic", 1}
     },
-    result = "nullius-align-identification-card"
+    results = {
+			{type="item", name="nullius-align-identification-card", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -313,7 +312,9 @@ data:extend({
       {"nullius-glass", 1},
       {"nullius-aluminum-sheet", 1}
     },
-    result = "nullius-align-invitation-card"
+    results = {
+			{type="item", name="nullius-align-invitation-card", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -328,7 +329,9 @@ data:extend({
 	  {"constant-combinator", 1},
 	  {"nullius-capacitor", 2}
     },
-    result = "nullius-align-transponder"
+    results = {
+			{type="item", name="nullius-align-transponder", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -345,8 +348,9 @@ data:extend({
       {"nullius-align-transponder", 1},
 	  {"nullius-capacitor", 4}
     },
-    result = "nullius-align-conscription-charge",
-	result_count = 3
+    results = {
+			{type="item", name="nullius-align-conscription-charge", amount = 3}
+		}
   },
   {
     type = "recipe",
@@ -361,7 +365,9 @@ data:extend({
       {"nullius-multi-tool-1", 1},
       {"nullius-relay-1", 1}
     },
-    result = "nullius-align-conscription-ray"
+    results = {
+			{type="item", name="nullius-align-conscription-ray", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -379,7 +385,9 @@ data:extend({
 	  {"nullius-missile-launcher", 2},
 	  {"nullius-steel-beam", 6}
     },
-    result = "nullius-align-conscription-turret"
+    results = {
+			{type="item", name="nullius-align-conscription-turret", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -394,7 +402,9 @@ data:extend({
       {"nullius-large-beacon-1", 2},
 	  {"nullius-align-conscription-charge", 10}
     },
-    result = "nullius-align-concordance-transmitter"
+    results = {
+			{type="item", name="nullius-align-concordance-transmitter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -409,7 +419,9 @@ data:extend({
       {"nullius-large-beacon-2", 2},
       {"nullius-satellite", 1}
     },
-    result = "nullius-align-concordance-satellite"
+    results = {
+			{type="item", name="nullius-align-concordance-satellite", amount = 1}
+		}
   }
 })
 

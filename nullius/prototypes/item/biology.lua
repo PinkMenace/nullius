@@ -18,7 +18,7 @@ data:extend({
     type = "item",
     name = "nullius-cellulose",
     icons = {{
-      icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+      icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
       icon_size = 54
     }},
     subgroup = "biology-material",
@@ -29,7 +29,7 @@ data:extend({
     type = "item",
     name = "nullius-fertilizer",
     icons = {{
-        icon = "__angelsrefining__/graphics/icons/solid-mud.png",
+        icon = "__angelsrefininggraphics__/graphics/icons/solid-mud.png",
         icon_size = 32
     }},
     subgroup = "biology-material",
@@ -42,7 +42,7 @@ data:extend({
     icons = {{
         icon = "__base__/graphics/icons/coal-1.png",
         icon_size = 64,
-		icon_mipmaps = 4,
+		
 		tint = {0.5, 0.5, 0.5}
     }},
     subgroup = "biology-material",
@@ -56,14 +56,14 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-sugar-1",
-    localised_name = {"", {"item-name.nullius-sugar"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-sugar"}, " ", tostring(1)},
     icons = {
       {
         icon = ICONPATH .. "sugar.png",
         icon_size = 64
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/molecules/glycerol.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png",
         icon_size = 72,
         scale = 0.3,
         shift = {7, -9}
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-sugar-2",
-    localised_name = {"", {"item-name.nullius-sugar"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-sugar"}, " ", tostring(2)},
     enabled = false,
     show_amount_in_title = false,
     always_show_products = true,
@@ -254,12 +254,12 @@ data:extend({
       {
 		icon = "__base__/graphics/icons/fluid/lubricant.png",
 		icon_size = 64,
-		icon_mipmaps = 4
+		
       },
       {
         icon = "__base__/graphics/icons/fluid/light-oil.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.2,
         shift = {-12, -10}
       }
@@ -327,7 +327,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-protocell-1",
-    localised_name = {"", {"fluid-name.nullius-protocell"}, " ", 1},
+    localised_name = {"", {"fluid-name.nullius-protocell"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
     order = "nullius-fb",
@@ -348,7 +348,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-protocell-2",
-    localised_name = {"", {"fluid-name.nullius-protocell"}, " ", 2},
+    localised_name = {"", {"fluid-name.nullius-protocell"}, " ", tostring(2)},
     icons = {
       {
         icon = ICONPATH .. "protocell.png",
@@ -378,10 +378,10 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fertilizer",
-    localised_name = {"", {"item-name.nullius-fertilizer"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-fertilizer"}, " ", tostring(1)},
 	icons = {
 	  {
-	    icon = "__angelsrefining__/graphics/icons/solid-mud.png",
+	    icon = "__angelsrefininggraphics__/graphics/icons/solid-mud.png",
         icon_size = 32
       },
       {
@@ -408,16 +408,17 @@ data:extend({
       {type="item", name="nullius-algae", amount=4},
       {type="item", name="nullius-cellulose", amount=5}
     },
-    result = "nullius-fertilizer",
-    result_count = 6
+    results = {
+      {type = "item", name = "nullius-fertilizer", amount = 6}
+    }
   },
   {
     type = "recipe",
     name = "nullius-fertilizer-2",
-	localised_name = {"", {"item-name.nullius-fertilizer"}, " ", 2},
+	localised_name = {"", {"item-name.nullius-fertilizer"}, " ", tostring(2)},
 	icons = {
 	  {
-	    icon = "__angelsrefining__/graphics/icons/solid-mud.png",
+	    icon = "__angelsrefininggraphics__/graphics/icons/solid-mud.png",
         icon_size = 32
       },
       {
@@ -444,17 +445,18 @@ data:extend({
       {type="item", name="nullius-wood-chip", amount=12},
 	  {type="item", name="nullius-fish", amount=1}
     },
-    result = "nullius-fertilizer",
-    result_count = 16
+    results = {
+      {type = "item", name = "nullius-fertilizer", amount = 16}
+    }
   },
   {
     type = "recipe",
     name = "nullius-fatty-acid-pyrolysis",
     localised_name = {"recipe-name.nullius-pyrolysis", {"fluid-name.nullius-fatty-acids"}},
     icons = angelsmods.functions.create_liquid_recipe_icon(
-        {{"__angelspetrochem__/graphics/icons/molecules/ethylene.png", 72},
-        {"__angelspetrochem__/graphics/icons/molecules/benzene.png", 72},
-        {"__angelspetrochem__/graphics/icons/molecules/propene.png", 72}},
+        {{"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72},
+        {"__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72},
+        {"__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["hydrogen"]}
     ),
     enabled = false,
@@ -513,10 +515,10 @@ data:extend({
     name = "nullius-glycerol-reforming",
     localised_name = {"recipe-name.nullius-reforming", {"fluid-name.nullius-glycerol"}},
     icons = angelsmods.functions.create_liquid_recipe_icon(
-        {{"__angelspetrochem__/graphics/icons/molecules/carbon-monoxide.png", 72},
-       {"__angelspetrochem__/graphics/icons/molecules/hydrogen.png", 72}},
+        {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72},
+       {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72}},
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["oxygen"]},
-      {{"__angelspetrochem__/graphics/icons/molecules/glycerol.png", 72}}
+      {{"__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72}}
     ),
     enabled = false,
     allow_as_intermediate = false,
@@ -558,7 +560,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bacteria-genome",
-	localised_name = {"", {"item-name.nullius-bacteria-genome"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-bacteria-genome"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
 	order = "nullius-bb",
@@ -578,7 +580,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bacteria-genome-2",
-    localised_name = {"", {"item-name.nullius-bacteria-genome"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-bacteria-genome"}, " ", tostring(2)},
 	icons = {
       {
         icon = ICONPATH .. "bacteria.png",
@@ -594,7 +596,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/icons/military-science-pack.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {9, -8},
         tint = {0.75, 0.72, 0.78}
@@ -623,7 +625,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bacteria-1",
-    localised_name = {"", {"fluid-name.nullius-bacteria"}, " ", 1},
+    localised_name = {"", {"fluid-name.nullius-bacteria"}, " ", tostring(1)},
     icons = {
       {
         icon = ICONPATH .. "bacteria.png",
@@ -660,7 +662,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bacteria-2",
-    localised_name = {"", {"fluid-name.nullius-bacteria"}, " ", 2},
+    localised_name = {"", {"fluid-name.nullius-bacteria"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
     category = "ore-flotation",
@@ -683,7 +685,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bacteria-3",
-    localised_name = {"", {"fluid-name.nullius-bacteria"}, " ", 3},
+    localised_name = {"", {"fluid-name.nullius-bacteria"}, " ", tostring(3)},
 	icons = {
 	  {
         icon = ICONPATH .. "bacteria.png",
@@ -807,7 +809,7 @@ data:extend({
         shift = {-9, -11}
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/molecules/glycerol.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png",
         icon_size = 72,
 		scale = 0.23,
 		shift = {-8, 12}
@@ -853,7 +855,7 @@ data:extend({
         shift = {-8, -10}
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/molecules/glycerol.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png",
         icon_size = 72,
 		scale = 0.21,
 		shift = {-7, 11}
@@ -1015,7 +1017,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-algae-genome",
-	localised_name = {"", {"item-name.nullius-algae-genome"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-algae-genome"}, " ", tostring(1)},
     enabled = false,
 	show_amount_in_title = false,
     always_show_products = true,
@@ -1035,7 +1037,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-algae-genome-2",
-    localised_name = {"", {"item-name.nullius-algae-genome"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-algae-genome"}, " ", tostring(2)},
 	icons = {
       {
         icon = ICONPATH .. "algae.png",
@@ -1051,7 +1053,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/icons/military-science-pack.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {9, -8},
         tint = {0.75, 0.72, 0.78}
@@ -1078,7 +1080,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-algae-progenitor",
-	localised_name = {"", {"item-name.nullius-algae-progenitor"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-algae-progenitor"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
 	order = "nullius-cb",
@@ -1100,7 +1102,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-algae-progenitor-2",
-	localised_name = {"", {"item-name.nullius-algae-progenitor"}, " ", 2},
+	localised_name = {"", {"item-name.nullius-algae-progenitor"}, " ", tostring(2)},
 	icons = {
 	  {
         icon = ICONPATH .. "algae-progenitor.png",
@@ -1135,7 +1137,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-algae-1",
-    localised_name = {"", {"item-name.nullius-algae"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-algae"}, " ", tostring(1)},
     icons = {
       {
         icon = ICONPATH .. "algae.png",
@@ -1169,7 +1171,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-algae-2",
-    localised_name = {"", {"item-name.nullius-algae"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-algae"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
     category = "ore-flotation",
@@ -1191,7 +1193,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-algae-3",
-    localised_name = {"", {"item-name.nullius-algae"}, " ", 3},
+    localised_name = {"", {"item-name.nullius-algae"}, " ", tostring(3)},
 	icons = {
 	  {
         icon = ICONPATH .. "algae.png",
@@ -1258,13 +1260,13 @@ data:extend({
         scale = 0.4
       },
 	  {
-	    icon = "__angelsrefining__/graphics/icons/solid-limestone.png",
+	    icon = "__angelsrefininggraphics__/graphics/icons/solid-limestone.png",
         icon_size = 32,
 		scale = 0.48,
 		shift = {11, 10}
 	  },
 	  {
-	    icon = "__angelspetrochem__/graphics/icons/molecules/sulfur-dioxide.png",
+	    icon = "__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png",
         icon_size = 72,
 		scale = 0.2,
 		shift = {-10, 10}
@@ -1340,7 +1342,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/light-oil.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.5
       },
       {
@@ -1385,7 +1387,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/light-oil.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
@@ -1482,7 +1484,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-grass-genome",
-	localised_name = {"", {"item-name.nullius-grass-genome"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-grass-genome"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
     energy_required = 30,
@@ -1501,7 +1503,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-grass-genome-2",
-    localised_name = {"", {"item-name.nullius-grass-genome"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-grass-genome"}, " ", tostring(2)},
 	icons = {
       {
         icon = ICONPATH .. "grass.png",
@@ -1517,7 +1519,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/icons/military-science-pack.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {9, -8},
         tint = {0.75, 0.72, 0.78}
@@ -1545,7 +1547,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-grass-progenitor",
-	localised_name = {"", {"item-name.nullius-grass-progenitor"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-grass-progenitor"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
 	order = "nullius-cb",
@@ -1567,7 +1569,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-grass-progenitor-2",
-	localised_name = {"", {"item-name.nullius-grass-progenitor"}, " ", 2},
+	localised_name = {"", {"item-name.nullius-grass-progenitor"}, " ", tostring(2)},
 	icons = {
 	  {
         icon = ICONPATH .. "grass-progenitor.png",
@@ -1602,7 +1604,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-grass-1",
-    localised_name = {"", {"item-name.nullius-grass"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-grass"}, " ", tostring(1)},
     icons = {
       {
         icon = ICONPATH .. "grass.png",
@@ -1636,7 +1638,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-grass-2",
-    localised_name = {"", {"item-name.nullius-grass"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-grass"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
     category = "nullius-water-treatment",
@@ -1659,7 +1661,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-grass-3",
-    localised_name = {"", {"item-name.nullius-grass"}, " ", 3},
+    localised_name = {"", {"item-name.nullius-grass"}, " ", tostring(3)},
 	icons = {
 	  {
         icon = ICONPATH .. "grass.png",
@@ -1739,7 +1741,7 @@ data:extend({
     localised_name = {"recipe-name.nullius-grass-seed-milling"},
     icons = {
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54
       },
       {
@@ -1783,7 +1785,7 @@ data:extend({
         icon_size = 64
       },
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.5333
       },
@@ -1828,7 +1830,7 @@ data:extend({
       data.raw.fluid["nullius-carbon-dioxide"].icons[3],
       data.raw.fluid["nullius-carbon-dioxide"].icons[4],
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.32,
         shift = {-8, -8}
@@ -1862,7 +1864,7 @@ data:extend({
       data.raw.fluid["nullius-carbon-dioxide"].icons[3],
       data.raw.fluid["nullius-carbon-dioxide"].icons[4],
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.29,
         shift = {-7, -7}
@@ -1886,15 +1888,15 @@ data:extend({
     type = "recipe",
     name = "nullius-cellulose-pyrolysis",
     localised_name = {"", {"recipe-name.nullius-pyrolysis",
-	    {"item-name.nullius-cellulose"}}, " ", 1},
+	    {"item-name.nullius-cellulose"}}, " ", tostring(1)},
     icons = {
       {
         icon = "__base__/graphics/icons/coal-dark-background.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.32,
         shift = {-8, -8}
@@ -1918,7 +1920,7 @@ data:extend({
     type = "recipe",
     name = "nullius-boxed-cellulose-pyrolysis",
     localised_name = {"recipe-name.nullius-boxed", {"", {"recipe-name.nullius-pyrolysis",
-        {"item-name.nullius-cellulose"}}, " ", 1}},
+        {"item-name.nullius-cellulose"}}, " ", tostring(1)}},
     icons = {
       {
         icon = ICONPATH .. "crate.png",
@@ -1927,11 +1929,11 @@ data:extend({
       {
         icon = "__base__/graphics/icons/coal-dark-background.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.29,
         shift = {-7, -7}
@@ -1955,14 +1957,14 @@ data:extend({
     type = "recipe",
     name = "nullius-cellulose-pyrolysis-2",
     localised_name = {"", {"recipe-name.nullius-pyrolysis",
-	    {"item-name.nullius-cellulose"}}, " ", 2},
+	    {"item-name.nullius-cellulose"}}, " ", tostring(2)},
     icons = {
 	  {
         icon = ICONPATH .. "carbon-fiber.png",
         icon_size = 128
       },
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.37,
         shift = {-7, -7}
@@ -1987,7 +1989,7 @@ data:extend({
     type = "recipe",
     name = "nullius-boxed-cellulose-pyrolysis-2",
     localised_name = {"recipe-name.nullius-boxed", {"", {"recipe-name.nullius-pyrolysis",
-        {"item-name.nullius-cellulose"}}, " ", 2}},
+        {"item-name.nullius-cellulose"}}, " ", tostring(2)}},
     icons = {
       {
         icon = ICONPATH .. "boxing.png",
@@ -1999,7 +2001,7 @@ data:extend({
 		scale = 0.225
       },
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.33,
         shift = {-6, -6}
@@ -2028,12 +2030,12 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -7}
       }
@@ -2068,13 +2070,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.27,
         shift = {-7, -6}
       }
@@ -2104,7 +2106,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
 	  	icon = ICONPATH .. "wood-chip.png",
@@ -2143,7 +2145,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
@@ -2178,7 +2180,7 @@ data:extend({
       {
 	    icon = "__base__/graphics/icons/coal-dark-background.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
 	  	icon = ICONPATH .. "wood-chip.png",
@@ -2214,7 +2216,7 @@ data:extend({
       {
 	    icon = "__base__/graphics/icons/coal-dark-background.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
@@ -2325,7 +2327,9 @@ data:extend({
       {"nullius-large-dispatch-chest-2", 1},
       {"nullius-large-miner-2", 4}
     },
-    result = "nullius-sequestration-coal-drone"
+    results = {
+      {type = "item", name = "nullius-sequestration-coal-drone", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2339,7 +2343,9 @@ data:extend({
       {"nullius-terraforming-remote-grey", 1},
       {"nullius-yield-module-3", 1}
     },
-    result = "nullius-sequestration-coal-remote"
+    results = {
+      {type = "item", name = "nullius-sequestration-coal-remote", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -2372,7 +2378,9 @@ data:extend({
       {"nullius-terraforming-remote-tan", 1},
       {"nullius-yield-module-3", 1}
     },
-    result = "nullius-sequestration-petroleum-remote"
+    results = {
+      {type = "item", name = "nullius-sequestration-petroleum-remote", amount = 1}
+    }
   },
 
   {
@@ -2382,7 +2390,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.5
       },
       {
@@ -2401,7 +2409,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/big-worm.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-worm",
     order = "nullius-c",
@@ -2413,7 +2421,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/small-worm.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-worm",
     order = "nullius-d",
@@ -2431,7 +2439,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.4
       }
     },
@@ -2442,7 +2450,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-worm-genome",
-	localised_name = {"", {"item-name.nullius-worm-genome"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-worm-genome"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
     energy_required = 40,
@@ -2461,12 +2469,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-worm-genome-2",
-    localised_name = {"", {"item-name.nullius-worm-genome"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-worm-genome"}, " ", tostring(2)},
 	icons = {
       {
 	    icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-		icon_mipmaps = 4,
+		
 		scale = 0.5
       },
       {
@@ -2478,7 +2486,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/icons/military-science-pack.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {9, -8},
         tint = {0.75, 0.72, 0.78}
@@ -2506,7 +2514,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-worm-progenitor",
-	localised_name = {"", {"item-name.nullius-worm-progenitor"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-worm-progenitor"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
 	order = "nullius-cb",
@@ -2527,17 +2535,17 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-worm-progenitor-2",
-	localised_name = {"", {"item-name.nullius-worm-progenitor"}, " ", 2},
+	localised_name = {"", {"item-name.nullius-worm-progenitor"}, " ", tostring(2)},
 	icons = {
 	  {
 	    icon = "__base__/graphics/icons/big-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
 	    icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {-10, -9}
       }
@@ -2564,12 +2572,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-worm-1",
-    localised_name = {"", {"item-name.nullius-worm"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-worm"}, " ", tostring(1)},
     icons = {
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = ICONPATH .. "protocell.png",
@@ -2601,7 +2609,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-worm-2",
-    localised_name = {"", {"item-name.nullius-worm"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-worm"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
     category = "ore-flotation",
@@ -2625,12 +2633,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-worm-3",
-    localised_name = {"", {"item-name.nullius-worm"}, " ", 3},
+    localised_name = {"", {"item-name.nullius-worm"}, " ", tostring(3)},
 	icons = {
 	  {
 	    icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
         icon = ICONPATH .. "genome.png",
@@ -2662,7 +2670,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-legacy-worm-2",
-    localised_name = {"", {"item-name.nullius-worm"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-worm"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
 	hidden = true,
@@ -2688,12 +2696,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-legacy-worm-3",
-    localised_name = {"", {"item-name.nullius-worm"}, " ", 3},
+    localised_name = {"", {"item-name.nullius-worm"}, " ", tostring(3)},
 	icons = {
 	  {
 	    icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
         icon = ICONPATH .. "genome.png",
@@ -2735,7 +2743,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.4,
         shift = {-8, -4}
       }
@@ -2769,12 +2777,12 @@ data:extend({
       {
 	    icon = "__base__/graphics/icons/small-worm-corpse.png",
         icon_size = 64,
-		icon_mipmaps = 4
+		
       },
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-9, -6}
       }
@@ -2813,7 +2821,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.32,
         shift = {-8, -7}
       }
@@ -2857,7 +2865,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.32,
         shift = {-8, -7}
       }
@@ -2904,7 +2912,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.32,
         shift = {-8, -7}
       }
@@ -2933,7 +2941,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.5
       },
       {
@@ -2952,7 +2960,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/tree-08-red.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-tree",
     order = "nullius-c",
@@ -2964,7 +2972,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/tree-08.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-tree",
     order = "nullius-d",
@@ -2982,7 +2990,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.35,
       }
     },
@@ -2996,7 +3004,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/wood.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-tree",
     order = "nullius-fb",
@@ -3016,7 +3024,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-tree-genome",
-	localised_name = {"", {"item-name.nullius-tree-genome"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-tree-genome"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
     energy_required = 60,
@@ -3034,12 +3042,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-tree-genome-2",
-    localised_name = {"", {"item-name.nullius-tree-genome"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-tree-genome"}, " ", tostring(2)},
 	icons = {
       {
 		icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-		icon_mipmaps = 4,
+		
 		scale = 0.5
       },
       {
@@ -3051,7 +3059,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/icons/military-science-pack.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {9, -8},
         tint = {0.75, 0.72, 0.78}
@@ -3078,7 +3086,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-tree-progenitor",
-	localised_name = {"", {"item-name.nullius-tree-progenitor"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-tree-progenitor"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
 	order = "nullius-cb",
@@ -3101,17 +3109,17 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-tree-progenitor-2",
-	localised_name = {"", {"item-name.nullius-tree-progenitor"}, " ", 2},
+	localised_name = {"", {"item-name.nullius-tree-progenitor"}, " ", tostring(2)},
 	icons = {
 	  {	    
 		icon = "__base__/graphics/icons/tree-08-red.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
 		icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {-10, -10}
       }
@@ -3139,12 +3147,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-tree-1",
-    localised_name = {"", {"item-name.nullius-tree"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-tree"}, " ", tostring(1)},
     icons = {
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = ICONPATH .. "protocell.png",
@@ -3175,7 +3183,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-tree-2",
-    localised_name = {"", {"item-name.nullius-tree"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-tree"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
     category = "nullius-water-treatment",
@@ -3199,12 +3207,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-tree-3",
-    localised_name = {"", {"item-name.nullius-tree"}, " ", 3},
+    localised_name = {"", {"item-name.nullius-tree"}, " ", tostring(3)},
 	icons = {
 	  {
 		icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
         icon = ICONPATH .. "genome.png",
@@ -3289,7 +3297,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -3332,7 +3340,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.27,
         shift = {-7, -7}
       }
@@ -3370,7 +3378,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.33,
         shift = {-8, -4}
       }
@@ -3386,8 +3394,9 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-wood", amount=2}
     },
-    result = "nullius-wood-chip",
-    result_count = 3
+    results = {
+      {type = "item", name = "nullius-wood-chip", amount = 3}
+    }
   },
   {
     type = "recipe",
@@ -3406,7 +3415,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-7, -4}
       }
@@ -3422,8 +3431,9 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-box-wood", amount=2}
     },
-    result = "nullius-box-wood-chip",
-    result_count = 3
+    results = {
+      {type = "item", name = "nullius-box-wood-chip", amount = 3}
+    }
   },
   {
     type = "recipe",
@@ -3511,7 +3521,7 @@ data:extend({
     localised_name = {"recipe-name.nullius-wood-pulping"},
     icons = {
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54
       },
       {
@@ -3551,7 +3561,7 @@ data:extend({
         icon_size = 64
       },
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54,
         scale = 0.53
       },
@@ -3588,7 +3598,7 @@ data:extend({
     localised_name = {"recipe-name.nullius-harvest", {"item-name.nullius-tree-seed"}},
     icons = {
       {
-        icon = "__base__/graphics/decorative/brown-asterisk/hr-brown-asterisk-11.png",
+        icon = "__base__/graphics/decorative/brown-asterisk/brown-asterisk-11.png",
         icon_size = 54
       },
       {
@@ -3601,7 +3611,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.28,
         shift = {-8, -7}
       }
@@ -3631,7 +3641,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.5
       },
       {
@@ -3650,7 +3660,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/fish.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.75, 0.9, 1}
     }},
     subgroup = "biology-fish",
@@ -3663,7 +3673,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/fish.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-fish",
     order = "nullius-d",
@@ -3681,7 +3691,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.32,
         tint = {1, 1, 1, 0.9}
       }
@@ -3693,7 +3703,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fish-genome",
-	localised_name = {"", {"item-name.nullius-fish-genome"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-fish-genome"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
     energy_required = 60,
@@ -3711,12 +3721,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fish-genome-2",
-    localised_name = {"", {"item-name.nullius-fish-genome"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-fish-genome"}, " ", tostring(2)},
 	icons = {
       {
 		icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-		icon_mipmaps = 4,
+		
 		scale = 0.5
       },
       {
@@ -3728,7 +3738,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/icons/military-science-pack.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {9, -8},
         tint = {0.75, 0.72, 0.78}
@@ -3755,7 +3765,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fish-progenitor",
-	localised_name = {"", {"item-name.nullius-fish-progenitor"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-fish-progenitor"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
 	order = "nullius-cb",
@@ -3777,18 +3787,18 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fish-progenitor-2",
-	localised_name = {"", {"item-name.nullius-fish-progenitor"}, " ", 2},
+	localised_name = {"", {"item-name.nullius-fish-progenitor"}, " ", tostring(2)},
 	icons = {
 	  {
 		icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         tint = {0.75, 0.9, 1}
       },
 	  {
 		icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {-10, -10}
       }
@@ -3816,12 +3826,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fish-1",
-    localised_name = {"", {"item-name.nullius-fish"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-fish"}, " ", tostring(1)},
     icons = {
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = ICONPATH .. "protocell.png",
@@ -3853,7 +3863,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fish-2",
-    localised_name = {"", {"item-name.nullius-fish"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-fish"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
     category = "ore-flotation",
@@ -3877,12 +3887,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fish-3",
-    localised_name = {"", {"item-name.nullius-fish"}, " ", 3},
+    localised_name = {"", {"item-name.nullius-fish"}, " ", tostring(3)},
 	icons = {
 	  {
 		icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
         icon = ICONPATH .. "genome.png",
@@ -3920,7 +3930,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -3958,7 +3968,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -3995,7 +4005,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.25,
         tint = {1, 1, 1, 0.9},
         shift = {-8, -7}
@@ -4038,7 +4048,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.25,
         tint = {1, 1, 1, 0.9},
         shift = {-8, -7}
@@ -4086,7 +4096,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.25,
         tint = {1, 1, 1, 0.9},
         shift = {-8, -7}
@@ -4151,7 +4161,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.5
       },
       {
@@ -4170,7 +4180,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/big-biter.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-arthropod",
     order = "nullius-c",
@@ -4182,7 +4192,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/small-biter.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     subgroup = "biology-arthropod",
     order = "nullius-d",
@@ -4200,7 +4210,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.35,
         tint = {1, 1, 1, 0.9}
       }
@@ -4231,7 +4241,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-arthropod-progenitor",
-	localised_name = {"", {"item-name.nullius-arthropod-progenitor"}, " ", 1},
+	localised_name = {"", {"item-name.nullius-arthropod-progenitor"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
 	order = "nullius-cb",
@@ -4255,17 +4265,17 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-arthropod-progenitor-2",
-	localised_name = {"", {"item-name.nullius-arthropod-progenitor"}, " ", 2},
+	localised_name = {"", {"item-name.nullius-arthropod-progenitor"}, " ", tostring(2)},
 	icons = {
 	  {
 		icon = "__base__/graphics/icons/big-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
 		icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.3,
         shift = {-9, -10}
       }
@@ -4294,12 +4304,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-arthropod-1",
-    localised_name = {"", {"item-name.nullius-arthropod"}, " ", 1},
+    localised_name = {"", {"item-name.nullius-arthropod"}, " ", tostring(1)},
     icons = {
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = ICONPATH .. "protocell.png",
@@ -4334,7 +4344,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-arthropod-2",
-    localised_name = {"", {"item-name.nullius-arthropod"}, " ", 2},
+    localised_name = {"", {"item-name.nullius-arthropod"}, " ", tostring(2)},
     enabled = false,
     allow_decomposition = false,
     category = "nullius-water-treatment",
@@ -4361,12 +4371,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-arthropod-3",
-    localised_name = {"", {"item-name.nullius-arthropod"}, " ", 3},
+    localised_name = {"", {"item-name.nullius-arthropod"}, " ", tostring(3)},
 	icons = {
 	  {
 		icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
 	  {
         icon = ICONPATH .. "genome.png",
@@ -4411,7 +4421,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -4457,7 +4467,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.27,
         shift = {-7, -7}
       }
@@ -4493,12 +4503,12 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter-corpse.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-9, -9}
       }
@@ -4534,13 +4544,13 @@ data:extend({
       {
 	    icon = "__base__/graphics/icons/small-biter-corpse.png",
         icon_size = 64,
-		icon_mipmaps = 4,
+		
         scale = 0.45
       },
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.27,
         shift = {-8, -8}
       }
@@ -4582,7 +4592,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.28,
         tint = {1, 1, 1, 0.9},
         shift = {-8, -7}
@@ -4628,7 +4638,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.28,
         tint = {1, 1, 1, 0.9},
         shift = {-8, -7}
@@ -4677,7 +4687,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.28,
         tint = {1, 1, 1, 0.9},
         shift = {-8, -7}
@@ -4708,12 +4718,12 @@ data:extend({
       {
         icon = "__base__/graphics/icons/coal-dark-background.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/plastic-bar.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -4740,7 +4750,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/coal-dark-background.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = ICONPATH .. "rubber.png",
@@ -4778,13 +4788,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/coal-dark-background.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
         icon = "__base__/graphics/icons/plastic-bar.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.27,
         shift = {-7, -7}
       }
@@ -4815,7 +4825,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/light-oil.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.25,
         shift = {-8, -8}
       }
@@ -4849,7 +4859,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/light-oil.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.25,
         shift = {-8, -8}
       }
@@ -4880,7 +4890,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.6
       },
       data.raw.fluid["nullius-fatty-acids"].icons[2],
@@ -4910,7 +4920,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/wooden-chest.png",
       icon_size = 64,
-      icon_mipmaps = 4
+      
     }},
     enabled = false,
     always_show_made_in = true,
@@ -4940,7 +4950,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/small-electric-pole.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {0.75, 0.75, 0.9}
     }},
     enabled = false,
@@ -4956,8 +4966,9 @@ data:extend({
       {"nullius-aluminum-wire", 2},
       {"nullius-wood", 1}
     },
-    result = "small-electric-pole",
-    result_count = 2
+    results = {
+      {type = "item", name = "small-electric-pole", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -4971,7 +4982,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-electric-pole.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         tint = {0.75, 0.75, 0.9},
         scale = 0.45
       }
@@ -4988,8 +4999,9 @@ data:extend({
       {"nullius-box-aluminum-wire", 2},
       {"nullius-box-wood", 1}
     },
-    result = "nullius-box-power-pole-1",
-    result_count = 2
+    results = {
+      {type = "item", name = "nullius-box-power-pole-1", amount = 2}
+    }
   },
   {
     type = "recipe",
@@ -4998,7 +5010,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/icons/small-electric-pole.png",
       icon_size = 64,
-      icon_mipmaps = 4,
+      
       tint = {1, 0.85, 0.85}
     }},
     enabled = false,
@@ -5034,7 +5046,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-electric-pole.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         tint = {1, 0.85, 0.85},
         scale = 0.45
       }
@@ -5068,12 +5080,12 @@ data:extend({
       {
         icon = "__base__/graphics/icons/rail.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -5094,8 +5106,9 @@ data:extend({
       {type="item", name="nullius-gravel", amount=6},
       {type="fluid", name="nullius-epoxy", amount=1}
     },
-    result = "rail",
-    result_count = 5
+    results = {
+      {type = "item", name = "rail", amount = 5}
+    }
   },
   {
     type = "recipe",
@@ -5109,13 +5122,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/rail.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.27,
         shift = {-7, -7}
       }
@@ -5135,8 +5148,9 @@ data:extend({
       {type="item", name="nullius-box-gravel", amount=6},
       {type="fluid", name="nullius-epoxy", amount=5}
     },
-    result = "nullius-box-rail",
-    result_count = 5
+    results = {
+      {type = "item", name = "nullius-box-rail", amount = 5}
+    }
   },
   {
     type = "recipe",
@@ -5146,12 +5160,12 @@ data:extend({
       {
         icon = "__base__/graphics/icons/wall.png",
         icon_size = 64,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -5192,13 +5206,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/wall.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.45
       },
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.27,
         shift = {-7, -7}
       }
@@ -5298,7 +5312,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -5331,7 +5345,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.3,
         shift = {-8, -8}
       }
@@ -5366,7 +5380,7 @@ data:extend({
         icon_size = 64
       },
       {
-        icon = "__angelspetrochem__/graphics/icons/molecules/glycerol.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png",
         icon_size = 72,
         scale = 0.28,
         shift = {0, 6}
@@ -5449,7 +5463,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.28,
         shift = {0, 5}
       },
@@ -5477,7 +5491,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.33,
         shift = {1, 5}
       },
@@ -5505,7 +5519,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.28,
         shift = {-1, 5}
       },
@@ -5567,7 +5581,9 @@ data:extend({
       {type="fluid", name="nullius-fatty-acids", amount=500},
       {type="fluid", name="nullius-nucleotides", amount=200}
     },
-    result = "nullius-biochemistry-pack"
+    results = {
+      {type = "item", name = "nullius-biochemistry-pack", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -5580,7 +5596,9 @@ data:extend({
       {type="item", name="nullius-algae", amount=100},
       {type="fluid", name="nullius-bacteria", amount=200}
     },
-    result = "nullius-microbiology-pack"
+    results = {
+      {type = "item", name = "nullius-microbiology-pack", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -5594,7 +5612,9 @@ data:extend({
       {type="item", name="nullius-grass", amount=120},
       {type="item", name="nullius-box-cellulose", amount=120}
     },
-    result = "nullius-botany-pack"
+    results = {
+      {type = "item", name = "nullius-botany-pack", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -5608,7 +5628,9 @@ data:extend({
       {type="item", name="nullius-tree", amount=80},
       {type="item", name="nullius-box-wood", amount=200}
     },
-    result = "nullius-dendrology-pack"
+    results = {
+      {type = "item", name = "nullius-dendrology-pack", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -5621,7 +5643,9 @@ data:extend({
       {type="item", name="nullius-worm", amount=150},
       {type="fluid", name="nullius-carbon-dioxide", amount=7500}
     },
-    result = "nullius-nematology-pack"
+    results = {
+      {type = "item", name = "nullius-nematology-pack", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -5635,7 +5659,9 @@ data:extend({
       {type="item", name="nullius-fish", amount=120},
       {type="fluid", name="nullius-wastewater", amount=10000}
     },
-    result = "nullius-ichthyology-pack"
+    results = {
+      {type = "item", name = "nullius-ichthyology-pack", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -5649,6 +5675,8 @@ data:extend({
       {type="item", name="nullius-arthropod", amount=80},
       {type="item", name="nullius-box-plastic", amount=50}
     },
-    result = "nullius-zoology-pack"
+    results = {
+      {type = "item", name = "nullius-zoology-pack", amount = 1}
+    }
   }
 })
