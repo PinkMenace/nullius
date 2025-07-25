@@ -10,6 +10,11 @@ resource_autoplace.initialize_patch_set("nullius-sandstone", true)
 resource_autoplace.initialize_patch_set("nullius-limestone", false)
 resource_autoplace.initialize_patch_set("nullius-fumarole", false)
 
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-bauxite"] = {}
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-sandstone"] = {}
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-limestone"] = {}
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-fumarole"] = {}
+
 
 local function make_particle(inputname, inputtint)
   data:extend({
@@ -20,7 +25,7 @@ local function make_particle(inputname, inputtint)
   life_time = 180,
   pictures = {
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-1.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-1.png",
       priority = "extra-high",
       tint = inputtint,
       width = 5,
@@ -28,7 +33,7 @@ local function make_particle(inputname, inputtint)
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-2.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-2.png",
       priority = "extra-high",
       tint = inputtint,
       width = 7,
@@ -36,7 +41,7 @@ local function make_particle(inputname, inputtint)
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-3.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-3.png",
       priority = "extra-high",
       tint = inputtint,
       width = 6,
@@ -44,7 +49,7 @@ local function make_particle(inputname, inputtint)
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-4.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-4.png",
       priority = "extra-high",
       tint = inputttint,
       width = 9,
@@ -52,7 +57,7 @@ local function make_particle(inputname, inputtint)
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-5.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-5.png",
       priority = "extra-high",
       tint = inputttint,
       width = 5,
@@ -60,7 +65,7 @@ local function make_particle(inputname, inputtint)
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-6.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-6.png",
       priority = "extra-high",
       tint = inputtint,
       width = 6,
@@ -68,7 +73,7 @@ local function make_particle(inputname, inputtint)
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-7.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-7.png",
       priority = "extra-high",
       tint = inputtint,
       width = 7,
@@ -76,7 +81,7 @@ local function make_particle(inputname, inputtint)
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-8.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-8.png",
       priority = "extra-high",
       tint = inputtint,
       width = 6,
@@ -86,56 +91,56 @@ local function make_particle(inputname, inputtint)
   },
   shadows = {
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
       priority = "extra-high",
       width = 5,
       height = 5,
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
       priority = "extra-high",
       width = 7,
       height = 5,
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
       priority = "extra-high",
       width = 6,
       height = 7,
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
       priority = "extra-high",
       width = 9,
       height = 8,
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
       priority = "extra-high",
       width = 5,
       height = 5,
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
       priority = "extra-high",
       width = 6,
       height = 4,
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
       priority = "extra-high",
       width = 7,
       height = 8,
       frame_count = 1
     },
     {
-      filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
+      filename = "__angelsrefininggraphics__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
       priority = "extra-high",
       width = 6,
       height = 5,
@@ -201,22 +206,13 @@ data:extend({
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
     stages = {
       sheet = {
-        filename = "__angelsrefining__/graphics/entity/ores/ore-14-lr.png",
-        priority = "extra-high",
-        tint = {0.858, 0.809, 0.479},
-        size = 64,
-        frame_count = 8,
-        variation_count = 8,
-        hr_version =
-        {
-          filename = "__angelsrefining__/graphics/entity/ores/ore-14-hr.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-14.png",
           priority = "extra-high",
           tint = {0.858, 0.809, 0.479},
           size = 128,
           frame_count = 8,
           variation_count = 8,
           scale = 0.5
-        }
       }
     },
 
@@ -249,22 +245,13 @@ data:extend({
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
     stages = {
       sheet = {
-        filename = "__angelsrefining__/graphics/entity/ores/ore-12-lr.png",
-        priority = "extra-high",
-        tint = {184, 125, 73},
-        size = 64,
-        frame_count = 8,
-        variation_count = 8,
-        hr_version =
-        {
-          filename = "__angelsrefining__/graphics/entity/ores/ore-12-hr.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-12.png",
           priority = "extra-high",
           tint = {184, 125, 73},
           size = 128,
           frame_count = 8,
           variation_count = 8,
           scale = 0.5
-        }
       }
     },
 
@@ -296,22 +283,13 @@ data:extend({
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
     stages = {
       sheet = {
-        filename = "__angelsrefining__/graphics/entity/ores/ore-21-lr.png",
-        priority = "extra-high",
-        tint = {0.898, 0.773, 0.688},
-        size = 64,
-        frame_count = 8,
-        variation_count = 8,
-        hr_version =
-        {
-          filename = "__angelsrefining__/graphics/entity/ores/ore-21-hr.png",
+          filename = "__angelsrefininggraphics__/graphics/entity/ores/ore-21.png",
           priority = "extra-high",
           tint = {0.898, 0.773, 0.688},
           size = 128,
           frame_count = 8,
           variation_count = 8,
           scale = 0.5
-        }
       }
     },
 
@@ -366,7 +344,7 @@ data:extend({
     stage_counts = {0},
     stages = {
       sheet = {
-    filename = "__angelsrefining__/graphics/entity/patches/fissure.png",
+    filename = "__angelsrefininggraphics__/graphics/entity/patches/fissure.png",
     tint = {r = 0.65, g = 0.4, b = 0.15},
     priority = "extra-high",
     width = 256,
@@ -378,7 +356,7 @@ data:extend({
     },
     stages_effect = {
       sheet = {
-    filename = "__angelsrefining__/graphics/entity/patches/fissure-glow.png",
+    filename = "__angelsrefininggraphics__/graphics/entity/patches/fissure-glow.png",
     tint = {r=1, g=0.3, b=0.1},
     priority = "extra-high",
     width = 256,

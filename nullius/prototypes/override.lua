@@ -5,22 +5,19 @@ local ENTITYPATH = "__nullius__/graphics/entity/"
 for _, type in pairs({"unit-spawner", "unit", "turret"}) do
   for _, entity in pairs(data.raw[type]) do
     if ((entity.subgroup == "enemies") and entity.autoplace and (entity.autoplace.force == "enemy")) then
-      entity.autoplace.richness_multiplier = null
-      entity.autoplace.richness_expression = {expression_id="literal-number:1", literal_value=0, type = "literal-number"}
-      entity.autoplace.probability_expression = {expression_id="literal-number:1", literal_value=0, type = "literal-number"}
+      entity.autoplace.richness_expression = "0"
+      entity.autoplace.probability_expression = "0"
     end
   end
 end
 
 data.raw.item["iron-ore"].icon = "__base__/graphics/icons/iron-ore.png"
 data.raw.item["iron-ore"].icon_size = 64
-data.raw.item["iron-ore"].icon_mipmaps = 4
 data.raw.item["iron-ore"].subgroup = "iron-ingot"
 data.raw.item["iron-ore"].order = "nullius-b"
 data.raw.item["iron-ore"].stack_size = 50
 data.raw.item["copper-ore"].icon = "__base__/graphics/icons/copper-ore.png"
 data.raw.item["copper-ore"].icon_size = 64
-data.raw.item["copper-ore"].icon_mipmaps = 4
 data.raw.item["copper-ore"].subgroup = "copper"
 data.raw.item["copper-ore"].order = "nullius-b"
 data.raw.item["copper-ore"].stack_size = 50
@@ -31,8 +28,8 @@ data.raw.item["stone"].subgroup = "masonry-material"
 data.raw.item["stone"].order = "nullius-k"
 data.raw.item["stone"].stack_size = 50
 
-data.raw.item["red-wire"].order = "nullius-c"
-data.raw.item["green-wire"].order = "nullius-d"
+data.raw.item["nullius-red-wire"].order = "nullius-c"
+data.raw.item["nullius-green-wire"].order = "nullius-d"
 data.raw.item["power-switch"].order = "nullius-h"
 data.raw["power-switch"]["power-switch"].localised_description = {"",
     {"entity-description.power-switch"}, {"entity-description.nullius-power-switch",
@@ -97,10 +94,10 @@ data.raw.item["gate"].order = "nullius-f"
 data.raw["gate"]["gate"].localised_description = {"entity-description.nullius-gate"}
 data.raw["gate"]["gate"].minable.mining_time = 0.8
 
-data.raw.item["empty-barrel"].localised_description = {"item-description.nullius-barrel"}
-data.raw.item["empty-barrel"].subgroup = "canisters"
-data.raw.item["empty-barrel"].order = "nullius-b"
-data.raw.item["empty-barrel"].stack_size = 20
+data.raw.item["barrel"].localised_description = {"item-description.nullius-barrel"}
+data.raw.item["barrel"].subgroup = "canisters"
+data.raw.item["barrel"].order = "nullius-b"
+data.raw.item["barrel"].stack_size = 20
 
 data.raw["capsule"]["cliff-explosives"].localised_name = {"item-name.nullius-explosive"}
 data.raw["capsule"]["cliff-explosives"].localised_description = {"item-description.nullius-explosive"}
@@ -185,7 +182,6 @@ data.raw.tile["black-refined-concrete"].vehicle_friction_modifier = 0.5
 data.raw.tile["black-refined-concrete"].minable = {mining_time = 0.1, result = "nullius-black-concrete"}
 data.raw.tile["black-refined-concrete"].localised_name = {"item-name.nullius-black-concrete"}
 
-
 data.raw.tile["mineral-grey-dirt-1"].map_color = {r = 119, g = 120, b = 115}
 data.raw.tile["mineral-grey-dirt-2"].map_color = {r = 91, g = 94, b = 90}
 data.raw.tile["mineral-grey-dirt-3"].map_color = {r = 94, g = 98, b = 100}
@@ -230,11 +226,9 @@ data.raw.tile["mineral-tan-dirt-6"].layer = 24
 for _,variant in pairs(data.raw.tile["water-mud"].variants) do
   if (variant.picture ~= nil) then
     variant.tint = {0.75, 1, 0.75, 1}
-	variant.hr_version.tint = {0.75, 1, 0.75, 1}
   else
     for _,subvariant in pairs(variant) do
       subvariant.tint = {0.75, 1, 0.75, 1}
-	  subvariant.hr_version.tint = {0.75, 1, 0.75, 1}
 	end
   end
 end
@@ -286,57 +280,51 @@ data.raw.item["express-transport-belt"].subgroup = "belt"
 data.raw.item["express-transport-belt"].order = "nullius-bd"
 data.raw.item["express-transport-belt"].stack_size = 200
 data.raw["transport-belt"]["express-transport-belt"].localised_name = {"entity-name.nullius-belt-3"}
-data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "ultimate-transport-belt"
+data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "bob-ultimate-transport-belt"
 data.raw["transport-belt"]["express-transport-belt"].minable.mining_time = 0.3
 data.raw.item["express-underground-belt"].subgroup = "belt"
 data.raw.item["express-underground-belt"].order = "nullius-cd"
 data.raw.item["express-underground-belt"].stack_size = 100
 data.raw["underground-belt"]["express-underground-belt"].localised_name = {"entity-name.nullius-underground-belt-3"}
 data.raw["underground-belt"]["express-underground-belt"].max_distance = 15
-data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "ultimate-underground-belt"
+data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "bob-ultimate-underground-belt"
 data.raw["underground-belt"]["express-underground-belt"].minable.mining_time = 0.8
 data.raw.item["express-splitter"].subgroup = "splitter"
 data.raw.item["express-splitter"].order = "nullius-dd"
 data.raw["splitter"]["express-splitter"].localised_name = {"entity-name.nullius-splitter-3"}
-data.raw["splitter"]["express-splitter"].next_upgrade = "ultimate-splitter"
+data.raw["splitter"]["express-splitter"].next_upgrade = "bob-ultimate-splitter"
 data.raw["splitter"]["express-splitter"].minable.mining_time = 1.2
 
-data.raw.item["ultimate-transport-belt"].subgroup = "belt"
-data.raw.item["ultimate-transport-belt"].order = "nullius-be"
-data.raw.item["ultimate-transport-belt"].icon = ENTICONPATH .. "belt4.png"
-data.raw.item["ultimate-transport-belt"].icon_size = 64
-data.raw.item["ultimate-transport-belt"].icon_mipmaps = nil
-data.raw.item["ultimate-transport-belt"].stack_size = 200
-data.raw["transport-belt"]["ultimate-transport-belt"].localised_name = {"entity-name.nullius-belt-4"}
-data.raw["transport-belt"]["ultimate-transport-belt"].next_upgrade = nil
-data.raw["transport-belt"]["ultimate-transport-belt"].icon = ENTICONPATH .. "belt4.png"
-data.raw["transport-belt"]["ultimate-transport-belt"].icon_size = 64
-data.raw["transport-belt"]["ultimate-transport-belt"].icon_mipmaps = nil
-data.raw["transport-belt"]["ultimate-transport-belt"].minable.mining_time = 0.4
-data.raw.item["ultimate-underground-belt"].subgroup = "belt"
-data.raw.item["ultimate-underground-belt"].order = "nullius-ce"
-data.raw.item["ultimate-underground-belt"].icon = ENTICONPATH .. "underground-belt4.png"
-data.raw.item["ultimate-underground-belt"].icon_size = 64
-data.raw.item["ultimate-underground-belt"].icon_mipmaps = nil
-data.raw.item["ultimate-underground-belt"].stack_size = 100
-data.raw["underground-belt"]["ultimate-underground-belt"].localised_name = {"entity-name.nullius-underground-belt-4"}
-data.raw["underground-belt"]["ultimate-underground-belt"].max_distance = 19
-data.raw["underground-belt"]["ultimate-underground-belt"].next_upgrade = nil
-data.raw["underground-belt"]["ultimate-underground-belt"].icon = ENTICONPATH .. "underground-belt4.png"
-data.raw["underground-belt"]["ultimate-underground-belt"].icon_size = 64
-data.raw["underground-belt"]["ultimate-underground-belt"].icon_mipmaps = nil
-data.raw["underground-belt"]["ultimate-underground-belt"].minable.mining_time = 1
-data.raw.item["ultimate-splitter"].subgroup = "splitter"
-data.raw.item["ultimate-splitter"].order = "nullius-de"
-data.raw.item["ultimate-splitter"].icon = ENTICONPATH .. "splitter4.png"
-data.raw.item["ultimate-splitter"].icon_size = 64
-data.raw.item["ultimate-splitter"].icon_mipmaps = nil
-data.raw["splitter"]["ultimate-splitter"].localised_name = {"entity-name.nullius-splitter-4"}
-data.raw["splitter"]["ultimate-splitter"].next_upgrade = nil
-data.raw["splitter"]["ultimate-splitter"].icon = ENTICONPATH .. "splitter4.png"
-data.raw["splitter"]["ultimate-splitter"].icon_size = 64
-data.raw["splitter"]["ultimate-splitter"].icon_mipmaps = nil
-data.raw["splitter"]["ultimate-splitter"].minable.mining_time = 1.5
+data.raw.item["bob-ultimate-transport-belt"].subgroup = "belt"
+data.raw.item["bob-ultimate-transport-belt"].order = "nullius-be"
+data.raw.item["bob-ultimate-transport-belt"].icon = ENTICONPATH .. "belt4.png"
+data.raw.item["bob-ultimate-transport-belt"].icon_size = 64
+data.raw.item["bob-ultimate-transport-belt"].stack_size = 200
+data.raw["transport-belt"]["bob-ultimate-transport-belt"].localised_name = {"entity-name.nullius-belt-4"}
+data.raw["transport-belt"]["bob-ultimate-transport-belt"].next_upgrade = nil
+data.raw["transport-belt"]["bob-ultimate-transport-belt"].icon = ENTICONPATH .. "belt4.png"
+data.raw["transport-belt"]["bob-ultimate-transport-belt"].icon_size = 64
+data.raw["transport-belt"]["bob-ultimate-transport-belt"].minable.mining_time = 0.4
+data.raw.item["bob-ultimate-underground-belt"].subgroup = "belt"
+data.raw.item["bob-ultimate-underground-belt"].order = "nullius-ce"
+data.raw.item["bob-ultimate-underground-belt"].icon = ENTICONPATH .. "underground-belt4.png"
+data.raw.item["bob-ultimate-underground-belt"].icon_size = 64
+data.raw.item["bob-ultimate-underground-belt"].stack_size = 100
+data.raw["underground-belt"]["bob-ultimate-underground-belt"].localised_name = {"entity-name.nullius-underground-belt-4"}
+data.raw["underground-belt"]["bob-ultimate-underground-belt"].max_distance = 19
+data.raw["underground-belt"]["bob-ultimate-underground-belt"].next_upgrade = nil
+data.raw["underground-belt"]["bob-ultimate-underground-belt"].icon = ENTICONPATH .. "underground-belt4.png"
+data.raw["underground-belt"]["bob-ultimate-underground-belt"].icon_size = 64
+data.raw["underground-belt"]["bob-ultimate-underground-belt"].minable.mining_time = 1
+data.raw.item["bob-ultimate-splitter"].subgroup = "splitter"
+data.raw.item["bob-ultimate-splitter"].order = "nullius-de"
+data.raw.item["bob-ultimate-splitter"].icon = ENTICONPATH .. "splitter4.png"
+data.raw.item["bob-ultimate-splitter"].icon_size = 64
+data.raw["splitter"]["bob-ultimate-splitter"].localised_name = {"entity-name.nullius-splitter-4"}
+data.raw["splitter"]["bob-ultimate-splitter"].next_upgrade = nil
+data.raw["splitter"]["bob-ultimate-splitter"].icon = ENTICONPATH .. "splitter4.png"
+data.raw["splitter"]["bob-ultimate-splitter"].icon_size = 64
+data.raw["splitter"]["bob-ultimate-splitter"].minable.mining_time = 1.5
 
 data.raw.item["inserter"].subgroup = "inserter"
 data.raw.item["inserter"].order = "nullius-b"
@@ -346,117 +334,117 @@ data.raw["inserter"]["inserter"].order = "nullius-b"
 data.raw["inserter"]["inserter"].localised_name = {"entity-name.nullius-inserter-1"}
 data.raw["inserter"]["inserter"].rotation_speed = 0.0166667
 data.raw["inserter"]["inserter"].extension_speed = 0.04
-data.raw["inserter"]["inserter"].energy_per_rotation = "12.5KJ"
-data.raw["inserter"]["inserter"].energy_per_movement = "1.875KJ"
+data.raw["inserter"]["inserter"].energy_per_rotation = "12.5kJ"
+data.raw["inserter"]["inserter"].energy_per_movement = "1.875kJ"
 data.raw["inserter"]["inserter"].energy_source.drain = "1kW"
 data.raw["inserter"]["inserter"].minable.mining_time = 0.4
-data.raw["inserter"]["inserter"].next_upgrade = "turbo-inserter"
+data.raw["inserter"]["inserter"].next_upgrade = "bob-turbo-inserter"
 data.raw["inserter"]["inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
 
-data.raw.item["turbo-inserter"].subgroup = "inserter"
-data.raw.item["turbo-inserter"].order = "nullius-c"
-data.raw.item["turbo-inserter"].localised_name = {"entity-name.nullius-inserter-2"}
-data.raw.item["turbo-inserter"].stack_size = 100
-data.raw["inserter"]["turbo-inserter"].order = "nullius-c"
-data.raw["inserter"]["turbo-inserter"].localised_name = {"entity-name.nullius-inserter-2"}
-data.raw["inserter"]["turbo-inserter"].rotation_speed = 0.0333333
-data.raw["inserter"]["turbo-inserter"].extension_speed = 0.08
-data.raw["inserter"]["turbo-inserter"].energy_per_rotation = "10.25KJ"
-data.raw["inserter"]["turbo-inserter"].energy_per_movement = "1.5625KJ"
-data.raw["inserter"]["turbo-inserter"].energy_source.drain = "2kW"
-data.raw["inserter"]["turbo-inserter"].minable.mining_time = 0.6
-data.raw["inserter"]["turbo-inserter"].next_upgrade = "stack-inserter"
-data.raw["inserter"]["turbo-inserter"].resistances = {
+data.raw.item["bob-turbo-inserter"].subgroup = "inserter"
+data.raw.item["bob-turbo-inserter"].order = "nullius-c"
+data.raw.item["bob-turbo-inserter"].localised_name = {"entity-name.nullius-inserter-2"}
+data.raw.item["bob-turbo-inserter"].stack_size = 100
+data.raw["inserter"]["bob-turbo-inserter"].order = "nullius-c"
+data.raw["inserter"]["bob-turbo-inserter"].localised_name = {"entity-name.nullius-inserter-2"}
+data.raw["inserter"]["bob-turbo-inserter"].rotation_speed = 0.0333333
+data.raw["inserter"]["bob-turbo-inserter"].extension_speed = 0.08
+data.raw["inserter"]["bob-turbo-inserter"].energy_per_rotation = "10.25kJ"
+data.raw["inserter"]["bob-turbo-inserter"].energy_per_movement = "1.5625kJ"
+data.raw["inserter"]["bob-turbo-inserter"].energy_source.drain = "2kW"
+data.raw["inserter"]["bob-turbo-inserter"].minable.mining_time = 0.6
+data.raw["inserter"]["bob-turbo-inserter"].next_upgrade = "bulk-inserter"
+data.raw["inserter"]["bob-turbo-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
 
-data.raw.item["turbo-filter-inserter"].subgroup = "inserter"
-data.raw.item["turbo-filter-inserter"].order = "nullius-d"
-data.raw.item["turbo-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-2"}
-data.raw.item["turbo-filter-inserter"].stack_size = 100
-data.raw["inserter"]["turbo-filter-inserter"].order = "nullius-d"
-data.raw["inserter"]["turbo-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-2"}
-data.raw["inserter"]["turbo-filter-inserter"].rotation_speed = 0.0333333
-data.raw["inserter"]["turbo-filter-inserter"].extension_speed = 0.08
-data.raw["inserter"]["turbo-filter-inserter"].energy_per_rotation = "10.25KJ"
-data.raw["inserter"]["turbo-filter-inserter"].energy_per_movement = "1.5625KJ"
-data.raw["inserter"]["turbo-filter-inserter"].energy_source.drain = "2kW"
-data.raw["inserter"]["turbo-filter-inserter"].minable.mining_time = 0.6
-data.raw["inserter"]["turbo-filter-inserter"].next_upgrade = "stack-filter-inserter"
-data.raw["inserter"]["turbo-filter-inserter"].resistances = {
-  { type = "impact", decrease = 100, percent = 90 }
-}
+-- data.raw.item["turbo-filter-inserter"].subgroup = "inserter"
+-- data.raw.item["turbo-filter-inserter"].order = "nullius-d"
+-- data.raw.item["turbo-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-2"}
+-- data.raw.item["turbo-filter-inserter"].stack_size = 100
+-- data.raw["inserter"]["turbo-filter-inserter"].order = "nullius-d"
+-- data.raw["inserter"]["turbo-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-2"}
+-- data.raw["inserter"]["turbo-filter-inserter"].rotation_speed = 0.0333333
+-- data.raw["inserter"]["turbo-filter-inserter"].extension_speed = 0.08
+-- data.raw["inserter"]["turbo-filter-inserter"].energy_per_rotation = "10.25kJ"
+-- data.raw["inserter"]["turbo-filter-inserter"].energy_per_movement = "1.5625kJ"
+-- data.raw["inserter"]["turbo-filter-inserter"].energy_source.drain = "2kW"
+-- data.raw["inserter"]["turbo-filter-inserter"].minable.mining_time = 0.6
+-- data.raw["inserter"]["turbo-filter-inserter"].next_upgrade = "bulk-filter-inserter"
+-- data.raw["inserter"]["turbo-filter-inserter"].resistances = {
+--   { type = "impact", decrease = 100, percent = 90 }
+-- }
 
-data.raw.item["stack-inserter"].subgroup = "inserter"
-data.raw.item["stack-inserter"].order = "nullius-e"
-data.raw.item["stack-inserter"].localised_name = {"entity-name.nullius-inserter-3"}
-data.raw.item["stack-inserter"].stack_size = 100
-data.raw["inserter"]["stack-inserter"].order = "nullius-e"
-data.raw["inserter"]["stack-inserter"].localised_name = {"entity-name.nullius-inserter-3"}
-data.raw["inserter"]["stack-inserter"].rotation_speed = 0.0333333
-data.raw["inserter"]["stack-inserter"].extension_speed = 0.08
-data.raw["inserter"]["stack-inserter"].energy_per_rotation = "20.5KJ"
-data.raw["inserter"]["stack-inserter"].energy_per_movement = "3.125KJ"
-data.raw["inserter"]["stack-inserter"].energy_source.drain = "4kW"
-data.raw["inserter"]["stack-inserter"].minable.mining_time = 0.8
-data.raw["inserter"]["stack-inserter"].next_upgrade = "express-stack-inserter"
-data.raw["inserter"]["stack-inserter"].resistances = {
+data.raw.item["bulk-inserter"].subgroup = "inserter"
+data.raw.item["bulk-inserter"].order = "nullius-e"
+data.raw.item["bulk-inserter"].localised_name = {"entity-name.nullius-inserter-3"}
+data.raw.item["bulk-inserter"].stack_size = 100
+data.raw["inserter"]["bulk-inserter"].order = "nullius-e"
+data.raw["inserter"]["bulk-inserter"].localised_name = {"entity-name.nullius-inserter-3"}
+data.raw["inserter"]["bulk-inserter"].rotation_speed = 0.0333333
+data.raw["inserter"]["bulk-inserter"].extension_speed = 0.08
+data.raw["inserter"]["bulk-inserter"].energy_per_rotation = "20.5kJ"
+data.raw["inserter"]["bulk-inserter"].energy_per_movement = "3.125kJ"
+data.raw["inserter"]["bulk-inserter"].energy_source.drain = "4kW"
+data.raw["inserter"]["bulk-inserter"].minable.mining_time = 0.8
+data.raw["inserter"]["bulk-inserter"].next_upgrade = "bob-express-bulk-inserter"
+data.raw["inserter"]["bulk-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
 data.raw.recipe["inserter"].order = "x"
 
-data.raw.item["stack-filter-inserter"].subgroup = "inserter"
-data.raw.item["stack-filter-inserter"].order = "nullius-f"
-data.raw.item["stack-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-3"}
-data.raw.item["stack-filter-inserter"].stack_size = 100
-data.raw["inserter"]["stack-filter-inserter"].order = "nullius-f"
-data.raw["inserter"]["stack-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-3"}
-data.raw["inserter"]["stack-filter-inserter"].rotation_speed = 0.0333333
-data.raw["inserter"]["stack-filter-inserter"].extension_speed = 0.08
-data.raw["inserter"]["stack-filter-inserter"].energy_per_rotation = "20.5KJ"
-data.raw["inserter"]["stack-filter-inserter"].energy_per_movement = "3.125KJ"
-data.raw["inserter"]["stack-filter-inserter"].energy_source.drain = "4kW"
-data.raw["inserter"]["stack-filter-inserter"].minable.mining_time = 0.8
-data.raw["inserter"]["stack-filter-inserter"].next_upgrade = "express-stack-filter-inserter"
-data.raw["inserter"]["stack-filter-inserter"].resistances = {
+-- data.raw.item["bulk-filter-inserter"].subgroup = "inserter"
+-- data.raw.item["bulk-filter-inserter"].order = "nullius-f"
+-- data.raw.item["bulk-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-3"}
+-- data.raw.item["bulk-filter-inserter"].stack_size = 100
+-- data.raw["inserter"]["bulk-filter-inserter"].order = "nullius-f"
+-- data.raw["inserter"]["bulk-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-3"}
+-- data.raw["inserter"]["bulk-filter-inserter"].rotation_speed = 0.0333333
+-- data.raw["inserter"]["bulk-filter-inserter"].extension_speed = 0.08
+-- data.raw["inserter"]["bulk-filter-inserter"].energy_per_rotation = "20.5kJ"
+-- data.raw["inserter"]["bulk-filter-inserter"].energy_per_movement = "3.125kJ"
+-- data.raw["inserter"]["bulk-filter-inserter"].energy_source.drain = "4kW"
+-- data.raw["inserter"]["bulk-filter-inserter"].minable.mining_time = 0.8
+-- data.raw["inserter"]["bulk-filter-inserter"].next_upgrade = "express-bulk-filter-inserter"
+-- data.raw["inserter"]["bulk-filter-inserter"].resistances = {
+--   { type = "impact", decrease = 100, percent = 90 }
+-- }
+
+data.raw.item["bob-express-bulk-inserter"].subgroup = "inserter"
+data.raw.item["bob-express-bulk-inserter"].order = "nullius-g"
+data.raw.item["bob-express-bulk-inserter"].localised_name = {"entity-name.nullius-inserter-4"}
+data.raw.item["bob-express-bulk-inserter"].stack_size = 100
+data.raw["inserter"]["bob-express-bulk-inserter"].order = "nullius-g"
+data.raw["inserter"]["bob-express-bulk-inserter"].localised_name = {"entity-name.nullius-inserter-4"}
+data.raw["inserter"]["bob-express-bulk-inserter"].rotation_speed = 0.0666666
+data.raw["inserter"]["bob-express-bulk-inserter"].extension_speed = 0.16
+data.raw["inserter"]["bob-express-bulk-inserter"].energy_per_rotation = "21kJ"
+data.raw["inserter"]["bob-express-bulk-inserter"].energy_per_movement = "3.125kJ"
+data.raw["inserter"]["bob-express-bulk-inserter"].energy_source.drain = "6kW"
+data.raw["inserter"]["bob-express-bulk-inserter"].minable.mining_time = 1
+data.raw["inserter"]["bob-express-bulk-inserter"].next_upgrade = nil
+data.raw["inserter"]["bob-express-bulk-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
 
-data.raw.item["express-stack-inserter"].subgroup = "inserter"
-data.raw.item["express-stack-inserter"].order = "nullius-g"
-data.raw.item["express-stack-inserter"].localised_name = {"entity-name.nullius-inserter-4"}
-data.raw.item["express-stack-inserter"].stack_size = 100
-data.raw["inserter"]["express-stack-inserter"].order = "nullius-g"
-data.raw["inserter"]["express-stack-inserter"].localised_name = {"entity-name.nullius-inserter-4"}
-data.raw["inserter"]["express-stack-inserter"].rotation_speed = 0.0666666
-data.raw["inserter"]["express-stack-inserter"].extension_speed = 0.16
-data.raw["inserter"]["express-stack-inserter"].energy_per_rotation = "21KJ"
-data.raw["inserter"]["express-stack-inserter"].energy_per_movement = "3.125KJ"
-data.raw["inserter"]["express-stack-inserter"].energy_source.drain = "6kW"
-data.raw["inserter"]["express-stack-inserter"].minable.mining_time = 1
-data.raw["inserter"]["express-stack-inserter"].next_upgrade = nil
-data.raw["inserter"]["express-stack-inserter"].resistances = {
-  { type = "impact", decrease = 100, percent = 90 }
-}
-
-data.raw.item["express-stack-filter-inserter"].subgroup = "inserter"
-data.raw.item["express-stack-filter-inserter"].order = "nullius-h"
-data.raw.item["express-stack-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-4"}
-data.raw.item["express-stack-filter-inserter"].stack_size = 100
-data.raw["inserter"]["express-stack-filter-inserter"].order = "nullius-h"
-data.raw["inserter"]["express-stack-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-4"}
-data.raw["inserter"]["express-stack-filter-inserter"].rotation_speed = 0.0666666
-data.raw["inserter"]["express-stack-filter-inserter"].extension_speed = 0.16
-data.raw["inserter"]["express-stack-filter-inserter"].energy_per_rotation = "21KJ"
-data.raw["inserter"]["express-stack-filter-inserter"].energy_per_movement = "3.125KJ"
-data.raw["inserter"]["express-stack-filter-inserter"].energy_source.drain = "6kW"
-data.raw["inserter"]["express-stack-filter-inserter"].minable.mining_time = 1
-data.raw["inserter"]["express-stack-filter-inserter"].next_upgrade = nil
-data.raw["inserter"]["express-stack-filter-inserter"].resistances = {
-  { type = "impact", decrease = 100, percent = 90 }
-}
+-- data.raw.item["express-bulk-filter-inserter"].subgroup = "inserter"
+-- data.raw.item["express-bulk-filter-inserter"].order = "nullius-h"
+-- data.raw.item["express-bulk-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-4"}
+-- data.raw.item["express-bulk-filter-inserter"].stack_size = 100
+-- data.raw["inserter"]["express-bulk-filter-inserter"].order = "nullius-h"
+-- data.raw["inserter"]["express-bulk-filter-inserter"].localised_name = {"entity-name.nullius-filter-inserter-4"}
+-- data.raw["inserter"]["express-bulk-filter-inserter"].rotation_speed = 0.0666666
+-- data.raw["inserter"]["express-bulk-filter-inserter"].extension_speed = 0.16
+-- data.raw["inserter"]["express-bulk-filter-inserter"].energy_per_rotation = "21kJ"
+-- data.raw["inserter"]["express-bulk-filter-inserter"].energy_per_movement = "3.125kJ"
+-- data.raw["inserter"]["express-bulk-filter-inserter"].energy_source.drain = "6kW"
+-- data.raw["inserter"]["express-bulk-filter-inserter"].minable.mining_time = 1
+-- data.raw["inserter"]["express-bulk-filter-inserter"].next_upgrade = nil
+-- data.raw["inserter"]["express-bulk-filter-inserter"].resistances = {
+--   { type = "impact", decrease = 100, percent = 90 }
+-- }
 
 data.raw["rail-planner"]["rail"].subgroup = "railway"
 data.raw["rail-planner"]["rail"].order = "nullius-d"
@@ -476,7 +464,9 @@ data.raw["rail-chain-signal"]["rail-chain-signal"].minable.mining_time = 0.8
 data.raw.item["rail-chain-signal"].subgroup = "railway"
 data.raw.item["rail-chain-signal"].order = "nullius-g"
 data.raw["straight-rail"]["straight-rail"].minable.mining_time = 0.5
-data.raw["curved-rail"]["curved-rail"].minable.mining_time = 0.6
+data.raw["legacy-curved-rail"]["legacy-curved-rail"].minable.mining_time = 0.6
+data.raw["curved-rail-a"]["curved-rail-a"].minable.mining_time = 0.6
+data.raw["curved-rail-b"]["curved-rail-b"].minable.mining_time = 0.6
 
 data.raw.item["storage-tank"].subgroup = "tanks"
 data.raw.item["storage-tank"].order = "nullius-bcb"
@@ -502,12 +492,11 @@ data.raw["radar"]["radar"].minable.mining_time = 0.6
 
 data.raw["repair-tool"]["repair-pack"].icon = "__base__/graphics/icons/repair-pack.png"
 data.raw["repair-tool"]["repair-pack"].icon_size = 64
-data.raw["repair-tool"]["repair-pack"].icon_mipmaps = 4
 data.raw["repair-tool"]["repair-pack"].subgroup = "tool-upgrades"
 data.raw["repair-tool"]["repair-pack"].order = "nullius-bb"
 data.raw.recipe["repair-pack"].order = "x"
 
-data.raw["character"]["character"].localised_name = {"", {"item-name.nullius-android"}, " ", 1}
+data.raw["character"]["character"].localised_name = {"", {"item-name.nullius-android"}, " ", tostring(1)}
 data.raw["character"]["character"].animations[2].armors =
     {"nullius-chassis-2", "nullius-chassis-3"}
 data.raw["character"]["character"].animations[3].armors =
@@ -535,6 +524,7 @@ data.raw["item-subgroup"]["terrain"].group = "intermediate-products"
 data.raw["item-subgroup"]["terrain"].order = "nc"
 data.raw["item-subgroup"]["smelting-machine"].order = "f"
 data.raw["item-subgroup"]["raw-material"].order = "b"
+data.raw["item-subgroup"]["circuit-network"].group = "logistics"
 data.raw["item-subgroup"]["circuit-network"].order = "e"
 data.raw["item-subgroup"]["logistic-network"].order = "ae"
 
@@ -657,7 +647,7 @@ data.raw["electric-pole"]["big-electric-pole"].pictures.layers = {
     shift = util.by_pixel(0, -51),
     scale = 0.5
   },
-  data.raw["electric-pole"]["big-electric-pole"].pictures.layers[2].hr_version
+  data.raw["electric-pole"]["big-electric-pole"].pictures.layers[2]
 }
 data.raw["electric-pole"]["big-electric-pole"].resistances =
     {{ type = "impact", decrease = 100, percent = 90 }}
@@ -665,7 +655,7 @@ data.raw["electric-pole"]["big-electric-pole"].minable.mining_time = 1.2
 
 data.raw["electric-pole"]["small-electric-pole"].pictures.layers = {
   {
-    filename = ENTITYPATH .. "poles/hr-pole1.png",
+    filename = ENTITYPATH .. "poles/pole1.png",
     priority = "extra-high",
     width = 72,
     height = 220,
@@ -681,7 +671,7 @@ data.raw["electric-pole"]["small-electric-pole"].minable.mining_time = 0.6
 	
 data.raw["electric-pole"]["medium-electric-pole"].pictures.layers = {
   {
-    filename = ENTITYPATH .. "poles/hr-pole2.png",
+    filename = ENTITYPATH .. "poles/pole2.png",
     priority = "extra-high",
     width = 72,
     height = 220,
@@ -753,77 +743,77 @@ data.raw["container"]["steel-chest"].resistances =
     data.raw["container"]["iron-chest"].resistances
 data.raw["container"]["steel-chest"].minable.mining_time = 0.8
 
-data.raw.item["logistic-chest-storage"].localised_name =
+data.raw.item["storage-chest"].localised_name =
     {"entity-name.nullius-small-storage-chest-2"}
-data.raw.item["logistic-chest-storage"].localised_description =
+data.raw.item["storage-chest"].localised_description =
     {"entity-description.nullius-storage-chest"}
-data.raw["logistic-container"]["logistic-chest-storage"].localised_name =
+data.raw["logistic-container"]["storage-chest"].localised_name =
     {"entity-name.nullius-small-storage-chest-2"}
-data.raw["logistic-container"]["logistic-chest-storage"].localised_description =
+data.raw["logistic-container"]["storage-chest"].localised_description =
     {"entity-description.nullius-storage-chest"}
-data.raw["logistic-container"]["logistic-chest-storage"].max_health = 400
-data.raw["logistic-container"]["logistic-chest-storage"].resistances =
+data.raw["logistic-container"]["storage-chest"].max_health = 400
+data.raw["logistic-container"]["storage-chest"].resistances =
     data.raw["container"]["wooden-chest"].resistances
-data.raw["logistic-container"]["logistic-chest-storage"].minable.mining_time = 1
+data.raw["logistic-container"]["storage-chest"].minable.mining_time = 1
 
-data.raw.item["logistic-chest-passive-provider"].localised_name =
+data.raw.item["passive-provider-chest"].localised_name =
     {"entity-name.nullius-small-supply-chest-2"}
-data.raw.item["logistic-chest-passive-provider"].localised_description =
+data.raw.item["passive-provider-chest"].localised_description =
     {"entity-description.nullius-supply-chest"}
-data.raw["logistic-container"]["logistic-chest-passive-provider"].localised_name =
+data.raw["logistic-container"]["passive-provider-chest"].localised_name =
     {"entity-name.nullius-small-supply-chest-2"}
-data.raw["logistic-container"]["logistic-chest-passive-provider"].localised_description =
+data.raw["logistic-container"]["passive-provider-chest"].localised_description =
     {"entity-description.nullius-supply-chest"}
-data.raw["logistic-container"]["logistic-chest-passive-provider"].max_health = 400
-data.raw["logistic-container"]["logistic-chest-passive-provider"].resistances =
+data.raw["logistic-container"]["passive-provider-chest"].max_health = 400
+data.raw["logistic-container"]["passive-provider-chest"].resistances =
     data.raw["container"]["wooden-chest"].resistances
-data.raw["logistic-container"]["logistic-chest-passive-provider"].minable.mining_time = 1
+data.raw["logistic-container"]["passive-provider-chest"].minable.mining_time = 1
 
-data.raw.item["logistic-chest-requester"].localised_name =
+data.raw.item["requester-chest"].localised_name =
     {"entity-name.nullius-small-demand-chest-2"}
-data.raw.item["logistic-chest-requester"].localised_description =
+data.raw.item["requester-chest"].localised_description =
     {"entity-description.nullius-request-slots",
-	    {"entity-description.nullius-demand-chest"}, 10}
-data.raw["logistic-container"]["logistic-chest-requester"].localised_name =
+	    {"entity-description.nullius-demand-chest"}, tostring(10)}
+data.raw["logistic-container"]["requester-chest"].localised_name =
     {"entity-name.nullius-small-demand-chest-2"}
-data.raw["logistic-container"]["logistic-chest-requester"].localised_description =
-    data.raw.item["logistic-chest-requester"].localised_description
-data.raw["logistic-container"]["logistic-chest-requester"].max_health = 400
-data.raw["logistic-container"]["logistic-chest-requester"].resistances =
+data.raw["logistic-container"]["requester-chest"].localised_description =
+    data.raw.item["requester-chest"].localised_description
+data.raw["logistic-container"]["requester-chest"].max_health = 400
+data.raw["logistic-container"]["requester-chest"].resistances =
     data.raw["container"]["wooden-chest"].resistances
-data.raw["logistic-container"]["logistic-chest-requester"].minable.mining_time = 1
+data.raw["logistic-container"]["requester-chest"].minable.mining_time = 1
 
-data.raw.item["logistic-chest-buffer"].localised_name =
+data.raw.item["buffer-chest"].localised_name =
     {"entity-name.nullius-small-buffer-chest-2"}
-data.raw.item["logistic-chest-buffer"].localised_description =
+data.raw.item["buffer-chest"].localised_description =
     {"entity-description.nullius-request-slots",
-	    {"entity-description.nullius-buffer-chest"}, 6}
-data.raw["logistic-container"]["logistic-chest-buffer"].localised_name =
+	    {"entity-description.nullius-buffer-chest"}, tostring(6)}
+data.raw["logistic-container"]["buffer-chest"].localised_name =
     {"entity-name.nullius-small-buffer-chest-2"}
-data.raw["logistic-container"]["logistic-chest-buffer"].localised_description =
-    data.raw.item["logistic-chest-buffer"].localised_description
-data.raw["logistic-container"]["logistic-chest-buffer"].max_health = 400
-data.raw["logistic-container"]["logistic-chest-buffer"].resistances =
+data.raw["logistic-container"]["buffer-chest"].localised_description =
+    data.raw.item["buffer-chest"].localised_description
+data.raw["logistic-container"]["buffer-chest"].max_health = 400
+data.raw["logistic-container"]["buffer-chest"].resistances =
     data.raw["container"]["wooden-chest"].resistances
-data.raw["logistic-container"]["logistic-chest-buffer"].minable.mining_time = 1
+data.raw["logistic-container"]["buffer-chest"].minable.mining_time = 1
 
-data.raw.item["logistic-chest-active-provider"].localised_name =
+data.raw.item["active-provider-chest"].localised_name =
     {"entity-name.nullius-small-dispatch-chest-2"}
-data.raw.item["logistic-chest-active-provider"].localised_description =
+data.raw.item["active-provider-chest"].localised_description =
     {"entity-description.nullius-dispatch-chest"}
-data.raw["logistic-container"]["logistic-chest-active-provider"].localised_name =
+data.raw["logistic-container"]["active-provider-chest"].localised_name =
     {"entity-name.nullius-small-dispatch-chest-2"}
-data.raw["logistic-container"]["logistic-chest-active-provider"].localised_description =
+data.raw["logistic-container"]["active-provider-chest"].localised_description =
     {"entity-description.nullius-dispatch-chest"}
-data.raw["logistic-container"]["logistic-chest-active-provider"].max_health = 400
-data.raw["logistic-container"]["logistic-chest-active-provider"].resistances =
+data.raw["logistic-container"]["active-provider-chest"].max_health = 400
+data.raw["logistic-container"]["active-provider-chest"].resistances =
     data.raw["container"]["wooden-chest"].resistances
-data.raw["logistic-container"]["logistic-chest-active-provider"].minable.mining_time = 1
+data.raw["logistic-container"]["active-provider-chest"].minable.mining_time = 1
 
 
 data.raw.item["pipe"].localised_name = {"entity-name.nullius-pipe-1"}
 data.raw.item["pipe"].localised_description =
-    {"entity-description.nullius-pipe", 40, 2290, 450}
+    {"entity-description.nullius-pipe", tostring(40), tostring(2290), tostring(450)}
 data.raw["pipe"]["pipe"].localised_name = {"entity-name.nullius-pipe-1"}
 data.raw["pipe"]["pipe"].localised_description =
     data.raw.item["pipe"].localised_description
@@ -831,7 +821,7 @@ data.raw["pipe"]["pipe"].minable.mining_time = 0.2
 data.raw.item["pipe-to-ground"].localised_name =
     {"entity-name.nullius-underground-pipe-1"}
 data.raw.item["pipe-to-ground"].localised_description =
-    {"entity-description.nullius-underground-pipe", 40}
+    {"entity-description.nullius-underground-pipe", tostring(40)}
 data.raw["pipe-to-ground"]["pipe-to-ground"].localised_name =
     {"entity-name.nullius-underground-pipe-1"}
 data.raw["pipe-to-ground"]["pipe-to-ground"].localised_description =

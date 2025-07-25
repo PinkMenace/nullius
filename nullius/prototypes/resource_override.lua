@@ -24,6 +24,8 @@ function remove_autoplace(resource)
       preset.basic_settings.autoplace_controls[resource] = nil
     end
   end
+  data.raw.planet["nauvis"].map_gen_settings.autoplace_controls[resource] = nil
+  data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"][resource] = nil
 end
 
 remove_autoplace("copper-ore")
@@ -101,10 +103,12 @@ data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings = {
         ["nullius-geothermal"] = {
             frequency = 0.33333333333,
             size = 3
-        }
+        },
+        water = {
+            frequency = 0.5,
+            size = 1.5
+          }
     },
-    terrain_segmentation = "very-low",
-    water = "high",
 }
 
 data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings = {
@@ -133,11 +137,17 @@ data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings = {
             frequency = 3,
             size = 0.5,
             richness = 2
-      }
+      },
+      water = {
+            frequency = 4,
+            size = 0.25
+      },
     },
-    terrain_segmentation = 4,
-    water = 0.25,
     starting_area = 3,
+    property_expression_names = {
+          elevation = "elevation_lakes",
+          trees_forest_path_cutout = 1
+    },
     height = 128
 }
 
@@ -179,7 +189,7 @@ data.raw.resource["deep_oil"].localised_description = {"entity-description.nulli
 table.insert(data.raw.resource["deep_oil"].collision_mask, 'ground-tile')
 
 data.raw.resource["deep_oil"].stages = { sheet = {
-  filename = "__angelsrefining__/graphics/entity/patches/gas.png",
+  filename = "__angelsrefininggraphics__/graphics/entity/patches/gas.png",
   tint = {0.4, 0.2, 0, 0.4},
   priority = "extra-high",
   width = 64,
@@ -202,3 +212,14 @@ if (not settings.startup["no_oil_for_oil_rig"].value) then
     {"entity-description.nullius-fumarole-finite"}
 end
 end
+
+-- Alien Biomes Patch -- TODO: do a bug report: alien biomes crashes when the disable all vegetation setting is enabled
+local block_decorative_words = {"grass", "asterisk", "fluff", "garballo", "bush", "croton", "pita", "cane"}
+for _, prototype in pairs(data.raw['optimized-decorative']) do
+  for _, word in pairs(block_decorative_words) do
+    if string.find(prototype.name, word) then
+      data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["decorative"]["settings"][prototype.name] = nil
+    end
+  end
+end
+data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["fish"] = nil

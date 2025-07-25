@@ -1050,7 +1050,6 @@ data:extend({
     name = "barreling",
     order = "lb",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png"
   },
   {
@@ -1058,7 +1057,6 @@ data:extend({
     name = "unbarreling",
     order = "lc",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__base__/graphics/icons/fluid/barreling/barrel-empty.png"
   },
   {

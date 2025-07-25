@@ -225,31 +225,31 @@ end
 
 
 if mods["bobinserters"] and (settings.startup["bobmods-inserters-long2"].value == true) then
-data.raw.technology["long-inserters-1"].order = "nullius-ce"
-data.raw.technology["long-inserters-1"].prerequisites = {"nullius-automation"}
-data.raw.technology["long-inserters-1"].unit = { count = 3,
+data.raw.technology["bob-long-inserters-1"].order = "nullius-ce"
+data.raw.technology["bob-long-inserters-1"].prerequisites = {"nullius-automation"}
+data.raw.technology["bob-long-inserters-1"].unit = { count = 3,
   ingredients = {{"nullius-mechanical-pack", 1}},
   time = 8
 }
-table.insert(data.raw.technology["nullius-aesthetics-1"].prerequisites,"long-inserters-2")
+table.insert(data.raw.technology["nullius-aesthetics-1"].prerequisites,"bob-long-inserters-2")
 
-data.raw.technology["long-inserters-2"].order = "nullius-dd"
-data.raw.technology["long-inserters-2"].prerequisites = {"nullius-maintenance"}
-data.raw.technology["long-inserters-2"].unit = { count = 20,
+data.raw.technology["bob-long-inserters-2"].order = "nullius-dd"
+data.raw.technology["bob-long-inserters-2"].prerequisites = {"nullius-maintenance"}
+data.raw.technology["bob-long-inserters-2"].unit = { count = 20,
   ingredients = {{"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1}},
   time = 20
 }
 else
-data.raw.technology["long-inserters-1"].order = "nullius-dd"
-data.raw.technology["long-inserters-1"].localised_name = {"technology-name.nullius-long-inserters"}
-data.raw.technology["long-inserters-1"].localised_description = {"technology-description.nullius-long-inserters"}
-data.raw.technology["long-inserters-1"].prerequisites = {"nullius-lubrication", "nullius-mass-production-1"}
-data.raw.technology["long-inserters-1"].unit = { count = 8,
+data.raw.technology["bob-long-inserters-1"].order = "nullius-dd"
+data.raw.technology["bob-long-inserters-1"].localised_name = {"technology-name.nullius-long-inserters"}
+data.raw.technology["bob-long-inserters-1"].localised_description = {"technology-description.nullius-long-inserters"}
+data.raw.technology["bob-long-inserters-1"].prerequisites = {"nullius-lubrication", "nullius-mass-production-1"}
+data.raw.technology["bob-long-inserters-1"].unit = { count = 8,
   ingredients = {{"nullius-mechanical-pack", 1}},
   time = 6
 }
 end
-data.raw.technology["long-inserters-1"].ignore_tech_cost_multiplier = true
+data.raw.technology["bob-long-inserters-1"].ignore_tech_cost_multiplier = true
 
 
 if mods["miniloader"] then
@@ -916,7 +916,7 @@ data.raw.pump["underground-mini-pump"].localised_name =
   {"item-name.nullius-underground-pump"}
 data.raw.pump["underground-mini-pump"].localised_description =
   {"item-description.nullius-underground-pump"}
-data.raw.pump["underground-mini-pump"].fluid_box.height = 8
+data.raw.pump["underground-mini-pump"].fluid_box.volume = 500
 data.raw.pump["underground-mini-pump"].fluid_box.pipe_connections[1].max_underground_distance=24
 data.raw.pump["underground-mini-pump"].fluid_box.pipe_connections[2].max_underground_distance=24
 data.raw.pump["underground-mini-pump"].energy_usage = '20kW'
@@ -941,11 +941,9 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
     else
       for _,pic in pairs(junction.pictures) do
         pic.tint = tint
-        pic.hr_version.tint = tint
       end
       for _,cover in pairs(junction.fluid_box.pipe_covers) do
         cover.layers[1].tint = tint
-        cover.layers[1].hr_version.tint = tint
       end
 
 	  local subdir = string.sub(junction.pictures.up.filename, 1, 50)
@@ -954,11 +952,11 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
           filename = subdir .. "pipe-covers/hr-pipe-cover-north.png",
           priority = "extra-high",
           width = 128, height = 128,
-		  shift = {0, -1},
-		  tint = tint,
+		      shift = {0, -1},
+		      tint = tint,
           scale = 0.5
-		},
-		junction.pictures.up.hr_version
+		  },
+		  junction.pictures.up
       }}
     end
 
@@ -971,8 +969,7 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
       data.raw.item[junction.minable.result].localised_description
 
     local archetype = data.raw["pipe-to-ground"]["nullius-underground-pipe-"..lvl]
-    junction.fluid_box.height = archetype.fluid_box.height
-    junction.fluid_box.base_area = archetype.fluid_box.base_area
+    junction.fluid_box.volume = archetype.fluid_box.volume
 	junction.minable.mining_time = (lvl * 0.5)
 
     for _,connection in pairs(junction.fluid_box.pipe_connections) do
@@ -1403,7 +1400,7 @@ data.raw.recipe["transport-depot-reader"].category = "small-crafting"
 data.raw.recipe["transport-depot-reader"].energy_required = 2
 data.raw.recipe["transport-depot-reader"].ingredients = {
   {"road-network-reader", 1},
-  {"red-wire", 2}
+  {"nullius-red-wire", 2}
 }
 data.raw.item["transport-depot-writer"].order = "nullius-k"
 data.raw.item["transport-depot-writer"].stack_size = 50
@@ -1413,7 +1410,7 @@ data.raw.recipe["transport-depot-writer"].category = "small-crafting"
 data.raw.recipe["transport-depot-writer"].energy_required = 3
 data.raw.recipe["transport-depot-writer"].ingredients = {
   {"road-network-reader", 1},
-  {"green-wire", 3}
+  {"nullius-green-wire", 3}
 }
 
 data.raw["assembling-machine"]["request-depot"].fluid_boxes[2].base_level = 6

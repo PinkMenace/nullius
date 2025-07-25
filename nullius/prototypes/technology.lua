@@ -13,12 +13,12 @@ data:extend({
       {
         icon = "__base__/graphics/technology/utility-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/stone.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 1.6,
         shift = {0, 36},
         tint = {r=0.6, g=0.4, b=0.2, a=0.5}
@@ -41,9 +41,9 @@ data:extend({
     type = "technology",
     name = "nullius-iron-smelting-1",
     order = "nullius-bc",
-    icon = "__angelssmelting__/graphics/technology/smelting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -66,12 +66,12 @@ data:extend({
       {
         icon = "__base__/graphics/technology/chemical-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 1.8,
         shift = {0, 34},
         tint = {r=1, g=1, b=1, a=0.5}
@@ -98,7 +98,7 @@ data:extend({
     order = "nullius-bd",
     icon = "__base__/graphics/technology/steel-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -131,7 +131,7 @@ data:extend({
     order = "nullius-bd",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -159,7 +159,7 @@ data:extend({
     name = "nullius-water-filtration-1",
     order = "nullius-bd",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -185,7 +185,7 @@ data:extend({
     order = "nullius-be",
     icon = "__base__/graphics/technology/steel-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -214,7 +214,7 @@ data:extend({
     order = "nullius-be",
     icon = "__base__/graphics/technology/steel-axe.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -238,7 +238,7 @@ data:extend({
     name = "nullius-masonry-1",
     order = "nullius-be",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/stone.png",
     effects = {
       {
@@ -267,7 +267,7 @@ data:extend({
     name = "nullius-electrolysis-1",
     order = "nullius-be",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/electrolyser-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electrolyser-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -314,7 +314,7 @@ data:extend({
     name = "nullius-storage-1",
     order = "nullius-be",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/iron-chest.png",
     effects = {
       {
@@ -341,7 +341,7 @@ data:extend({
     order = "nullius-bf",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -374,7 +374,7 @@ data:extend({
     order = "nullius-bf",
     icon = "__base__/graphics/technology/stone-wall.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -407,7 +407,7 @@ data:extend({
     order = "nullius-bf",
     icon = "__base__/graphics/technology/steel-axe.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-crafting-speed",
@@ -430,7 +430,7 @@ data:extend({
     type = "technology",
     name = "nullius-carbon-sequestration-1",
     order = "nullius-bf",
-    icon = "__angelspetrochem__/graphics/icons/molecules/methane.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/molecules/methane.png",
     icon_size = 72,
     effects = {
       {
@@ -456,9 +456,9 @@ data:extend({
     name = "nullius-venting-1",
     order = "nullius-bg",
 	icons = {{
-      icon = "__angelspetrochem__/graphics/technology/flare-stack-tech.png",
+      icon = "__angelspetrochemgraphics__/graphics/technology/flare-stack-tech.png",
       icon_size = 256,
-	  icon_mipmaps = 4
+	  
 	}},
     effects = {
       {
@@ -484,7 +484,7 @@ data:extend({
     order = "nullius-bg",
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -505,7 +505,7 @@ data:extend({
     order = "nullius-bg",
     icon = "__base__/graphics/technology/plastics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -530,7 +530,7 @@ data:extend({
     order = "nullius-bg",
     icon = "__base__/graphics/icons/coal-dark-background.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -556,7 +556,7 @@ data:extend({
     order = "nullius-bh",
     icon = "__base__/graphics/technology/landfill.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -581,7 +581,7 @@ data:extend({
     order = "nullius-bh",
     icon = "__base__/graphics/technology/electric-engine.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -647,12 +647,12 @@ data:extend({
       {
         icon = "__base__/graphics/technology/automation-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/iron-gear-wheel.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 1.6,
         shift = {0, 40},
         tint = {r=0.6, g=1, b=1, a=0.5}
@@ -679,7 +679,7 @@ data:extend({
     order = "nullius-cc",
     icon = "__base__/graphics/technology/oil-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -700,7 +700,7 @@ data:extend({
     order = "nullius-cc",
     icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -720,7 +720,7 @@ data:extend({
     name = "nullius-mining-1",
     order = "nullius-cc",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/burner-mining-drill.png",
     effects = {
       {
@@ -746,7 +746,7 @@ data:extend({
     order = "nullius-cc",
     icon = "__base__/graphics/technology/fast-inserter.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -767,7 +767,7 @@ data:extend({
     order = "nullius-cc",
     icon = "__base__/graphics/technology/logistics-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -791,7 +791,7 @@ data:extend({
     name = "nullius-pumping-1",
     order = "nullius-cc",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/pump.png",
     effects = {
       {
@@ -821,7 +821,7 @@ data:extend({
     order = "nullius-cc",
     icon = "__base__/graphics/technology/steel-axe.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -868,11 +868,11 @@ data:extend({
   {
     type = "technology",
     name = "nullius-automation",
-    localised_name = {"", {"technology-name.nullius-automation"}, " ", 1},
+    localised_name = {"", {"technology-name.nullius-automation"}, " ", tostring(1)},
     order = "nullius-cd",
     icon = "__base__/graphics/technology/automation-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -893,7 +893,7 @@ data:extend({
     order = "nullius-cd",
     icon = "__base__/graphics/icons/oil-refinery.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -912,9 +912,8 @@ data:extend({
     type = "technology",
     name = "nullius-metalworking-1",
     order = "nullius-cd",
-    icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/induction-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     effects = {
       {
         type = "unlock-recipe",
@@ -936,7 +935,7 @@ data:extend({
     order = "nullius-ce",
     icon = "__base__/graphics/technology/steel-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -960,7 +959,7 @@ data:extend({
     name = "nullius-mineral-processing-1",
     order = "nullius-ce",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -988,7 +987,7 @@ data:extend({
     name = "nullius-electrolysis-2",
     order = "nullius-ce",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/electrolyser-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electrolyser-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1016,7 +1015,7 @@ data:extend({
     name = "nullius-water-filtration-2",
     order = "nullius-ce",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1041,7 +1040,7 @@ data:extend({
     name = "nullius-air-filtration-1",
     order = "nullius-cf",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/air-filter-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/air-filter-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1062,7 +1061,7 @@ data:extend({
     order = "nullius-cf",
     icon = "__base__/graphics/technology/steel-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1094,7 +1093,7 @@ data:extend({
     name = "nullius-mechanical-separation",
     order = "nullius-cf",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/splitter.png",
     effects = {
       {
@@ -1115,7 +1114,7 @@ data:extend({
     name = "nullius-flotation-1",
     order = "nullius-cf",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/hydro-refining.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1135,7 +1134,7 @@ data:extend({
     name = "nullius-energy-storage-1",
     order = "nullius-cf",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/steam-turbine.png",
     effects = {
       {
@@ -1166,7 +1165,7 @@ data:extend({
     order = "nullius-cg",
     icon = "__base__/graphics/technology/landfill.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1195,7 +1194,7 @@ data:extend({
     order = "nullius-cg",
     icon = "__base__/graphics/technology/steel-axe.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -1218,9 +1217,9 @@ data:extend({
     type = "technology",
     name = "nullius-silica-processing-1",
     order = "nullius-cg",
-    icon = "__angelssmelting__/graphics/icons/powder-silica.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1243,9 +1242,9 @@ data:extend({
     type = "technology",
     name = "nullius-iron-smelting-2",
     order = "nullius-cg",
-    icon = "__angelssmelting__/graphics/technology/smelting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1297,9 +1296,9 @@ data:extend({
     type = "technology",
     name = "nullius-illumination-1",
     order = "nullius-ch",
-    icon = "__base__/graphics/technology/optics.png",
+    icon = "__base__/graphics/technology/lamp.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1324,7 +1323,7 @@ data:extend({
     order = "nullius-ch",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1360,7 +1359,7 @@ data:extend({
     name = "nullius-chemical-engineering-1",
     order = "nullius-ch",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/chemical-plant-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1380,7 +1379,7 @@ data:extend({
     name = "nullius-masonry-3",
     order = "nullius-ch",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/silicon-crucible.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/silicon-crucible.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1509,7 +1508,7 @@ data:extend({
     order = "nullius-ci",
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1557,7 +1556,7 @@ data:extend({
     name = "nullius-storage-2",
     order = "nullius-cj",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/steel-chest.png",
     effects = {
       {
@@ -1584,11 +1583,11 @@ data:extend({
   {
     type = "technology",
     name = "nullius-aluminum-production",
-    localised_name = {"", {"technology-name.nullius-aluminum-production"}, " ", 1},
+    localised_name = {"", {"technology-name.nullius-aluminum-production"}, " ", tostring(1)},
     order = "nullius-cj",
-    icon = "__angelssmelting__/graphics/technology/smelting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1621,7 +1620,7 @@ data:extend({
     order = "nullius-cj",
     icon = "__base__/graphics/technology/armor-making.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1644,9 +1643,9 @@ data:extend({
     type = "technology",
     name = "nullius-silicon-production-1",
     order = "nullius-cj",
-    icon = "__angelssmelting__/graphics/technology/smelting-silicon-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-silicon-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1672,7 +1671,7 @@ data:extend({
     order = "nullius-ck",
     icon = "__base__/graphics/technology/automation-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1692,7 +1691,7 @@ data:extend({
     name = "nullius-barreling-1",
     order = "nullius-ck",
     icon_size = 128,
-    icon = "__angelsrefining__/graphics/technology/barrel-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/barrel-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1720,7 +1719,7 @@ data:extend({
     order = "nullius-ck",
     icon = "__base__/graphics/technology/lubricant.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1743,7 +1742,7 @@ data:extend({
     name = "nullius-aluminum-working-1",
     order = "nullius-ck",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/plate-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/plate-aluminium.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -1774,7 +1773,7 @@ data:extend({
     type = "technology",
     name = "nullius-insulation-1",
     order = "nullius-ck",
-	icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
+	icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png",
 	icon_size = 64,
     effects = {
       {
@@ -1803,7 +1802,7 @@ data:extend({
     order = "nullius-cl",
     icon = "__base__/graphics/technology/railway.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1819,7 +1818,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-empty-canister"
+        recipe = "nullius-canister"
       },
       {
         type = "unlock-recipe",
@@ -1844,7 +1843,7 @@ data:extend({
     order = "nullius-cl",
     icon = "__base__/graphics/technology/electronics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1905,7 +1904,7 @@ data:extend({
   {
     type = "technology",
     name = "nullius-chirality-1",
-	localised_description = {"", {"technology-description.nullius-chirality", 1,
+	localised_description = {"", {"technology-description.nullius-chirality", tostring(1),
 	    {"technology-description.nullius-chirality-1"}}, "\n",
 		{"technology-description.nullius-checkpoint-mirror"}},
     order = "nullius-cm",
@@ -1917,7 +1916,7 @@ data:extend({
       ingredients = {{"nullius-climatology-pack", 1}, {"nullius-mechanical-pack", 1}},
       time = 6
     },
-    prerequisites = {"nullius-boiling-1", "long-inserters-1"},
+    prerequisites = {"nullius-boiling-1", "bob-long-inserters-1"},
     ignore_tech_cost_multiplier = true
   },
   {
@@ -1947,7 +1946,7 @@ data:extend({
     order = "nullius-cm",
     icon = "__base__/graphics/technology/automobilism.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -1968,7 +1967,7 @@ data:extend({
     order = "nullius-cm",
     icon = "__base__/graphics/technology/automation-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2029,7 +2028,7 @@ data:extend({
     order = "nullius-cn",
     icon = "__base__/graphics/icons/steam-turbine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2048,18 +2047,18 @@ data:extend({
   {
     type = "technology",
     name = "nullius-electrical-engineering",
-    localised_name = {"", {"technology-name.nullius-electrical-engineering"}, " ", 1},
+    localised_name = {"", {"technology-name.nullius-electrical-engineering"}, " ", tostring(1)},
     order = "nullius-db",
     icons = {
       {
         icon = "__base__/graphics/technology/production-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/processing-unit.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 1.1,
         shift = {0, 34},
         tint = {r=1, g=1, b=1, a=0.5}
@@ -2086,7 +2085,7 @@ data:extend({
     order = "nullius-dc",
     icon = "__base__/graphics/technology/personal-laser-defense-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -2113,7 +2112,7 @@ data:extend({
     order = "nullius-dc",
     icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2145,16 +2144,12 @@ data:extend({
     order = "nullius-dc",
     icon = "__base__/graphics/technology/fast-inserter.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
         recipe = "nullius-inserter-2"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-filter-inserter-2"
-      }
     },
     unit = {
       count = 10,
@@ -2173,7 +2168,7 @@ data:extend({
     order = "nullius-dc",
     icon = "__base__/graphics/technology/electric-engine.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2196,7 +2191,7 @@ data:extend({
     order = "nullius-dc",
     icon = "__base__/graphics/technology/research-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2220,7 +2215,7 @@ data:extend({
     name = "nullius-pumping-2",
     order = "nullius-dd",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/pump.png",
     effects = {
       {
@@ -2251,12 +2246,12 @@ data:extend({
       {
         icon = "__base__/graphics/technology/utility-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/stone.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 1.6,
         shift = {0, 36},
         tint = {r=0.6, g=0.4, b=0.2, a=0.5}
@@ -2282,7 +2277,7 @@ data:extend({
     name = "nullius-signal-processing",
     order = "nullius-dd",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/red-wire.png",
     effects = {
       {
@@ -2310,7 +2305,7 @@ data:extend({
     order = "nullius-dd",
     icon = "__base__/graphics/technology/logistics-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2341,7 +2336,7 @@ data:extend({
     name = "nullius-maintenance",
     order = "nullius-de",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/repair-pack.png",
     effects = {
       {
@@ -2379,7 +2374,7 @@ data:extend({
     order = "nullius-de",
     icon = "__base__/graphics/technology/circuit-network.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2409,7 +2404,7 @@ data:extend({
     name = "nullius-electrolysis-3",
     order = "nullius-de",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/electrolyser-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electrolyser-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -2439,7 +2434,7 @@ data:extend({
     order = "nullius-de",
     icon = "__base__/graphics/technology/mining-productivity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2504,7 +2499,7 @@ data:extend({
     order = "nullius-de",
     icon = "__base__/graphics/technology/automated-rail-transportation.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2532,7 +2527,7 @@ data:extend({
     order = "nullius-de",
     icon = "__base__/graphics/technology/automation-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2559,7 +2554,7 @@ data:extend({
     order = "nullius-de",
     icon = "__base__/graphics/icons/discharge-defense-equipment-controller.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2603,9 +2598,9 @@ data:extend({
     type = "technology",
     name = "nullius-traffic-control",
     order = "nullius-df",
-    icon = "__base__/graphics/technology/rail-signals.png",
+    icon = TECHPATH .. "rail-signals.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2633,7 +2628,7 @@ data:extend({
     order = "nullius-df",
     icon = "__base__/graphics/technology/robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2672,7 +2667,7 @@ data:extend({
     order = "nullius-df",
     icon = "__base__/graphics/technology/module.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2697,7 +2692,7 @@ data:extend({
     name = "nullius-mineral-processing-2",
     order = "nullius-df",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -2723,7 +2718,7 @@ data:extend({
     name = "nullius-energy-storage-2",
     order = "nullius-df",
     icon_size = 128,
-    icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-extractor.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -2771,7 +2766,7 @@ data:extend({
     order = "nullius-dg",
     icon = "__base__/graphics/technology/oil-gathering.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2794,16 +2789,16 @@ data:extend({
     order = "nullius-dg",
     icon = "__base__/graphics/technology/construction-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
         recipe = "nullius-construction-bot-1"
       },
-      {
-        type = "ghost-time-to-live",
-        modifier = 60 * 60 * 60 * 2
-      }
+      -- {
+      --   type = "ghost-time-to-live",
+      --   modifier = 60 * 60 * 60 * 2
+      -- }
     },
     unit = {
       count = 100,
@@ -2850,7 +2845,7 @@ data:extend({
     name = "nullius-limestone-processing-1",
     order = "nullius-dg",
     icon_size = 32,
-    icon = "__angelsrefining__/graphics/icons/solid-limestone.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/solid-limestone.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -2871,9 +2866,9 @@ data:extend({
     type = "technology",
     name = "nullius-silica-processing-2",
     order = "nullius-dg",
-    icon = "__angelssmelting__/graphics/icons/powder-silica.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2919,9 +2914,8 @@ data:extend({
     type = "technology",
     name = "nullius-metalworking-2",
     order = "nullius-dg",
-    icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/induction-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     effects = {
       {
         type = "unlock-recipe",
@@ -2964,7 +2958,7 @@ data:extend({
     order = "nullius-dg",
     icon = "__base__/graphics/technology/module.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -2991,7 +2985,7 @@ data:extend({
     order = "nullius-dh",
     icon = "__base__/graphics/technology/effect-transmission.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3015,12 +3009,12 @@ data:extend({
       {
         icon = "__base__/graphics/technology/chemical-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 1.8,
         shift = {0, 34},
         tint = {r=1, g=1, b=1, a=0.5}
@@ -3048,7 +3042,7 @@ data:extend({
     order = "nullius-dh",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-running-speed",
@@ -3072,9 +3066,9 @@ data:extend({
     type = "technology",
     name = "nullius-glassmaking-1",
     order = "nullius-dh",
-    icon = "__angelssmelting__/graphics/technology/glass-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/glass-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3097,7 +3091,7 @@ data:extend({
     order = "nullius-dh",
     icon = "__base__/graphics/technology/concrete.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3127,7 +3121,7 @@ data:extend({
     name = "nullius-weaving-1",
     order = "nullius-dh",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/wire-silver.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/wire-silver.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -3153,7 +3147,7 @@ data:extend({
     name = "nullius-water-filtration-3",
     order = "nullius-dh",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -3183,7 +3177,7 @@ data:extend({
     name = "nullius-geothermal-power-1",
     order = "nullius-di",
     icon_size = 64,
-    icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -3210,7 +3204,7 @@ data:extend({
     order = "nullius-di",
     icon = "__base__/graphics/technology/logistic-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3245,7 +3239,7 @@ data:extend({
     order = "nullius-di",
     icon = "__base__/graphics/technology/landfill.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3268,7 +3262,7 @@ data:extend({
     order = "nullius-di",
     icon = "__base__/graphics/technology/solar-energy.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3290,7 +3284,7 @@ data:extend({
     name = "nullius-sensors-2",
     order = "nullius-di",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/radar.png",
     effects = {
       {
@@ -3337,7 +3331,7 @@ data:extend({
     order = "nullius-dj",
     icon = "__base__/graphics/technology/oil-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3364,7 +3358,7 @@ data:extend({
     order = "nullius-dj",
     icon = "__base__/graphics/technology/automation-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3422,7 +3416,7 @@ data:extend({
     order = "nullius-dj",
     icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3448,7 +3442,7 @@ data:extend({
     name = "nullius-air-filtration-2",
     order = "nullius-dj",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/air-filter-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/air-filter-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -3475,7 +3469,7 @@ data:extend({
     name = "nullius-flotation-2",
     order = "nullius-dk",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/hydro-refining.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -3498,7 +3492,7 @@ data:extend({
     order = "nullius-dk",
     icon = "__base__/graphics/technology/night-vision-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3529,7 +3523,7 @@ data:extend({
     order = "nullius-dk",
     icon = "__base__/graphics/technology/logistic-system.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3573,7 +3567,7 @@ data:extend({
     name = "nullius-barreling-2",
     order = "nullius-dk",
     icon_size = 128,
-    icon = "__angelsrefining__/graphics/technology/barrel-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/barrel-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -3581,7 +3575,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-air-barrel"
+        recipe = "nullius-air-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3589,7 +3583,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-residual-gas-barrel"
+        recipe = "nullius-residual-gas-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3597,7 +3591,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-trace-gas-barrel"
+        recipe = "nullius-trace-gas-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3605,7 +3599,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-volcanic-gas-barrel"
+        recipe = "nullius-volcanic-gas-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3613,7 +3607,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-nitrogen-barrel"
+        recipe = "nullius-nitrogen-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3621,7 +3615,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-argon-barrel"
+        recipe = "nullius-argon-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3629,7 +3623,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-helium-barrel"
+        recipe = "nullius-helium-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3637,7 +3631,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-carbon-dioxide-barrel"
+        recipe = "nullius-carbon-dioxide-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3645,7 +3639,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-carbon-monoxide-barrel"
+        recipe = "nullius-carbon-monoxide-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3653,7 +3647,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-methane-barrel"
+        recipe = "nullius-methane-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3661,7 +3655,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-ethylene-barrel"
+        recipe = "nullius-ethylene-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3669,7 +3663,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-propene-barrel"
+        recipe = "nullius-propene-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3677,7 +3671,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-butadiene-barrel"
+        recipe = "nullius-butadiene-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3685,7 +3679,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-hydrogen-barrel"
+        recipe = "nullius-hydrogen-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3693,7 +3687,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-deuterium-barrel"
+        recipe = "nullius-deuterium-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3701,7 +3695,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-tritium-barrel"
+        recipe = "nullius-tritium-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3709,7 +3703,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-oxygen-barrel"
+        recipe = "nullius-oxygen-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3717,7 +3711,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-hydrogen-chloride-barrel"
+        recipe = "nullius-hydrogen-chloride-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3725,7 +3719,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-sulfur-dioxide-barrel"
+        recipe = "nullius-sulfur-dioxide-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3733,7 +3727,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-ammonia-barrel"
+        recipe = "nullius-ammonia-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3755,7 +3749,7 @@ data:extend({
     name = "nullius-chemical-engineering-2",
     order = "nullius-dk",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/chemical-plant-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -3778,7 +3772,7 @@ data:extend({
     order = "nullius-dk",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -3828,7 +3822,7 @@ data:extend({
     order = "nullius-dl",
     icon = "__base__/graphics/technology/steel-axe.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -3859,7 +3853,7 @@ data:extend({
     order = "nullius-dl",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3895,7 +3889,7 @@ data:extend({
   {
     type = "technology",
     name = "nullius-chirality-2",
-	localised_description = {"technology-description.nullius-chirality", 2,
+	localised_description = {"technology-description.nullius-chirality", tostring(2),
 	    {"technology-description.nullius-chirality-2"}},
     order = "nullius-dl",
     icon_size = 254,
@@ -3917,7 +3911,7 @@ data:extend({
     order = "nullius-dg",
     icon = "__base__/graphics/technology/explosives.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -3925,7 +3919,7 @@ data:extend({
       },
 	  {
         type = "unlock-recipe",
-        recipe = "fill-nullius-chlorine-barrel"
+        recipe = "nullius-chlorine-barrel"
       },
       {
         type = "unlock-recipe",
@@ -3948,7 +3942,7 @@ data:extend({
     order = "nullius-dl",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "worker-robot-speed",
@@ -3972,7 +3966,7 @@ data:extend({
     order = "nullius-dl",
     icon = "__base__/graphics/technology/discharge-defense-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-reach-distance",
@@ -4019,7 +4013,7 @@ data:extend({
     order = "nullius-dl",
     icon = "__base__/graphics/technology/research-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "laboratory-speed",
@@ -4040,11 +4034,11 @@ data:extend({
   {
     type = "technology",
     name = "nullius-experimental-chemistry",
-    localised_name = {"", {"technology-name.nullius-experimental-chemistry"}, " ", 1},
+    localised_name = {"", {"technology-name.nullius-experimental-chemistry"}, " ", tostring(1)},
     order = "nullius-eb",
     icon = "__base__/graphics/technology/logistic-science-pack.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4067,7 +4061,7 @@ data:extend({
     name = "nullius-metallurgy-3",
     order = "nullius-ec",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     icon = "__base__/graphics/icons/electric-furnace.png",
     effects = {
       {
@@ -4095,7 +4089,7 @@ data:extend({
     name = "nullius-sodium-processing",
     order = "nullius-ec",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/sodium-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/sodium-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -4194,9 +4188,9 @@ data:extend({
     type = "technology",
     name = "nullius-aluminum-production-2",
     order = "nullius-ed",
-    icon = "__angelssmelting__/graphics/technology/smelting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4252,9 +4246,9 @@ data:extend({
     type = "technology",
     name = "nullius-iron-smelting-3",
     order = "nullius-ed",
-    icon = "__angelssmelting__/graphics/technology/smelting-iron-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-iron-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4315,7 +4309,7 @@ data:extend({
     name = "nullius-nanotechnology-1",
     order = "nullius-ed",
     icon_size = 64,
-    icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -4340,7 +4334,7 @@ data:extend({
     order = "nullius-ee",
     icon = "__base__/graphics/technology/research-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "laboratory-speed",
@@ -4363,7 +4357,7 @@ data:extend({
     name = "nullius-limestone-processing-3",
     order = "nullius-ee",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/solid-lime.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/solid-lime.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -4429,9 +4423,9 @@ data:extend({
     name = "nullius-venting-2",
     order = "nullius-ee",
 	icons = {{
-      icon = "__angelspetrochem__/graphics/technology/flare-stack-tech.png",
+      icon = "__angelspetrochemgraphics__/graphics/technology/flare-stack-tech.png",
       icon_size = 256,
-	  icon_mipmaps = 4
+	  
 	}},
     effects = {
       {
@@ -4502,7 +4496,7 @@ data:extend({
     order = "nullius-ee",
     icon = "__base__/graphics/technology/plastics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4535,7 +4529,7 @@ data:extend({
     order = "nullius-ef",
     icon = "__base__/graphics/technology/logistic-system.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4564,11 +4558,11 @@ data:extend({
   {
     type = "technology",
     name = "nullius-ceramics",
-    localised_name = {"", {"technology-name.nullius-ceramics"}, " ", 1},
+    localised_name = {"", {"technology-name.nullius-ceramics"}, " ", tostring(1)},
     order = "nullius-ef",
-    icon = "__angelssmelting__/graphics/icons/powder-platinum.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-platinum.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4598,9 +4592,9 @@ data:extend({
     type = "technology",
     name = "nullius-glassmaking-2",
     order = "nullius-ef",
-    icon = "__angelssmelting__/graphics/technology/glass-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/glass-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4631,7 +4625,7 @@ data:extend({
     name = "nullius-titanium-production-1",
     order = "nullius-ef",
     icon_size = 32,
-    icon = "__angelssmelting__/graphics/icons/ore-rutile.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/ore-rutile.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -4657,9 +4651,9 @@ data:extend({
     type = "technology",
     name = "nullius-weaving-2",
     order = "nullius-ef",
-    icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-zinc.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4691,7 +4685,7 @@ data:extend({
     order = "nullius-ef",
     icon = "__base__/graphics/technology/steel-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4716,7 +4710,7 @@ data:extend({
   {
     type = "technology",
     name = "nullius-chirality-3",
-	localised_description = {"technology-description.nullius-chirality", 3,
+	localised_description = {"technology-description.nullius-chirality", tostring(3),
 	    {"technology-description.nullius-chirality-3"}},
     order = "nullius-ef",
     icon_size = 254,
@@ -4738,7 +4732,7 @@ data:extend({
     order = "nullius-eg",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -4761,9 +4755,9 @@ data:extend({
     type = "technology",
     name = "nullius-illumination-2",
     order = "nullius-eg",
-    icon = "__base__/graphics/technology/optics.png",
+    icon = "__base__/graphics/technology/lamp.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4832,9 +4826,9 @@ data:extend({
     type = "technology",
     name = "nullius-titanium-production-2",
     order = "nullius-eg",
-    icon = "__angelssmelting__/graphics/technology/smelting-titanium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-titanium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4866,7 +4860,7 @@ data:extend({
     order = "nullius-eg",
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -4889,7 +4883,7 @@ data:extend({
     name = "nullius-organic-chemistry-5",
     order = "nullius-eg",
     icon_size = 32,
-    icon = "__angelspetrochem__/graphics/icons/solid-resin.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/solid-resin.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -4929,7 +4923,7 @@ data:extend({
     order = "nullius-eg",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -5243,7 +5237,7 @@ data:extend({
     order = "nullius-eh",
     icon = "__base__/graphics/technology/power-armor.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5290,7 +5284,7 @@ data:extend({
     order = "nullius-eh",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5314,7 +5308,7 @@ data:extend({
     order = "nullius-eh",
     icon = "__base__/graphics/technology/explosives.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5340,9 +5334,9 @@ data:extend({
     type = "technology",
     name = "nullius-composites-1",
     order = "nullius-eh",
-    icon = "__angelssmelting__/graphics/technology/smelting-zinc-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-zinc-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5682,7 +5676,7 @@ data:extend({
     order = "nullius-ei",
     icon = "__base__/graphics/technology/robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5719,7 +5713,7 @@ data:extend({
     order = "nullius-ei",
     icon = "__base__/graphics/technology/solar-energy.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5741,9 +5735,9 @@ data:extend({
     type = "technology",
     name = "nullius-electronics-2",
     order = "nullius-ei",
-    icon = "__base__/graphics/technology/advanced-electronics.png",
+    icon = "__base__/graphics/technology/advanced-circuit.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5771,7 +5765,7 @@ data:extend({
     order = "nullius-ei",
     icon = "__base__/graphics/technology/concrete.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -5803,7 +5797,7 @@ data:extend({
     order = "nullius-ei",
     icon = "__base__/graphics/technology/personal-laser-defense-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -6175,7 +6169,7 @@ data:extend({
     order = "nullius-ej",
     icon = "__base__/graphics/technology/logistic-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6201,20 +6195,16 @@ data:extend({
     type = "technology",
     name = "nullius-actuation-3",
     order = "nullius-ej",
-    icon = "__base__/graphics/technology/stack-inserter.png",
+    icon = "__base__/graphics/technology/bulk-inserter.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
         recipe = "nullius-inserter-3"
       },
       {
-        type = "unlock-recipe",
-        recipe = "nullius-filter-inserter-3"
-      },
-      {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       }
     },
@@ -6234,7 +6224,7 @@ data:extend({
     order = "nullius-ej",
     icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6266,7 +6256,7 @@ data:extend({
     order = "nullius-ej",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6306,7 +6296,7 @@ data:extend({
     order = "nullius-ej",
     icon = "__base__/graphics/technology/module.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6337,7 +6327,7 @@ data:extend({
     order = "nullius-ej",
     icon = "__base__/graphics/technology/military.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6401,16 +6391,16 @@ data:extend({
     order = "nullius-ek",
     icon = "__base__/graphics/technology/construction-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
         recipe = "nullius-construction-bot-2"
       },
-      {
-        type = "ghost-time-to-live",
-        modifier = 60 * 60 * 60 * 10
-      }
+      -- {
+      --   type = "ghost-time-to-live",
+      --   modifier = 60 * 60 * 60 * 10
+      -- }
     },
     unit = {
       count = 600,
@@ -6632,27 +6622,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-box-filter-inserter-2"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-filter-inserter-2"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-box-inserter-3"
       },
       {
         type = "unlock-recipe",
         recipe = "nullius-unbox-inserter-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-box-filter-inserter-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-filter-inserter-3"
       },
       {
         type = "unlock-recipe",
@@ -6827,7 +6801,7 @@ data:extend({
     order = "nullius-ek",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -6852,7 +6826,7 @@ data:extend({
     order = "nullius-ek",
     icon = "__base__/graphics/technology/logistics-3.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6883,7 +6857,7 @@ data:extend({
     name = "nullius-energy-storage-3",
     order = "nullius-ek",
     icon_size = 128,
-    icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-extractor.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -6933,9 +6907,9 @@ data:extend({
     type = "technology",
     name = "nullius-titanium-working",
     order = "nullius-ek",
-    icon = "__angelssmelting__/graphics/icons/roll-titanium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-titanium.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6961,9 +6935,9 @@ data:extend({
     type = "technology",
     name = "nullius-insulation-2",
     order = "nullius-ek",
-    icon = "__angelssmelting__/graphics/icons/roll-manganese.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-manganese.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -6984,9 +6958,9 @@ data:extend({
     type = "technology",
     name = "nullius-aluminum-working-2",
     order = "nullius-ek",
-    icon = "__angelssmelting__/graphics/icons/powder-aluminium.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/powder-aluminium.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -7028,7 +7002,7 @@ data:extend({
     order = "nullius-el",
     icon = "__base__/graphics/technology/gate.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -7038,10 +7012,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "nullius-gate"
       },
-      {
-        type = "ghost-time-to-live",
-        modifier = 60 * 60 * 60 * 12
-      }
+      -- {
+      --   type = "ghost-time-to-live",
+      --   modifier = 60 * 60 * 60 * 12
+      -- }
     },
     unit = {
       count = 700,
@@ -7060,7 +7034,7 @@ data:extend({
     order = "nullius-el",
     icon = "__base__/graphics/technology/railway.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -7119,10 +7093,10 @@ data:extend({
     order = "nullius-el",
     icon = "__base__/graphics/technology/inserter-capacity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       }
     },
@@ -7142,7 +7116,7 @@ data:extend({
     order = "nullius-el",
     icon = "__base__/graphics/technology/productivity-module-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -7171,7 +7145,7 @@ data:extend({
     order = "nullius-em",
     icon = "__base__/graphics/technology/advanced-material-processing-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -7446,7 +7420,7 @@ data:extend({
     order = "nullius-em",
     icon = "__base__/graphics/technology/effect-transmission.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -7474,7 +7448,7 @@ data:extend({
     order = "nullius-em",
     icon = "__base__/graphics/technology/tank.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -8018,7 +7992,7 @@ data:extend({
     order = "nullius-en",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "worker-robot-speed",
@@ -8042,7 +8016,7 @@ data:extend({
     order = "nullius-en",
     icon = "__base__/graphics/technology/landfill.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -8077,7 +8051,7 @@ data:extend({
     order = "nullius-en",
     icon = "__base__/graphics/technology/automation-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -8301,15 +8275,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-boxed-filter-inserter-2"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-boxed-inserter-3"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-filter-inserter-3"
       },
       {
         type = "unlock-recipe",
@@ -8353,7 +8319,7 @@ data:extend({
     order = "nullius-en",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -8379,7 +8345,7 @@ data:extend({
     order = "nullius-eo",
     icon = "__base__/graphics/technology/steel-axe.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -8407,7 +8373,7 @@ data:extend({
     order = "nullius-eo",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-running-speed",
@@ -8435,7 +8401,7 @@ data:extend({
     order = "nullius-eo",
     icon = "__base__/graphics/technology/logistic-system.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -8471,10 +8437,10 @@ data:extend({
     order = "nullius-eo",
     icon = "__base__/graphics/technology/inserter-capacity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       }
     },
@@ -8523,7 +8489,7 @@ data:extend({
     name = "nullius-geothermal-power-2",
     order = "nullius-eo",
     icon_size = 64,
-    icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -8548,7 +8514,7 @@ data:extend({
   {
     type = "technology",
     name = "nullius-high-pressure-chemistry",
-	localised_name = {"", {"technology-name.nullius-high-pressure-chemistry"}, " ", 1},
+	localised_name = {"", {"technology-name.nullius-high-pressure-chemistry"}, " ", tostring(1)},
     order = "nullius-eo",
     icons = angelsmods.functions.create_liquid_fluid_icon(nil,
       {element_tint["carbon"], element_tint["oxygen"], element_tint["oxygen"]}
@@ -8633,7 +8599,7 @@ data:extend({
     order = "nullius-ep",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -8658,7 +8624,7 @@ data:extend({
     order = "nullius-ep",
     icon = "__base__/graphics/technology/research-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -8682,7 +8648,7 @@ data:extend({
     order = "nullius-ep",
     icon = "__base__/graphics/technology/automation-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -8974,7 +8940,7 @@ data:extend({
     order = "nullius-ep",
     icon = "__base__/graphics/technology/worker-robots-storage.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "worker-robot-storage",
@@ -9027,9 +8993,8 @@ data:extend({
     type = "technology",
     name = "nullius-packaging-6",
     order = "nullius-ep",
-    icon = "__angelssmelting__/graphics/technology/powder-mixer-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/powder-mixer-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     effects = {
       {
         type = "unlock-recipe",
@@ -9052,11 +9017,11 @@ data:extend({
     name = "nullius-barreling-3",
     order = "nullius-eq",
     icon_size = 128,
-    icon = "__angelsrefining__/graphics/technology/barrel-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/barrel-tech.png",
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-steam-barrel"
+        recipe = "nullius-steam-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9064,7 +9029,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-nitrogen-barrel"
+        recipe = "nullius-compressed-nitrogen-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9072,7 +9037,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-hydrogen-barrel"
+        recipe = "nullius-compressed-hydrogen-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9080,7 +9045,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-air-barrel"
+        recipe = "nullius-compressed-air-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9088,7 +9053,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-residual-gas-barrel"
+        recipe = "nullius-compressed-residual-gas-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9096,7 +9061,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-argon-barrel"
+        recipe = "nullius-compressed-argon-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9104,7 +9069,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-oxygen-barrel"
+        recipe = "nullius-compressed-oxygen-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9112,7 +9077,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-carbon-dioxide-barrel"
+        recipe = "nullius-compressed-carbon-dioxide-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9120,7 +9085,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-carbon-monoxide-barrel"
+        recipe = "nullius-compressed-carbon-monoxide-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9128,7 +9093,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-methane-barrel"
+        recipe = "nullius-compressed-methane-barrel"
       },
       {
         type = "unlock-recipe",
@@ -9190,7 +9155,7 @@ data:extend({
     order = "nullius-eq",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -9226,7 +9191,7 @@ data:extend({
     order = "nullius-eq",
     icon = "__base__/graphics/technology/automation-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -9490,7 +9455,7 @@ data:extend({
     order = "nullius-eq",
     icon = "__base__/graphics/technology/artillery.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -9517,7 +9482,7 @@ data:extend({
       {
         icon = "__base__/graphics/technology/space-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/tooltips/tooltip-category-nuclear.png",
@@ -9559,7 +9524,7 @@ data:extend({
     order = "nullius-fc",
     icon = "__base__/graphics/technology/electric-engine.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -9630,7 +9595,7 @@ data:extend({
     order = "nullius-fd",
     icon = "__base__/graphics/technology/mining-productivity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -9703,15 +9668,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-filter-inserter-4"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-box-inserter-4"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-box-filter-inserter-4"
       },
       {
         type = "unlock-recipe",
@@ -9719,16 +9676,8 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-unbox-filter-inserter-4"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-boxed-inserter-4"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-filter-inserter-4"
-      }
     },
     unit = {
       count = 1100,
@@ -9748,10 +9697,10 @@ data:extend({
     order = "nullius-fe",
     icon = "__base__/graphics/technology/inserter-capacity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       }
     },
@@ -9772,7 +9721,7 @@ data:extend({
     order = "nullius-fe",
     icon = "__base__/graphics/technology/fluid-handling.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -9828,7 +9777,7 @@ data:extend({
     order = "nullius-fe",
     icon = "__base__/graphics/technology/steel-axe.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -9869,7 +9818,7 @@ data:extend({
     order = "nullius-ff",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-running-speed",
@@ -9893,7 +9842,7 @@ data:extend({
     order = "nullius-ff",
     icon = "__base__/graphics/technology/automation-3.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10018,7 +9967,7 @@ data:extend({
     order = "nullius-ff",
     icon = "__base__/graphics/technology/artillery-range.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "artillery-range",
@@ -10096,7 +10045,7 @@ data:extend({
       {
         icon = "__base__/graphics/technology/automation-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/iron-gear-wheel.png",
@@ -10131,7 +10080,7 @@ data:extend({
     name = "nullius-water-filtration-4",
     order = "nullius-fg",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/water-treatment.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/water-treatment.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -10154,7 +10103,7 @@ data:extend({
     name = "nullius-air-filtration-3",
     order = "nullius-fg",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/air-filter-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/air-filter-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -10177,7 +10126,7 @@ data:extend({
     name = "nullius-mineral-processing-3",
     order = "nullius-fg",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/ore-sorting.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/ore-sorting.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -10200,7 +10149,7 @@ data:extend({
     name = "nullius-barreling-4",
     order = "nullius-fg",
     icon_size = 128,
-    icon = "__angelsrefining__/graphics/technology/barrel-tech.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/barrel-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -10271,7 +10220,7 @@ data:extend({
     order = "nullius-fh",
     icon = "__base__/graphics/technology/advanced-material-processing-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10298,7 +10247,7 @@ data:extend({
     name = "nullius-flotation-3",
     order = "nullius-fh",
     icon_size = 256,
-    icon = "__angelsrefining__/graphics/technology/hydro-refining.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/hydro-refining.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -10322,7 +10271,7 @@ data:extend({
     order = "nullius-fh",
     icon = "__base__/graphics/technology/oil-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10349,7 +10298,7 @@ data:extend({
     name = "nullius-energy-storage-4",
     order = "nullius-fh",
     icon_size = 128,
-    icon = "__angelsrefining__/graphics/technology/thermal-extractor.png",
+    icon = "__angelsrefininggraphics__/graphics/technology/thermal-extractor.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -10406,7 +10355,7 @@ data:extend({
     order = "nullius-fi",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "worker-robot-speed",
@@ -10464,7 +10413,7 @@ data:extend({
     name = "nullius-chemical-engineering-3",
     order = "nullius-fi",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/chemical-plant-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/chemical-plant-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -10581,9 +10530,8 @@ data:extend({
     type = "technology",
     name = "nullius-metalworking-4",
     order = "nullius-fi",
-    icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/induction-furnace-tech.png",
     icon_size = 256,
-    icon_mipmaps = 2,
     effects = {
       {
         type = "unlock-recipe",
@@ -10608,7 +10556,7 @@ data:extend({
     order = "nullius-fj",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -10631,9 +10579,9 @@ data:extend({
     type = "technology",
     name = "nullius-aluminum-production-3",
     order = "nullius-fj",
-    icon = "__angelssmelting__/graphics/technology/smelting-aluminium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-aluminium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10734,7 +10682,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-helium-barrel"
+        recipe = "nullius-compressed-helium-barrel"
       },
       {
         type = "unlock-recipe",
@@ -10742,7 +10690,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-compressed-trace-gas-barrel"
+        recipe = "nullius-compressed-trace-gas-barrel"
       },
       {
         type = "unlock-recipe",
@@ -10766,7 +10714,7 @@ data:extend({
     order = "nullius-fj",
     icon = "__base__/graphics/technology/battery.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10809,9 +10757,9 @@ data:extend({
     name = "nullius-venting-3",
     order = "nullius-fj",
 	icons = {{
-      icon = "__angelspetrochem__/graphics/technology/flare-stack-tech.png",
+      icon = "__angelspetrochemgraphics__/graphics/technology/flare-stack-tech.png",
       icon_size = 256,
-	  icon_mipmaps = 4
+	  
 	}},
     effects = {
       {
@@ -10842,7 +10790,7 @@ data:extend({
     icons = {{
       icon = "__base__/graphics/technology/worker-robots-storage.png",
       icon_size = 256,
-      icon_mipmaps = 4,
+      
       tint = {0.6, 0.9, 1}
     }},
     effects = {
@@ -10869,7 +10817,7 @@ data:extend({
     order = "nullius-fk",
     icon = "__base__/graphics/technology/logistic-science-pack.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10893,7 +10841,7 @@ data:extend({
     order = "nullius-fk",
     icon = "__base__/graphics/technology/oil-gathering.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10925,7 +10873,7 @@ data:extend({
     order = "nullius-fk",
     icon = "__base__/graphics/technology/steel-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -10965,7 +10913,7 @@ data:extend({
     order = "nullius-fk",
     icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11052,10 +11000,10 @@ data:extend({
     order = "nullius-fl",
     icon = "__base__/graphics/technology/inserter-capacity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       },
       {
@@ -11077,9 +11025,9 @@ data:extend({
     type = "technology",
     name = "nullius-titanium-production-3",
     order = "nullius-fl",
-    icon = "__angelssmelting__/graphics/technology/smelting-titanium-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-titanium-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11115,7 +11063,7 @@ data:extend({
     order = "nullius-fl",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11189,7 +11137,7 @@ data:extend({
     name = "nullius-electrolysis-4",
     order = "nullius-fl",
     icon_size = 128,
-    icon = "__angelspetrochem__/graphics/technology/electrolyser-tech.png",
+    icon = "__angelspetrochemgraphics__/graphics/technology/electrolyser-tech.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -11212,9 +11160,9 @@ data:extend({
     type = "technology",
     name = "nullius-electronics-3",
     order = "nullius-fm",
-    icon = "__base__/graphics/technology/advanced-electronics-2.png",
+    icon = "__base__/graphics/technology/processing-unit.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11249,7 +11197,7 @@ data:extend({
     name = "nullius-geothermal-power-3",
     order = "nullius-fm",
     icon_size = 64,
-    icon = "__angelssmelting__/graphics/icons/chemical-furnace.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/chemical-furnace.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -11276,7 +11224,7 @@ data:extend({
     name = "nullius-isotope-separation",
     order = "nullius-fm",
     icon_size = 72,
-    icon = "__angelspetrochem__/graphics/icons/molecules/semiheavy-water.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/molecules/semiheavy-water.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -11304,7 +11252,7 @@ data:extend({
     order = "nullius-fm",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -11393,7 +11341,7 @@ data:extend({
     order = "nullius-fn",
     icon = "__base__/graphics/technology/worker-robots-storage.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "worker-robot-storage",
@@ -11418,7 +11366,7 @@ data:extend({
     order = "nullius-fn",
     icon = "__base__/graphics/technology/research-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "laboratory-speed",
@@ -11442,7 +11390,7 @@ data:extend({
     order = "nullius-fn",
     icon = "__base__/graphics/technology/logistic-system.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11483,7 +11431,7 @@ data:extend({
     order = "nullius-fo",
     icon = "__base__/graphics/technology/nuclear-power.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11519,7 +11467,7 @@ data:extend({
     order = "nullius-fo",
     icon = "__base__/graphics/technology/module.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11618,7 +11566,7 @@ data:extend({
     order = "nullius-fo",
     icon = "__base__/graphics/technology/logistic-system.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11710,7 +11658,7 @@ data:extend({
     order = "nullius-fp",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -11734,7 +11682,7 @@ data:extend({
     name = "nullius-nanotechnology-2",
     order = "nullius-fp",
     icon_size = 64,
-    icon = "__angelsrefining__/graphics/icons/crystallizer.png",
+    icon = "__angelsrefininggraphics__/graphics/icons/crystallizer.png",
     effects = {
       {
         type = "unlock-recipe",
@@ -11758,7 +11706,7 @@ data:extend({
     order = "nullius-fp",
     icon = "__base__/graphics/technology/robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11878,7 +11826,7 @@ data:extend({
     order = "nullius-fq",
     icon = "__base__/graphics/technology/personal-laser-defense-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -11909,7 +11857,7 @@ data:extend({
     order = "nullius-fq",
     icon = "__base__/graphics/technology/electronics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11937,7 +11885,7 @@ data:extend({
     order = "nullius-fq",
     icon = "__base__/graphics/technology/logistic-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11977,7 +11925,7 @@ data:extend({
     order = "nullius-fq",
     icon = "__base__/graphics/technology/construction-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -11995,10 +11943,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "nullius-unbox-construction-bot-3"
       },
-      {
-        type = "ghost-time-to-live",
-        modifier = 60 * 60 * 60 * 24 * 6
-      }
+      -- {
+      --   type = "ghost-time-to-live",
+      --   modifier = 60 * 60 * 60 * 24 * 6
+      -- }
     },
     unit = {
       count = 3400,
@@ -12017,7 +11965,7 @@ data:extend({
     order = "nullius-fq",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-running-speed",
@@ -12044,12 +11992,12 @@ data:extend({
       {
         icon = "__base__/graphics/technology/production-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4
+        
       },
       {
         icon = "__base__/graphics/icons/processing-unit.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 1.1,
         shift = {0, 34},
         tint = {r=1, g=1, b=1, a=0.5}
@@ -12082,10 +12030,10 @@ data:extend({
     order = "nullius-fr",
     icon = "__base__/graphics/technology/inserter-capacity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       }
     },
@@ -12106,7 +12054,7 @@ data:extend({
     order = "nullius-fr",
     icon = "__base__/graphics/technology/atomic-bomb.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12142,7 +12090,7 @@ data:extend({
     order = "nullius-fr",
     icon = "__base__/graphics/technology/railway.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12178,7 +12126,7 @@ data:extend({
     order = "nullius-fr",
     icon = "__base__/graphics/technology/effect-transmission.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12230,7 +12178,7 @@ data:extend({
     order = "nullius-fs",
     icon = "__base__/graphics/technology/rocket-fuel.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12298,7 +12246,7 @@ data:extend({
     order = "nullius-fs",
     icon = "__base__/graphics/technology/tank.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12350,7 +12298,7 @@ data:extend({
     order = "nullius-ft",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "worker-robot-speed",
@@ -12405,7 +12353,7 @@ data:extend({
     order = "nullius-ft",
     icon = "__base__/graphics/technology/discharge-defense-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-reach-distance",
@@ -12454,7 +12402,7 @@ data:extend({
     order = "nullius-fu",
     icon = "__base__/graphics/technology/power-armor-mk2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12498,7 +12446,7 @@ data:extend({
     order = "nullius-fu",
     icon = "__base__/graphics/technology/artillery-range.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "artillery-range",
@@ -12522,7 +12470,7 @@ data:extend({
     order = "nullius-fu",
     icon = "__base__/graphics/technology/research-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12546,7 +12494,7 @@ data:extend({
     order = "nullius-fu",
     icon = "__base__/graphics/technology/atomic-bomb.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12591,7 +12539,7 @@ data:extend({
     order = "nullius-fv",
     icon = "__base__/graphics/technology/landfill.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12651,7 +12599,7 @@ data:extend({
     order = "nullius-fv",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12679,7 +12627,7 @@ data:extend({
     order = "nullius-fv",
     icon = "__base__/graphics/technology/braking-force.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "train-braking-force-bonus",
@@ -12704,7 +12652,7 @@ data:extend({
     order = "nullius-fv",
     icon = "__base__/graphics/technology/effect-transmission.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12771,7 +12719,7 @@ data:extend({
     order = "nullius-fw",
     icon = "__base__/graphics/technology/concrete.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12871,7 +12819,7 @@ data:extend({
     order = "nullius-fw",
     icon = "__base__/graphics/technology/rocket-silo.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -12901,7 +12849,7 @@ data:extend({
     icons = {{
         icon = "__base__/graphics/technology/military-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4,
+        
         tint = {0.75, 0.72, 0.78}
     }},
     effects = {
@@ -12937,7 +12885,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/technology/military-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4,
+        
         tint = {0.75, 0.72, 0.78}
       },
 	  {
@@ -12980,7 +12928,7 @@ data:extend({
 	  {
         icon = "__base__/graphics/technology/military-science-pack.png",
         icon_size = 256,
-        icon_mipmaps = 4,
+        
         tint = {0.75, 0.72, 0.78}
       },
 	  {
@@ -13021,7 +12969,7 @@ data:extend({
     order = "nullius-gc",
     icon = "__base__/graphics/technology/atomic-bomb.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13119,7 +13067,7 @@ data:extend({
     order = "nullius-gc",
     icon = "__base__/graphics/technology/nuclear-power.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13148,10 +13096,10 @@ data:extend({
     order = "nullius-gc",
     icon = "__base__/graphics/technology/inserter-capacity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       }
     },
@@ -13173,7 +13121,7 @@ data:extend({
     order = "nullius-gd",
     icon = "__base__/graphics/technology/artillery-range.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "artillery-range",
@@ -13198,7 +13146,7 @@ data:extend({
     order = "nullius-gd",
     icon = "__base__/graphics/technology/personal-laser-defense-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-mining-speed",
@@ -13226,9 +13174,9 @@ data:extend({
     type = "technology",
     name = "nullius-copper-production",
     order = "nullius-gd",
-    icon = "__angelssmelting__/graphics/technology/smelting-copper-tech.png",
+    icon = "__angelssmeltinggraphics__/graphics/technology/smelting-copper-tech.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13320,7 +13268,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "fill-nullius-pressure-steam-barrel"
+        recipe = "nullius-pressure-steam-barrel"
       },
       {
         type = "unlock-recipe",
@@ -13349,7 +13297,7 @@ data:extend({
     order = "nullius-gd",
     icon = "__base__/graphics/technology/kovarex-enrichment-process.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13425,7 +13373,7 @@ data:extend({
     type = "technology",
     name = "nullius-carbon-sequestration-3",
     order = "nullius-gd",
-    icon = "__angelspetrochem__/graphics/icons/molecules/oxygen.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png",
     icon_size = 72,
     effects = {
       {
@@ -13459,7 +13407,7 @@ data:extend({
     order = "nullius-ge",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "worker-robot-speed",
@@ -13544,7 +13492,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.95
       },
       {
@@ -13580,7 +13528,7 @@ data:extend({
     order = "nullius-ge",
     icon = "__base__/graphics/technology/uranium-processing.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13607,9 +13555,9 @@ data:extend({
     type = "technology",
     name = "nullius-electronics-4",
     order = "nullius-ge",
-    icon = "__base__/graphics/technology/advanced-electronics-2.png",
+    icon = "__base__/graphics/technology/processing-unit.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13678,7 +13626,7 @@ data:extend({
     order = "nullius-gf",
     icon = "__base__/graphics/technology/robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13747,7 +13695,7 @@ data:extend({
     order = "nullius-gf",
     icon = "__base__/graphics/technology/solar-energy.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13784,7 +13732,7 @@ data:extend({
     order = "nullius-gf",
     icon = "__base__/graphics/technology/speed-module-3.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -13894,7 +13842,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.95
       },
       {
@@ -13968,7 +13916,7 @@ data:extend({
     order = "nullius-gg",
     icon = "__base__/graphics/technology/military.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14001,7 +13949,7 @@ data:extend({
     order = "nullius-gg",
     icon = "__base__/graphics/technology/electronics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14030,7 +13978,7 @@ data:extend({
     order = "nullius-gg",
     icon = "__base__/graphics/technology/logistic-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14165,7 +14113,7 @@ data:extend({
     order = "nullius-gg",
     icon = "__base__/graphics/icons/small-worm.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14218,13 +14166,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.95
       },
       {
 		icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14256,7 +14204,7 @@ data:extend({
     order = "nullius-gg",
     icon = "__base__/graphics/technology/productivity-module-3.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14351,10 +14299,10 @@ data:extend({
     order = "nullius-gh",
     icon = "__base__/graphics/technology/inserter-capacity.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
-        type = "stack-inserter-capacity-bonus",
+        type = "bulk-inserter-capacity-bonus",
         modifier = 1
       },
       {
@@ -14404,7 +14352,7 @@ data:extend({
     order = "nullius-gh",
     icon = "__base__/graphics/technology/construction-robotics.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14440,9 +14388,9 @@ data:extend({
     type = "technology",
     name = "nullius-weaving-3",
     order = "nullius-gh",
-    icon = "__angelssmelting__/graphics/icons/roll-zinc.png",
+    icon = "__angelssmeltinggraphics__/graphics/icons/roll-zinc.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14477,7 +14425,7 @@ data:extend({
     order = "nullius-gh",
     icon = "__base__/graphics/icons/tree-08.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14574,13 +14522,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.95
       },
       {
 		icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14613,7 +14561,7 @@ data:extend({
     order = "nullius-gh",
     icon = "__base__/graphics/icons/fish.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14666,13 +14614,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.95
       },
       {
 		icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14711,7 +14659,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.6,
         shift = {-8, -8}
       }
@@ -14842,7 +14790,7 @@ data:extend({
     order = "nullius-gi",
     icon = "__base__/graphics/icons/small-biter.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -14900,13 +14848,13 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
 		scale = 0.95
       },
       {
 		icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14940,7 +14888,7 @@ data:extend({
     order = "nullius-gi",
     icon = "__base__/graphics/icons/wood.png",
     icon_size = 64,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15071,7 +15019,7 @@ data:extend({
     order = "nullius-gi",
     icon = "__base__/graphics/technology/power-armor-mk2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15116,7 +15064,7 @@ data:extend({
     order = "nullius-gi",
     icon = "__base__/graphics/technology/toolbelt.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-inventory-slots-bonus",
@@ -15168,7 +15116,7 @@ data:extend({
     order = "nullius-gj",
     icon = "__base__/graphics/technology/coal-liquefaction.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15251,12 +15199,12 @@ data:extend({
       {
 		icon = "__base__/graphics/icons/fluid/lubricant.png",
 		icon_size = 64,
-		icon_mipmaps = 4
+		
       },
       {
         icon = "__base__/graphics/icons/fluid/light-oil.png",
         icon_size = 64,
-        icon_mipmaps = 4,
+        
         scale = 0.4,
         shift = {-12, -10}
       }
@@ -15339,7 +15287,7 @@ data:extend({
     order = "nullius-gj",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "character-running-speed",
@@ -15362,7 +15310,7 @@ data:extend({
     order = "nullius-gj",
     icon = "__base__/graphics/technology/laser-turret.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15562,9 +15510,9 @@ data:extend({
     type = "technology",
     name = "nullius-artificial-intelligence-2",
     order = "nullius-gk",
-    icon = "__base__/graphics/technology/rocket-control-unit.png",
+    icon = TECHPATH .. "rocket-control-unit.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15588,7 +15536,7 @@ data:extend({
     order = "nullius-gl",
     icon = "__base__/graphics/technology/explosive-rocketry.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15733,7 +15681,7 @@ data:extend({
     order = "nullius-gm",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15782,7 +15730,7 @@ data:extend({
     order = "nullius-gm",
     icon = "__base__/graphics/technology/solar-energy.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15807,7 +15755,7 @@ data:extend({
     order = "nullius-gm",
     icon = "__base__/graphics/technology/power-armor-mk2.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",
@@ -15836,7 +15784,7 @@ data:extend({
     order = "nullius-gm",
     icon = "__base__/graphics/technology/spidertron.png",
     icon_size = 256,
-    icon_mipmaps = 4,
+    
     effects = {
       {
         type = "unlock-recipe",

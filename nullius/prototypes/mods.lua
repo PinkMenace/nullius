@@ -38,7 +38,7 @@ data:extend({
     ingredients = {
       {"train-stop", 1},
       {"arithmetic-combinator", 2},
-      {"green-wire", 4}
+      {"nullius-green-wire", 4}
     },
     result = "logistic-train-stop"
   }
@@ -156,7 +156,7 @@ data:extend({
       {"concrete", 800},
       {"nullius-refractory-brick", 500},
       {"nullius-steel-beam", 200},
-      {"red-wire", 40}
+      {"nullius-red-wire", 40}
     },
     result = "factory-2",
     enabled = false
@@ -188,7 +188,7 @@ data:extend({
     always_show_made_in = true,
     energy_required = 2,
     ingredients = {
-      {"green-wire", 3},
+      {"nullius-green-wire", 3},
       {"arithmetic-combinator", 1}
     },
     result = "factory-circuit-connector",
@@ -242,7 +242,7 @@ data:extend({
     always_show_made_in = true,
     energy_required = 2,
     ingredients = {
-      {"green-wire", 3},
+      {"nullius-green-wire", 3},
       {"arithmetic-combinator", 1}
     },
     result = "factory-circuit-input",
@@ -999,7 +999,7 @@ data:extend({
     energy_required = 3,
     ingredients = {
       {"nullius-relief-valve", 2},
-      {"red-wire", 1}
+      {"nullius-red-wire", 1}
     },
     result = "80-overflow-valve"
   },
@@ -1094,7 +1094,7 @@ data:extend({
     energy_required = 3,
     ingredients = {
       {"nullius-top-up-valve", 2},
-      {"red-wire", 1}
+      {"nullius-red-wire", 1}
     },
     result = "80-top-up-valve"
   },
@@ -1879,7 +1879,7 @@ data:extend({
     energy_required = 5,
     ingredients = {
       {"nullius-sensor-1", 1},
-      {"green-wire", 3}
+      {"nullius-green-wire", 3}
     },
     result = "item-sensor"
   }
@@ -1898,7 +1898,7 @@ if (mods["crafting_combinator"] or mods["crafting_combinator_xeraph"]) then
       energy_required = 2,
       ingredients = {
         {"constant-combinator", 1},
-        {"red-wire", 1}
+        {"nullius-red-wire", 1}
       },
       result = "crafting_combinator:crafting-combinator"
     },
@@ -1911,7 +1911,7 @@ if (mods["crafting_combinator"] or mods["crafting_combinator_xeraph"]) then
       energy_required = 2,
       ingredients = {
         {"arithmetic-combinator", 1},
-        {"red-wire", 2}
+        {"nullius-red-wire", 2}
       },
       result = "crafting_combinator:recipe-combinator"
     }
@@ -1958,7 +1958,7 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
       energy_required = 3,
       ingredients = {
         {"SNTD-old-nixie-tube", 1},
-		{"green-wire", 2},
+		{"nullius-green-wire", 2},
         {"iron-chest", 1}
       },
       result = "SNTD-nixie-tube-small"

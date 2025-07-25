@@ -17,10 +17,10 @@ data.raw.resource["uranium-ore"].minable.fluid_amount = nil
 data.raw.resource["uranium-ore"].minable.required_fluid = nil
 data.raw.item["rocket-fuel"].icon = "__base__/graphics/icons/rocket-fuel.png"
 data.raw.item["rocket-fuel"].icon_size = 64
-data.raw.item["copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png"
+data.raw.item["copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png"
 data.raw.item["copper-cable"].icon_size = 64
 data.raw.item["copper-cable"].icons = {{
-  icon = "__angelssmelting__/graphics/icons/wire-coil-tin.png",
+  icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png",
   icon_size = 64
 }}
 data.raw.item["copper-cable"].subgroup = "electronic-intermediate"
@@ -30,11 +30,10 @@ data.raw.item["copper-cable"].order = "nullius-d"
 data.raw.item["storage-tank"].stack_size = 50
 data.raw.item["storage-tank"].icons = {{
   icon = "__base__/graphics/icons/storage-tank.png",
-  icon_size = 64, icon_mipmaps = 4
+  icon_size = 64, 
 }}
 data.raw["storage-tank"]["storage-tank"].icons = data.raw.item["storage-tank"].icons
-data.raw["storage-tank"]["storage-tank"].fluid_box.height = 4.25
-data.raw["storage-tank"]["storage-tank"].fluid_box.base_area = 35.29411765
+data.raw["storage-tank"]["storage-tank"].fluid_box.volume = 500
 data.raw["storage-tank"]["storage-tank"].pictures =
     util.table.deepcopy(data.raw["storage-tank"]["nullius-medium-tank-3"].pictures)
 data.raw["storage-tank"]["storage-tank"].pictures.picture.sheets[1].tint = {0.9, 0.8, 0.6}
@@ -44,15 +43,15 @@ if mods["reskins-bobs"] then
 data.raw.item["radar"].icons = {
   {
     icon = "__reskins-bobs__/graphics/icons/warfare/radar/radar-icon-base.png",
-    icon_size = 64, icon_mipmaps = 4
+    icon_size = 64, 
   },
   {
     icon = "__reskins-bobs__/graphics/icons/warfare/radar/radar-icon-mask.png",
-    icon_size = 64, icon_mipmaps = 4, tint = tiercolor("yellow")
+    icon_size = 64,  tint = tiercolor("yellow")
   },
   {
     icon = "__reskins-bobs__/graphics/icons/warfare/radar/radar-icon-highlights.png",
-    icon_size = 64, icon_mipmaps = 4, tint = {1, 1, 1, 0}
+    icon_size = 64,  tint = {1, 1, 1, 0}
   }
 }
 label_icon("radar", 1, "yellow")
@@ -61,11 +60,10 @@ data.raw["radar"]["radar"].pictures =
 else
 data.raw.item["radar"].icons = {{
   icon =  "__base__/graphics/icons/radar.png",
-  icon_size = 64, icon_mipmaps = 4,
+  icon_size = 64, 
   tint = {0.9, 0.9, 0.65}
 }}
 data.raw["radar"]["radar"].pictures.layers[1].tint = {0.9, 0.9, 0.65}
-data.raw["radar"]["radar"].pictures.layers[1].hr_version.tint = {0.9, 0.9, 0.65}
 end
 data.raw.item["radar"].stack_size = 20
 data.raw["radar"]["radar"].icons = data.raw.item["radar"].icons
@@ -181,66 +179,63 @@ data.raw["container"]["iron-chest"].next_upgrade = "steel-chest"
 data.raw["container"]["steel-chest"].next_upgrade = nil
 
 
-data.raw.item["logistic-chest-storage"].icons =
+data.raw.item["storage-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-storage1.png", icon_size = 64 }}
-data.raw.item["logistic-chest-storage"].subgroup = "small-logistic-storage"
-data.raw.item["logistic-chest-storage"].order = "nullius-bc"
-data.raw.item["logistic-chest-storage"].stack_size = 100
+data.raw.item["storage-chest"].subgroup = "small-logistic-storage"
+data.raw.item["storage-chest"].order = "nullius-bc"
+data.raw.item["storage-chest"].stack_size = 100
 
-data.raw.item["logistic-chest-passive-provider"].icons =
+data.raw.item["passive-provider-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-supply1.png", icon_size = 64 }}
-data.raw.item["logistic-chest-passive-provider"].subgroup = "small-logistic-storage"
-data.raw.item["logistic-chest-passive-provider"].order = "nullius-cc"
-data.raw.item["logistic-chest-passive-provider"].stack_size = 100
+data.raw.item["passive-provider-chest"].subgroup = "small-logistic-storage"
+data.raw.item["passive-provider-chest"].order = "nullius-cc"
+data.raw.item["passive-provider-chest"].stack_size = 100
 
-data.raw.item["logistic-chest-requester"].icons =
+data.raw.item["requester-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-demand1.png", icon_size = 64 }}
-data.raw.item["logistic-chest-requester"].subgroup = "small-logistic-storage"
-data.raw.item["logistic-chest-requester"].order = "nullius-dc"
-data.raw.item["logistic-chest-requester"].stack_size = 100
+data.raw.item["requester-chest"].subgroup = "small-logistic-storage"
+data.raw.item["requester-chest"].order = "nullius-dc"
+data.raw.item["requester-chest"].stack_size = 100
 
-data.raw.item["logistic-chest-buffer"].icons =
+data.raw.item["buffer-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-buffer1.png", icon_size = 64 }}
-data.raw.item["logistic-chest-buffer"].subgroup = "small-logistic-storage"
-data.raw.item["logistic-chest-buffer"].order = "nullius-ec"
-data.raw.item["logistic-chest-buffer"].stack_size = 100
+data.raw.item["buffer-chest"].subgroup = "small-logistic-storage"
+data.raw.item["buffer-chest"].order = "nullius-ec"
+data.raw.item["buffer-chest"].stack_size = 100
 
-data.raw.item["logistic-chest-active-provider"].icons =
+data.raw.item["active-provider-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-dispatch1.png", icon_size = 64 }}
-data.raw.item["logistic-chest-active-provider"].subgroup = "small-logistic-storage"
-data.raw.item["logistic-chest-active-provider"].order = "nullius-fc"
-data.raw.item["logistic-chest-active-provider"].stack_size = 100
+data.raw.item["active-provider-chest"].subgroup = "small-logistic-storage"
+data.raw.item["active-provider-chest"].order = "nullius-fc"
+data.raw.item["active-provider-chest"].stack_size = 100
 
-data.raw["logistic-container"]["logistic-chest-storage"].icons =
-    data.raw.item["logistic-chest-storage"].icons
-data.raw["logistic-container"]["logistic-chest-storage"].inventory_size = 30
-data.raw["logistic-container"]["logistic-chest-passive-provider"].icons =
-    data.raw.item["logistic-chest-passive-provider"].icons
-data.raw["logistic-container"]["logistic-chest-passive-provider"].inventory_size = 30
-data.raw["logistic-container"]["logistic-chest-requester"].icons =
-    data.raw.item["logistic-chest-requester"].icons
-data.raw["logistic-container"]["logistic-chest-requester"].inventory_size = 30
-data.raw["logistic-container"]["logistic-chest-requester"].max_logistic_slots = 10
-data.raw["logistic-container"]["logistic-chest-buffer"].icons =
-    data.raw.item["logistic-chest-buffer"].icons
-data.raw["logistic-container"]["logistic-chest-buffer"].inventory_size = 30
-data.raw["logistic-container"]["logistic-chest-buffer"].max_logistic_slots = 6
-data.raw["logistic-container"]["logistic-chest-active-provider"].icons =
-    data.raw.item["logistic-chest-active-provider"].icons
-data.raw["logistic-container"]["logistic-chest-active-provider"].inventory_size = 30
-data.raw["logistic-container"]["logistic-chest-storage"].next_upgrade = nil
-data.raw["logistic-container"]["logistic-chest-passive-provider"].next_upgrade = nil
-data.raw["logistic-container"]["logistic-chest-requester"].next_upgrade = nil
-data.raw["logistic-container"]["logistic-chest-buffer"].next_upgrade = nil
-data.raw["logistic-container"]["logistic-chest-active-provider"].next_upgrade = nil
+data.raw["logistic-container"]["storage-chest"].icons =
+    data.raw.item["storage-chest"].icons
+data.raw["logistic-container"]["storage-chest"].inventory_size = 30
+data.raw["logistic-container"]["passive-provider-chest"].icons =
+    data.raw.item["passive-provider-chest"].icons
+data.raw["logistic-container"]["passive-provider-chest"].inventory_size = 30
+data.raw["logistic-container"]["requester-chest"].icons =
+    data.raw.item["requester-chest"].icons
+data.raw["logistic-container"]["requester-chest"].inventory_size = 30
+data.raw["logistic-container"]["requester-chest"].max_logistic_slots = 10
+data.raw["logistic-container"]["buffer-chest"].icons =
+    data.raw.item["buffer-chest"].icons
+data.raw["logistic-container"]["buffer-chest"].inventory_size = 30
+data.raw["logistic-container"]["buffer-chest"].max_logistic_slots = 6
+data.raw["logistic-container"]["active-provider-chest"].icons =
+    data.raw.item["active-provider-chest"].icons
+data.raw["logistic-container"]["active-provider-chest"].inventory_size = 30
+data.raw["logistic-container"]["storage-chest"].next_upgrade = nil
+data.raw["logistic-container"]["passive-provider-chest"].next_upgrade = nil
+data.raw["logistic-container"]["requester-chest"].next_upgrade = nil
+data.raw["logistic-container"]["buffer-chest"].next_upgrade = nil
+data.raw["logistic-container"]["active-provider-chest"].next_upgrade = nil
 
 
 data.raw["pipe"]["pipe"].next_upgrade = "nullius-pipe-2"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "nullius-underground-pipe-2"
-data.raw["pipe"]["pipe"].fluid_box.height = 2
-data.raw["pipe"]["pipe"].fluid_box.base_area = 2
-data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.height = 2
-data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.base_area = 2
+data.raw["pipe"]["pipe"].fluid_box.volume = 500
 data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.max_underground_distance = 11
 data.raw.item["pipe"].stack_size = 200
 data.raw.item["pipe-to-ground"].stack_size = 100
@@ -249,7 +244,7 @@ data.raw.item["pipe-to-ground"].stack_size = 100
 data.raw.item["pump"].stack_size = 50
 data.raw["pump"]["pump"].fast_replaceable_group = "pump"
 data.raw["pump"]["pump"].next_upgrade = nil
-data.raw["pump"]["pump"].fluid_box.height = 10
+data.raw["pump"]["pump"].fluid_box.volume = 500
 data.raw["pump"]["pump"].pumping_speed = 200
 data.raw.pump["nullius-pump-2"].collision_mask = data.raw.pump.pump.collision_mask
 data.raw.pump["nullius-pump-2"].collision_box = data.raw.pump.pump.collision_box
@@ -265,7 +260,7 @@ data.raw.item["oil-refinery"].subgroup = "hidden"
 if mods["reskins-library"] then
   data.raw.item["pump"].icons = {{
     icon = "__base__/graphics/icons/pump.png",
-    icon_size = 64, icon_mipmaps = 4
+    icon_size = 64, 
   }}
 end
 data.raw.pump.pump.animations =
@@ -287,8 +282,8 @@ data.raw["mining-drill"]["nullius-geothermal-build-3"].collision_box =
 for _,fluid in pairs(data.raw.fluid) do
   local barrel_name = fluid.name .. "-barrel"
   if (string.sub(fluid.name, 1, 8) == "nullius-") and
-      data.raw.recipe["fill-" .. fluid.name .. "-barrel"] then  
-    local fill_name = "fill-" .. barrel_name
+      data.raw.recipe[fluid.name .. "-barrel"] then  
+    local fill_name = barrel_name
     local empty_name = "empty-" .. barrel_name
 	local subgroup = fluid.subgroup
     data.raw.item[barrel_name].subgroup = "fill-" .. subgroup

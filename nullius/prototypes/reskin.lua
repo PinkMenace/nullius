@@ -26,12 +26,12 @@ function label_icon(name, tier, color, etype)
     local icon_style = settings.startup["reskins-lib-icon-tier-labeling-style"].value
     local icon_name = "__reskins-library__/graphics/icons/tiers/"..icon_style.."/"..tier..".png"
     table.insert(data.raw[etype][name].icons, {
-      icon = icon_name, icon_size = 64, icon_mipmaps = 4
+      icon = icon_name, icon_size = 64
     })
     local blend = tiercolor(color)
     blend.a = 0.75
     table.insert(data.raw[etype][name].icons, {
-      icon = icon_name, icon_size = 64, icon_mipmaps = 4, tint = blend
+      icon = icon_name, icon_size = 64, tint = blend
     })
   end
 end
@@ -92,11 +92,5 @@ function animate_frame(frame, count, speed)
   ret.frame_count = 1
   ret.repeat_count = count
   ret.animation_speed = speed
-  if (ret.hr_version ~= nil) then
-    ret.hr_version.priority = "high"
-    ret.hr_version.frame_count = 1
-    ret.hr_version.repeat_count = count
-    ret.hr_version.animation_speed = speed
-  end
   return ret
 end
