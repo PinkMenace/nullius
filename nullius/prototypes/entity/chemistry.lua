@@ -70,36 +70,36 @@ data:extend({
     module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	  graphics_set = {
-	    animation = hydro_animation("hydro-plant",{0.77, 0.77, 0.68}),
-	    working_visualisations = scale_image(data.raw["assembling-machine"]["hydro-plant"].graphics_set.working_visualisations, 0.725),
+	    animation = hydro_animation("angels-hydro-plant",{0.77, 0.77, 0.68}),
+	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant"].graphics_set.working_visualisations, 0.725),
 	  },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = data.raw["assembling-machine"]["hydro-plant"].working_sound,
+    working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["hydro-plant"].fluid_boxes[1].pipe_picture,
+        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[1].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="input", position = {-1, -2}, direction = defines.direction.north }}
       },
       {
         production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["hydro-plant"].fluid_boxes[1].pipe_picture,
+        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[1].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="input", position = {1, -2}, direction = defines.direction.north }}
       },
       {
         production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["hydro-plant"].fluid_boxes[2].pipe_picture,
+        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[2].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {1, 2}, direction = defines.direction.south }}
       },
       {
         production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["hydro-plant"].fluid_boxes[3].pipe_picture,
+        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[3].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {-1, 2}, direction = defines.direction.south }}
@@ -136,11 +136,11 @@ data:extend({
     fast_replaceable_group = "hydro-plant",
     next_upgrade = "nullius-hydro-plant-3",
 	  graphics_set = {
-	    	animation = hydro_animation("hydro-plant-2",{0.8, 0.8, 0.9}),
-	      working_visualisations = scale_image(data.raw["assembling-machine"]["hydro-plant-2"].graphics_set.working_visualisations, 0.725),
+	    	animation = hydro_animation("angels-hydro-plant-2",{0.8, 0.8, 0.9}),
+	      working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant-2"].graphics_set.working_visualisations, 0.725),
 	  },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = data.raw["assembling-machine"]["hydro-plant-2"].working_sound,
+    working_sound = data.raw["assembling-machine"]["angels-hydro-plant-2"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -199,11 +199,11 @@ data:extend({
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "hydro-plant",
 	  graphics_set = {
-	      animation = hydro_animation("hydro-plant-3"),
-	      working_visualisations = scale_image(data.raw["assembling-machine"]["hydro-plant-3"].graphics_set.working_visualisations, 0.725),
+	      animation = hydro_animation("angels-hydro-plant-3"),
+	      working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant-3"].graphics_set.working_visualisations, 0.725),
 	  },
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = data.raw["assembling-machine"]["hydro-plant-3"].working_sound,
+    working_sound = data.raw["assembling-machine"]["angels-hydro-plant-3"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -290,7 +290,7 @@ data:extend({
     next_upgrade = "nullius-mirror-hydro-plant-3",
     graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-2"].graphics_set,
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = data.raw["assembling-machine"]["hydro-plant"].working_sound,
+    working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
 
     fluid_boxes = {
       {
@@ -356,7 +356,7 @@ data:extend({
     fast_replaceable_group = "hydro-plant",
     graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-3"].graphics_set,
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-    working_sound = data.raw["assembling-machine"]["hydro-plant"].working_sound,
+    working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
 
     fluid_boxes = {
       {

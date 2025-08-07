@@ -564,7 +564,7 @@ data:extend({
   }
 })
 
-local nanofab_pipes = util.table.deepcopy(data.raw["assembling-machine"]["crystallizer"].fluid_boxes[1].pipe_picture)
+local nanofab_pipes = util.table.deepcopy(data.raw["assembling-machine"]["angels-crystallizer"].fluid_boxes[1].pipe_picture)
 nanofab_pipes.south = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south)
 nanofab_pipes.south.shift = {0, -1}
 
@@ -597,10 +597,10 @@ data:extend({
     },
     energy_usage = "470kW",
     graphics_set = {
-      animation = scale_image(data.raw["assembling-machine"]["crystallizer"].graphics_set.animation, 0.775),
+      animation = scale_image(data.raw["assembling-machine"]["angels-crystallizer"].graphics_set.animation, 0.775),
     },
-    vehicle_impact_sound = data.raw["assembling-machine"]["crystallizer"].vehicle_impact_sound,
-    working_sound = data.raw["assembling-machine"]["crystallizer"].working_sound,
+    vehicle_impact_sound = data.raw["assembling-machine"]["angels-crystallizer"].vehicle_impact_sound,
+    working_sound = data.raw["assembling-machine"]["angels-crystallizer"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -680,7 +680,7 @@ data:extend({
     },
     energy_usage = "940kW",
     graphics_set = {
-        animation = scale_image(data.raw["assembling-machine"]["crystallizer-2"].graphics_set.animation, 0.775),
+        animation = scale_image(data.raw["assembling-machine"]["angels-crystallizer-2"].graphics_set.animation, 0.775),
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = data.raw["assembling-machine"]["nullius-nanofabricator-1"].working_sound,
@@ -824,7 +824,7 @@ data:extend({
       apparent_volume = 0.5
     },
     graphics_set = {
-        animation = scale_image(data.raw["assembling-machine"]["powder-mixer"].graphics_set.animation, 0.52)
+        animation = scale_image(data.raw["assembling-machine"]["angels-powder-mixer"].graphics_set.animation, 0.52)
     }
   }
 })

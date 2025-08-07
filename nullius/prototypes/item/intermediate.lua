@@ -4614,7 +4614,7 @@ data:extend({
     order = "nullius-c",
     stack_size = 500,
     place_as_tile = {
-      result = "clay-bricks",
+      result = "angels-tile-clay-brick",
       condition_size = 1,
       condition = { layers = {water_tile=true} }
     }

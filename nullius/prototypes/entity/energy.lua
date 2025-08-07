@@ -1039,7 +1039,7 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 }
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = data.raw["mining-drill"]["thermal-extractor"].working_sound,
+    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1184,7 +1184,7 @@ data:extend({
     energy_usage = "495kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = data.raw["mining-drill"]["thermal-extractor"].working_sound,
+    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-1"].fluid_boxes,
     
     graphics_set = {
@@ -1316,7 +1316,7 @@ data:extend({
     energy_usage = "2925kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = data.raw["mining-drill"]["thermal-extractor"].working_sound,
+    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1461,7 +1461,7 @@ data:extend({
     energy_usage = "1930kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-2"].resistances,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = data.raw["mining-drill"]["thermal-extractor"].working_sound,
+    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-2"].fluid_boxes,
 
     graphics_set = {
@@ -1557,7 +1557,7 @@ data:extend({
     energy_usage = "7725kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = data.raw["mining-drill"]["thermal-extractor"].working_sound,
+    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1697,7 +1697,7 @@ data:extend({
     energy_usage = "7650kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-    working_sound = data.raw["mining-drill"]["thermal-extractor"].working_sound,
+    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",

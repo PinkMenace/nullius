@@ -125,7 +125,7 @@ data:extend({
     name = "nullius-void-water-saline",
     icon = data.raw.fluid["nullius-saline"].icon,
     icon_size = data.raw.fluid["nullius-saline"].icon_size,
-    crafting_machine_tint = { primary = data.raw.fluid["water-saline"].flow_color },
+    crafting_machine_tint = { primary = data.raw.fluid["angels-water-saline"].flow_color },
     category = "nullius-liquid-void",
     subgroup = "nullius-liquid-void",
     hide_from_player_crafting = true,

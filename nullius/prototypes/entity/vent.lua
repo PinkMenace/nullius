@@ -362,7 +362,7 @@ data:extend({
         }
       }
     },
-    placeable_position_visualization = data.raw["offshore-pump"]["seafloor-pump"].placeable_position_visualization,
+    placeable_position_visualization = data.raw["offshore-pump"]["angels-seafloor-pump"].placeable_position_visualization,
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
@@ -438,7 +438,7 @@ data:extend({
         }
       }
     },
-    placeable_position_visualization = data.raw["offshore-pump"]["seafloor-pump"].placeable_position_visualization,
+    placeable_position_visualization = data.raw["offshore-pump"]["angels-seafloor-pump"].placeable_position_visualization,
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
