@@ -946,8 +946,8 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
         cover.layers[1].tint = tint
       end
 
-	  local subdir = string.sub(junction.pictures.up.filename, 1, 50)
-      junction.pictures.up = { layers = {
+	  local subdir = string.sub(junction.pictures.north.filename, 1, 50)
+      junction.pictures.north = { layers = {
 	    {
           filename = subdir .. "pipe-covers/hr-pipe-cover-north.png",
           priority = "extra-high",
@@ -956,7 +956,7 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
 		      tint = tint,
           scale = 0.5
 		  },
-		  junction.pictures.up
+		  junction.pictures.north
       }}
     end
 
