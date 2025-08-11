@@ -45,7 +45,8 @@ building_types_list = {
   "heat-pipe",
   "artillery-turret",
   "electric-turret",
-  "fluid-turret"
+  "fluid-turret",
+  "valve"
 }
 
 hide_entity_list = {

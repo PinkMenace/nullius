@@ -5,10 +5,6 @@ local BASEENTITY = "__base__/graphics/entity/"
 
 require("pipe_graphics")
 
--- TODO: handle valves correctly
-data.raw["storage-tank"]["valve-return"] = table.deepcopy(data.raw["storage-tank"]["storage-tank"])
-data.raw["storage-tank"]["valve-return"].name = "valve-return"
-
 local op = data.raw["offshore-pump"]["offshore-pump"]
 local si1 = {
   type = "assembling-machine",
@@ -1246,9 +1242,10 @@ data:extend({
     },
     pipe_covers = pipecoverspictures()
   },
-
+  
+  ---------------------------------------- VALVES -----------------------------------------------
   {
-    type = "storage-tank",
+    type = "valve",
     name = "nullius-priority-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-inspector.png",
     icon_size = 32,
@@ -1261,94 +1258,90 @@ data:extend({
       { type = "fire", percent = 75 }
     },
     fast_replaceable_group = "pipe",
-    two_direction_only = false,
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      volume = 500,
+      volume = 100,
       pipe_connections = {
-        { position = {0, 0.1}, direction = defines.direction.south},
-        { position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
       },
-	  pipe_covers = pipecoverspictures()
+	    pipe_covers = pipecoverspictures()
     },
-    flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+
+    impact_category = "metal",
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
-
-    pictures = {
-      picture = {
-        north = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
-              priority = "extra-high",
-              frames = 1,
-              width = 64,
-              height = 64
-			}
-		  }
-        },
-        east = {
+    
+    mode = "overflow",
+    threshold = 0.25,
+    flow_rate = 5,
+    
+    animations = {
+      north = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+            scale = 0.5,
+            shift = {0, -0.5}
+          },
+		      {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
+            priority = "extra-high",
+            frame_count = 1,
+            width = 64,
+            height = 64
+		  	  }
+		    }
+      },
+      east = {
           filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           x = 64,
-          frames = 1,
+          frame_count = 1,
           width = 64,
           height = 64,
           shift = {0, 0}
-        },
-        south = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
-              priority = "extra-high",
-              x = 128,
-              frames = 1,
-              width = 64,
-              height = 64,
-              shift = {0, -0.05}
-			}
-		  }
-        },
-        west = {
-          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
-          priority = "extra-high",
-          x = 192,
-          frames = 1,
-          width = 64,
-          height = 64,
-          shift = {0, 0}
-        }
       },
-      fluid_background = data.raw["storage-tank"]["valve-return"].pictures.fluid_background,
-      window_background = data.raw["storage-tank"]["valve-return"].pictures.window_background,
-      flow_sprite = data.raw["storage-tank"]["valve-return"].pictures.flow_sprite,
-      gas_flow = data.raw["storage-tank"]["valve-return"].pictures.gas_flow
+      south = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+			      scale = 0.5,
+			      shift = {0, -0.5}
+			    },
+		      {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
+            priority = "extra-high",
+            x = 128,
+            frame_count = 1,
+            width = 64,
+            height = 64,
+            shift = {0, -0.05}
+			    }
+		    }
+      },
+      west = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
+        priority = "extra-high",
+        x = 192,
+        frame_count = 1,
+        width = 64,
+        height = 64,
+        shift = {0, 0}
+      }
     }
   },
-
+  
   {
-    type = "storage-tank",
+    type = "valve",
     name = "nullius-one-way-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
     icon_size = 32,
@@ -1361,94 +1354,89 @@ data:extend({
       { type = "fire", percent = 75 }
     },
     fast_replaceable_group = "pipe",
-    two_direction_only = false,
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      volume = 500,
+      volume = 100,
       pipe_connections = {
-        { position = {0, 0.1}, direction = defines.direction.south},
-        { position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
       },
-	  pipe_covers = pipecoverspictures()
+	    pipe_covers = pipecoverspictures()
     },
-    flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+
+    impact_category = "metal",
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
-
-    pictures = {
-      picture = {
-        north = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
-              priority = "extra-high",
-              frames = 1,
-              width = 64,
-              height = 64
-			}
-		  }
-        },
-        east = {
+    
+    mode = "one-way",
+    flow_rate = 5,
+    
+    animations = {
+      north = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+            scale = 0.5,
+            shift = {0, -0.5}
+			    },
+		      {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
+            priority = "extra-high",
+            frame_count = 1,
+            width = 64,
+            height = 64
+			    }
+		    }
+      },
+      east = {
           filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           x = 64,
-          frames = 1,
+          frame_count = 1,
           width = 64,
           height = 64,
           shift = {0, 0}
-        },
-        south = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
-              priority = "extra-high",
-              x = 128,
-              frames = 1,
-              width = 64,
-              height = 64,
-              shift = {0, -0.05}
-			}
-		  }
-        },
-        west = {
-          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
-          priority = "extra-high",
-          x = 192,
-          frames = 1,
-          width = 64,
-          height = 64,
-          shift = {0, 0}
-        }
       },
-      fluid_background = data.raw["storage-tank"]["valve-return"].pictures.fluid_background,
-      window_background = data.raw["storage-tank"]["valve-return"].pictures.window_background,
-      flow_sprite = data.raw["storage-tank"]["valve-return"].pictures.flow_sprite,
-      gas_flow = data.raw["storage-tank"]["valve-return"].pictures.gas_flow
+      south = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+			      scale = 0.5,
+			      shift = {0, -0.5}
+			    },
+		      {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
+            priority = "extra-high",
+            x = 128,
+            frame_count = 1,
+            width = 64,
+            height = 64,
+            shift = {0, -0.05}
+			    }
+		    }
+      },
+      west = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
+        priority = "extra-high",
+        x = 192,
+        frame_count = 1,
+        width = 64,
+        height = 64,
+        shift = {0, 0}
+      }
     }
   },
 
   {
-    type = "storage-tank",
+    type = "valve",
     name = "nullius-top-up-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-converter.png",
     icon_size = 32,
@@ -1461,94 +1449,90 @@ data:extend({
       { type = "fire", percent = 75 }
     },
     fast_replaceable_group = "pipe",
-    two_direction_only = false,
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      volume = 500,
+      volume = 100,
       pipe_connections = {
-        { position = {0, 0.1}, direction = defines.direction.south},
-        { position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
       },
-	  pipe_covers = pipecoverspictures()
+	    pipe_covers = pipecoverspictures()
     },
-    flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+
+    impact_category = "metal",
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
-
-    pictures = {
-      picture = {
-        north = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
-              priority = "extra-high",
-              frames = 1,
-              width = 64,
-              height = 64
-			}
-		  }
-        },
-        east = {
-          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
-          priority = "extra-high",
-          x = 64,
-          frames = 1,
-          width = 64,
-          height = 64,
-          shift = {0, 0}
-        },
-        south = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
-              priority = "extra-high",
-              x = 128,
-              frames = 1,
-              width = 64,
-              height = 64,
-              shift = {0, -0.05}
-			}
-		  }
-        },
-        west = {
-          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
-          priority = "extra-high",
-          x = 192,
-          frames = 1,
-          width = 64,
-          height = 64,
-          shift = {0, 0}
-        }
+    
+    mode = "top-up",
+    threshold = 0.5,
+    flow_rate = 5,
+    
+    animations = {
+      north = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+            scale = 0.5,
+            shift = {0, -0.5}
+			    },
+  		    {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+            priority = "extra-high",
+            frames = 1,
+            width = 64,
+            height = 64
+			    }
+		    }
       },
-      fluid_background = data.raw["storage-tank"]["valve-return"].pictures.fluid_background,
-      window_background = data.raw["storage-tank"]["valve-return"].pictures.window_background,
-      flow_sprite = data.raw["storage-tank"]["valve-return"].pictures.flow_sprite,
-      gas_flow = data.raw["storage-tank"]["valve-return"].pictures.gas_flow
+      east = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+        priority = "extra-high",
+        x = 64,
+        frame_count = 1,
+        width = 64,
+        height = 64,
+        shift = {0, 0}
+      },
+      south = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+            scale = 0.5,
+            shift = {0, -0.5}
+			    },
+		      {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+            priority = "extra-high",
+            x = 128,
+            frame_count = 1,
+            width = 64,
+            height = 64,
+            shift = {0, -0.05}
+			    }
+		    }
+      },
+      west = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+        priority = "extra-high",
+        x = 192,
+        frame_count = 1,
+        width = 64,
+        height = 64,
+        shift = {0, 0}
+      }
     }
   },
 
   {
-    type = "storage-tank",
+    type = "valve",
     name = "nullius-relief-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-return.png",
     icon_size = 32,
@@ -1561,89 +1545,85 @@ data:extend({
       { type = "fire", percent = 75 }
     },
     fast_replaceable_group = "pipe",
-    two_direction_only = false,
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     fluid_box = {
-      volume = 500,
+      volume = 100,
       pipe_connections = {
-        { position = {0, 0.1}, direction = defines.direction.south},
-        { position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
       },
-	  pipe_covers = pipecoverspictures()
+	    pipe_covers = pipecoverspictures()
     },
-    flow_length_in_ticks = 360,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+
+    impact_category = "metal",
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
     circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
-
-    pictures = {
-      picture = {
-        north = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
-              priority = "extra-high",
-              frames = 1,
-              width = 64,
-              height = 64
-			}
-		  }
-        },
-        east = {
-          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
-          priority = "extra-high",
-          x = 64,
-          frames = 1,
-          width = 64,
-          height = 64,
-          shift = {0, 0}
-        },
-        south = {
-		  layers = {
-		    {
-              filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
-              frames = 1,
-              width = 128,
-              height = 64,
-			  scale = 0.5,
-			  shift = {0, -0.5}
-			},
-		    {
-              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
-              priority = "extra-high",
-              x = 128,
-              frames = 1,
-              width = 64,
-              height = 64,
-              shift = {0, -0.05}
-			}
-		  }
-        },
-        west = {
-          filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
-          priority = "extra-high",
-          x = 192,
-          frames = 1,
-          width = 64,
-          height = 64,
-          shift = {0, 0}
-        }
+    
+    mode = "overflow",
+    threshold = 0.75,
+    flow_rate = 5,
+    
+    animations = {
+      north = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+            scale = 0.5,
+            shift = {0, -0.5}
+			    },
+		      {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
+            priority = "extra-high",
+            frame_count = 1,
+            width = 64,
+            height = 64
+			    }
+		    }
       },
-      fluid_background = data.raw["storage-tank"]["valve-return"].pictures.fluid_background,
-      window_background = data.raw["storage-tank"]["valve-return"].pictures.window_background,
-      flow_sprite = data.raw["storage-tank"]["valve-return"].pictures.flow_sprite,
-      gas_flow = data.raw["storage-tank"]["valve-return"].pictures.gas_flow
+      east = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
+        priority = "extra-high",
+        x = 64,
+        frame_count = 1,
+        width = 64,
+        height = 64,
+        shift = {0, 0}
+      },
+      south = {
+		    layers = {
+		      {
+            filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+            frame_count = 1,
+            width = 128,
+            height = 64,
+            scale = 0.5,
+            shift = {0, -0.5}
+			    },
+  		    {
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
+            priority = "extra-high",
+            x = 128,
+            frame_count = 1,
+            width = 64,
+            height = 64,
+            shift = {0, -0.05}
+			    }
+		    }
+      },
+      west = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
+        priority = "extra-high",
+        x = 192,
+        frame_count = 1,
+        width = 64,
+        height = 64,
+        shift = {0, 0}
+      }
     }
   },
 
@@ -1655,7 +1635,6 @@ data:extend({
     minable = {mining_time=1.2, result="nullius-medium-tank-2"},
     max_health = 500,
     next_upgrade = "nullius-medium-tank-3",
-    fast_replaceable_group = "medium-tank",
     corpse = "storage-tank-remnants",
     fast_replaceable_group = "medium-tank",
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
