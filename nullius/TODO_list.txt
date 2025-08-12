@@ -13,5 +13,4 @@ mods compatibility
 do we remove the legacy items/recipes/buildings ?
 why does grass drone take this long to spawn grass ?? -> it also takes very long on 1.1
 decide what to do with angels stuff : depend only on the graphics ? then we'll have to recreate some of their entities and re implement some of angels functions
-selector-combinator and display panel not included in mod
 update changelog and info.json(min version of dependencies) before publishing

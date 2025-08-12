@@ -2797,6 +2797,78 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "nullius-selector-circuit",
+    localised_name = {"entity-name.nullius-selector-circuit"},
+    enabled = false,
+    category = "tiny-crafting",
+    always_show_made_in = true,
+    energy_required = 3,
+    ingredients = {
+      {"arithmetic-combinator", 1},
+      {"display-panel", 1},
+      {"nullius-aluminum-wire", 1},
+      {"nullius-polycrystalline-silicon", 2},
+    },
+    results = {
+      {type = "item", name = "selector-combinator", amount = 1}
+    }
+  },
+  {
+    type = "recipe",
+    name = "nullius-boxed-selector-circuit",
+    enabled = false,
+    category = "medium-only-assembly",
+    subgroup = "boxed-circuit",
+    always_show_made_in = true,
+    energy_required = 15,
+    ingredients = {
+      {"nullius-box-arithmetic-circuit", 1},
+      {"nullius-box-display-panel", 1},
+      {"nullius-box-aluminum-wire", 1},
+      {"nullius-box-polycrystalline-silicon", 2},
+    },
+    results = {
+      {type = "item", name = "nullius-box-selector-circuit", amount = 1}
+    }
+  },
+  {
+    type = "recipe",
+    name = "nullius-display-panel",
+    localised_name = {"entity-name.display-panel"},
+    enabled = false,
+    category = "tiny-crafting",
+    always_show_made_in = true,
+    energy_required = 3,
+    ingredients = {
+      {"decider-combinator", 1},
+      {"nullius-glass", 1},
+      {"nullius-plastic", 1},
+      {"nullius-aluminum-wire", 1}
+    },
+    results = {
+      {type = "item", name = "display-panel", amount = 1}
+    }
+  },
+  {
+    type = "recipe",
+    name = "nullius-boxed-display-panel",
+    enabled = false,
+    category = "medium-only-assembly",
+    subgroup = "boxed-circuit",
+    always_show_made_in = true,
+    energy_required = 15,
+    ingredients = {
+      {"nullius-box-logic-circuit", 1},
+      {"nullius-box-glass", 1},
+      {"nullius-box-plastic", 1},
+      {"nullius-box-aluminum-wire", 1}
+    },
+    results = {
+      {type = "item", name = "nullius-box-display-panel", amount = 1}
+    }
+  },
+  {
+    type = "recipe",
     name = "nullius-antenna",
     localised_name = {"entity-name.nullius-antenna"},
     enabled = false,

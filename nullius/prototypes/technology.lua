@@ -2392,7 +2392,11 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-green-wire"
-      }
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-display-panel"
+      },
     },
     unit = {
       count = 25,
@@ -5753,6 +5757,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-optical-cable"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-selector-circuit"
       }
     },
     unit = {
@@ -5869,6 +5877,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-unbox-arithmetic-circuit"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-box-display-panel"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-unbox-display-panel"
       },
       {
         type = "unlock-recipe",
@@ -7719,6 +7735,14 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "nullius-box-selector-circuit"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-unbox-selector-circuit"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "nullius-box-underground-belt-1"
       },
       {
@@ -8163,6 +8187,14 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-boxed-arithmetic-circuit"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-boxed-display-panel"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-boxed-selector-circuit"
       },
       {
         type = "unlock-recipe",

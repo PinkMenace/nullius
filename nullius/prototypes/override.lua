@@ -35,6 +35,8 @@ data.raw["power-switch"]["power-switch"].localised_description = {"",
     {"entity-description.power-switch"}, {"entity-description.nullius-power-switch",
 	    {"item-name.nullius-insulated-wire"}, "copper-cable"}}
 data.raw["power-switch"]["power-switch"].minable.mining_time = 0.6
+data.raw.item["display-panel"].order = "nullius-ga"
+data.raw["display-panel"]["display-panel"].minable.mining_time = 0.6
 
 data.raw["constant-combinator"]["constant-combinator"].localised_name = {"entity-name.nullius-memory-circuit"}
 data.raw["constant-combinator"]["constant-combinator"].minable.mining_time = 1
@@ -58,6 +60,15 @@ data.raw.item["decider-combinator"].order = "nullius-e"
 data.raw["decider-combinator"]["decider-combinator"].energy_source =
     data.raw["arithmetic-combinator"]["arithmetic-combinator"].energy_source
 data.raw["decider-combinator"]["decider-combinator"].active_energy_usage = "100W"
+
+data.raw["selector-combinator"]["selector-combinator"].localised_name = {"entity-name.nullius-selector-circuit"}
+data.raw["selector-combinator"]["selector-combinator"].minable.mining_time = 1
+data.raw.item["selector-combinator"].localised_name = {"entity-name.nullius-selector-circuit"}
+data.raw.item["selector-combinator"].order = "nullius-gb"
+data.raw["selector-combinator"]["selector-combinator"].energy_source =
+    data.raw["arithmetic-combinator"]["arithmetic-combinator"].energy_source
+data.raw["selector-combinator"]["selector-combinator"].active_energy_usage = "100W"
+
 data.raw["programmable-speaker"]["programmable-speaker"].localised_name = {"entity-name.nullius-antenna"}
 data.raw["programmable-speaker"]["programmable-speaker"].localised_description = {"entity-description.nullius-antenna"}
 data.raw.item["programmable-speaker"].localised_name = {"entity-name.nullius-antenna"}

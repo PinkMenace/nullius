@@ -140,6 +140,7 @@ data.raw.item["big-electric-pole"].stack_size = 50
 data.raw.item["constant-combinator"].localised_name = {"entity-name.nullius-memory-circuit"}
 data.raw.item["arithmetic-combinator"].localised_name = {"entity-name.nullius-arithmetic-circuit"}
 data.raw.item["decider-combinator"].localised_name = {"entity-name.nullius-logic-circuit"}
+data.raw.item["selector-combinator"].localised_name = {"entity-name.nullius-selector-circuit"}
 data.raw.item["programmable-speaker"].localised_name = {"entity-name.nullius-antenna"}
 data.raw.item["small-lamp"].localised_name = {"entity-name.nullius-lamp-1"}
 data.raw.item["big-electric-pole"].localised_name = {"entity-name.nullius-pylon-1"}
@@ -248,8 +249,10 @@ create_boxed_item("filter-1", "mechanical", "bb")
 create_boxed_item("logic-circuit", "circuit", "d", "decider-combinator")
 create_boxed_item("memory-circuit", "circuit", "f", "constant-combinator")
 create_boxed_item("arithmetic-circuit", "circuit", "e", "arithmetic-combinator")
-create_boxed_item("red-wire", "circuit", "b", "nullius-red-wire")
-create_boxed_item("green-wire", "circuit", "c", "nullius-green-wire")
+create_boxed_item("selector-circuit", "circuit", "gb", "selector-combinator")
+create_boxed_item("display-panel", "circuit", "ga", "display-panel")
+create_boxed_item("red-wire", "circuit", "b")
+create_boxed_item("green-wire", "circuit", "c")
 create_boxed_item("bpa", "organic", "c")
 create_boxed_item("acrylic-fiber", "organic", "f")
 create_boxed_item("carbon-fiber", "organic", "g")
