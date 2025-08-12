@@ -2321,11 +2321,11 @@ data:extend({
     category = "huge-assembly",
     energy_required = 300,
     ingredients = {
-      {"nullius-terraforming-drone-grey", 1},
-      {"nullius-box-rocket-fuel", 20},
-      {"nullius-box-coal", 30000},
-      {"nullius-large-dispatch-chest-2", 1},
-      {"nullius-large-miner-2", 4}
+      {type = "item", name = "nullius-terraforming-drone-grey", amount = 1},
+      {type = "item", name = "nullius-box-rocket-fuel", amount = 20},
+      {type = "item", name = "nullius-box-coal", amount = 30000},
+      {type = "item", name = "nullius-large-dispatch-chest-2", amount = 1},
+      {type = "item", name = "nullius-large-miner-2", amount = 4}
     },
     results = {
       {type = "item", name = "nullius-sequestration-coal-drone", amount = 1}
@@ -2340,8 +2340,8 @@ data:extend({
     category = "small-crafting",
     energy_required = 10,
     ingredients = {
-      {"nullius-terraforming-remote-grey", 1},
-      {"nullius-yield-module-3", 1}
+      {type = "item", name = "nullius-terraforming-remote-grey", amount = 1},
+      {type = "item", name = "nullius-yield-module-3", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-sequestration-coal-remote", amount = 1}
@@ -2375,8 +2375,8 @@ data:extend({
     category = "small-crafting",
     energy_required = 10,
     ingredients = {
-      {"nullius-terraforming-remote-tan", 1},
-      {"nullius-yield-module-3", 1}
+      {type = "item", name = "nullius-terraforming-remote-tan", amount = 1},
+      {type = "item", name = "nullius-yield-module-3", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-sequestration-petroleum-remote", amount = 1}
@@ -4963,8 +4963,8 @@ data:extend({
     order = "nullius-cb",
     energy_required = 3,
     ingredients = {
-      {"nullius-aluminum-wire", 2},
-      {"nullius-wood", 1}
+      {type = "item", name = "nullius-aluminum-wire", amount = 2},
+      {type = "item", name = "nullius-wood", amount = 1}
     },
     results = {
       {type = "item", name = "small-electric-pole", amount = 2}
@@ -4996,8 +4996,8 @@ data:extend({
     order = "nullius-wbb",
     energy_required = 15,
     ingredients = {
-      {"nullius-box-aluminum-wire", 2},
-      {"nullius-box-wood", 1}
+      {type = "item", name = "nullius-box-aluminum-wire", amount = 2},
+      {type = "item", name = "nullius-box-wood", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-power-pole-1", amount = 2}
@@ -5258,10 +5258,10 @@ data:extend({
     order = "nullius-eb",
     energy_required = 8,
     ingredients = {
-      {"nullius-steel-wire", 1},
-	  {"nullius-gypsum", 2},
-      {"nullius-wood", 4},
-      {"nullius-textile", 1}
+      {type = "item", name = "nullius-steel-wire", amount = 1},
+	  {type = "item", name = "nullius-gypsum", amount = 2},
+      {type = "item", name = "nullius-wood", amount = 4},
+      {type = "item", name = "nullius-textile", amount = 1}
     },
     results = {
       {type="item", name="nullius-insulation", amount=3},
@@ -5292,10 +5292,10 @@ data:extend({
     order = "nullius-wdb",
     energy_required = 40,
     ingredients = {
-      {"nullius-box-steel-wire", 1},
-	  {"nullius-box-gypsum", 2},
-      {"nullius-box-wood", 4},
-      {"nullius-box-textile", 1}
+      {type = "item", name = "nullius-box-steel-wire", amount = 1},
+	  {type = "item", name = "nullius-box-gypsum", amount = 2},
+      {type = "item", name = "nullius-box-wood", amount = 4},
+      {type = "item", name = "nullius-box-textile", amount = 1}
     },
     results = {
       {type="item", name="nullius-box-insulation", amount=3},
@@ -5327,8 +5327,8 @@ data:extend({
     order = "nullius-f",
     energy_required = 15,
     ingredients = {
-      {"nullius-small-assembler-1", 5},
-      {"nullius-wood", 4}
+      {type = "item", name = "nullius-small-assembler-1", amount = 5},
+      {type = "item", name = "nullius-wood", amount = 4}
     },
     results = {
       {type="item", name="nullius-medium-assembler-1", amount=3},
@@ -5360,8 +5360,8 @@ data:extend({
     order = "nullius-g",
     energy_required = 12,
     ingredients = {
-      {"nullius-small-miner-1", 3},
-      {"nullius-box-wood", 1}
+      {type = "item", name = "nullius-small-miner-1", amount = 3},
+      {type = "item", name = "nullius-box-wood", amount = 1}
     },
     results = {
       {type="item", name="nullius-medium-miner-1", amount=2},
