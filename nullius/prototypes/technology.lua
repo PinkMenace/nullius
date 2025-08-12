@@ -19,9 +19,9 @@ data:extend({
         icon = "__base__/graphics/icons/stone.png",
         icon_size = 64,
         
-        scale = 1.6,
-        shift = {0, 36},
-        tint = {r=0.6, g=0.4, b=0.2, a=0.5}
+        scale = 0.8,
+        shift = {0, 20},
+        tint = {r=0.6, g=0.4, b=0.2, a=0.8}
       }
     },
     effects = {
@@ -35,7 +35,8 @@ data:extend({
       ingredients = {},
       time = 3
     },
-    ignore_tech_cost_multiplier = true
+    ignore_tech_cost_multiplier = true,
+    essential = true
   },
   {
     type = "technology",
@@ -72,9 +73,9 @@ data:extend({
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
         
-        scale = 1.8,
-        shift = {0, 34},
-        tint = {r=1, g=1, b=1, a=0.5}
+        scale = 1,
+        shift = {0, 20},
+        tint = {r=1, g=1, b=1, a=0.8}
       }
     },
     effects = {
@@ -89,7 +90,8 @@ data:extend({
       time = 6
     },
     prerequisites = {"nullius-geology-1"},
-    ignore_tech_cost_multiplier = true
+    ignore_tech_cost_multiplier = true,
+    essential = true
   },
 
   {
@@ -653,9 +655,9 @@ data:extend({
         icon = "__base__/graphics/icons/iron-gear-wheel.png",
         icon_size = 64,
         
-        scale = 1.6,
-        shift = {0, 40},
-        tint = {r=0.6, g=1, b=1, a=0.5}
+        scale = 0.9,
+        shift = {0, 20},
+        tint = {r=0.6, g=1, b=1, a=0.7}
       }
     },
     effects = {
@@ -670,7 +672,8 @@ data:extend({
       time = 8
     },
     prerequisites = {"nullius-electromagnetism-1", "nullius-metallurgy-1"},
-    ignore_tech_cost_multiplier = true
+    ignore_tech_cost_multiplier = true,
+    essential = true
   },
 
   {
@@ -2059,9 +2062,9 @@ data:extend({
         icon = "__base__/graphics/icons/processing-unit.png",
         icon_size = 64,
         
-        scale = 1.1,
-        shift = {0, 34},
-        tint = {r=1, g=1, b=1, a=0.5}
+        scale = 0.7,
+        shift = {0, 20},
+        tint = {r=1, g=1, b=1, a=0.8}
       }
     },
     effects = {
@@ -2076,7 +2079,8 @@ data:extend({
       time = 4
     },
     prerequisites = {"nullius-electronics-1", "nullius-checkpoint-mass-production"},
-    ignore_tech_cost_multiplier = true
+    ignore_tech_cost_multiplier = true,
+    essential = true
   },
 
   {
@@ -2252,9 +2256,9 @@ data:extend({
         icon = "__base__/graphics/icons/stone.png",
         icon_size = 64,
         
-        scale = 1.6,
-        shift = {0, 36},
-        tint = {r=0.6, g=0.4, b=0.2, a=0.5}
+        scale = 0.8,
+        shift = {0, 20},
+        tint = {r=0.6, g=0.4, b=0.2, a=0.8}
       }
     },
     effects = {
@@ -2270,7 +2274,8 @@ data:extend({
         {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1}},
       time = 15
     },
-    prerequisites = {"nullius-checkpoint-lab"}
+    prerequisites = {"nullius-checkpoint-lab"},
+    essential = true
   },
   {
     type = "technology",
@@ -3015,9 +3020,9 @@ data:extend({
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
         
-        scale = 1.8,
-        shift = {0, 34},
-        tint = {r=1, g=1, b=1, a=0.5}
+        scale = 1,
+        shift = {0, 20},
+        tint = {r=1, g=1, b=1, a=0.8}
       }
     },
     effects = {
@@ -3034,7 +3039,8 @@ data:extend({
       },
       time = 30
     },
-    prerequisites = {"nullius-checkpoint-volcanic-gas", "nullius-nitrogen-chemistry-1"}
+    prerequisites = {"nullius-checkpoint-volcanic-gas", "nullius-nitrogen-chemistry-1"},
+    essential = true
   },
   {
     type = "technology",
@@ -4053,7 +4059,8 @@ data:extend({
       },
       time = 30
     },
-    prerequisites = {"nullius-plumbing-4", "nullius-chirality-2", "nullius-checkpoint-chemical-engineering"}
+    prerequisites = {"nullius-plumbing-4", "nullius-chirality-2", "nullius-checkpoint-chemical-engineering"},
+    essential = true
   },
 
   {
@@ -9487,8 +9494,8 @@ data:extend({
       {
         icon = "__base__/graphics/icons/tooltips/tooltip-category-nuclear.png",
         icon_size = 40,
-        scale = 2.5,
-        shift = {-4, 36},
+        scale = 1.5,
+        shift = {0, 20},
         tint = {r=0.6, g=0.3, b=0.2, a=1}
       }
     },
@@ -9515,7 +9522,8 @@ data:extend({
       },
       time = 40
     },
-    prerequisites = {"nullius-mass-production-7", "nullius-exploration-2", "nullius-checkpoint-lab-2"}
+    prerequisites = {"nullius-mass-production-7", "nullius-exploration-2", "nullius-checkpoint-lab-2"},
+    essential = true
   },
 
   {
@@ -10050,9 +10058,10 @@ data:extend({
       {
         icon = "__base__/graphics/icons/iron-gear-wheel.png",
         icon_size = 64,
-        scale = 1.6,
-        shift = {0, 40},
-        tint = {r=0.6, g=1, b=1, a=0.5}
+        
+        scale = 0.9,
+        shift = {0, 20},
+        tint = {r=0.6, g=1, b=1, a=0.7}
       }
     },
     effects = {
@@ -10073,7 +10082,8 @@ data:extend({
       },
       time = 40
     },
-    prerequisites = {"nullius-automation-3", "nullius-pumping-3", "nullius-checkpoint-logistics-3"}
+    prerequisites = {"nullius-automation-3", "nullius-pumping-3", "nullius-checkpoint-logistics-3"},
+    essential = true
   },
   {
     type = "technology",
@@ -10833,7 +10843,8 @@ data:extend({
       },
       time = 45
     },
-    prerequisites = {"nullius-battery-storage-3", "nullius-calcium-production"}
+    prerequisites = {"nullius-battery-storage-3", "nullius-calcium-production"},
+    essential = true
   },
   {
     type = "technology",
@@ -11998,9 +12009,9 @@ data:extend({
         icon = "__base__/graphics/icons/processing-unit.png",
         icon_size = 64,
         
-        scale = 1.1,
-        shift = {0, 34},
-        tint = {r=1, g=1, b=1, a=0.5}
+        scale = 0.7,
+        shift = {0, 20},
+        tint = {r=1, g=1, b=1, a=0.8}
       }
     },
     effects = {
@@ -12022,7 +12033,8 @@ data:extend({
       },
       time = 55
     },
-    prerequisites = {"nullius-miniaturization-1", "nullius-toolmaking-8"}
+    prerequisites = {"nullius-miniaturization-1", "nullius-toolmaking-8"},
+    essential = true
   },
   {
     type = "technology",
@@ -12207,7 +12219,8 @@ data:extend({
       time = 55
     },
     prerequisites = {"nullius-freight-transportation-3", "nullius-demolitions-2",
-		"nullius-high-pressure-chemistry-2"}
+		"nullius-high-pressure-chemistry-2"},
+		essential = true
   },
   {
     type = "technology",
@@ -12839,7 +12852,8 @@ data:extend({
       },
       time = 60
     },
-    prerequisites = {"nullius-personal-transportation-4", "nullius-braking-8"}
+    prerequisites = {"nullius-personal-transportation-4", "nullius-braking-8"},
+    essential = true
   },
 
   {
@@ -12874,7 +12888,8 @@ data:extend({
       },
       time = 60
     },
-    prerequisites = {"nullius-rocket-science-2", "nullius-terraforming-3", "nullius-broadcasting-4"}
+    prerequisites = {"nullius-rocket-science-2", "nullius-terraforming-3", "nullius-broadcasting-4"},
+    essential = true
   },
 
   {
@@ -12918,7 +12933,8 @@ data:extend({
       },
       time = 60
     },
-    prerequisites = { "nullius-astronomy", "nullius-biochemistry-7" }
+    prerequisites = { "nullius-astronomy", "nullius-biochemistry-7" },
+    essential = true
   },
   {
     type = "technology",
@@ -12961,7 +12977,8 @@ data:extend({
       },
       time = 60
     },
-    prerequisites = { "nullius-evolution-2", "nullius-optimization-6" }
+    prerequisites = { "nullius-evolution-2", "nullius-optimization-6" },
+    essential = true
   },
   {
     type = "technology",
@@ -15553,7 +15570,8 @@ data:extend({
       },
       time = 60
     },
-    prerequisites = {"nullius-asteroid-mining-2", "nullius-checkpoint-android-2"}
+    prerequisites = {"nullius-asteroid-mining-2", "nullius-checkpoint-android-2"},
+    essential = true
   },
   {
     type = "technology",
