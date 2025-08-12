@@ -208,7 +208,7 @@ end
 script.on_event(defines.events.on_player_created,
   function(event)
     local player = game.players[event.player_index]
-    player.remove_item{name = "burner-ore-crusher", count = 1}
+    player.remove_item{name = "angels-burner-ore-crusher", count = 1}
 
     local intro = {"nullius-intro"}
     if (not storage.init_landing) then

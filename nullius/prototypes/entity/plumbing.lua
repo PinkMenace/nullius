@@ -1438,7 +1438,7 @@ data:extend({
   {
     type = "valve",
     name = "nullius-top-up-valve",
-    icon = "__angelspetrochemgraphics__/graphics/icons/valve-converter.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-underflow.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {hardness = 0.6, mining_time = 0.2, result = "nullius-top-up-valve"},
@@ -1481,7 +1481,7 @@ data:extend({
             shift = {0, -0.5}
 			    },
   		    {
-            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
             priority = "extra-high",
             frames = 1,
             width = 64,
@@ -1490,7 +1490,7 @@ data:extend({
 		    }
       },
       east = {
-        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
         priority = "extra-high",
         x = 64,
         frame_count = 1,
@@ -1509,7 +1509,7 @@ data:extend({
             shift = {0, -0.5}
 			    },
 		      {
-            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+            filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
             priority = "extra-high",
             x = 128,
             frame_count = 1,
@@ -1520,7 +1520,7 @@ data:extend({
 		    }
       },
       west = {
-        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-converter.png",
+        filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
         priority = "extra-high",
         x = 192,
         frame_count = 1,

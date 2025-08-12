@@ -891,7 +891,7 @@ data:extend({
   {
     type = "item",
     name = "nullius-top-up-valve",
-    icon = "__angelspetrochemgraphics__/graphics/icons/valve-converter.png",
+    icon = "__angelspetrochemgraphics__/graphics/icons/valve-underflow.png",
     icon_size = 32,
     subgroup = "valves",
     order = "nullius-dd",
