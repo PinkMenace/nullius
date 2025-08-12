@@ -206,10 +206,10 @@ data:extend({
     always_show_made_in = true,
     energy_required = 8,
     ingredients = {
-      {"nullius-motor-1", 1},
-      {"nullius-iron-sheet", 2},
-      {"nullius-iron-gear", 1},
-      {"pipe", 2}
+      {type = "item", name = "nullius-motor-1", amount = 1},
+      {type = "item", name = "nullius-iron-sheet", amount = 2},
+      {type = "item", name = "nullius-iron-gear", amount = 1},
+      {type = "item", name = "pipe", amount = 2}
     },
     results = {
       {type = "item", name = "nullius-turbine-open-1", amount = 1}
@@ -224,10 +224,10 @@ data:extend({
     always_show_made_in = true,
     energy_required = 40,
     ingredients = {
-      {"nullius-box-motor-1", 1},
-      {"nullius-box-iron-sheet", 2},
-      {"nullius-box-iron-gear", 1},
-      {"nullius-box-pipe-1", 2}
+      {type = "item", name = "nullius-box-motor-1", amount = 1},
+      {type = "item", name = "nullius-box-iron-sheet", amount = 2},
+      {type = "item", name = "nullius-box-iron-gear", amount = 1},
+      {type = "item", name = "nullius-box-pipe-1", amount = 2}
     },
     results = {
       {type = "item", name = "nullius-box-turbine-open-1", amount = 1}
@@ -241,9 +241,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 4,
     ingredients = {
-      {"nullius-turbine-open-1", 1},
-      {"nullius-small-tank-1", 1},
-	  {"nullius-top-up-valve", 1}
+      {type = "item", name = "nullius-turbine-open-1", amount = 1},
+      {type = "item", name = "nullius-small-tank-1", amount = 1},
+	  {type = "item", name = "nullius-top-up-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-turbine-closed-1", amount = 1}
@@ -258,9 +258,9 @@ data:extend({
     subgroup = "boxed-fluid-energy",
     energy_required = 20,
     ingredients = {
-      {"nullius-box-turbine-open-1", 1},
-	  {"nullius-box-small-tank-1", 1},
-	  {"nullius-box-top-up-valve", 1}
+      {type = "item", name = "nullius-box-turbine-open-1", amount = 1},
+	  {type = "item", name = "nullius-box-small-tank-1", amount = 1},
+	  {type = "item", name = "nullius-box-top-up-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-turbine-closed-1", amount = 1}
@@ -274,11 +274,11 @@ data:extend({
     category = "large-crafting",
     energy_required = 16,
     ingredients = {
-      {"nullius-turbine-open-1", 2},
-      {"nullius-pump-2", 1},
-      {"nullius-aluminum-sheet", 6},
-      {"nullius-steel-gear", 3},
-      {"nullius-capacitor", 1}
+      {type = "item", name = "nullius-turbine-open-1", amount = 2},
+      {type = "item", name = "nullius-pump-2", amount = 1},
+      {type = "item", name = "nullius-aluminum-sheet", amount = 6},
+      {type = "item", name = "nullius-steel-gear", amount = 3},
+      {type = "item", name = "nullius-capacitor", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-turbine-open-2", amount = 1}
@@ -293,11 +293,11 @@ data:extend({
     subgroup = "boxed-fluid-energy",
     energy_required = 80,
     ingredients = {
-      {"nullius-box-turbine-open-1", 2},
-      {"nullius-box-pump-2", 1},
-      {"nullius-box-aluminum-sheet", 6},
-      {"nullius-box-steel-gear", 3},
-      {"nullius-box-capacitor", 1}
+      {type = "item", name = "nullius-box-turbine-open-1", amount = 2},
+      {type = "item", name = "nullius-box-pump-2", amount = 1},
+      {type = "item", name = "nullius-box-aluminum-sheet", amount = 6},
+      {type = "item", name = "nullius-box-steel-gear", amount = 3},
+      {type = "item", name = "nullius-box-capacitor", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-turbine-open-2", amount = 1}
@@ -311,9 +311,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 10,
     ingredients = {
-      {"nullius-turbine-open-2", 1},
-      {"nullius-turbine-closed-1", 1},
-      {"nullius-small-pump-1", 1}
+      {type = "item", name = "nullius-turbine-open-2", amount = 1},
+      {type = "item", name = "nullius-turbine-closed-1", amount = 1},
+      {type = "item", name = "nullius-small-pump-1", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-turbine-closed-2", amount = 1}
@@ -328,9 +328,9 @@ data:extend({
     subgroup = "boxed-fluid-energy",
     energy_required = 50,
     ingredients = {
-	  {"nullius-box-turbine-open-2", 1},
-      {"nullius-box-turbine-closed-1", 1},
-      {"nullius-box-small-pump-1", 1}
+	  {type = "item", name = "nullius-box-turbine-open-2", amount = 1},
+      {type = "item", name = "nullius-box-turbine-closed-1", amount = 1},
+      {type = "item", name = "nullius-box-small-pump-1", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-turbine-closed-2", amount = 1}
@@ -344,11 +344,11 @@ data:extend({
     category = "large-crafting",
     energy_required = 40,
     ingredients = {
-      {"nullius-turbine-open-2", 2},
-      {"pump", 3},
-      {"nullius-titanium-sheet", 12},
-      {"nullius-bearing", 6},
-      {"nullius-transformer", 1}
+      {type = "item", name = "nullius-turbine-open-2", amount = 2},
+      {type = "item", name = "pump", amount = 3},
+      {type = "item", name = "nullius-titanium-sheet", amount = 12},
+      {type = "item", name = "nullius-bearing", amount = 6},
+      {type = "item", name = "nullius-transformer", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-turbine-open-3", amount = 1}
@@ -363,11 +363,11 @@ data:extend({
     subgroup = "boxed-fluid-energy",
     energy_required = 200,
     ingredients = {
-      {"nullius-box-turbine-open-2", 2},
-      {"nullius-box-pump-3", 3},
-      {"nullius-box-titanium-sheet", 12},
-      {"nullius-box-bearing", 6},
-      {"nullius-box-transformer", 1}
+      {type = "item", name = "nullius-box-turbine-open-2", amount = 2},
+      {type = "item", name = "nullius-box-pump-3", amount = 3},
+      {type = "item", name = "nullius-box-titanium-sheet", amount = 12},
+      {type = "item", name = "nullius-box-bearing", amount = 6},
+      {type = "item", name = "nullius-box-transformer", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-turbine-open-3", amount = 1}
@@ -381,10 +381,10 @@ data:extend({
     category = "large-crafting",
     energy_required = 20,
     ingredients = {
-      {"nullius-turbine-open-3", 1},
-      {"nullius-turbine-closed-2", 1},
-      {"nullius-small-tank-2", 1},
-      {"nullius-small-pump-2", 1}
+      {type = "item", name = "nullius-turbine-open-3", amount = 1},
+      {type = "item", name = "nullius-turbine-closed-2", amount = 1},
+      {type = "item", name = "nullius-small-tank-2", amount = 1},
+      {type = "item", name = "nullius-small-pump-2", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-turbine-closed-3", amount = 1}
@@ -399,10 +399,10 @@ data:extend({
     subgroup = "boxed-fluid-energy",
     energy_required = 100,
     ingredients = {
-	  {"nullius-box-turbine-open-3", 1},
-      {"nullius-box-turbine-closed-2", 1},
-      {"nullius-box-small-tank-2", 1},
-      {"nullius-box-small-pump-2", 1}
+	  {type = "item", name = "nullius-box-turbine-open-3", amount = 1},
+      {type = "item", name = "nullius-box-turbine-closed-2", amount = 1},
+      {type = "item", name = "nullius-box-small-tank-2", amount = 1},
+      {type = "item", name = "nullius-box-small-pump-2", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-turbine-closed-3", amount = 1}
