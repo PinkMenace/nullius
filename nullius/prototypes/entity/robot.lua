@@ -377,7 +377,7 @@ data:extend({
     },
 
     recharging_animation = data.raw["roboport"]["roboport"].recharging_animation,
-    vehicle_impact_sound = data.raw["roboport"]["roboport"].vehicle_impact_sound,
+    impact_category = data.raw["roboport"]["roboport"].impact_category,
     open_sound = data.raw["roboport"]["roboport"].open_sound,
     close_sound = data.raw["roboport"]["roboport"].close_sound,
     working_sound = data.raw["roboport"]["roboport"].working_sound,
@@ -496,7 +496,7 @@ data:extend({
     },
 
     recharging_animation = data.raw["roboport"]["roboport"].recharging_animation,
-    vehicle_impact_sound = data.raw["roboport"]["roboport"].vehicle_impact_sound,
+    impact_category = data.raw["roboport"]["roboport"].impact_category,
     open_sound = data.raw["roboport"]["roboport"].open_sound,
     close_sound = data.raw["roboport"]["roboport"].close_sound,
     working_sound = data.raw["roboport"]["roboport"].working_sound,
@@ -614,7 +614,7 @@ data:extend({
     },
 
     recharging_animation = data.raw["roboport"]["roboport"].recharging_animation,
-    vehicle_impact_sound = data.raw["roboport"]["roboport"].vehicle_impact_sound,
+    impact_category = data.raw["roboport"]["roboport"].impact_category,
     open_sound = data.raw["roboport"]["roboport"].open_sound,
     close_sound = data.raw["roboport"]["roboport"].close_sound,
     working_sound = data.raw["roboport"]["roboport"].working_sound,
@@ -732,7 +732,7 @@ data:extend({
     },
 
     recharging_animation = data.raw["roboport"]["roboport"].recharging_animation,
-    vehicle_impact_sound = data.raw["roboport"]["roboport"].vehicle_impact_sound,
+    impact_category = data.raw["roboport"]["roboport"].impact_category,
     open_sound = data.raw["roboport"]["roboport"].open_sound,
     close_sound = data.raw["roboport"]["roboport"].close_sound,
     working_sound = data.raw["roboport"]["roboport"].working_sound,

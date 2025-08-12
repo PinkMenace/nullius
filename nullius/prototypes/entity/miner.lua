@@ -57,7 +57,7 @@ data:extend({
     collision_box = {{ -0.75, -0.75}, {0.75, 0.75}},
     selection_box = {{ -1, -1}, {1, 1}},
     mining_speed = 0.3,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     energy_source = {
       type = "electric",
       emissions_per_minute = {pollution = 3},
@@ -95,7 +95,7 @@ data:extend({
     collision_box = {{ -1.25, -1.25}, {1.25, 1.25}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
     mining_speed = 0.6,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     energy_source = {
       type = "electric",
       emissions_per_minute = {pollution = 6},
@@ -274,7 +274,7 @@ data:extend({
 
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
-    vehicle_impact_sound = data.raw["mining-drill"]["electric-mining-drill"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["electric-mining-drill"].impact_category,
     open_sound = data.raw["mining-drill"]["electric-mining-drill"].open_sound,
     close_sound = data.raw["mining-drill"]["electric-mining-drill"].close_sound,
     radius_visualisation_picture = {
@@ -917,7 +917,7 @@ data:extend({
 
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
-    vehicle_impact_sound = data.raw["mining-drill"]["electric-mining-drill"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["electric-mining-drill"].impact_category,
     open_sound = data.raw["mining-drill"]["electric-mining-drill"].open_sound,
     close_sound = data.raw["mining-drill"]["electric-mining-drill"].close_sound,
     radius_visualisation_picture = data.raw["mining-drill"]["nullius-small-miner-2"].radius_visualisation_picture,
@@ -1222,7 +1222,7 @@ data:extend({
     next_upgrade = "nullius-medium-miner-3",
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
-    vehicle_impact_sound = data.raw["mining-drill"]["electric-mining-drill"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["electric-mining-drill"].impact_category,
     open_sound = data.raw["mining-drill"]["electric-mining-drill"].open_sound,
     close_sound = data.raw["mining-drill"]["electric-mining-drill"].close_sound,
     circuit_wire_connection_points = circuit_connector_definitions["electric-mining-drill"].points,
@@ -1536,7 +1536,7 @@ data:extend({
     fast_replaceable_group = "medium-miner",
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
-    vehicle_impact_sound = data.raw["mining-drill"]["electric-mining-drill"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["electric-mining-drill"].impact_category,
     open_sound = data.raw["mining-drill"]["electric-mining-drill"].open_sound,
     close_sound = data.raw["mining-drill"]["electric-mining-drill"].close_sound,
     graphics_set = data.raw["mining-drill"]["electric-mining-drill"].graphics_set,
@@ -1575,7 +1575,7 @@ data:extend({
 
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
-    vehicle_impact_sound = data.raw["mining-drill"]["electric-mining-drill"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["electric-mining-drill"].impact_category,
     open_sound = data.raw["mining-drill"]["electric-mining-drill"].open_sound,
     close_sound = data.raw["mining-drill"]["electric-mining-drill"].close_sound,
     radius_visualisation_picture = {
@@ -2218,7 +2218,7 @@ data:extend({
 
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
-    vehicle_impact_sound = data.raw["mining-drill"]["electric-mining-drill"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["electric-mining-drill"].impact_category,
     open_sound = data.raw["mining-drill"]["electric-mining-drill"].open_sound,
     close_sound = data.raw["mining-drill"]["electric-mining-drill"].close_sound,
     radius_visualisation_picture = data.raw["mining-drill"]["nullius-large-miner-1"].radius_visualisation_picture,

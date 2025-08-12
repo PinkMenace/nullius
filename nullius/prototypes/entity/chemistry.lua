@@ -73,7 +73,7 @@ data:extend({
 	    animation = hydro_animation("angels-hydro-plant",{0.77, 0.77, 0.68}),
 	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant"].graphics_set.working_visualisations, 0.725),
 	  },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
     fluid_boxes = {
       {
@@ -139,7 +139,7 @@ data:extend({
 	    	animation = hydro_animation("angels-hydro-plant-2",{0.8, 0.8, 0.9}),
 	      working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant-2"].graphics_set.working_visualisations, 0.725),
 	  },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-hydro-plant-2"].working_sound,
     fluid_boxes = {
       {
@@ -202,7 +202,7 @@ data:extend({
 	      animation = hydro_animation("angels-hydro-plant-3"),
 	      working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant-3"].graphics_set.working_visualisations, 0.725),
 	  },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-hydro-plant-3"].working_sound,
     fluid_boxes = {
       {
@@ -289,7 +289,7 @@ data:extend({
     fast_replaceable_group = "hydro-plant",
     next_upgrade = "nullius-mirror-hydro-plant-3",
     graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-2"].graphics_set,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
 
     fluid_boxes = {
@@ -355,7 +355,7 @@ data:extend({
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "hydro-plant",
     graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-3"].graphics_set,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
 
     fluid_boxes = {
@@ -452,7 +452,7 @@ data:extend({
         pipe_connections = {{ flow_direction ="output", position = {1, -2}, direction = defines.direction.north }}
       }
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "distillery",
@@ -550,7 +550,7 @@ data:extend({
 
     resistances = data.raw["assembling-machine"]["nullius-distillery-1"].resistances,
     working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "distillery",
@@ -644,7 +644,7 @@ data:extend({
 
     resistances = data.raw["assembling-machine"]["nullius-distillery-1"].resistances,
     working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "distillery",
@@ -714,7 +714,7 @@ data:extend({
     energy_usage = "550kW",
     resistances = data.raw["assembling-machine"]["nullius-distillery-2"].resistances,
     working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "distillery",
@@ -786,7 +786,7 @@ data:extend({
 
     resistances = data.raw["assembling-machine"]["nullius-distillery-1"].resistances,
     working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "distillery",
@@ -913,7 +913,7 @@ data:extend({
         }
       }
     },
-	vehicle_impact_sound = data.raw["assembling-machine"]["angels-electrolyser"].vehicle_impact_sound,
+	impact_category = data.raw["assembling-machine"]["angels-electrolyser"].impact_category,
 	working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.15 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.4 },
@@ -1030,7 +1030,7 @@ data:extend({
         }
       }
     },
-	vehicle_impact_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].vehicle_impact_sound,
+	impact_category = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].impact_category,
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound
   },
 
@@ -1118,7 +1118,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
     fluid_boxes = {
       {
@@ -1257,7 +1257,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound
   },
 
@@ -1296,7 +1296,7 @@ data:extend({
     energy_usage = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].energy_usage,
     resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].resistances,
     graphics_set = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].graphics_set,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
     fluid_boxes = {
       {
@@ -1363,7 +1363,7 @@ data:extend({
     energy_usage = data.raw["assembling-machine"]["nullius-priority-electrolyzer-2"].energy_usage,
     resistances = data.raw["assembling-machine"]["nullius-priority-electrolyzer-2"].resistances,
     graphics_set = data.raw["assembling-machine"]["nullius-priority-electrolyzer-2"].graphics_set,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-mirror-surge-electrolyzer-2"].fluid_boxes
   },
@@ -1444,7 +1444,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
     fluid_boxes = {
       {
@@ -1509,7 +1509,7 @@ data:extend({
     energy_source = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].energy_source,
     resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].resistances,
     graphics_set = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].graphics_set,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
     fluid_boxes = {
       {
@@ -1616,7 +1616,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound
   }
 })
@@ -1657,7 +1657,7 @@ data:extend({
     resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].resistances,
     fluid_boxes = data.raw["assembling-machine"]["nullius-mirror-surge-electrolyzer-3"].fluid_boxes,
     graphics_set = data.raw["assembling-machine"]["nullius-priority-electrolyzer-3"].graphics_set,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound
   },
 
@@ -1835,7 +1835,7 @@ data:extend({
     resistances = {
       { type = "impact", decrease = 100, percent = 90 }
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     crafting_speed = 1,
     energy_source = {
@@ -1948,7 +1948,7 @@ data:extend({
     resistances = {
       { type = "impact", decrease = 100, percent = 90 }
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     crafting_speed = 2,
     energy_source = {
@@ -2028,7 +2028,7 @@ data:extend({
       working_visualisations = data.raw["assembling-machine"]["nullius-chemical-plant-1"].graphics_set.working_visualisations,
     },
     resistances = data.raw["assembling-machine"]["nullius-chemical-plant-2"].resistances,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-chemical-plant-2"].working_sound,
     crafting_speed = 2,
     energy_source = data.raw["assembling-machine"]["nullius-chemical-plant-2"].energy_source,
@@ -2118,7 +2118,7 @@ data:extend({
     resistances = {
       { type = "impact", decrease = 100, percent = 90 }
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     crafting_speed = 4,
     energy_source = {
@@ -2197,7 +2197,7 @@ data:extend({
     },
     resistances = data.raw["assembling-machine"]["nullius-chemical-plant-3"].resistances,
     energy_source = data.raw["assembling-machine"]["nullius-chemical-plant-3"].energy_source,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
     crafting_speed = 4,
     energy_usage = "760kW",

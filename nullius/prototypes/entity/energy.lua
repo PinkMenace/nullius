@@ -86,7 +86,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.6 }
+    impact_category = "metal",
   }
 })
 
@@ -108,7 +108,7 @@ data:extend({
     fast_replaceable_group = "solar-panel",
     next_upgrade = "nullius-solar-panel-3",
     overlay = data.raw["solar-panel"]["nullius-solar-panel-1"].overlay,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.6 },
+    impact_category = "metal",
     picture = {
       layers = {
         {
@@ -142,7 +142,7 @@ data:extend({
     fast_replaceable_group = "solar-panel",
     next_upgrade = "nullius-solar-panel-4",
     overlay = data.raw["solar-panel"]["nullius-solar-panel-1"].overlay,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.6 },
+    impact_category = "metal",
     picture = {
       layers = {
         {
@@ -174,7 +174,7 @@ data:extend({
     resistances = data.raw["solar-panel"]["nullius-solar-panel-1"].resistances,
     fast_replaceable_group = "solar-panel",
     overlay = data.raw["solar-panel"]["nullius-solar-panel-1"].overlay,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.6 },
+    impact_category = "metal",
     picture = {
       layers = {
         {
@@ -252,7 +252,7 @@ data:extend({
       discharge_cooldown = 60,
       discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}}
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw.accumulator["accumulator"].working_sound,
     circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
     circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
@@ -318,7 +318,7 @@ data:extend({
     },
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw.accumulator["accumulator"].working_sound,
     circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
     circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
@@ -383,7 +383,7 @@ data:extend({
     },
     discharge_cooldown = 60,
     discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw.accumulator["accumulator"].working_sound,
     circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
     circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
@@ -402,7 +402,7 @@ data:extend({
     crafting_speed = 1,
     max_health = 200,
     corpse = "boiler-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 100, percent = 90 },
@@ -660,7 +660,7 @@ data:extend({
     base_productivity = 0.02,
     max_health = 300,
     corpse = "boiler-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 100, percent = 90 },
@@ -818,7 +818,7 @@ data:extend({
     base_productivity = 0.02,
     max_health = 300,
     corpse = "boiler-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     resistances = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].resistances,
     fast_replaceable_group = "combustion-chamber",
     next_upgrade = "nullius-mirror-combustion-chamber-3",
@@ -869,7 +869,7 @@ data:extend({
     base_productivity = 0.04,
     max_health = 400,
     corpse = "boiler-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     resistances = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].resistances,
     fast_replaceable_group = "combustion-chamber",
     collision_box = {{-1.29, -0.79}, {1.29, 0.79}},
@@ -992,7 +992,7 @@ data:extend({
     base_productivity = 0.04,
     max_health = 400,
     corpse = "boiler-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     resistances = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].resistances,
     fast_replaceable_group = "combustion-chamber",
     collision_box = {{-1.29, -0.79}, {1.29, 0.79}},
@@ -1038,7 +1038,7 @@ data:extend({
     resistances = {
       { type = "impact", decrease = 100, percent = 90 }
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
@@ -1183,7 +1183,7 @@ data:extend({
     },
     energy_usage = "495kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-1"].fluid_boxes,
     
@@ -1315,7 +1315,7 @@ data:extend({
     },
     energy_usage = "2925kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
@@ -1460,7 +1460,7 @@ data:extend({
     },
     energy_usage = "1930kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-2"].resistances,
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-2"].fluid_boxes,
 
@@ -1556,7 +1556,7 @@ data:extend({
     },
     energy_usage = "7725kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
@@ -1696,7 +1696,7 @@ data:extend({
     },
     energy_usage = "7650kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
@@ -1798,7 +1798,7 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
@@ -1845,7 +1845,7 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
@@ -1892,7 +1892,7 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
@@ -1933,7 +1933,7 @@ data:extend({
     },
     energy_source = {type = "void"},
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-2",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
@@ -1991,7 +1991,7 @@ data:extend({
     },
     energy_source = {type = "void"},
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-3",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
@@ -2040,7 +2040,7 @@ data:extend({
     },
     energy_source = {type = "void"},
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     fast_replaceable_group = "geothermal-plant",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
@@ -2117,7 +2117,7 @@ data:extend({
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     working_sound = data.raw["heat-pipe"]["heat-pipe"].working_sound,
-    vehicle_impact_sound = data.raw["heat-pipe"]["heat-pipe"].vehicle_impact_sound,
+    impact_category = data.raw["heat-pipe"]["heat-pipe"].impact_category,
     damaged_trigger_effect = data.raw["heat-pipe"]["heat-pipe"].damaged_trigger_effect,
     min_temperature_gradient = 4,
     heat_buffer = {
@@ -2194,7 +2194,7 @@ data:extend({
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     working_sound = data.raw["heat-pipe"]["heat-pipe"].working_sound,
-    vehicle_impact_sound = data.raw["heat-pipe"]["heat-pipe"].vehicle_impact_sound,
+    impact_category = data.raw["heat-pipe"]["heat-pipe"].impact_category,
     damaged_trigger_effect = data.raw["heat-pipe"]["heat-pipe"].damaged_trigger_effect,
     min_temperature_gradient = 2,
     heat_buffer = {
@@ -2270,7 +2270,7 @@ data:extend({
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     working_sound = data.raw["heat-pipe"]["heat-pipe"].working_sound,
-    vehicle_impact_sound = data.raw["heat-pipe"]["heat-pipe"].vehicle_impact_sound,
+    impact_category = data.raw["heat-pipe"]["heat-pipe"].impact_category,
     damaged_trigger_effect = data.raw["heat-pipe"]["heat-pipe"].damaged_trigger_effect,
     connection_sprites = data.raw["heat-pipe"]["heat-pipe"].connection_sprites,
     heat_glow_sprites = data.raw["heat-pipe"]["heat-pipe"].heat_glow_sprites,
@@ -2350,7 +2350,7 @@ data:extend({
     },
     consumption = "2kW",
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
@@ -2440,7 +2440,7 @@ data:extend({
     },
     consumption = "5kW",
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
@@ -2530,7 +2530,7 @@ data:extend({
     },
     consumption = "20kW",
     working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
@@ -2858,7 +2858,7 @@ data:extend({
       render_no_power_icon = false
     },
     damaged_trigger_effect = data.raw.generator["steam-engine"].damaged_trigger_effect,
-    vehicle_impact_sound = data.raw.generator["steam-engine"].vehicle_impact_sound,
+    impact_category = data.raw.generator["steam-engine"].impact_category,
     open_sound = data.raw.generator["steam-engine"].open_sound,
     close_sound = data.raw.generator["steam-engine"].close_sound,
     working_sound = data.raw.generator["steam-engine"].working_sound,
@@ -2927,7 +2927,7 @@ data:extend({
       render_no_power_icon = false
     },
     damaged_trigger_effect = data.raw.generator["steam-engine"].damaged_trigger_effect,
-    vehicle_impact_sound = data.raw.generator["steam-engine"].vehicle_impact_sound,
+    impact_category = data.raw.generator["steam-engine"].impact_category,
     open_sound = data.raw.generator["steam-engine"].open_sound,
     close_sound = data.raw.generator["steam-engine"].close_sound,
     working_sound = data.raw.generator["steam-engine"].working_sound,
@@ -2995,7 +2995,7 @@ data:extend({
       render_no_power_icon = false
     },
     damaged_trigger_effect = data.raw.generator["steam-engine"].damaged_trigger_effect,
-    vehicle_impact_sound = data.raw.generator["steam-engine"].vehicle_impact_sound,
+    impact_category = data.raw.generator["steam-engine"].impact_category,
     open_sound = data.raw.generator["steam-engine"].open_sound,
     close_sound = data.raw.generator["steam-engine"].close_sound,
     working_sound = data.raw.generator["steam-engine"].working_sound,
@@ -3444,7 +3444,7 @@ data:extend({
     connection_patches_disconnected = data.raw.reactor["nuclear-reactor"].connection_patches_disconnected,
     heat_connection_patches_connected = data.raw.reactor["nuclear-reactor"].heat_connection_patches_connected,
     heat_connection_patches_disconnected = data.raw.reactor["nuclear-reactor"].heat_connection_patches_disconnected,
-    vehicle_impact_sound = data.raw.reactor["nuclear-reactor"].vehicle_impact_sound,
+    impact_category = data.raw.reactor["nuclear-reactor"].impact_category,
     open_sound = data.raw.reactor["nuclear-reactor"].open_sound,
     close_sound = data.raw.reactor["nuclear-reactor"].close_sound,
     working_sound = data.raw.reactor["nuclear-reactor"].working_sound,
@@ -3743,7 +3743,7 @@ data:extend({
       }
     },
     corpse = data.raw.boiler["heat-exchanger"].corpse,
-    vehicle_impact_sound = data.raw.boiler["heat-exchanger"].vehicle_impact_sound,
+    impact_category = data.raw.boiler["heat-exchanger"].impact_category,
     working_sound = data.raw.boiler["heat-exchanger"].working_sound
   }
 })

@@ -947,11 +947,11 @@ data:extend({
     category = "large-crafting",
     energy_required = 6,
     ingredients = {
-      {name="nullius-small-storage-chest-1", amount=2},
-      {name="nullius-relay-1", amount=1},
-      {name="nullius-charger-1", amount=1},
-      {name="fast-transport-belt", amount=4},
-      {name="train-stop", amount=1}
+      {type = "item", name="nullius-small-storage-chest-1", amount=2},
+      {type = "item", name="nullius-relay-1", amount=1},
+      {type = "item", name="nullius-charger-1", amount=1},
+      {type = "item", name="fast-transport-belt", amount=4},
+      {type = "item", name="train-stop", amount=1}
     },
     results = {
       {type = "item", name = "nullius-hangar-1", amount = 1}
@@ -965,11 +965,11 @@ data:extend({
     category = "large-crafting",
     energy_required = 15,
     ingredients = {
-      {name="nullius-hangar-1", amount=1},
-      {name="nullius-large-storage-chest-1", amount=1},
-      {name="nullius-relay-2", amount=1},
-      {name="nullius-charger-2", amount=1},
-      {name="fast-splitter", amount=2}
+      {type = "item", name="nullius-hangar-1", amount=1},
+      {type = "item", name="nullius-large-storage-chest-1", amount=1},
+      {type = "item", name="nullius-relay-2", amount=1},
+      {type = "item", name="nullius-charger-2", amount=1},
+      {type = "item", name="fast-splitter", amount=2}
     },
     results = {
       {type = "item", name = "nullius-hangar-2", amount = 1}
@@ -983,12 +983,12 @@ data:extend({
     category = "large-crafting",
     energy_required = 30,
     ingredients = {
-      {name="nullius-hangar-2", amount=1},
-      {name="nullius-large-buffer-chest-2", amount=1},
-      {name="nullius-relay-3", amount=1},
-      {name="nullius-charger-3", amount=1},
-      {name="bob-express-bulk-inserter", amount=2},
-      {name="gate", amount=3}
+      {type = "item", name="nullius-hangar-2", amount=1},
+      {type = "item", name="nullius-large-buffer-chest-2", amount=1},
+      {type = "item", name="nullius-relay-3", amount=1},
+      {type = "item", name="nullius-charger-3", amount=1},
+      {type = "item", name="bob-express-bulk-inserter", amount=2},
+      {type = "item", name="gate", amount=3}
     },
     results = {
       {type = "item", name = "nullius-hangar-3", amount = 1}
@@ -1002,9 +1002,9 @@ data:extend({
     category = "nanotechnology",
     energy_required = 20,
     ingredients = {
-      {name="nullius-hangar-3", amount=1},
-      {name="nullius-yield-module-4", amount=1},
-      {name="nullius-charger-4", amount=1}
+      {type = "item", name="nullius-hangar-3", amount=1},
+      {type = "item", name="nullius-yield-module-4", amount=1},
+      {type = "item", name="nullius-charger-4", amount=1}
     },
     results = {
       {type = "item", name = "nullius-hangar-4", amount = 1}

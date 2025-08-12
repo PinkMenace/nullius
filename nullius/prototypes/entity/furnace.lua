@@ -19,8 +19,8 @@ data:extend({
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
-	working_sound = data.raw["furnace"]["steel-furnace"].working_sound,
+    impact_category = "stone",
+	  working_sound = data.raw["furnace"]["steel-furnace"].working_sound,
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 100, percent = 90 },
@@ -53,7 +53,7 @@ data:extend({
     minable = {mining_time = 0.9, result = "nullius-small-furnace-2"},
     max_health = 250,
     corpse = "steel-furnace-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["furnace"]["steel-furnace"].working_sound,
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
@@ -107,7 +107,7 @@ data:extend({
       emissions_per_minute = {pollution = 1},
       drain = "20kW"
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
@@ -228,7 +228,7 @@ data:extend({
     minable = {mining_time = 1.2, result = "nullius-medium-furnace-1"},
     max_health = 300,
     corpse = "steel-furnace-remnants",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
 	  working_sound = data.raw["furnace"]["steel-furnace"].working_sound,
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
@@ -385,7 +385,7 @@ data:extend({
     working_visualisations = data.raw["furnace"]["electric-furnace"].working_visualisations,
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     water_reflection = data.raw["furnace"]["electric-furnace"].water_reflection,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 
@@ -460,7 +460,7 @@ data:extend({
       emissions_per_minute = {pollution = 2.5},
       drain = "180kW"
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
@@ -609,7 +609,7 @@ data:extend({
     graphics_set = data.raw["furnace"]["electric-furnace"].graphics_set,
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     water_reflection = data.raw["furnace"]["electric-furnace"].water_reflection,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 }
+    impact_category = "metal",
   },
 
   {
@@ -640,7 +640,7 @@ data:extend({
       emissions_per_minute = {pollution = 5},
       drain = "400kW"
     },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     working_visualisations = data.raw["assembling-machine"]["nullius-large-furnace-1"].working_visualisations,
     water_reflection = data.raw["assembling-machine"]["nullius-large-furnace-1"].water_reflection,
@@ -761,7 +761,7 @@ data:extend({
         pipe_connections = {{ flow_direction ="output", position = {1, -1}, direction = defines.direction.north }}
       },
     },
-	vehicle_impact_sound = data.raw["furnace"]["stone-furnace"].vehicle_impact_sound,
+	  impact_category = data.raw["furnace"]["stone-furnace"].impact_category,
     working_sound = data.raw["furnace"]["stone-furnace"].working_sound
   }
 })
@@ -841,7 +841,7 @@ data:extend({
         pipe_connections = {{ flow_direction ="output", position = {1.2, -1}, direction = defines.direction.east }}
       },
     },
-	  vehicle_impact_sound = data.raw["assembling-machine"]["nullius-foundry-1"].vehicle_impact_sound,
+	  impact_category = data.raw["assembling-machine"]["nullius-foundry-1"].impact_category,
     working_sound = data.raw["assembling-machine"]["nullius-foundry-1"].working_sound
   },
 
@@ -917,7 +917,7 @@ data:extend({
         pipe_connections = {{ flow_direction ="output", position = {1, -1}, direction = defines.direction.east }}
       },
     },
-	  vehicle_impact_sound = data.raw["assembling-machine"]["nullius-foundry-1"].vehicle_impact_sound,
+	  impact_category = data.raw["assembling-machine"]["nullius-foundry-1"].impact_category,
     working_sound = data.raw["assembling-machine"]["nullius-foundry-1"].working_sound
   },
 
@@ -965,7 +965,7 @@ data:extend({
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
     graphics_set = util.table.deepcopy(data.raw["assembling-machine"]["angels-ore-crusher"].graphics_set),
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-burner-ore-crusher"].working_sound,
   },
 
@@ -997,7 +997,7 @@ data:extend({
     },
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-ore-crusher"].working_sound,
     fluid_boxes = {
       {
@@ -1044,7 +1044,7 @@ data:extend({
     },
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-ore-crusher"].working_sound,
     fluid_boxes = {
       {
@@ -1133,7 +1133,7 @@ data:extend({
       animation = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell"].graphics_set.animation.east, 0.81),
 	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell"].graphics_set.working_visualisations, 0.81),
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell"].working_sound,
   },
 
@@ -1200,7 +1200,7 @@ data:extend({
 	    animation = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-2"].graphics_set.animation.east, 0.81),
 	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-2"].graphics_set.working_visualisations, 0.81),
 	  },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell-2"].working_sound,
     pipe_covers = pipecoverspictures()
   },
@@ -1267,7 +1267,7 @@ data:extend({
 	    animation = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-3"].graphics_set.animation.east, 0.81),
 	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-3"].graphics_set.working_visualisations, 0.81),
 	  },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell-3"].working_sound,
     pipe_covers = pipecoverspictures()
   }
@@ -1333,7 +1333,7 @@ data:extend({
       animation = data.raw["assembling-machine"]["nullius-flotation-cell-2"].graphics_set.animation,
       working_visualisations = data.raw["assembling-machine"]["nullius-flotation-cell-2"].graphics_set.working_visualisations,
     },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell"].working_sound,
 
     fluid_boxes = {
@@ -1395,7 +1395,7 @@ data:extend({
     graphics_set = data.raw["assembling-machine"]["nullius-flotation-cell-3"].graphics_set,
     energy_source = data.raw["assembling-machine"]["nullius-flotation-cell-3"].energy_source,
     resistances = data.raw["assembling-machine"]["nullius-flotation-cell-3"].resistances,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell"].working_sound,
 
     fluid_boxes = {

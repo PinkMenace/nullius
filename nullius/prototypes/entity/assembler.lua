@@ -63,7 +63,7 @@ data:extend({
     energy_usage = "59kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         { filename = "__base__/sound/assembling-machine-t1-1.ogg", volume = 0.8 },
@@ -153,7 +153,7 @@ data:extend({
     energy_usage = "144kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         { filename = "__base__/sound/assembling-machine-t1-1.ogg", volume = 0.8 },
@@ -242,7 +242,7 @@ data:extend({
     energy_usage = "650kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         { filename = "__base__/sound/assembling-machine-t1-1.ogg", volume = 0.8 },
@@ -304,7 +304,7 @@ data:extend({
     energy_usage = "123kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-small-assembler-1"].working_sound
   },
 
@@ -367,7 +367,7 @@ data:extend({
     energy_usage = "270kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-small-assembler-1"].working_sound
   },
 
@@ -432,7 +432,7 @@ data:extend({
     energy_usage = "285kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-medium-assembler-1"].working_sound
   },
 
@@ -496,7 +496,7 @@ data:extend({
     energy_usage = "670kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-medium-assembler-1"].working_sound
   },
 
@@ -559,7 +559,7 @@ data:extend({
     energy_usage = "1500kW",
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-large-assembler-1"].working_sound
   }
 })
@@ -599,7 +599,7 @@ data:extend({
     graphics_set = {
       animation = scale_image(data.raw["assembling-machine"]["angels-crystallizer"].graphics_set.animation, 0.775),
     },
-    vehicle_impact_sound = data.raw["assembling-machine"]["angels-crystallizer"].vehicle_impact_sound,
+    impact_category = data.raw["assembling-machine"]["angels-crystallizer"].impact_category,
     working_sound = data.raw["assembling-machine"]["angels-crystallizer"].working_sound,
     fluid_boxes = {
       {
@@ -682,7 +682,7 @@ data:extend({
     graphics_set = {
         animation = scale_image(data.raw["assembling-machine"]["angels-crystallizer-2"].graphics_set.animation, 0.775),
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-nanofabricator-1"].working_sound,
     fluid_boxes = {
       {
@@ -753,7 +753,7 @@ data:extend({
     graphics_set = {
         animation = data.raw["assembling-machine"]["nullius-nanofabricator-2"].graphics_set.animation,
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-nanofabricator-1"].working_sound,
     fluid_boxes = {
       {
@@ -814,7 +814,7 @@ data:extend({
 	    drain = "5kW"
 	  },
     energy_usage = "395kW",
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.4 },
+    impact_category = "metal",
     working_sound = {
       sound = {
         { filename = "__base__/sound/assembling-machine-t1-1.ogg", volume = 0.6 },

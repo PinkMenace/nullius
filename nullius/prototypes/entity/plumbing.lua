@@ -48,7 +48,7 @@ local si1 = {
   fast_replaceable_group = "seawater-intake",
   next_upgrade = "nullius-seawater-intake-2",
   working_sound = op.working_sound,
-  vehicle_impact_sound = op.vehicle_impact_sound,
+  impact_category = op.impact_category,
   graphics_set = {}
 }
 
@@ -161,7 +161,7 @@ data:extend({
     },
     tile_width = 1,
     tile_height = 1,
-    vehicle_impact_sound = data.raw["offshore-pump"]["offshore-pump"].vehicle_impact_sound,
+    impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
     working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
     placeable_position_visualization = data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization,
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
@@ -472,7 +472,7 @@ data:extend({
     tile_width = 1,
     tile_height = 1,
     graphics_set = data.raw["offshore-pump"]["offshore-pump"].graphics_set,
-    vehicle_impact_sound = data.raw["offshore-pump"]["offshore-pump"].vehicle_impact_sound,
+    impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
     working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
     placeable_position_visualization = data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization,
     circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
@@ -512,7 +512,7 @@ data:extend({
       { type = "fire", decrease = 100, percent = 90 }
     },
     working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
-    vehicle_impact_sound = data.raw["offshore-pump"]["offshore-pump"].vehicle_impact_sound,
+    impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
     fluid_boxes = {
       {
         production_type = "output",
@@ -764,7 +764,7 @@ data:extend({
       { type = "fire", decrease = 100, percent = 90 }
     },
     working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
-    vehicle_impact_sound = data.raw["offshore-pump"]["offshore-pump"].vehicle_impact_sound,
+    impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
     fluid_boxes = {
       {
         production_type = "output",
@@ -1090,7 +1090,7 @@ data:extend({
       { type = "fire", percent = 75 }
     },
     working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     fluid_boxes = {
       {
         production_type = "output",
@@ -1177,7 +1177,7 @@ data:extend({
     module_slots = 1,
     allowed_effects = {"speed", "consumption", "pollution"},
     working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     fluid_boxes = {
       {
         production_type = "output",
@@ -1231,7 +1231,7 @@ data:extend({
     module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
     working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     fluid_boxes = {
       {
         production_type = "output",
@@ -1656,7 +1656,7 @@ data:extend({
     },
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
@@ -1724,7 +1724,7 @@ data:extend({
     },
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
@@ -1937,7 +1937,7 @@ data:extend({
       gas_flow = data.raw["storage-tank"]["angels-storage-tank-3"].pictures.gas_flow
     },
     flow_length_in_ticks = 360,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
@@ -1975,7 +1975,7 @@ data:extend({
     fast_replaceable_group = "small-tank",
     pictures = util.table.deepcopy(data.raw["storage-tank"]["nullius-small-tank-1"].pictures),
     flow_length_in_ticks = 360,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
@@ -2019,7 +2019,7 @@ data:extend({
     next_upgrade = "nullius-large-tank-2",
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["storage-tank"]["angels-storage-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
@@ -2052,7 +2052,7 @@ data:extend({
     next_upgrade = "nullius-large-tank-3",
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["storage-tank"]["angels-storage-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
@@ -2084,7 +2084,7 @@ data:extend({
     fast_replaceable_group = "large-tank",
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
-    vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    impact_category = "metal",
     working_sound = data.raw["storage-tank"]["angels-storage-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
@@ -2137,7 +2137,7 @@ data:extend({
       { type = "fire", decrease = 100, percent = 90 }
     },
     damaged_trigger_effect = data.raw["mining-drill"]["pumpjack"].damaged_trigger_effect,
-    vehicle_impact_sound = data.raw["mining-drill"]["pumpjack"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["pumpjack"].impact_category,
     open_sound = data.raw["mining-drill"]["pumpjack"].open_sound,
     close_sound = data.raw["mining-drill"]["pumpjack"].close_sound,
     working_sound = data.raw["mining-drill"]["pumpjack"].working_sound,
@@ -2242,7 +2242,7 @@ data:extend({
       { type = "fire", decrease = 100, percent = 90 }
     },
     damaged_trigger_effect = data.raw["mining-drill"]["pumpjack"].damaged_trigger_effect,
-    vehicle_impact_sound = data.raw["mining-drill"]["pumpjack"].vehicle_impact_sound,
+    impact_category = data.raw["mining-drill"]["pumpjack"].impact_category,
     open_sound = data.raw["mining-drill"]["pumpjack"].open_sound,
     close_sound = data.raw["mining-drill"]["pumpjack"].close_sound,
     working_sound = data.raw["mining-drill"]["pumpjack"].working_sound,
@@ -2346,7 +2346,7 @@ data:extend({
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
         apparent_volume = 2.5
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -2453,7 +2453,7 @@ data:extend({
       idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
       apparent_volume = 2.5
     },
-    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    impact_category = "metal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -2560,7 +2560,7 @@ data:extend({
     },
     energy_usage = "15kW",
     pumping_speed = 50,
-    vehicle_impact_sound = data.raw.pump["pump"].vehicle_impact_sound,
+    impact_category = data.raw.pump["pump"].impact_category,
     open_sound = data.raw.pump["pump"].open_sound,
     close_sound = data.raw.pump["pump"].close_sound,
     fluid_wagon_connector_frame_count = 35,
@@ -2727,7 +2727,7 @@ data:extend({
     },
     energy_usage = "20kW",
     pumping_speed = 100,
-    vehicle_impact_sound = data.raw.pump["pump"].vehicle_impact_sound,
+    impact_category = data.raw.pump["pump"].impact_category,
     open_sound = data.raw.pump["pump"].open_sound,
     close_sound = data.raw.pump["pump"].close_sound,
     fluid_wagon_connector_frame_count = 35,
@@ -2892,7 +2892,7 @@ data:extend({
     },
     energy_usage = "10kW",
     pumping_speed = 40,
-    vehicle_impact_sound = data.raw["pump"]["pump"].vehicle_impact_sound,
+    impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,
     circuit_wire_connection_points = data.raw["pump"]["pump"].circuit_wire_connection_points,
@@ -3003,7 +3003,7 @@ data:extend({
     },
     energy_usage = "15kW",
     pumping_speed = 80,
-    vehicle_impact_sound = data.raw["pump"]["pump"].vehicle_impact_sound,
+    impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,
     circuit_wire_connection_points = data.raw["pump"]["pump"].circuit_wire_connection_points,
@@ -3110,7 +3110,7 @@ data:extend({
         { position = {-0.1, 0}, direction = defines.direction.west }
       }
     },
-    vehicle_impact_sound = data.raw["pipe"]["pipe"].vehicle_impact_sound,
+    impact_category = data.raw["pipe"]["pipe"].impact_category,
     working_sound = data.raw["pipe"]["pipe"].working_sound,
     horizontal_window_bounding_box = {{-0.25, -0.25}, {0.25, 0.15625}},
     vertical_window_bounding_box = {{-0.28125, -0.40625}, {0.03125, 0.125}},
@@ -3145,7 +3145,7 @@ data:extend({
         { position = {-0.1, 0}, direction = defines.direction.west }
       }
     },
-    vehicle_impact_sound = data.raw["pipe"]["pipe"].vehicle_impact_sound,
+    impact_category = data.raw["pipe"]["pipe"].impact_category,
     working_sound = data.raw["pipe"]["pipe"].working_sound,
     horizontal_window_bounding_box = {{-0.25, -0.25}, {0.25, 0.15625}},
     vertical_window_bounding_box = {{-0.28125, -0.40625}, {0.03125, 0.125}},
@@ -3179,7 +3179,7 @@ data:extend({
         { position = {-0.1, 0}, direction = defines.direction.west }
       }
     },
-    vehicle_impact_sound = data.raw["pipe"]["pipe"].vehicle_impact_sound,
+    impact_category = data.raw["pipe"]["pipe"].impact_category,
     working_sound = data.raw["pipe"]["pipe"].working_sound,
     horizontal_window_bounding_box = {{-0.25, -0.25}, {0.25, 0.15625}},
     vertical_window_bounding_box = {{-0.28125, -0.40625}, {0.03125, 0.125}},
@@ -3218,7 +3218,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound = data.raw["pipe-to-ground"]["pipe-to-ground"].vehicle_impact_sound,
+    impact_category = data.raw["pipe-to-ground"]["pipe-to-ground"].impact_category,
     pictures = undergroundpipepics("__boblogistics__/graphics/entity/pipe/copper-tungsten/")
   },
 
@@ -3254,7 +3254,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound = data.raw["pipe-to-ground"]["pipe-to-ground"].vehicle_impact_sound,
+    impact_category = data.raw["pipe-to-ground"]["pipe-to-ground"].impact_category,
     pictures = data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].pictures
   },
 
@@ -3289,7 +3289,7 @@ data:extend({
         }
       }
     },
-    vehicle_impact_sound = data.raw["pipe-to-ground"]["pipe-to-ground"].vehicle_impact_sound,
+    impact_category = data.raw["pipe-to-ground"]["pipe-to-ground"].impact_category,
     pictures = undergroundpipepics("__boblogistics__/graphics/entity/pipe/tungsten/")
   }
 })

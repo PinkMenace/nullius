@@ -23,7 +23,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["electric-pole"]["medium-electric-pole"].damaged_trigger_effect,
     
-    vehicle_impact_sound = data.raw["electric-pole"]["medium-electric-pole"].vehicle_impact_sound,
+    impact_category = data.raw["electric-pole"]["medium-electric-pole"].impact_category,
     open_sound = data.raw["electric-pole"]["medium-electric-pole"].open_sound,
     close_sound = data.raw["electric-pole"]["medium-electric-pole"].close_sound,
     connection_points = data.raw["electric-pole"]["medium-electric-pole"].connection_points,
@@ -64,7 +64,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["electric-pole"]["medium-electric-pole"].damaged_trigger_effect,
     
-    vehicle_impact_sound = data.raw["electric-pole"]["medium-electric-pole"].vehicle_impact_sound,
+    impact_category = data.raw["electric-pole"]["medium-electric-pole"].impact_category,
     open_sound = data.raw["electric-pole"]["medium-electric-pole"].open_sound,
     close_sound = data.raw["electric-pole"]["medium-electric-pole"].close_sound,
     connection_points = data.raw["electric-pole"]["medium-electric-pole"].connection_points,
@@ -92,7 +92,7 @@ data:extend({
     damaged_trigger_effect = data.raw["electric-pole"]["big-electric-pole"].damaged_trigger_effect,
     
 
-    vehicle_impact_sound = data.raw["electric-pole"]["big-electric-pole"].vehicle_impact_sound,
+    impact_category = data.raw["electric-pole"]["big-electric-pole"].impact_category,
     open_sound = data.raw["electric-pole"]["big-electric-pole"].open_sound,
     close_sound = data.raw["electric-pole"]["big-electric-pole"].close_sound,
     connection_points = data.raw["electric-pole"]["big-electric-pole"].connection_points,
@@ -140,7 +140,7 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     damaged_trigger_effect = data.raw["electric-pole"]["big-electric-pole"].damaged_trigger_effect,
     
-    vehicle_impact_sound = data.raw["electric-pole"]["big-electric-pole"].vehicle_impact_sound,
+    impact_category = data.raw["electric-pole"]["big-electric-pole"].impact_category,
     open_sound = data.raw["electric-pole"]["big-electric-pole"].open_sound,
     close_sound = data.raw["electric-pole"]["big-electric-pole"].close_sound,
     connection_points = data.raw["electric-pole"]["big-electric-pole"].connection_points,
@@ -182,7 +182,7 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     
     damaged_trigger_effect = data.raw["electric-pole"]["substation"].damaged_trigger_effect,
-    vehicle_impact_sound = data.raw["electric-pole"]["substation"].vehicle_impact_sound,
+    impact_category = data.raw["electric-pole"]["substation"].impact_category,
     open_sound = data.raw["electric-pole"]["substation"].open_sound,
     close_sound = data.raw["electric-pole"]["substation"].close_sound,
     working_sound = data.raw["electric-pole"]["substation"].working_sound,
@@ -210,7 +210,7 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     
     damaged_trigger_effect = data.raw["electric-pole"]["substation"].damaged_trigger_effect,
-    vehicle_impact_sound = data.raw["electric-pole"]["substation"].vehicle_impact_sound,
+    impact_category = data.raw["electric-pole"]["substation"].impact_category,
     open_sound = data.raw["electric-pole"]["substation"].open_sound,
     close_sound = data.raw["electric-pole"]["substation"].close_sound,
     working_sound = data.raw["electric-pole"]["substation"].working_sound,
