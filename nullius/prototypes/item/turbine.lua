@@ -3,11 +3,15 @@ local function create_turbine_recipe(fluidname, exhaust, energy, counto, countc,
   local fluid = data.raw.fluid[fullfluid]
   local energycounto = math.floor(((energy * counto) / 10) + 0.5)
   local energycountc = math.floor(((energy * countc) / 10) + 0.5)
+  local localIcons = fluid.icons
+  if fluid.icon then
+    localIcons = {{icon = fluid.icon, icon_size = fluid.icon_size}}
+  end
   local open = {
     type = "recipe",
 	name = "nullius-burn-open-" .. fluidname,
 	localised_name = {"recipe-name.nullius-turbine-burn-open", {"fluid-name."..fullfluid}},
-	icons = fluid.icons,
+	icons = localIcons,
 	icon = fluid.icon,
     icon_size = fluid.icon_size,
 	crafting_machine_tint = { primary = fluid.flow_color },
