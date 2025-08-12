@@ -275,8 +275,8 @@ data:extend({
     order = "nullius-dc",
     energy_required = 3,
     ingredients = {
-      {"nullius-broken-align-transponder", 1},
-      {"nullius-iron-wire", 1}
+      {type = "item", name = "nullius-broken-align-transponder", amount = 1},
+      {type = "item", name = "nullius-iron-wire", amount = 1}
     },
     results = {
 			{type="item", name="nullius-align-transponder", amount = 1}
@@ -292,8 +292,8 @@ data:extend({
     category = "tiny-crafting",
     energy_required = 8,
     ingredients = {
-      {"nullius-steel-sheet", 1},
-      {"nullius-plastic", 1}
+      {type = "item", name = "nullius-steel-sheet", amount = 1},
+      {type = "item", name = "nullius-plastic", amount = 1}
     },
     results = {
 			{type="item", name="nullius-align-identification-card", amount = 1}
@@ -308,9 +308,9 @@ data:extend({
     category = "tiny-crafting",
     energy_required = 10,
     ingredients = {
-      {"nullius-align-identification-card", 1},
-      {"nullius-glass", 1},
-      {"nullius-aluminum-sheet", 1}
+      {type = "item", name = "nullius-align-identification-card", amount = 1},
+      {type = "item", name = "nullius-glass", amount = 1},
+      {type = "item", name = "nullius-aluminum-sheet", amount = 1}
     },
     results = {
 			{type="item", name="nullius-align-invitation-card", amount = 1}
@@ -325,9 +325,9 @@ data:extend({
     category = "small-crafting",
     energy_required = 12,
     ingredients = {
-	  {"nullius-align-identification-card", 1},
-	  {"constant-combinator", 1},
-	  {"nullius-capacitor", 2}
+	  {type = "item", name = "nullius-align-identification-card", amount = 1},
+	  {type = "item", name = "constant-combinator", amount = 1},
+	  {type = "item", name = "nullius-capacitor", amount = 2}
     },
     results = {
 			{type="item", name="nullius-align-transponder", amount = 1}
@@ -344,9 +344,9 @@ data:extend({
     category = "nullius-electrolysis",
     energy_required = 10,
     ingredients = {
-      {"nullius-align-invitation-card", 1},
-      {"nullius-align-transponder", 1},
-	  {"nullius-capacitor", 4}
+      {type = "item", name = "nullius-align-invitation-card", amount = 1},
+      {type = "item", name = "nullius-align-transponder", amount = 1},
+	  {type = "item", name = "nullius-capacitor", amount = 4}
     },
     results = {
 			{type="item", name="nullius-align-conscription-charge", amount = 3}
@@ -361,9 +361,9 @@ data:extend({
     category = "small-crafting",
     energy_required = 20,
     ingredients = {
-      {"power-switch", 1},
-      {"nullius-multi-tool-1", 1},
-      {"nullius-relay-1", 1}
+      {type = "item", name = "power-switch", amount = 1},
+      {type = "item", name = "nullius-multi-tool-1", amount = 1},
+      {type = "item", name = "nullius-relay-1", amount = 1}
     },
     results = {
 			{type="item", name="nullius-align-conscription-ray", amount = 1}
@@ -378,12 +378,12 @@ data:extend({
     category = "medium-crafting",
     energy_required = 30,
     ingredients = {
-      {"nullius-align-conscription-ray", 2},
-      {"nullius-night-vision-1", 1},
-      {"nullius-transformer", 1},
-	  {"nullius-bearing", 1},
-	  {"nullius-missile-launcher", 2},
-	  {"nullius-steel-beam", 6}
+      {type = "item", name = "nullius-align-conscription-ray", amount = 2},
+      {type = "item", name = "nullius-night-vision-1", amount = 1},
+      {type = "item", name = "nullius-transformer", amount = 1},
+	  {type = "item", name = "nullius-bearing", amount = 1},
+	  {type = "item", name = "nullius-missile-launcher", amount = 2},
+	  {type = "item", name = "nullius-steel-beam", amount = 6}
     },
     results = {
 			{type="item", name="nullius-align-conscription-turret", amount = 1}
@@ -398,9 +398,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 60,
     ingredients = {
-      {"nullius-align-conscription-turret", 3},
-      {"nullius-large-beacon-1", 2},
-	  {"nullius-align-conscription-charge", 10}
+      {type = "item", name = "nullius-align-conscription-turret", amount = 3},
+      {type = "item", name = "nullius-large-beacon-1", amount = 2},
+	  {type = "item", name = "nullius-align-conscription-charge", amount = 10}
     },
     results = {
 			{type="item", name="nullius-align-concordance-transmitter", amount = 1}
@@ -415,9 +415,9 @@ data:extend({
     category = "huge-crafting",
     energy_required = 300,
     ingredients = {
-      {"nullius-align-concordance-transmitter", 3},
-      {"nullius-large-beacon-2", 2},
-      {"nullius-satellite", 1}
+      {type = "item", name = "nullius-align-concordance-transmitter", amount = 3},
+      {type = "item", name = "nullius-large-beacon-2", amount = 2},
+      {type = "item", name = "nullius-satellite", amount = 1}
     },
     results = {
 			{type="item", name="nullius-align-concordance-satellite", amount = 1}
