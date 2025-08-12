@@ -51,7 +51,7 @@ local checkpoint_data = {
   ["sensor"] = {{ CHK_ITEM, STT_CONSUME, 100, {{"nullius-sensor-1"}} }},
   ["freight-logistics"] = {{ CHK_BUILD, STT_NET, 1, {{"nullius-locomotive-1"}} },
 			{ CHK_BUILD, STT_NET, 2, {{"train-stop"}} },
-			{ CHK_BUILD, STT_NET, 150, {{"straight-rail"},{"curved-rail",4}} }},
+			{ CHK_BUILD, STT_NET, 150, {{"straight-rail"}}}},--,{"curved-rail-a",4}} }},
   ["limestone"] = {{ CHK_ITEM, STT_PRODUCE, 500, {{"nullius-limestone"}} }},
   ["optimization"] = {{ CHK_ITEM, STT_PRODUCE, 5, {{"nullius-haste-module-1"}} },
 			{ CHK_ITEM, STT_PRODUCE, 5, {{"nullius-efficiency-module-1"}} }},
@@ -61,7 +61,7 @@ local checkpoint_data = {
 			{ CHK_ITEM, STT_PRODUCE, 6, {{"nullius-robot-frame-1"}} }},
   ["logistic-robot"] = {{ CHK_ITEM, STT_PRODUCE, 8, {{"nullius-logistic-bot-1"}} },
 			{ CHK_BUILD, STT_NET, 2, {{"nullius-small-supply-chest-1"}} }},
-  ["logistics"] = {{ CHK_BUILD, STT_NET, 10, {{"turbo-inserter"}} },
+  ["logistics"] = {{ CHK_BUILD, STT_NET, 10, {{"bob-turbo-inserter"}} },
 			{ CHK_BUILD, STT_NET, 10, {{"fast-underground-belt"}} }},
   ["concrete"] = {{ CHK_ITEM, STT_PRODUCE, 1000, {{"concrete"}} }},
   ["heat-pipe"] = {{ CHK_ITEM, STT_PRODUCE, 50, {{"nullius-heat-pipe-1"}} }},
@@ -103,7 +103,7 @@ local checkpoint_data = {
   ["filter"] = {{ CHK_ITEM, STT_PRODUCE, 100,
 			{{"nullius-filter-2"}, {"nullius-box-filter-2", 5}} }},
   ["pumping"] = {{ CHK_BUILD, STT_NET, 40, {{"nullius-pump-2"}} }},
-  ["logistics-3"] = {{ CHK_BUILD, STT_NET, 10, {{"ultimate-splitter"}} }},
+  ["logistics-3"] = {{ CHK_BUILD, STT_NET, 10, {{"bob-ultimate-splitter"}} }},
   ["automation"] = {{ CHK_BUILD, STT_NET, 20, {{"nullius-large-assembler-2"}} }},
   ["mining"] = {{ CHK_ITEM, STT_CONSUME, 1200000, {{"iron-ore"},{"nullius-box-iron-ore",5}} },
 			{ CHK_ITEM, STT_CONSUME, 900000, {{"nullius-sandstone"},{"nullius-box-sandstone",5}} },
@@ -271,22 +271,22 @@ local function count_req_list(list, stats, calc)
   local count = 0
   for _,item in pairs(list) do
     local itemname = item[1]
-	local value = 0
+	  local value = 0
     if (calc == STT_PRODUCE) then
       value = stats.get_input_count(itemname)
     elseif (calc == STT_CONSUME) then
       value = stats.get_output_count(itemname)
     elseif (calc == STT_NET) then
       value = stats.get_input_count(itemname) - stats.get_output_count(itemname)
-	  if (item[3] ~= nil) then
-	    if (value < item[3]) then
-		  item[3] = value
-		else
-	      value = value - item[3]
-		end
-	  elseif (value < 0) then
-	    item[3] = value
-	  end
+	    if (item[3] ~= nil) then
+	      if (value < item[3]) then
+		    item[3] = value
+		  else
+	        value = value - item[3]
+		  end
+	    elseif (value < 0) then
+	      item[3] = value
+	    end
     end
 	if (item[2] ~= nil) then value = (value * item[2]) end
 	count = count + value
