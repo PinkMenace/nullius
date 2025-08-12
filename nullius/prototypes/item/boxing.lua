@@ -70,7 +70,7 @@ local function create_boxed_item(base_name, group, box_order,
 	  requester_paste_multiplier = 5,
       energy_required = 1,
       ingredients = {
-        {full_name, 4*ratio}
+        {type="item", name= full_name, amount = 4*ratio}
       },
        results = {
 			  {type="item", name="nullius-box-"..base_name, amount = 4}
@@ -94,7 +94,7 @@ local function create_boxed_item(base_name, group, box_order,
 	  requester_paste_multiplier = 4,
       energy_required = 0.2,
       ingredients = {
-        {"nullius-box-"..base_name, 1}
+        {type="item", name="nullius-box-"..base_name, amount = 1}
       },
        results = {
 			  {type="item", name=full_name, amount = ratio}
