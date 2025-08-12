@@ -913,20 +913,24 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-surface-two-way-junction-1",
+    --localised_name = {"entity-name.one-to-one-forward-t2-pipe"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"nullius-underground-pipe-2", 2},
-      {"nullius-steel-plate", 1},
-      {"nullius-rubber", 1}
+      {type = "item", name = "nullius-underground-pipe-2", amount = 2},
+      {type = "item", name = "nullius-steel-plate", amount = 1},
+      {type = "item", name = "nullius-rubber", amount = 1}
     },
-    result = "one-to-one-forward-t2-pipe"
+    results = {
+      {type = "item", name = "one-to-one-forward-t2-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-surface-three-way-junction-1",
+    --localised_name = {"entity-name.one-to-two-perpendicular-t2-pipe"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -935,11 +939,14 @@ data:extend({
       {"one-to-one-forward-t2-pipe", 1},
       {"nullius-underground-pipe-2", 1}
     },
-    result = "one-to-two-perpendicular-t2-pipe"
+    results = {
+      {type = "item", name = "one-to-two-perpendicular-t2-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-surface-four-way-junction-1",
+    --localised_name = {"entity-name.one-to-three-forward-t2-pipe"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -948,11 +955,14 @@ data:extend({
       {"one-to-two-perpendicular-t2-pipe", 1},
       {"nullius-underground-pipe-2", 1}
     },
-    result = "one-to-three-forward-t2-pipe"
+    results = {
+      {type = "item", name = "one-to-three-forward-t2-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-underground-straight-junction-1",
+    --localised_name = {"entity-name.underground-i-t2-pipe"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -962,11 +972,14 @@ data:extend({
       {"nullius-underground-pipe-2", 1},
       {"nullius-glass", 1}
     },
-    result = "underground-i-t2-pipe"
+    results = {
+      {type = "item", name = "underground-i-t2-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-underground-elbow-junction-1",
+    --localised_name = {"entity-name.underground-L-t2-pipe"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -975,7 +988,9 @@ data:extend({
       {"underground-i-t2-pipe", 1},
       {"nullius-pipe-2", 2}
     },
-    result = "underground-L-t2-pipe"
+    results = {
+      {type = "item", name = "underground-L-t2-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -988,11 +1003,14 @@ data:extend({
       {"underground-L-t2-pipe", 1},
       {"nullius-underground-pipe-2", 1}
     },
-    result = "underground-t-t2-pipe"
+    results = {
+      {type = "item", name = "underground-t-t2-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-adjustable-relief-valve",
+    localised_name = {"item-name.nullius-adjustable-relief-valve"},
     enabled = false,
     always_show_made_in = true,
     category = "tiny-crafting",
@@ -1001,7 +1019,9 @@ data:extend({
       {"nullius-relief-valve", 2},
       {"nullius-red-wire", 1}
     },
-    result = "80-overflow-valve"
+    results = {
+      {type = "item", name = "80-overflow-valve", amount = 1}
+    }
   },
 
   {
@@ -1016,7 +1036,9 @@ data:extend({
       {"nullius-bearing", 1},
       {"nullius-underground-pipe-3", 1}
     },
-    result = "one-to-one-forward-t3-pipe"
+    results = {
+      {type = "item", name = "one-to-one-forward-t3-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1030,7 +1052,9 @@ data:extend({
       {"nullius-bearing", 1},
       {"nullius-underground-pipe-3", 2}
     },
-    result = "one-to-two-perpendicular-t3-pipe"
+    results = {
+      {type = "item", name = "one-to-two-perpendicular-t3-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1044,7 +1068,9 @@ data:extend({
       {"nullius-bearing", 1},
       {"nullius-underground-pipe-3", 3}
     },
-    result = "one-to-three-forward-t3-pipe"
+    results = {
+      {type = "item", name = "one-to-three-forward-t3-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1057,7 +1083,9 @@ data:extend({
       {"underground-i-t2-pipe", 1},
       {"nullius-underground-pipe-3", 2}
     },
-    result = "underground-i-t3-pipe"
+    results = {
+      {type = "item", name = "underground-i-t3-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1070,7 +1098,9 @@ data:extend({
       {"underground-L-t2-pipe", 1},
       {"nullius-underground-pipe-3", 3}
     },
-    result = "underground-L-t3-pipe"
+    results = {
+      {type = "item", name = "underground-L-t3-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1083,11 +1113,14 @@ data:extend({
       {"underground-t-t2-pipe", 1},
       {"nullius-underground-pipe-3", 4}
     },
-    result = "underground-t-t3-pipe"
+    results = {
+      {type = "item", name = "underground-t-t3-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-adjustable-top-up-valve",
+    localised_name = {"item-name.nullius-adjustable-top-up-valve"},
     enabled = false,
     always_show_made_in = true,
     category = "tiny-crafting",
@@ -1096,7 +1129,9 @@ data:extend({
       {"nullius-top-up-valve", 2},
       {"nullius-red-wire", 1}
     },
-    result = "80-top-up-valve"
+    results = {
+      {type = "item", name = "80-top-up-valve", amount = 1}
+    }
   },
 
   {
@@ -1110,7 +1145,9 @@ data:extend({
       {"one-to-one-forward-t3-pipe", 1},
       {"nullius-underground-pipe-4", 1}
     },
-    result = "one-to-one-forward-pipe"
+    results = {
+      {type = "item", name = "one-to-one-forward-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1123,7 +1160,9 @@ data:extend({
       {"one-to-two-perpendicular-t3-pipe", 1},
       {"nullius-underground-pipe-4", 2}
     },
-    result = "one-to-two-perpendicular-pipe"
+    results = {
+      {type = "item", name = "one-to-two-perpendicular-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1136,7 +1175,9 @@ data:extend({
       {"one-to-three-forward-t3-pipe", 1},
       {"nullius-underground-pipe-4", 3}
     },
-    result = "one-to-three-forward-pipe"
+    results = {
+      {type = "item", name = "one-to-three-forward-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1149,7 +1190,9 @@ data:extend({
       {"one-to-two-perpendicular-pipe", 1},
       {"one-to-one-forward-pipe", 1}
     },
-    result = "one-to-four-pipe"
+    results = {
+      {type = "item", name = "one-to-four-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1163,7 +1206,9 @@ data:extend({
       {"nullius-hard-glass", 1},
       {"nullius-underground-pipe-4", 2}
     },
-    result = "underground-i-pipe"
+    results = {
+      {type = "item", name = "underground-i-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1177,7 +1222,9 @@ data:extend({
       {"nullius-hard-glass", 1},
       {"nullius-underground-pipe-4", 2}
     },
-    result = "underground-L-pipe"
+    results = {
+      {type = "item", name = "underground-L-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1191,7 +1238,9 @@ data:extend({
       {"nullius-hard-glass", 1},
       {"nullius-underground-pipe-4", 3}
     },
-    result = "underground-t-pipe"
+    results = {
+      {type = "item", name = "underground-t-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -1204,11 +1253,14 @@ data:extend({
       {"underground-L-pipe", 2},
       {"nullius-underground-pipe-4", 1}
     },
-    result = "underground-cross-pipe"
+    results = {
+      {type = "item", name = "underground-cross-pipe", amount = 1}
+    }
   },
   {
     type = "recipe",
     name = "nullius-underground-pump",
+    localised_name = {"item-name.nullius-underground-pump"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -1217,7 +1269,9 @@ data:extend({
       {"nullius-small-pump-2", 3},
       {"underground-i-pipe", 2}
     },
-    result = "underground-mini-pump"
+    results = {
+      {type = "item", name = "underground-mini-pump", amount = 1}
+    }
   }
 })
 end
