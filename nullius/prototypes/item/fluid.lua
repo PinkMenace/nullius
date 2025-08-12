@@ -2,6 +2,8 @@ local ICONPATH = "__nullius__/graphics/icons/"
 local FLUIDPATH = ICONPATH .. "fluid/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 
+--angelsLegacy = require("legacyAngels")
+
 element_tint = {
   ["carbon"] = { 32, 32, 32 },
   ["hydrogen"] = { 240, 240, 240 },
@@ -130,7 +132,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-heavy-water",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/semiheavy-water.png", 72 },
       {element_tint["heavy"], element_tint["oxygen"], element_tint["hydrogen"]}
     ),
@@ -172,7 +174,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-air",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["air"], element_tint["residual"], element_tint["air"]}
     ),
     subgroup = "air-filtration",
@@ -187,7 +189,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-residual-gas",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["residual"], element_tint["trace"], element_tint["residual"]}
     ),
     subgroup = "air-filtration",
@@ -202,7 +204,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-trace-gas",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["trace"], element_tint["volcanic"], element_tint["trace"]}
     ),
     subgroup = "air-filtration",
@@ -217,7 +219,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-volcanic-gas",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["volcanic"], element_tint["air"], element_tint["volcanic"]}
     ),
 	localised_description = {"fluid-description.nullius-oxygen-reduction", tostring(20),
@@ -234,7 +236,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-nitrogen",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["nitrogen"], element_tint["nitrogen"], element_tint["nitrogen"]}
     ),
     subgroup = "air-filtration",
@@ -249,7 +251,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-argon",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["argon"], element_tint["argon"], element_tint["argon"]}
     ),
     subgroup = "air-filtration",
@@ -264,7 +266,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-helium",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["helium"], element_tint["helium"], element_tint["helium"]}
     ),
     subgroup = "air-filtration",
@@ -280,7 +282,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-carbon-dioxide",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
       {element_tint["carbon"], element_tint["oxygen"], element_tint["oxygen"]}
     ),
@@ -296,7 +298,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-carbon-monoxide",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72 },
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]}
     ),
@@ -314,7 +316,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-methane",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
@@ -332,7 +334,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-ethylene",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72 },
       {element_tint["carbon"], element_tint["carbon"], element_tint["hydrogen"]}
     ),
@@ -348,7 +350,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-propene",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["carbon"]}
     ),
@@ -364,7 +366,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-benzene",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
@@ -394,7 +396,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-methanol",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72 },
       {element_tint["carbon"], element_tint["oxygen"], element_tint["hydrogen"]}
     ),
@@ -409,7 +411,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-butadiene",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/butadiene.png", 75 },
       {element_tint["hydrogen"], element_tint["carbon"], element_tint["carbon"]}
     ),
@@ -425,7 +427,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-styrene",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/styrene.png", 72 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["carbon"]}
     ),
@@ -440,7 +442,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-acrylonitrile",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/methylamine.png", 72 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["nitrogen"]}
     ),
@@ -455,7 +457,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-ech",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/epichlorohydrin.png", 72 },
       {element_tint["carbon"], element_tint["chlorine"], element_tint["oxygen"]}
     ),
@@ -470,7 +472,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-glycerol",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["oxygen"]}
     ),
@@ -526,7 +528,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-amino-acids",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["nitrogen"], element_tint["carbon"], element_tint["hydrogen"]}
     ),
     subgroup = "biochemistry",
@@ -540,7 +542,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-nucleotides",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["carbon"], element_tint["oxygen"], element_tint["nitrogen"]}
     ),
     subgroup = "biochemistry",
@@ -554,7 +556,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-fatty-acids",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["carbon"], element_tint["carbon"], element_tint["hydrogen"]}
     ),
     subgroup = "biochemistry",
@@ -631,7 +633,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-hydrogen",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["hydrogen"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
 	localised_description = {"fluid-description.nullius-oxygen-reduction", tostring(50),
@@ -648,7 +650,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-deuterium",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["hydrogen"], element_tint["heavy"], element_tint["heavy"]}
     ),
 	localised_description = {"fluid-description.nullius-oxygen-reduction", tostring(50),
@@ -665,7 +667,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-tritium",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["heavy"], element_tint["heavy"], element_tint["heavy"]}
     ),
     subgroup = "inorganic-chemistry",
@@ -680,7 +682,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-oxygen",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["oxygen"], element_tint["oxygen"], element_tint["oxygen"]}
     ),
 	localised_description = {"fluid-description.nullius-oxygenation", tostring(100),
@@ -697,7 +699,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-chlorine",
-    icons = angelsmods.functions.create_gas_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_gas_fluid_icon(nil,
       {element_tint["chlorine"], element_tint["chlorine"], element_tint["chlorine"]}
     ),
     subgroup = "inorganic-chemistry",
@@ -712,7 +714,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-caustic-solution",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {FLUIDPATH .. "sodium-hydroxide.png",
         64, nil, 0.18},
       {element_tint["sodium"], element_tint["oxygen"], element_tint["hydrogen"]}
@@ -728,7 +730,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-calcium-chloride-solution",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {FLUIDPATH .. "calcium-chloride.png",
         64, nil, 0.18 },
       {element_tint["calcium"], element_tint["chlorine"], element_tint["chlorine"]}
@@ -744,7 +746,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-titanium-tetrachloride",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["titanium"], element_tint["titanium"], element_tint["chlorine"]}
     ),
     subgroup = "inorganic-chemistry",
@@ -758,7 +760,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-copper-solution",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["copper"], element_tint["copper"], element_tint["copper"]}
     ),
     subgroup = "inorganic-chemistry",
@@ -773,7 +775,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-hydrogen-chloride",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-chloride.png",
         72, nil, 0.15},
       {element_tint["chlorine"], element_tint["chlorine"], element_tint["hydrogen"]}
@@ -790,7 +792,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-acid-hydrochloric",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen-chloride.png",
         72, nil, 0.15 },
       {element_tint["chlorine"], element_tint["chlorine"], element_tint["hydrogen"]}
@@ -806,7 +808,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-sulfur-dioxide",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png",
         72, nil, 0.17},
       {element_tint["sulfur"], element_tint["oxygen"], element_tint["oxygen"]}
@@ -823,7 +825,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-acid-sulfuric",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/sulfuric-acid.png",
         72, nil, 0.18},
       {element_tint["sulfur"], element_tint["oxygen"], element_tint["hydrogen"]}
@@ -839,7 +841,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-ammonia",
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/ammonia.png", 72 },
       {element_tint["nitrogen"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
@@ -857,7 +859,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-acid-nitric",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/nitric-acid.png",
         72, nil, 0.18},
       {element_tint["nitrogen"], element_tint["oxygen"], element_tint["hydrogen"]}
@@ -874,7 +876,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-air",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["air"], element_tint["residual"], element_tint["air"]}
     ),
 	localised_description = {"fluid-description.nullius-recapture", tostring(85),
@@ -891,7 +893,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-residual-gas",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["residual"], element_tint["trace"], element_tint["residual"]}
     ),
 	localised_description = {"fluid-description.nullius-recapture", tostring(90),
@@ -908,7 +910,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-trace-gas",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["trace"], element_tint["volcanic"], element_tint["trace"]}
     ),
 	localised_description = {"fluid-description.nullius-recapture", tostring(90),
@@ -925,7 +927,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-nitrogen",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["nitrogen"], element_tint["nitrogen"], element_tint["nitrogen"]}
     ),
 	localised_description = {"fluid-description.nullius-recapture", tostring(90),
@@ -942,7 +944,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-argon",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["argon"], element_tint["argon"], element_tint["argon"]}
     ),
 	localised_description = {"fluid-description.nullius-recapture", tostring(96),
@@ -959,7 +961,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-helium",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["helium"], element_tint["helium"], element_tint["helium"]}
     ),
 	localised_description = {"fluid-description.nullius-recapture", tostring(99),
@@ -976,7 +978,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-hydrogen",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["hydrogen"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
 	localised_description = {"fluid-description.nullius-oxygen-reduction", tostring(200),
@@ -994,7 +996,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-oxygen",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["oxygen"], element_tint["oxygen"], element_tint["oxygen"]}
     ),
 	localised_description = {"fluid-description.nullius-oxygenation", tostring(400),
@@ -1012,7 +1014,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-carbon-dioxide",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72 },
       {element_tint["carbon"], element_tint["oxygen"], element_tint["oxygen"]}
     ),
@@ -1030,7 +1032,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-carbon-monoxide",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72 },
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]}
     ),
@@ -1049,7 +1051,7 @@ data:extend({
   {
     type = "fluid",
     name = "nullius-compressed-methane",
-    icons = angelsmods.functions.create_liquid_fluid_icon(
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
@@ -1314,7 +1316,7 @@ data:extend({
     type = "recipe",
     name = "nullius-saline-caustic-solution",
     localised_name = {"", {"fluid-name.nullius-caustic-solution"}, " ", tostring(1)},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
 	  {{FLUIDPATH .. "sodium-hydroxide.png", 64}},
       {element_tint["sodium"], element_tint["oxygen"], element_tint["hydrogen"]},
       {{FLUIDPATH .. "brine.png", 64 }}
@@ -1339,7 +1341,7 @@ data:extend({
     type = "recipe",
     name = "nullius-caustic-solution",
     localised_name = {"", {"fluid-name.nullius-caustic-solution"}, " ", tostring(2)},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
 	  {{FLUIDPATH .. "sodium-hydroxide.png", 64}},
       {element_tint["hydrogen"], element_tint["oxygen"], element_tint["sodium"]},
       {{FLUIDPATH .. "purewater.png", 64 }}
@@ -1418,7 +1420,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-hydrogen-chloride-electrolysis",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72}},
       {element_tint["hydrogen"], element_tint["chlorine"], element_tint["chlorine"]},
@@ -1954,7 +1956,7 @@ data:extend({
     type = "recipe",
     name = "nullius-wastewater-filtration",
     localised_name = {"recipe-name.nullius-wastewater-filtration"},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
       {{FLUIDPATH .. "sludge.png", 64},
         {"__base__/graphics/icons/fluid/water.png", 64}},
       {element_tint["waste"], element_tint["sludge"], element_tint["saline"]},
@@ -2029,7 +2031,7 @@ data:extend({
     type = "recipe",
     name = "nullius-desalination",
     localised_name = {"", {"recipe-name.nullius-desalination"}, " ", tostring(1)},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
       {{FLUIDPATH .. "brine.png", 64 },
         {FLUIDPATH .. "purewater.png", 64 }},
       {element_tint["saline"], element_tint["brine"], element_tint["water"]},
@@ -2053,7 +2055,7 @@ data:extend({
     type = "recipe",
     name = "nullius-desalination-2",
     localised_name = {"", {"recipe-name.nullius-desalination"}, " ", tostring(2)},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
       {{FLUIDPATH .. "brine.png", 64 },
         {FLUIDPATH .. "purewater.png", 64 },
         {FLUIDPATH .. "wastewater.png", 64 }},
@@ -2080,7 +2082,7 @@ data:extend({
     type = "recipe",
     name = "nullius-desalination-3",
     localised_name = {"", {"recipe-name.nullius-desalination"}, " ", tostring(3)},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
       {{FLUIDPATH .. "purewater.png", 64 },
         {FLUIDPATH .. "brine.png", 64 },
         {FLUIDPATH .. "wastewater.png", 64 }},
@@ -2107,7 +2109,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-saline-electrolysis",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72}},
@@ -2132,7 +2134,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-water-electrolysis",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72}},
       {element_tint["water"], element_tint["oxygen"], element_tint["hydrogen"]},
@@ -2154,7 +2156,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-water-electrolysis",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72}},
       {element_tint["oxygen"], element_tint["hydrogen"], element_tint["water"]},
@@ -2177,7 +2179,7 @@ data:extend({
     type = "recipe",
     name = "nullius-steam-electrolysis",
 	localised_name = {"recipe-name.nullius-electrolysis", {"fluid-name.nullius-steam"}},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72}},
       {{ 56, 142, 147 }, element_tint["oxygen"], element_tint["hydrogen"]},
@@ -2201,7 +2203,7 @@ data:extend({
     name = "nullius-pressure-steam-electrolysis",
 	localised_name = {"recipe-name.nullius-pressure",
 	    {"recipe-name.nullius-electrolysis", {"fluid-name.nullius-steam"}}},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72}},
       {element_tint["oxygen"], element_tint["hydrogen"], { 56, 142, 147 }},
@@ -2224,7 +2226,7 @@ data:extend({
     type = "recipe",
     name = "nullius-high-pressure-steam-electrolysis",
 	localised_name = {"recipe-name.nullius-electrolysis", {"fluid-name.nullius-pressure-steam"}},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72}},
       {element_tint["oxygen"], element_tint["hydrogen"], { 129, 202, 210 }},
@@ -2246,7 +2248,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-brine-electrolysis",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/chlorine.png", 72},
         {FLUIDPATH .. "sodium-hydroxide.png", 64, nil, 0.9}},
@@ -2698,7 +2700,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-air-separation-1",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen.png", 64},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}},
       {element_tint["air"], element_tint["nitrogen"], element_tint["carbon"]},
@@ -2722,7 +2724,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-air-separation-2",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen.png", 64},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}},
       {element_tint["air"], element_tint["carbon"], element_tint["residual"]},
@@ -2747,7 +2749,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-air-separation",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/nitrogen.png", 64},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}},
       {element_tint["air"], element_tint["carbon"], element_tint["residual"]},
@@ -2772,7 +2774,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-oxygen-separation",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}},
       {element_tint["oxygen"], element_tint["carbon"], element_tint["residual"]},
@@ -2797,7 +2799,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-oxygen-separation",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}},
       {element_tint["oxygen"], element_tint["carbon"], element_tint["residual"]},
@@ -2823,7 +2825,7 @@ data:extend({
     type = "recipe",
     name = "nullius-residual-gas",
     localised_name = {"fluid-name.nullius-residual-gas"},
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(nil,
       {element_tint["residual"], element_tint["air"], element_tint["residual"]},
       nil
     ),
@@ -2848,7 +2850,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-residual-separation",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{FLUIDPATH .. "atom.png", 64, nil, nil, element_tint["argon"]},
         {FLUIDPATH .. "purewater.png", 64}},
       {element_tint["residual"], element_tint["argon"], element_tint["water"]},
@@ -2873,7 +2875,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-residual-separation",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{FLUIDPATH .. "atom.png", 64, nil, nil, element_tint["argon"]},
         {FLUIDPATH .. "purewater.png", 64}},
       {element_tint["residual"], element_tint["argon"], element_tint["water"]},
@@ -2898,7 +2900,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-trace-separation",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{FLUIDPATH .. "atom.png", 64, nil, nil, element_tint["helium"]},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}},
       {element_tint["trace"], element_tint["helium"], element_tint["methane"]},
@@ -2923,7 +2925,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-trace-separation",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{FLUIDPATH .. "atom.png", 64, nil, nil, element_tint["helium"]},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}},
       {element_tint["trace"], element_tint["helium"], element_tint["methane"]},
@@ -2949,7 +2951,7 @@ data:extend({
     type = "recipe",
     name = "nullius-volcanic-separation-1",
     localised_name = {"", {"recipe-name.nullius-volcanic-separation"}, " ", tostring(1)},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["volcanic"], element_tint["sulfur"], element_tint["carbon"]},
@@ -2975,7 +2977,7 @@ data:extend({
     type = "recipe",
     name = "nullius-volcanic-separation-2",
     localised_name = {"", {"recipe-name.nullius-volcanic-separation"}, " ", tostring(2)},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["sulfur"], element_tint["carbon"], element_tint["boron"]},
@@ -3025,7 +3027,7 @@ data:extend({
     type = "recipe",
     name = "nullius-volcanic-separation-3",
     localised_name = {"", {"recipe-name.nullius-volcanic-separation"}, " ", tostring(3)},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/sulfur-dioxide.png", 72},
 		{FLUIDPATH .. "atom.png", 64, nil, nil, element_tint["helium"]}},
       {element_tint["sulfur"], element_tint["helium"], element_tint["boron"]},
@@ -3095,7 +3097,7 @@ data:extend({
     type = "recipe",
     name = "nullius-carbon-dioxide-to-monoxide",
     localised_name = {"recipe-name.nullius-carbon-dioxide-to-monoxide"},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}}
@@ -3122,7 +3124,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-carbon-monoxide",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}}
@@ -3149,7 +3151,7 @@ data:extend({
     type = "recipe",
     name = "nullius-carbon-monoxide-to-dioxide",
     localised_name = {"recipe-name.nullius-carbon-monoxide-to-dioxide"},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}},
       {element_tint["carbon"], element_tint["oxygen"], element_tint["oxygen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}}
@@ -3177,7 +3179,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-carbon-dioxide",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}},
       {element_tint["carbon"], element_tint["oxygen"], element_tint["oxygen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}}
@@ -3273,7 +3275,7 @@ data:extend({
     type = "recipe",
     name = "nullius-carbon-gasification-1",
 	localised_name = {"", {"recipe-name.nullius-carbon-gasification"}, " ", tostring(1)},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]},
       {{"__base__/graphics/icons/coal-dark-background.png", 64}}
@@ -3301,7 +3303,7 @@ data:extend({
     type = "recipe",
     name = "nullius-carbon-gasification-2",
 	localised_name = {"", {"recipe-name.nullius-carbon-gasification"}, " ", tostring(2)},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]},
       {{"__base__/graphics/icons/coal-dark-background.png", 64}}
@@ -3403,7 +3405,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-legacy-graphite-to-carbon-monoxide",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]},
       {{"__base__/graphics/icons/coal-dark-background.png", 64}}
@@ -3469,7 +3471,7 @@ data:extend({
     type = "recipe",
     name = "nullius-carbon-dioxide-electrolysis",
     localised_name = {"recipe-name.nullius-carbon-dioxide-electrolysis"},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/oxygen.png", 72},
 		    {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]},
@@ -3493,7 +3495,7 @@ data:extend({
     type = "recipe",
     name = "nullius-carbon-monoxide-to-alkenes",
     localised_name = {"recipe-name.nullius-alkene-synthesis"},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72}},
@@ -3520,7 +3522,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-alkene-synthesis",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72}},
@@ -3547,7 +3549,7 @@ data:extend({
     type = "recipe",
     name = "nullius-alkene-synthesis-light",
     localised_name = {"recipe-name.nullius-light", {"recipe-name.nullius-alkene-synthesis"}},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72}},
@@ -3574,7 +3576,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-carbon-dioxide-to-methane",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}},
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["hydrogen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}}
@@ -3601,7 +3603,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pressure-methane",
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}},
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["hydrogen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}}
@@ -3627,7 +3629,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-methane-to-ethylene",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["hydrogen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}}
@@ -3655,7 +3657,7 @@ data:extend({
     type = "recipe",
     name = "nullius-pressure-ethylene",
     localised_name = {"recipe-name.nullius-pressure-ethylene"},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72}},
       {element_tint["carbon"], element_tint["carbon"], element_tint["hydrogen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}}
@@ -3682,7 +3684,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-methanol",
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72}},
       {element_tint["carbon"], element_tint["oxygen"], element_tint["hydrogen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}}
@@ -3710,7 +3712,7 @@ data:extend({
     type = "recipe",
     name = "nullius-pressure-methanol",
     localised_name = {"recipe-name.nullius-pressure-methanol"},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/methanol.png", 72}},
       {element_tint["carbon"], element_tint["oxygen"], element_tint["hydrogen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72}}
@@ -3758,7 +3760,7 @@ data:extend({
     type = "recipe",
     name = "nullius-pressure-butadiene",
 	localised_name = {"recipe-name.nullius-pressure", {"fluid-name.nullius-butadiene"}},
-	icons = angelsmods.functions.create_liquid_fluid_icon(
+	icons = angelsLegacy.functions.create_liquid_fluid_icon(
       {"__angelspetrochemgraphics__/graphics/icons/molecules/butadiene.png", 75 },
       {element_tint["hydrogen"], element_tint["carbon"], element_tint["carbon"]}
     ),
@@ -5075,7 +5077,7 @@ data:extend({
     type = "recipe",
     name = "nullius-ethylene-pyrolysis",
     localised_name = {"recipe-name.nullius-ethylene-pyrolysis"},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72}},
@@ -5102,7 +5104,7 @@ data:extend({
     type = "recipe",
     name = "nullius-propene-pyrolysis",
     localised_name = {"recipe-name.nullius-propene-pyrolysis"},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/methane.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72}},
@@ -5129,7 +5131,7 @@ data:extend({
     type = "recipe",
     name = "nullius-methane-reforming",
     localised_name = {"recipe-name.nullius-reforming", {"fluid-name.nullius-methane"}},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72},
        {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
       {element_tint["hydrogen"], element_tint["carbon"], element_tint["oxygen"]},
@@ -5155,7 +5157,7 @@ data:extend({
     type = "recipe",
     name = "nullius-benzene-reforming",
     localised_name = {"recipe-name.nullius-reforming", {"fluid-name.nullius-benzene"}},
-    icons = angelsmods.functions.create_gas_recipe_icon(
+    icons = angelsLegacy.functions.create_gas_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72},
        {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72},
        {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
@@ -5184,7 +5186,7 @@ data:extend({
     name = "nullius-pressure-benzene-reforming",
     localised_name = {"recipe-name.nullius-pressure",
 	    {"recipe-name.nullius-reforming", {"fluid-name.nullius-benzene"}}},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72},
        {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72},
        {"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72}},
@@ -6098,7 +6100,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-air",
     localised_name = {"recipe-name.nullius-decompress-air"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["air"], element_tint["residual"], element_tint["air"]}
     ),
@@ -6124,7 +6126,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-nitrogen",
     localised_name = {"recipe-name.nullius-decompress-nitrogen"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["nitrogen"], element_tint["nitrogen"], element_tint["nitrogen"]}
     ),
@@ -6150,7 +6152,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-argon",
     localised_name = {"recipe-name.nullius-decompress-argon"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["argon"], element_tint["argon"], element_tint["argon"]}
     ),
@@ -6176,7 +6178,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-helium",
     localised_name = {"recipe-name.nullius-decompress-helium"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["helium"], element_tint["helium"], element_tint["helium"]}
     ),
@@ -6202,7 +6204,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-hydrogen",
     localised_name = {"recipe-name.nullius-decompress-hydrogen"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["hydrogen"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
@@ -6228,7 +6230,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-oxygen",
     localised_name = {"recipe-name.nullius-decompress-oxygen"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["oxygen"], element_tint["oxygen"], element_tint["oxygen"]}
     ),
@@ -6254,7 +6256,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-carbon-dioxide",
     localised_name = {"recipe-name.nullius-decompress-carbon-dioxide"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["carbon"], element_tint["oxygen"], element_tint["oxygen"]}
     ),
@@ -6280,7 +6282,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-carbon-monoxide",
     localised_name = {"recipe-name.nullius-decompress-carbon-monoxide"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["carbon"], element_tint["carbon"], element_tint["oxygen"]}
     ),
@@ -6306,7 +6308,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-methane",
     localised_name = {"recipe-name.nullius-decompress-methane"},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["hydrogen"]}
     ),
@@ -6333,7 +6335,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-residual-gas",
     localised_name = {"recipe-name.nullius-decompression", {"fluid-name.nullius-residual-gas"}},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["residual"], element_tint["trace"], element_tint["residual"]}
     ),
@@ -6359,7 +6361,7 @@ data:extend({
     type = "recipe",
     name = "nullius-decompress-trace-gas",
     localised_name = {"recipe-name.nullius-decompression", {"fluid-name.nullius-trace-gas"}},
-    icons = angelsmods.functions.create_gas_fluid_icon(
+    icons = angelsLegacy.functions.create_gas_fluid_icon(
       {"__angelsrefininggraphics__/graphics/icons/barreling-pump.png", 32 },
       {element_tint["trace"], element_tint["volcanic"], element_tint["trace"]}
     ),
@@ -7037,7 +7039,7 @@ data:extend({
     type = "recipe",
     name = "nullius-pressure-solvent",
     localised_name = {"recipe-name.nullius-pressure-solvent"},
-    icons = angelsmods.functions.create_liquid_recipe_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(nil,
       {element_tint["solvent"], element_tint["solvent"], element_tint["solvent"]},
       nil
     ),
@@ -7290,7 +7292,7 @@ data:extend({
     type = "recipe",
     name = "nullius-glycerol-to-ech",
     localised_name = {"", {"fluid-name.nullius-ech"}, " ", tostring(2)},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/epichlorohydrin.png", 72}},
       {element_tint["carbon"], element_tint["chlorine"], element_tint["oxygen"]},
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72}}

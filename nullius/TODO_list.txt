@@ -1,6 +1,6 @@
 TODO list:
 add working_sounds to entities (i think)
-Fix fluid boxes (volume and pipe connections) pipes hold as much fluid as medium tank for instance
+Fix fluid boxes (volume and pipe connections)
 Valves, pipes and tanks: fix mentions of pressure in locales
 Rework the entity mirroring system
 Rework the checkpoint system (maybe)

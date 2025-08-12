@@ -2898,7 +2898,7 @@ data:extend({
     type = "technology",
     name = "nullius-nitrogen-chemistry-1",
     order = "nullius-dg",
-    icons = data.raw.technology["angels-nitrogen-processing-1"].icons,
+    icons = angelsLegacy.functions.create_gas_tech_icon("NNN"),
     effects = {
       {
         type = "unlock-recipe",
@@ -3395,7 +3395,7 @@ data:extend({
     type = "technology",
     name = "nullius-sulfur-processing-1",
     order = "nullius-dj",
-    icons = data.raw.technology["angels-sulfur-processing-1"].icons,
+    icons = angelsLegacy.functions.create_gas_tech_icon("SSS"),
     effects = {
       {
         type = "unlock-recipe",
@@ -4172,7 +4172,7 @@ data:extend({
   {
     type = "technology",
     name = "nullius-nitrogen-chemistry-2",
-    icons = data.raw.technology["angels-nitrogen-processing-1"].icons,
+    icons = angelsLegacy.functions.create_gas_tech_icon("NNN"),
     order = "nullius-ed",
     effects = {
       {
@@ -4285,7 +4285,7 @@ data:extend({
     type = "technology",
     name = "nullius-sulfur-processing-2",
     order = "nullius-ed",
-    icons = data.raw.technology["angels-sulfur-processing-1"].icons,
+    icons = angelsLegacy.functions.create_gas_tech_icon("SSS"),
     effects = {
       {
         type = "unlock-recipe",
@@ -8555,7 +8555,7 @@ data:extend({
     name = "nullius-high-pressure-chemistry",
 	localised_name = {"", {"technology-name.nullius-high-pressure-chemistry"}, " ", tostring(1)},
     order = "nullius-eo",
-    icons = angelsmods.functions.create_liquid_fluid_icon(nil,
+    icons = angelsLegacy.functions.create_liquid_fluid_icon(nil,
       {element_tint["carbon"], element_tint["oxygen"], element_tint["oxygen"]}
     ),
     effects = {
@@ -13714,7 +13714,7 @@ data:extend({
     type = "technology",
     name = "nullius-nitrogen-chemistry-3",
     order = "nullius-gf",
-    icons = data.raw.technology["angels-nitrogen-processing-1"].icons,
+    icons = angelsLegacy.functions.create_gas_tech_icon("NNN"),
     effects = {
       {
         type = "unlock-recipe",

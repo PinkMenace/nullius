@@ -1039,7 +1039,7 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 }
     },
     impact_category = "metal",
-    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
+    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1184,7 +1184,7 @@ data:extend({
     energy_usage = "495kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
+    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-1"].fluid_boxes,
     
     graphics_set = {
@@ -1316,7 +1316,7 @@ data:extend({
     energy_usage = "2925kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
+    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1461,7 +1461,7 @@ data:extend({
     energy_usage = "1930kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-2"].resistances,
     impact_category = "metal",
-    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
+    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-2"].fluid_boxes,
 
     graphics_set = {
@@ -1557,7 +1557,7 @@ data:extend({
     energy_usage = "7725kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
+    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1697,7 +1697,7 @@ data:extend({
     energy_usage = "7650kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = data.raw["mining-drill"]["angels-thermal-extractor"].working_sound,
+    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1798,8 +1798,8 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -1845,8 +1845,8 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -1892,8 +1892,8 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -1932,8 +1932,8 @@ data:extend({
       { type = "impact", decrease = 50, percent = 80 }
     },
     energy_source = {type = "void"},
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-2",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
@@ -1990,8 +1990,8 @@ data:extend({
       { type = "impact", decrease = 50, percent = 80 }
     },
     energy_source = {type = "void"},
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-3",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
@@ -2039,8 +2039,8 @@ data:extend({
       { type = "impact", decrease = 50, percent = 80 }
     },
     energy_source = {type = "void"},
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
     fast_replaceable_group = "geothermal-plant",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
@@ -2349,8 +2349,8 @@ data:extend({
       render_no_network_icon = false
     },
     consumption = "2kW",
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
@@ -2439,8 +2439,8 @@ data:extend({
       render_no_network_icon = false
     },
     consumption = "5kW",
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
@@ -2529,8 +2529,8 @@ data:extend({
       render_no_network_icon = false
     },
     consumption = "20kW",
-    working_sound = data.raw["assembling-machine"]["angels-chemical-furnace"].working_sound,
-    impact_category = data.raw["assembling-machine"]["angels-chemical-furnace"].impact_category,
+    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {

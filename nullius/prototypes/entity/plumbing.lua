@@ -1089,7 +1089,7 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
     },
-    working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
+    working_sound = angelsLegacy.data["angels-air-filter"].working_sound,
     impact_category = "metal",
     fluid_boxes = {
       {
@@ -1176,7 +1176,7 @@ data:extend({
     },
     module_slots = 1,
     allowed_effects = {"speed", "consumption", "pollution"},
-    working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
+    working_sound = angelsLegacy.data["angels-air-filter"].working_sound,
     impact_category = "metal",
     fluid_boxes = {
       {
@@ -1230,7 +1230,7 @@ data:extend({
     },
     module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
-    working_sound = data.raw["assembling-machine"]["angels-air-filter"].working_sound,
+    working_sound = angelsLegacy.data["angels-air-filter"].working_sound,
     impact_category = "metal",
     fluid_boxes = {
       {
@@ -1931,10 +1931,10 @@ data:extend({
           }
         }
       },
-      fluid_background = data.raw["storage-tank"]["angels-storage-tank-3"].pictures.fluid_background,
-      window_background = data.raw["storage-tank"]["angels-storage-tank-3"].pictures.window_background,
-      flow_sprite = data.raw["storage-tank"]["angels-storage-tank-3"].pictures.flow_sprite,
-      gas_flow = data.raw["storage-tank"]["angels-storage-tank-3"].pictures.gas_flow
+      fluid_background = angelsLegacy.data["angels-storage-tank-3"].pictures.fluid_background,
+      window_background = angelsLegacy.data["angels-storage-tank-3"].pictures.window_background,
+      flow_sprite = angelsLegacy.data["angels-storage-tank-3"].pictures.flow_sprite,
+      gas_flow = angelsLegacy.data["angels-storage-tank-3"].pictures.gas_flow
     },
     flow_length_in_ticks = 360,
     impact_category = "metal",
@@ -2020,11 +2020,11 @@ data:extend({
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
     impact_category = "metal",
-    working_sound = data.raw["storage-tank"]["angels-storage-tank-1"].working_sound,
+    working_sound = angelsLegacy.data["angels-storage-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    pictures = util.table.deepcopy(data.raw["storage-tank"]["angels-storage-tank-1"].pictures)
+    pictures = util.table.deepcopy(angelsLegacy.data["angels-storage-tank-1"].pictures)
   },
 
   {
@@ -2053,11 +2053,11 @@ data:extend({
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
     impact_category = "metal",
-    working_sound = data.raw["storage-tank"]["angels-storage-tank-1"].working_sound,
+    working_sound = angelsLegacy.data["angels-storage-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    pictures = util.table.deepcopy(data.raw["storage-tank"]["angels-storage-tank-1"].pictures)
+    pictures = util.table.deepcopy(angelsLegacy.data["angels-storage-tank-1"].pictures)
   },
 
   {
@@ -2085,11 +2085,11 @@ data:extend({
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
     impact_category = "metal",
-    working_sound = data.raw["storage-tank"]["angels-storage-tank-1"].working_sound,
+    working_sound = angelsLegacy.data["angels-storage-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    pictures = data.raw["storage-tank"]["angels-storage-tank-1"].pictures
+    pictures = angelsLegacy.data["angels-storage-tank-1"].pictures
   }
 })
 

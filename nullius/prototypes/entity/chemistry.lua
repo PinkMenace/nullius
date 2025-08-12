@@ -5,7 +5,7 @@ local BASEENTITY = "__base__/graphics/entity/"
 
 local function hydro_animation(basename, newtint)
   local baselayer = scale_image(
-      data.raw["assembling-machine"][basename].graphics_set.animation.layers[1], 0.725)
+      angelsLegacy.data[basename].graphics_set.animation.layers[1], 0.725)
   baselayer.tint = newtint
 
   local vertical = { layers = {
@@ -71,35 +71,35 @@ data:extend({
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
 	  graphics_set = {
 	    animation = hydro_animation("angels-hydro-plant",{0.77, 0.77, 0.68}),
-	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant"].graphics_set.working_visualisations, 0.725),
+	    working_visualisations = scale_image(angelsLegacy.data["angels-hydro-plant"].graphics_set.working_visualisations, 0.725),
 	  },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
+    working_sound = angelsLegacy.data["angels-hydro-plant"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[1].pipe_picture,
+        pipe_picture = angelsLegacy.data["angels-hydro-plant"].fluid_boxes[1].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="input", position = {-1, -2}, direction = defines.direction.north }}
       },
       {
         production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[1].pipe_picture,
+        pipe_picture = angelsLegacy.data["angels-hydro-plant"].fluid_boxes[1].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="input", position = {1, -2}, direction = defines.direction.north }}
       },
       {
         production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[2].pipe_picture,
+        pipe_picture = angelsLegacy.data["angels-hydro-plant"].fluid_boxes[2].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {1, 2}, direction = defines.direction.south }}
       },
       {
         production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["angels-hydro-plant"].fluid_boxes[3].pipe_picture,
+        pipe_picture = angelsLegacy.data["angels-hydro-plant"].fluid_boxes[3].pipe_picture,
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {-1, 2}, direction = defines.direction.south }}
@@ -137,10 +137,10 @@ data:extend({
     next_upgrade = "nullius-hydro-plant-3",
 	  graphics_set = {
 	    	animation = hydro_animation("angels-hydro-plant-2",{0.8, 0.8, 0.9}),
-	      working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant-2"].graphics_set.working_visualisations, 0.725),
+	      working_visualisations = scale_image(angelsLegacy.data["angels-hydro-plant-2"].graphics_set.working_visualisations, 0.725),
 	  },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-hydro-plant-2"].working_sound,
+    working_sound = angelsLegacy.data["angels-hydro-plant-2"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -200,10 +200,10 @@ data:extend({
     fast_replaceable_group = "hydro-plant",
 	  graphics_set = {
 	      animation = hydro_animation("angels-hydro-plant-3"),
-	      working_visualisations = scale_image(data.raw["assembling-machine"]["angels-hydro-plant-3"].graphics_set.working_visualisations, 0.725),
+	      working_visualisations = scale_image(angelsLegacy.data["angels-hydro-plant-3"].graphics_set.working_visualisations, 0.725),
 	  },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-hydro-plant-3"].working_sound,
+    working_sound = angelsLegacy.data["angels-hydro-plant-3"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -290,7 +290,7 @@ data:extend({
     next_upgrade = "nullius-mirror-hydro-plant-3",
     graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-2"].graphics_set,
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
+    working_sound = angelsLegacy.data["angels-hydro-plant"].working_sound,
 
     fluid_boxes = {
       {
@@ -356,7 +356,7 @@ data:extend({
     fast_replaceable_group = "hydro-plant",
     graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-3"].graphics_set,
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-hydro-plant"].working_sound,
+    working_sound = angelsLegacy.data["angels-hydro-plant"].working_sound,
 
     fluid_boxes = {
       {
@@ -913,7 +913,7 @@ data:extend({
         }
       }
     },
-	impact_category = data.raw["assembling-machine"]["angels-electrolyser"].impact_category,
+	impact_category = "metal",
 	working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.15 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.4 },

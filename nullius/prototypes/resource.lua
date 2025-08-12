@@ -1,7 +1,5 @@
 local BASEENTITY = "__base__/graphics/entity/"
 
-angelsmods.refining.disable_ore_override = true
-
 
 local resource_autoplace = require("resource-autoplace")
 resource_autoplace.initialize_patch_set("iron-ore", true)

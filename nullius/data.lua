@@ -1,3 +1,5 @@
+require("legacyAngels")
+
 require("prototypes.reskin")
 require("prototypes.category")
 require("prototypes.item.fluid")

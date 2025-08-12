@@ -453,7 +453,7 @@ data:extend({
     type = "recipe",
     name = "nullius-fatty-acid-pyrolysis",
     localised_name = {"recipe-name.nullius-pyrolysis", {"fluid-name.nullius-fatty-acids"}},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/ethylene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/benzene.png", 72},
         {"__angelspetrochemgraphics__/graphics/icons/molecules/propene.png", 72}},
@@ -514,7 +514,7 @@ data:extend({
     type = "recipe",
     name = "nullius-glycerol-reforming",
     localised_name = {"recipe-name.nullius-reforming", {"fluid-name.nullius-glycerol"}},
-    icons = angelsmods.functions.create_liquid_recipe_icon(
+    icons = angelsLegacy.functions.create_liquid_recipe_icon(
         {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-monoxide.png", 72},
        {"__angelspetrochemgraphics__/graphics/icons/molecules/hydrogen.png", 72}},
       {element_tint["carbon"], element_tint["hydrogen"], element_tint["oxygen"]},

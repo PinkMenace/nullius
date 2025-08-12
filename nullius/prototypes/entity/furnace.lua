@@ -2,7 +2,7 @@ local ICONPATH = "__nullius__/graphics/icons/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 local BASEENTITY = "__base__/graphics/entity/"
 
-local floatpipepics = data.raw["assembling-machine"]["angels-ore-floatation-cell"].fluid_boxes[1].pipe_picture
+local floatpipepics = angelsLegacy.data.floatationpipepictures()
 
 
 data:extend({
@@ -964,9 +964,9 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    graphics_set = util.table.deepcopy(data.raw["assembling-machine"]["angels-ore-crusher"].graphics_set),
+    graphics_set = util.table.deepcopy(angelsLegacy.data["angels-ore-crusher"].graphics_set),
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-burner-ore-crusher"].working_sound,
+    working_sound = angelsLegacy.data["angels-burner-ore-crusher"].working_sound,
   },
 
   {
@@ -998,7 +998,7 @@ data:extend({
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-ore-crusher"].working_sound,
+    working_sound =angelsLegacy.data["angels-ore-crusher"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1014,7 +1014,7 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    graphics_set = util.table.deepcopy(data.raw["assembling-machine"]["angels-ore-crusher-2"].graphics_set)
+    graphics_set = util.table.deepcopy(angelsLegacy.data["angels-ore-crusher-2"].graphics_set)
   },
 
   {
@@ -1045,7 +1045,7 @@ data:extend({
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-ore-crusher"].working_sound,
+    working_sound = angelsLegacy.data["angels-ore-crusher"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1061,7 +1061,7 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    graphics_set = util.table.deepcopy(data.raw["assembling-machine"]["angels-ore-crusher-3"].graphics_set)
+    graphics_set = util.table.deepcopy(angelsLegacy.data["angels-ore-crusher-3"].graphics_set)
   }
 })
 
@@ -1130,11 +1130,11 @@ data:extend({
       }
     },
     graphics_set = {
-      animation = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell"].graphics_set.animation.east, 0.81),
-	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell"].graphics_set.working_visualisations, 0.81),
+      animation = scale_image(angelsLegacy.data["angels-floatation-cell"].graphics_set.animation.east, 0.81),
+	    working_visualisations = scale_image(angelsLegacy.data["angels-floatation-cell"].graphics_set.working_visualisations, 0.81),
     },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell"].working_sound,
+    working_sound = angelsLegacy.data["angels-floatation-cell"].working_sound,
   },
 
   {
@@ -1197,11 +1197,11 @@ data:extend({
       }
     },
 	  graphics_set = {
-	    animation = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-2"].graphics_set.animation.east, 0.81),
-	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-2"].graphics_set.working_visualisations, 0.81),
+	    animation = scale_image(angelsLegacy.data["angels-floatation-cell-2"].graphics_set.animation.east, 0.81),
+	    working_visualisations = scale_image(angelsLegacy.data["angels-floatation-cell-2"].graphics_set.working_visualisations, 0.81),
 	  },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell-2"].working_sound,
+    working_sound = angelsLegacy.data["angels-floatation-cell-2"].working_sound,
     pipe_covers = pipecoverspictures()
   },
 
@@ -1264,11 +1264,11 @@ data:extend({
       }
     },
 	  graphics_set = {
-	    animation = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-3"].graphics_set.animation.east, 0.81),
-	    working_visualisations = scale_image(data.raw["assembling-machine"]["angels-ore-floatation-cell-3"].graphics_set.working_visualisations, 0.81),
+	    animation = scale_image(angelsLegacy.data["angels-floatation-cell-3"].graphics_set.animation.east, 0.81),
+	    working_visualisations = scale_image(angelsLegacy.data["angels-floatation-cell-3"].graphics_set.working_visualisations, 0.81),
 	  },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell-3"].working_sound,
+    working_sound = angelsLegacy.data["angels-floatation-cell-3"].working_sound,
     pipe_covers = pipecoverspictures()
   }
 })
@@ -1334,7 +1334,7 @@ data:extend({
       working_visualisations = data.raw["assembling-machine"]["nullius-flotation-cell-2"].graphics_set.working_visualisations,
     },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell"].working_sound,
+    working_sound = angelsLegacy.data["angels-floatation-cell"].working_sound,
 
     fluid_boxes = {
       {
@@ -1396,7 +1396,7 @@ data:extend({
     energy_source = data.raw["assembling-machine"]["nullius-flotation-cell-3"].energy_source,
     resistances = data.raw["assembling-machine"]["nullius-flotation-cell-3"].resistances,
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["angels-ore-floatation-cell"].working_sound,
+    working_sound = angelsLegacy.data["angels-floatation-cell"].working_sound,
 
     fluid_boxes = {
       {

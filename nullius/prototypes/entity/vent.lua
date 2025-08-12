@@ -190,7 +190,106 @@ data:extend({
     energy_source = {type = "void"},
     energy_usage = "1kW",
     graphics_set = {
-      animation = data.raw["furnace"]["angels-flare-stack"].graphics_set.animation,
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
+              priority = "extra-high",
+              frame_count = 1,
+              width = 142,
+              height = 429,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+        east = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 142,
+              frame_count = 1,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 382,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 284,
+              frame_count = 1,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 764,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 426,
+              frame_count = 1,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 1146,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+      },
       working_visualisations = {
         {
           apply_recipe_tint = "primary",
@@ -362,7 +461,14 @@ data:extend({
         }
       }
     },
-    placeable_position_visualization = data.raw["offshore-pump"]["angels-seafloor-pump"].placeable_position_visualization,
+    placeable_position_visualization = {
+      filename = "__core__/graphics/cursor-boxes-32x32.png",
+      priority = "extra-high-no-scale",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+      x = 3 * 64,
+    },
     impact_category = "metal",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
@@ -438,7 +544,14 @@ data:extend({
         }
       }
     },
-    placeable_position_visualization = data.raw["offshore-pump"]["angels-seafloor-pump"].placeable_position_visualization,
+    placeable_position_visualization = {
+      filename = "__core__/graphics/cursor-boxes-32x32.png",
+      priority = "extra-high-no-scale",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+      x = 3 * 64,
+    },
     impact_category = "metal",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },

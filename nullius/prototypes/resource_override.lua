@@ -1,16 +1,16 @@
 local resource_autoplace = require("resource-autoplace")
 
-for r, subdir in pairs(angelsmods.functions.store) do
-  for r, input in pairs(subdir) do
-    if (not input.inactive) then
-	  if ((input.name == "coal") or (input.name == "crude-oil")) then
-	    input.inactive = true
-	  else
-        angelsmods.functions.remove_resource(input.name)
-	  end
-    end
-  end
-end
+-- for r, subdir in pairs(angelsmods.functions.store) do -- TODO: remove that
+--   for r, input in pairs(subdir) do
+--     if (not input.inactive) then
+-- 	  if ((input.name == "coal") or (input.name == "crude-oil")) then
+-- 	    input.inactive = true
+-- 	  else
+--         angelsmods.functions.remove_resource(input.name)
+-- 	  end
+--     end
+--   end
+-- end
 
 
 function remove_autoplace(resource)
@@ -33,8 +33,8 @@ remove_autoplace("uranium-ore")
 remove_autoplace("coal")
 remove_autoplace("crude-oil")
 
-angelsmods.functions.remove_resource("stone")
-angelsmods.functions.remove_resource("trees")
+angelsLegacy.functions.remove_resource("stone")
+angelsLegacy.functions.remove_resource("trees")
 
 
 data.raw["autoplace-control"]["iron-ore"].localised_name = nil

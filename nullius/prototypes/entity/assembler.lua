@@ -564,7 +564,41 @@ data:extend({
   }
 })
 
-local nanofab_pipes = util.table.deepcopy(data.raw["assembling-machine"]["angels-crystallizer"].fluid_boxes[1].pipe_picture)
+--local nanofab_pipes = util.table.deepcopy(data.raw["assembling-machine"]["angels-crystallizer"].fluid_boxes[1].pipe_picture) --TODO: check those pipes
+local nanofab_pipes = {
+        north = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 0,
+          shift = { 0, 1 },
+          scale = 0.5,
+        },
+        east = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 128,
+          shift = { -1, 0 },
+          scale = 0.5,
+        },
+        south = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 256,
+          shift = { 0, -1 },
+          scale = 0.5,
+        },
+        west = {
+          filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
+          priority = "extra-high",
+          size = 128,
+          x = 384,
+          shift = { 1, 0 },
+          scale = 0.5,
+        },
+      }
 nanofab_pipes.south = util.table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south)
 nanofab_pipes.south.shift = {0, -1}
 
@@ -597,10 +631,10 @@ data:extend({
     },
     energy_usage = "470kW",
     graphics_set = {
-      animation = scale_image(data.raw["assembling-machine"]["angels-crystallizer"].graphics_set.animation, 0.775),
+      animation = scale_image(angelsLegacy.data["angels-crystallizer"].graphics_set.animation, 0.775),
     },
-    impact_category = data.raw["assembling-machine"]["angels-crystallizer"].impact_category,
-    working_sound = data.raw["assembling-machine"]["angels-crystallizer"].working_sound,
+    impact_category = angelsLegacy.data["angels-crystallizer"].impact_category,
+    working_sound = angelsLegacy.data["angels-crystallizer"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -680,7 +714,7 @@ data:extend({
     },
     energy_usage = "940kW",
     graphics_set = {
-        animation = scale_image(data.raw["assembling-machine"]["angels-crystallizer-2"].graphics_set.animation, 0.775),
+        animation = scale_image(angelsLegacy.data["angels-crystallizer-2"].graphics_set.animation, 0.775),
     },
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-nanofabricator-1"].working_sound,
@@ -824,8 +858,33 @@ data:extend({
       apparent_volume = 0.5
     },
     graphics_set = {
-        animation = scale_image(data.raw["assembling-machine"]["angels-powder-mixer"].graphics_set.animation, 0.52)
-    }
+      animation = scale_image({
+        layers = {
+          {
+            filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-base.png",
+            priority = "high",
+            width = 138,
+            height = 170,
+            line_length = 4,
+            frame_count = 4,
+            animation_speed = 0.5,
+            shift = util.by_pixel(0.5, -9.5),
+            scale = 0.5,
+          },
+          {
+            filename = "__angelssmeltinggraphics__/graphics/entity/powder-mixer/powder-mixer-shadow.png",
+            priority = "high",
+            width = 183,
+            height = 99,
+            repeat_count = 4,
+            animation_speed = 0.5,
+            draw_as_shadow = true,
+            shift = util.by_pixel(13, 9),
+            scale = 0.5,
+          },
+        },
+      }, 0.52)
+    },
   }
 })
 

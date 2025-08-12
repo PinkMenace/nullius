@@ -139,7 +139,7 @@ data:extend({
         icon_size = data.raw.fluid["nullius-saline"].icon_size,
       }
     },
-    crafting_machine_tint = { primary = data.raw.fluid["angels-water-saline"].flow_color },
+    crafting_machine_tint = { primary = angelsLegacy.functions.flow_color("Ws4NaCl")}, --{r = 0.9, g = 0.9, b = 1}
     category = "nullius-liquid-void",
     subgroup = "nullius-liquid-void",
     hide_from_player_crafting = true,
