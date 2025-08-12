@@ -88,8 +88,8 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     ingredients = {
-      {"nullius-gravel", 5},
-      {"nullius-sand", 1}
+      {type = "item", name = "nullius-gravel", amount = 5},
+      {type = "item", name = "nullius-sand", amount = 1}
     },
     results = {
 			{type="item", name="nullius-land-fill-gravel", amount = 2}
@@ -108,8 +108,8 @@ data:extend({
     category = "ore-crushing",
     subgroup = "boxed-land-fill",
     ingredients = {
-      {"nullius-box-gravel", 5},
-      {"nullius-box-sand", 1}
+      {type = "item", name = "nullius-box-gravel", amount = 5},
+      {type = "item", name = "nullius-box-sand", amount = 1}
     },
     results = {
 			{type="item", name="nullius-box-land-fill-gravel", amount = 1}
@@ -127,8 +127,8 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     ingredients = {
-      {"nullius-sand", 10},
-      {"nullius-gravel", 2}
+      {type = "item", name = "nullius-sand", amount = 10},
+      {type = "item", name = "nullius-gravel", amount = 2}
     },
     results = {
 			{type="item", name="nullius-land-fill-sand", amount = 4}
@@ -147,8 +147,8 @@ data:extend({
     category = "ore-crushing",
     subgroup = "boxed-land-fill",
     ingredients = {
-      {"nullius-box-sand", 5},
-      {"nullius-box-gravel", 1}
+      {type = "item", name = "nullius-box-sand", amount = 5},
+      {type = "item", name = "nullius-box-gravel", amount = 1}
     },
     results = {
 			{type="item", name="nullius-box-land-fill-sand", amount = 1}
@@ -166,8 +166,8 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     ingredients = {
-      {"nullius-crushed-bauxite", 15},
-      {"nullius-gravel", 5}
+      {type = "item", name = "nullius-crushed-bauxite", amount = 15},
+      {type = "item", name = "nullius-gravel", amount = 5}
     },
     results = {
 			{type="item", name="nullius-land-fill-bauxite", amount = 10}
@@ -184,8 +184,8 @@ data:extend({
     always_show_products = true,
     category = "ore-crushing",
     ingredients = {
-      {"nullius-crushed-iron-ore", 4},
-      {"nullius-sand", 1}
+      {type = "item", name = "nullius-crushed-iron-ore", amount = 4},
+      {type = "item", name = "nullius-sand", amount = 1}
     },
     results = {
 			{type="item", name="nullius-land-fill-iron", amount = 2}
@@ -202,7 +202,7 @@ data:extend({
     always_show_products = true,
     category = "ore-crushing",
     ingredients = {
-      {"nullius-crushed-limestone", 25}
+      {type = "item", name = "nullius-crushed-limestone", amount = 25}
     },
     results = {
 			{type="item", name="nullius-land-fill-limestone", amount = 10}
@@ -234,8 +234,8 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     ingredients = {
-      {"nullius-gravel", 10},
-      {"concrete", 15}
+      {type = "item", name = "nullius-gravel", amount = 10},
+      {type = "item", name = "concrete", amount = 15}
     },
     results = {
 			{type="item", name="nullius-land-fill-gravel", amount = 20}
@@ -272,8 +272,8 @@ data:extend({
     subgroup = "boxed-land-fill",
     energy_required = 16,
     ingredients = {
-      {"nullius-box-gravel", 4},
-      {"nullius-box-concrete", 3}
+      {type = "item", name = "nullius-box-gravel", amount = 4},
+      {type = "item", name = "nullius-box-concrete", amount = 3}
     },
     results = {
 			{type="item", name="nullius-box-land-fill-gravel", amount = 4}
@@ -305,8 +305,8 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     ingredients = {
-      {"nullius-sand", 10},
-      {"nullius-yellow-concrete", 10}
+      {type = "item", name = "nullius-sand", amount = 10},
+      {type = "item", name = "nullius-yellow-concrete", amount = 10}
     },
     results = {
 			{type="item", name="nullius-land-fill-sand", amount = 20}
@@ -343,8 +343,8 @@ data:extend({
     subgroup = "boxed-land-fill",
     energy_required = 6,
     ingredients = {
-      {"nullius-box-sand", 2},
-      {"nullius-box-yellow-concrete", 1}
+      {type = "item", name = "nullius-box-sand", amount = 2},
+      {type = "item", name = "nullius-box-yellow-concrete", amount = 1}
     },
     results = {
 			{type="item", name="nullius-box-land-fill-sand", amount = 2}
@@ -376,8 +376,8 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     ingredients = {
-      {"nullius-crushed-bauxite", 3},
-      {"nullius-brown-concrete", 5}
+      {type = "item", name = "nullius-crushed-bauxite", amount = 3},
+      {type = "item", name = "nullius-brown-concrete", amount = 5}
     },
     results = {
 			{type="item", name="nullius-land-fill-bauxite", amount = 10}
@@ -395,8 +395,8 @@ data:extend({
     order = "nullius-db",
     energy_required = 40,
     ingredients = {
-      {"nullius-box-crushed-bauxite", 6},
-      {"nullius-box-brown-concrete", 5}
+      {type = "item", name = "nullius-box-crushed-bauxite", amount = 6},
+      {type = "item", name = "nullius-box-brown-concrete", amount = 5}
     },
     results = {
 			{type="item", name="nullius-box-land-fill-bauxite", amount = 10}
@@ -427,8 +427,8 @@ data:extend({
     always_show_products = true,
     category = "ore-crushing",
     ingredients = {
-      {"nullius-crushed-iron-ore", 4},
-      {"nullius-red-concrete", 5}
+      {type = "item", name = "nullius-crushed-iron-ore", amount = 4},
+      {type = "item", name = "nullius-red-concrete", amount = 5}
     },
     results = {
 			{type="item", name="nullius-land-fill-iron", amount = 10}
@@ -445,8 +445,8 @@ data:extend({
     order = "nullius-eb",
     energy_required = 40,
     ingredients = {
-      {"nullius-box-crushed-iron-ore", 8},
-      {"nullius-box-red-concrete", 5}
+      {type = "item", name = "nullius-box-crushed-iron-ore", amount = 8},
+      {type = "item", name = "nullius-box-red-concrete", amount = 5}
     },
     results = {
 			{type="item", name="nullius-box-land-fill-iron", amount = 10}
@@ -477,8 +477,8 @@ data:extend({
     always_show_products = true,
     category = "ore-crushing",
     ingredients = {
-      {"nullius-crushed-limestone", 5},
-      {"refined-concrete", 4}
+      {type = "item", name = "nullius-crushed-limestone", amount = 5},
+      {type = "item", name = "refined-concrete", amount = 4}
     },
     results = {
 			{type="item", name="nullius-land-fill-limestone", amount = 10}
@@ -495,8 +495,8 @@ data:extend({
     order = "nullius-fb",
     energy_required = 20,
     ingredients = {
-      {"nullius-box-crushed-limestone", 5},
-      {"nullius-box-reinforced-concrete", 2}
+      {type = "item", name = "nullius-box-crushed-limestone", amount = 5},
+      {type = "item", name = "nullius-box-reinforced-concrete", amount = 2}
     },
     results = {
 			{type="item", name="nullius-box-land-fill-limestone", amount = 5}
