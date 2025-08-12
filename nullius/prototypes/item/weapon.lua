@@ -388,10 +388,10 @@ data:extend({
     always_show_made_in = true,
     energy_required = 10,
     ingredients = {
-      {"nullius-steel-plate", 6},
-      {"nullius-steel-wire", 2},
-      {"nullius-steel-gear", 1},
-      {"nullius-rubber", 1}
+      {type = "item", name = "nullius-steel-plate", amount = 6},
+      {type = "item", name = "nullius-steel-wire", amount = 2},
+      {type = "item", name = "nullius-steel-gear", amount = 1},
+      {type = "item", name = "nullius-rubber", amount = 1}
     },
     results = {
 				{type="item", name="nullius-gun", amount = 1}
@@ -435,10 +435,10 @@ data:extend({
     category = "small-crafting",
     energy_required = 30,
     ingredients = {
-      {"nullius-gun", 2},
-      {"nullius-titanium-plate", 4},
-      {"nullius-motor-3", 1},
-      {"nullius-sensor-2", 1}
+      {type = "item", name = "nullius-gun", amount = 2},
+      {type = "item", name = "nullius-titanium-plate", amount = 4},
+      {type = "item", name = "nullius-motor-3", amount = 1},
+      {type = "item", name = "nullius-sensor-2", amount = 1}
     },
    results = {
 				{type="item", name="nullius-rifle", amount = 1}
@@ -473,9 +473,9 @@ data:extend({
     always_show_made_in = true,
     energy_required = 5,
     ingredients = {
-      {"nullius-gun", 1},
-      {"nullius-pipe-2", 3},
-      {"nullius-sensor-1", 1}
+      {type = "item", name = "nullius-gun", amount = 1},
+      {type = "item", name = "nullius-pipe-2", amount = 3},
+      {type = "item", name = "nullius-sensor-1", amount = 1}
     },
     results = {
 				{type="item", name="nullius-missile-launcher", amount = 1}
@@ -518,12 +518,12 @@ data:extend({
     always_show_made_in = true,
     energy_required = 3,
     ingredients = {
-      {"cliff-explosives", 5},
-      {"nullius-steel-sheet", 3},
-      {"processed-fuel", 1},
-      {"nullius-sensor-1", 1},
-      {"nullius-battery-1", 1},
-      {"nullius-motor-2", 1}
+      {type = "item", name = "cliff-explosives", amount = 5},
+      {type = "item", name = "nullius-steel-sheet", amount = 3},
+      {type = "item", name = "processed-fuel", amount = 1},
+      {type = "item", name = "nullius-sensor-1", amount = 1},
+      {type = "item", name = "nullius-battery-1", amount = 1},
+      {type = "item", name = "nullius-motor-2", amount = 1}
     },
     results = {
 				{type="item", name="nullius-missile-1", amount = 6}
@@ -540,12 +540,12 @@ data:extend({
     always_show_made_in = true,
     energy_required = 15,
     ingredients = {
-      {"nullius-box-explosive", 5},
-      {"nullius-box-steel-sheet", 3},
-      {"nullius-box-methanol-canister", 1},
-      {"nullius-box-sensor-1", 1},
-      {"nullius-box-battery-1", 1},
-      {"nullius-box-motor-2", 1}
+      {type = "item", name = "nullius-box-explosive", amount = 5},
+      {type = "item", name = "nullius-box-steel-sheet", amount = 3},
+      {type = "item", name = "nullius-box-methanol-canister", amount = 1},
+      {type = "item", name = "nullius-box-sensor-1", amount = 1},
+      {type = "item", name = "nullius-box-battery-1", amount = 1},
+      {type = "item", name = "nullius-box-motor-2", amount = 1}
     },
    results = {
 			{type="item", name="nullius-box-missile-1", amount = 6}
@@ -588,11 +588,11 @@ data:extend({
     category = "small-crafting",
     energy_required = 10,
     ingredients = {
-      {"nullius-missile-1", 3},
-      {"nullius-titanium-sheet", 5},
-      {"nullius-fusion-cell", 1},
-      {"nullius-sensor-2", 1},
-      {"nullius-yield-module-2", 1}
+      {type = "item", name = "nullius-missile-1", amount = 3},
+      {type = "item", name = "nullius-titanium-sheet", amount = 5},
+      {type = "item", name = "nullius-fusion-cell", amount = 1},
+      {type = "item", name = "nullius-sensor-2", amount = 1},
+      {type = "item", name = "nullius-yield-module-2", amount = 1}
     },
     results = {
 				{type="item", name="nullius-missile-2", amount = 1}
@@ -609,11 +609,11 @@ data:extend({
     subgroup = "boxed-demolition",
     energy_required = 10,
     ingredients = {
-      {"nullius-box-missile-1", 3},
-      {"nullius-box-titanium-sheet", 5},
-      {"nullius-fusion-cell", 5},
-      {"nullius-box-sensor-2", 1},
-      {"nullius-box-yield-module-2", 1}
+      {type = "item", name = "nullius-box-missile-1", amount = 3},
+      {type = "item", name = "nullius-box-titanium-sheet", amount = 5},
+      {type = "item", name = "nullius-fusion-cell", amount = 5},
+      {type = "item", name = "nullius-box-sensor-2", amount = 1},
+      {type = "item", name = "nullius-box-yield-module-2", amount = 1}
     },
     results = {
 				{type="item", name="nullius-box-missile-2", amount = 1}
@@ -740,8 +740,8 @@ data:extend({
     category = "hand-casting",
     energy_required = 5,
     ingredients = {
-      {"cliff-explosives", 1},
-      {"nullius-steel-rod", 6}
+      {type = "item", name = "cliff-explosives", amount = 1},
+      {type = "item", name = "nullius-steel-rod", amount = 6}
     },
     results = {
 			{type="item", name="nullius-magazine", amount = 20}
@@ -758,8 +758,8 @@ data:extend({
     subgroup = "boxed-demolition",
     energy_required = 25,
     ingredients = {
-      {"nullius-box-explosive", 1},
-      {"nullius-box-steel-rod", 6}
+      {type = "item", name = "nullius-box-explosive", amount = 1},
+      {type = "item", name = "nullius-box-steel-rod", amount = 6}
     },
     results = {
 			{type="item", name="nullius-box-magazine", amount = 20}
@@ -775,9 +775,9 @@ data:extend({
     category = "hand-casting",
     energy_required = 8,
     ingredients = {
-      {"nullius-box-magazine", 2},
-      {"nullius-uranium", 1},
-	  {"nullius-copper-sheet", 1}
+      {type = "item", name = "nullius-box-magazine", amount = 2},
+      {type = "item", name = "nullius-uranium", amount = 1},
+	  {type = "item", name = "nullius-copper-sheet", amount = 1}
     },
     results = {
 			{type="item", name="nullius-magazine-2", amount = 3}
