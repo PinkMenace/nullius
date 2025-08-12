@@ -33,7 +33,7 @@ data.raw.item["storage-tank"].icons = {{
   icon_size = 64, 
 }}
 data.raw["storage-tank"]["storage-tank"].icons = data.raw.item["storage-tank"].icons
-data.raw["storage-tank"]["storage-tank"].fluid_box.volume = 500
+data.raw["storage-tank"]["storage-tank"].fluid_box.volume = 15000
 data.raw["storage-tank"]["storage-tank"].pictures =
     util.table.deepcopy(data.raw["storage-tank"]["nullius-medium-tank-3"].pictures)
 data.raw["storage-tank"]["storage-tank"].pictures.picture.sheets[1].tint = {0.9, 0.8, 0.6}
@@ -235,7 +235,7 @@ data.raw["logistic-container"]["active-provider-chest"].next_upgrade = nil
 
 data.raw["pipe"]["pipe"].next_upgrade = "nullius-pipe-2"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "nullius-underground-pipe-2"
-data.raw["pipe"]["pipe"].fluid_box.volume = 500
+data.raw["pipe"]["pipe"].fluid_box.volume = 400
 data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.max_underground_distance = 11
 data.raw.item["pipe"].stack_size = 200
 data.raw.item["pipe-to-ground"].stack_size = 100
@@ -244,7 +244,7 @@ data.raw.item["pipe-to-ground"].stack_size = 100
 data.raw.item["pump"].stack_size = 50
 data.raw["pump"]["pump"].fast_replaceable_group = "pump"
 data.raw["pump"]["pump"].next_upgrade = nil
-data.raw["pump"]["pump"].fluid_box.volume = 500
+data.raw["pump"]["pump"].fluid_box.volume = 1000
 data.raw["pump"]["pump"].pumping_speed = 200
 data.raw.pump["nullius-pump-2"].collision_mask = data.raw.pump.pump.collision_mask
 data.raw.pump["nullius-pump-2"].collision_box = data.raw.pump.pump.collision_box

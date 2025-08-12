@@ -1263,8 +1263,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1359,8 +1359,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1454,8 +1454,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1550,8 +1550,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1640,7 +1640,7 @@ data:extend({
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box = {
-      volume = 500,
+      volume = 30000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {-1, -1},  direction = defines.direction.north },
@@ -1708,7 +1708,7 @@ data:extend({
     collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_box = {
-      volume = 500,
+      volume = 60000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {-1, -1},  direction = defines.direction.north },
@@ -1773,7 +1773,7 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     two_direction_only = false,
     fluid_box = {
-      volume = 500,
+      volume = 10000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0.5, -0.5}, direction = defines.direction.north },
@@ -1959,7 +1959,7 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     two_direction_only = false,
     fluid_box = {
-      volume = 500,
+      volume = 20000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0.5, -0.5}, direction = defines.direction.north },
@@ -2006,7 +2006,7 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     two_direction_only = false,
     fluid_box = {
-      volume = 500,
+      volume = 125000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0, -2}, direction = defines.direction.north },
@@ -2039,7 +2039,7 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     two_direction_only = false,
     fluid_box = {
-      volume = 500,
+      volume = 250000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0, -2}, direction = defines.direction.north },
@@ -2072,7 +2072,7 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     two_direction_only = false,
     fluid_box = {
-      volume = 500,
+      volume = 500000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0, -2}, direction = defines.direction.north },
@@ -3102,7 +3102,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
-      volume = 500,
+      volume = 400,
       pipe_connections = {
         { position = {0, -0.1}, direction = defines.direction.north },
         { position = {0.1, 0},  direction = defines.direction.east },
@@ -3137,7 +3137,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
-      volume = 500,
+      volume = 400,
       pipe_connections = {
         { position = {0, -0.1}, direction = defines.direction.north },
         { position = {0.1, 0},  direction = defines.direction.east },
@@ -3171,7 +3171,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
-      volume = 500,
+      volume = 400,
       pipe_connections = {
         { position = {0, -0.1}, direction = defines.direction.north },
         { position = {0.1, 0},  direction = defines.direction.east },
@@ -3206,7 +3206,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe-to-ground"]["pipe-to-ground"].damaged_trigger_effect,
     fluid_box = {
-      volume = 500,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0, -0.1}, direction = defines.direction.north },
@@ -3242,7 +3242,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe-to-ground"]["pipe-to-ground"].damaged_trigger_effect,
     fluid_box = {
-      volume = 500,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0, -0.1}, direction = defines.direction.north },
@@ -3277,7 +3277,7 @@ data:extend({
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = data.raw["pipe-to-ground"]["pipe-to-ground"].damaged_trigger_effect,
     fluid_box = {
-      volume = 500,
+      volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { position = {0, -0.1}, direction = defines.direction.north },
