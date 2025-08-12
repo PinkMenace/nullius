@@ -950,11 +950,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-speed-1",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/speed1.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-speed-1",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/speed1.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-speed-1",
     subgroup = "coprocessors",
     order = "nullius-bb",
     stack_size = 10
@@ -962,11 +962,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-speed-2",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/speed2.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-speed-2",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/speed2.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-speed-2",
     subgroup = "coprocessors",
     order = "nullius-bc",
     stack_size = 10
@@ -974,11 +974,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-speed-3",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/speed3.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-speed-3",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/speed3.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-speed-3",
     subgroup = "coprocessors",
     order = "nullius-bd",
     stack_size = 10
@@ -986,11 +986,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-efficiency-1",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/efficiency1.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-efficiency-1",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/efficiency1.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-efficiency-1",
     subgroup = "coprocessors",
     order = "nullius-cb",
     stack_size = 10
@@ -998,11 +998,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-efficiency-2",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/efficiency2.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-efficiency-2",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/efficiency2.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-efficiency-2",
     subgroup = "coprocessors",
     order = "nullius-cc",
     stack_size = 10
@@ -1010,11 +1010,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-efficiency-3",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/efficiency3.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-efficiency-3",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/efficiency3.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-efficiency-3",
     subgroup = "coprocessors",
     order = "nullius-cd",
     stack_size = 10
@@ -1022,11 +1022,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-productivity-1",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/productivity1.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-productivity-1",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/productivity1.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-productivity-1",
     subgroup = "coprocessors",
     order = "nullius-db",
     stack_size = 10
@@ -1034,11 +1034,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-productivity-2",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/productivity2.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-productivity-2",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/productivity2.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-productivity-2",
     subgroup = "coprocessors",
     order = "nullius-dc",
     stack_size = 10
@@ -1046,11 +1046,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-productivity-3",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/productivity3.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-productivity-3",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/productivity3.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-productivity-3",
     subgroup = "coprocessors",
     order = "nullius-dd",
     stack_size = 10
@@ -1058,11 +1058,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-coprocessor-quantum",
-	icons = {{
-	  icon = EQUIPPATH.."coprocessor/quantum.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-coprocessor-quantum",
+	  icons = {{
+	    icon = EQUIPPATH.."coprocessor/quantum.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-coprocessor-quantum",
     subgroup = "coprocessors",
     order = "nullius-e",
     stack_size = 10

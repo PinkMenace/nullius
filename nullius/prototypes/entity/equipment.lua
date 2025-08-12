@@ -1031,7 +1031,6 @@ data:extend({
   {
     type = "belt-immunity-equipment",
     name = "nullius-levitation-field-1",
-    localised_name = {"", {"equipment-name.nullius-levitation-field"}, " ", tostring(1)},
     localised_description = data.raw.item["nullius-levitation-field-1"].localised_description,
     order = "fb",
     sprite = {
@@ -1058,7 +1057,6 @@ data:extend({
   {
     type = "belt-immunity-equipment",
     name = "nullius-levitation-field-2",
-    localised_name = {"", {"equipment-name.nullius-levitation-field"}, " ", tostring(2)},
     localised_description = data.raw.item["nullius-levitation-field-2"].localised_description,
     order = "fc",
     sprite = {
@@ -1086,7 +1084,7 @@ data:extend({
   {
     type = "movement-bonus-equipment",
     name = "nullius-upgrade-jump-boots",
-    localised_description = data.raw.item["nullius-jump-boots"].localised_description,
+    localised_description = data.raw.item["nullius-jump-boots"].localised_description, 
     take_result = "nullius-jump-boots",
     order = "daj",
     sprite = {

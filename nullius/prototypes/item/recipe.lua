@@ -112,6 +112,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-inserter-1",
+    localised_name = {"entity-name.nullius-inserter-1"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -149,6 +150,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-inserter-2",
+    localised_name = {"entity-name.nullius-inserter-2"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -216,6 +218,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-inserter-3",
+    localised_name = {"entity-name.nullius-inserter-3"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -283,6 +286,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-inserter-4",
+    localised_name = {"entity-name.nullius-inserter-4"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -354,6 +358,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-conveyor-belt-1",
+    localised_name = {"entity-name.nullius-belt-1"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -393,6 +398,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-underground-belt-1",
+    localised_name = {"entity-name.nullius-underground-belt-1"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -428,6 +434,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-splitter-1",
+    localised_name = {"entity-name.nullius-splitter-1"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -476,6 +483,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-conveyor-belt-2",
+    localised_name = {"entity-name.nullius-belt-2"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -517,6 +525,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-underground-belt-2",
+    localised_name = {"entity-name.nullius-underground-belt-2"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -554,6 +563,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-splitter-2",
+    localised_name = {"entity-name.nullius-splitter-2"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -606,6 +616,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-conveyor-belt-3",
+    localised_name = {"entity-name.nullius-belt-3"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -645,6 +656,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-underground-belt-3",
+    localised_name = {"entity-name.nullius-underground-belt-3"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -682,6 +694,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-splitter-3",
+    localised_name = {"entity-name.nullius-splitter-3"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -733,6 +746,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-conveyor-belt-4",
+    localised_name = {"entity-name.nullius-belt-4"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -774,6 +788,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-underground-belt-4",
+    localised_name = {"entity-name.nullius-underground-belt-4"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -811,6 +826,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-splitter-4",
+    localised_name = {"entity-name.nullius-splitter-4"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -862,6 +878,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-rail",
+    localised_name = {"entity-name.straight-rail"},
     enabled = false,
     category = "large-crafting",
     always_show_made_in = true,
@@ -902,6 +919,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-stop",
+    localised_name = {"entity-name.train-stop"},
     enabled = false,
     category = "medium-crafting",
     always_show_made_in = true,
@@ -937,6 +955,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-rail-signal",
+    localised_name = {"entity-name.rail-signal"},
     enabled = false,
 	always_show_made_in = true,
 	show_amount_in_title = false,
@@ -1013,6 +1032,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-chain-signal",
+    localised_name = {"entity-name.rail-chain-signal"},
     enabled = false,
     category = "small-crafting",
     always_show_made_in = true,
@@ -1045,7 +1065,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-power-switch",
-    localised_name = {"item-name.nullius-power-switch"},
+    localised_name = {"entity-name.power-switch"},
     enabled = false,
     category = "small-crafting",
     always_show_made_in = true,

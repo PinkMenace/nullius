@@ -9,11 +9,9 @@ Update the recipe ingredients format
 fix the others warnings in the log
 landfill transitions things -> i have no clue how this thing works and if i even have to do anything
 fix factoriopedia duplicate entities (maybe wait for kiwi's modding request to go through)
-fix the localised names missing : logistics, fluid voiding and boxed recipes
 mods compatibility
 do we remove the legacy items/recipes/buildings ?
 why does grass drone take this long to spawn grass ?? -> it also takes very long on 1.1
 decide what to do with angels stuff : depend only on the graphics ? then we'll have to recreate some of their entities and re implement some of angels functions
-fix or make better voiding icons for recipes (it's difficult to identify the recipes in factoriopedia (in the "used in" section))
 selector-combinator and display panel not included in mod
 update changelog and info.json(min version of dependencies) before publishing

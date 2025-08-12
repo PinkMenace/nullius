@@ -42,8 +42,8 @@ local function create_boxed_item(base_name, group, box_order,
     localname = item.localised_name
   elseif (item.place_result ~= nil) then
     localname = {"entity-name."..item.place_result}
-  elseif (item.placed_as_equipment_result ~= nil) then
-    localname = {"equipment-name."..item.placed_as_equipment_result}
+  elseif (item.place_as_equipment_result ~= nil) then
+    localname = {"equipment-name."..item.place_as_equipment_result}
   end
 
   data:extend({

@@ -116,3 +116,28 @@ for _,recipe in pairs(data.raw.recipe) do
     end
   end
 end
+
+-- Set the localised names for boxed recipes
+for _,recipe in pairs(data.raw.recipe) do
+  if string.sub(recipe.name, 1, 14) == "nullius-boxed-" then
+      local main_product = nil
+      if recipe.main_product ~= nil then
+        main_product = recipe.main_product
+      elseif recipe.results and recipe.results[1] then
+        main_product = recipe.results[1].name
+      end
+      
+      if main_product ~= nil and (string.sub(main_product, 1, 12) == "nullius-box-") then
+        if recipe.localised_name == nil then
+          --First version 
+          --recipe.localised_name = data.raw.item[main_product].localised_name
+          
+          -- Second version
+          recipe.localised_name = table.deepcopy(data.raw.item[main_product].localised_name)
+          if recipe.localised_name[1] == "item-name.nullius-box" then
+            recipe.localised_name[1] = "recipe-name.nullius-boxed"
+          end
+        end
+      end
+  end
+end

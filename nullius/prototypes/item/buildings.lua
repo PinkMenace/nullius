@@ -1178,6 +1178,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-chest-1",
+    localised_name = {"entity-name.nullius-small-chest-1"},
     enabled = false,
     category = "medium-crafting",
     always_show_made_in = true,
@@ -1193,6 +1194,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-chest-2",
+    localised_name = {"entity-name.nullius-small-chest-2"},
     enabled = false,
     category = "medium-crafting",
     always_show_made_in = true,
@@ -1210,6 +1212,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-chest-3",
+    localised_name = {"entity-name.nullius-small-chest-3"},
     enabled = false,
     category = "large-fluid-assembly",
     always_show_made_in = true,
@@ -1381,6 +1384,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-storage-chest-2",
+    localised_name = {"entity-name.nullius-small-storage-chest-2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1511,6 +1515,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-supply-chest-2",
+    localised_name = {"entity-name.nullius-small-supply-chest-2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1635,6 +1640,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-demand-chest-2",
+    localised_name = {"entity-name.nullius-small-demand-chest-2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1759,6 +1765,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-buffer-chest-2",
+    localised_name = {"entity-name.nullius-small-buffer-chest-2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1883,6 +1890,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-small-dispatch-chest-2",
+    localised_name = {"entity-name.nullius-small-dispatch-chest-2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -2836,6 +2844,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-lamp-1a",
+    localised_name = {"entity-name.nullius-lamp-1"},
     enabled = false,
     always_show_made_in = true,
     show_amount_in_title = false,
@@ -3021,6 +3030,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-power-pole-1",
+    localised_name = {"entity-name.nullius-power-pole-1"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -3055,6 +3065,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-power-pole-2",
+    localised_name = {"entity-name.nullius-power-pole-2"},
     enabled = false,
     category = "medium-crafting",
     always_show_made_in = true,
@@ -3163,6 +3174,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-pylon-1",
+    localised_name = {"entity-name.nullius-pylon-1"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -3273,6 +3285,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-substation-1",
+    localised_name = {"entity-name.nullius-substation-1"},
     enabled = false,
     category = "large-crafting",
     always_show_made_in = true,

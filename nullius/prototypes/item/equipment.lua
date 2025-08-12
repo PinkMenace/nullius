@@ -255,7 +255,7 @@ data:extend({
     subgroup = "solar",
     order = "nullius-bb",
     place_result = "nullius-solar-panel-1",
-    placed_as_equipment_result = "nullius-solar-panel-1",
+    place_as_equipment_result = "nullius-solar-panel-1",
     stack_size = 100
   },
   {
@@ -270,7 +270,7 @@ data:extend({
     subgroup = "solar",
     order = "nullius-bc",
     place_result = "nullius-solar-panel-2",
-    placed_as_equipment_result = "nullius-solar-panel-2",
+    place_as_equipment_result = "nullius-solar-panel-2",
     stack_size = 100
   },
   {
@@ -284,7 +284,7 @@ data:extend({
     subgroup = "solar",
     order = "nullius-bd",
     place_result = "nullius-solar-panel-3",
-    placed_as_equipment_result = "nullius-solar-panel-3",
+    place_as_equipment_result = "nullius-solar-panel-3",
     stack_size = 100
   },
   {
@@ -299,7 +299,7 @@ data:extend({
     subgroup = "solar",
     order = "nullius-be",
     place_result = "nullius-solar-panel-4",
-    placed_as_equipment_result = "nullius-solar-panel-4",
+    place_as_equipment_result = "nullius-solar-panel-4",
     stack_size = 100
   },
 
@@ -449,7 +449,7 @@ data:extend({
     icon = "__base__/graphics/icons/battery.png",
     icon_size = 64,
     
-    placed_as_equipment_result = "nullius-capacitor",
+    place_as_equipment_result = "nullius-capacitor",
     subgroup = "battery",
     order = "nullius-c",
     stack_size = 100
@@ -534,7 +534,7 @@ data:extend({
     icon = "__base__/graphics/icons/battery-equipment.png",
     icon_size = 64,
     
-    placed_as_equipment_result = "nullius-charged-battery-1",
+    place_as_equipment_result = "nullius-charged-battery-1",
     subgroup = "battery",
     order = "nullius-db",
     fuel_category = "vehicle",
@@ -550,7 +550,7 @@ data:extend({
     localised_name = {"item-name.nullius-uncharged-battery-1"},
     icon = ICONPATH .. "uncharged1.png",
     icon_size = 64,
-    placed_as_equipment_result = "nullius-battery-1",
+    place_as_equipment_result = "nullius-battery-1",
     subgroup = "battery",
     order = "nullius-eb",
     stack_size = 100
@@ -702,7 +702,7 @@ data:extend({
     icon = "__base__/graphics/icons/battery-mk2-equipment.png",
     icon_size = 64,
     
-    placed_as_equipment_result = "nullius-charged-battery-2",
+    place_as_equipment_result = "nullius-charged-battery-2",
     subgroup = "battery",
     order = "nullius-dc",
     fuel_category = "vehicle",
@@ -718,7 +718,7 @@ data:extend({
     localised_name = {"item-name.nullius-uncharged-battery-2"},
     icon = ICONPATH .. "uncharged2.png",
     icon_size = 64,
-    placed_as_equipment_result = "nullius-battery-2",
+    place_as_equipment_result = "nullius-battery-2",
     subgroup = "battery",
     order = "nullius-ec",
     stack_size = 100
@@ -816,7 +816,7 @@ data:extend({
     localised_description = {"equipment-description.nullius-battery"},
     icon = ICONPATH .. "battery3.png",
     icon_size = 64,
-    placed_as_equipment_result = "nullius-charged-battery-3",
+    place_as_equipment_result = "nullius-charged-battery-3",
     subgroup = "battery",
     order = "nullius-dd",
     fuel_category = "vehicle",
@@ -832,7 +832,7 @@ data:extend({
     localised_name = {"item-name.nullius-uncharged-battery-3"},
     icon = ICONPATH .. "uncharged3.png",
     icon_size = 64,
-    placed_as_equipment_result = "nullius-battery-3",
+    place_as_equipment_result = "nullius-battery-3",
     subgroup = "battery",
     order = "nullius-ed",
     stack_size = 100
@@ -886,7 +886,7 @@ data:extend({
       
       tint = {0.8, 0.6, 0.65}
     }},
-    placed_as_equipment_result = "nullius-hangar-1",
+    place_as_equipment_result = "nullius-hangar-1",
     place_result = "nullius-hangar-1",
     subgroup = "hangar-2",
     order = "nullius-bb",
@@ -902,7 +902,7 @@ data:extend({
       
       tint = {0.85, 0.9, 1}
     }},
-    placed_as_equipment_result = "nullius-hangar-2",
+    place_as_equipment_result = "nullius-hangar-2",
     place_result = "nullius-hangar-2",
     subgroup = "hangar-2",
     order = "nullius-bc",
@@ -918,7 +918,7 @@ data:extend({
       
       tint = {0.55, 0.7, 0.55}
     }},
-    placed_as_equipment_result = "nullius-hangar-3",
+    place_as_equipment_result = "nullius-hangar-3",
     place_result = "nullius-hangar-3",
     subgroup = "hangar-2",
     order = "nullius-bd",
@@ -933,7 +933,7 @@ data:extend({
       icon_size = 64,
       tint = {0.55, 0.7, 0.55}
     }},
-    placed_as_equipment_result = "nullius-hangar-4",
+    place_as_equipment_result = "nullius-hangar-4",
     place_result = "nullius-hangar-4",
     subgroup = "hangar-2",
     order = "nullius-be",
@@ -1019,7 +1019,7 @@ data:extend({
       icon = "__boblogistics__/graphics/icons/roboport-chargepad.png",
       icon_size = 32
     }},
-    placed_as_equipment_result = "nullius-charger-1",
+    place_as_equipment_result = "nullius-charger-1",
     place_result = "nullius-charger-1",
     subgroup = "hangar-1",
     order = "nullius-cb",
@@ -1033,7 +1033,7 @@ data:extend({
       icon = "__boblogistics__/graphics/icons/roboport-chargepad-2.png",
       icon_size = 32
     }},
-    placed_as_equipment_result = "nullius-charger-2",
+    place_as_equipment_result = "nullius-charger-2",
     place_result = "nullius-charger-2",
     subgroup = "hangar-1",
     order = "nullius-cc",
@@ -1047,7 +1047,7 @@ data:extend({
       icon = "__boblogistics__/graphics/icons/roboport-chargepad-4.png",
       icon_size = 32
     }},
-    placed_as_equipment_result = "nullius-charger-3",
+    place_as_equipment_result = "nullius-charger-3",
     place_result = "nullius-charger-3",
     subgroup = "hangar-1",
     order = "nullius-cd",
@@ -1061,7 +1061,7 @@ data:extend({
       icon = ICONPATH .. "charger.png",
       icon_size = 64
     }},
-    placed_as_equipment_result = "nullius-charger-4",
+    place_as_equipment_result = "nullius-charger-4",
     place_result = "nullius-charger-4",
     subgroup = "hangar-1",
     order = "nullius-ce",
@@ -1210,7 +1210,7 @@ data:extend({
       icon = "__boblogistics__/graphics/icons/logistic-zone-expander.png",
       icon_size = 32
     }},
-    placed_as_equipment_result = "nullius-relay-1",
+    place_as_equipment_result = "nullius-relay-1",
     place_result = "nullius-relay-1",
     subgroup = "hangar-1",
     order = "nullius-db",
@@ -1224,7 +1224,7 @@ data:extend({
       icon = "__boblogistics__/graphics/icons/logistic-zone-expander-2.png",
       icon_size = 32
     }},
-    placed_as_equipment_result = "nullius-relay-2",
+    place_as_equipment_result = "nullius-relay-2",
     place_result = "nullius-relay-2",
     subgroup = "hangar-1",
     order = "nullius-dc",
@@ -1238,7 +1238,7 @@ data:extend({
       icon = "__boblogistics__/graphics/icons/logistic-zone-expander-4.png",
       icon_size = 32
     }},
-    placed_as_equipment_result = "nullius-relay-3",
+    place_as_equipment_result = "nullius-relay-3",
     place_result = "nullius-relay-3",
     subgroup = "hangar-1",
     order = "nullius-dd",
@@ -1253,7 +1253,7 @@ data:extend({
       tint = {0.85, 1, 0.9},
       icon_size = 32
     }},
-    placed_as_equipment_result = "nullius-relay-4",
+    place_as_equipment_result = "nullius-relay-4",
     place_result = "nullius-relay-4",
     subgroup = "hangar-1",
     order = "nullius-de",
@@ -1421,6 +1421,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-repair-pack",
+    localised_name = {"item-name.repair-pack"},
     enabled = false,
     category = "small-crafting",
     always_show_made_in = true,
@@ -1520,7 +1521,6 @@ data:extend({
   {
     type = "item",
     name = "nullius-levitation-field-1",
-    localised_name = {"", {"equipment-name.nullius-levitation-field"}, " ", tostring(1)},
     localised_description = {"equipment-description.nullius-buffer",
 	    {"equipment-description.nullius-levitation-field"},
 		{"entity-description.nullius-kilojoule", tostring(100)}},
@@ -1529,7 +1529,7 @@ data:extend({
       icon_size = 64,
       
     }},
-    placed_as_equipment_result = "nullius-levitation-field-1",
+    place_as_equipment_result = "nullius-levitation-field-1",
     subgroup = "equipment",
     order = "nullius-db",
     stack_size = 20
@@ -1544,7 +1544,7 @@ data:extend({
       icon = ICONPATH .. "levitation2.png",
       icon_size = 64
     }},
-    placed_as_equipment_result = "nullius-levitation-field-2",
+    place_as_equipment_result = "nullius-levitation-field-2",
     subgroup = "equipment",
     order = "nullius-dc",
     stack_size = 10
@@ -1641,7 +1641,7 @@ data:extend({
 		{"entity-description.nullius-kilojoule", tostring(150)}},
     icon = "__base__/graphics/equipment/night-vision-equipment.png",
     icon_size = 64,
-    placed_as_equipment_result = "nullius-night-vision-1",
+    place_as_equipment_result = "nullius-night-vision-1",
     subgroup = "equipment",
     order = "nullius-cb",
     stack_size = 20
@@ -1654,7 +1654,7 @@ data:extend({
 		{"entity-description.nullius-kilojoule", tostring(400)}},
     icon = ICONPATH .. "night-vision-2.png",
     icon_size = 64,
-    placed_as_equipment_result = "nullius-night-vision-2",
+    place_as_equipment_result = "nullius-night-vision-2",
     subgroup = "equipment",
     order = "nullius-cc",
     stack_size = 10
@@ -1667,7 +1667,7 @@ data:extend({
 		{"entity-description.nullius-megajoule", tostring(1)}},
     icon = ICONPATH .. "night-vision-3.png",
     icon_size = 64,
-    placed_as_equipment_result = "nullius-night-vision-3",
+    place_as_equipment_result = "nullius-night-vision-3",
     subgroup = "equipment",
     order = "nullius-cd",
     stack_size = 10
@@ -1747,14 +1747,14 @@ data:extend({
     name = "nullius-leg-augmentation-1",
     localised_description = {"equipment-description.nullius-buffer",
 	    {"equipment-description.nullius-leg-augmentation"},
-		{"entity-description.nullius-megajoule", tostring(6)}},
+		  {"entity-description.nullius-megajoule", tostring(6)}},
     icons = {{
       icon = "__base__/graphics/icons/exoskeleton-equipment.png",
       icon_size = 64,
       
       tint = {0.75, 0.75, 0.6}
     }},
-    placed_as_equipment_result = "nullius-leg-augmentation-1",
+    place_as_equipment_result = "nullius-leg-augmentation-1",
     subgroup = "leg-augmentation",
     order = "nullius-cb",
     stack_size = 5
@@ -1806,14 +1806,14 @@ data:extend({
     name = "nullius-leg-augmentation-2",
     localised_description = {"equipment-description.nullius-buffer",
 	    {"equipment-description.nullius-leg-augmentation"},
-		{"entity-description.nullius-megajoule", tostring(15)}},
+		  {"entity-description.nullius-megajoule", tostring(15)}},
     icons = {{
       icon = "__base__/graphics/icons/exoskeleton-equipment.png",
       icon_size = 64,
       
       tint = {0.8, 0.8, 0.95}
     }},
-    placed_as_equipment_result = "nullius-leg-augmentation-2",
+    place_as_equipment_result = "nullius-leg-augmentation-2",
     subgroup = "leg-augmentation",
     order = "nullius-cc",
     stack_size = 5
@@ -1842,15 +1842,15 @@ data:extend({
   {
     type = "item",
     name = "nullius-leg-augmentation-3",
-	localised_description = {"equipment-description.nullius-buffer",
+	  localised_description = {"equipment-description.nullius-buffer",
 	    {"equipment-description.nullius-leg-augmentation"},
-		{"entity-description.nullius-megajoule", tostring(30)}},
+		  {"entity-description.nullius-megajoule", tostring(30)}},
     icons = {{
       icon = "__base__/graphics/icons/exoskeleton-equipment.png",
       icon_size = 64,
       
     }},
-    placed_as_equipment_result = "nullius-leg-augmentation-3",
+    place_as_equipment_result = "nullius-leg-augmentation-3",
     subgroup = "leg-augmentation",
     order = "nullius-cd",
     stack_size = 5
@@ -1879,14 +1879,14 @@ data:extend({
   {
     type = "item",
     name = "nullius-leg-augmentation-4",
-	localised_description = {"equipment-description.nullius-buffer",
+	  localised_description = {"equipment-description.nullius-buffer",
 	    {"equipment-description.nullius-leg-augmentation"},
-		{"entity-description.nullius-megajoule", tostring(30)}},
+		  {"entity-description.nullius-megajoule", tostring(30)}},
     icons = {{
       icon = ICONPATH .. "legs.png",
       icon_size = 64
     }},
-    placed_as_equipment_result = "nullius-leg-augmentation-4",
+    place_as_equipment_result = "nullius-leg-augmentation-4",
     subgroup = "leg-augmentation",
     order = "nullius-ce",
     stack_size = 5
@@ -1914,16 +1914,16 @@ data:extend({
     type = "item",
     name = "nullius-quadrupedal-adaptation-1",
     localised_description = {"equipment-description.nullius-buffer", {"",
-		{"equipment-description.nullius-bonus-cargo", tostring(3)}, "\n",
+		  {"equipment-description.nullius-bonus-cargo", tostring(3)}, "\n",
 	    {"equipment-description.nullius-penalty-craft", tostring(25)}, "\n",
 	    {"equipment-description.nullius-penalty-reach", tostring(2)}},
-		{"entity-description.nullius-megajoule", tostring(8)}},
+		  {"entity-description.nullius-megajoule", tostring(8)}},
     icons = {{
       icon = ICONPATH.."equipment/quadruped.png",
       icon_size = 128,
       tint = {0.75, 0.75, 0.6}
     }},
-    placed_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-1",
+    place_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-1",
     subgroup = "leg-augmentation",
     order = "nullius-db",
     stack_size = 5
@@ -1932,16 +1932,16 @@ data:extend({
     type = "item",
     name = "nullius-quadrupedal-adaptation-2",
     localised_description = {"equipment-description.nullius-buffer", {"",
-		{"equipment-description.nullius-bonus-cargo", tostring(5)}, "\n",
+		  {"equipment-description.nullius-bonus-cargo", tostring(5)}, "\n",
 	    {"equipment-description.nullius-penalty-craft", tostring(30)}, "\n",
 	    {"equipment-description.nullius-penalty-reach", tostring(2)}},
-		{"entity-description.nullius-megajoule", tostring(20)}},
+		  {"entity-description.nullius-megajoule", tostring(20)}},
     icons = {{
       icon = ICONPATH.."equipment/quadruped.png",
       icon_size = 128,
       tint = {0.8, 0.8, 0.95}
     }},
-    placed_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-2",
+    place_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-2",
     subgroup = "leg-augmentation",
     order = "nullius-dc",
     stack_size = 5
@@ -1950,15 +1950,15 @@ data:extend({
     type = "item",
     name = "nullius-quadrupedal-adaptation-3",
     localised_description = {"equipment-description.nullius-buffer", {"",
-		{"equipment-description.nullius-bonus-cargo", tostring(6)}, "\n",
+		  {"equipment-description.nullius-bonus-cargo", tostring(6)}, "\n",
 	    {"equipment-description.nullius-penalty-craft", tostring(40)}, "\n",
 	    {"equipment-description.nullius-penalty-reach", tostring(2)}},
-		{"entity-description.nullius-megajoule", tostring(40)}},
+		  {"entity-description.nullius-megajoule", tostring(40)}},
     icons = {{
       icon = ICONPATH.."equipment/quadruped.png",
       icon_size = 128
     }},
-    placed_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-3",
+    place_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-3",
     subgroup = "leg-augmentation",
     order = "nullius-dd",
     stack_size = 5
@@ -1967,15 +1967,15 @@ data:extend({
     type = "item",
     name = "nullius-quadrupedal-adaptation-4",
     localised_description = {"equipment-description.nullius-buffer", {"",
-		{"equipment-description.nullius-bonus-cargo", tostring(6)}, "\n",
+		  {"equipment-description.nullius-bonus-cargo", tostring(6)}, "\n",
 	    {"equipment-description.nullius-penalty-craft", tostring(30)}, "\n",
 	    {"equipment-description.nullius-penalty-reach", tostring(2)}},
-		{"entity-description.nullius-megajoule", tostring(40)}},
+		  {"entity-description.nullius-megajoule", tostring(40)}},
     icons = {{
       icon = ICONPATH.."equipment/quadruped-4.png",
       icon_size = 128
     }},
-    placed_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-4",
+    place_as_equipment_result = "nullius-upgrade-quadrupedal-adaptation-4",
     subgroup = "leg-augmentation",
     order = "nullius-de",
     stack_size = 5
@@ -2056,7 +2056,7 @@ data:extend({
       icon = ICONPATH.."equipment/boot.png",
       icon_size = 128
     }},
-    placed_as_equipment_result = "nullius-upgrade-jump-boots",
+    place_as_equipment_result = "nullius-upgrade-jump-boots",
     subgroup = "leg-augmentation",
     order = "nullius-b",
     stack_size = 10
@@ -2083,7 +2083,7 @@ data:extend({
   {
     type = "item",
     name = "nullius-shield",
-	localised_description = {"equipment-description.nullius-buffer",
+	  localised_description = {"equipment-description.nullius-buffer",
 	    {"equipment-description.nullius-shield"},
 		{"entity-description.nullius-kilojoule", tostring(500)}},
     icons = {{
@@ -2091,7 +2091,7 @@ data:extend({
       icon_size = 64,
       
     }},
-    placed_as_equipment_result = "nullius-shield",
+    place_as_equipment_result = "nullius-shield",
     subgroup = "armor",
     order = "nullius-h",
     stack_size = 10
@@ -3603,12 +3603,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-armor-plate",
-    localised_name = {"nullius-upgrade-armor-plate"},
-	icons = {{
-      icon = EQUIPPATH.."armor-plate.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-armor-plate",
+	  icons = {{
+        icon = EQUIPPATH.."armor-plate.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-armor-plate",
     subgroup = "armor",
     order = "nullius-g",
     stack_size = 50
@@ -3616,7 +3615,6 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-armor-plate",
-    localised_name = {"entity-name.nullius-upgrade-armor-plate"},
     enabled = false,
     always_show_made_in = true,
     category = "hand-casting",
@@ -3636,11 +3634,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-small-cargo-pod-1",
-	icons = {{
-      icon = EQUIPPATH.."small-pod-1.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-small-cargo-pod-1",
+	  icons = {{
+        icon = EQUIPPATH.."small-pod-1.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-small-cargo-pod-1",
     subgroup = "cargo-pod",
     order = "nullius-bb",
     stack_size = 50
@@ -3648,11 +3646,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-small-cargo-pod-2",
-	icons = {{
-      icon = EQUIPPATH.."small-pod-2.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-small-cargo-pod-2",
+	  icons = {{
+        icon = EQUIPPATH.."small-pod-2.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-small-cargo-pod-2",
     subgroup = "cargo-pod",
     order = "nullius-bc",
     stack_size = 50
@@ -3660,11 +3658,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-large-cargo-pod-1",
-	icons = {{
-      icon = ICONPATH.."equipment/large-pod-1.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-large-cargo-pod-1",
+	  icons = {{
+        icon = ICONPATH.."equipment/large-pod-1.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-large-cargo-pod-1",
     subgroup = "cargo-pod",
     order = "nullius-cb",
     stack_size = 20
@@ -3672,11 +3670,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-large-cargo-pod-2",
-	icons = {{
-      icon = ICONPATH.."equipment/large-pod-2.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-large-cargo-pod-2",
+	  icons = {{
+        icon = ICONPATH.."equipment/large-pod-2.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-large-cargo-pod-2",
     subgroup = "cargo-pod",
     order = "nullius-cc",
     stack_size = 20
@@ -3684,11 +3682,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-large-cargo-pod-3",
-	icons = {{
-      icon = ICONPATH.."equipment/large-pod-3.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-large-cargo-pod-3",
+	  icons = {{
+        icon = ICONPATH.."equipment/large-pod-3.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-large-cargo-pod-3",
     subgroup = "cargo-pod",
     order = "nullius-cd",
     stack_size = 20
@@ -3776,11 +3774,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-trash-compactor",
-	icons = {{
-      icon = ICONPATH.."equipment/trash-compactor-1.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-trash-compactor",
+	  icons = {{
+        icon = ICONPATH.."equipment/trash-compactor-1.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-trash-compactor",
     subgroup = "cargo-pod",
     order = "nullius-db",
     stack_size = 20
@@ -3788,11 +3786,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-trash-compactor-2",
-	icons = {{
-      icon = ICONPATH.."equipment/trash-compactor-2.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-trash-compactor-2",
+	  icons = {{
+        icon = ICONPATH.."equipment/trash-compactor-2.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-trash-compactor-2",
     subgroup = "cargo-pod",
     order = "nullius-dc",
     stack_size = 20
@@ -3833,11 +3831,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-fabrication-tool-1",
-	icons = {{
-      icon = ICONPATH.."equipment/fabrication-tool-1.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-fabrication-tool-1",
+	  icons = {{
+        icon = ICONPATH.."equipment/fabrication-tool-1.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-fabrication-tool-1",
     subgroup = "tool-upgrades",
     order = "nullius-cb",
     stack_size = 50
@@ -3845,11 +3843,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-fabrication-tool-2",
-	icons = {{
-      icon = ICONPATH.."equipment/fabrication-tool-2.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-fabrication-tool-2",
+	  icons = {{
+        icon = ICONPATH.."equipment/fabrication-tool-2.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-fabrication-tool-2",
     subgroup = "tool-upgrades",
     order = "nullius-cc",
     stack_size = 50
@@ -3857,11 +3855,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-fabrication-tool-3",
-	icons = {{
-      icon = ICONPATH.."equipment/fabrication-tool-3.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-fabrication-tool-3",
+	  icons = {{
+        icon = ICONPATH.."equipment/fabrication-tool-3.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-fabrication-tool-3",
     subgroup = "tool-upgrades",
     order = "nullius-cd",
     stack_size = 20
@@ -3869,11 +3867,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-mining-tool-1",
-	icons = {{
-      icon = ICONPATH.."equipment/mining-tool-1.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-mining-tool-1",
+	  icons = {{
+        icon = ICONPATH.."equipment/mining-tool-1.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-mining-tool-1",
     subgroup = "tool-upgrades",
     order = "nullius-db",
     stack_size = 50
@@ -3881,11 +3879,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-mining-tool-2",
-	icons = {{
-      icon = ICONPATH.."equipment/mining-tool-2.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-mining-tool-2",
+	  icons = {{
+        icon = ICONPATH.."equipment/mining-tool-2.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-mining-tool-2",
     subgroup = "tool-upgrades",
     order = "nullius-dc",
     stack_size = 50
@@ -3893,11 +3891,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-multi-tool-1",
-	icons = {{
-      icon = ICONPATH.."equipment/multi-tool-1.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-multi-tool-1",
+	  icons = {{
+        icon = ICONPATH.."equipment/multi-tool-1.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-multi-tool-1",
     subgroup = "tool-upgrades",
     order = "nullius-eb",
     stack_size = 50
@@ -3905,11 +3903,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-multi-tool-2",
-	icons = {{
-      icon = ICONPATH.."equipment/multi-tool-2.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-multi-tool-2",
+	  icons = {{
+        icon = ICONPATH.."equipment/multi-tool-2.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-multi-tool-2",
     subgroup = "tool-upgrades",
     order = "nullius-ec",
     stack_size = 50
@@ -3917,11 +3915,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-multi-tool-3",
-	icons = {{
-      icon = ICONPATH.."equipment/multi-tool-3.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-multi-tool-3",
+	  icons = {{
+        icon = ICONPATH.."equipment/multi-tool-3.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-multi-tool-3",
     subgroup = "tool-upgrades",
     order = "nullius-ed",
     stack_size = 50
@@ -4105,11 +4103,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-telekinesis-field-1",
-	icons = {{
-      icon = ICONPATH.."equipment/telekinesis-1.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-telekinesis-field-1",
+	  icons = {{
+        icon = ICONPATH.."equipment/telekinesis-1.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-telekinesis-field-1",
     subgroup = "equipment",
     order = "nullius-gb",
     stack_size = 20
@@ -4117,11 +4115,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-telekinesis-field-2",
-	icons = {{
-      icon = ICONPATH.."equipment/telekinesis-2.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-telekinesis-field-2",
+	  icons = {{
+        icon = ICONPATH.."equipment/telekinesis-2.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-telekinesis-field-2",
     subgroup = "equipment",
     order = "nullius-gc",
     stack_size = 20
@@ -4129,11 +4127,11 @@ data:extend({
   {
     type = "item",
     name = "nullius-telekinesis-field-3",
-	icons = {{
-      icon = ICONPATH.."equipment/telekinesis-3.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-telekinesis-field-3",
+	  icons = {{
+        icon = ICONPATH.."equipment/telekinesis-3.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-telekinesis-field-3",
     subgroup = "equipment",
     order = "nullius-gd",
     stack_size = 20
@@ -4192,23 +4190,23 @@ data:extend({
   {
     type = "item",
     name = "nullius-stabilizer-1",
-	icons = {{
-      icon = ICONPATH.."equipment/stabilizer-1.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-stabilizer-1",
-	subgroup = "cargo-pod",
+	  icons = {{
+        icon = ICONPATH.."equipment/stabilizer-1.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-stabilizer-1",
+	  subgroup = "cargo-pod",
     order = "nullius-eb",
     stack_size = 50
   },
   {
     type = "item",
     name = "nullius-stabilizer-2",
-	icons = {{
-      icon = ICONPATH.."equipment/stabilizer-2.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-upgrade-stabilizer-2",
+	  icons = {{
+        icon = ICONPATH.."equipment/stabilizer-2.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-stabilizer-2",
     subgroup = "cargo-pod",
     order = "nullius-ec",
     stack_size = 50
@@ -4252,12 +4250,12 @@ data:extend({
   {
     type = "item",
     name = "nullius-shackle",
-	icons = {{
-      icon = EQUIPPATH.."shackle.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-upgrade-shackle",
-	subgroup = "leg-augmentation",
+	  icons = {{
+        icon = EQUIPPATH.."shackle.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-upgrade-shackle",
+	  subgroup = "leg-augmentation",
     order = "nullius-f",
     stack_size = 20
   },
@@ -4282,11 +4280,11 @@ data:extend({
     type = "item",
     name = "nullius-refueler",
     localised_description = {"equipment-description.nullius-refueler"},
-	icons = {{
-      icon = EQUIPPATH .. "refueler.png",
-      icon_size = 128
-	}},
-	placed_as_equipment_result = "nullius-refueler",
+	  icons = {{
+        icon = EQUIPPATH .. "refueler.png",
+        icon_size = 128
+	  }},
+	  place_as_equipment_result = "nullius-refueler",
     subgroup = "solar",
     order = "nullius-e",
     stack_size = 20
@@ -4300,8 +4298,8 @@ data:extend({
     energy_required = 8,
     ingredients = {
       {type="item", name="bob-turbo-inserter", amount=1},
-	  {type="item", name="nullius-pump-2", amount=1},
-	  {type="item", name="nullius-rubber", amount=3}
+	    {type="item", name="nullius-pump-2", amount=1},
+	    {type="item", name="nullius-rubber", amount=3}
     },
     results = {
       {type = "item", name = "nullius-refueler", amount = 1}
@@ -4317,7 +4315,7 @@ data:extend({
       icon = ICONPATH.."equipment/generator-1.png",
       icon_size = 64
 	}},
-	placed_as_equipment_result = "nullius-portable-generator-1",
+	place_as_equipment_result = "nullius-portable-generator-1",
     subgroup = "solar",
     order = "nullius-dbb",
     stack_size = 20
@@ -4331,7 +4329,7 @@ data:extend({
       icon = ICONPATH.."equipment/generator-2.png",
       icon_size = 64
 	}},
-	placed_as_equipment_result = "nullius-portable-generator-2",
+	place_as_equipment_result = "nullius-portable-generator-2",
     subgroup = "solar",
     order = "nullius-dbc",
     stack_size = 20
@@ -4344,7 +4342,7 @@ data:extend({
       icon = ICONPATH.."equipment/generator-backup.png",
       icon_size = 64
 	}},
-	placed_as_equipment_result = "nullius-portable-generator-backup",
+	place_as_equipment_result = "nullius-portable-generator-backup",
     subgroup = "solar",
     order = "nullius-dbd",
     stack_size = 20
@@ -4352,12 +4350,12 @@ data:extend({
   {
     type = "item",
     name = "nullius-portable-reactor",
-	localised_description = {"equipment-description.nullius-portable-reactor"},
-	icons = {{
-      icon = ICONPATH.."equipment/reactor.png",
-      icon_size = 64
-	}},
-	placed_as_equipment_result = "nullius-portable-reactor",
+	  localised_description = {"equipment-description.nullius-portable-reactor"},
+	  icons = {{
+        icon = ICONPATH.."equipment/reactor.png",
+        icon_size = 64
+	  }},
+	  place_as_equipment_result = "nullius-portable-reactor",
     subgroup = "solar",
     order = "nullius-dc",
     stack_size = 20
