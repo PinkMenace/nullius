@@ -32,7 +32,7 @@ data:extend({
   {
     type = "item",
     name = "nullius-power-sink",
-	icons = data.raw.fluid["nullius-energy"].icons,
+	  icons = data.raw.fluid["nullius-energy"].icons,
     hidden = true,
     subgroup = "other",
     stack_size = 100

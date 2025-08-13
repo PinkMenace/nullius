@@ -38,12 +38,13 @@ local turbine_graphics = {
     {
       filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V.png",
       width = 217,
-      height = 347,
+      height = 374,
       frame_count = 1,
       line_length = 1,
-      shift = util.by_pixel(4.75, 6.75),
+      shift = util.by_pixel(4.75, 0.0),
       scale = 0.5
-    }, {
+    }, 
+    {
       width = 217,
       height = 347,
       frame_count = 1,
@@ -85,11 +86,13 @@ end
 local function set_furnace_idle(proto, overlay, tint)
   local vertical = turbine_frame(true, overlay, tint)
   local horizontal = turbine_frame(false, overlay, tint)
-  proto.idle_animation = {
-	north = vertical,
-    east = horizontal,
-	south = vertical,
-    west = horizontal
+  proto.graphics_set = {
+    idle_animation = {
+	    north = vertical,
+        east = horizontal,
+	    south = vertical,
+        west = horizontal
+      }
   }
 end
 
@@ -240,9 +243,11 @@ local furnace1cb = {
     {
 	    filter = "nullius-energy",
       production_type = "output",
-	    pipe_connections = {{ flow_direction = "output", position = {1, -1.1}, direction = defines.direction.north }},
+	    pipe_connections = {
+	      { flow_direction = "output", position = {1, -1.1}, direction = defines.direction.north },
+	      { flow_direction = "output", position = {-1, 1.1}, direction = defines.direction.south }},
       volume = 500,
-	  hide_connection_info = true
+	    hide_connection_info = true
     },
     {
       production_type = "output",
@@ -276,8 +281,8 @@ furnace3cb.fluid_boxes[3].volume = 500
 local generator1ob = {
   type = "generator",
   flags = { "placeable-neutral", "player-creation", "not-on-map",
-      "not-blueprintable", "not-deconstructable",
-	    "hide-alt-info", "not-upgradable" },
+        "not-blueprintable", "not-deconstructable", "hide-alt-info",
+	      "not-upgradable" },
 	hidden = true,
   max_power_output = "1MW",
   effectivity = 0.9,
@@ -334,8 +339,8 @@ local connector = {
     icon_size = 64,
   }},
   flags = { "placeable-neutral", "player-creation", "not-on-map",
-      "not-blueprintable", "not-deconstructable",
-	  "hide-alt-info", "not-upgradable", "placeable-off-grid" },
+      "not-blueprintable", "not-deconstructable", "hide-alt-info",
+	    "not-upgradable", "placeable-off-grid" },
 	hidden = true,
   selectable_in_game = false,
   allow_copy_paste = false,
@@ -356,8 +361,8 @@ local connector = {
     volume = 500,
 	  hide_connection_info = true,
     pipe_connections = {
-      { position = {1, 0.04}, direction = defines.direction.east },
-      { position = {-1, 0.04}, direction = defines.direction.west }
+      { position = {1, 0.04}, direction = defines.direction.south },
+      { position = {-1, 0.04}, direction = defines.direction.south }
     }
   }
 }
@@ -370,6 +375,7 @@ local vent1 = {
   collision_box = connector.collision_box,
   selection_box = connector.selection_box,
   collision_mask = { layers = {}, not_colliding_with_itself = true},
+  hidden = true,
   selectable_in_game = false,
   allow_copy_paste = false,
   bottleneck_ignore = true,
@@ -384,7 +390,7 @@ local vent1 = {
     production_type = "input",
     volume = 500,
 	  hide_connection_info = true,
-    pipe_connections = {{ flow_direction ="input-output", position = {-1, 0.04}, direction = defines.direction.west }}
+    pipe_connections = {{ flow_direction ="input-output", position = {-1, 0.04}, direction = defines.direction.south }}
   }},
   energy_source = {type = "void"},
   energy_usage = "1W"

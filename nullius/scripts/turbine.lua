@@ -5,7 +5,6 @@ local connector_offset = {
   [defines.direction.west] = {x = -2.15, y = 0}
 }
 
-
 local function turbine_priority(name)
   local priority = string.sub(name, -9, -2)
   if (priority == "-backup-") then
@@ -65,9 +64,9 @@ function build_turbine(entity)
 
   if (priority == "exhaust") then
     local revdir = rotate_right[rotate_right[dir]]
-	local roffs = connector_offset[revdir]
+	  local roffs = connector_offset[revdir]
     entry.vent = entity.surface.create_entity{
-        name = "nullius-turbine-vent" .. "-" .. tier,
+      name = "nullius-turbine-vent" .. "-" .. tier,
 	    force = entity.force, direction = revdir,
 	    position = {x = (pos.x + roffs.x), y = (pos.y + roffs.y)}}
   end

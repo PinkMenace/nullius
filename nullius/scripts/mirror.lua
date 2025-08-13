@@ -145,7 +145,7 @@ local function match_pipette(pipette, player, event)
   if (not (pipette.entity.valid and pipette.item.valid)) then return nil end
   local iname = pipette.item.name
   local ename = pipette.entity.name
-  local entity = event.created_entity
+  local entity = event.entity
 
   if (player.is_cursor_empty()) then return nil end
   if (player.is_cursor_blueprint()) then return nil end
