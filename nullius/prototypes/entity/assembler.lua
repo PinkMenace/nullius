@@ -564,7 +564,6 @@ data:extend({
   }
 })
 
---local nanofab_pipes = util.table.deepcopy(data.raw["assembling-machine"]["angels-crystallizer"].fluid_boxes[1].pipe_picture) --TODO: check those pipes
 local nanofab_pipes = {
         north = {
           filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-pipe-connection.png",
@@ -631,10 +630,35 @@ data:extend({
     },
     energy_usage = "470kW",
     graphics_set = {
-      animation = scale_image(angelsLegacy.data["angels-crystallizer"].graphics_set.animation, 0.775),
+      animation = scale_image({
+        layers = {
+          -- Base
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer.png",
+            priority = "extra-high",
+            width = 390,
+            height = 326,
+            shift = util.by_pixel(16, 0),
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-shadow.png",
+            priority = "extra-high",
+            width = 390,
+            height = 326,
+            shift = util.by_pixel(16, 0),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      }, 0.775),
     },
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-crystallizer"].working_sound,
+    working_sound = {
+      sound = { filename = "__base__/sound/oil-refinery.ogg", volume = 0.45 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    },
     fluid_boxes = {
       {
         production_type = "input",
@@ -714,7 +738,29 @@ data:extend({
     },
     energy_usage = "940kW",
     graphics_set = {
-        animation = scale_image(angelsLegacy.data["angels-crystallizer-2"].graphics_set.animation, 0.775),
+        animation = scale_image({
+        layers = {
+          -- Base
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer.png",
+            priority = "extra-high",
+            width = 390,
+            height = 326,
+            shift = util.by_pixel(16, 0),
+            scale = 0.5,
+          },
+          -- Shadow
+          {
+            filename = "__angelsrefininggraphics__/graphics/entity/crystallizer/crystallizer-shadow.png",
+            priority = "extra-high",
+            width = 390,
+            height = 326,
+            shift = util.by_pixel(16, 0),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      }, 0.775),
     },
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-nanofabricator-1"].working_sound,
