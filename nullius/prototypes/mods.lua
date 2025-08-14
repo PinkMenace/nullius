@@ -936,8 +936,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"one-to-one-forward-t2-pipe", 1},
-      {"nullius-underground-pipe-2", 1}
+      {type = "item", name = "one-to-one-forward-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-2", amount = 1}
     },
     results = {
       {type = "item", name = "one-to-two-perpendicular-t2-pipe", amount = 1}
@@ -952,8 +952,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"one-to-two-perpendicular-t2-pipe", 1},
-      {"nullius-underground-pipe-2", 1}
+      {type = "item", name = "one-to-two-perpendicular-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-2", amount = 1}
     },
     results = {
       {type = "item", name = "one-to-three-forward-t2-pipe", amount = 1}
@@ -968,9 +968,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 4,
     ingredients = {
-      {"one-to-one-forward-t2-pipe", 1},
-      {"nullius-underground-pipe-2", 1},
-      {"nullius-glass", 1}
+      {type = "item", name = "one-to-one-forward-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-2", amount = 1},
+      {type = "item", name = "nullius-glass", amount = 1}
     },
     results = {
       {type = "item", name = "underground-i-t2-pipe", amount = 1}
@@ -985,8 +985,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"underground-i-t2-pipe", 1},
-      {"nullius-pipe-2", 2}
+      {type = "item", name = "underground-i-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-pipe-2", amount = 2}
     },
     results = {
       {type = "item", name = "underground-L-t2-pipe", amount = 1}
@@ -1000,8 +1000,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"underground-L-t2-pipe", 1},
-      {"nullius-underground-pipe-2", 1}
+      {type = "item", name = "underground-L-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-2", amount = 1}
     },
     results = {
       {type = "item", name = "underground-t-t2-pipe", amount = 1}
@@ -1016,8 +1016,8 @@ data:extend({
     category = "tiny-crafting",
     energy_required = 3,
     ingredients = {
-      {"nullius-relief-valve", 2},
-      {"nullius-red-wire", 1}
+      {type = "item", name = "nullius-relief-valve", amount = 2},
+      {type = "item", name = "nullius-red-wire", amount = 1}
     },
     results = {
       {type = "item", name = "80-overflow-valve", amount = 1}
@@ -1032,9 +1032,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"one-to-one-forward-t2-pipe", 1},
-      {"nullius-bearing", 1},
-      {"nullius-underground-pipe-3", 1}
+      {type = "item", name = "one-to-one-forward-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-bearing", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-3", amount = 1}
     },
     results = {
       {type = "item", name = "one-to-one-forward-t3-pipe", amount = 1}
@@ -1048,9 +1048,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"one-to-two-perpendicular-t2-pipe", 1},
-      {"nullius-bearing", 1},
-      {"nullius-underground-pipe-3", 2}
+      {type = "item", name = "one-to-two-perpendicular-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-bearing", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-3", amount = 2}
     },
     results = {
       {type = "item", name = "one-to-two-perpendicular-t3-pipe", amount = 1}
@@ -1064,9 +1064,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"one-to-three-forward-t2-pipe", 1},
-      {"nullius-bearing", 1},
-      {"nullius-underground-pipe-3", 3}
+      {type = "item", name = "one-to-three-forward-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-bearing", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-3", amount = 3}
     },
     results = {
       {type = "item", name = "one-to-three-forward-t3-pipe", amount = 1}
@@ -1080,8 +1080,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 4,
     ingredients = {
-      {"underground-i-t2-pipe", 1},
-      {"nullius-underground-pipe-3", 2}
+      {type = "item", name = "underground-i-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-3", amount = 2}
     },
     results = {
       {type = "item", name = "underground-i-t3-pipe", amount = 1}
@@ -1095,8 +1095,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 5,
     ingredients = {
-      {"underground-L-t2-pipe", 1},
-      {"nullius-underground-pipe-3", 3}
+      {type = "item", name = "underground-L-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-3", amount = 3}
     },
     results = {
       {type = "item", name = "underground-L-t3-pipe", amount = 1}
@@ -1110,8 +1110,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 6,
     ingredients = {
-      {"underground-t-t2-pipe", 1},
-      {"nullius-underground-pipe-3", 4}
+      {type = "item", name = "underground-t-t2-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-3", amount = 4}
     },
     results = {
       {type = "item", name = "underground-t-t3-pipe", amount = 1}
@@ -1126,8 +1126,8 @@ data:extend({
     category = "tiny-crafting",
     energy_required = 3,
     ingredients = {
-      {"nullius-top-up-valve", 2},
-      {"nullius-red-wire", 1}
+      {type = "item", name = "nullius-top-up-valve", amount = 2},
+      {type = "item", name = "nullius-red-wire", amount = 1}
     },
     results = {
       {type = "item", name = "80-top-up-valve", amount = 1}
@@ -1142,8 +1142,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 4,
     ingredients = {
-      {"one-to-one-forward-t3-pipe", 1},
-      {"nullius-underground-pipe-4", 1}
+      {type = "item", name = "one-to-one-forward-t3-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-4", amount = 1}
     },
     results = {
       {type = "item", name = "one-to-one-forward-pipe", amount = 1}
@@ -1157,8 +1157,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 4,
     ingredients = {
-      {"one-to-two-perpendicular-t3-pipe", 1},
-      {"nullius-underground-pipe-4", 2}
+      {type = "item", name = "one-to-two-perpendicular-t3-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-4", amount = 2}
     },
     results = {
       {type = "item", name = "one-to-two-perpendicular-pipe", amount = 1}
@@ -1172,8 +1172,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 4,
     ingredients = {
-      {"one-to-three-forward-t3-pipe", 1},
-      {"nullius-underground-pipe-4", 3}
+      {type = "item", name = "one-to-three-forward-t3-pipe", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-4", amount = 3}
     },
     results = {
       {type = "item", name = "one-to-three-forward-pipe", amount = 1}
@@ -1187,8 +1187,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"one-to-two-perpendicular-pipe", 1},
-      {"one-to-one-forward-pipe", 1}
+      {type = "item", name = "one-to-two-perpendicular-pipe", amount = 1},
+      {type = "item", name = "one-to-one-forward-pipe", amount = 1}
     },
     results = {
       {type = "item", name = "one-to-four-pipe", amount = 1}
@@ -1202,9 +1202,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 6,
     ingredients = {
-      {"underground-i-t3-pipe", 1},
-      {"nullius-hard-glass", 1},
-      {"nullius-underground-pipe-4", 2}
+      {type = "item", name = "underground-i-t3-pipe", amount = 1},
+      {type = "item", name = "nullius-hard-glass", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-4", amount = 2}
     },
     results = {
       {type = "item", name = "underground-i-pipe", amount = 1}
@@ -1218,9 +1218,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 8,
     ingredients = {
-      {"underground-L-t3-pipe", 1},
-      {"nullius-hard-glass", 1},
-      {"nullius-underground-pipe-4", 2}
+      {type = "item", name = "underground-L-t3-pipe", amount = 1},
+      {type = "item", name = "nullius-hard-glass", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-4", amount = 2}
     },
     results = {
       {type = "item", name = "underground-L-pipe", amount = 1}
@@ -1234,9 +1234,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 10,
     ingredients = {
-      {"underground-t-t3-pipe", 1},
-      {"nullius-hard-glass", 1},
-      {"nullius-underground-pipe-4", 3}
+      {type = "item", name = "underground-t-t3-pipe", amount = 1},
+      {type = "item", name = "nullius-hard-glass", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-4", amount = 3}
     },
     results = {
       {type = "item", name = "underground-t-pipe", amount = 1}
@@ -1250,8 +1250,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 8,
     ingredients = {
-      {"underground-L-pipe", 2},
-      {"nullius-underground-pipe-4", 1}
+      {type = "item", name = "underground-L-pipe", amount = 2},
+      {type = "item", name = "nullius-underground-pipe-4", amount = 1}
     },
     results = {
       {type = "item", name = "underground-cross-pipe", amount = 1}
@@ -1266,8 +1266,8 @@ data:extend({
     category = "small-crafting",
     energy_required = 12,
     ingredients = {
-      {"nullius-small-pump-2", 3},
-      {"underground-i-pipe", 2}
+      {type = "item", name = "nullius-small-pump-2", amount = 3},
+      {type = "item", name = "underground-i-pipe", amount = 2}
     },
     results = {
       {type = "item", name = "underground-mini-pump", amount = 1}
