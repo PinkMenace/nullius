@@ -1039,7 +1039,12 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 }
     },
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
+    working_sound = {
+      sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
+      max_sounds_per_prototype = 3,
+      fade_in_ticks = 4,
+      fade_out_ticks = 10
+    },
     fluid_boxes = {
       {
         production_type = "input",
@@ -1184,7 +1189,7 @@ data:extend({
     energy_usage = "495kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
+    working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-1"].fluid_boxes,
     
     graphics_set = {
@@ -1316,7 +1321,7 @@ data:extend({
     energy_usage = "2925kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
+    working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1461,7 +1466,7 @@ data:extend({
     energy_usage = "1930kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-2"].resistances,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
+    working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-2"].fluid_boxes,
 
     graphics_set = {
@@ -1557,7 +1562,7 @@ data:extend({
     energy_usage = "7725kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
+    working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1697,7 +1702,7 @@ data:extend({
     energy_usage = "7650kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-thermal-extractor"].working_sound,
+    working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1799,7 +1804,10 @@ data:extend({
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = {
+      sound = { filename = "__base__/sound/oil-refinery.ogg", volume = 0.45 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    },
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -1820,8 +1828,10 @@ data:extend({
         scale = 0.5
       }
     }
-  },
+  }
+})
 
+data:extend({
   {
     type = "mining-drill",
     name = "nullius-geothermal-build-2",
@@ -1846,7 +1856,7 @@ data:extend({
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -1893,7 +1903,7 @@ data:extend({
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
       filename = BASEENTITY .. "pumpjack/pumpjack-radius-visualization.png",
@@ -1932,7 +1942,7 @@ data:extend({
       { type = "impact", decrease = 50, percent = 80 }
     },
     energy_source = {type = "void"},
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-2",
@@ -1990,7 +2000,7 @@ data:extend({
       { type = "impact", decrease = 50, percent = 80 }
     },
     energy_source = {type = "void"},
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-3",
@@ -2039,7 +2049,7 @@ data:extend({
       { type = "impact", decrease = 50, percent = 80 }
     },
     energy_source = {type = "void"},
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
@@ -2349,7 +2359,7 @@ data:extend({
       render_no_network_icon = false
     },
     consumption = "2kW",
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
@@ -2439,7 +2449,7 @@ data:extend({
       render_no_network_icon = false
     },
     consumption = "5kW",
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
@@ -2529,7 +2539,7 @@ data:extend({
       render_no_network_icon = false
     },
     consumption = "20kW",
-    working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
+    working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {

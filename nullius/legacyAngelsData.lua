@@ -679,20 +679,6 @@ angelsLegacy.data["angels-floatation-cell-3"] = {
     },
 }
 
-angelsLegacy.data["angels-thermal-extractor"] = {
-  working_sound = {
-      sound = { filename = "__angelsrefininggraphics__/sound/thermal-extractor.ogg" },
-      max_sounds_per_prototype = 3,
-      fade_in_ticks = 4,
-      fade_out_ticks = 10
-    }
-}
-angelsLegacy.data["angels-chemical-furnace"] = {
-  working_sound = {
-    sound = { filename = "__base__/sound/oil-refinery.ogg", volume = 0.45 },
-    idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-  }
-}
 angelsLegacy.data["angels-burner-ore-crusher"] = {
   working_sound = {
       sound = { filename = "__angelsrefininggraphics__/sound/ore-crusher.ogg", volume = 0.6 },
