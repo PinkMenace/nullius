@@ -136,16 +136,6 @@ data.raw.tile["landfill"].placeable_by = {item = "nullius-land-fill-gravel", cou
 data.raw.item["stone-brick"].stack_size = 500
 data.raw.tile["stone-path"].walking_speed_modifier = 1.3
 data.raw.tile["stone-path"].vehicle_friction_modifier = 0.8
-data.raw.tile["angels-tile-clay-brick"].minable.result = "nullius-refractory-brick"
-data.raw.tile["angels-tile-clay-brick"].walking_speed_modifier = 1.4
-data.raw.tile["angels-tile-clay-brick"].vehicle_friction_modifier = 0.7
-data.raw.tile["angels-tile-clay-brick"].localised_name = {"tile-name.nullius-refractory-brick"}
-data.raw.tile["angels-tile-clay-brick"].placeable_by = {item = "nullius-refractory-brick", count = 1}
-if (data.raw.tile["angels-tile-clay-brick"].transitions == nil) then
-  data.raw.tile["angels-tile-clay-brick"].transitions = data.raw.tile["stone-path"].transitions
-  data.raw.tile["angels-tile-clay-brick"].transitions_between_transitions =
-      data.raw.tile["stone-path"].transitions_between_transitions
-end
 data.raw.item["concrete"].stack_size = 500
 data.raw.tile["concrete"].walking_speed_modifier = 1.5
 data.raw.tile["concrete"].vehicle_friction_modifier = 0.6

@@ -1,6 +1,9 @@
 {
   "recipe":
   [
-	["nullius-empty-canister", "nullius-canister"]
+	  ["nullius-empty-canister", "nullius-canister"]
+  ],
+  "tile":[
+    ["angels-tile-clay-brick", "nullius-tile-clay-brick"]
   ]
 }
