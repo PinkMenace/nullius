@@ -1,5 +1,4 @@
 require("legacyAngels")
-require("legacyAngelsData")
 
 require("prototypes.reskin")
 require("prototypes.category")

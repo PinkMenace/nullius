@@ -1089,7 +1089,10 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
     },
-    working_sound = angelsLegacy.data["angels-air-filter"].working_sound,
+    working_sound = {
+      sound = { filename = "__base__/sound/idle1.ogg", volume = 1 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+    },
     impact_category = "metal",
     fluid_boxes = {
       {
@@ -1100,8 +1103,10 @@ data:extend({
       },
     },
     pipe_covers = pipecoverspictures()
-  },
+  }
+})
 
+data:extend({
   {
     type = "assembling-machine",
     name = "nullius-air-filter-2",
@@ -1176,7 +1181,7 @@ data:extend({
     },
     module_slots = 1,
     allowed_effects = {"speed", "consumption", "pollution"},
-    working_sound = angelsLegacy.data["angels-air-filter"].working_sound,
+    working_sound = data.raw["assembling-machine"]["nullius-air-filter-1"].working_sound,
     impact_category = "metal",
     fluid_boxes = {
       {
@@ -1230,7 +1235,7 @@ data:extend({
     },
     module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
-    working_sound = angelsLegacy.data["angels-air-filter"].working_sound,
+    working_sound = data.raw["assembling-machine"]["nullius-air-filter-1"].working_sound,
     impact_category = "metal",
     fluid_boxes = {
       {
@@ -1931,10 +1936,32 @@ data:extend({
           }
         }
       },
-      fluid_background = angelsLegacy.data["angels-storage-tank-3"].pictures.fluid_background,
-      window_background = angelsLegacy.data["angels-storage-tank-3"].pictures.window_background,
-      flow_sprite = angelsLegacy.data["angels-storage-tank-3"].pictures.flow_sprite,
-      gas_flow = angelsLegacy.data["angels-storage-tank-3"].pictures.gas_flow
+      fluid_background = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
+        priority = "extra-high",
+        width = 1,
+        height = 1,
+      },
+      window_background = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
+        priority = "extra-high",
+        width = 1,
+        height = 1,
+      },
+      flow_sprite = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
+        priority = "extra-high",
+        width = 1,
+        height = 1,
+      },
+      gas_flow = {
+        filename = "__angelspetrochemgraphics__/graphics/entity/electrolyser/blank.png",
+        priority = "extra-high",
+        width = 1,
+        height = 1,
+        frame_count = 1,
+        animation_speed = 0.25,
+      }
     },
     flow_length_in_ticks = 360,
     impact_category = "metal",
@@ -2020,13 +2047,75 @@ data:extend({
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-storage-tank-1"].working_sound,
+    working_sound = {
+      sound = {
+        filename = "__base__/sound/storage-tank.ogg",
+        volume = 0.6,
+      },
+      match_volume_to_activity = true,
+      max_sounds_per_prototype = 3,
+    },
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    pictures = util.table.deepcopy(angelsLegacy.data["angels-storage-tank-1"].pictures)
-  },
+    pictures = {
+      picture = {
+        sheets = {
+          {
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank.png",
+            priority = "extra-high",
+            frames = 1,
+            width = 334,
+            height = 387,
+            shift = util.by_pixel(-0.5, -6),
+            scale = 0.5,
+          },
+          {
+            filename = "__angelspetrochemgraphics__/graphics/entity/petrochem-gas-tank/petrochem-gas-tank-shadow.png",
+            priority = "extra-high",
+            frames = 1,
+            width = 437,
+            height = 237,
+            shift = util.by_pixel(26, 32),
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
+        },
+      },
+      fluid_background = {
+        filename = "__base__/graphics/entity/storage-tank/fluid-background.png",
+        priority = "extra-high",
+        width = 32,
+        height = 15,
+      },
+      window_background = {
+        filename = "__base__/graphics/entity/storage-tank/window-background.png",
+        priority = "extra-high",
+        width = 34,
+        height = 48,
+        scale = 0.5,
+      },
+      flow_sprite = {
+        filename = "__base__/graphics/entity/pipe/fluid-flow-low-temperature.png",
+        priority = "extra-high",
+        width = 160,
+        height = 20,
+      },
+      gas_flow = {
+        filename = "__base__/graphics/entity/pipe/steam.png",
+        priority = "extra-high",
+        line_length = 10,
+        width = 48,
+        height = 30,
+        frame_count = 60,
+        animation_speed = 0.25,
+        scale = 0.5,
+      },
+    }
+  }
+})
 
+data:extend({
   {
     type = "storage-tank",
     name = "nullius-large-tank-2",
@@ -2053,11 +2142,11 @@ data:extend({
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-storage-tank-1"].working_sound,
+    working_sound = data.raw["storage-tank"]["nullius-large-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    pictures = util.table.deepcopy(angelsLegacy.data["angels-storage-tank-1"].pictures)
+    pictures = table.deepcopy(data.raw["storage-tank"]["nullius-large-tank-1"].pictures)
   },
 
   {
@@ -2085,11 +2174,11 @@ data:extend({
     window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
     flow_length_in_ticks = 360,
     impact_category = "metal",
-    working_sound = angelsLegacy.data["angels-storage-tank-1"].working_sound,
+    working_sound = data.raw["storage-tank"]["nullius-large-tank-1"].working_sound,
     circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
     circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    pictures = angelsLegacy.data["angels-storage-tank-1"].pictures
+    pictures = table.deepcopy(data.raw["storage-tank"]["nullius-large-tank-1"].pictures)
   }
 })
 
