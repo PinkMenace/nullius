@@ -633,7 +633,7 @@ data:extend({
     graphics_set = {
       animation = scale_image(angelsLegacy.data["angels-crystallizer"].graphics_set.animation, 0.775),
     },
-    impact_category = angelsLegacy.data["angels-crystallizer"].impact_category,
+    impact_category = "metal",
     working_sound = angelsLegacy.data["angels-crystallizer"].working_sound,
     fluid_boxes = {
       {

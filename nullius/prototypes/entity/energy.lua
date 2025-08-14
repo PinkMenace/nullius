@@ -1798,7 +1798,7 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
@@ -1845,7 +1845,7 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
@@ -1892,7 +1892,7 @@ data:extend({
     mining_speed = 1,
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, 0},
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
     fast_replaceable_group = "geothermal-plant",
     radius_visualisation_picture = {
@@ -1933,7 +1933,7 @@ data:extend({
     },
     energy_source = {type = "void"},
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-2",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
@@ -1991,7 +1991,7 @@ data:extend({
     },
     energy_source = {type = "void"},
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-3",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
@@ -2040,7 +2040,7 @@ data:extend({
     },
     energy_source = {type = "void"},
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
@@ -2350,7 +2350,7 @@ data:extend({
     },
     consumption = "2kW",
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
@@ -2440,7 +2440,7 @@ data:extend({
     },
     consumption = "5kW",
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
@@ -2530,7 +2530,7 @@ data:extend({
     },
     consumption = "20kW",
     working_sound = angelsLegacy.data["angels-chemical-furnace"].working_sound,
-    impact_category = angelsLegacy.data["angels-chemical-furnace"].impact_category,
+    impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     picture = {
       layers = {
