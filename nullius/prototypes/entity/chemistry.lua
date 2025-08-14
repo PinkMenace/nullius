@@ -1113,7 +1113,7 @@ data:extend({
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1, -2}, direction = defines.direction.north }}
+        pipe_connections = {{ flow_direction ="output", position = {-2, -2}, direction = defines.direction.north }}
       },
       {
         production_type = "output",
@@ -1125,7 +1125,7 @@ data:extend({
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1, -2}, direction = defines.direction.north }}
+        pipe_connections = {{ flow_direction ="output", position = {2, -2}, direction = defines.direction.north }}
       }
     },
     impact_category = "metal",
@@ -1249,7 +1249,7 @@ data:extend({
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1, -2}, direction = defines.direction.north }}
+        pipe_connections = {{ flow_direction ="output", position = {-2, -2}, direction = defines.direction.north }}
       },
       {
         production_type = "output",
@@ -1261,7 +1261,7 @@ data:extend({
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1, -2}, direction = defines.direction.north }}
+        pipe_connections = {{ flow_direction ="output", position = {2, -2}, direction = defines.direction.north }}
       }
     },
 
