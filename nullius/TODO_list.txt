@@ -13,6 +13,8 @@ why does grass drone take this long to spawn grass ?? -> it also takes very long
 decide what to do with angels stuff : depend only on the graphics ? then we'll have to recreate some of their entities and re implement some of angels functions
 update changelog and info.json(min version of dependencies) before publishing
 drones ammo category locale broken
-coal spawn in rocks
+coal spawn in rocks -> crystal rock with silica and alumina: okay it's from 1.1
+there are other kinds of rocks: rock, sandstone rock, bauxite rock, ironstone rock -> spawns sandstone, bauxite, iron ore, regular stone, soda ash, calcite
 mentions of petroleum in factoriopedia/what the extractor can mine
 missing geothermal plant graphics
+some of the mining drills that use the electric drill graphics have the vector_to_place_result set to the burner drill value so the little is not in front of the animation BUT this is how it is in nullius 1.1 so I didn't change it
