@@ -14,5 +14,5 @@ decide what to do with angels stuff : depend only on the graphics ? then we'll h
 update changelog and info.json(min version of dependencies) before publishing
 drones ammo category locale broken
 mentions of petroleum in factoriopedia/what the extractor can mine
-missing geothermal plant graphics
+wrong graphics for extractor ??
 some of the mining drills that use the electric drill graphics have the vector_to_place_result set to the burner drill value so the little is not in front of the animation BUT this is how it is in nullius 1.1 so I didn't change it

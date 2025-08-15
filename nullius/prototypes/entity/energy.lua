@@ -1818,7 +1818,7 @@ data:extend({
     base_render_layer = "lower-object-above-shadow",
     
     graphics_set = {
-      animations = {
+      animation = {
         filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_01.png",
         width = 332,
         height = 374,
@@ -1867,7 +1867,7 @@ data:extend({
     base_render_layer = "lower-object-above-shadow",
     
     graphics_set = {
-      animations = {
+      animation = {
         filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_01.png",
         width = 332,
         height = 374,
@@ -1913,7 +1913,7 @@ data:extend({
     monitor_visualization_tint = {r=78, g=173, b=255},
     base_render_layer = "lower-object-above-shadow",
     graphics_set = {
-      animations = {
+      animation = {
         filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_01.png",
         width = 332,
         height = 374,
@@ -1932,6 +1932,7 @@ data:extend({
     minable = { mining_time = 1.8, result = "nullius-geothermal-plant-1" },
     placeable_by = {item = "nullius-geothermal-plant-1", count = 1},
     max_health = 500,
+    hidden_in_factoriopedia = true,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
@@ -1956,12 +1957,16 @@ data:extend({
       tint = {0.5, 0.7, 1}
     },
     picture = {
-      filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-shadow_01.png",
-      width = 448,
-      height = 280,
-      shift = util.by_pixel(28, 12.5),
-      scale = 0.5,
-      draw_as_shadow = true
+      layers = {
+        {
+          filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-shadow_01.png",
+          width = 448,
+          height = 280,
+          shift = util.by_pixel(28, 12.5),
+          scale = 0.5,
+          draw_as_shadow = true
+        }
+      }
     },
     consumption = "10MW",
     neighbour_bonus = 0,
@@ -1990,6 +1995,7 @@ data:extend({
     minable = { mining_time = 2.4, result = "nullius-geothermal-plant-2" },
     placeable_by = {item = "nullius-geothermal-plant-2", count = 1},
     max_health = 600,
+    hidden_in_factoriopedia = true,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
@@ -2039,6 +2045,7 @@ data:extend({
     minable = { mining_time = 3, result = "nullius-geothermal-plant-3" },
     placeable_by = {item = "nullius-geothermal-plant-3", count = 1},
     max_health = 750,
+    hidden_in_factoriopedia = true,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
@@ -2053,7 +2060,7 @@ data:extend({
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
-    working_light_picture = {
+    working_light_picture = { -- TODO: integrate the graphics with the heat pipes correctly
       filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_02.png",
       width = 332,
       height = 374,
