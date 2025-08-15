@@ -3298,17 +3298,20 @@ data:extend({
       volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -0.1}, direction = defines.direction.north },
+        { position = {0, 0}, direction = defines.direction.north },
         {
           connection_type = "underground",
-          position = {0, 0.1},
+          position = {0, 0},
           max_underground_distance = 15,
           direction = defines.direction.south
         }
-      }
+      },
+      hide_connection_info = true
     },
     impact_category = data.raw["pipe-to-ground"]["pipe-to-ground"].impact_category,
-    pictures = undergroundpipepics("__boblogistics__/graphics/entity/pipe/copper-tungsten/")
+    pictures = undergroundpipepics("__boblogistics__/graphics/entity/pipe/copper-tungsten/"),
+    visualization = data.raw["pipe-to-ground"]["pipe-to-ground"].visualization,
+    disabled_visualization = data.raw["pipe-to-ground"]["pipe-to-ground"].disabled_visualization,
   },
 
   {
@@ -3334,17 +3337,20 @@ data:extend({
       volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -0.1}, direction = defines.direction.north },
+        { position = {0, 0}, direction = defines.direction.north },
         {
           connection_type = "underground",
-          position = {0, 0.1},
+          position = {0, 0},
           max_underground_distance = 19,
           direction = defines.direction.south
         }
-      }
+      },
+      hide_connection_info = true
     },
     impact_category = data.raw["pipe-to-ground"]["pipe-to-ground"].impact_category,
-    pictures = data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].pictures
+    pictures = data.raw["pipe-to-ground"]["bob-plastic-pipe-to-ground"].pictures,
+    visualization = data.raw["pipe-to-ground"]["pipe-to-ground"].visualization,
+    disabled_visualization = data.raw["pipe-to-ground"]["pipe-to-ground"].disabled_visualization,
   },
 
   {
@@ -3369,16 +3375,19 @@ data:extend({
       volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -0.1}, direction = defines.direction.north },
+        { position = {0, 0}, direction = defines.direction.north },
         {
-          position = {0, 0.1},
+          position = {0, 0},
           connection_type = "underground",
           max_underground_distance = 23, 
           direction = defines.direction.south
         }
-      }
+      },
+      hide_connection_info = true
     },
     impact_category = data.raw["pipe-to-ground"]["pipe-to-ground"].impact_category,
-    pictures = undergroundpipepics("__boblogistics__/graphics/entity/pipe/tungsten/")
+    pictures = undergroundpipepics("__boblogistics__/graphics/entity/pipe/tungsten/"),
+    visualization = data.raw["pipe-to-ground"]["pipe-to-ground"].visualization,
+    disabled_visualization = data.raw["pipe-to-ground"]["pipe-to-ground"].disabled_visualization,
   }
 })
