@@ -234,3 +234,95 @@ data:extend({
     transitions_between_transitions = data.raw.tile["stone-path"].transitions_between_transitions
   },
 })
+
+data:extend({
+  {
+    type = "noise-function",
+    name = "nullius_value_optimal_with_range",
+    parameters = {"value", "optimal", "range", "max_range"},
+    expression = "if((left_range <= value) * (value <= right_range),\z
+                     1,\z
+                     clamp(if(value <= optimal,\z
+                              2 * (value - left_max) / (left_range - left_max) - 1,\z
+                              2 * (right_max - value) / 2 * (right_max - right_range) - 1), 0, 1))",
+    local_expressions =
+    {
+      left_max = "optimal - max_range",
+      left_range = "optimal - range",
+      right_max = "optimal + max_range",
+      right_range = "optimal + range",
+    },
+  },
+})
+data:extend({
+  {
+    type = "noise-function",
+    name = "nullius_elevation_level",
+    parameters = {"optimal", "range", "max_range"},
+    expression = "nullius_value_optimal_with_range(elevation, optimal, range, max_range)",
+  },
+  {
+    type = "simple-entity",
+    name = "nullius-crystal-rock",
+    flags = { "placeable-neutral", "placeable-off-grid", "not-on-map" },
+    icon = "__base__/graphics/icons/huge-rock.png",
+    icon_size = 64,
+    subgroup = "grass",
+    order = "b[decorative]-k[stone-rock]-c[crystal]",
+    collision_box = { { -1.1, -1.1 }, { 1.1, 1.1 } },
+    selection_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },
+    minable = {
+      mining_particle = "stone-particle",
+      mining_time = 8,
+      results = {
+        {type="item", name="nullius-silica", amount=16},
+        {type="item", name="nullius-alumina", amount=8}
+      }
+    },
+    loot = {
+      {item = "nullius-silica", probability = 1, count_min = 4, count_max = 12},
+      {item = "nullius-alumina", probability = 1, count_min = 2, count_max = 6}
+    },
+    count_as_rock_for_filtered_deconstruction = true,
+    mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
+    render_layer = "object",
+    max_health = 200,
+    resistances = {
+      {
+        type = "fire",
+        percent = 100,
+      },
+    },
+    autoplace = {
+      order = "a[doodad]-c[nullius-crystal-rock]",
+      control = "rocks",
+      probability_expression = "0.0002 + 0.002 * nullius_elevation_level(45000, 37000, 45000)",
+    },
+    pictures = {
+      {
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-1.png",
+        width = 192,
+        height = 160,
+        shift = { 0.5, 0 },
+      },
+      {
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-2.png",
+        width = 192,
+        height = 160,
+        shift = { 0.5, 0 },
+      },
+      {
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-3.png",
+        width = 192,
+        height = 160,
+        shift = { 0.5, 0 },
+      },
+      {
+        filename = "__angelsrefininggraphics__/graphics/entity/rock/crystal-rock-4.png",
+        width = 192,
+        height = 160,
+        shift = { 0.5, 0 },
+      },
+    },
+  },
+})
