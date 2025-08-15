@@ -2198,6 +2198,7 @@ data:extend({
     fast_replaceable_group = "extractor",
     next_upgrade = "nullius-extractor-2",
     resource_categories = {"basic-fluid"},
+    drawing_box_vertical_extension = 1,
     max_health = 300,
     corpse = "pumpjack-remnants",
     dying_explosion = "pumpjack-explosion",
@@ -2263,32 +2264,34 @@ data:extend({
         }
       }
     },
-    animations = {
-      north = {
-        layers = {
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
-            animation_speed = 0.4,
-            scale = 0.66667,
-            tint = {0.98, 0.58, 0.24},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-6.66667, -40)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
-            animation_speed = 0.66667,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.4,
-            shift = util.by_pixel(29.5833, 24.1666)
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.4,
+              scale = 0.66667,
+              tint = {0.98, 0.58, 0.24},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-6.66667, -40)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.66667,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.4,
+              shift = util.by_pixel(29.5833, 24.1666)
+            }
           }
         }
       }
@@ -2303,6 +2306,7 @@ data:extend({
     minable = { mining_time = 2, result = "nullius-extractor-2" },
     fast_replaceable_group = "extractor",
     resource_categories = {"basic-fluid"},
+    drawing_box_vertical_extension = 1,
     max_health = 400,
     corpse = "pumpjack-remnants",
     dying_explosion = "pumpjack-explosion",
@@ -2368,32 +2372,34 @@ data:extend({
         }
       }
     },
-    animations = {
-      north = {
-        layers = {
-          {
-            priority = "high",
-            filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
-            animation_speed = 0.6,
-            scale = 0.66667,
-            tint = {0.99,0.25,0.39},
-            line_length = 8,
-            width = 206,
-            height = 202,
-            frame_count = 40,
-            shift = util.by_pixel(-6.66667, -40)
-          },
-          {
-            priority = "high",
-            filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
-            animation_speed = 0.66667,
-            draw_as_shadow = true,
-            line_length = 8,
-            width = 309,
-            height = 82,
-            frame_count = 40,
-            scale = 0.6,
-            shift = util.by_pixel(29.5833, 24.1666)
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              priority = "high",
+              filename = ENTITYPATH .. "wells/pumpjack-decolorized.png",
+              animation_speed = 0.6,
+              scale = 0.66667,
+              tint = {0.99,0.25,0.39},
+              line_length = 8,
+              width = 206,
+              height = 202,
+              frame_count = 40,
+              shift = util.by_pixel(-6.66667, -40)
+            },
+            {
+              priority = "high",
+              filename = BASEENTITY .. "pumpjack/pumpjack-horsehead-shadow.png",
+              animation_speed = 0.66667,
+              draw_as_shadow = true,
+              line_length = 8,
+              width = 309,
+              height = 82,
+              frame_count = 40,
+              scale = 0.6,
+              shift = util.by_pixel(29.5833, 24.1666)
+            }
           }
         }
       }

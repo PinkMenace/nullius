@@ -13,6 +13,5 @@ why does grass drone take this long to spawn grass ?? -> it also takes very long
 decide what to do with angels stuff : depend only on the graphics ? then we'll have to recreate some of their entities and re implement some of angels functions
 update changelog and info.json(min version of dependencies) before publishing
 drones ammo category locale broken
-mentions of petroleum in factoriopedia/what the extractor can mine
-wrong graphics for extractor ??
+geothermal plant can mine petroleum ??
 some of the mining drills that use the electric drill graphics have the vector_to_place_result set to the burner drill value so the little is not in front of the animation BUT this is how it is in nullius 1.1 so I didn't change it
