@@ -150,7 +150,7 @@ data:extend({
     alert_when_damaged = false,
     allow_copy_paste = false,
 	localised_description = {"entity-description.nullius-minable",
-	    "[item=nullius-small-furnace-2] 2x[item=nullius-chimney-1] "
+	    "1x[item=nullius-small-furnace-2] 2x[item=nullius-chimney-1] "
 	    .. "2x[item=nullius-outfall-1] 2x[item=storage-tank]"},
     minable = {
       mining_time = 1.5,
@@ -498,7 +498,7 @@ data:extend({
     alert_when_damaged = false,
     allow_copy_paste = false,
 	localised_description = {"entity-description.nullius-minable",
-	    "[item=nullius-lab-1] 20x[item=nullius-red-wire] 2x[item=nullius-broken-sensor-node]"},
+	    "1x[item=nullius-lab-1] 20x[item=nullius-red-wire] 2x[item=nullius-broken-sensor-node]"},
     minable = {
       mining_time = 1,
       results = {
@@ -787,7 +787,7 @@ data:extend({
     alert_when_damaged = false,
     allow_copy_paste = false,
 	localised_description = {"entity-description.nullius-minable",
-	    "[item=nullius-medium-assembler-1] 3x[item=nullius-broken-assembler] "
+	    "1x[item=nullius-medium-assembler-1] 3x[item=nullius-broken-assembler] "
 		.. "6x[item=nullius-grid-battery-1]"},
     minable = {
       mining_time = 0.5,
