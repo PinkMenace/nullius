@@ -1,7 +1,9 @@
 {
   "recipe":
   [
-	  ["nullius-empty-canister", "nullius-canister"]
+	  ["nullius-empty-canister", "nullius-canister"],
+	  ["nullius-duct-end-point-outtake", "nullius-duct-exhaust"],
+	  ["nullius-duct-end-point-intake", "nullius-duct-intake"]
   ],
   "tile":[
     ["angels-tile-clay-brick", "nullius-tile-clay-brick"]

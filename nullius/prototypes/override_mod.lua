@@ -1700,26 +1700,28 @@ end
 
 
 if mods["FluidMustFlow"] then
+  if not settings.startup["fmf-enable-duct-auto-join"].value then
+    data.raw.item["duct"].subgroup = "nullius-ducts"
+    data.raw.item["duct"].order = "nullius-c"
+    data.raw.item["duct-long"].subgroup = "nullius-ducts"
+    data.raw.item["duct-long"].order = "nullius-d"
+  end
   data.raw.item["duct-small"].subgroup = "nullius-ducts"
-  data.raw.item["duct"].subgroup = "nullius-ducts"
-  data.raw.item["duct-long"].subgroup = "nullius-ducts"
   data.raw.item["duct-underground"].subgroup = "nullius-ducts"
   data.raw.item["duct-curve"].subgroup = "nullius-ducts"
   data.raw.item["duct-t-junction"].subgroup = "nullius-ducts"
   data.raw.item["duct-cross"].subgroup = "nullius-ducts"
-  data.raw.item["duct-end-point-outtake"].subgroup = "nullius-ducts"
-  data.raw.item["duct-end-point-intake"].subgroup = "nullius-ducts"
+  data.raw.item["duct-exhaust"].subgroup = "nullius-ducts"
+  data.raw.item["duct-intake"].subgroup = "nullius-ducts"
   data.raw.item["non-return-duct"].subgroup = "nullius-ducts"
 
   data.raw.item["duct-small"].order = "nullius-b"
-  data.raw.item["duct"].order = "nullius-c"
-  data.raw.item["duct-long"].order = "nullius-d"
   data.raw.item["duct-underground"].order = "nullius-e"
   data.raw.item["duct-curve"].order = "nullius-f"
   data.raw.item["duct-t-junction"].order = "nullius-g"
   data.raw.item["duct-cross"].order = "nullius-h"
-  data.raw.item["duct-end-point-outtake"].order = "nullius-i"
-  data.raw.item["duct-end-point-intake"].order = "nullius-j"
+  data.raw.item["duct-exhaust"].order = "nullius-i"
+  data.raw.item["duct-intake"].order = "nullius-j"
   data.raw.item["non-return-duct"].order = "nullius-k"
 
   data.raw["storage-tank"]["duct-small"].minable.mining_time = 0.8
@@ -1730,8 +1732,8 @@ if mods["FluidMustFlow"] then
   data.raw["storage-tank"]["duct-cross"].minable.mining_time = 2.5
   data.raw["pipe-to-ground"]["duct-underground"].minable.mining_time = 2.5
   data.raw["pump"]["non-return-duct"].minable.mining_time = 2
-  data.raw["pump"]["duct-end-point-intake"].minable.mining_time = 3
-  data.raw["pump"]["duct-end-point-outtake"].minable.mining_time = 3
+  data.raw["pump"]["duct-intake"].minable.mining_time = 3
+  data.raw["pump"]["duct-exhaust"].minable.mining_time = 3
 
   local duct_box = data.raw["pipe-to-ground"]["duct-underground"].fluid_box
   duct_box.pipe_connections[2].max_underground_distance = duct_box.pipe_connections[2].max_underground_distance - 2

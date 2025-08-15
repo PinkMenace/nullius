@@ -2144,88 +2144,106 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-duct-small",
+    localised_name = {"entity-name.duct-small"},
     enabled = false,
     always_show_made_in = true,
     category = "hand-casting",
     energy_required = 2,
     ingredients = {
-      {"nullius-box-steel-plate", 1},
-      {"nullius-underground-pipe-3", 1}
+      {type = "item", name = "nullius-box-steel-plate", amount = 1},
+      {type = "item", name = "nullius-underground-pipe-3", amount = 1}
     },
-    result = "duct-small"
+    results = { 
+      {type = "item", name = "duct-small", amount = 1},
+    }
   },
   {
     type = "recipe",
     name = "nullius-duct-curve",
+    localised_name = {"entity-name.duct-curve"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"duct-small", 2},
-      {"nullius-steel-rod", 1}
+      {type = "item", name = "duct-small", amount = 2},
+      {type = "item", name = "nullius-steel-rod", amount = 1}
     },
-    result = "duct-curve"
+    results = { 
+      {type = "item", name = "duct-curve", amount = 1},
+    }
   },
   {
     type = "recipe",
     name = "nullius-duct-t-junction",
+    localised_name = {"entity-name.duct-t-junction"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 3,
     ingredients = {
-      {"duct-small", 3},
-      {"nullius-steel-rod", 2}
+      {type = "item", name = "duct-small", amount = 3},
+      {type = "item", name = "nullius-steel-rod", amount = 2}
     },
-    result = "duct-t-junction"
+    results = { 
+      {type = "item", name = "duct-t-junction", amount = 1},
+    }
   },
   {
     type = "recipe",
     name = "nullius-duct-cross",
+    localised_name = {"entity-name.duct-cross"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 4,
     ingredients = {
-      {"duct-small", 4},
-      {"nullius-steel-rod", 3}
+      {type = "item", name = "duct-small", amount = 4},
+      {type = "item", name = "nullius-steel-rod", amount = 3}
     },
-    result = "duct-cross"
+    results = { 
+      {type = "item", name = "duct-cross", amount = 1},
+    }
   },
   {
     type = "recipe",
-    name = "nullius-duct-end-point-outtake",
+    name = "nullius-duct-exhaust",
+    localised_name = {"entity-name.duct-exhaust"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 5,
     ingredients = {
-      {"duct-cross", 1},
-      {"nullius-outfall-2", 1}
+      {type = "item", name = "duct-cross", amount = 1},
+      {type = "item", name = "nullius-outfall-2", amount = 1}
     },
-    result = "duct-end-point-outtake"
+    results = { 
+      {type = "item", name = "duct-exhaust", amount = 1},
+    }
   },
   {
     type = "recipe",
-    name = "nullius-duct-end-point-intake",
+    name = "nullius-duct-intake",
+    localised_name = {"entity-name.duct-intake"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 5,
     ingredients = {
-      {"duct-end-point-outtake", 1},
-      {"nullius-box-pump-2", 1}
+      {type = "item", name = "duct-exhaust", amount = 1},
+      {type = "item", name = "nullius-box-pump-2", amount = 1}
     },
-    result = "duct-end-point-intake"
+    results = { 
+      {type = "item", name = "duct-intake", amount = 1},
+    }
   },
   {
     type = "technology",
     name = "nullius-ducts",
-    localised_name = {"technology-name.Ducts"},
-    localised_description = {"technology-description.Ducts"},
-    icon = "__FluidMustFlow__/graphics/icon/technologies/iron_duct_tecnology.png",
-    icon_size = 128,
+    localised_name = {"technology-name.ducts"},
+    localised_description = {"technology-description.ducts"},
+    icon = "__FluidMustFlow__/graphics/icons/technologies/ducts.png",
+    icon_size = 256,
     order = "nullius-df",
     effects = {
       {
@@ -2250,11 +2268,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-duct-end-point-outtake",
+        recipe = "nullius-duct-exhaust",
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-duct-end-point-intake",
+        recipe = "nullius-duct-intake",
       },
       {
         type = "unlock-recipe",
@@ -2284,54 +2302,66 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-duct",
+    localised_name = {"entity-name.duct"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"duct-small", 2},
-      {"nullius-steel-rod", 1}
+      {type = "item", name = "duct-small", amount = 2},
+      {type = "item", name = "nullius-steel-rod", amount = 1}
     },
-    result = "duct"
+    results = { 
+      {type = "item", name = "duct", amount = 1},
+    }
   },
   {
     type = "recipe",
     name = "nullius-duct-long",
+    localised_name = {"entity-name.duct-long"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
     energy_required = 2,
     ingredients = {
-      {"duct", 2},
-      {"nullius-steel-rod", 1}
+      {type = "item", name = "duct", amount = 2},
+      {type = "item", name = "nullius-steel-rod", amount = 1}
     },
-    result = "duct-long"
+    results = { 
+      {type = "item", name = "duct-long", amount = 1},
+    }
   },
   {
     type = "recipe",
     name = "nullius-duct-underground",
+    localised_name = {"entity-name.duct-underground"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
     energy_required = 6,
     ingredients = {
-      {"duct-long", 3},
-      {"nullius-box-reinforced-concrete", 4}
+      {type = "item", name = "duct-long", amount = 3},
+      {type = "item", name = "nullius-box-reinforced-concrete", amount = 4}
     },
-    result = "duct-underground"
+    results = { 
+      {type = "item", name = "duct-underground", amount = 1},
+    }
   },
   {
     type = "recipe",
     name = "nullius-non-return-duct",
+    localised_name = {"entity-name.non-return-duct"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 3,
     ingredients = {
-      {"duct", 1},
-      {"nullius-box-one-way-valve", 1}
+      {type = "item", name = "duct", amount = 1},
+      {type = "item", name = "nullius-box-one-way-valve", amount = 1}
     },
-    result = "non-return-duct"
+    results = { 
+      {type = "item", name = "non-return-duct", amount = 1},
+    }
   }
 })
 else
@@ -2339,28 +2369,34 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-duct-underground",
+    localised_name = {"entity-name.duct-underground"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
     energy_required = 6,
     ingredients = {
-      {"duct-small", 12},
-      {"nullius-box-reinforced-concrete", 4}
+      {type = "item", name = "duct-small", amount = 12},
+      {type = "item", name = "nullius-box-reinforced-concrete", amount = 4}
     },
-    result = "duct-underground"
+    results = { 
+      {type = "item", name = "duct-underground", amount = 1},
+    }
   },
   {
     type = "recipe",
     name = "nullius-non-return-duct",
+    localised_name = {"entity-name.non-return-duct"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 3,
     ingredients = {
-      {"duct-small", 2},
-      {"nullius-box-one-way-valve", 1}
+      {type = "item", name = "duct-small", amount = 2},
+      {type = "item", name = "nullius-box-one-way-valve", amount = 1}
     },
-    result = "non-return-duct"
+    results = { 
+      {type = "item", name = "non-return-duct", amount = 1},
+    }
   }
 })
 end
