@@ -364,3 +364,10 @@ for _,character in pairs(data.raw["character"]) do
   character.subgroup = "armor"
 end
 
+if mods["angelsrefining"] then
+  for _,tip in pairs(data.raw["tips-and-tricks-item"]) do
+    if (string.sub(tip.name, 1, 7) == "angels-") then
+      data.raw["tips-and-tricks-item"][tip.name] = nil
+    end
+  end
+end

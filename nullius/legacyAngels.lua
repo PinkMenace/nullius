@@ -59,14 +59,6 @@ function angelsLegacy.functions.remove_resource(resource)
       planet.map_gen_settings.autoplace_settings.entity.settings[infinite_resource] = nil
     end
   end
-
-  -- for r, subdir in pairs(angelsmods.functions.store) do --TODO: remove that
-  --   for r, input in pairs(subdir) do
-  --     if input == resource then
-  --       input.inactive = true
-  --     end
-  --   end
-  -- end
 end
 
 local function clean_table(t)
