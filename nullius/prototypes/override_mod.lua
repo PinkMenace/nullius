@@ -327,7 +327,7 @@ end
 data.raw.technology["nullius-mass-production-1"].prerequisites = {
     "nullius-miniloader-1", "nullius-checkpoint-mineral-dust"}
 if mods["bobinserters"] and (settings.startup["bobmods-inserters-long2"].value == true) then
-table.insert(data.raw.technology["long-inserters-2"].prerequisites,"nullius-miniloader-2")
+table.insert(data.raw.technology["bob-long-inserters-2"].prerequisites,"nullius-miniloader-2")
 else
 table.insert(data.raw.technology["nullius-mineral-processing-2"].prerequisites,"nullius-miniloader-2")
 end
@@ -445,7 +445,7 @@ end
 table.insert(data.raw.technology["nullius-mechanical-separation"].prerequisites,"nullius-loader-1")
 table.insert(data.raw.technology["nullius-checkpoint-mass-production"].prerequisites,"nullius-loader-2")
 if mods["bobinserters"] and (settings.startup["bobmods-inserters-long2"].value == true) then
-table.insert(data.raw.technology["long-inserters-2"].prerequisites,"nullius-loader-3")
+table.insert(data.raw.technology["bob-long-inserters-2"].prerequisites,"nullius-loader-3")
 else
 table.insert(data.raw.technology["nullius-mineral-processing-2"].prerequisites,"nullius-loader-3")
 end
@@ -456,44 +456,44 @@ end
 
 if mods["bobinserters"] then
 if (settings.startup["bobmods-inserters-long2"].value == true) then
-data.raw.technology["near-inserters"].prerequisites = {"long-inserters-1", "nullius-checkpoint-steel-ingot"}
-data.raw.technology["near-inserters"].order = "nullius-cf"
-data.raw.technology["near-inserters"].ignore_tech_cost_multiplier = true
-data.raw.technology["near-inserters"].unit = { count = 3,
+data.raw.technology["bob-near-inserters"].prerequisites = {"bob-long-inserters-1", "nullius-checkpoint-steel-ingot"}
+data.raw.technology["bob-near-inserters"].order = "nullius-cf"
+data.raw.technology["bob-near-inserters"].ignore_tech_cost_multiplier = true
+data.raw.technology["bob-near-inserters"].unit = { count = 3,
   ingredients = {{"nullius-mechanical-pack", 1}},
   time = 8
 }
-table.insert(data.raw.technology["nullius-toolmaking-2"].prerequisites,"near-inserters")
+table.insert(data.raw.technology["nullius-toolmaking-2"].prerequisites,"bob-near-inserters")
 else
-data.raw.technology["near-inserters"].prerequisites = {"nullius-maintenance"}
-data.raw.technology["near-inserters"].order = "nullius-dg"
-data.raw.technology["near-inserters"].unit = { count = 20,
+data.raw.technology["bob-near-inserters"].prerequisites = {"nullius-maintenance"}
+data.raw.technology["bob-near-inserters"].order = "nullius-dg"
+data.raw.technology["bob-near-inserters"].unit = { count = 20,
   ingredients = {{"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1}},
   time = 25
 }
-table.insert(data.raw.technology["nullius-aesthetics-1"].prerequisites,"near-inserters")
+table.insert(data.raw.technology["nullius-aesthetics-1"].prerequisites,"bob-near-inserters")
 end
 
-data.raw.technology["more-inserters-1"].order = "nullius-df"
-data.raw.technology["more-inserters-1"].unit = { count = 70,
+data.raw.technology["bob-more-inserters-1"].order = "nullius-df"
+data.raw.technology["bob-more-inserters-1"].unit = { count = 70,
   ingredients = {{"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1}},
   time = 30
 }
-data.raw.technology["more-inserters-1"].prerequisites = {
+data.raw.technology["bob-more-inserters-1"].prerequisites = {
   "nullius-metalworking-2", "nullius-locomotion-1"}
-table.insert(data.raw.technology["nullius-cybernetics-2"].prerequisites,"more-inserters-1")
+table.insert(data.raw.technology["nullius-cybernetics-2"].prerequisites,"bob-more-inserters-1")
 
 if settings.startup["bobmods-inserters-more2"].value == true then
-data.raw.technology["more-inserters-2"].order = "nullius-ek"
-data.raw.technology["more-inserters-2"].unit = { count = 300,
+data.raw.technology["bob-more-inserters-2"].order = "nullius-ek"
+data.raw.technology["bob-more-inserters-2"].unit = { count = 300,
   ingredients = {
     {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1},
     {"nullius-chemical-pack", 1}
   },
   time = 35
 }
-data.raw.technology["more-inserters-2"].prerequisites = {"nullius-logistics-3"}
-table.insert(data.raw.technology["nullius-inserter-capacity-1"].prerequisites,"more-inserters-2")
+data.raw.technology["bob-more-inserters-2"].prerequisites = {"nullius-logistics-3"}
+table.insert(data.raw.technology["nullius-inserter-capacity-1"].prerequisites,"bob-more-inserters-2")
 end
 end
 
