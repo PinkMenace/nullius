@@ -118,7 +118,7 @@ local fillname = {
 }
 
 function entity_built(event)
-  local entity = event.created_entity
+  local entity = event.entity
   if (entity.name == "tile-ghost") then
 	local tilename = entity.ghost_name
 	local safetile = fillname[tilename]
