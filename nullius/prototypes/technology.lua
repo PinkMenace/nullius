@@ -7,6 +7,26 @@ local EQUIPPATH = "__nullius__/graphics/equipment/"
 data:extend({
   {
     type = "technology",
+    name = "nullius-salvage-lab-wreckage",
+    order = "nullius-bb",
+    icons = {
+      {
+        icon = TECHPATH.."lab-wreckage.png",
+        icon_size = 252,
+        
+      },
+    },
+    
+    research_trigger = {
+      type = "mine-entity",
+      entity = "nullius-landing-lab"
+    },
+    
+    ignore_tech_cost_multiplier = true,
+    essential = true
+  },
+  {
+    type = "technology",
     name = "nullius-geology-1",
     order = "nullius-bb",
     icons = {
@@ -35,6 +55,7 @@ data:extend({
       ingredients = {},
       time = 3
     },
+    prerequisites = {"nullius-salvage-lab-wreckage"},
     ignore_tech_cost_multiplier = true,
     essential = true
   },

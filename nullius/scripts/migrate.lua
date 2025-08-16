@@ -160,6 +160,11 @@ function migrate_version(event)
       end
     end
   end
+  for _,force in pairs(game.forces) do
+    if force.technologies["nullius-geology-1"].researched then
+      force.technologies["nullius-salvage-lab-wreckage"].researched = true
+    end
+  end
   
   if (version >= 10901) then return end
   legacy_recipe_all("nullius-lithium-production", "lithium-chloride")
