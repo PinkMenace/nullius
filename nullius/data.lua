@@ -19,7 +19,6 @@ require("prototypes.item.void")
 require("prototypes.item.landfill")
 require("prototypes.item.boxing")
 
--- TODO: set the appropriate volume for fluid_boxes
 require("prototypes.entity.furnace") 
 require("prototypes.entity.assembler")
 require("prototypes.entity.miner")

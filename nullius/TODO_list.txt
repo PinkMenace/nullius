@@ -7,7 +7,6 @@ Rework the checkpoint system (maybe)
 fix the others warnings in the log
 landfill variants are not the same as on 1.1
 mods compatibility
-drones ammo category locale broken
 fix factoriopedia duplicate entities (maybe wait for kiwi's modding request to go through)
 do we remove the legacy items/recipes/buildings ?
 why does grass drone take this long to spawn grass ?? -> it also takes very long on 1.1

@@ -61,7 +61,7 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, flar
       subgroup = group,
       order = "nullius-"..suborder,
       stack_size = stack,
-      ammo_category = flare,
+      ammo_category = "nullius-drone", --flare,
       ammo_type = {
         target_type = "position",
         action = {
@@ -764,12 +764,12 @@ data:extend({
     order = "nullius-eb",
     stack_size = 1,
     rocket_launch_products = {
-      {name="nullius-guide-drone-iron-1", amount=1, probability=0.3},
-      {name="nullius-guide-drone-sandstone-1", amount=1, probability=0.2},
-      {name="nullius-guide-drone-bauxite-1", amount=1, probability=0.2},
-      {name="nullius-guide-drone-limestone-1", amount=1, probability=0.1},
-      {name="nullius-guide-drone-copper-1", amount=1, probability=0.1},
-      {name="nullius-guide-drone-uranium-1", amount=1, probability=0.1}
+      {type = "item", name="nullius-guide-drone-iron-1", amount=1, probability=0.3}, -- todo: check that this works
+      {type = "item", name="nullius-guide-drone-sandstone-1", amount=1, probability=0.2},
+      {type = "item", name="nullius-guide-drone-bauxite-1", amount=1, probability=0.2},
+      {type = "item", name="nullius-guide-drone-limestone-1", amount=1, probability=0.1},
+      {type = "item", name="nullius-guide-drone-copper-1", amount=1, probability=0.1},
+      {type = "item", name="nullius-guide-drone-uranium-1", amount=1, probability=0.1}
     }
   },
   {
@@ -805,12 +805,12 @@ data:extend({
     order = "nullius-ec",
     stack_size = 1,
     rocket_launch_products = {
-      {name="nullius-guide-drone-iron-1", amount=1, probability=0.9},
-      {name="nullius-guide-drone-sandstone-1", amount=1, probability=0.8},
-      {name="nullius-guide-drone-bauxite-1", amount=1, probability=0.7},
-      {name="nullius-guide-drone-limestone-1", amount=1, probability=0.5},
-      {name="nullius-guide-drone-copper-1", amount=1, probability=0.4},
-      {name="nullius-guide-drone-uranium-1", amount=1, probability=0.3}
+      {type = "item", name="nullius-guide-drone-iron-1", amount=1, probability=0.9}, -- todo : check that this works
+      {type = "item", name="nullius-guide-drone-sandstone-1", amount=1, probability=0.8},
+      {type = "item", name="nullius-guide-drone-bauxite-1", amount=1, probability=0.7},
+      {type = "item", name="nullius-guide-drone-limestone-1", amount=1, probability=0.5},
+      {type = "item", name="nullius-guide-drone-copper-1", amount=1, probability=0.4},
+      {type = "item", name="nullius-guide-drone-uranium-1", amount=1, probability=0.3}
     }
   },
   {

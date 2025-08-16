@@ -1904,144 +1904,150 @@ data:extend({
     name = "nullius-conscription"
   },
   {
-    type = "ammo-category",
-    name = "nullius-scout-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-demolition-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-excavation-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-shallow-excavation-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-terraforming-drone-grey"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-terraforming-drone-tan"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-terraforming-drone-brown"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-terraforming-drone-red"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-terraforming-drone-beige"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-grey"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-white"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-red"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-blue"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-yellow"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-green"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-purple"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-brown"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-black"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-paving-drone-hazard"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-guide-drone-iron"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-guide-drone-bauxite"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-guide-drone-sandstone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-guide-drone-limestone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-guide-drone-copper"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-guide-drone-uranium"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-algaculture-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-horticulture-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-entomology-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-arboriculture-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-aquaculture-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-husbandry-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-sequestration-coal-drone"
-  },
-  {
-    type = "ammo-category",
-    name = "nullius-sequestration-petroleum-drone"
-  },
-
-  {
     type = "fuel-category",
     name = "vehicle"
   },
   {
     type = "fuel-category",
     name = "nullius-nuclear"
-  }
+  },
+  {
+    type = "ammo-category",
+    name = "nullius-drone",
+    icon = "__nullius__/graphics/icons/scout-2.png",
+    icon_size = 64,
+  },
+  -- Old categories
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-scout-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-demolition-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-excavation-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-shallow-excavation-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-terraforming-drone-grey"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-terraforming-drone-tan"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-terraforming-drone-brown"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-terraforming-drone-red"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-terraforming-drone-beige"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-grey"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-white"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-red"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-blue"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-yellow"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-green"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-purple"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-brown"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-black"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-paving-drone-hazard"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-guide-drone-iron"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-guide-drone-bauxite"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-guide-drone-sandstone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-guide-drone-limestone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-guide-drone-copper"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-guide-drone-uranium"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-algaculture-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-horticulture-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-entomology-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-arboriculture-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-aquaculture-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-husbandry-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-sequestration-coal-drone"
+  -- },
+  -- {
+  --   type = "ammo-category",
+  --   name = "nullius-sequestration-petroleum-drone"
+  -- },
 })
