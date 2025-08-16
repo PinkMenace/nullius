@@ -138,39 +138,39 @@ end
 if (mods["RenaiTransportation"] and
     settings.startup["RTThrowersSetting"].value) then
   data.raw.recipe["nullius-thrower-2"].ingredients = {
-    {"RTThrower-inserter-Item", 1},
-    {"turbo-inserter", 1},
-	{"nullius-motor-2", 1}
+    {type = "item", name = "RTThrower-inserter-Item", amount = 1},
+    {type = "item", name = "turbo-inserter", amount = 1},
+	{type = "item", name = "nullius-motor-2", amount = 1}
   }
   data.raw.recipe["nullius-filter-thrower-2"].ingredients = {
-    {"RTThrower-inserter-Item", 1},
-    {"turbo-filter-inserter", 1},
-	{"nullius-motor-2", 1}
+    {type = "item", name = "RTThrower-inserter-Item", amount = 1},
+    {type = "item", name = "turbo-filter-inserter", amount = 1},
+	{type = "item", name = "nullius-motor-2", amount = 1}
   }
   data.raw.recipe["nullius-thrower-3"].ingredients = {
-    {"RTThrower-turbo-inserter-Item", 1},
-    {"stack-inserter", 2}
+    {type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
+    {type = "item", name = "stack-inserter", amount = 2}
   }
   data.raw.recipe["nullius-filter-thrower-3"].ingredients = {
-    {"RTThrower-turbo-filter-inserter-Item", 1},
-    {"stack-filter-inserter", 2}
+    {type = "item", name = "RTThrower-turbo-filter-inserter-Item", amount = 1},
+    {type = "item", name = "stack-filter-inserter", amount = 2}
   }
   data.raw.recipe["nullius-thrower-4"].ingredients = {
-    {"RTThrower-stack-inserter-Item", 1},
-    {"express-stack-inserter", 2}
+    {type = "item", name = "RTThrower-stack-inserter-Item", amount = 1},
+    {type = "item", name = "express-stack-inserter", amount = 2}
   }
   data.raw.recipe["nullius-filter-thrower-4"].ingredients = {
-    {"RTThrower-stack-filter-inserter-Item", 1},
-    {"express-stack-filter-inserter", 2}
+    {type = "item", name = "RTThrower-stack-filter-inserter-Item", amount = 1},
+    {type = "item", name = "express-stack-filter-inserter", amount = 2}
   }
   data.raw.recipe["nullius-ejector-hatch"].ingredients = {
-    {"HatchRTItem", 1},
-	{"RTThrower-turbo-inserter-Item", 1},
-    {"fast-underground-belt", 1}
+    {type = "item", name = "HatchRTItem", amount = 1},
+	{type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
+    {type = "item", name = "fast-underground-belt", amount = 1}
   }
   data.raw.recipe["nullius-player-thrower"].ingredients = {
-    {"RTThrower-inserter-Item", 1},
-    {"nullius-steel-plate", 2}
+    {type = "item", name = "RTThrower-inserter-Item", amount = 1},
+    {type = "item", name = "nullius-steel-plate", amount = 2}
   }
 
   data.raw.recipe["RTThrower-burner-inserter-Recipe"].enabled = false

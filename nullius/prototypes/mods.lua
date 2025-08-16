@@ -36,9 +36,9 @@ data:extend({
     always_show_made_in = true,
     energy_required = 3,
     ingredients = {
-      {"train-stop", 1},
-      {"arithmetic-combinator", 2},
-      {"nullius-green-wire", 4}
+      {type = "item", name = "train-stop", amount = 1},
+      {type = "item", name = "arithmetic-combinator", amount = 2},
+      {type = "item", name = "nullius-green-wire", amount = 4}
     },
     result = "logistic-train-stop"
   }
@@ -56,8 +56,8 @@ if mods["LTN_Combinator_Modernized"] then
       category = "tiny-crafting",
       energy_required = 2,
       ingredients = {
-        {"constant-combinator", 1},
-        {"decider-combinator", 1}
+        {type = "item", name = "constant-combinator", amount = 1},
+        {type = "item", name = "decider-combinator", amount = 1}
       },
       result = "ltn-combinator"
     }
@@ -81,8 +81,8 @@ data:extend({
     always_show_made_in = true,
     energy_required = 12,
     ingredients = {
-      {"nullius-beacon-1", 1},
-      {"nullius-relay-1", 2}
+      {type = "item", name = "nullius-beacon-1", amount = 1},
+      {type = "item", name = "nullius-relay-1", amount = 2}
     },
     result = "aai-signal-sender",
     enabled = false
@@ -94,8 +94,8 @@ data:extend({
     always_show_made_in = true,
     energy_required = 15,
     ingredients = {
-      {"radar", 1},
-      {"programmable-speaker", 2}
+      {type = "item", name = "radar", amount = 1},
+      {type = "item", name = "programmable-speaker", amount = 2}
     },
     result = "aai-signal-receiver",
     enabled = false
@@ -691,8 +691,8 @@ data:extend({
     category = "small-crafting",
     energy_required = 3,
     ingredients = {
-        {"small-lamp", 1},
-        {"train-config", 2}
+        {type = "item", name = "small-lamp", amount = 1},
+        {type = "item", name = "train-config", amount = 2}
     },
     result = "train-publisher"
   },
@@ -704,9 +704,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 4,
     ingredients = {
-      {"train-stop", 1},
-      {"train-publisher", 1},
-      {"nullius-small-supply-chest-1", 1}
+      {type = "item", name = "train-stop", amount = 1},
+      {type = "item", name = "train-publisher", amount = 1},
+      {type = "item", name = "nullius-small-supply-chest-1", amount = 1}
     },
     result = "subscriber-train-stop"
   },
@@ -718,9 +718,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 4,
     ingredients = {
-      {"train-stop", 1},
-      {"train-publisher", 1},
-      {"nullius-small-demand-chest-1", 1}
+      {type = "item", name = "train-stop", amount = 1},
+      {type = "item", name = "train-publisher", amount = 1},
+      {type = "item", name = "nullius-small-demand-chest-1", amount = 1}
     },
     result = "publisher-train-stop"
   },
@@ -732,8 +732,8 @@ data:extend({
     category = "tiny-crafting",
     energy_required = 2,
     ingredients = {
-        {"constant-combinator", 1},
-        {"arithmetic-combinator", 1}
+        {type = "item", name = "constant-combinator", amount = 1},
+        {type = "item", name = "arithmetic-combinator", amount = 1}
     },
     result = "train-config"
   }
@@ -750,12 +750,12 @@ data:extend({
     category = "nanotechnology",
     energy_required = 60,
     ingredients = {
-      {"nullius-productivity-module-2", 4},
-      {"nullius-reactor", 1},
-      {"nullius-box-gate", 3},
-      {"nullius-sensor-node-3", 2},
-      {"nullius-box-underground-pipe-4", 5},
-      {"nullius-grid-battery-2", 6}
+      {type = "item", name = "nullius-productivity-module-2", amount = 4},
+      {type = "item", name = "nullius-reactor", amount = 1},
+      {type = "item", name = "nullius-box-gate", amount = 3},
+      {type = "item", name = "nullius-sensor-node-3", amount = 2},
+      {type = "item", name = "nullius-box-underground-pipe-4", amount = 5},
+      {type = "item", name = "nullius-grid-battery-2", amount = 6}
     },
     result = "teleporter"
   }
@@ -874,11 +874,11 @@ data:extend({
     category = "medium-crafting",
     energy_required = 10,
     ingredients = {
-      {"nullius-robot-frame-1", 1},
-      {"nullius-haste-module-1", 1},
-      {"nullius-combustion-chamber-1", 1},
-      {"nullius-turbine-open-1", 2},
-      {"nullius-aluminum-plate", 6}
+      {type = "item", name = "nullius-robot-frame-1", amount = 1},
+      {type = "item", name = "nullius-haste-module-1", amount = 1},
+      {type = "item", name = "nullius-combustion-chamber-1", amount = 1},
+      {type = "item", name = "nullius-turbine-open-1", amount = 2},
+      {type = "item", name = "nullius-aluminum-plate", amount = 6}
     },
     result = "jetpack-1"
   },
@@ -890,12 +890,12 @@ data:extend({
     category = "medium-crafting",
     energy_required = 15,
     ingredients = {
-      {"jetpack-1", 1},
-      {"nullius-robot-frame-2", 1},
-      {"nullius-haste-module-2", 1},
-      {"nullius-combustion-chamber-2", 2},
-      {"nullius-turbine-open-2", 2},
-      {"nullius-ceramic-powder", 8}
+      {type = "item", name = "jetpack-1", amount = 1},
+      {type = "item", name = "nullius-robot-frame-2", amount = 1},
+      {type = "item", name = "nullius-haste-module-2", amount = 1},
+      {type = "item", name = "nullius-combustion-chamber-2", amount = 2},
+      {type = "item", name = "nullius-turbine-open-2", amount = 2},
+      {type = "item", name = "nullius-ceramic-powder", amount = 8}
     },
     result = "jetpack-2"
   },
@@ -907,12 +907,12 @@ data:extend({
     category = "medium-crafting",
     energy_required = 20,
     ingredients = {
-      {"jetpack-2", 1},
-      {"nullius-robot-frame-3", 1},
-      {"nullius-haste-module-3", 2},
-      {"nullius-combustion-chamber-3", 1},
-      {"nullius-turbine-open-3", 2},
-      {"nullius-titanium-plate", 10}
+      {type = "item", name = "jetpack-2", amount = 1},
+      {type = "item", name = "nullius-robot-frame-3", amount = 1},
+      {type = "item", name = "nullius-haste-module-3", amount = 2},
+      {type = "item", name = "nullius-combustion-chamber-3", amount = 1},
+      {type = "item", name = "nullius-turbine-open-3", amount = 2},
+      {type = "item", name = "nullius-titanium-plate", amount = 10}
     },
     result = "jetpack-3"
   },
@@ -924,10 +924,10 @@ data:extend({
     category = "medium-crafting",
     energy_required = 30,
     ingredients = {
-      {"jetpack-3", 2},
-      {"nullius-robot-frame-4", 1},
-      {"nullius-haste-module-4", 2},
-      {"nullius-missile-launcher", 4}
+      {type = "item", name = "jetpack-3", amount = 2},
+      {type = "item", name = "nullius-robot-frame-4", amount = 1},
+      {type = "item", name = "nullius-haste-module-4", amount = 2},
+      {type = "item", name = "nullius-missile-launcher", amount = 4}
     },
     result = "jetpack-4"
   }
@@ -1443,9 +1443,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 6,
     ingredients = {
-      {"nullius-large-chest-1", 3},
-      {"nullius-steel-beam", 6},
-      {"nullius-glass", 4}
+      {type = "item", name = "nullius-large-chest-1", amount = 3},
+      {type = "item", name = "nullius-steel-beam", amount = 6},
+      {type = "item", name = "nullius-glass", amount = 4}
     },
     result = "storehouse-basic"
   },
@@ -1457,10 +1457,10 @@ data:extend({
     category = "huge-crafting",
     energy_required = 10,
     ingredients = {
-      {"storehouse-basic", 4},
-      {"stone-brick", 40},
-      {"nullius-mortar", 10},
-      {"concrete", 20}
+      {type = "item", name = "storehouse-basic", amount = 4},
+      {type = "item", name = "stone-brick", amount = 40},
+      {type = "item", name = "nullius-mortar", amount = 10},
+      {type = "item", name = "concrete", amount = 20}
     },
     result = "warehouse-basic"
   },
@@ -1472,8 +1472,8 @@ data:extend({
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"storehouse-basic", 1},
-      {"nullius-large-storage-chest-1", 1}
+      {type = "item", name = "storehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-storage-chest-1", amount = 1}
     },
     result = "storehouse-storage"
   },
@@ -1485,8 +1485,8 @@ data:extend({
     category = "huge-crafting",
     energy_required = 5,
     ingredients = {
-      {"warehouse-basic", 1},
-      {"nullius-large-storage-chest-1", 2}
+      {type = "item", name = "warehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-storage-chest-1", amount = 2}
     },
     result = "warehouse-storage"
   },
@@ -1498,8 +1498,8 @@ data:extend({
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"storehouse-basic", 1},
-      {"nullius-large-supply-chest-1", 1}
+      {type = "item", name = "storehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-supply-chest-1", amount = 1}
     },
     result = "storehouse-passive-provider"
   },
@@ -1511,8 +1511,8 @@ data:extend({
     category = "huge-crafting",
     energy_required = 5,
     ingredients = {
-      {"warehouse-basic", 1},
-      {"nullius-large-supply-chest-1", 2}
+      {type = "item", name = "warehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-supply-chest-1", amount = 2}
     },
     result = "warehouse-passive-provider"
   },
@@ -1524,8 +1524,8 @@ data:extend({
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"storehouse-basic", 1},
-      {"nullius-large-demand-chest-1", 1}
+      {type = "item", name = "storehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-demand-chest-1", amount = 1}
     },
     result = "storehouse-requester"
   },
@@ -1537,8 +1537,8 @@ data:extend({
     category = "huge-crafting",
     energy_required = 5,
     ingredients = {
-      {"warehouse-basic", 1},
-      {"nullius-large-demand-chest-1", 2}
+      {type = "item", name = "warehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-demand-chest-1", amount = 2}
     },
     result = "warehouse-requester"
   },
@@ -1550,8 +1550,8 @@ data:extend({
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"storehouse-basic", 1},
-      {"nullius-large-buffer-chest-1", 1}
+      {type = "item", name = "storehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-buffer-chest-1", amount = 1}
     },
     result = "storehouse-buffer"
   },
@@ -1563,8 +1563,8 @@ data:extend({
     category = "huge-crafting",
     energy_required = 5,
     ingredients = {
-      {"warehouse-basic", 1},
-      {"nullius-large-buffer-chest-1", 2}
+      {type = "item", name = "warehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-buffer-chest-1", amount = 2}
     },
     result = "warehouse-buffer"
   },
@@ -1576,8 +1576,8 @@ data:extend({
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"storehouse-basic", 1},
-      {"nullius-large-dispatch-chest-1", 1}
+      {type = "item", name = "storehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-dispatch-chest-1", amount = 1}
     },
     result = "storehouse-active-provider"
   },
@@ -1589,8 +1589,8 @@ data:extend({
     category = "huge-crafting",
     energy_required = 5,
     ingredients = {
-      {"warehouse-basic", 1},
-      {"nullius-large-dispatch-chest-1", 2}
+      {type = "item", name = "warehouse-basic", amount = 1},
+      {type = "item", name = "nullius-large-dispatch-chest-1", amount = 2}
     },
     result = "warehouse-active-provider"
   }
@@ -1757,8 +1757,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 5,
     ingredients = {
-      {"nullius-small-demand-chest-1", 1},
-      {"nullius-relay-2", 1}
+      {type = "item", name = "nullius-small-demand-chest-1", amount = 1},
+      {type = "item", name = "nullius-relay-2", amount = 1}
     },
     result = "logistic-chest-botUpgrader"
   }
@@ -1777,8 +1777,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"train-stop", 1},
-      {"rail-chain-signal", 1}
+      {type = "item", name = "train-stop", amount = 1},
+      {type = "item", name = "rail-chain-signal", amount = 1}
     },
     result = "fuel-train-stop"
   }
@@ -1835,8 +1835,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 90,
     ingredients = {
-      {"nullius-android-2", 1},
-      {"nullius-asteroid-miner-2", 1}
+      {type = "item", name = "nullius-android-2", amount = 1},
+      {type = "item", name = "nullius-asteroid-miner-2", amount = 1}
     },
     result = "companion"
   },
@@ -1848,9 +1848,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 30,
     ingredients = {
-      {"nullius-reactor", 1},
-      {"nullius-battery-2", 6},
-	  {"nullius-antimatter", 12}
+      {type = "item", name = "nullius-reactor", amount = 1},
+      {type = "item", name = "nullius-battery-2", amount = 6},
+	  {type = "item", name = "nullius-antimatter", amount = 12}
     },
     result = "companion-reactor-equipment"
   },
@@ -1862,8 +1862,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 5,
     ingredients = {
-      {"nullius-shield", 1},
-      {"nullius-efficiency-module-3", 1}
+      {type = "item", name = "nullius-shield", amount = 1},
+      {type = "item", name = "nullius-efficiency-module-3", amount = 1}
     },
     result = "companion-shield-equipment"
   },
@@ -1875,9 +1875,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 40,
     ingredients = {
-      {"nullius-drone-carrier-2", 1},
-      {"nullius-hangar-3", 1},
-	  {"nullius-construction-bot-4", 6}
+      {type = "item", name = "nullius-drone-carrier-2", amount = 1},
+      {type = "item", name = "nullius-hangar-3", amount = 1},
+	  {type = "item", name = "nullius-construction-bot-4", amount = 6}
     },
     result = "companion-roboport-equipment"
   },
@@ -1889,8 +1889,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 10,
     ingredients = {
-      {"nullius-turret", 5},
-      {"nullius-demolition-drone", 1}
+      {type = "item", name = "nullius-turret", amount = 5},
+      {type = "item", name = "nullius-demolition-drone", amount = 1}
     },
     result = "companion-defense-equipment"
   },
@@ -1902,8 +1902,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"nullius-hydrogen-canister", 3},
-      {"processed-fuel", 1}
+      {type = "item", name = "nullius-hydrogen-canister", amount = 3},
+      {type = "item", name = "processed-fuel", amount = 1}
     },
     results = {
       {type="item", name="rocket-booster", amount=3},
@@ -1925,9 +1925,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 15,
     ingredients = {
-      {"nullius-locomotive-1", 1},
-      {"nullius-large-chest-1", 1},
-	  {"nullius-small-assembler-1", 1}
+      {type = "item", name = "nullius-locomotive-1", amount = 1},
+      {type = "item", name = "nullius-large-chest-1", amount = 1},
+	  {type = "item", name = "nullius-small-assembler-1", amount = 1}
     },
     result = "railway-motor-car-base"
   },
@@ -1939,9 +1939,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 25,
     ingredients = {
-      {"railway-motor-car-base", 1},
-      {"nullius-solar-locomotive", 1},
-      {"nullius-small-assembler-3", 1}
+      {type = "item", name = "railway-motor-car-base", amount = 1},
+      {type = "item", name = "nullius-solar-locomotive", amount = 1},
+      {type = "item", name = "nullius-small-assembler-3", amount = 1}
     },
     result = "railway-motor-car-nuclear"
   }
@@ -1959,8 +1959,8 @@ data:extend({
     category = "small-crafting",
     energy_required = 5,
     ingredients = {
-      {"nullius-sensor-1", 1},
-      {"nullius-green-wire", 3}
+      {type = "item", name = "nullius-sensor-1", amount = 1},
+      {type = "item", name = "nullius-green-wire", amount = 3}
     },
     result = "item-sensor"
   }
@@ -1978,8 +1978,8 @@ if (mods["crafting_combinator"] or mods["crafting_combinator_xeraph"]) then
       category = "small-crafting",
       energy_required = 2,
       ingredients = {
-        {"constant-combinator", 1},
-        {"nullius-red-wire", 1}
+        {type = "item", name = "constant-combinator", amount = 1},
+        {type = "item", name = "nullius-red-wire", amount = 1}
       },
       result = "crafting_combinator:crafting-combinator"
     },
@@ -1991,8 +1991,8 @@ if (mods["crafting_combinator"] or mods["crafting_combinator_xeraph"]) then
       category = "small-crafting",
       energy_required = 2,
       ingredients = {
-        {"arithmetic-combinator", 1},
-        {"nullius-red-wire", 2}
+        {type = "item", name = "arithmetic-combinator", amount = 1},
+        {type = "item", name = "nullius-red-wire", amount = 2}
       },
       result = "crafting_combinator:recipe-combinator"
     }
@@ -2010,10 +2010,10 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
       category = "small-crafting",
       energy_required = 4,
       ingredients = {
-        {"constant-combinator", 2},
-        {"small-lamp", 3},
-        {"nullius-aluminum-wire", 3},
-        {"nullius-glass", 4}
+        {type = "item", name = "constant-combinator", amount = 2},
+        {type = "item", name = "small-lamp", amount = 3},
+        {type = "item", name = "nullius-aluminum-wire", amount = 3},
+        {type = "item", name = "nullius-glass", amount = 4}
       },
       result = "SNTD-old-nixie-tube"
     },    
@@ -2025,8 +2025,8 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
       category = "medium-crafting",
       energy_required = 5,
       ingredients = {
-        {"SNTD-old-nixie-tube", 1},
-        {"nullius-large-chest-1", 1}
+        {type = "item", name = "SNTD-old-nixie-tube", amount = 1},
+        {type = "item", name = "nullius-large-chest-1", amount = 1}
       },
       result = "SNTD-nixie-tube"
     },
@@ -2038,9 +2038,9 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
       category = "small-crafting",
       energy_required = 3,
       ingredients = {
-        {"SNTD-old-nixie-tube", 1},
-		{"nullius-green-wire", 2},
-        {"iron-chest", 1}
+        {type = "item", name = "SNTD-old-nixie-tube", amount = 1},
+		{type = "item", name = "nullius-green-wire", amount = 2},
+        {type = "item", name = "iron-chest", amount = 1}
       },
       result = "SNTD-nixie-tube-small"
     },
@@ -2108,10 +2108,10 @@ data:extend({
     category = "small-crafting",
     energy_required = 3,
     ingredients = {
-      {"constant-combinator", 2},
-      {"small-lamp", 3},
-      {"nullius-aluminum-plate", 1},
-	  {"nullius-glass", 2}
+      {type = "item", name = "constant-combinator", amount = 2},
+      {type = "item", name = "small-lamp", amount = 3},
+      {type = "item", name = "nullius-aluminum-plate", amount = 1},
+	  {type = "item", name = "nullius-glass", amount = 2}
     },
     result = "hs_holo_sign"
   },
@@ -2151,8 +2151,8 @@ data:extend({
     category = "large-crafting",
     energy_required = 8,
     ingredients = {
-      {"radar", 1},
-      {"nullius-robot-frame-1", 1}
+      {type = "item", name = "radar", amount = 1},
+      {type = "item", name = "nullius-robot-frame-1", amount = 1}
     },
     result = "shuttle-lite"
   }
@@ -2450,12 +2450,12 @@ data:extend({
     category = "huge-crafting",
     energy_required = 8,
     ingredients = {
-      {"rail", 3},
-      {"gate", 8},
-      {"stone-wall", 12},
-	  {"nullius-large-chest-2", 2},
-	  {"express-underground-belt", 6},
-	  {"nullius-steel-beam", 16}
+      {type = "item", name = "rail", amount = 3},
+      {type = "item", name = "gate", amount = 8},
+      {type = "item", name = "stone-wall", amount = 12},
+	  {type = "item", name = "nullius-large-chest-2", amount = 2},
+	  {type = "item", name = "express-underground-belt", amount = 6},
+	  {type = "item", name = "nullius-steel-beam", amount = 16}
     },
     result = "railloader"
   },
@@ -2467,12 +2467,12 @@ data:extend({
     category = "huge-crafting",
     energy_required = 8,
     ingredients = {
-      {"rail", 3},
-      {"gate", 8},
-      {"stone-wall", 12},
-	  {"nullius-large-chest-2", 2},
-	  {"express-underground-belt", 6},
-	  {"concrete", 36}
+      {type = "item", name = "rail", amount = 3},
+      {type = "item", name = "gate", amount = 8},
+      {type = "item", name = "stone-wall", amount = 12},
+	  {type = "item", name = "nullius-large-chest-2", amount = 2},
+	  {type = "item", name = "express-underground-belt", amount = 6},
+	  {type = "item", name = "concrete", amount = 36}
     },
     result = "railunloader"
   },
@@ -2532,8 +2532,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"inserter", 2},
-      {"nullius-motor-1", 1}
+      {type = "item", name = "inserter", amount = 2},
+      {type = "item", name = "nullius-motor-1", amount = 1}
     },
     result = "inserter"
   },
@@ -2546,9 +2546,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"RTThrower-inserter-Item", 1},
-      {"turbo-inserter", 1},
-	  {"nullius-motor-2", 1}
+      {type = "item", name = "RTThrower-inserter-Item", amount = 1},
+      {type = "item", name = "turbo-inserter", amount = 1},
+	  {type = "item", name = "nullius-motor-2", amount = 1}
     },
     result = "turbo-inserter"
   },
@@ -2561,9 +2561,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"RTThrower-inserter-Item", 1},
-      {"turbo-filter-inserter", 1},
-	  {"nullius-motor-2", 1}
+      {type = "item", name = "RTThrower-inserter-Item", amount = 1},
+      {type = "item", name = "turbo-filter-inserter", amount = 1},
+	  {type = "item", name = "nullius-motor-2", amount = 1}
     },
     result = "turbo-filter-inserter"
   },
@@ -2576,8 +2576,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"RTThrower-turbo-inserter-Item", 1},
-      {"stack-inserter", 2}
+      {type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
+      {type = "item", name = "stack-inserter", amount = 2}
     },
     result = "stack-inserter"
   },
@@ -2590,8 +2590,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"RTThrower-turbo-filter-inserter-Item", 1},
-      {"stack-filter-inserter", 2}
+      {type = "item", name = "RTThrower-turbo-filter-inserter-Item", amount = 1},
+      {type = "item", name = "stack-filter-inserter", amount = 2}
     },
     result = "stack-filter-inserter"
   },
@@ -2604,8 +2604,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"RTThrower-stack-inserter-Item", 1},
-      {"express-stack-inserter", 2}
+      {type = "item", name = "RTThrower-stack-inserter-Item", amount = 1},
+      {type = "item", name = "express-stack-inserter", amount = 2}
     },
     result = "express-stack-inserter"
   },
@@ -2618,8 +2618,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"RTThrower-stack-filter-inserter-Item", 1},
-      {"express-stack-filter-inserter", 2}
+      {type = "item", name = "RTThrower-stack-filter-inserter-Item", amount = 1},
+      {type = "item", name = "express-stack-filter-inserter", amount = 2}
     },
     result = "express-stack-filter-inserter"
   },
@@ -2632,7 +2632,7 @@ data:extend({
     category = "medium-crafting",
     energy_required = 0.5,
     ingredients = {
-      {"wooden-chest", 1}
+      {type = "item", name = "wooden-chest", amount = 1}
     },
     result = "OpenContainerItem"
   },
@@ -2648,7 +2648,7 @@ data:extend({
 	order = "nullius-dc",
     energy_required = 0.5,
     ingredients = {
-      {"OpenContainerItem", 1}
+      {type = "item", name = "OpenContainerItem", amount = 1}
     },
     result = "wooden-chest"
   },
@@ -2660,9 +2660,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"nullius-underground-pipe-2", 1},
-	  {"nullius-priority-valve", 1},
-      {"nullius-steel-rod", 1}
+      {type = "item", name = "nullius-underground-pipe-2", amount = 1},
+	  {type = "item", name = "nullius-priority-valve", amount = 1},
+      {type = "item", name = "nullius-steel-rod", amount = 1}
     },
     result = "HatchRTItem"
   },
@@ -2674,9 +2674,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"HatchRTItem", 1},
-	  {"RTThrower-turbo-inserter-Item", 1},
-      {"fast-underground-belt", 1}
+      {type = "item", name = "HatchRTItem", amount = 1},
+	  {type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
+      {type = "item", name = "fast-underground-belt", amount = 1}
     },
     result = "RTThrower-EjectorHatchRTItem"
   },
@@ -2701,9 +2701,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"nullius-rubber", 4},
-      {"nullius-iron-wire", 3},
-	  {"nullius-steel-rod", 2}
+      {type = "item", name = "nullius-rubber", amount = 4},
+      {type = "item", name = "nullius-iron-wire", amount = 3},
+	  {type = "item", name = "nullius-steel-rod", amount = 2}
     },
     result = "BouncePlateItem"
   },
@@ -2715,8 +2715,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 1,
     ingredients = {
-      {"BouncePlateItem", 1},
-      {"stone-brick", 6}
+      {type = "item", name = "BouncePlateItem", amount = 1},
+      {type = "item", name = "stone-brick", amount = 6}
     },
     result = "DirectedBouncePlateItem"
   },
@@ -2728,8 +2728,8 @@ data:extend({
     category = "small-crafting",
     energy_required = 1,
     ingredients = {
-      {"BouncePlateItem", 1},
-	  {"constant-combinator", 1}
+      {type = "item", name = "BouncePlateItem", amount = 1},
+	  {type = "item", name = "constant-combinator", amount = 1}
     },
     result = "SignalBouncePlateItem"
   },
@@ -2741,10 +2741,10 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"DirectedBouncePlateItem", 1},
-	  {"nullius-motor-2", 1},
-      {"nullius-iron-gear", 3},
-	  {"nullius-sensor-1", 1}
+      {type = "item", name = "DirectedBouncePlateItem", amount = 1},
+	  {type = "item", name = "nullius-motor-2", amount = 1},
+      {type = "item", name = "nullius-iron-gear", amount = 3},
+	  {type = "item", name = "nullius-sensor-1", amount = 1}
     },
     result = "DirectorBouncePlateItem"
   }
@@ -2767,8 +2767,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
-      {"nullius-locomotive-1", 1},
-	  {"nullius-iron-wire", 2}
+      {type = "item", name = "nullius-locomotive-1", amount = 1},
+	  {type = "item", name = "nullius-iron-wire", amount = 2}
     },
     result = "RTZiplineItem"
   },
@@ -2780,9 +2780,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 6,
     ingredients = {
-      {"RTZiplineItem", 2},
-	  {"nullius-motor-2", 3},
-	  {"nullius-steel-cable", 10}
+      {type = "item", name = "RTZiplineItem", amount = 2},
+	  {type = "item", name = "nullius-motor-2", amount = 3},
+	  {type = "item", name = "nullius-steel-cable", amount = 10}
     },
     result = "RTZiplineItem2"
   },
@@ -2794,10 +2794,10 @@ data:extend({
     category = "medium-crafting",
     energy_required = 12,
     ingredients = {
-      {"RTZiplineItem2", 1},
-	  {"nullius-locomotive-2", 1},
-	  {"nullius-textile", 8},
-	  {"nullius-speed-module-2", 1}
+      {type = "item", name = "RTZiplineItem2", amount = 1},
+	  {type = "item", name = "nullius-locomotive-2", amount = 1},
+	  {type = "item", name = "nullius-textile", amount = 8},
+	  {type = "item", name = "nullius-speed-module-2", amount = 1}
     },
     result = "RTZiplineItem3"
   },
@@ -2809,11 +2809,11 @@ data:extend({
     category = "medium-crafting",
     energy_required = 25,
     ingredients = {
-      {"RTZiplineItem3", 1},
-	  {"nullius-motor-3", 4},
-	  {"nullius-carbon-composite", 12},
-	  {"nullius-bearing", 12},
-	  {"nullius-levitation-field-1", 2}
+      {type = "item", name = "RTZiplineItem3", amount = 1},
+	  {type = "item", name = "nullius-motor-3", amount = 4},
+	  {type = "item", name = "nullius-carbon-composite", amount = 12},
+	  {type = "item", name = "nullius-bearing", amount = 12},
+	  {type = "item", name = "nullius-levitation-field-1", amount = 2}
     },
     result = "RTZiplineItem4"
   },
@@ -2825,11 +2825,11 @@ data:extend({
     category = "medium-crafting",
     energy_required = 50,
     ingredients = {
-      {"RTZiplineItem4", 2},
-	  {"nullius-locomotive-3", 1},
-	  {"nullius-titanium-rod", 6},
-	  {"nullius-speed-module-3", 3},
-	  {"nullius-stabilizer-1", 2}
+      {type = "item", name = "RTZiplineItem4", amount = 2},
+	  {type = "item", name = "nullius-locomotive-3", amount = 1},
+	  {type = "item", name = "nullius-titanium-rod", amount = 6},
+	  {type = "item", name = "nullius-speed-module-3", amount = 3},
+	  {type = "item", name = "nullius-stabilizer-1", amount = 2}
     },
     result = "RTZiplineItem5"
   },
@@ -2841,8 +2841,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"power-switch", 1},
-	  {"decider-combinator", 1}
+      {type = "item", name = "power-switch", amount = 1},
+	  {type = "item", name = "decider-combinator", amount = 1}
     },
     result = "RTZiplineControlsItem"
   },
@@ -2854,9 +2854,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 1,
     ingredients = {
-      {"RTZiplineControlsItem", 1},
-	  {"nullius-steel-rod", 1},
-	  {"nullius-steel-gear", 2}
+      {type = "item", name = "RTZiplineControlsItem", amount = 1},
+	  {type = "item", name = "nullius-steel-rod", amount = 1},
+	  {type = "item", name = "nullius-steel-gear", amount = 2}
     },
     result = "RTZiplineCrankControlsItem"
   },
@@ -2868,10 +2868,10 @@ data:extend({
     category = "tiny-crafting",
     energy_required = 5,
     ingredients = {
-      {"RTZiplineControlsItem", 1},
-	  {"nullius-speed-module-1", 1},
-	  {"programmable-speaker", 1},
-	  {"nullius-sensor-1", 1}
+      {type = "item", name = "RTZiplineControlsItem", amount = 1},
+	  {type = "item", name = "nullius-speed-module-1", amount = 1},
+	  {type = "item", name = "programmable-speaker", amount = 1},
+	  {type = "item", name = "nullius-sensor-1", amount = 1}
     },
     result = "RTProgrammableZiplineControlsItem"
   },
@@ -2883,10 +2883,10 @@ data:extend({
     category = "large-crafting",
     energy_required = 15,
     ingredients = {
-      {"RTProgrammableZiplineControlsItem", 1},
-	  {"train-stop", 1},
-	  {"nullius-steel-cable", 12},
-	  {"big-electric-pole", 1}
+      {type = "item", name = "RTProgrammableZiplineControlsItem", amount = 1},
+	  {type = "item", name = "train-stop", amount = 1},
+	  {type = "item", name = "nullius-steel-cable", amount = 12},
+	  {type = "item", name = "big-electric-pole", amount = 1}
     },
     result = "RTZiplineTerminalItem"
   }
@@ -2909,9 +2909,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 4,
     ingredients = {
-      {"rail", 2},
-	  {"concrete", 25},
-	  {"nullius-steel-beam", 4}
+      {type = "item", name = "rail", amount = 2},
+	  {type = "item", name = "concrete", amount = 25},
+	  {type = "item", name = "nullius-steel-beam", amount = 4}
     },
     result = "RTTrainRampItem"
   },
@@ -2923,10 +2923,10 @@ data:extend({
     category = "large-crafting",
     energy_required = 6,
     ingredients = {
-      {"RTTrainRampItem", 1},
-	  {"nullius-grid-battery-1", 1},
-	  {"nullius-beacon-2", 1},
-	  {"nullius-levitation-field-1", 4}
+      {type = "item", name = "RTTrainRampItem", amount = 1},
+	  {type = "item", name = "nullius-grid-battery-1", amount = 1},
+	  {type = "item", name = "nullius-beacon-2", amount = 1},
+	  {type = "item", name = "nullius-levitation-field-1", amount = 4}
     },
     result = "RTMagnetTrainRampItem"
   },
@@ -2938,10 +2938,10 @@ data:extend({
     category = "large-crafting",
     energy_required = 5,
     ingredients = {
-      {"stone-wall", 6},
-      {"refined-concrete", 30},
-	  {"nullius-steel-plate", 12},
-	  {"RTTrainDirectedBouncePlateItem", 1}
+      {type = "item", name = "stone-wall", amount = 6},
+      {type = "item", name = "refined-concrete", amount = 30},
+	  {type = "item", name = "nullius-steel-plate", amount = 12},
+	  {type = "item", name = "RTTrainDirectedBouncePlateItem", amount = 1}
     },
     result = "RTImpactUnloaderItem"
   },
@@ -2953,10 +2953,10 @@ data:extend({
     category = "large-crafting",
     energy_required = 4,
     ingredients = {
-      {"nullius-cargo-wagon-2", 1},
-      {"HatchRTItem", 5},
-	  {"nullius-steel-gear", 4},
-	  {"nullius-steel-plate", 10}
+      {type = "item", name = "nullius-cargo-wagon-2", amount = 1},
+      {type = "item", name = "HatchRTItem", amount = 5},
+	  {type = "item", name = "nullius-steel-gear", amount = 4},
+	  {type = "item", name = "nullius-steel-plate", amount = 10}
     },
     result = "RTImpactWagonItem"
   }
@@ -2971,9 +2971,9 @@ data:extend({
     category = "large-crafting",
     energy_required = 5,
     ingredients = {
-      {"BouncePlateItem", 6},
-      {"nullius-textile", 12},
-	  {"nullius-steel-beam", 4}
+      {type = "item", name = "BouncePlateItem", amount = 6},
+      {type = "item", name = "nullius-textile", amount = 12},
+	  {type = "item", name = "nullius-steel-beam", amount = 4}
     },
     result = "RTTrainBouncePlateItem"
   },
@@ -2985,17 +2985,17 @@ data:extend({
     category = "large-crafting",
     energy_required = 2,
     ingredients = {
-      {"RTTrainBouncePlateItem", 1},
-      {"RTTrainRampItem", 1}
+      {type = "item", name = "RTTrainBouncePlateItem", amount = 1},
+      {type = "item", name = "RTTrainRampItem", amount = 1}
     },
     result = "RTTrainDirectedBouncePlateItem"
   }
 })
 else
 data.raw.recipe["nullius-impact-unloader"].ingredients[4] =
-    {"nullius-rubber", 30}
+    {type = "item", name = "nullius-rubber", amount = 30}
 data.raw.recipe["nullius-impact-wagon"].ingredients[2] =
-    {"nullius-priority-valve", 8}
+    {type = "item", name = "nullius-priority-valve", amount = 8}
 end
 end
 
@@ -3483,9 +3483,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"nullius-rubber", 1},
-      {"nullius-glass", 1},
-      {"nullius-steel-sheet", 2}
+      {type = "item", name = "nullius-rubber", amount = 1},
+      {type = "item", name = "nullius-glass", amount = 1},
+      {type = "item", name = "nullius-steel-sheet", amount = 2}
     },
     result = "iron-display-small"
   },
@@ -3497,8 +3497,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"iron-display-small", 4},
-	  {"small-lamp", 1}
+      {type = "item", name = "iron-display-small", amount = 4},
+	  {type = "item", name = "small-lamp", amount = 1}
     },
     result = "iron-display-medium"
   },
@@ -3510,8 +3510,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 5,
     ingredients = {
-      {"iron-display-small", 9},
-	  {"small-lamp", 4}
+      {type = "item", name = "iron-display-small", amount = 9},
+	  {type = "item", name = "small-lamp", amount = 4}
     },
     result = "iron-display"
   },
@@ -3523,9 +3523,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"nullius-rubber", 1},
-      {"nullius-glass", 1},
-      {"nullius-aluminum-sheet", 3}
+      {type = "item", name = "nullius-rubber", amount = 1},
+      {type = "item", name = "nullius-glass", amount = 1},
+      {type = "item", name = "nullius-aluminum-sheet", amount = 3}
     },
     result = "steel-display-small"
   },
@@ -3537,8 +3537,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"steel-display-small", 4},
-	  {"small-lamp", 1}
+      {type = "item", name = "steel-display-small", amount = 4},
+	  {type = "item", name = "small-lamp", amount = 1}
     },
     result = "steel-display-medium"
   },
@@ -3550,8 +3550,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 5,
     ingredients = {
-      {"steel-display-small", 9},
-	  {"small-lamp", 4}
+      {type = "item", name = "steel-display-small", amount = 9},
+	  {type = "item", name = "small-lamp", amount = 4}
     },
     result = "steel-display"
   },
@@ -3563,9 +3563,9 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"nullius-rubber", 1},
-      {"nullius-glass", 1},
-      {"nullius-plastic", 4}
+      {type = "item", name = "nullius-rubber", amount = 1},
+      {type = "item", name = "nullius-glass", amount = 1},
+      {type = "item", name = "nullius-plastic", amount = 4}
     },
     result = "copper-display-small"
   },
@@ -3577,8 +3577,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
-      {"copper-display-small", 4},
-	  {"small-lamp", 1}
+      {type = "item", name = "copper-display-small", amount = 4},
+	  {type = "item", name = "small-lamp", amount = 1}
     },
     result = "copper-display-medium"
   },
@@ -3590,8 +3590,8 @@ data:extend({
     category = "medium-crafting",
     energy_required = 5,
     ingredients = {
-      {"copper-display-small", 9},
-	  {"small-lamp", 4}
+      {type = "item", name = "copper-display-small", amount = 9},
+	  {type = "item", name = "small-lamp", amount = 4}
     },
     result = "copper-display"
   },
@@ -3667,9 +3667,9 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
       category = "small-crafting",
       energy_required = 12,
       ingredients = {
-        {"nullius-small-storage-chest-1", 1},
-        {"nullius-relay-1", 1},
-        {"decider-combinator", 6}
+        {type = "item", name = "nullius-small-storage-chest-1", amount = 1},
+        {type = "item", name = "nullius-relay-1", amount = 1},
+        {type = "item", name = "decider-combinator", amount = 6}
       },
       result = "blueprint-deployer"
     },
@@ -3681,9 +3681,9 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
       category = "large-crafting",
       energy_required = 20,
       ingredients = {
-        {"radar", 1},
-		{"nullius-small-miner-2", 1},
-        {"nullius-sensor-1", 4}
+        {type = "item", name = "radar", amount = 1},
+		{type = "item", name = "nullius-small-miner-2", amount = 1},
+        {type = "item", name = "nullius-sensor-1", amount = 4}
       },
       result = "recursive-blueprints-scanner"
     }
@@ -3701,11 +3701,11 @@ if mods["ch-concentrated-solar"] then
       category = "hand-casting",
       energy_required = 10,
       ingredients = {
-	    {"nullius-aluminum-sheet", 8},
-        {"nullius-steel-rod", 6},
-	    {"nullius-hard-glass", 10},
-	    {"nullius-motor-2", 1},
-	    {"nullius-bearing", 1}
+	    {type = "item", name = "nullius-aluminum-sheet", amount = 8},
+        {type = "item", name = "nullius-steel-rod", amount = 6},
+	    {type = "item", name = "nullius-hard-glass", amount = 10},
+	    {type = "item", name = "nullius-motor-2", amount = 1},
+	    {type = "item", name = "nullius-bearing", amount = 1}
       },
       result = "chcs-heliostat-mirror"
     },
@@ -3718,11 +3718,11 @@ if mods["ch-concentrated-solar"] then
 	  subgroup = "boxed-heat-energy",
       energy_required = 50,
       ingredients = {
-	    {"nullius-box-aluminum-sheet", 8},
-        {"nullius-box-steel-rod", 6},
-	    {"nullius-box-hard-glass", 10},
-	    {"nullius-box-motor-2", 1},
-	    {"nullius-box-bearing", 1}
+	    {type = "item", name = "nullius-box-aluminum-sheet", amount = 8},
+        {type = "item", name = "nullius-box-steel-rod", amount = 6},
+	    {type = "item", name = "nullius-box-hard-glass", amount = 10},
+	    {type = "item", name = "nullius-box-motor-2", amount = 1},
+	    {type = "item", name = "nullius-box-bearing", amount = 1}
       },
       result = "nullius-box-heliostat-mirror"
     },
@@ -3734,12 +3734,12 @@ if mods["ch-concentrated-solar"] then
       category = "huge-crafting",
       energy_required = 60,
       ingredients = {
-	    {"nullius-thermal-tank-2", 3},
-        {"nullius-box-heat-pipe-2", 10},
-		{"nullius-box-steel-beam", 24},
-		{"nullius-box-reinforced-concrete", 8},
-		{"nullius-pump-2", 8},
-        {"nullius-large-beacon-1", 1}
+	    {type = "item", name = "nullius-thermal-tank-2", amount = 3},
+        {type = "item", name = "nullius-box-heat-pipe-2", amount = 10},
+		{type = "item", name = "nullius-box-steel-beam", amount = 24},
+		{type = "item", name = "nullius-box-reinforced-concrete", amount = 8},
+		{type = "item", name = "nullius-pump-2", amount = 8},
+        {type = "item", name = "nullius-large-beacon-1", amount = 1}
       },
       result = "chcs-solar-power-tower",
       requester_paste_multiplier = 2
@@ -3800,10 +3800,10 @@ if (mods["beautiful_bridge_railway"] or
       category = "huge-crafting",
       energy_required = 6,
       ingredients = {
-        {"rail", 2},
-		{"nullius-steel-beam", 8},
-		{"concrete", 6},
-		{"nullius-land-fill-gravel", 1}
+        {type = "item", name = "rail", amount = 2},
+		{type = "item", name = "nullius-steel-beam", amount = 8},
+		{type = "item", name = "concrete", amount = 6},
+		{type = "item", name = "nullius-land-fill-gravel", amount = 1}
       },
       result = "bbr-rail-iron"
     },
@@ -3815,11 +3815,11 @@ if (mods["beautiful_bridge_railway"] or
       category = "huge-crafting",
       energy_required = 8,
       ingredients = {
-        {"rail", 2},
-		{"nullius-refractory-brick", 4},
-		{"nullius-mortar", 1},
-		{"concrete", 1},
-		{"nullius-land-fill-gravel", 2}
+        {type = "item", name = "rail", amount = 2},
+		{type = "item", name = "nullius-refractory-brick", amount = 4},
+		{type = "item", name = "nullius-mortar", amount = 1},
+		{type = "item", name = "concrete", amount = 1},
+		{type = "item", name = "nullius-land-fill-gravel", amount = 2}
       },
       result = "bbr-rail-brick"
     },
@@ -3831,11 +3831,11 @@ if (mods["beautiful_bridge_railway"] or
       category = "huge-crafting",
       energy_required = 5,
       ingredients = {
-        {"rail", 2},
-		{"nullius-wood", 6},
-		{"nullius-steel-rod", 1},
-		{"concrete", 2},
-		{"nullius-land-fill-gravel", 1}
+        {type = "item", name = "rail", amount = 2},
+		{type = "item", name = "nullius-wood", amount = 6},
+		{type = "item", name = "nullius-steel-rod", amount = 1},
+		{type = "item", name = "concrete", amount = 2},
+		{type = "item", name = "nullius-land-fill-gravel", amount = 1}
       },
       result = "bbr-rail-wood"
     },
@@ -4014,8 +4014,8 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 8,
       ingredients = {
-        {"nullius-locomotive-1", 1},
-		{"nullius-aluminum-plate", 4}
+        {type = "item", name = "nullius-locomotive-1", amount = 1},
+		{type = "item", name = "nullius-aluminum-plate", amount = 4}
       },
       result = "nullius-small-locomotive-1",
 	  result_count = 2
@@ -4030,9 +4030,9 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 15,
       ingredients = {
-        {"nullius-locomotive-2", 1},
-		{"nullius-small-locomotive-1", 2},
-		{"nullius-titanium-plate", 4}
+        {type = "item", name = "nullius-locomotive-2", amount = 1},
+		{type = "item", name = "nullius-small-locomotive-1", amount = 2},
+		{type = "item", name = "nullius-titanium-plate", amount = 4}
       },
       result = "nullius-small-locomotive-2",
 	  result_count = 2
@@ -4047,8 +4047,8 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 30,
       ingredients = {
-        {"nullius-locomotive-3", 1},
-		{"nullius-small-locomotive-2", 2}
+        {type = "item", name = "nullius-locomotive-3", amount = 1},
+		{type = "item", name = "nullius-small-locomotive-2", amount = 2}
       },
       result = "nullius-small-locomotive-3",
 	  result_count = 2
@@ -4063,8 +4063,8 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 30,
       ingredients = {
-        {"nullius-solar-locomotive", 1},
-		{"nullius-small-locomotive-2", 2}
+        {type = "item", name = "nullius-solar-locomotive", amount = 1},
+		{type = "item", name = "nullius-small-locomotive-2", amount = 2}
       },
       result = "nullius-small-solar-locomotive",
 	  result_count = 2
@@ -4079,8 +4079,8 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 5,
       ingredients = {
-        {"nullius-cargo-wagon-1", 1},
-		{"nullius-aluminum-plate", 4}
+        {type = "item", name = "nullius-cargo-wagon-1", amount = 1},
+		{type = "item", name = "nullius-aluminum-plate", amount = 4}
       },
       result = "nullius-small-cargo-wagon-1",
 	  result_count = 2
@@ -4095,9 +4095,9 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 10,
       ingredients = {
-	    {"nullius-cargo-wagon-2", 1},
-		{"nullius-small-cargo-wagon-1", 2},
-		{"nullius-titanium-plate", 4}
+	    {type = "item", name = "nullius-cargo-wagon-2", amount = 1},
+		{type = "item", name = "nullius-small-cargo-wagon-1", amount = 2},
+		{type = "item", name = "nullius-titanium-plate", amount = 4}
       },
       result = "nullius-small-cargo-wagon-2",
 	  result_count = 2
@@ -4112,8 +4112,8 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 20,
       ingredients = {
-	    {"nullius-cargo-wagon-3", 1},
-		{"nullius-small-cargo-wagon-2", 2}
+	    {type = "item", name = "nullius-cargo-wagon-3", amount = 1},
+		{type = "item", name = "nullius-small-cargo-wagon-2", amount = 2}
       },
       result = "nullius-small-cargo-wagon-3",
 	  result_count = 2
@@ -4128,8 +4128,8 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 6,
       ingredients = {
-        {"nullius-fluid-wagon-1", 1},
-		{"nullius-aluminum-sheet", 6}
+        {type = "item", name = "nullius-fluid-wagon-1", amount = 1},
+		{type = "item", name = "nullius-aluminum-sheet", amount = 6}
       },
       result = "nullius-small-fluid-wagon-1",
 	  result_count = 2
@@ -4144,9 +4144,9 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 12,
       ingredients = {
-	    {"nullius-fluid-wagon-2", 1},
-		{"nullius-small-fluid-wagon-1", 2},
-		{"nullius-titanium-sheet", 6}
+	    {type = "item", name = "nullius-fluid-wagon-2", amount = 1},
+		{type = "item", name = "nullius-small-fluid-wagon-1", amount = 2},
+		{type = "item", name = "nullius-titanium-sheet", amount = 6}
       },
       result = "nullius-small-fluid-wagon-2",
 	  result_count = 2
@@ -4161,8 +4161,8 @@ if mods["Mini_Trains"] then
       category = "large-crafting",
       energy_required = 25,
       ingredients = {
-	    {"nullius-fluid-wagon-3", 1},
-		{"nullius-small-fluid-wagon-2", 2}
+	    {type = "item", name = "nullius-fluid-wagon-3", amount = 1},
+		{type = "item", name = "nullius-small-fluid-wagon-2", amount = 2}
       },
       result = "nullius-small-fluid-wagon-3",
 	  result_count = 2
@@ -4201,9 +4201,9 @@ if mods["fcpu"] then
       category = "tiny-crafting",
       energy_required = 2,
       ingredients = {
-        {"decider-combinator", 10},
-        {"arithmetic-combinator", 10},
-        {"nullius-processor-2", 1}
+        {type = "item", name = "decider-combinator", amount = 10},
+        {type = "item", name = "arithmetic-combinator", amount = 10},
+        {type = "item", name = "nullius-processor-2", amount = 1}
       },
       result = "fcpu"
     },
