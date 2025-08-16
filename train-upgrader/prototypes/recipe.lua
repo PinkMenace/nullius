@@ -5,7 +5,7 @@ data:extend({
     enabled = false,
 	energy_required = 5,
     ingredients = {
-      {"logistic-chest-passive-provider", 1},
+      {"nullius-small-supply-chest-2", 1},
       {"rail-signal", 1},
       {"construction-robot", 1}
     },
@@ -17,7 +17,7 @@ data:extend({
     enabled = false,
 	energy_required = 4,
     ingredients = {
-      {"logistic-chest-storage", 1},
+      {"nullius-small-storage-chest-2", 1},
       {"rail-chain-signal", 1}
     },
     result = "tu-receiver"

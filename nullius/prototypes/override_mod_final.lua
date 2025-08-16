@@ -56,9 +56,9 @@ if settings.startup["reskins-lib-icon-tier-labeling"].value == true then
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   data.raw.item["ultimate-transport-belt"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["ultimate-underground-belt"].icons[4].icon =
+  data.raw.item["bob-ultimate-underground-belt"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["ultimate-underground-belt"].icons[5].icon =
+  data.raw.item["bob-ultimate-underground-belt"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   data.raw.item["ultimate-splitter"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
@@ -136,7 +136,7 @@ end
 
 
 if (mods["RenaiTransportation"] and
-    settings.startup["RTThrowersSetting"].value) then
+    settings.startup["RTThrowersSetting"].value and false) then
   data.raw.recipe["nullius-thrower-2"].ingredients = {
     {type = "item", name = "RTThrower-inserter-Item", amount = 1},
     {type = "item", name = "turbo-inserter", amount = 1},
@@ -185,10 +185,10 @@ if (mods["RenaiTransportation"] and
   data.raw.inserter["RTThrower-inserter"].energy_per_movement = "1W"
   data.raw.inserter["RTThrower-inserter"].energy_source.drain = "2kW"
   data.raw.inserter["RTThrower-inserter"].minable.mining_time = 0.6
-  data.raw.item["RTThrower-turbo-inserter-Item"].localised_name = {"entity-name.nullius-thrower", 2}
+  data.raw.item["RTThrower-turbo-inserter"].localised_name = {"entity-name.nullius-thrower", 2}
   data.raw.inserter["RTThrower-turbo-inserter"].localised_name = {"entity-name.nullius-thrower", 2}
-  data.raw.item["RTThrower-turbo-inserter-Item"].subgroup = "nullius-renai-thrower"
-  data.raw.item["RTThrower-turbo-inserter-Item"].order = "nullius-tcb"
+  data.raw.item["RTThrower-turbo-inserter"].subgroup = "nullius-renai-thrower"
+  data.raw.item["RTThrower-turbo-inserter"].order = "nullius-tcb"
   data.raw.inserter["RTThrower-turbo-inserter"].order = "nullius-tcb"
   data.raw.inserter["RTThrower-turbo-inserter"].rotation_speed = 0.016666667
   data.raw.inserter["RTThrower-turbo-inserter"].energy_per_rotation = "56KJ"
