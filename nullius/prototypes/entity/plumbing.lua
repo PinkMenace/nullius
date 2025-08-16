@@ -1281,7 +1281,7 @@ data:extend({
     
     mode = "overflow",
     threshold = 0.25,
-    flow_rate = 5,
+    flow_rate = 200,
     
     animations = {
       north = {
@@ -1376,7 +1376,7 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     mode = "one-way",
-    flow_rate = 5,
+    flow_rate = 200,
     
     animations = {
       north = {
@@ -1472,7 +1472,7 @@ data:extend({
     
     mode = "top-up",
     threshold = 0.5,
-    flow_rate = 5,
+    flow_rate = 200,
     
     animations = {
       north = {
@@ -1568,7 +1568,7 @@ data:extend({
     
     mode = "overflow",
     threshold = 0.75,
-    flow_rate = 5,
+    flow_rate = 200,
     
     animations = {
       north = {
