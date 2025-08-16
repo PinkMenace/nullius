@@ -156,17 +156,6 @@ data.raw.technology["factory-interior-upgrade-display"].unit = {
 }
 table.insert(data.raw.technology["nullius-packaging-5"].prerequisites,"factory-interior-upgrade-display")
 
-data.raw.technology["factory-preview"].order = "nullius-e"
-data.raw.technology["factory-preview"].prerequisites = {
-    "factory-interior-upgrade-display", "nullius-checkpoint-large-beacon"}
-data.raw.technology["factory-preview"].unit = {
-    count = 8*factory_mult, time = 35,
-    ingredients = {
-        {"nullius-geology-pack", 1}, {"nullius-climatology-pack", 1},
-        {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1},
-        {"nullius-chemical-pack", 1}}
-}
-
 if mods["factorissimo-2-notnotmelon"] then
 data.raw.technology["factory-recursion-t1"].prerequisites = {
     "factory-architecture-t2", "nullius-packaging-4"}
@@ -208,19 +197,14 @@ data.raw.technology["factory-recursion-t2"].unit = {
 }
 table.insert(data.raw.technology["nullius-logistics-4"].prerequisites,"factory-recursion-t2")
 
-data.raw.pipe["factory-fluid-dummy-connector-"..defines.direction.south].fluid_box.height = 5
-data.raw.pipe["factory-fluid-dummy-connector-"..defines.direction.north].fluid_box.height = 5
-data.raw.pipe["factory-fluid-dummy-connector-"..defines.direction.east].fluid_box.height = 5
-data.raw.pipe["factory-fluid-dummy-connector-"..defines.direction.west].fluid_box.height = 5
-
 data.raw["storage-tank"]["factory-1"].minable.mining_time = 4
 data.raw["storage-tank"]["factory-2"].minable.mining_time = 6
 data.raw["storage-tank"]["factory-3"].minable.mining_time = 8
 
-data.raw.technology["factory-architecture-t1"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", 1}
-data.raw.technology["factory-architecture-t2"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", 2}
-data.raw.technology["nullius-architecture-1"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", 3}
-data.raw.technology["factory-architecture-t3"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", 4}
+data.raw.technology["factory-architecture-t1"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", tostring(1)}
+data.raw.technology["factory-architecture-t2"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", tostring(2)}
+data.raw.technology["nullius-architecture-1"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", tostring(3)}
+data.raw.technology["factory-architecture-t3"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", tostring(4)}
 end
 
 

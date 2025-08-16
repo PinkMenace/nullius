@@ -132,49 +132,58 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-factory-1",
+    localised_name = {"entity-name.factory-1"},
     category = "huge-crafting",
     always_show_made_in = true,
     energy_required = 40,
     ingredients = {
-      {"stone-brick", 200},
-      {"nullius-mortar", 60},
-      {"nullius-glass", 40},
-      {"substation", 4},
-      {"small-lamp", 4}
+      {type = "item", name = "stone-brick", amount = 200},
+      {type = "item", name = "nullius-mortar", amount = 60},
+      {type = "item", name = "nullius-glass", amount = 40},
+      {type = "item", name = "substation", amount = 4},
+      {type = "item", name = "small-lamp", amount = 4}
     },
-    result = "factory-1",
+    results = {
+      {type = "item", name = "factory-1", amount = 1}
+    },
     enabled = false
   },
   {
     type = "recipe",
     name = "nullius-factory-2",
+    localised_name = {"entity-name.factory-2"},
     category = "huge-crafting",
     always_show_made_in = true,
     energy_required = 60,
     ingredients = {
-      {"factory-1", 3},
-      {"concrete", 800},
-      {"nullius-refractory-brick", 500},
-      {"nullius-steel-beam", 200},
-      {"nullius-red-wire", 40}
+      {type = "item", name = "factory-1", amount = 3},
+      {type = "item", name = "concrete", amount = 800},
+      {type = "item", name = "nullius-refractory-brick", amount = 500},
+      {type = "item", name = "nullius-steel-beam", amount = 200},
+      {type = "item", name = "nullius-red-wire", amount = 40}
     },
-    result = "factory-2",
+    results = {
+      {type = "item", name = "factory-2", amount = 1}
+    },
     enabled = false
   },
   {
     type = "recipe",
     name = "nullius-factory-3",
+    localised_name = {"entity-name.factory-3"},
     category = "huge-crafting",
     always_show_made_in = true,
     energy_required = 90,
     ingredients = {
-      {"factory-2", 3},
-      {"stone-wall", 150},
-      {"gate", 15},
-      {"nullius-grid-battery-1", 8},
-      {"radar", 1}
+      {type = "item", name = "factory-2", amount = 3},
+      {type = "item", name = "stone-wall", amount = 150},
+      {type = "item", name = "gate", amount = 15},
+      {type = "item", name = "nullius-grid-battery-1", amount = 8},
+      {type = "item", name = "radar", amount = 1}
     },
-    result = "factory-3",
+    results = {
+      {type = "item", name = "factory-3", amount = 1}
+    },
     enabled = false
   }
 })
@@ -184,14 +193,17 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-factory-circuit-connector",
+    localised_name = {"entity-name.factory-circuit-connector"},
     category = "small-crafting",
     always_show_made_in = true,
     energy_required = 2,
     ingredients = {
-      {"nullius-green-wire", 3},
-      {"arithmetic-combinator", 1}
+      {type = "item", name = "nullius-green-wire", amount = 3},
+      {type = "item", name = "arithmetic-combinator", amount = 1}
     },
-    result = "factory-circuit-connector",
+    results = {
+      {type = "item", name = "factory-circuit-connector", amount = 1}
+    },
     enabled = false
   }
 })
@@ -200,65 +212,80 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-factory-requester-chest",
+    localised_name = {"entity-name.factory-requester-chest"},
     category = "medium-crafting",
     always_show_made_in = true,
     energy_required = 10,
     ingredients = {
-      {"nullius-small-demand-chest-1", 4}
+      {type = "item", name = "nullius-small-demand-chest-1", amount = 4}
     },
-    result = "factory-requester-chest",
+    results = {
+      {type = "item", name = "factory-requester-chest", amount = 1}
+    },
     enabled = false
   },
   {
     type = "recipe",
     name = "nullius-factory-input-pipe",
+    localised_name = {"entity-name.factory-input-pipe"},
     category = "medium-crafting",
     always_show_made_in = true,
     energy_required = 2,
     ingredients = {
-      {"nullius-underground-pipe-2", 1},
-      {"nullius-pipe-2", 4}
+      {type = "item", name = "nullius-underground-pipe-2", amount = 1},
+      {type = "item", name = "nullius-pipe-2", amount = 4}
     },
-    result = "factory-input-pipe",
+    results = {
+      {type = "item", name = "factory-input-pipe", amount = 1}
+    },
     enabled = false
   },
   {
     type = "recipe",
     name = "nullius-factory-output-pipe",
+    localised_name = {"entity-name.factory-output-pipe"},
     category = "medium-crafting",
     always_show_made_in = true,
     energy_required = 0.5,
     no_productivity = true,
     ingredients = {
-      {"factory-input-pipe", 1}
+      {type = "item", name = "factory-input-pipe", amount = 1}
     },
-    result = "factory-output-pipe",
+    results = {
+      {type = "item", name = "factory-output-pipe", amount = 1}
+    },
     enabled = false
   },
   {
     type = "recipe",
     name = "nullius-factory-circuit-input",
+    localised_name = {"entity-name.factory-circuit-input"},
     category = "small-crafting",
     always_show_made_in = true,
     energy_required = 2,
     ingredients = {
-      {"nullius-green-wire", 3},
-      {"arithmetic-combinator", 1}
+      {type = "item", name = "nullius-green-wire", amount = 3},
+      {type = "item", name = "arithmetic-combinator", amount = 1}
     },
-    result = "factory-circuit-input",
+    results = {
+      {type = "item", name = "factory-circuit-input", amount = 1}
+    },
     enabled = false
   },
   {
     type = "recipe",
     name = "nullius-factory-circuit-output",
+    localised_name = {"entity-name.factory-circuit-output"},
     category = "small-crafting",
     always_show_made_in = true,
     no_productivity = true,
     energy_required = 0.5,
     ingredients = {
-      {"factory-circuit-input", 1}
+      {type = "item", name = "factory-circuit-input", amount = 1}
     },
-    result = "factory-circuit-output",
+    results = {
+      {type = "item", name = "factory-circuit-output", amount = 1}
+    },
     enabled = false
   }
 })
