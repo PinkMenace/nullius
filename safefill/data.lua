@@ -93,6 +93,14 @@ function create_waterfill(suffix, tilename, suborder, active, layer)
     cond = "water_layer_"..layer
 	  tile.collision_mask.layers[cond] = true
   end
+  
+  local minableWater = nil
+  if settings.startup["safefill-minable-water"].value then
+    minableWater = {
+      mining_time = 1,
+      result = safename
+    }
+  end
 
   data:extend({
     {
@@ -114,7 +122,7 @@ function create_waterfill(suffix, tilename, suborder, active, layer)
     {
       type = "tile",
       name = safename,
-	  localised_name = localised,
+	    localised_name = localised,
       order = "c[watersafefill]-"..tilename,
       collision_mask = {layers = {ground_tile = true}},
       layer = data.raw.tile[tilename].layer,
@@ -123,12 +131,14 @@ function create_waterfill(suffix, tilename, suborder, active, layer)
         empty_transitions = true
       },
       map_color = data.raw.tile[tilename].map_color,
-	  pollution_absorption_per_second = data.raw.tile[tilename].pollution_absorption_per_second
+      minable = minableWater,
+	    pollution_absorption_per_second = data.raw.tile[tilename].pollution_absorption_per_second
     },
-	recipe
+	  recipe
   })
 
   tile.placeable_by = {item = safename, count = 1}
+  tile.minable = minableWater
 end
 
 
