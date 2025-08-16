@@ -145,25 +145,25 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = BASEENTITY .. "electric-furnace/electric-furnace.png",
-            priority = "high",
-            width = 129,
-            height = 100,
-            frame_count = 1,
-            shift = {0.2813, 0},
-            scale = 0.6666,
-            tint = {0.7, 0.7, 0.85}
+              filename = BASEENTITY .. "electric-furnace/electric-furnace.png",
+              priority = "high",
+              width = 239,
+              height = 219,
+              frame_count = 1,
+              shift = util.by_pixel(0.75, 5.75),
+              scale = 0.5*0.6666,
+              tint = {0.7, 0.7, 0.85}
           },
           {
-            filename = BASEENTITY .. "electric-furnace/electric-furnace-shadow.png",
-            priority = "high",
-            width = 129,
-            height = 100,
-            frame_count = 1,
-            shift = {0.2813, 0},
-            draw_as_shadow = true,
-            scale = 0.6666
-          }
+              filename = BASEENTITY .. "electric-furnace/electric-furnace-shadow.png",
+              priority = "high",
+              width = 227,
+              height = 171,
+              frame_count = 1,
+              draw_as_shadow = true,
+              shift = util.by_pixel(11.25, 7.75),
+              scale = 0.5*0.6666
+          },
         }
       },
   
@@ -171,26 +171,27 @@ data:extend({
         {
           fadeout = true,
           animation = {
-            draw_as_light = true,
             layers = {
               {
                 filename = BASEENTITY .. "electric-furnace/electric-furnace-heater.png",
                 priority = "high",
-                width = 25,
-                height = 15,
+                width = 60,
+                height = 56,
                 frame_count = 12,
                 animation_speed = 0.5,
-                shift = {0.01042, 0.5938},
-                scale = 0.6666
+                draw_as_glow = true,
+                shift = util.by_pixel(1.75*0.6666, 35*0.6666),
+                scale = 0.6666*0.5
               },
               {
                 filename = BASEENTITY .. "electric-furnace/electric-furnace-light.png",
                 blend_mode = "additive",
-                width = 104,
-                height = 102,
+                width = 202,
+                height = 202,
                 repeat_count = 12,
-                shift = util.by_pixel(0, 0),
-                scale = 0.6666
+                draw_as_glow = true,
+                util.by_pixel(1*0.6666, 0),
+                scale = 0.6666*0.5
               }
             }
           }
@@ -201,33 +202,34 @@ data:extend({
             draw_as_light = true,
             filename = BASEENTITY .. "electric-furnace/electric-furnace-ground-light.png",
             blend_mode = "additive",
-            width = 82,
-            height = 64,
-            shift = util.by_pixel(4*0.6666, 68*0.6666)
+            width = 166,
+            height = 124,
+            shift = util.by_pixel(3, 69),
+            scale = 0.5*0.6666,
           }
         },
         {
           animation = {
             filename = BASEENTITY .. "electric-furnace/electric-furnace-propeller-1.png",
             priority = "high",
-            width = 19,
-            height = 13,
+            width = 37,
+            height = 25,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = {-0.4479, -0.4271},
-            scale = 0.6666
+            shift = util.by_pixel(-20.5*0.6666, -16.5*0.6666),
+            scale = 0.6666*0.5
           }
         },
         {
           animation = {
             filename = BASEENTITY .. "electric-furnace/electric-furnace-propeller-2.png",
             priority = "high",
-            width = 12,
-            height = 9,
+            width = 23,
+            height = 15,
             frame_count = 4,
             animation_speed = 0.5,
-            shift = {0.041666, -0.8229},
-            scale = 0.6666
+            shift = util.by_pixel(4*0.6666, -34*0.6666),
+            scale = 0.6666*0.5
           }
         }
       }
@@ -320,7 +322,7 @@ data:extend({
           fadeout = true,
           effect = "flicker",
           animation = {
-              draw_as_light = true,
+              draw_as_glow = true,
               filename = BASEENTITY .. "steel-furnace/steel-furnace-fire.png",
               priority = "high",
               line_length = 8,
@@ -337,7 +339,7 @@ data:extend({
           effect = "flicker",
           animation = {
             filename = BASEENTITY .. "steel-furnace/steel-furnace-glow.png",
-            draw_as_light = true,
+            draw_as_glow = true,
             priority = "high",
             width = 60,
             height = 43,
@@ -352,7 +354,7 @@ data:extend({
           effect = "flicker",
           animation = {
             filename = BASEENTITY .. "steel-furnace/steel-furnace-working.png",
-            draw_as_light = true,
+            draw_as_glow = true,
             priority = "high",
             line_length = 1,
             width = 128,
@@ -363,7 +365,38 @@ data:extend({
             blend_mode = "additive",
             scale = 0.75
           }
-        }
+        },
+         {
+          fadeout = true,
+          effect = "flicker",
+          animation =
+          {
+            filename = BASEENTITY .. "steel-furnace/steel-furnace-ground-light.png",
+            priority = "high",
+            line_length = 1,
+            width = 152,
+            height = 126,
+            draw_as_light = true,
+            shift = util.by_pixel(1, 48),
+            blend_mode = "additive",
+            scale = 0.75,
+          },
+        },
+      },
+      water_reflection =
+      {
+        pictures =
+        {
+          filename = BASEENTITY .. "steel-furnace/steel-furnace-reflection.png",
+          priority = "extra-high",
+          width = 20,
+          height = 24,
+          shift = util.by_pixel(0, 45),
+          variation_count = 1,
+          scale = 75
+        },
+        rotate = false,
+        orientation_to_variation = false
       }
     }
   },
@@ -411,9 +444,7 @@ data:extend({
       emissions_per_minute = {pollution = 1},
       drain = "60kW"
     },
-    working_visualisations = data.raw["furnace"]["electric-furnace"].working_visualisations,
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
-    water_reflection = data.raw["furnace"]["electric-furnace"].water_reflection,
     impact_category = "metal",
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
@@ -442,7 +473,9 @@ data:extend({
               scale = 0.5
           }
         }
-      }
+      },
+      working_visualisations = data.raw["furnace"]["electric-furnace"].graphics_set.working_visualisations,
+      water_reflection = data.raw["furnace"]["electric-furnace"].graphics_set.water_reflection,
     }
   },
 
@@ -470,13 +503,13 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {0.5, 1}, direction = defines.direction.south }}
+        pipe_connections = {{ flow_direction ="input", position = {0.5, 1.4}, direction = defines.direction.south }}
       },
       {
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-0.5, -1}, direction = defines.direction.north }}
+        pipe_connections = {{ flow_direction ="output", position = {-0.5, -1.4}, direction = defines.direction.north }}
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -527,7 +560,7 @@ data:extend({
             layers = {
               {
                 filename = BASEENTITY .. "electric-furnace/electric-furnace-heater.png",
-                draw_as_light = true,
+                draw_as_glow = true,
                 priority = "high",
                 width = 60,
                 height = 56,
@@ -543,21 +576,21 @@ data:extend({
                 height = 202,
                 repeat_count = 12,
                 shift = util.by_pixel(1.333, 0),
-                scale = 0.6666
+                scale = 0.6666,
+                draw_as_glow = true,
               }
             }
           }
         },
         {
-          draw_as_sprite = false,
           fadeout = true,
           animation = {
             filename = BASEENTITY .. "electric-furnace/electric-furnace-ground-light.png",
-            draw_as_light = true,
             blend_mode = "additive",
             width = 166,
             height = 124,
             shift = util.by_pixel(4, 92),
+            draw_as_light = true,
             scale = 0.6666
           },
         },
@@ -585,22 +618,21 @@ data:extend({
             scale = 0.6666
           }
         }
+      },
+      water_reflection = {
+        pictures = {
+          filename = BASEENTITY .. "electric-furnace/electric-furnace-reflection.png",
+          priority = "extra-high",
+          width = 24,
+          height = 24,
+          shift = util.by_pixel(6.666, 53.333),
+          variation_count = 1,
+          scale = 6.6666,
+        },
+        rotate = false,
+        orientation_to_variation = false
       }
     },
-
-    water_reflection = {
-      pictures = {
-        filename = BASEENTITY .. "electric-furnace/electric-furnace-reflection.png",
-        priority = "extra-high",
-        width = 24,
-        height = 24,
-        shift = util.by_pixel(6.666, 53.333),
-        variation_count = 1,
-        scale = 6.6666,
-      },
-      rotate = false,
-      orientation_to_variation = false
-    }
   }
 })
 
@@ -637,7 +669,6 @@ data:extend({
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     graphics_set = data.raw["furnace"]["electric-furnace"].graphics_set,
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
-    water_reflection = data.raw["furnace"]["electric-furnace"].water_reflection,
     impact_category = "metal",
   },
 
@@ -671,8 +702,6 @@ data:extend({
     },
     impact_category = "metal",
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
-    working_visualisations = data.raw["assembling-machine"]["nullius-large-furnace-1"].working_visualisations,
-    water_reflection = data.raw["assembling-machine"]["nullius-large-furnace-1"].water_reflection,
     module_slots = 3,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 
@@ -699,7 +728,9 @@ data:extend({
             scale = 0.6666
           }
         }
-      }
+      },
+      working_visualisations = data.raw["assembling-machine"]["nullius-large-furnace-1"].graphics_set.working_visualisations,
+      water_reflection = data.raw["assembling-machine"]["nullius-large-furnace-1"].graphics_set.water_reflection,
     }
   },
 
