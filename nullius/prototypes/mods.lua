@@ -40,7 +40,9 @@ data:extend({
       {type = "item", name = "arithmetic-combinator", amount = 2},
       {type = "item", name = "nullius-green-wire", amount = 4}
     },
-    result = "logistic-train-stop"
+    results = {
+		  {type = "item", name = "logistic-train-stop", amount = 1}
+	  }
   }
 })
 end
@@ -59,7 +61,9 @@ if mods["LTN_Combinator_Modernized"] then
         {type = "item", name = "constant-combinator", amount = 1},
         {type = "item", name = "decider-combinator", amount = 1}
       },
-      result = "ltn-combinator"
+      results = {
+		  	{type = "item", name = "ltn-combinator", amount = 1}
+		  }
     }
   })
   if mods["LogisticTrainNetwork"] then
@@ -84,7 +88,9 @@ data:extend({
       {type = "item", name = "nullius-beacon-1", amount = 1},
       {type = "item", name = "nullius-relay-1", amount = 2}
     },
-    result = "aai-signal-sender",
+    results = {
+			{type = "item", name = "aai-signal-sender", amount = 1}
+		},
     enabled = false
   },
   {
@@ -97,7 +103,9 @@ data:extend({
       {type = "item", name = "radar", amount = 1},
       {type = "item", name = "programmable-speaker", amount = 2}
     },
-    result = "aai-signal-receiver",
+    results = {
+			{type = "item", name = "aai-signal-receiver", amount = 1}
+		},
     enabled = false
   },
 
@@ -382,7 +390,9 @@ data:extend({
       {type="item", name="wooden-chest", amount=1},
       {type="item", name="underground-belt", amount=1}
     },
-    result = "chute-miniloader"
+    results = {
+			{type = "item", name = "chute-miniloader", amount = 1}
+		}
   }
 })
 end
@@ -408,7 +418,9 @@ data:extend({
       {type="item", name="underground-belt", amount=1},
       {type="item", name="inserter", amount=4}
     },
-    result = "miniloader"
+    results = {
+			{type = "item", name = "miniloader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -423,7 +435,9 @@ data:extend({
       {type="item", name="fast-underground-belt", amount=2},
       {type="item", name="turbo-inserter", amount=3}
     },
-    result = "fast-miniloader"
+    results = {
+			{type = "item", name = "fast-miniloader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -438,7 +452,9 @@ data:extend({
       {type="item", name="express-underground-belt", amount=1},
       {type="item", name="stack-inserter", amount=2}
     },
-    result = "express-miniloader"
+    results = {
+			{type = "item", name = "express-miniloader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -453,7 +469,9 @@ data:extend({
       {type="item", name="ultimate-underground-belt", amount=1},
       {type="item", name="express-stack-inserter", amount=2}
     },
-    result = "ultimate-miniloader"
+    results = {
+			{type = "item", name = "ultimate-miniloader", amount = 1}
+		}
   }
 })
 end
@@ -478,7 +496,9 @@ data:extend({
       {type="item", name="fast-underground-belt", amount=2},
       {type="item", name="turbo-filter-inserter", amount=3}
     },
-    result = "fast-filter-miniloader"
+    results = {
+			{type = "item", name = "fast-filter-miniloader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -493,7 +513,9 @@ data:extend({
       {type="item", name="express-underground-belt", amount=1},
       {type="item", name="stack-filter-inserter", amount=2}
     },
-    result = "express-filter-miniloader"
+    results = {
+			{type = "item", name = "express-filter-miniloader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -508,7 +530,9 @@ data:extend({
       {type="item", name="ultimate-underground-belt", amount=1},
       {type="item", name="express-stack-filter-inserter", amount=2}
     },
-    result = "ultimate-filter-miniloader"
+    results = {
+			{type = "item", name = "ultimate-filter-miniloader", amount = 1}
+		}
   }
 })
 end
@@ -615,7 +639,9 @@ data:extend({
       {type="item", name="wooden-chest", amount=1},
       {type="item", name="underground-belt", amount=1}
     },
-    result = "aai-basic-loader"
+    results = {
+			{type = "item", name = "aai-basic-loader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -630,7 +656,9 @@ data:extend({
       {type="item", name="inserter", amount=4},
 	  {type="fluid", name="nullius-lubricant", amount=30},
     },
-    result = "aai-loader"
+    results = {
+			{type = "item", name = "aai-loader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -645,7 +673,9 @@ data:extend({
       {type="item", name="fast-underground-belt", amount=2},
       {type="item", name="turbo-inserter", amount=3}
     },
-    result = "aai-fast-loader"
+    results = {
+			{type = "item", name = "aai-fast-loader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -660,7 +690,9 @@ data:extend({
       {type="item", name="express-underground-belt", amount=1},
       {type="item", name="stack-inserter", amount=2}
     },
-    result = "aai-express-loader"
+    results = {
+			{type = "item", name = "aai-express-loader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -675,7 +707,9 @@ data:extend({
       {type="item", name="ultimate-underground-belt", amount=1},
       {type="item", name="express-stack-inserter", amount=2}
     },
-    result = "aai-ultimate-loader"
+    results = {
+			{type = "item", name = "aai-ultimate-loader", amount = 1}
+		}
   }
 })
 end
@@ -694,7 +728,9 @@ data:extend({
         {type = "item", name = "small-lamp", amount = 1},
         {type = "item", name = "train-config", amount = 2}
     },
-    result = "train-publisher"
+    results = {
+			{type = "item", name = "train-publisher", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -708,7 +744,9 @@ data:extend({
       {type = "item", name = "train-publisher", amount = 1},
       {type = "item", name = "nullius-small-supply-chest-1", amount = 1}
     },
-    result = "subscriber-train-stop"
+    results = {
+			{type = "item", name = "subscriber-train-stop", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -722,7 +760,9 @@ data:extend({
       {type = "item", name = "train-publisher", amount = 1},
       {type = "item", name = "nullius-small-demand-chest-1", amount = 1}
     },
-    result = "publisher-train-stop"
+    results = {
+			{type = "item", name = "publisher-train-stop", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -735,7 +775,9 @@ data:extend({
         {type = "item", name = "constant-combinator", amount = 1},
         {type = "item", name = "arithmetic-combinator", amount = 1}
     },
-    result = "train-config"
+    results = {
+			{type = "item", name = "train-config", amount = 1}
+		}
   }
 })
 end
@@ -757,7 +799,9 @@ data:extend({
       {type = "item", name = "nullius-box-underground-pipe-4", amount = 5},
       {type = "item", name = "nullius-grid-battery-2", amount = 6}
     },
-    result = "teleporter"
+    results = {
+			{type = "item", name = "teleporter", amount = 1}
+		}
   }
 })
 end
@@ -880,7 +924,9 @@ data:extend({
       {type = "item", name = "nullius-turbine-open-1", amount = 2},
       {type = "item", name = "nullius-aluminum-plate", amount = 6}
     },
-    result = "jetpack-1"
+    results = {
+			{type = "item", name = "jetpack-1", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -897,7 +943,9 @@ data:extend({
       {type = "item", name = "nullius-turbine-open-2", amount = 2},
       {type = "item", name = "nullius-ceramic-powder", amount = 8}
     },
-    result = "jetpack-2"
+    results = {
+			{type = "item", name = "jetpack-2", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -914,7 +962,9 @@ data:extend({
       {type = "item", name = "nullius-turbine-open-3", amount = 2},
       {type = "item", name = "nullius-titanium-plate", amount = 10}
     },
-    result = "jetpack-3"
+    results = {
+			{type = "item", name = "jetpack-3", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -929,7 +979,9 @@ data:extend({
       {type = "item", name = "nullius-haste-module-4", amount = 2},
       {type = "item", name = "nullius-missile-launcher", amount = 4}
     },
-    result = "jetpack-4"
+    results = {
+			{type = "item", name = "jetpack-4", amount = 1}
+		}
   }
 })
 end
@@ -1447,7 +1499,9 @@ data:extend({
       {type = "item", name = "nullius-steel-beam", amount = 6},
       {type = "item", name = "nullius-glass", amount = 4}
     },
-    result = "storehouse-basic"
+    results = {
+			{type = "item", name = "storehouse-basic", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1462,7 +1516,9 @@ data:extend({
       {type = "item", name = "nullius-mortar", amount = 10},
       {type = "item", name = "concrete", amount = 20}
     },
-    result = "warehouse-basic"
+    results = {
+			{type = "item", name = "warehouse-basic", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1475,7 +1531,9 @@ data:extend({
       {type = "item", name = "storehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-storage-chest-1", amount = 1}
     },
-    result = "storehouse-storage"
+    results = {
+			{type = "item", name = "storehouse-storage", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1488,7 +1546,9 @@ data:extend({
       {type = "item", name = "warehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-storage-chest-1", amount = 2}
     },
-    result = "warehouse-storage"
+    results = {
+			{type = "item", name = "warehouse-storage", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1501,7 +1561,9 @@ data:extend({
       {type = "item", name = "storehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-supply-chest-1", amount = 1}
     },
-    result = "storehouse-passive-provider"
+    results = {
+			{type = "item", name = "storehouse-passive-provider", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1514,7 +1576,9 @@ data:extend({
       {type = "item", name = "warehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-supply-chest-1", amount = 2}
     },
-    result = "warehouse-passive-provider"
+    results = {
+			{type = "item", name = "warehouse-passive-provider", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1527,7 +1591,9 @@ data:extend({
       {type = "item", name = "storehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-demand-chest-1", amount = 1}
     },
-    result = "storehouse-requester"
+    results = {
+			{type = "item", name = "storehouse-requester", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1540,7 +1606,9 @@ data:extend({
       {type = "item", name = "warehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-demand-chest-1", amount = 2}
     },
-    result = "warehouse-requester"
+    results = {
+			{type = "item", name = "warehouse-requester", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1553,7 +1621,9 @@ data:extend({
       {type = "item", name = "storehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-buffer-chest-1", amount = 1}
     },
-    result = "storehouse-buffer"
+    results = {
+			{type = "item", name = "storehouse-buffer", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1566,7 +1636,9 @@ data:extend({
       {type = "item", name = "warehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-buffer-chest-1", amount = 2}
     },
-    result = "warehouse-buffer"
+    results = {
+			{type = "item", name = "warehouse-buffer", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1579,7 +1651,9 @@ data:extend({
       {type = "item", name = "storehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-dispatch-chest-1", amount = 1}
     },
-    result = "storehouse-active-provider"
+    results = {
+			{type = "item", name = "storehouse-active-provider", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1592,7 +1666,9 @@ data:extend({
       {type = "item", name = "warehouse-basic", amount = 1},
       {type = "item", name = "nullius-large-dispatch-chest-1", amount = 2}
     },
-    result = "warehouse-active-provider"
+    results = {
+			{type = "item", name = "warehouse-active-provider", amount = 1}
+		}
   }
 })
 end
@@ -1760,7 +1836,9 @@ data:extend({
       {type = "item", name = "nullius-small-demand-chest-1", amount = 1},
       {type = "item", name = "nullius-relay-2", amount = 1}
     },
-    result = "logistic-chest-botUpgrader"
+    results = {
+			{type = "item", name = "logistic-chest-botUpgrader", amount = 1}
+		}
   }
 })
 end
@@ -1780,7 +1858,9 @@ data:extend({
       {type = "item", name = "train-stop", amount = 1},
       {type = "item", name = "rail-chain-signal", amount = 1}
     },
-    result = "fuel-train-stop"
+    results = {
+			{type = "item", name = "fuel-train-stop", amount = 1}
+		}
   }
 })
 end
@@ -1838,7 +1918,9 @@ data:extend({
       {type = "item", name = "nullius-android-2", amount = 1},
       {type = "item", name = "nullius-asteroid-miner-2", amount = 1}
     },
-    result = "companion"
+    results = {
+			{type = "item", name = "companion", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1852,7 +1934,9 @@ data:extend({
       {type = "item", name = "nullius-battery-2", amount = 6},
 	  {type = "item", name = "nullius-antimatter", amount = 12}
     },
-    result = "companion-reactor-equipment"
+    results = {
+			{type = "item", name = "companion-reactor-equipment", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1865,7 +1949,9 @@ data:extend({
       {type = "item", name = "nullius-shield", amount = 1},
       {type = "item", name = "nullius-efficiency-module-3", amount = 1}
     },
-    result = "companion-shield-equipment"
+    results = {
+			{type = "item", name = "companion-shield-equipment", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1879,7 +1965,9 @@ data:extend({
       {type = "item", name = "nullius-hangar-3", amount = 1},
 	  {type = "item", name = "nullius-construction-bot-4", amount = 6}
     },
-    result = "companion-roboport-equipment"
+    results = {
+			{type = "item", name = "companion-roboport-equipment", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1892,7 +1980,9 @@ data:extend({
       {type = "item", name = "nullius-turret", amount = 5},
       {type = "item", name = "nullius-demolition-drone", amount = 1}
     },
-    result = "companion-defense-equipment"
+    results = {
+			{type = "item", name = "companion-defense-equipment", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1929,7 +2019,9 @@ data:extend({
       {type = "item", name = "nullius-large-chest-1", amount = 1},
 	  {type = "item", name = "nullius-small-assembler-1", amount = 1}
     },
-    result = "railway-motor-car-base"
+    results = {
+			{type = "item", name = "railway-motor-car-base", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -1943,7 +2035,9 @@ data:extend({
       {type = "item", name = "nullius-solar-locomotive", amount = 1},
       {type = "item", name = "nullius-small-assembler-3", amount = 1}
     },
-    result = "railway-motor-car-nuclear"
+    results = {
+			{type = "item", name = "railway-motor-car-nuclear", amount = 1}
+		}
   }
 })
 end
@@ -1962,7 +2056,9 @@ data:extend({
       {type = "item", name = "nullius-sensor-1", amount = 1},
       {type = "item", name = "nullius-green-wire", amount = 3}
     },
-    result = "item-sensor"
+    results = {
+			{type = "item", name = "item-sensor", amount = 1}
+		}
   }
 })
 end
@@ -1981,7 +2077,9 @@ if (mods["crafting_combinator"] or mods["crafting_combinator_xeraph"]) then
         {type = "item", name = "constant-combinator", amount = 1},
         {type = "item", name = "nullius-red-wire", amount = 1}
       },
-      result = "crafting_combinator:crafting-combinator"
+      results = {
+			{type = "item", name = "crafting_combinator:crafting-combinator", amount = 1}
+		}
     },
     {
       type = "recipe",
@@ -1994,7 +2092,9 @@ if (mods["crafting_combinator"] or mods["crafting_combinator_xeraph"]) then
         {type = "item", name = "arithmetic-combinator", amount = 1},
         {type = "item", name = "nullius-red-wire", amount = 2}
       },
-      result = "crafting_combinator:recipe-combinator"
+      results = {
+			{type = "item", name = "crafting_combinator:recipe-combinator", amount = 1}
+		}
     }
   })
 end
@@ -2015,7 +2115,9 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
         {type = "item", name = "nullius-aluminum-wire", amount = 3},
         {type = "item", name = "nullius-glass", amount = 4}
       },
-      result = "SNTD-old-nixie-tube"
+      results = {
+			{type = "item", name = "SNTD-old-nixie-tube", amount = 1}
+		}
     },    
     {
       type = "recipe",
@@ -2028,7 +2130,9 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
         {type = "item", name = "SNTD-old-nixie-tube", amount = 1},
         {type = "item", name = "nullius-large-chest-1", amount = 1}
       },
-      result = "SNTD-nixie-tube"
+      results = {
+			{type = "item", name = "SNTD-nixie-tube", amount = 1}
+		}
     },
     {
       type = "recipe",
@@ -2042,7 +2146,9 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
 		{type = "item", name = "nullius-green-wire", amount = 2},
         {type = "item", name = "iron-chest", amount = 1}
       },
-      result = "SNTD-nixie-tube-small"
+      results = {
+			{type = "item", name = "SNTD-nixie-tube-small", amount = 1}
+		}
     },
     {
       type = "technology",
@@ -2113,7 +2219,9 @@ data:extend({
       {type = "item", name = "nullius-aluminum-plate", amount = 1},
 	  {type = "item", name = "nullius-glass", amount = 2}
     },
-    result = "hs_holo_sign"
+    results = {
+			{type = "item", name = "hs_holo_sign", amount = 1}
+		}
   },
   {
     type = "technology",
@@ -2154,7 +2262,9 @@ data:extend({
       {type = "item", name = "radar", amount = 1},
       {type = "item", name = "nullius-robot-frame-1", amount = 1}
     },
-    result = "shuttle-lite"
+    results = {
+			{type = "item", name = "shuttle-lite", amount = 1}
+		}
   }
 })
 end
@@ -2457,7 +2567,9 @@ data:extend({
 	  {type = "item", name = "express-underground-belt", amount = 6},
 	  {type = "item", name = "nullius-steel-beam", amount = 16}
     },
-    result = "railloader"
+    results = {
+			{type = "item", name = "railloader", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2474,7 +2586,9 @@ data:extend({
 	  {type = "item", name = "express-underground-belt", amount = 6},
 	  {type = "item", name = "concrete", amount = 36}
     },
-    result = "railunloader"
+    results = {
+			{type = "item", name = "railunloader", amount = 1}
+		}
   },
   {
     type = "technology",
@@ -2535,7 +2649,9 @@ data:extend({
       {type = "item", name = "inserter", amount = 2},
       {type = "item", name = "nullius-motor-1", amount = 1}
     },
-    result = "inserter"
+    results = {
+			{type = "item", name = "inserter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2550,7 +2666,9 @@ data:extend({
       {type = "item", name = "turbo-inserter", amount = 1},
 	  {type = "item", name = "nullius-motor-2", amount = 1}
     },
-    result = "turbo-inserter"
+    results = {
+			{type = "item", name = "turbo-inserter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2565,7 +2683,9 @@ data:extend({
       {type = "item", name = "turbo-filter-inserter", amount = 1},
 	  {type = "item", name = "nullius-motor-2", amount = 1}
     },
-    result = "turbo-filter-inserter"
+    results = {
+			{type = "item", name = "turbo-filter-inserter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2579,7 +2699,9 @@ data:extend({
       {type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
       {type = "item", name = "stack-inserter", amount = 2}
     },
-    result = "stack-inserter"
+    results = {
+			{type = "item", name = "stack-inserter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2593,7 +2715,9 @@ data:extend({
       {type = "item", name = "RTThrower-turbo-filter-inserter-Item", amount = 1},
       {type = "item", name = "stack-filter-inserter", amount = 2}
     },
-    result = "stack-filter-inserter"
+    results = {
+			{type = "item", name = "stack-filter-inserter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2607,7 +2731,9 @@ data:extend({
       {type = "item", name = "RTThrower-stack-inserter-Item", amount = 1},
       {type = "item", name = "express-stack-inserter", amount = 2}
     },
-    result = "express-stack-inserter"
+    results = {
+			{type = "item", name = "express-stack-inserter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2621,7 +2747,9 @@ data:extend({
       {type = "item", name = "RTThrower-stack-filter-inserter-Item", amount = 1},
       {type = "item", name = "express-stack-filter-inserter", amount = 2}
     },
-    result = "express-stack-filter-inserter"
+    results = {
+			{type = "item", name = "express-stack-filter-inserter", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2634,7 +2762,9 @@ data:extend({
     ingredients = {
       {type = "item", name = "wooden-chest", amount = 1}
     },
-    result = "OpenContainerItem"
+    results = {
+			{type = "item", name = "OpenContainerItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2650,7 +2780,9 @@ data:extend({
     ingredients = {
       {type = "item", name = "OpenContainerItem", amount = 1}
     },
-    result = "wooden-chest"
+    results = {
+			{type = "item", name = "wooden-chest", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2664,7 +2796,9 @@ data:extend({
 	  {type = "item", name = "nullius-priority-valve", amount = 1},
       {type = "item", name = "nullius-steel-rod", amount = 1}
     },
-    result = "HatchRTItem"
+    results = {
+			{type = "item", name = "HatchRTItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2678,7 +2812,9 @@ data:extend({
 	  {type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
       {type = "item", name = "fast-underground-belt", amount = 1}
     },
-    result = "RTThrower-EjectorHatchRTItem"
+    results = {
+			{type = "item", name = "RTThrower-EjectorHatchRTItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2691,7 +2827,9 @@ data:extend({
       {type="item", name="RTThrower-inserter-Item", amount=1},
       {type="item", name="nullius-steel-plate", amount=2}
     },
-    result = "PlayerLauncherItem"
+    results = {
+			{type = "item", name = "PlayerLauncherItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2705,7 +2843,9 @@ data:extend({
       {type = "item", name = "nullius-iron-wire", amount = 3},
 	  {type = "item", name = "nullius-steel-rod", amount = 2}
     },
-    result = "BouncePlateItem"
+    results = {
+			{type = "item", name = "BouncePlateItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2718,7 +2858,9 @@ data:extend({
       {type = "item", name = "BouncePlateItem", amount = 1},
       {type = "item", name = "stone-brick", amount = 6}
     },
-    result = "DirectedBouncePlateItem"
+    results = {
+			{type = "item", name = "DirectedBouncePlateItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2731,7 +2873,9 @@ data:extend({
       {type = "item", name = "BouncePlateItem", amount = 1},
 	  {type = "item", name = "constant-combinator", amount = 1}
     },
-    result = "SignalBouncePlateItem"
+    results = {
+			{type = "item", name = "SignalBouncePlateItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2746,7 +2890,9 @@ data:extend({
       {type = "item", name = "nullius-iron-gear", amount = 3},
 	  {type = "item", name = "nullius-sensor-1", amount = 1}
     },
-    result = "DirectorBouncePlateItem"
+    results = {
+			{type = "item", name = "DirectorBouncePlateItem", amount = 1}
+		}
   }
 })
 end
@@ -2770,7 +2916,9 @@ data:extend({
       {type = "item", name = "nullius-locomotive-1", amount = 1},
 	  {type = "item", name = "nullius-iron-wire", amount = 2}
     },
-    result = "RTZiplineItem"
+    results = {
+			{type = "item", name = "RTZiplineItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2784,7 +2932,9 @@ data:extend({
 	  {type = "item", name = "nullius-motor-2", amount = 3},
 	  {type = "item", name = "nullius-steel-cable", amount = 10}
     },
-    result = "RTZiplineItem2"
+    results = {
+			{type = "item", name = "RTZiplineItem2", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2799,7 +2949,9 @@ data:extend({
 	  {type = "item", name = "nullius-textile", amount = 8},
 	  {type = "item", name = "nullius-speed-module-2", amount = 1}
     },
-    result = "RTZiplineItem3"
+    results = {
+			{type = "item", name = "RTZiplineItem3", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2815,7 +2967,9 @@ data:extend({
 	  {type = "item", name = "nullius-bearing", amount = 12},
 	  {type = "item", name = "nullius-levitation-field-1", amount = 2}
     },
-    result = "RTZiplineItem4"
+    results = {
+			{type = "item", name = "RTZiplineItem4", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2831,7 +2985,9 @@ data:extend({
 	  {type = "item", name = "nullius-speed-module-3", amount = 3},
 	  {type = "item", name = "nullius-stabilizer-1", amount = 2}
     },
-    result = "RTZiplineItem5"
+    results = {
+			{type = "item", name = "RTZiplineItem5", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2844,7 +3000,9 @@ data:extend({
       {type = "item", name = "power-switch", amount = 1},
 	  {type = "item", name = "decider-combinator", amount = 1}
     },
-    result = "RTZiplineControlsItem"
+    results = {
+			{type = "item", name = "RTZiplineControlsItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2858,7 +3016,9 @@ data:extend({
 	  {type = "item", name = "nullius-steel-rod", amount = 1},
 	  {type = "item", name = "nullius-steel-gear", amount = 2}
     },
-    result = "RTZiplineCrankControlsItem"
+    results = {
+			{type = "item", name = "RTZiplineCrankControlsItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2873,7 +3033,9 @@ data:extend({
 	  {type = "item", name = "programmable-speaker", amount = 1},
 	  {type = "item", name = "nullius-sensor-1", amount = 1}
     },
-    result = "RTProgrammableZiplineControlsItem"
+    results = {
+			{type = "item", name = "RTProgrammableZiplineControlsItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2888,7 +3050,9 @@ data:extend({
 	  {type = "item", name = "nullius-steel-cable", amount = 12},
 	  {type = "item", name = "big-electric-pole", amount = 1}
     },
-    result = "RTZiplineTerminalItem"
+    results = {
+			{type = "item", name = "RTZiplineTerminalItem", amount = 1}
+		}
   }
 })
 end
@@ -2913,7 +3077,9 @@ data:extend({
 	  {type = "item", name = "concrete", amount = 25},
 	  {type = "item", name = "nullius-steel-beam", amount = 4}
     },
-    result = "RTTrainRampItem"
+    results = {
+			{type = "item", name = "RTTrainRampItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2928,7 +3094,9 @@ data:extend({
 	  {type = "item", name = "nullius-beacon-2", amount = 1},
 	  {type = "item", name = "nullius-levitation-field-1", amount = 4}
     },
-    result = "RTMagnetTrainRampItem"
+    results = {
+			{type = "item", name = "RTMagnetTrainRampItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2943,7 +3111,9 @@ data:extend({
 	  {type = "item", name = "nullius-steel-plate", amount = 12},
 	  {type = "item", name = "RTTrainDirectedBouncePlateItem", amount = 1}
     },
-    result = "RTImpactUnloaderItem"
+    results = {
+			{type = "item", name = "RTImpactUnloaderItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2958,7 +3128,9 @@ data:extend({
 	  {type = "item", name = "nullius-steel-gear", amount = 4},
 	  {type = "item", name = "nullius-steel-plate", amount = 10}
     },
-    result = "RTImpactWagonItem"
+    results = {
+			{type = "item", name = "RTImpactWagonItem", amount = 1}
+		}
   }
 })
 if settings.startup["RTThrowersSetting"].value then
@@ -2975,7 +3147,9 @@ data:extend({
       {type = "item", name = "nullius-textile", amount = 12},
 	  {type = "item", name = "nullius-steel-beam", amount = 4}
     },
-    result = "RTTrainBouncePlateItem"
+    results = {
+			{type = "item", name = "RTTrainBouncePlateItem", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -2988,7 +3162,9 @@ data:extend({
       {type = "item", name = "RTTrainBouncePlateItem", amount = 1},
       {type = "item", name = "RTTrainRampItem", amount = 1}
     },
-    result = "RTTrainDirectedBouncePlateItem"
+    results = {
+			{type = "item", name = "RTTrainDirectedBouncePlateItem", amount = 1}
+		}
   }
 })
 else
@@ -3487,7 +3663,9 @@ data:extend({
       {type = "item", name = "nullius-glass", amount = 1},
       {type = "item", name = "nullius-steel-sheet", amount = 2}
     },
-    result = "iron-display-small"
+    results = {
+			{type = "item", name = "iron-display-small", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3500,7 +3678,9 @@ data:extend({
       {type = "item", name = "iron-display-small", amount = 4},
 	  {type = "item", name = "small-lamp", amount = 1}
     },
-    result = "iron-display-medium"
+    results = {
+			{type = "item", name = "iron-display-medium", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3513,7 +3693,9 @@ data:extend({
       {type = "item", name = "iron-display-small", amount = 9},
 	  {type = "item", name = "small-lamp", amount = 4}
     },
-    result = "iron-display"
+    results = {
+			{type = "item", name = "iron-display", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3527,7 +3709,9 @@ data:extend({
       {type = "item", name = "nullius-glass", amount = 1},
       {type = "item", name = "nullius-aluminum-sheet", amount = 3}
     },
-    result = "steel-display-small"
+    results = {
+			{type = "item", name = "steel-display-small", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3540,7 +3724,9 @@ data:extend({
       {type = "item", name = "steel-display-small", amount = 4},
 	  {type = "item", name = "small-lamp", amount = 1}
     },
-    result = "steel-display-medium"
+    results = {
+			{type = "item", name = "steel-display-medium", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3553,7 +3739,9 @@ data:extend({
       {type = "item", name = "steel-display-small", amount = 9},
 	  {type = "item", name = "small-lamp", amount = 4}
     },
-    result = "steel-display"
+    results = {
+			{type = "item", name = "steel-display", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3567,7 +3755,9 @@ data:extend({
       {type = "item", name = "nullius-glass", amount = 1},
       {type = "item", name = "nullius-plastic", amount = 4}
     },
-    result = "copper-display-small"
+    results = {
+			{type = "item", name = "copper-display-small", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3580,7 +3770,9 @@ data:extend({
       {type = "item", name = "copper-display-small", amount = 4},
 	  {type = "item", name = "small-lamp", amount = 1}
     },
-    result = "copper-display-medium"
+    results = {
+			{type = "item", name = "copper-display-medium", amount = 1}
+		}
   },
   {
     type = "recipe",
@@ -3593,7 +3785,9 @@ data:extend({
       {type = "item", name = "copper-display-small", amount = 9},
 	  {type = "item", name = "small-lamp", amount = 4}
     },
-    result = "copper-display"
+    results = {
+			{type = "item", name = "copper-display", amount = 1}
+		}
   },
   {
     type = "technology",
@@ -3671,7 +3865,9 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
         {type = "item", name = "nullius-relay-1", amount = 1},
         {type = "item", name = "decider-combinator", amount = 6}
       },
-      result = "blueprint-deployer"
+      results = {
+			{type = "item", name = "blueprint-deployer", amount = 1}
+		}
     },
     {
       type = "recipe",
@@ -3685,7 +3881,9 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
 		{type = "item", name = "nullius-small-miner-2", amount = 1},
         {type = "item", name = "nullius-sensor-1", amount = 4}
       },
-      result = "recursive-blueprints-scanner"
+      results = {
+			{type = "item", name = "recursive-blueprints-scanner", amount = 1}
+		}
     }
   })
 end
@@ -3707,7 +3905,9 @@ if mods["ch-concentrated-solar"] then
 	    {type = "item", name = "nullius-motor-2", amount = 1},
 	    {type = "item", name = "nullius-bearing", amount = 1}
       },
-      result = "chcs-heliostat-mirror"
+      results = {
+			{type = "item", name = "chcs-heliostat-mirror", amount = 1}
+		}
     },
     {
       type = "recipe",
@@ -3724,7 +3924,9 @@ if mods["ch-concentrated-solar"] then
 	    {type = "item", name = "nullius-box-motor-2", amount = 1},
 	    {type = "item", name = "nullius-box-bearing", amount = 1}
       },
-      result = "nullius-box-heliostat-mirror"
+      results = {
+			{type = "item", name = "nullius-box-heliostat-mirror", amount = 1}
+		}
     },
     {
       type = "recipe",
@@ -3741,7 +3943,9 @@ if mods["ch-concentrated-solar"] then
 		{type = "item", name = "nullius-pump-2", amount = 8},
         {type = "item", name = "nullius-large-beacon-1", amount = 1}
       },
-      result = "chcs-solar-power-tower",
+      results = {
+			{type = "item", name = "chcs-solar-power-tower", amount = 1}
+		},
       requester_paste_multiplier = 2
     },
     {
@@ -3805,7 +4009,9 @@ if (mods["beautiful_bridge_railway"] or
 		{type = "item", name = "concrete", amount = 6},
 		{type = "item", name = "nullius-land-fill-gravel", amount = 1}
       },
-      result = "bbr-rail-iron"
+      results = {
+			{type = "item", name = "bbr-rail-iron", amount = 1}
+		}
     },
     {
       type = "recipe",
@@ -3821,7 +4027,9 @@ if (mods["beautiful_bridge_railway"] or
 		{type = "item", name = "concrete", amount = 1},
 		{type = "item", name = "nullius-land-fill-gravel", amount = 2}
       },
-      result = "bbr-rail-brick"
+      results = {
+			{type = "item", name = "bbr-rail-brick", amount = 1}
+		}
     },
     {
       type = "recipe",
@@ -3837,7 +4045,9 @@ if (mods["beautiful_bridge_railway"] or
 		{type = "item", name = "concrete", amount = 2},
 		{type = "item", name = "nullius-land-fill-gravel", amount = 1}
       },
-      result = "bbr-rail-wood"
+      results = {
+			{type = "item", name = "bbr-rail-wood", amount = 1}
+		}
     },
     {
       type = "technology",
@@ -4010,15 +4220,16 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 8,
       ingredients = {
         {type = "item", name = "nullius-locomotive-1", amount = 1},
-		{type = "item", name = "nullius-aluminum-plate", amount = 4}
+		    {type = "item", name = "nullius-aluminum-plate", amount = 4}
       },
-      result = "nullius-small-locomotive-1",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-locomotive-1", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4026,16 +4237,17 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 15,
       ingredients = {
         {type = "item", name = "nullius-locomotive-2", amount = 1},
-		{type = "item", name = "nullius-small-locomotive-1", amount = 2},
-		{type = "item", name = "nullius-titanium-plate", amount = 4}
+		    {type = "item", name = "nullius-small-locomotive-1", amount = 2},
+		    {type = "item", name = "nullius-titanium-plate", amount = 4}
       },
-      result = "nullius-small-locomotive-2",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-locomotive-2", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4043,15 +4255,16 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 30,
       ingredients = {
         {type = "item", name = "nullius-locomotive-3", amount = 1},
-		{type = "item", name = "nullius-small-locomotive-2", amount = 2}
+		    {type = "item", name = "nullius-small-locomotive-2", amount = 2}
       },
-      result = "nullius-small-locomotive-3",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-locomotive-3", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4059,15 +4272,16 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 30,
       ingredients = {
         {type = "item", name = "nullius-solar-locomotive", amount = 1},
-		{type = "item", name = "nullius-small-locomotive-2", amount = 2}
+		    {type = "item", name = "nullius-small-locomotive-2", amount = 2}
       },
-      result = "nullius-small-solar-locomotive",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-solar-locomotive", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4075,15 +4289,16 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 5,
       ingredients = {
         {type = "item", name = "nullius-cargo-wagon-1", amount = 1},
-		{type = "item", name = "nullius-aluminum-plate", amount = 4}
+		    {type = "item", name = "nullius-aluminum-plate", amount = 4}
       },
-      result = "nullius-small-cargo-wagon-1",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-cargo-wagon-1", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4091,16 +4306,17 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 10,
       ingredients = {
 	    {type = "item", name = "nullius-cargo-wagon-2", amount = 1},
-		{type = "item", name = "nullius-small-cargo-wagon-1", amount = 2},
-		{type = "item", name = "nullius-titanium-plate", amount = 4}
+		  {type = "item", name = "nullius-small-cargo-wagon-1", amount = 2},
+		  {type = "item", name = "nullius-titanium-plate", amount = 4}
       },
-      result = "nullius-small-cargo-wagon-2",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-cargo-wagon-2", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4108,15 +4324,16 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 20,
       ingredients = {
 	    {type = "item", name = "nullius-cargo-wagon-3", amount = 1},
-		{type = "item", name = "nullius-small-cargo-wagon-2", amount = 2}
+		  {type = "item", name = "nullius-small-cargo-wagon-2", amount = 2}
       },
-      result = "nullius-small-cargo-wagon-3",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-cargo-wagon-3", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4124,15 +4341,16 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 6,
       ingredients = {
         {type = "item", name = "nullius-fluid-wagon-1", amount = 1},
-		{type = "item", name = "nullius-aluminum-sheet", amount = 6}
+		    {type = "item", name = "nullius-aluminum-sheet", amount = 6}
       },
-      result = "nullius-small-fluid-wagon-1",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-fluid-wagon-1", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4140,16 +4358,17 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 12,
       ingredients = {
 	    {type = "item", name = "nullius-fluid-wagon-2", amount = 1},
-		{type = "item", name = "nullius-small-fluid-wagon-1", amount = 2},
-		{type = "item", name = "nullius-titanium-sheet", amount = 6}
+		  {type = "item", name = "nullius-small-fluid-wagon-1", amount = 2},
+		  {type = "item", name = "nullius-titanium-sheet", amount = 6}
       },
-      result = "nullius-small-fluid-wagon-2",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-fluid-wagon-2", amount = 2}
+		  },
     },
     {
       type = "recipe",
@@ -4157,15 +4376,16 @@ if mods["Mini_Trains"] then
       enabled = false,
       show_amount_in_title = false,
       always_show_products = true,
-	  always_show_made_in = true,
+	    always_show_made_in = true,
       category = "large-crafting",
       energy_required = 25,
       ingredients = {
 	    {type = "item", name = "nullius-fluid-wagon-3", amount = 1},
-		{type = "item", name = "nullius-small-fluid-wagon-2", amount = 2}
+		  {type = "item", name = "nullius-small-fluid-wagon-2", amount = 2}
       },
-      result = "nullius-small-fluid-wagon-3",
-	  result_count = 2
+      results = {
+			  {type = "item", name = "nullius-small-fluid-wagon-3", amount = 2}
+		  },
     },
     {
       type = "technology",
@@ -4205,7 +4425,9 @@ if mods["fcpu"] then
         {type = "item", name = "arithmetic-combinator", amount = 10},
         {type = "item", name = "nullius-processor-2", amount = 1}
       },
-      result = "fcpu"
+      results = {
+			{type = "item", name = "fcpu", amount = 1}
+		}
     },
     {
       type = "technology",

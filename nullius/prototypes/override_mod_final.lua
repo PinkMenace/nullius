@@ -261,13 +261,27 @@ if (mods["RenaiTransportation"] and
   data.raw["constant-combinator"]["SignalBouncePlate"].minable.mining_time = 1.5
   data.raw["constant-combinator"]["DirectorBouncePlate"].minable.mining_time = 2
 
-  data.raw.recipe["nullius-thrower-1"].result = "RTThrower-inserter-Item"
-  data.raw.recipe["nullius-thrower-2"].result = "RTThrower-turbo-inserter-Item"
-  data.raw.recipe["nullius-filter-thrower-2"].result = "RTThrower-turbo-filter-inserter-Item"
-  data.raw.recipe["nullius-thrower-3"].result = "RTThrower-stack-inserter-Item"
-  data.raw.recipe["nullius-filter-thrower-3"].result = "RTThrower-stack-filter-inserter-Item"
-  data.raw.recipe["nullius-thrower-4"].result = "RTThrower-express-stack-inserter-Item"
-  data.raw.recipe["nullius-filter-thrower-4"].result = "RTThrower-express-stack-filter-inserter-Item"
+  data.raw.recipe["nullius-thrower-1"].results = {
+			{type = "item", name = "RTThrower-inserter-Item", amount = 1}
+		}
+  data.raw.recipe["nullius-thrower-2"].results = {
+			{type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1}
+		}
+  data.raw.recipe["nullius-filter-thrower-2"].results = {
+			{type = "item", name = "RTThrower-turbo-filter-inserter-Item", amount = 1}
+		}
+  data.raw.recipe["nullius-thrower-3"].results = {
+			{type = "item", name = "RTThrower-stack-inserter-Item", amount = 1}
+		}
+  data.raw.recipe["nullius-filter-thrower-3"].results = {
+			{type = "item", name = "RTThrower-stack-filter-inserter-Item", amount = 1}
+		}
+  data.raw.recipe["nullius-thrower-4"].results = {
+			{type = "item", name = "RTThrower-express-stack-inserter-Item", amount = 1}
+		}
+  data.raw.recipe["nullius-filter-thrower-4"].results = {
+			{type = "item", name = "RTThrower-express-stack-filter-inserter-Item", amount = 1}
+		}
 end
 
 

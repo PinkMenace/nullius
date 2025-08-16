@@ -1322,7 +1322,7 @@ data.raw.recipe["road"].show_amount_in_title = false
 data.raw.recipe["road"].always_show_products = true
 data.raw.recipe["road"].category = "hand-casting"
 data.raw.recipe["road"].energy_required = 3
-data.raw.recipe["road"].result_count = 4
+data.raw.recipe["road"].results[1].amount = 4
 data.raw.recipe["road"].ingredients = {
   {type = "item", name = "nullius-rubber", amount = 1},
   {type = "item", name = "nullius-land-fill-sand", amount = 1},
@@ -1336,7 +1336,7 @@ data.raw.recipe["transport-drone"].show_amount_in_title = false
 data.raw.recipe["transport-drone"].always_show_products = true
 data.raw.recipe["transport-drone"].category = "medium-crafting"
 data.raw.recipe["transport-drone"].energy_required = 10
-data.raw.recipe["transport-drone"].result_count = 3
+data.raw.recipe["transport-drone"].results[1].amount = 3
 data.raw.recipe["transport-drone"].ingredients = {
   {type = "item", name = "nullius-car-1", amount = 1},
   {type = "item", name = "arithmetic-combinator", amount = 5},
@@ -1457,7 +1457,7 @@ data.raw.recipe["fast-road"].show_amount_in_title = false
 data.raw.recipe["fast-road"].always_show_products = true
 data.raw.recipe["fast-road"].category = "large-crafting"
 data.raw.recipe["fast-road"].energy_required = 30
-data.raw.recipe["fast-road"].result_count = 8
+data.raw.recipe["fast-road"].results[1].amount = 8
 data.raw.recipe["fast-road"].ingredients = {
   {type = "item", name = "road", amount = 50},
   {type = "item", name = "nullius-box-black-concrete", amount = 6},
@@ -1632,7 +1632,9 @@ if (mods["GCKI"] and (data.raw.item["car-key"] ~= nil)) then
         {type = "item", name = "programmable-speaker", amount = 1},
         {type = "item", name = "arithmetic-combinator", amount = 1}
       },
-      result = "car-key"
+      results = {
+			{type = "item", name = "car-key", amount = 1}
+		}
     }
   })
   data.raw.item["car-key"].subgroup = "vehicle"
