@@ -16,7 +16,7 @@ require("prototypes.item.recipe")
 require("prototypes.item.alignment")
 require("prototypes.item.broken")
 require("prototypes.item.void")
-require("prototypes.item.landfill") -- TODO: remove empty_transitions = true, and implement variants.transitions maybe
+require("prototypes.item.landfill")
 require("prototypes.item.boxing")
 
 -- TODO: set the appropriate volume for fluid_boxes

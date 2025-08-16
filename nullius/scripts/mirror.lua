@@ -35,31 +35,31 @@ function replace_fluid_entity(entity, newname, force, dir)
   if (dir == nil) then dir = entity.direction end
   if (entity.type == "entity-ghost") then
     local pos = entity.position
-	local surface = entity.surface
-	local requests = entity.item_requests
-	local recipe = nil
-	if (entity.ghost_type == "assembling-machine") then
-	  recipe = entity.get_recipe()
-	end
-	entity.destroy()
+	  local surface = entity.surface
+	  local requests = entity.insert_plan
+	  local recipe = nil
+	  if (entity.ghost_type == "assembling-machine") then
+	    recipe = entity.get_recipe()
+	  end
+	  entity.destroy()
     entity = surface.create_entity{
         name = "entity-ghost", force = force, direction = dir,
-	    position = pos, inner_name = newname,
-	    fast_replace = true, create_build_effect_smoke = false}
+	      position = pos, inner_name = newname,
+	      fast_replace = true, create_build_effect_smoke = false}
     if ((entity ~= nil) and entity.valid) then
-	  entity.item_requests = requests
-	  if (recipe ~= nil) then entity.set_recipe(recipe) end
-	end
+	    entity.insert_plan = requests
+	    if (recipe ~= nil) then entity.set_recipe(recipe) end
+	  end
   else
     local contents = save_fluid_contents(entity)
     update_build_statistics(entity, force, true)
     entity = entity.surface.create_entity{
-        name = newname, force = force, direction = dir,
+      name = newname, force = force, direction = dir,
 	    position = entity.position, spill = false, raise_built = true,
 	    fast_replace = true, create_build_effect_smoke = false}
     if ((entity ~= nil) and entity.valid) then
       restore_fluid_contents(entity, contents)
-	  update_build_statistics(entity, force, false)
+	    update_build_statistics(entity, force, false)
     end
   end
   if ((entity ~= nil) and entity.valid and (dir ~= entity.direction)) then

@@ -5,12 +5,12 @@ Valves, pipes and tanks: fix mentions of pressure in locales
 Rework the entity mirroring system
 Rework the checkpoint system (maybe)
 fix the others warnings in the log
-landfill transitions things -> i have no clue how this thing works and if i even have to do anything
-fix factoriopedia duplicate entities (maybe wait for kiwi's modding request to go through)
+landfill variants are not the same as on 1.1
 mods compatibility
+drones ammo category locale broken
+fix factoriopedia duplicate entities (maybe wait for kiwi's modding request to go through)
 do we remove the legacy items/recipes/buildings ?
 why does grass drone take this long to spawn grass ?? -> it also takes very long on 1.1
 update changelog and info.json(min version of dependencies) before publishing
-drones ammo category locale broken
 geothermal plant can mine petroleum in nullius 1.1 is it a bug ?
 some of the mining drills that use the electric drill graphics have the vector_to_place_result set to the burner drill value so the little is not in front of the animation BUT this is how it is in nullius 1.1 so I didn't change it

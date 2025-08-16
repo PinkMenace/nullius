@@ -252,10 +252,10 @@ function entity_paste_event(event)
 
   if (string.sub(tname, 9, 16) == "turbine-") then
     if (string.sub(sname, 9, 16) ~= "turbine-") then return end
-	local ttyp = turbine_type(tname)
+	  local ttyp = turbine_type(tname)
     local tpri = turbine_priority(tname)
     if ((ttyp == nil) or (tpri == nil)) then return end
-	local spri = turbine_priority(sname)
+	  local spri = turbine_priority(sname)
     if ((spri == nil) or (spri == tpri)) then return end
 
     local newname = "nullius-turbine-" .. ttyp .. "-" ..
@@ -267,15 +267,15 @@ function entity_paste_event(event)
     end
   elseif (is_surge_entity(tname) and is_surge_entity(sname)) then
     local tsurge = scan_surge_priority(tname)
-	local ssurge = scan_surge_priority(sname)
+	  local ssurge = scan_surge_priority(sname)
     if ((tsurge == nil) or (ssurge == nil)) then return end
-	if (tsurge.priority == ssurge.priority) then return end
+	  if (tsurge.priority == ssurge.priority) then return end
     toggle_surge(target, tname, force)
   elseif (is_hangar_entity(tname) and is_hangar_entity(sname)) then
     local thang = scan_hangar_name(tname)
-	local shang = scan_hangar_name(sname)
-	if (thang.iscon == shang.iscon) then return end
-	toggle_hangar(target, tname, force)
+	  local shang = scan_hangar_name(sname)
+	  if (thang.iscon == shang.iscon) then return end
+	  toggle_hangar(target, tname, force)
   end
 end
 
