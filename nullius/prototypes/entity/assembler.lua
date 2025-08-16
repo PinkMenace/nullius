@@ -7,7 +7,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-small-assembler-1",
-	order = "nullius-mbb",
+	  order = "nullius-mbb",
     icon_size = 64,
     icons = data.raw.item["nullius-small-assembler-1"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
@@ -29,24 +29,24 @@ data:extend({
           {
             filename = BASEENTITY .. "assembling-machine-1/assembling-machine-1.png",
             priority="high",
-            width = 108,
-            height = 114,
+            width = 214,
+            height = 226,
             frame_count = 32,
             line_length = 8,
             shift = util.by_pixel(0, 2),
-            scale = 0.666
+            scale = 0.666*0.5
           },
           {
             filename = BASEENTITY .. "assembling-machine-1/assembling-machine-1-shadow.png",
             priority="high",
-            width = 95,
-            height = 83,
+            width = 190,
+            height = 165,
             frame_count = 1,
             line_length = 1,
             repeat_count = 32,
             draw_as_shadow = true,
-            shift = util.by_pixel(8.5, 5.5),
-            scale = 0.666
+            shift = util.by_pixel(8.5, 5),
+            scale = 0.666*0.5
           }
         }
       }
@@ -280,12 +280,12 @@ data:extend({
           {
             filename = BASEENTITY .. "assembling-machine-2/assembling-machine-2.png",
             priority = "high",
-            width = 108,
-            height = 110,
+            width = 214,
+            height = 218,
             frame_count = 32,
             line_length = 8,
             shift = util.by_pixel(0, 4),
-            scale = 0.666,
+            scale = 0.666*0.5,
             animation_speed = 0.8
           },
           data.raw["assembling-machine"]["nullius-small-assembler-1"].graphics_set.animation.layers[2]
@@ -332,24 +332,24 @@ data:extend({
           {
             filename = BASEENTITY .. "assembling-machine-3/assembling-machine-3.png",
             priority = "high",
-            width = 108,
-            height = 119,
+            width = 214,
+            height = 237,
             frame_count = 32,
             line_length = 8,
-            shift = util.by_pixel(0, -0.3333),
-            scale = 0.666,
+            shift = util.by_pixel(0, -0.3333), 
+            scale = 0.666*0.5,
             animation_speed = 0.6
           },
           {
             filename = BASEENTITY .. "assembling-machine-3/assembling-machine-3-shadow.png",
             priority = "high",
-            width = 130,
-            height = 82,
+            width = 260,
+            height = 162,
             frame_count = 32,
             line_length = 8,
             draw_as_shadow = true,
             shift = util.by_pixel(18.667, 2.6667),
-            scale = 0.666,
+            scale = 0.666*0.5,
             animation_speed = 0.6
           }
         }
