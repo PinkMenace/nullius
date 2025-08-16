@@ -32,6 +32,13 @@ if settings.startup["safefill-green-water"].value then
 end
 
 
+for i = 1,4 do
+  data:extend({{
+    type = "collision-layer",
+    name = "water_layer_"..tostring(i)
+  }})
+end
+
 local recipe_count = 0
 local recipes = { }
 
@@ -54,7 +61,9 @@ function create_waterfill(suffix, tilename, suborder, active, layer)
     show_amount_in_title = false,
 	always_show_products = true,
 	always_show_made_in = true,
-    result = safename
+    results = {
+      {type = "item", name = safename, amount = 1}
+    }
   }
 
   if (settings.startup["safefill-cost"].value == "expensive") then
@@ -79,11 +88,10 @@ function create_waterfill(suffix, tilename, suborder, active, layer)
     localised = tile.localised_name
   end
 
-  local cond = "water-tile"
+  local cond = "water_tile"
   if settings.startup["safefill-water-on-water"].value and (layer > 0) then
-    local lnum = (layer + 43)
-    cond = "layer-"..lnum
-	table.insert(tile.collision_mask, cond)
+    cond = "water_layer_"..layer
+	  tile.collision_mask.layers[cond] = true
   end
 
   data:extend({
@@ -98,7 +106,9 @@ function create_waterfill(suffix, tilename, suborder, active, layer)
       place_as_tile = {
         result = safename,
         condition_size = 1,
-        condition = {cond}
+        condition = {layers = {
+          [cond] = true
+        }}
       }
     },
     {
@@ -106,7 +116,7 @@ function create_waterfill(suffix, tilename, suborder, active, layer)
       name = safename,
 	  localised_name = localised,
       order = "c[watersafefill]-"..tilename,
-      collision_mask = {"ground-tile"},
+      collision_mask = {layers = {ground_tile = true}},
       layer = data.raw.tile[tilename].layer,
       variants = {
         main = data.raw.tile[tilename].variants.main,
@@ -214,7 +224,7 @@ elseif (settings.startup["safefill-cost"].value == "cheap") then
 	  {type="fluid", name="water", amount=500}}
   end
 else
-  data.raw.recipe["safefill-shallow"].result_count = 4
+  data.raw.recipe["safefill-shallow"].results[1].amount = 4
   data.raw.recipe["safefill-shallow"].energy_required = 10
   data.raw.recipe["safefill-medium"].energy_required = 3
   data.raw.recipe["safefill-deep"].energy_required = 2
@@ -225,7 +235,7 @@ else
 	  data.raw.recipe["safefill-medium"].ingredients = {{"safefill-shallow",1},
 	    {type="fluid", name="nullius-saline", amount=1000}}
 	else
-      data.raw.recipe["safefill-medium"].result_count = 4
+      data.raw.recipe["safefill-medium"].results[1].amount = 4
       data.raw.recipe["safefill-medium"].energy_required = 12
       data.raw.recipe["safefill-medium"].ingredients = {{"concrete",4},
 	    {"cliff-explosives",1}, {type="fluid", name="nullius-saline", amount=5000}}	
@@ -238,7 +248,7 @@ else
 	if do_shallow then
 	  data.raw.recipe["safefill-medium"].ingredients = {{"safefill-shallow",2}}
 	else
-      data.raw.recipe["safefill-medium"].result_count = 2
+      data.raw.recipe["safefill-medium"].results[1].amount = 2
       data.raw.recipe["safefill-medium"].energy_required = 12
       data.raw.recipe["safefill-medium"].ingredients = {{"concrete",4},
 	    {"cliff-explosives",1}, {type="fluid", name="water", amount=2500}}	
@@ -349,7 +359,7 @@ if settings.startup["safefill-green-water"].value then
 	    {type="fluid", name="water", amount=500}}  
 	end
   else
-    data.raw.recipe["safefill-mud"].result_count = 4
+    data.raw.recipe["safefill-mud"].results[1].amount = 4
     data.raw.recipe["safefill-mud"].energy_required = 8
     data.raw.recipe["safefill-green"].energy_required = 3
     data.raw.recipe["safefill-deepgreen"].energy_required = 2
@@ -363,7 +373,7 @@ if settings.startup["safefill-green-water"].value then
 	      {type="fluid", name="nullius-wastewater", amount=1000}}
 	  else
         data.raw.recipe["safefill-green"].energy_required = 10
-        data.raw.recipe["safefill-green"].result_count = 4
+        data.raw.recipe["safefill-green"].results[1].amount = 4
         data.raw.recipe["safefill-green"].ingredients = {
 	      {"nullius-land-fill-gravel",1}, {"cliff-explosives",1},
           {type="fluid", name="nullius-sludge", amount=200},
@@ -378,7 +388,7 @@ if settings.startup["safefill-green-water"].value then
         data.raw.recipe["safefill-green"].ingredients = {{"safefill-mud",2}}
 	  else
         data.raw.recipe["safefill-green"].energy_required = 10
-        data.raw.recipe["safefill-green"].result_count = 2
+        data.raw.recipe["safefill-green"].results[1].amount = 2
         data.raw.recipe["safefill-green"].ingredients = {{"landfill",1},
 	      {"cliff-explosives",1}, {type="fluid", name="water", amount=2500}}	    
 	  end
