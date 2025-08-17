@@ -13,3 +13,5 @@ why does grass drone take this long to spawn grass ?? -> it also takes very long
 update changelog and info.json(min version of dependencies) before publishing
 geothermal plant can mine petroleum in nullius 1.1 is it a bug ?
 some of the mining drills that use the electric drill graphics have the vector_to_place_result set to the burner drill value so the little is not in front of the animation BUT this is how it is in nullius 1.1 so I didn't change it
+airfilter graphics are not symmetric when rotating -> it causes the alt icon to be off center in certain orientations
+alignment issue in multiplayer -> probably need a warning message when not every player has the setting enabled
