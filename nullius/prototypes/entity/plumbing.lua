@@ -3183,6 +3183,7 @@ data:extend({
 	  localised_description = {"entity-description.nullius-pipe", tostring(60), tostring(4360), tostring(1260)},
     icons = data.raw.item["nullius-pipe-2"].icons,
     flags = {"placeable-neutral", "player-creation"},
+    icon_draw_specification = {scale = 0.5},
     minable = {mining_time = 0.3, result = "nullius-pipe-2"},
     max_health = 150,
     corpse = "pipe-remnants",
@@ -3198,12 +3199,14 @@ data:extend({
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
       volume = 400,
+      pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { position = {0, -0.1}, direction = defines.direction.north },
-        { position = {0.1, 0},  direction = defines.direction.east },
-        { position = {0, 0.1},  direction = defines.direction.south },
-        { position = {-0.1, 0}, direction = defines.direction.west }
-      }
+        { position = {0, 0}, direction = defines.direction.north },
+        { position = {0, 0},  direction = defines.direction.east },
+        { position = {0, 0},  direction = defines.direction.south },
+        { position = {0, 0}, direction = defines.direction.west }
+      },
+      hide_connection_info = true
     },
     impact_category = data.raw["pipe"]["pipe"].impact_category,
     working_sound = data.raw["pipe"]["pipe"].working_sound,
@@ -3215,9 +3218,10 @@ data:extend({
   {
     type = "pipe",
     name = "nullius-pipe-3",
-	localised_description = {"entity-description.nullius-pipe", tostring(80), tostring(5370), tostring(4260)},
+	  localised_description = {"entity-description.nullius-pipe", tostring(80), tostring(5370), tostring(4260)},
     icons = data.raw.item["nullius-pipe-3"].icons,
     flags = {"placeable-neutral", "player-creation"},
+    icon_draw_specification = {scale = 0.5},
     minable = {mining_time = 0.4, result = "nullius-pipe-3"},
     max_health = 200,
     corpse = "pipe-remnants",
@@ -3233,26 +3237,29 @@ data:extend({
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
       volume = 400,
+      pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { position = {0, -0.1}, direction = defines.direction.north },
-        { position = {0.1, 0},  direction = defines.direction.east },
-        { position = {0, 0.1},  direction = defines.direction.south },
-        { position = {-0.1, 0}, direction = defines.direction.west }
-      }
+        { position = {0, 0}, direction = defines.direction.north },
+        { position = {0, 0},  direction = defines.direction.east },
+        { position = {0, 0},  direction = defines.direction.south },
+        { position = {0, 0}, direction = defines.direction.west }
+      },
+      hide_connection_info = true
     },
     impact_category = data.raw["pipe"]["pipe"].impact_category,
     working_sound = data.raw["pipe"]["pipe"].working_sound,
     horizontal_window_bounding_box = {{-0.25, -0.25}, {0.25, 0.15625}},
     vertical_window_bounding_box = {{-0.28125, -0.40625}, {0.03125, 0.125}},
-    pictures = data.raw["pipe"]["bob-plastic-pipe"].pictures
+    pictures = pipepics("__boblogistics__/graphics/entity/pipe/plastic/")
   },
 
   {
     type = "pipe",
     name = "nullius-pipe-4",
-	localised_description = {"entity-description.nullius-pipe", tostring(100), tostring(6720), tostring(5180)},
+	  localised_description = {"entity-description.nullius-pipe", tostring(100), tostring(6720), tostring(5180)},
     icons = data.raw.item["nullius-pipe-4"].icons,
     flags = {"placeable-neutral", "player-creation"},
+    icon_draw_specification = {scale = 0.5},
     minable = {mining_time = 0.5, result = "nullius-pipe-4"},
     max_health = 250,
     corpse = "pipe-remnants",
@@ -3267,12 +3274,14 @@ data:extend({
     damaged_trigger_effect = data.raw["pipe"]["pipe"].damaged_trigger_effect,
     fluid_box = {
       volume = 400,
+      pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { position = {0, -0.1}, direction = defines.direction.north },
-        { position = {0.1, 0},  direction = defines.direction.east },
-        { position = {0, 0.1},  direction = defines.direction.south },
-        { position = {-0.1, 0}, direction = defines.direction.west }
-      }
+        { position = {0, 0}, direction = defines.direction.north },
+        { position = {0, 0},  direction = defines.direction.east },
+        { position = {0, 0},  direction = defines.direction.south },
+        { position = {0, 0}, direction = defines.direction.west }
+      },
+      hide_connection_info = true
     },
     impact_category = data.raw["pipe"]["pipe"].impact_category,
     working_sound = data.raw["pipe"]["pipe"].working_sound,
@@ -3287,6 +3296,7 @@ data:extend({
 	  localised_description = {"entity-description.nullius-underground-pipe", tostring(60)},
     icons = data.raw.item["nullius-underground-pipe-2"].icons,
     flags = {"placeable-neutral", "player-creation"},
+    icon_draw_specification = {scale = 0.5},
     minable = {mining_time = 0.6, result = "nullius-underground-pipe-2"},
     max_health = 200,
     corpse = "pipe-to-ground-remnants",
@@ -3323,9 +3333,10 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "nullius-underground-pipe-3",
-	localised_description = {"entity-description.nullius-underground-pipe", tostring(80)},
+	  localised_description = {"entity-description.nullius-underground-pipe", tostring(80)},
     icons = data.raw.item["nullius-underground-pipe-3"].icons,
     flags = {"placeable-neutral", "player-creation"},
+    icon_draw_specification = {scale = 0.5},
     minable = {mining_time = 0.8, result = "nullius-underground-pipe-3"},
     max_health = 250,
     corpse = "pipe-to-ground-remnants",
@@ -3365,6 +3376,7 @@ data:extend({
 	  localised_description = {"entity-description.nullius-underground-pipe", tostring(100)},
     icons = data.raw.item["nullius-underground-pipe-4"].icons,
     flags = {"placeable-neutral", "player-creation"},
+    icon_draw_specification = {scale = 0.5},
     minable = {mining_time = 1, result = "nullius-underground-pipe-4"},
     max_health = 300,
     corpse = "pipe-to-ground-remnants",

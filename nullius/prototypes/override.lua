@@ -832,6 +832,9 @@ data.raw["pipe"]["pipe"].resistances = {
   { type = "impact", decrease = 100, percent = 90 },
   { type = "fire", decrease = 20, percent = 50 }
 }
+data.raw["pipe"]["pipe"].pictures = pipepics("__boblogistics__/graphics/entity/pipe/iron/")
+
+
 data.raw["pipe-to-ground"]["pipe-to-ground"].resistances =
     data.raw["pipe"]["pipe"].resistances
 data.raw["pipe-to-ground"]["pipe-to-ground"].collision_box =
