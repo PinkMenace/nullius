@@ -13,7 +13,7 @@ function accumulator_picture(tint, repeat_count)
         width = 130,
         height = 189,
         repeat_count = repeat_count,
-        shift = util.by_pixel(0, -16.5),
+        shift = util.by_pixel(0, -11),
         tint = tint,
         animation_speed = 0.5,
         scale = 0.75
@@ -24,7 +24,7 @@ function accumulator_picture(tint, repeat_count)
         width = 234,
         height = 106,
         repeat_count = repeat_count,
-        shift = util.by_pixel(43.5, 9),
+        shift = util.by_pixel(29, 6),
         draw_as_shadow = true,
         scale = 0.75
       }
@@ -222,11 +222,11 @@ data:extend({
             filename = BASEENTITY .. "accumulator/accumulator-charge.png",
             priority = "high",
             width = 178,
-            height = 206,
+            height = 210,
             line_length = 6,
             frame_count = 24,
-            blend_mode = "additive",
-            shift = util.by_pixel(0, -33),
+            draw_as_glow = true,
+            shift = util.by_pixel(1, -20),
             scale = 0.75
           }
         }
@@ -239,12 +239,12 @@ data:extend({
           {
             filename = BASEENTITY .. "accumulator/accumulator-discharge.png",
             priority = "high",
-            width = 170,
-            height = 210,
+            width = 174,
+            height = 214,
             line_length = 6,
             frame_count = 24,
-            blend_mode = "additive",
-            shift = util.by_pixel(-1.5, -34.5),
+            draw_as_glow = true,
+            shift = util.by_pixel(-1, -21),
             scale = 0.75
           }
         }
@@ -281,43 +281,47 @@ data:extend({
       output_flow_limit = "800kW"
     },
     resistances = { { type = "impact", decrease = 100, percent = 90 } },
-    picture = accumulator_picture({ r=1, g=1, b=1, a=1 }),
-    charge_animation = {
-      layers = {
-        accumulator_picture({ r=1, g=1, b=1, a=1 } , 24),
-        {
-          filename = BASEENTITY .. "accumulator/accumulator-charge.png",
-          priority = "high",
-          width = 178,
-          height = 206,
-          line_length = 6,
-          frame_count = 24,
-          blend_mode = "additive",
-          shift = util.by_pixel(0, -33),
-          scale = 0.75
+    
+    chargable_graphics = {
+      picture = accumulator_picture({ r=1, g=1, b=1, a=1 }),
+      charge_animation = {
+        layers = {
+          accumulator_picture({ r=1, g=1, b=1, a=1 } , 24),
+          {
+            filename = BASEENTITY .. "accumulator/accumulator-charge.png",
+            priority = "high",
+            width = 178,
+            height = 210,
+            line_length = 6,
+            frame_count = 24,
+            draw_as_glow = true,
+            shift = util.by_pixel(1, -20),
+            scale = 0.75
+          }
         }
-      }
-    },
-    charge_cooldown = 30,
-    charge_light = {intensity = 0.3, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
-    discharge_animation = {
-      layers = {
-        accumulator_picture({ r=1, g=1, b=1, a=1 } , 24),
-        {
-          filename = BASEENTITY .. "accumulator/accumulator-discharge.png",
-          priority = "high",
-          width = 170,
-          height = 210,
-          line_length = 6,
-          frame_count = 24,
-          blend_mode = "additive",
-          shift = util.by_pixel(-1.5, -34.5),
-          scale = 0.75
+      },
+      charge_cooldown = 30,
+      charge_light = {intensity = 0.3, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
+      discharge_animation = {
+        layers = {
+          accumulator_picture({ r=1, g=1, b=1, a=1 } , 24),
+          {
+            filename = BASEENTITY .. "accumulator/accumulator-discharge.png",
+            priority = "high",
+            width = 174,
+            height = 214,
+            line_length = 6,
+            frame_count = 24,
+            draw_as_glow = true,
+            shift = util.by_pixel(-1, -21),
+            scale = 0.75
+          }
         }
-      }
+      },
+      discharge_cooldown = 60,
+      discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     },
-    discharge_cooldown = 60,
-    discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
+    
     impact_category = "metal",
     working_sound = data.raw.accumulator["accumulator"].working_sound,
     circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
@@ -346,43 +350,47 @@ data:extend({
       output_flow_limit = "1.5MW"
     },
     resistances = { { type = "impact", decrease = 100, percent = 90 } },
-    picture = accumulator_picture({ r=1, g=0.85, b=1, a=1 }),
-    charge_animation = {
-      layers = {
-        accumulator_picture({ r=1, g=0.85, b=1, a=1 } , 24),
-        {
-          filename = BASEENTITY .. "accumulator/accumulator-charge.png",
-          priority = "high",
-          width = 178,
-          height = 206,
-          line_length = 6,
-          frame_count = 24,
-          blend_mode = "additive",
-          shift = util.by_pixel(0, -33),
-          scale = 0.75
+    
+    chargable_graphics = {
+      picture = accumulator_picture({ r=1, g=0.85, b=1, a=1 }),
+      charge_animation = {
+        layers = {
+          accumulator_picture({ r=1, g=0.85, b=1, a=1 } , 24),
+          {
+            filename = BASEENTITY .. "accumulator/accumulator-charge.png",
+            priority = "high",
+            width = 178,
+            height = 210,
+            line_length = 6,
+            frame_count = 24,
+            draw_as_glow = true,
+            shift = util.by_pixel(1, -20),
+            scale = 0.75
+          }
         }
-      }
-    },
-    charge_cooldown = 30,
-    charge_light = {intensity = 0.3, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
-    discharge_animation = {
-      layers = {
-        accumulator_picture({ r=1, g=0.85, b=1, a=1 } , 24),
-        {
-          filename = BASEENTITY .. "accumulator/accumulator-discharge.png",
-          priority = "high",
-          width = 170,
-          height = 210,
-          line_length = 6,
-          frame_count = 24,
-          blend_mode = "additive",
-          shift = util.by_pixel(-1.5, -34.5),
-          scale = 0.75
+      },
+      charge_cooldown = 30,
+      charge_light = {intensity = 0.3, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
+      discharge_animation = {
+        layers = {
+          accumulator_picture({ r=1, g=0.85, b=1, a=1 } , 24),
+          {
+            filename = BASEENTITY .. "accumulator/accumulator-discharge.png",
+            priority = "high",
+            width = 174,
+            height = 214,
+            line_length = 6,
+            frame_count = 24,
+            draw_as_glow = true,
+            shift = util.by_pixel(-1, -21),
+            scale = 0.75
+          }
         }
-      }
+      },
+      discharge_cooldown = 60,
+      discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
     },
-    discharge_cooldown = 60,
-    discharge_light = {intensity = 0.7, size = 7, color = {r = 1.0, g = 1.0, b = 1.0}},
+  
     impact_category = "metal",
     working_sound = data.raw.accumulator["accumulator"].working_sound,
     circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
