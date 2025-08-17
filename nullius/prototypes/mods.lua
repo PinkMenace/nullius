@@ -545,7 +545,7 @@ data:extend({
     type = "technology",
     name = "nullius-loader-1",
     order = "nullius-ce",
-	localised_description = {"technology-description.nullius-miniloader"},
+	  localised_description = {"technology-description.nullius-miniloader"},
     effects = {{type = "unlock-recipe", recipe = "nullius-loader-1"}},
     unit = {
       count = 3,
@@ -562,7 +562,7 @@ data:extend({
     type = "technology",
     name = "nullius-loader-2",
     order = "nullius-ck",
-	localised_description = {"technology-description.nullius-miniloader"},
+	  localised_description = {"technology-description.nullius-miniloader"},
     effects = {{type = "unlock-recipe", recipe = "nullius-loader-2"}},
     unit = {
       count = 25,
@@ -579,8 +579,8 @@ data:extend({
     type = "technology",
     name = "nullius-loader-3",
     order = "nullius-dg",
-	localised_description = {"technology-description.nullius-miniloader"},
-	effects = {{type = "unlock-recipe", recipe = "nullius-loader-3"}},
+	  localised_description = {"technology-description.nullius-miniloader"},
+	  effects = {{type = "unlock-recipe", recipe = "nullius-loader-3"}},
     unit = {
       count = 50,
       ingredients = {
@@ -595,8 +595,8 @@ data:extend({
     type = "technology",
     name = "nullius-loader-4",
     order = "nullius-ek",
-	localised_description = {"technology-description.nullius-miniloader"},
-	effects = {{type = "unlock-recipe", recipe = "nullius-loader-4"}},
+	  localised_description = {"technology-description.nullius-miniloader"},
+	  effects = {{type = "unlock-recipe", recipe = "nullius-loader-4"}},
     unit = {
       count = 1000,
       ingredients = {
@@ -612,8 +612,8 @@ data:extend({
     type = "technology",
     name = "nullius-loader-5",
     order = "nullius-fo",
-	localised_description = {"technology-description.nullius-miniloader"},
-	effects = {{type = "unlock-recipe", recipe = "nullius-loader-5"}},
+	  localised_description = {"technology-description.nullius-miniloader"},
+	  effects = {{type = "unlock-recipe", recipe = "nullius-loader-5"}},
     unit = {
       count = 3000,
       ingredients = {
@@ -631,6 +631,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-loader-1",
+    localised_name = {"entity-name.aai-basic-loader"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -646,6 +647,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-loader-2",
+    localised_name = {"entity-name.aai-loader"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -663,6 +665,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-loader-3",
+    localised_name = {"entity-name.aai-fast-loader"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -680,6 +683,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-loader-4",
+    localised_name = {"entity-name.aai-express-loader"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -697,6 +701,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-loader-5",
+    localised_name = {"entity-name.aai-ultimate-loader"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",

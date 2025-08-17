@@ -440,6 +440,7 @@ data.raw.technology["nullius-loader-5"].icons = data.raw.technology["aai-ultimat
 
 if (data.raw["loader-1x1"]["aai-turbo-loader"] ~= nil) then
 data.raw["loader-1x1"]["aai-turbo-loader"].next_upgrade = nil
+data.raw["loader-1x1"]["aai-turbo-loader"].hidden_in_factoriopedia = true
 end
 
 table.insert(data.raw.technology["nullius-mechanical-separation"].prerequisites,"nullius-loader-1")
