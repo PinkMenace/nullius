@@ -1268,8 +1268,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1297,15 +1297,13 @@ data:extend({
           {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
             priority = "extra-high",
-            x = 128,
             frame_count = 1,
             width = 64,
-            height = 64,
-            shift = {0, -0.05}
-			    }
+            height = 64
+		  	  }
 		    }
       },
-      west = {
+      east = {
           filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
           priority = "extra-high",
           x = 64,
@@ -1327,13 +1325,15 @@ data:extend({
 		      {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
             priority = "extra-high",
+            x = 128,
             frame_count = 1,
             width = 64,
-            height = 64
-		  	  }
+            height = 64,
+            shift = {0, -0.05}
+			    }
 		    }
       },
-      east = {
+      west = {
         filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-inspector.png",
         priority = "extra-high",
         x = 192,
@@ -1364,8 +1364,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1392,15 +1392,13 @@ data:extend({
 			    {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
             priority = "extra-high",
-            x = 128,
             frame_count = 1,
             width = 64,
-            height = 64,
-            shift = {0, -0.05}
+            height = 64
 			    }
 		    }
       },
-      west = {
+      east = {
           filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
           priority = "extra-high",
           x = 64,
@@ -1422,13 +1420,15 @@ data:extend({
 		      {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
             priority = "extra-high",
+            x = 128,
             frame_count = 1,
             width = 64,
-            height = 64
+            height = 64,
+            shift = {0, -0.05}
 			    }
 		    }
       },
-      east = {
+      west = {
         filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
         priority = "extra-high",
         x = 192,
@@ -1459,8 +1459,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1488,15 +1488,13 @@ data:extend({
 			    {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
             priority = "extra-high",
-            x = 128,
-            frame_count = 1,
+            frames = 1,
             width = 64,
-            height = 64,
-            shift = {0, -0.05}
+            height = 64
 			    }
 		    }
       },
-      west = {
+      east = {
         filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
         priority = "extra-high",
         x = 64,
@@ -1515,16 +1513,18 @@ data:extend({
             scale = 0.5,
             shift = {0, -0.5}
 			    },
-		      {
+			    {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
             priority = "extra-high",
-            frames = 1,
+            x = 128,
+            frame_count = 1,
             width = 64,
-            height = 64
+            height = 64,
+            shift = {0, -0.05}
 			    }
 		    }
       },
-      east = {
+      west = {
         filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
         priority = "extra-high",
         x = 192,
@@ -1555,8 +1555,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "input-output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1584,15 +1584,13 @@ data:extend({
 			    {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
             priority = "extra-high",
-            x = 128,
             frame_count = 1,
             width = 64,
-            height = 64,
-            shift = {0, -0.05}
+            height = 64
 			    }
 		    }
       },
-      west = {
+      east = {
         filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
         priority = "extra-high",
         x = 64,
@@ -1611,16 +1609,18 @@ data:extend({
             scale = 0.5,
             shift = {0, -0.5}
 			    },
-  		    {
+			    {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
             priority = "extra-high",
+            x = 128,
             frame_count = 1,
             width = 64,
-            height = 64
+            height = 64,
+            shift = {0, -0.05}
 			    }
 		    }
       },
-      east = {
+      west = {
         filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-return.png",
         priority = "extra-high",
         x = 192,
