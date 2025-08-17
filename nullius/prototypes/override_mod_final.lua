@@ -56,9 +56,9 @@ if settings.startup["reskins-lib-icon-tier-labeling"].value == true then
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   data.raw.item["ultimate-transport-belt"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["ultimate-underground-belt"].icons[4].icon =
+  data.raw.item["bob-ultimate-underground-belt"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["ultimate-underground-belt"].icons[5].icon =
+  data.raw.item["bob-ultimate-underground-belt"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   data.raw.item["ultimate-splitter"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
@@ -139,116 +139,73 @@ if (mods["RenaiTransportation"] and
     settings.startup["RTThrowersSetting"].value) then
   data.raw.recipe["nullius-thrower-2"].ingredients = {
     {type = "item", name = "RTThrower-inserter-Item", amount = 1},
-    {type = "item", name = "turbo-inserter", amount = 1},
-	{type = "item", name = "nullius-motor-2", amount = 1}
-  }
-  data.raw.recipe["nullius-filter-thrower-2"].ingredients = {
-    {type = "item", name = "RTThrower-inserter-Item", amount = 1},
-    {type = "item", name = "turbo-filter-inserter", amount = 1},
-	{type = "item", name = "nullius-motor-2", amount = 1}
+    {type = "item", name = "bob-turbo-inserter", amount = 1},
+	  {type = "item", name = "nullius-motor-2", amount = 1}
   }
   data.raw.recipe["nullius-thrower-3"].ingredients = {
-    {type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
-    {type = "item", name = "stack-inserter", amount = 2}
-  }
-  data.raw.recipe["nullius-filter-thrower-3"].ingredients = {
-    {type = "item", name = "RTThrower-turbo-filter-inserter-Item", amount = 1},
-    {type = "item", name = "stack-filter-inserter", amount = 2}
+    {type = "item", name = "RTThrower-bob-turbo-inserter-Item", amount = 1},
+    {type = "item", name = "bulk-inserter", amount = 2}
   }
   data.raw.recipe["nullius-thrower-4"].ingredients = {
-    {type = "item", name = "RTThrower-stack-inserter-Item", amount = 1},
-    {type = "item", name = "express-stack-inserter", amount = 2}
-  }
-  data.raw.recipe["nullius-filter-thrower-4"].ingredients = {
-    {type = "item", name = "RTThrower-stack-filter-inserter-Item", amount = 1},
-    {type = "item", name = "express-stack-filter-inserter", amount = 2}
+    {type = "item", name = "RTThrower-bulk-inserter-Item", amount = 1},
+    {type = "item", name = "bob-express-bulk-inserter", amount = 2}
   }
   data.raw.recipe["nullius-ejector-hatch"].ingredients = {
-    {type = "item", name = "HatchRTItem", amount = 1},
-	{type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1},
+    {type = "item", name = "HatchRT", amount = 1},
+	  {type = "item", name = "RTThrower-bob-turbo-inserter-Item", amount = 1},
     {type = "item", name = "fast-underground-belt", amount = 1}
   }
   data.raw.recipe["nullius-player-thrower"].ingredients = {
     {type = "item", name = "RTThrower-inserter-Item", amount = 1},
     {type = "item", name = "nullius-steel-plate", amount = 2}
   }
-
+  
   data.raw.recipe["RTThrower-burner-inserter-Recipe"].enabled = false
   data.raw.recipe["RTThrower-inserter-Recipe"].enabled = false
-  data.raw.item["RTThrower-inserter-Item"].localised_name = {"entity-name.nullius-thrower", 1}
-  data.raw.inserter["RTThrower-inserter"].localised_name = {"entity-name.nullius-thrower", 1}
+  data.raw.item["RTThrower-inserter-Item"].localised_name = {"entity-name.nullius-thrower", tostring(1)}
+  data.raw.inserter["RTThrower-inserter"].localised_name = {"entity-name.nullius-thrower", tostring(1)}
   data.raw.item["RTThrower-inserter-Item"].subgroup = "nullius-renai-thrower"
   data.raw.item["RTThrower-inserter-Item"].order = "nullius-tbb"
   data.raw.inserter["RTThrower-inserter"].order = "nullius-tbb"
   data.raw.inserter["RTThrower-inserter"].rotation_speed = 0.0083333333
-  data.raw.inserter["RTThrower-inserter"].energy_per_rotation = "56KJ"
+  data.raw.inserter["RTThrower-inserter"].energy_per_rotation = "56kJ"
   data.raw.inserter["RTThrower-inserter"].energy_per_movement = "1W"
   data.raw.inserter["RTThrower-inserter"].energy_source.drain = "2kW"
   data.raw.inserter["RTThrower-inserter"].minable.mining_time = 0.6
-  data.raw.item["RTThrower-turbo-inserter-Item"].localised_name = {"entity-name.nullius-thrower", 2}
-  data.raw.inserter["RTThrower-turbo-inserter"].localised_name = {"entity-name.nullius-thrower", 2}
-  data.raw.item["RTThrower-turbo-inserter-Item"].subgroup = "nullius-renai-thrower"
-  data.raw.item["RTThrower-turbo-inserter-Item"].order = "nullius-tcb"
-  data.raw.inserter["RTThrower-turbo-inserter"].order = "nullius-tcb"
-  data.raw.inserter["RTThrower-turbo-inserter"].rotation_speed = 0.016666667
-  data.raw.inserter["RTThrower-turbo-inserter"].energy_per_rotation = "56KJ"
-  data.raw.inserter["RTThrower-turbo-inserter"].energy_per_movement = "1W"
-  data.raw.inserter["RTThrower-turbo-inserter"].energy_source.drain = "4kW"
-  data.raw.inserter["RTThrower-turbo-inserter"].minable.mining_time = 0.8
-  data.raw.item["RTThrower-turbo-filter-inserter-Item"].localised_name = {"entity-name.nullius-filter-thrower", 2}
-  data.raw.inserter["RTThrower-turbo-filter-inserter"].localised_name = {"entity-name.nullius-filter-thrower", 2}
-  data.raw.item["RTThrower-turbo-filter-inserter-Item"].subgroup = "nullius-renai-thrower"
-  data.raw.item["RTThrower-turbo-filter-inserter-Item"].order = "nullius-tcc"
-  data.raw.inserter["RTThrower-turbo-filter-inserter"].order = "nullius-tcc"
-  data.raw.inserter["RTThrower-turbo-filter-inserter"].rotation_speed = 0.016666667
-  data.raw.inserter["RTThrower-turbo-filter-inserter"].energy_per_rotation = "56KJ"
-  data.raw.inserter["RTThrower-turbo-filter-inserter"].energy_per_movement = "1W"
-  data.raw.inserter["RTThrower-turbo-filter-inserter"].energy_source.drain = "4kW"
-  data.raw.inserter["RTThrower-turbo-filter-inserter"].minable.mining_time = 0.8
-  data.raw.item["RTThrower-stack-inserter-Item"].localised_name = {"entity-name.nullius-thrower", 3}
-  data.raw.inserter["RTThrower-stack-inserter"].localised_name = {"entity-name.nullius-thrower", 3}
-  data.raw.item["RTThrower-stack-inserter-Item"].subgroup = "nullius-renai-thrower"
-  data.raw.item["RTThrower-stack-inserter-Item"].order = "nullius-tdb"
-  data.raw.inserter["RTThrower-stack-inserter"].order = "nullius-tdb"
-  data.raw.inserter["RTThrower-stack-inserter"].rotation_speed = 0.016666667
-  data.raw.inserter["RTThrower-stack-inserter"].energy_per_rotation = "114KJ"
-  data.raw.inserter["RTThrower-stack-inserter"].energy_per_movement = "1W"
-  data.raw.inserter["RTThrower-stack-inserter"].energy_source.drain = "6kW"
-  data.raw.inserter["RTThrower-stack-inserter"].minable.mining_time = 1
-  data.raw.item["RTThrower-stack-filter-inserter-Item"].localised_name = {"entity-name.nullius-filter-thrower", 3}
-  data.raw.inserter["RTThrower-stack-filter-inserter"].localised_name = {"entity-name.nullius-filter-thrower", 3}
-  data.raw.item["RTThrower-stack-filter-inserter-Item"].subgroup = "nullius-renai-thrower"
-  data.raw.item["RTThrower-stack-filter-inserter-Item"].order = "nullius-tdc"
-  data.raw.inserter["RTThrower-stack-filter-inserter"].order = "nullius-tdc"
-  data.raw.inserter["RTThrower-stack-filter-inserter"].rotation_speed = 0.016666667
-  data.raw.inserter["RTThrower-stack-filter-inserter"].energy_per_rotation = "114KJ"
-  data.raw.inserter["RTThrower-stack-filter-inserter"].energy_per_movement = "1W"
-  data.raw.inserter["RTThrower-stack-filter-inserter"].energy_source.drain = "6kW"
-  data.raw.inserter["RTThrower-stack-filter-inserter"].minable.mining_time = 1
-  data.raw.item["RTThrower-express-stack-inserter-Item"].localised_name = {"entity-name.nullius-thrower", 4}
-  data.raw.inserter["RTThrower-express-stack-inserter"].localised_name = {"entity-name.nullius-thrower", 4}
-  data.raw.item["RTThrower-express-stack-inserter-Item"].subgroup = "nullius-renai-thrower"
-  data.raw.item["RTThrower-express-stack-inserter-Item"].order = "nullius-teb"
-  data.raw.inserter["RTThrower-express-stack-inserter"].order = "nullius-teb"
-  data.raw.inserter["RTThrower-express-stack-inserter"].rotation_speed = 0.033333333
-  data.raw.inserter["RTThrower-express-stack-inserter"].energy_per_rotation = "115KJ"
-  data.raw.inserter["RTThrower-express-stack-inserter"].energy_per_movement = "1W"
-  data.raw.inserter["RTThrower-express-stack-inserter"].energy_source.drain = "10kW"
-  data.raw.inserter["RTThrower-express-stack-inserter"].minable.mining_time = 1.2
-  data.raw.item["RTThrower-express-stack-filter-inserter-Item"].localised_name = {"entity-name.nullius-filter-thrower", 4}
-  data.raw.inserter["RTThrower-express-stack-filter-inserter"].localised_name = {"entity-name.nullius-filter-thrower", 4}
-  data.raw.item["RTThrower-express-stack-filter-inserter-Item"].subgroup = "nullius-renai-thrower"
-  data.raw.item["RTThrower-express-stack-filter-inserter-Item"].order = "nullius-tec"
-  data.raw.inserter["RTThrower-express-stack-filter-inserter"].order = "nullius-tec"
-  data.raw.inserter["RTThrower-express-stack-filter-inserter"].rotation_speed = 0.033333333
-  data.raw.inserter["RTThrower-express-stack-filter-inserter"].energy_per_rotation = "115KJ"
-  data.raw.inserter["RTThrower-express-stack-filter-inserter"].energy_per_movement = "1W"
-  data.raw.inserter["RTThrower-express-stack-filter-inserter"].energy_source.drain = "10kW"
-  data.raw.inserter["RTThrower-express-stack-filter-inserter"].minable.mining_time = 1.2
+  data.raw.item["RTThrower-bob-turbo-inserter-Item"].localised_name = {"entity-name.nullius-thrower", tostring(2)}
+  data.raw.inserter["RTThrower-bob-turbo-inserter"].localised_name = {"entity-name.nullius-thrower", tostring(2)}
+  data.raw.item["RTThrower-bob-turbo-inserter-Item"].subgroup = "nullius-renai-thrower"
+  data.raw.item["RTThrower-bob-turbo-inserter-Item"].order = "nullius-tcb"
+  data.raw.inserter["RTThrower-bob-turbo-inserter"].order = "nullius-tcb"
+  data.raw.inserter["RTThrower-bob-turbo-inserter"].rotation_speed = 0.016666667
+  data.raw.inserter["RTThrower-bob-turbo-inserter"].energy_per_rotation = "56kJ"
+  data.raw.inserter["RTThrower-bob-turbo-inserter"].energy_per_movement = "1W"
+  data.raw.inserter["RTThrower-bob-turbo-inserter"].energy_source.drain = "4kW"
+  data.raw.inserter["RTThrower-bob-turbo-inserter"].minable.mining_time = 0.8
+  data.raw.item["RTThrower-bulk-inserter-Item"].localised_name = {"entity-name.nullius-thrower", tostring(3)}
+  data.raw.inserter["RTThrower-bulk-inserter"].localised_name = {"entity-name.nullius-thrower", tostring(3)}
+  data.raw.item["RTThrower-bulk-inserter-Item"].subgroup = "nullius-renai-thrower"
+  data.raw.item["RTThrower-bulk-inserter-Item"].order = "nullius-tdb"
+  data.raw.inserter["RTThrower-bulk-inserter"].order = "nullius-tdb"
+  data.raw.inserter["RTThrower-bulk-inserter"].rotation_speed = 0.016666667
+  data.raw.inserter["RTThrower-bulk-inserter"].energy_per_rotation = "114kJ"
+  data.raw.inserter["RTThrower-bulk-inserter"].energy_per_movement = "1W"
+  data.raw.inserter["RTThrower-bulk-inserter"].energy_source.drain = "6kW"
+  data.raw.inserter["RTThrower-bulk-inserter"].minable.mining_time = 1
+  data.raw.item["RTThrower-bob-express-bulk-inserter-Item"].localised_name = {"entity-name.nullius-thrower", tostring(4)}
+  data.raw.inserter["RTThrower-bob-express-bulk-inserter"].localised_name = {"entity-name.nullius-thrower", tostring(4)}
+  data.raw.item["RTThrower-bob-express-bulk-inserter-Item"].subgroup = "nullius-renai-thrower"
+  data.raw.item["RTThrower-bob-express-bulk-inserter-Item"].order = "nullius-teb"
+  data.raw.inserter["RTThrower-bob-express-bulk-inserter"].order = "nullius-teb"
+  data.raw.inserter["RTThrower-bob-express-bulk-inserter"].rotation_speed = 0.033333333
+  data.raw.inserter["RTThrower-bob-express-bulk-inserter"].energy_per_rotation = "115kJ"
+  data.raw.inserter["RTThrower-bob-express-bulk-inserter"].energy_per_movement = "1W"
+  data.raw.inserter["RTThrower-bob-express-bulk-inserter"].energy_source.drain = "10kW"
+  data.raw.inserter["RTThrower-bob-express-bulk-inserter"].minable.mining_time = 1.2
   data.raw.inserter["PlayerLauncher"].rotation_speed = 0.033333333
   data.raw.inserter["RTThrower-EjectorHatchRT"].rotation_speed = 0.016666667
   data.raw.inserter["RTThrower-EjectorHatchRT"].extension_speed = 0.04
-  data.raw.inserter["RTThrower-EjectorHatchRT"].energy_per_rotation = "56KJ"
+  data.raw.inserter["RTThrower-EjectorHatchRT"].energy_per_rotation = "56kJ"
   data.raw.inserter["RTThrower-EjectorHatchRT"].energy_per_movement = "1W"
   data.raw.inserter["RTThrower-EjectorHatchRT"].energy_source.drain = "4kW"
   data.raw.inserter["RTThrower-EjectorHatchRT"].minable.mining_time = 0.75
@@ -256,32 +213,44 @@ if (mods["RenaiTransportation"] and
   data.raw["simple-entity-with-owner"]["HatchRT"].minable.mining_time = 0.5
   data.raw.inserter["PlayerLauncher"].minable.mining_time = 0.6
   data.raw["container"]["OpenContainer"].minable.mining_time = 0.5
-  data.raw["simple-entity-with-owner"]["BouncePlate"].minable.mining_time = 1
-  data.raw["simple-entity-with-owner"]["DirectedBouncePlate"].minable.mining_time = 1.2
-  data.raw["constant-combinator"]["SignalBouncePlate"].minable.mining_time = 1.5
+  data.raw["constant-combinator"]["RTBouncePlate"].minable.mining_time = 1
+  data.raw["constant-combinator"]["DirectedBouncePlate"].minable.mining_time = 1.2
+  -- data.raw["constant-combinator"]["SignalBouncePlate"].minable.mining_time = 1.5 --removed
   data.raw["constant-combinator"]["DirectorBouncePlate"].minable.mining_time = 2
 
   data.raw.recipe["nullius-thrower-1"].results = {
 			{type = "item", name = "RTThrower-inserter-Item", amount = 1}
 		}
   data.raw.recipe["nullius-thrower-2"].results = {
-			{type = "item", name = "RTThrower-turbo-inserter-Item", amount = 1}
+			{type = "item", name = "RTThrower-bob-turbo-inserter-Item", amount = 1}
 		}
-  data.raw.recipe["nullius-filter-thrower-2"].results = {
-			{type = "item", name = "RTThrower-turbo-filter-inserter-Item", amount = 1}
-		}
+  
   data.raw.recipe["nullius-thrower-3"].results = {
-			{type = "item", name = "RTThrower-stack-inserter-Item", amount = 1}
+			{type = "item", name = "RTThrower-bulk-inserter-Item", amount = 1}
 		}
-  data.raw.recipe["nullius-filter-thrower-3"].results = {
-			{type = "item", name = "RTThrower-stack-filter-inserter-Item", amount = 1}
-		}
+  
   data.raw.recipe["nullius-thrower-4"].results = {
-			{type = "item", name = "RTThrower-express-stack-inserter-Item", amount = 1}
+			{type = "item", name = "RTThrower-bob-express-bulk-inserter-Item", amount = 1}
 		}
-  data.raw.recipe["nullius-filter-thrower-4"].results = {
-			{type = "item", name = "RTThrower-express-stack-filter-inserter-Item", amount = 1}
-		}
+	
+	local hiddenInserterRecipes = {
+	  "RTThrower-burner-inserter-Recipe",
+    "RTThrower-inserter-Recipe",
+    "RTThrower-bob-turbo-inserter-Recipe",
+    "RTThrower-bulk-inserter-Recipe",
+    "RTThrower-bob-express-bulk-inserter-Recipe",
+    "RTThrower-bob-steam-inserter-Recipe",
+    "RTThrower-bob-red-inserter-Recipe",
+    "RTThrower-long-handed-inserter-Recipe",
+    "RTThrower-bob-red-bulk-inserter-Recipe",
+    "RTThrower-fast-inserter-Recipe",
+    "RTThrower-bob-turbo-bulk-inserter-Recipe",
+    "RTThrower-bob-express-inserter-Recipe"
+  }
+  
+  for _, inserter in pairs(hiddenInserterRecipes) do
+    data.raw.recipe[inserter].hidden_in_factoriopedia = true
+  end
 end
 
 

@@ -61,7 +61,7 @@ group_with(data.raw.item["ultimate-splitter"], data.raw.recipe["nullius-splitter
 group_with(data.raw.item["underground-belt"], data.raw.recipe["nullius-underground-belt-1"])
 group_with(data.raw.item["fast-underground-belt"], data.raw.recipe["nullius-underground-belt-2"])
 group_with(data.raw.item["express-underground-belt"], data.raw.recipe["nullius-underground-belt-3"])
-group_with(data.raw.item["ultimate-underground-belt"], data.raw.recipe["nullius-underground-belt-4"])
+group_with(data.raw.item["bob-ultimate-underground-belt"], data.raw.recipe["nullius-underground-belt-4"])
 group_with(data.raw.item["transport-belt"], data.raw.recipe["nullius-conveyor-belt-1"])
 group_with(data.raw.item["fast-transport-belt"], data.raw.recipe["nullius-conveyor-belt-2"])
 group_with(data.raw.item["express-transport-belt"], data.raw.recipe["nullius-conveyor-belt-3"])
@@ -286,9 +286,9 @@ group_with(data.raw.item["steel-display"], data.raw.recipe["nullius-display-plat
 group_with(data.raw.item["copper-display-small"], data.raw.recipe["nullius-display-plate-small-plastic"])
 group_with(data.raw.item["copper-display-medium"], data.raw.recipe["nullius-display-plate-medium-plastic"])
 group_with(data.raw.item["copper-display"], data.raw.recipe["nullius-display-plate-large-plastic"])
-group_with(data.raw.item["SNTD-nixie-tube"], data.raw.recipe["nullius-SNTD-nixie-tube"])
-group_with(data.raw.item["SNTD-nixie-tube-small"], data.raw.recipe["nullius-SNTD-nixie-tube-small"])
-group_with(data.raw.item["SNTD-old-nixie-tube"], data.raw.recipe["nullius-SNTD-old-nixie-tube"])
+group_with(data.raw.item["reinforced-nixie-tube"], data.raw.recipe["nullius-reinforced-nixie-tube"])
+group_with(data.raw.item["small-reinforced-nixie-tube"], data.raw.recipe["nullius-small-reinforced-nixie-tube"])
+group_with(data.raw.item["classic-nixie-tube"], data.raw.recipe["nullius-classic-nixie-tube"])
 group_with(data.raw.item["hs_holo_sign"], data.raw.recipe["nullius-holographic-sign"])
 
 

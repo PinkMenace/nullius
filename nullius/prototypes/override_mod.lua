@@ -374,11 +374,11 @@ AAILoaders.make_tier{
   recipe = { ingredients = {{type = "item", name ="transport-belt", amount = 1}}, energy_required = 2 }
 }
 
-data.raw["loader-1x1"]["aai-basic-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", 1}
-data.raw["loader-1x1"]["aai-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", 2}
-data.raw["loader-1x1"]["aai-fast-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", 3}
-data.raw["loader-1x1"]["aai-express-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", 4}
-data.raw["loader-1x1"]["aai-ultimate-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", 5}
+data.raw["loader-1x1"]["aai-basic-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", "1"}
+data.raw["loader-1x1"]["aai-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", "2"}
+data.raw["loader-1x1"]["aai-fast-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", "3"}
+data.raw["loader-1x1"]["aai-express-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", "4"}
+data.raw["loader-1x1"]["aai-ultimate-loader"].localised_name = {"", {"entity-name.aai-loader"}, " ", "5"}
 data.raw["loader-1x1"]["aai-basic-loader"].localised_description = {"entity-description.nullius-loader"}
 data.raw["loader-1x1"]["aai-loader"].localised_description = {"entity-description.nullius-loader"}
 data.raw["loader-1x1"]["aai-fast-loader"].localised_description = {"entity-description.nullius-loader"}
@@ -440,6 +440,7 @@ data.raw.technology["nullius-loader-5"].icons = data.raw.technology["aai-ultimat
 
 if (data.raw["loader-1x1"]["aai-turbo-loader"] ~= nil) then
 data.raw["loader-1x1"]["aai-turbo-loader"].next_upgrade = nil
+data.raw["loader-1x1"]["aai-turbo-loader"].hidden_in_factoriopedia = true
 end
 
 table.insert(data.raw.technology["nullius-mechanical-separation"].prerequisites,"nullius-loader-1")
@@ -1645,20 +1646,24 @@ end
 
 
 if mods["UPSFriendlyNixieTubeDisplay"] then
-  data.raw.item["SNTD-old-nixie-tube"].order = "nullius-sh"
-  data.raw.item["SNTD-nixie-tube"].order = "nullius-sh"
-  data.raw.item["SNTD-nixie-tube-small"].order = "nullius-sh"
+  data.raw.item["classic-nixie-tube"].order = "nullius-sh"
+  data.raw.item["reinforced-nixie-tube"].order = "nullius-sh"
+  data.raw.item["small-reinforced-nixie-tube"].order = "nullius-sh"
 
-  data.raw.item["SNTD-old-nixie-tube"].stack_size = 50
-  data.raw.item["SNTD-nixie-tube"].stack_size = 50
-  data.raw.item["SNTD-nixie-tube-small"].stack_size = 50
+  data.raw.item["classic-nixie-tube"].stack_size = 50
+  data.raw.item["reinforced-nixie-tube"].stack_size = 50
+  data.raw.item["small-reinforced-nixie-tube"].stack_size = 50
+  
+  data.raw["arithmetic-combinator"]["classic-nixie-tube-sprite"].hidden_in_factoriopedia = true
+  data.raw["arithmetic-combinator"]["reinforced-nixie-tube-sprite"].hidden_in_factoriopedia = true
+  data.raw["arithmetic-combinator"]["small-reinforced-nixie-tube-sprite"].hidden_in_factoriopedia = true
 
-  table.insert(data.raw.technology["nullius-broadcasting-1"].prerequisites,"nullius-SNTD-nixie-tubes-reinforced")
-if mods["DisplayPlates"] then
-  data.raw.item["SNTD-old-nixie-tube"].subgroup = "display-plates"
-  data.raw.item["SNTD-nixie-tube-small"].subgroup = "display-plates"
-  data.raw.item["SNTD-nixie-tube"].subgroup = "display-plates"
-end
+  table.insert(data.raw.technology["nullius-broadcasting-1"].prerequisites,"nullius-reinforced-nixie-tubes-reinforced")
+  if mods["DisplayPlates"] then
+    data.raw.item["classic-nixie-tube"].subgroup = "display-plates"
+    data.raw.item["small-reinforced-nixie-tube"].subgroup = "display-plates"
+    data.raw.item["reinforced-nixie-tube"].subgroup = "display-plates"
+  end
 end
 
 
@@ -1766,34 +1771,34 @@ if settings.startup["RTThrowersSetting"].value then
 
   if (mods["bobinserters"] and
       (settings.startup["bobmods-inserters-more2"].value == true)) then
-    table.insert(data.raw.technology["more-inserters-2"].prerequisites,
-	    "nullius-logistic-ballistics-7")
+     table.insert(data.raw.technology["bob-more-inserters-2"].prerequisites,
+	     "nullius-logistic-ballistics-7")
   else
     table.insert(data.raw.technology["nullius-inserter-capacity-1"].prerequisites,
 	    "nullius-logistic-ballistics-7")
   end
 
-  data.raw.item["PlayerLauncherItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["PlayerLauncherItem"].order = "nullius-b"
-  data.raw.item["HatchRTItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["HatchRTItem"].order = "nullius-cb"
-  data.raw.item["HatchRTItem"].stack_size = 100
-  data.raw.item["RTThrower-EjectorHatchRTItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["RTThrower-EjectorHatchRTItem"].order = "nullius-cc"
+  data.raw.item["PlayerLauncher"].subgroup = "nullius-renai-bounce"
+  data.raw.item["PlayerLauncher"].order = "nullius-b"
+  data.raw.item["HatchRT"].subgroup = "nullius-renai-bounce"
+  data.raw.item["HatchRT"].order = "nullius-cb"
+  data.raw.item["HatchRT"].stack_size = 100
+  data.raw.item["RTThrower-EjectorHatchRT"].subgroup = "nullius-renai-bounce"
+  data.raw.item["RTThrower-EjectorHatchRT"].order = "nullius-cc"
   data.raw.inserter["RTThrower-EjectorHatchRT"].order = "nullius-ucc"
-  data.raw.item["RTThrower-EjectorHatchRTItem"].stack_size = 100
-  data.raw.item["OpenContainerItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["OpenContainerItem"].order = "nullius-db"
-  data.raw.item["OpenContainerItem"].stack_size = 100
+  data.raw.item["RTThrower-EjectorHatchRT"].stack_size = 100
+  data.raw.item["OpenContainer"].subgroup = "nullius-renai-bounce"
+  data.raw.item["OpenContainer"].order = "nullius-db"
+  data.raw.item["OpenContainer"].stack_size = 100
   data.raw["container"]["OpenContainer"].inventory_size = 10
-  data.raw.item["BouncePlateItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["BouncePlateItem"].order = "nullius-eb"
-  data.raw.item["DirectedBouncePlateItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["DirectedBouncePlateItem"].order = "nullius-ec"
-  data.raw.item["SignalBouncePlateItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["SignalBouncePlateItem"].order = "nullius-ed"
-  data.raw.item["DirectorBouncePlateItem"].subgroup = "nullius-renai-bounce"
-  data.raw.item["DirectorBouncePlateItem"].order = "nullius-ee"
+  data.raw.item["RTBouncePlate"].subgroup = "nullius-renai-bounce"
+  data.raw.item["RTBouncePlate"].order = "nullius-eb"
+  data.raw.item["DirectedBouncePlate"].subgroup = "nullius-renai-bounce"
+  data.raw.item["DirectedBouncePlate"].order = "nullius-ec"
+  -- data.raw.item["SignalBouncePlate"].subgroup = "nullius-renai-bounce" -- removed by renai transportation
+  -- data.raw.item["SignalBouncePlate"].order = "nullius-ed"
+  data.raw.item["DirectorBouncePlate"].subgroup = "nullius-renai-bounce"
+  data.raw.item["DirectorBouncePlate"].order = "nullius-ee"
 end
 
 if settings.startup["RTZiplineSetting"].value then
@@ -1806,24 +1811,24 @@ if settings.startup["RTZiplineSetting"].value then
   data.raw.technology["nullius-robot-speed-5"].prerequisites =
       {"nullius-copper-production", "nullius-ziplining-5"}
 
-  data.raw.item["RTZiplineTerminalItem"].subgroup = "nullius-renai-zipline"
-  data.raw.item["RTZiplineTerminalItem"].order = "nullius-bb"
-  data.raw.gun["RTZiplineItem"].subgroup = "nullius-renai-zipline"
-  data.raw.gun["RTZiplineItem"].order = "nullius-cb"
-  data.raw.gun["RTZiplineItem2"].subgroup = "nullius-renai-zipline"
-  data.raw.gun["RTZiplineItem2"].order = "nullius-cc"
-  data.raw.gun["RTZiplineItem3"].subgroup = "nullius-renai-zipline"
-  data.raw.gun["RTZiplineItem3"].order = "nullius-cd"
-  data.raw.gun["RTZiplineItem4"].subgroup = "nullius-renai-zipline"
-  data.raw.gun["RTZiplineItem4"].order = "nullius-ce"
-  data.raw.gun["RTZiplineItem5"].subgroup = "nullius-renai-zipline"
-  data.raw.gun["RTZiplineItem5"].order = "nullius-cf"
-  data.raw.ammo["RTZiplineControlsItem"].subgroup = "nullius-renai-zipline"
-  data.raw.ammo["RTZiplineControlsItem"].order = "nullius-db"
-  data.raw.ammo["RTZiplineCrankControlsItem"].subgroup = "nullius-renai-zipline"
-  data.raw.ammo["RTZiplineCrankControlsItem"].order = "nullius-dc"
-  data.raw.ammo["RTProgrammableZiplineControlsItem"].subgroup = "nullius-renai-zipline"
-  data.raw.ammo["RTProgrammableZiplineControlsItem"].order = "nullius-dd"
+  data.raw.item["RTZiplineTerminal"].subgroup = "nullius-renai-zipline"
+  data.raw.item["RTZiplineTerminal"].order = "nullius-bb"
+  data.raw.gun["RTZiplineTrolley"].subgroup = "nullius-renai-zipline"
+  data.raw.gun["RTZiplineTrolley"].order = "nullius-cb"
+  data.raw.gun["RTZiplineTrolley2"].subgroup = "nullius-renai-zipline"
+  data.raw.gun["RTZiplineTrolley2"].order = "nullius-cc"
+  data.raw.gun["RTZiplineTrolley3"].subgroup = "nullius-renai-zipline"
+  data.raw.gun["RTZiplineTrolley3"].order = "nullius-cd"
+  data.raw.gun["RTZiplineTrolley4"].subgroup = "nullius-renai-zipline"
+  data.raw.gun["RTZiplineTrolley4"].order = "nullius-ce"
+  data.raw.gun["RTZiplineTrolley5"].subgroup = "nullius-renai-zipline"
+  data.raw.gun["RTZiplineTrolley5"].order = "nullius-cf"
+  data.raw.ammo["RTZiplineControls"].subgroup = "nullius-renai-zipline"
+  data.raw.ammo["RTZiplineControls"].order = "nullius-db"
+  data.raw.ammo["RTZiplineCrankControls"].subgroup = "nullius-renai-zipline"
+  data.raw.ammo["RTZiplineCrankControls"].order = "nullius-dc"
+  data.raw.ammo["RTProgrammableZiplineControls"].subgroup = "nullius-renai-zipline"
+  data.raw.ammo["RTProgrammableZiplineControls"].order = "nullius-dd"
   data.raw["electric-pole"]["RTZiplineTerminal"].minable.mining_time = 1
 end
 
@@ -1848,20 +1853,20 @@ if settings.startup["RTTrainRampSetting"].value then
 	end
   elseif settings.startup["RTThrowersSetting"].value then
     table.insert(data.raw.technology["nullius-freight-ballistics-2"].prerequisites,
-      "nullius-freight-ballistics-1")  
+      "nullius-freight-ballistics-1")
   end
 
-  data.raw.item["RTTrainRampItem"].subgroup = "nullius-renai-ramp"
-  data.raw.item["RTTrainRampItem"].order = "nullius-bb"
-  data.raw.item["RTMagnetTrainRampItem"].subgroup = "nullius-renai-ramp"
-  data.raw.item["RTMagnetTrainRampItem"].order = "nullius-bc"
-  data.raw.item["RTImpactUnloaderItem"].subgroup = "nullius-renai-ramp"
-  data.raw.item["RTImpactUnloaderItem"].order = "nullius-db"
-  data.raw.item["RTImpactWagonItem"].subgroup = "nullius-renai-ramp"
-  data.raw.item["RTImpactWagonItem"].order = "nullius-dc"
-  data.raw["simple-entity-with-owner"]["RTTrainRamp"].minable.mining_time = 0.8
-  data.raw["simple-entity-with-owner"]["RTMagnetTrainRamp"].minable.mining_time = 1.2
-  data.raw["simple-entity-with-owner"]["RTImpactUnloader"].minable.mining_time = 1
+  data.raw.item["RTTrainRamp"].subgroup = "nullius-renai-ramp"
+  data.raw.item["RTTrainRamp"].order = "nullius-bb"
+  data.raw.item["RTMagnetTrainRamp"].subgroup = "nullius-renai-ramp"
+  data.raw.item["RTMagnetTrainRamp"].order = "nullius-bc"
+  data.raw.item["RTImpactUnloader"].subgroup = "nullius-renai-ramp"
+  data.raw.item["RTImpactUnloader"].order = "nullius-db"
+  data.raw.item["RTImpactWagon"].subgroup = "nullius-renai-ramp"
+  data.raw.item["RTImpactWagon"].order = "nullius-dc"
+  data.raw["rail-signal"]["RTTrainRamp"].minable.mining_time = 0.8
+  data.raw["rail-signal"]["RTMagnetTrainRamp"].minable.mining_time = 1.2
+  data.raw["rail-signal"]["RTImpactUnloader"].minable.mining_time = 1
 
   data.raw["cargo-wagon"]["RTImpactWagon"].inventory_size = 50
   data.raw["cargo-wagon"]["RTImpactWagon"].max_health = 800
@@ -1880,14 +1885,14 @@ if settings.startup["RTTrainRampSetting"].value then
   }
 
 if settings.startup["RTThrowersSetting"].value then
-  data.raw.item["RTTrainBouncePlateItem"].subgroup = "nullius-renai-ramp"
-  data.raw.item["RTTrainBouncePlateItem"].order = "nullius-cb"
-  data.raw.item["RTTrainBouncePlateItem"].stack_size = 20
-  data.raw.item["RTTrainDirectedBouncePlateItem"].subgroup = "nullius-renai-ramp"
-  data.raw.item["RTTrainDirectedBouncePlateItem"].order = "nullius-cc"
-  data.raw.item["RTTrainDirectedBouncePlateItem"].stack_size = 20
+  data.raw.item["RTTrainBouncePlate"].subgroup = "nullius-renai-ramp"
+  data.raw.item["RTTrainBouncePlate"].order = "nullius-cb"
+  data.raw.item["RTTrainBouncePlate"].stack_size = 20
+  data.raw.item["RTTrainDirectedBouncePlate"].subgroup = "nullius-renai-ramp"
+  data.raw.item["RTTrainDirectedBouncePlate"].order = "nullius-cc"
+  data.raw.item["RTTrainDirectedBouncePlate"].stack_size = 20
   data.raw["simple-entity-with-owner"]["RTTrainBouncePlate"].minable.mining_time = 0.6
-  data.raw["constant-combinator"]["RTTrainDirectedBouncePlate"].minable.mining_time = 0.8
+  data.raw["simple-entity-with-owner"]["RTTrainDirectedBouncePlate"].minable.mining_time = 0.8
 end
 end
 end
