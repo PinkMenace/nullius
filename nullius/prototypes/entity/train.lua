@@ -78,7 +78,6 @@ data:extend({
               direction_count = 256,
               scale = 0.5,
               usage = "train",
-              shift = {0.0, -0.5},
               tint = {0.62, 0.6, 0.5},
             }
           ),
@@ -93,7 +92,6 @@ data:extend({
               direction_count = 256,
               scale = 0.5,
               usage = "train",
-              shift = {0.0, -0.5},
             }
           ),
           util.sprite_load("__base__/graphics/entity/locomotive/locomotive-shadow",
@@ -106,7 +104,6 @@ data:extend({
               direction_count = 256,
               scale = 0.5,
               usage = "train",
-              shift = {1, 0.3}
             }
           )
         }
@@ -182,7 +179,6 @@ data:extend({
               direction_count = 256,
               scale = 0.5,
               usage = "train",
-              shift = {0.0, -0.5},
               tint = {1, 0.9, 0.8},
             }
           ),
@@ -259,7 +255,6 @@ data:extend({
               direction_count = 256,
               scale = 0.5,
               usage = "train",
-              shift = {0.0, -0.5},
               tint = {0.9, 0.95, 1}
             }
           ),
@@ -329,7 +324,6 @@ data:extend({
               direction_count = 256,
               scale = 0.5,
               usage = "train",
-              shift = {0.0, -0.5},
               tint = {0.9, 1, 0.95}
             }
           ),
@@ -536,7 +530,7 @@ data:extend({
     impact_category = data.raw["fluid-wagon"]["fluid-wagon"].impact_category,
     water_reflection = data.raw["fluid-wagon"]["fluid-wagon"].water_reflection,
     sound_minimum_speed = 0.1,
-
+  
     pictures = {
       rotated = {
         layers = {
@@ -549,7 +543,6 @@ data:extend({
               direction_count = 128,
               scale = 0.5,
               usage = "train",
-              shift = {0 + 0.013, -1 + 0.077},
               apply_runtime_tint = true,
             }
           ),
@@ -563,7 +556,6 @@ data:extend({
               direction_count = 128,
               scale = 0.5,
               usage = "train",
-              shift = {0.875 + 0.013, 0.3125 + 0.077},
             }
           )
         }
@@ -707,11 +699,14 @@ data:extend({
     back_light = data.raw["artillery-wagon"]["artillery-wagon"].back_light,
     stand_by_light = data.raw["artillery-wagon"]["artillery-wagon"].stand_by_light,
     color = {r = 0.43, g = 0.23, b = 0, a = 0.5},
+    
     cannon_barrel_pictures = data.raw["artillery-wagon"]["artillery-wagon"].cannon_barrel_pictures,
     cannon_base_pictures = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_pictures,
-    cannon_base_shiftings = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_shiftings,
     cannon_barrel_recoil_shiftings = data.raw["artillery-wagon"]["artillery-wagon"].cannon_barrel_recoil_shiftings,
-    cannon_barrel_recoil_shiftings_load_correction_matrix = data.raw["artillery-wagon"]["artillery-wagon"].cannon_barrel_recoil_shiftings_load_correction_matrix,
+    cannon_base_height = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_height,
+    cannon_base_shift_when_vertical = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_shift_when_vertical,
+    cannon_base_shift_when_horizontal = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_shift_when_horizontal,
+    
     minimap_representation = data.raw["artillery-wagon"]["artillery-wagon"].minimap_representation,
     selected_minimap_representation = data.raw["artillery-wagon"]["artillery-wagon"].selected_minimap_representation,
     wheels = data.raw["artillery-wagon"]["artillery-wagon"].wheels,
@@ -740,7 +735,6 @@ data:extend({
               scale = 0.5,
               usage = "train",
               tint = { 0.7, 0.7, 0.9 },
-              shift = util.by_pixel(0, -27),
             }
           ),
           util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-base",
@@ -752,7 +746,6 @@ data:extend({
               direction_count = 256,
               scale = 0.5,
               usage = "train",
-              shift = util.by_pixel(0.5, -27.5),
               tint = { 0.7, 0.7, 0.9 }
             }
           ),
@@ -802,12 +795,15 @@ data:extend({
     back_light = data.raw["artillery-wagon"]["artillery-wagon"].back_light,
     stand_by_light = data.raw["artillery-wagon"]["artillery-wagon"].stand_by_light,
     color = {r = 0.43, g = 0.23, b = 0, a = 0.5},
+    
     pictures = data.raw["artillery-wagon"]["artillery-wagon"].pictures,
     cannon_barrel_pictures = data.raw["artillery-wagon"]["artillery-wagon"].cannon_barrel_pictures,
     cannon_base_pictures = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_pictures,
-    cannon_base_shiftings = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_shiftings,
     cannon_barrel_recoil_shiftings = data.raw["artillery-wagon"]["artillery-wagon"].cannon_barrel_recoil_shiftings,
-    cannon_barrel_recoil_shiftings_load_correction_matrix = data.raw["artillery-wagon"]["artillery-wagon"].cannon_barrel_recoil_shiftings_load_correction_matrix,
+    cannon_base_height = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_height,
+    cannon_base_shift_when_vertical = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_shift_when_vertical,
+    cannon_base_shift_when_horizontal = data.raw["artillery-wagon"]["artillery-wagon"].cannon_base_shift_when_horizontal,
+    
     minimap_representation = data.raw["artillery-wagon"]["artillery-wagon"].minimap_representation,
     selected_minimap_representation = data.raw["artillery-wagon"]["artillery-wagon"].selected_minimap_representation,
     wheels = data.raw["artillery-wagon"]["artillery-wagon"].wheels,
