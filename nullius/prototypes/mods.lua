@@ -2648,9 +2648,10 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-thrower-1",
+    localised_name = {"entity-name.nullius-thrower", tostring(1)},
     enabled = false,
     always_show_made_in = true,
-	GCKI_ignore = true,
+	  GCKI_ignore = true,
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
@@ -2664,9 +2665,10 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-thrower-2",
+    localised_name = {"entity-name.nullius-thrower", tostring(2)},
     enabled = false,
     always_show_made_in = true,
-	GCKI_ignore = true,
+	  GCKI_ignore = true,
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
@@ -2678,29 +2680,13 @@ data:extend({
 			{type = "item", name = "bob-turbo-inserter", amount = 1}
 		}
   },
-  -- {
-  --   type = "recipe",
-  --   name = "nullius-filter-thrower-2", -- TODO: no filter thrower-1 ??
-  --   enabled = false,
-  --   always_show_made_in = true,
-	-- GCKI_ignore = true,
-  --   category = "medium-crafting",
-  --   energy_required = 2,
-  --   ingredients = {
-  --     {type = "item", name = "RTThrower-inserter-Item", amount = 1},
-  --     {type = "item", name = "bob-turbo-filter-inserter", amount = 1},
-	--   {type = "item", name = "nullius-motor-2", amount = 1}
-  --   },
-  --   results = {
-	-- 		{type = "item", name = "bob-turbo-filter-inserter", amount = 1}
-	-- 	}
-  -- },
   {
     type = "recipe",
     name = "nullius-thrower-3",
+    localised_name = {"entity-name.nullius-thrower", tostring(3)},
     enabled = false,
     always_show_made_in = true,
-	GCKI_ignore = true,
+	  GCKI_ignore = true,
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
@@ -2711,28 +2697,13 @@ data:extend({
 			{type = "item", name = "bulk-inserter", amount = 1}
 		}
   },
-  -- {
-  --   type = "recipe",
-  --   name = "nullius-filter-thrower-3",
-  --   enabled = false,
-  --   always_show_made_in = true,
-	-- GCKI_ignore = true,
-  --   category = "medium-crafting",
-  --   energy_required = 2,
-  --   ingredients = {
-  --     {type = "item", name = "RTThrower-turbo-filter-inserter-Item", amount = 1},
-  --     {type = "item", name = "stack-filter-inserter", amount = 2}
-  --   },
-  --   results = {
-	-- 		{type = "item", name = "stack-filter-inserter", amount = 1}
-	-- 	}
-  -- },
   {
     type = "recipe",
     name = "nullius-thrower-4",
+    localised_name = {"entity-name.nullius-thrower", tostring(4)},
     enabled = false,
     always_show_made_in = true,
-	GCKI_ignore = true,
+	  GCKI_ignore = true,
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
@@ -2743,25 +2714,10 @@ data:extend({
 			{type = "item", name = "bob-express-bulk-inserter", amount = 1}
 		}
   },
-  -- {
-  --   type = "recipe",
-  --   name = "nullius-filter-thrower-4",
-  --   enabled = false,
-  --   always_show_made_in = true,
-	-- GCKI_ignore = true,
-  --   category = "medium-crafting",
-  --   energy_required = 3,
-  --   ingredients = {
-  --     {type = "item", name = "RTThrower-stack-filter-inserter-Item", amount = 1},
-  --     {type = "item", name = "express-stack-filter-inserter", amount = 2}
-  --   },
-  --   results = {
-	-- 		{type = "item", name = "express-stack-filter-inserter", amount = 1}
-	-- 	}
-  -- },
   {
     type = "recipe",
     name = "nullius-open-chest",
+    localised_name = {"entity-name.OpenContainer"},
     enabled = false,
     always_show_made_in = true,
     no_productivity = true,
@@ -2782,8 +2738,8 @@ data:extend({
     always_show_made_in = true,
     no_productivity = true,
     category = "medium-crafting",
-	subgroup = "nullius-renai-bounce",
-	order = "nullius-dc",
+	  subgroup = "nullius-renai-bounce",
+	  order = "nullius-dc",
     energy_required = 0.5,
     ingredients = {
       {type = "item", name = "OpenContainer", amount = 1}
@@ -2795,13 +2751,14 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-hatch",
+    localised_name = {"entity-name.HatchRT"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
       {type = "item", name = "nullius-underground-pipe-2", amount = 1},
-	  {type = "item", name = "nullius-priority-valve", amount = 1},
+	    {type = "item", name = "nullius-priority-valve", amount = 1},
       {type = "item", name = "nullius-steel-rod", amount = 1}
     },
     results = {
@@ -2811,6 +2768,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-ejector-hatch",
+    localised_name = {"entity-name.RTThrower-EjectorHatchRT"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -2827,6 +2785,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-player-thrower",
+    localised_name = {"entity-name.PlayerLauncher"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -2842,6 +2801,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bounce-plate",
+    localised_name = {"entity-name.RTBouncePlate"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -2858,6 +2818,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-directed-bounce-plate",
+    localised_name = {"entity-name.DirectedBouncePlate"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -2872,7 +2833,7 @@ data:extend({
   },
   -- {
   --   type = "recipe",
-  --   name = "nullius-signal-bounce-plate", -- TODO: what happened there ?
+  --   name = "nullius-signal-bounce-plate", -- Recently removed by the original mod
   --   enabled = false,
   --   always_show_made_in = true,
   --   category = "small-crafting",
@@ -2888,6 +2849,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-director-bounce-plate",
+    localised_name = {"entity-name.DirectorBouncePlate"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -2916,13 +2878,14 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-trolley",
+    localised_name = {"item-name.RTZiplineTrolley"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 3,
     ingredients = {
       {type = "item", name = "nullius-locomotive-1", amount = 1},
-	  {type = "item", name = "nullius-iron-wire", amount = 2}
+	    {type = "item", name = "nullius-iron-wire", amount = 2}
     },
     results = {
 			{type = "item", name = "RTZiplineTrolley", amount = 1}
@@ -2931,14 +2894,15 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-trolley-2",
+    localised_name = {"item-name.RTZiplineTrolley2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 6,
     ingredients = {
       {type = "item", name = "RTZiplineTrolley", amount = 2},
-	  {type = "item", name = "nullius-motor-2", amount = 3},
-	  {type = "item", name = "nullius-steel-cable", amount = 10}
+	    {type = "item", name = "nullius-motor-2", amount = 3},
+	    {type = "item", name = "nullius-steel-cable", amount = 10}
     },
     results = {
 			{type = "item", name = "RTZiplineTrolley2", amount = 1}
@@ -2947,15 +2911,16 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-trolley-3",
+    localised_name = {"item-name.RTZiplineTrolley3"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 12,
     ingredients = {
       {type = "item", name = "RTZiplineTrolley2", amount = 1},
-	  {type = "item", name = "nullius-locomotive-2", amount = 1},
-	  {type = "item", name = "nullius-textile", amount = 8},
-	  {type = "item", name = "nullius-speed-module-2", amount = 1}
+	    {type = "item", name = "nullius-locomotive-2", amount = 1},
+	    {type = "item", name = "nullius-textile", amount = 8},
+	    {type = "item", name = "nullius-speed-module-2", amount = 1}
     },
     results = {
 			{type = "item", name = "RTZiplineTrolley3", amount = 1}
@@ -2964,16 +2929,17 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-trolley-4",
+    localised_name = {"item-name.RTZiplineTrolley4"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 25,
     ingredients = {
       {type = "item", name = "RTZiplineTrolley3", amount = 1},
-	  {type = "item", name = "nullius-motor-3", amount = 4},
-	  {type = "item", name = "nullius-carbon-composite", amount = 12},
-	  {type = "item", name = "nullius-bearing", amount = 12},
-	  {type = "item", name = "nullius-levitation-field-1", amount = 2}
+	    {type = "item", name = "nullius-motor-3", amount = 4},
+	    {type = "item", name = "nullius-carbon-composite", amount = 12},
+	    {type = "item", name = "nullius-bearing", amount = 12},
+	    {type = "item", name = "nullius-levitation-field-1", amount = 2}
     },
     results = {
 			{type = "item", name = "RTZiplineTrolley4", amount = 1}
@@ -2982,16 +2948,17 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-trolley-5",
+    localised_name = {"item-name.RTZiplineTrolley5"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 50,
     ingredients = {
       {type = "item", name = "RTZiplineTrolley4", amount = 2},
-	  {type = "item", name = "nullius-locomotive-3", amount = 1},
-	  {type = "item", name = "nullius-titanium-rod", amount = 6},
-	  {type = "item", name = "nullius-speed-module-3", amount = 3},
-	  {type = "item", name = "nullius-stabilizer-1", amount = 2}
+	    {type = "item", name = "nullius-locomotive-3", amount = 1},
+	    {type = "item", name = "nullius-titanium-rod", amount = 6},
+	    {type = "item", name = "nullius-speed-module-3", amount = 3},
+	    {type = "item", name = "nullius-stabilizer-1", amount = 2}
     },
     results = {
 			{type = "item", name = "RTZiplineTrolley5", amount = 1}
@@ -3000,13 +2967,14 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-control",
+    localised_name = {"item-name.RTZiplineControls"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
       {type = "item", name = "power-switch", amount = 1},
-	  {type = "item", name = "decider-combinator", amount = 1}
+	    {type = "item", name = "decider-combinator", amount = 1}
     },
     results = {
 			{type = "item", name = "RTZiplineControls", amount = 1}
@@ -3015,14 +2983,15 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-crank-control",
+    localised_name = {"item-name.RTZiplineCrankControls"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 1,
     ingredients = {
       {type = "item", name = "RTZiplineControls", amount = 1},
-	  {type = "item", name = "nullius-steel-rod", amount = 1},
-	  {type = "item", name = "nullius-steel-gear", amount = 2}
+	    {type = "item", name = "nullius-steel-rod", amount = 1},
+	    {type = "item", name = "nullius-steel-gear", amount = 2}
     },
     results = {
 			{type = "item", name = "RTZiplineCrankControls", amount = 1}
@@ -3031,15 +3000,16 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-smart-control",
+    localised_name = {"item-name.RTProgrammableZiplineControls"},
     enabled = false,
     always_show_made_in = true,
     category = "tiny-crafting",
     energy_required = 5,
     ingredients = {
       {type = "item", name = "RTZiplineControls", amount = 1},
-	  {type = "item", name = "nullius-speed-module-1", amount = 1},
-	  {type = "item", name = "programmable-speaker", amount = 1},
-	  {type = "item", name = "nullius-sensor-1", amount = 1}
+	    {type = "item", name = "nullius-speed-module-1", amount = 1},
+	    {type = "item", name = "programmable-speaker", amount = 1},
+	    {type = "item", name = "nullius-sensor-1", amount = 1}
     },
     results = {
 			{type = "item", name = "RTProgrammableZiplineControls", amount = 1}
@@ -3048,15 +3018,16 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-zipline-terminal",
+    localised_name = {"entity-name.RTZiplineTerminal"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 15,
     ingredients = {
       {type = "item", name = "RTProgrammableZiplineControls", amount = 1},
-	  {type = "item", name = "train-stop", amount = 1},
-	  {type = "item", name = "nullius-steel-cable", amount = 12},
-	  {type = "item", name = "big-electric-pole", amount = 1}
+	    {type = "item", name = "train-stop", amount = 1},
+	    {type = "item", name = "nullius-steel-cable", amount = 12},
+	    {type = "item", name = "big-electric-pole", amount = 1}
     },
     results = {
 			{type = "item", name = "RTZiplineTerminal", amount = 1}
@@ -3076,14 +3047,15 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-ramp",
+    localised_name = {"entity-name.RTTrainRamp"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 4,
     ingredients = {
       {type = "item", name = "rail", amount = 2},
-	  {type = "item", name = "concrete", amount = 25},
-	  {type = "item", name = "nullius-steel-beam", amount = 4}
+	    {type = "item", name = "concrete", amount = 25},
+	    {type = "item", name = "nullius-steel-beam", amount = 4}
     },
     results = {
 			{type = "item", name = "RTTrainRamp", amount = 1}
@@ -3092,15 +3064,16 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-magnetic-ramp",
+    localised_name = {"entity-name.RTMagnetTrainRamp"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
     energy_required = 6,
     ingredients = {
       {type = "item", name = "RTTrainRamp", amount = 1},
-	  {type = "item", name = "nullius-grid-battery-1", amount = 1},
-	  {type = "item", name = "nullius-beacon-2", amount = 1},
-	  {type = "item", name = "nullius-levitation-field-1", amount = 4}
+	    {type = "item", name = "nullius-grid-battery-1", amount = 1},
+	    {type = "item", name = "nullius-beacon-2", amount = 1},
+	    {type = "item", name = "nullius-levitation-field-1", amount = 4}
     },
     results = {
 			{type = "item", name = "RTMagnetTrainRamp", amount = 1}
@@ -3109,6 +3082,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-impact-unloader",
+    localised_name = {"entity-name.RTImpactUnloader"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -3116,8 +3090,8 @@ data:extend({
     ingredients = {
       {type = "item", name = "stone-wall", amount = 6},
       {type = "item", name = "refined-concrete", amount = 30},
-	  {type = "item", name = "nullius-steel-plate", amount = 12},
-	  {type = "item", name = "RTTrainDirectedBouncePlate", amount = 1}
+	    {type = "item", name = "nullius-steel-plate", amount = 12},
+	    {type = "item", name = "RTTrainDirectedBouncePlate", amount = 1}
     },
     results = {
 			{type = "item", name = "RTImpactUnloader", amount = 1}
@@ -3126,6 +3100,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-impact-wagon",
+    localised_name = {"entity-name.RTImpactWagon"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -3133,8 +3108,8 @@ data:extend({
     ingredients = {
       {type = "item", name = "nullius-cargo-wagon-2", amount = 1},
       {type = "item", name = "HatchRT", amount = 5},
-	  {type = "item", name = "nullius-steel-gear", amount = 4},
-	  {type = "item", name = "nullius-steel-plate", amount = 10}
+	    {type = "item", name = "nullius-steel-gear", amount = 4},
+	    {type = "item", name = "nullius-steel-plate", amount = 10}
     },
     results = {
 			{type = "item", name = "RTImpactWagon", amount = 1}
@@ -3146,6 +3121,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-bounce-plate",
+    localised_name = {"entity-name.RTTrainBouncePlate"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -3162,6 +3138,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-directed-bounce-plate",
+    localised_name = {"entity-name.RTTrainDirectedBouncePlate"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -3189,8 +3166,8 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-1",
     order = "nullius-cd",
-	icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3217,8 +3194,8 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-2",
     order = "nullius-cf",
-	icon = "__RenaiTransportation__/graphics/technology/start.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/start.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3237,8 +3214,8 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-3",
     order = "nullius-ci",
-	icon = "__RenaiTransportation__/graphics/icons/hatch_icon.png",
-	icon_size = 64,
+	  icon = "__RenaiTransportation__/graphics/icons/hatch_icon.png",
+	  icon_size = 64,
     effects = {
       {
         type = "unlock-recipe",
@@ -3257,8 +3234,8 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-4",
     order = "nullius-cj",
-	icon = "__RenaiTransportation__/graphics/technology/PrimerPlateIconn.png",
-	icon_size = 64,
+	  icon = "__RenaiTransportation__/graphics/technology/PrimerPlateIconn.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3281,17 +3258,13 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-5",
     order = "nullius-de",
-	icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
         recipe = "nullius-thrower-2"
-      },
-      -- {
-      --   type = "unlock-recipe",
-      --   recipe = "nullius-filter-thrower-2"
-      -- }
+      }
     },
     unit = {
       count = 10,
@@ -3308,8 +3281,8 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-6",
     order = "nullius-dl",
-	icon = "__RenaiTransportation__/graphics/icons/DirectorPlateIcon.png",
-	icon_size = 64,
+	  icon = "__RenaiTransportation__/graphics/icons/DirectorPlateIcon.png",
+	  icon_size = 256,
     effects = {
       -- {
       --   type = "unlock-recipe",
@@ -3338,17 +3311,13 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-7",
     order = "nullius-ek",
-	icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
         recipe = "nullius-thrower-3"
       },
-      -- {
-      --   type = "unlock-recipe",
-      --   recipe = "nullius-filter-thrower-3"
-      -- }
     },
     unit = {
       count = 400,
@@ -3365,17 +3334,13 @@ data:extend({
     type = "technology",
     name = "nullius-logistic-ballistics-8",
     order = "nullius-fe",
-	icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
         recipe = "nullius-thrower-4"
       },
-      -- {
-      --   type = "unlock-recipe",
-      --   recipe = "nullius-filter-thrower-4"
-      -- }
     },
     unit = {
       count = 1200,
@@ -3404,8 +3369,8 @@ data:extend({
     name = "nullius-ziplining-1",
     localised_description = {"technology-description.RTZiplineTech"},
     order = "nullius-dd",
-	icon = "__RenaiTransportation__/graphics/technology/Zipline_crankcontrols.png",
-	icon_size = 64,
+	  icon = "__RenaiTransportation__/graphics/technology/Zipline_crankcontrols.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3436,8 +3401,8 @@ data:extend({
     name = "nullius-ziplining-2",
     localised_description = {"technology-description.RTZiplineTech"},
     order = "nullius-dm",
-	icon = "__RenaiTransportation__/graphics/technology/Zipline_terminaltech.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/Zipline_terminaltech.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3467,8 +3432,8 @@ data:extend({
     name = "nullius-ziplining-3",
     localised_description = {"technology-description.RTZiplineTech"},
     order = "nullius-em",
-	icon = "__RenaiTransportation__/graphics/technology/Zipline1.png",
-	icon_size = 64,
+	  icon = "__RenaiTransportation__/graphics/technology/Zipline1.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3480,7 +3445,7 @@ data:extend({
       ingredients = {
         {"nullius-geology-pack", 1}, {"nullius-climatology-pack", 1},
         {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1},
-		{"nullius-chemical-pack", 1}
+		    {"nullius-chemical-pack", 1}
       },
       time = 35
     },
@@ -3492,8 +3457,8 @@ data:extend({
     name = "nullius-ziplining-4",
     localised_description = {"technology-description.RTZiplineTech"},
     order = "nullius-fh",
-	icon = "__RenaiTransportation__/graphics/technology/Zipline2.png",
-	icon_size = 64,
+	  icon = "__RenaiTransportation__/graphics/technology/Zipline2.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3516,8 +3481,8 @@ data:extend({
     name = "nullius-ziplining-5",
     localised_description = {"technology-description.RTZiplineTech"},
     order = "nullius-gd",
-	icon = "__RenaiTransportation__/graphics/technology/Zipline3.png",
-	icon_size = 64,
+	  icon = "__RenaiTransportation__/graphics/technology/Zipline3.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3547,8 +3512,8 @@ if settings.startup["RTTrainRampSetting"].value then
     type = "technology",
     name = "nullius-freight-ballistics-1",
     order = "nullius-dm",
-	icon = "__RenaiTransportation__/graphics/technology/FlyingFreight.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/FlyingFreight.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3569,8 +3534,8 @@ if settings.startup["RTTrainRampSetting"].value then
     type = "technology",
     name = "nullius-freight-ballistics-2",
     order = "nullius-eh",
-	icon = "__RenaiTransportation__/graphics/technology/FlyingFreightPlate.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/FlyingFreightPlate.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3596,8 +3561,8 @@ if settings.startup["RTTrainRampSetting"].value then
     type = "technology",
     name = "nullius-freight-ballistics-3",
     order = "nullius-eq",
-	icon = "__RenaiTransportation__/graphics/technology/Impact.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/Impact.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",
@@ -3623,8 +3588,8 @@ if settings.startup["RTTrainRampSetting"].value then
     type = "technology",
     name = "nullius-freight-ballistics-4",
     order = "nullius-fc",
-	icon = "__RenaiTransportation__/graphics/technology/MagnetFreight.png",
-	icon_size = 128,
+	  icon = "__RenaiTransportation__/graphics/technology/MagnetFreight.png",
+	  icon_size = 256,
     effects = {
       {
         type = "unlock-recipe",

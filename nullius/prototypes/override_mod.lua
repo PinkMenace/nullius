@@ -1771,8 +1771,8 @@ if settings.startup["RTThrowersSetting"].value then
 
   if (mods["bobinserters"] and
       (settings.startup["bobmods-inserters-more2"].value == true)) then
-    -- table.insert(data.raw.technology["more-inserters-2"].prerequisites, -- TODO: wtf
-	  --   "nullius-logistic-ballistics-7")
+     table.insert(data.raw.technology["bob-more-inserters-2"].prerequisites,
+	     "nullius-logistic-ballistics-7")
   else
     table.insert(data.raw.technology["nullius-inserter-capacity-1"].prerequisites,
 	    "nullius-logistic-ballistics-7")
@@ -1795,7 +1795,7 @@ if settings.startup["RTThrowersSetting"].value then
   data.raw.item["RTBouncePlate"].order = "nullius-eb"
   data.raw.item["DirectedBouncePlate"].subgroup = "nullius-renai-bounce"
   data.raw.item["DirectedBouncePlate"].order = "nullius-ec"
-  -- data.raw.item["SignalBouncePlate"].subgroup = "nullius-renai-bounce"
+  -- data.raw.item["SignalBouncePlate"].subgroup = "nullius-renai-bounce" -- removed by renai transportation
   -- data.raw.item["SignalBouncePlate"].order = "nullius-ed"
   data.raw.item["DirectorBouncePlate"].subgroup = "nullius-renai-bounce"
   data.raw.item["DirectorBouncePlate"].order = "nullius-ee"
@@ -1853,7 +1853,7 @@ if settings.startup["RTTrainRampSetting"].value then
 	end
   elseif settings.startup["RTThrowersSetting"].value then
     table.insert(data.raw.technology["nullius-freight-ballistics-2"].prerequisites,
-      "nullius-freight-ballistics-1")  
+      "nullius-freight-ballistics-1")
   end
 
   data.raw.item["RTTrainRamp"].subgroup = "nullius-renai-ramp"
@@ -1864,9 +1864,9 @@ if settings.startup["RTTrainRampSetting"].value then
   data.raw.item["RTImpactUnloader"].order = "nullius-db"
   data.raw.item["RTImpactWagon"].subgroup = "nullius-renai-ramp"
   data.raw.item["RTImpactWagon"].order = "nullius-dc"
-  -- data.raw["simple-entity-with-owner"]["RTTrainRamp"].minable.mining_time = 0.8
-  -- data.raw["simple-entity-with-owner"]["RTMagnetTrainRamp"].minable.mining_time = 1.2
-  -- data.raw["simple-entity-with-owner"]["RTImpactUnloader"].minable.mining_time = 1
+  data.raw["rail-signal"]["RTTrainRamp"].minable.mining_time = 0.8
+  data.raw["rail-signal"]["RTMagnetTrainRamp"].minable.mining_time = 1.2
+  data.raw["rail-signal"]["RTImpactUnloader"].minable.mining_time = 1
 
   data.raw["cargo-wagon"]["RTImpactWagon"].inventory_size = 50
   data.raw["cargo-wagon"]["RTImpactWagon"].max_health = 800
