@@ -21,6 +21,7 @@
     "(?) boblibrary >= 1.1.4",
     "(?) IRobot >= 1.1.0",
 	  "(?) jetpack >= 0.3.14",
+	  "(?) UPSFriendlyNixieTubeDisplay >= 0.2.9",
     "! aai-industry",
 	  "! angelsbioprocessing",
 	  "! angelsinfiniteores",

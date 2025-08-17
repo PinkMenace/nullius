@@ -1652,13 +1652,17 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
   data.raw.item["classic-nixie-tube"].stack_size = 50
   data.raw.item["reinforced-nixie-tube"].stack_size = 50
   data.raw.item["small-reinforced-nixie-tube"].stack_size = 50
+  
+  data.raw["arithmetic-combinator"]["classic-nixie-tube-sprite"].hidden_in_factoriopedia = true
+  data.raw["arithmetic-combinator"]["reinforced-nixie-tube-sprite"].hidden_in_factoriopedia = true
+  data.raw["arithmetic-combinator"]["small-reinforced-nixie-tube-sprite"].hidden_in_factoriopedia = true
 
   table.insert(data.raw.technology["nullius-broadcasting-1"].prerequisites,"nullius-reinforced-nixie-tubes-reinforced")
-if mods["DisplayPlates"] then
-  data.raw.item["classic-nixie-tube"].subgroup = "display-plates"
-  data.raw.item["small-reinforced-nixie-tube"].subgroup = "display-plates"
-  data.raw.item["reinforced-nixie-tube"].subgroup = "display-plates"
-end
+  if mods["DisplayPlates"] then
+    data.raw.item["classic-nixie-tube"].subgroup = "display-plates"
+    data.raw.item["small-reinforced-nixie-tube"].subgroup = "display-plates"
+    data.raw.item["reinforced-nixie-tube"].subgroup = "display-plates"
+  end
 end
 
 
@@ -1766,7 +1770,7 @@ if settings.startup["RTThrowersSetting"].value then
 
   if (mods["bobinserters"] and
       (settings.startup["bobmods-inserters-more2"].value == true)) then
-    -- table.insert(data.raw.technology["more-inserters-2"].prerequisites,
+    -- table.insert(data.raw.technology["more-inserters-2"].prerequisites, -- TODO: wtf
 	  --   "nullius-logistic-ballistics-7")
   else
     table.insert(data.raw.technology["nullius-inserter-capacity-1"].prerequisites,

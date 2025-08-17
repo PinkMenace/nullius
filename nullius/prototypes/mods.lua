@@ -528,7 +528,7 @@ data:extend({
       {type="item", name="express-filter-miniloader", amount=1},
       {type="item", name="storage-chest", amount=1},
       {type="item", name="bob-ultimate-underground-belt", amount=1},
-      {type="item", name="express-stack-filter-inserter", amount=2}
+      {type="item", name="express-stack-filter-inserter", amount=2} -- TODO: rename this ??
     },
     results = {
 			{type = "item", name = "ultimate-filter-miniloader", amount = 1}
@@ -2105,6 +2105,7 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
     {
       type = "recipe",
       name = "nullius-classic-nixie-tube",
+      localised_name = {"entity-name.classic-nixie-tube"},
       enabled = false,
       always_show_made_in = true,
       category = "small-crafting",
@@ -2122,6 +2123,7 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
     {
       type = "recipe",
       name = "nullius-reinforced-nixie-tube",
+      localised_name = {"entity-name.reinforced-nixie-tube"},
       enabled = false,
       always_show_made_in = true,
       category = "medium-crafting",
@@ -2137,13 +2139,14 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
     {
       type = "recipe",
       name = "nullius-small-reinforced-nixie-tube",
+      localised_name = {"entity-name.small-reinforced-nixie-tube"},
       enabled = false,
       always_show_made_in = true,
       category = "small-crafting",
       energy_required = 3,
       ingredients = {
         {type = "item", name = "classic-nixie-tube", amount = 1},
-		{type = "item", name = "nullius-green-wire", amount = 2},
+		    {type = "item", name = "nullius-green-wire", amount = 2},
         {type = "item", name = "iron-chest", amount = 1}
       },
       results = {
@@ -2672,7 +2675,7 @@ data:extend({
   },
   -- {
   --   type = "recipe",
-  --   name = "nullius-filter-thrower-2",
+  --   name = "nullius-filter-thrower-2", -- TODO: no filter thrower-1 ??
   --   enabled = false,
   --   always_show_made_in = true,
 	-- GCKI_ignore = true,
@@ -2864,7 +2867,7 @@ data:extend({
   },
   -- {
   --   type = "recipe",
-  --   name = "nullius-signal-bounce-plate",
+  --   name = "nullius-signal-bounce-plate", -- TODO: what happened there ?
   --   enabled = false,
   --   always_show_made_in = true,
   --   category = "small-crafting",
