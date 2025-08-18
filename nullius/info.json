@@ -21,7 +21,7 @@
     "(?) IRobot >= 1.1.0",
 	  "(?) jetpack >= 0.3.14",
 	  
-	  "(?) FluidMustFlow >= 1.4.4",
+	  "(?) FluidMustFlow >= 1.4.3",
 	  "(?) factorissimo-2-notnotmelon >= 3.9.7",
 	  "(?) safefill >= 2.0.0",
 	  "(?) train-upgrader >= 2.0.0",

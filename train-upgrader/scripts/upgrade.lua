@@ -168,28 +168,28 @@ function restore_inventory(car, contents, station)
 	  for key, inv_slot in pairs(entry.contents) do
 	    itemname = inv_slot.name
 	    amount = inv_slot.count
-      quality = inv_slot.quality
+        quality = inv_slot.quality
 	    local inserted = inv.insert({name=itemname, count=amount, quality = quality})
-		  local remaining = amount - inserted
-		  if (remaining < 1) then
-        entry.contents[key] = nil
-      else
+		local remaining = amount - inserted
+		if (remaining < 1) then
+            entry.contents[key] = nil
+        else
 	      entry.contents[key].count = remaining
-      end
+        end
 	  end
 	end
 
 	for _, inv_slot in pairs(entry.contents) do
 		itemname = inv_slot.name
-    amount = inv_slot.count
+        amount = inv_slot.count
 		quality = inv_slot.quality
-	  for _,s in pairs(station.receivers) do
-	    local receiver = s.get_inventory(defines.inventory.chest)
-	    if ((receiver ~= nil) and receiver.can_insert({name=itemname, count=1, quality = quality})) then
-		  amount = amount - receiver.insert({name=itemname, count=amount, quality = quality})
-		  if (amount < 1) then break end
-		end
-	  end
+	    for _,s in pairs(station.receivers) do
+	        local receiver = s.get_inventory(defines.inventory.chest)
+	        if ((receiver ~= nil) and receiver.can_insert({name=itemname, count=1, quality = quality})) then
+		        amount = amount - receiver.insert({name=itemname, count=amount, quality = quality})
+		        if (amount < 1) then break end
+			end
+	    end
 	end
   end
 end
@@ -247,7 +247,7 @@ function restore_grid(grid, contents, station, doit)
 	        burn.inventory.valid) then
 	      for _, entry in pairs(eq.fuel) do
 	        burn.inventory.insert({name=entry.name, count=entry.count,quality=entry.quality})
-		    end
+			end
 	    end
 	    if ((eq.burnt ~= nil) and (burn.burnt_result_inventory ~= nil) and
 	        burn.burnt_result_inventory.valid) then
