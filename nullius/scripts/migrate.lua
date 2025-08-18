@@ -165,6 +165,13 @@ function migrate_version(event)
       force.technologies["nullius-salvage-lab-wreckage"].researched = true
     end
   end
+  for _,surface in pairs(game.surfaces) do
+    if string.sub(surface.name, 1, 17) == "nullius-landfill-" then
+      for _, force in pairs(game.forces) do
+        force.set_surface_hidden(surface.name, true)
+      end
+    end
+  end
   
   if (version >= 10901) then return end
   legacy_recipe_all("nullius-lithium-production", "lithium-chloride")
