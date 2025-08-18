@@ -24,6 +24,7 @@
 	  "(?) FluidMustFlow >= 1.4.4",
 	  "(?) factorissimo-2-notnotmelon >= 3.9.7",
 	  "(?) safefill >= 2.0.0",
+	  "(?) train-upgrader >= 2.0.0",
 	  "(?) UPSFriendlyNixieTubeDisplay >= 0.2.9",
 	  "(?) aai-loaders >= 0.2.7",
 	  "(?) RenaiTransportation >= 2.2.4",

@@ -9,7 +9,9 @@ data:extend({
       {"rail-signal", 1},
       {"construction-robot", 1}
     },
-    result = "tu-supplier"
+    results = {
+      {type = "item", name = "tu-supplier", amount = 1}
+    }
   },
   {
     type = "recipe",
@@ -20,6 +22,8 @@ data:extend({
       {"storage-chest", 1},
       {"rail-chain-signal", 1}
     },
-    result = "tu-receiver"
+    results = {
+      {type = "item", name = "tu-receiver", amount = 1}
+    }
   }
 })
