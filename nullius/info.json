@@ -28,6 +28,7 @@
 	  "(?) UPSFriendlyNixieTubeDisplay >= 0.2.9",
 	  "(?) aai-loaders >= 0.2.7",
 	  "(?) RenaiTransportation >= 2.2.4",
+	  "(?) Warehousing >= 1.0.3",
     "! aai-industry",
 	  "! angelsbioprocessing",
 	  "! angelsinfiniteores",

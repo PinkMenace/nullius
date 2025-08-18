@@ -1495,6 +1495,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse",
+    localised_name = {"entity-name.storehouse-basic"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1511,6 +1512,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse",
+    localised_name = {"entity-name.warehouse-basic"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1528,6 +1530,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-storage",
+    localised_name = {"entity-name.storehouse-storage"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1543,6 +1546,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-storage",
+    localised_name = {"entity-name.warehouse-storage"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1558,6 +1562,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-passive-provider",
+    localised_name = {"entity-name.storehouse-passive-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1573,6 +1578,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-passive-provider",
+    localised_name = {"entity-name.warehouse-passive-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1588,6 +1594,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-requester",
+    localised_name = {"entity-name.storehouse-requester"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1603,6 +1610,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-requester",
+    localised_name = {"entity-name.warehouse-requester"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1618,6 +1626,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-buffer",
+    localised_name = {"entity-name.storehouse-buffer"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1633,6 +1642,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-buffer",
+    localised_name = {"entity-name.warehouse-buffer"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1648,6 +1658,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-active-provider",
+    localised_name = {"entity-name.storehouse-active-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1663,6 +1674,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-active-provider",
+    localised_name = {"entity-name.warehouse-active-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
