@@ -8376,8 +8376,8 @@ data:extend({
     {
     type = "item",
     name = "nullius-red-wire",
-    icon = "__base__/graphics/icons/shortcut-toolbar/mip/new-red-wire-x56.png",
-    icon_size = 56,
+    icon = ICONPATH.."red-wire.png",
+    icon_size = 64,
     flags = {},
     auto_recycle = false,
     subgroup = "electronic-intermediate",
@@ -8390,8 +8390,8 @@ data:extend({
   {
     type = "item",
     name = "nullius-green-wire",
-    icon = "__base__/graphics/icons/shortcut-toolbar/mip/new-green-wire-x56.png",
-    icon_size = 56,
+    icon = ICONPATH.."green-wire.png",
+    icon_size = 64,
     flags = {},
     auto_recycle = false,
     subgroup = "electronic-intermediate",

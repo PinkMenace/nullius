@@ -1040,7 +1040,7 @@ data:extend({
 	    {"technology-name.nullius-logistics"}}},
     localised_description = {"",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
-		    tostring(10),"turbo-inserter", {"entity-name.nullius-inserter-2"}}}, "\n",
+		    tostring(10),"bob-turbo-inserter", {"entity-name.nullius-inserter-2"}}}, "\n",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
 		    tostring(10),"fast-underground-belt", {"entity-name.nullius-underground-belt-2"}}}},
     order = "nullius-yd",
@@ -1600,7 +1600,7 @@ data:extend({
 	    {"", {"technology-name.nullius-logistics"}, " ", tostring(3)}}},
     localised_description = {"",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
-		    tostring(40),"stack-inserter", {"entity-name.nullius-inserter-3"}}}, "\n",
+		    tostring(40),"bulk-inserter", {"entity-name.nullius-inserter-3"}}}, "\n",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
 		    tostring(40),"express-underground-belt", {"entity-name.nullius-underground-belt-3"}}}},
     order = "nullius-ye",
@@ -1911,7 +1911,7 @@ data:extend({
     localised_name = {"technology-name.nullius-checkpoint", {"technology-name.nullius-demonstration",
 	    {"", {"technology-name.nullius-logistics"}, " ", tostring(4)}}},
     localised_description = {"technology-description.nullius-build", {"technology-description.nullius-item",
-		    tostring(10),"ultimate-splitter", {"entity-name.nullius-splitter-4"}}},
+		    tostring(10),"bob-ultimate-splitter", {"entity-name.nullius-splitter-4"}}},
     order = "nullius-yf",
     icons = {
       {
