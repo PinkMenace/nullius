@@ -1560,28 +1560,28 @@ end
 
 if mods["railway-motor-car"] then
   data.raw["battery-equipment"]["railway-motor-car-base"].localised_name =
-      {"", {"equipment-name.railway-motor-car-base"}, " ", 1}
+      {"", {"equipment-name.railway-motor-car-base"}, " ", tostring(1)}
   data.raw["item"]["railway-motor-car-base"].localised_name =
-      {"", {"equipment-name.railway-motor-car-base"}, " ", 1}
+      {"", {"equipment-name.railway-motor-car-base"}, " ", tostring(1)}
   data.raw["item"]["railway-motor-car-base"].subgroup = "jetpack"
   data.raw["item"]["railway-motor-car-base"].order = "nullius-mb"
   data.raw["battery-equipment"]["railway-motor-car-base"].categories = {"cybernetic"}
   data.raw["battery-equipment"]["railway-motor-car-nuclear"].localised_name =
-      {"", {"equipment-name.railway-motor-car-base"}, " ", 2}
+      {"", {"equipment-name.railway-motor-car-base"}, " ", tostring(2)}
   data.raw["item"]["railway-motor-car-nuclear"].localised_name =
-      {"", {"equipment-name.railway-motor-car-base"}, " ", 2}
+      {"", {"equipment-name.railway-motor-car-base"}, " ", tostring(2)}
   data.raw["item"]["railway-motor-car-nuclear"].subgroup = "jetpack"
   data.raw["item"]["railway-motor-car-nuclear"].order = "nullius-mc"
   data.raw["battery-equipment"]["railway-motor-car-nuclear"].localised_description =
       {"item-description.railway-motor-car-base"}
   data.raw["battery-equipment"]["railway-motor-car-nuclear"].categories = {"cybernetic"}
   data.raw["locomotive"]["railway-motor-car-base"].localised_name =
-      {"", {"entity-name.railway-motor-car-base"}, " ", 1}
+      {"", {"entity-name.railway-motor-car-base"}, " ", tostring(1)}
   data.raw["locomotive"]["railway-motor-car-base"].weight = 250
   data.raw["locomotive"]["railway-motor-car-base"].max_power = "600kW"
   data.raw["locomotive"]["railway-motor-car-base"].max_speed = 1.11111111
   data.raw["locomotive"]["railway-motor-car-nuclear"].localised_name =
-      {"", {"entity-name.railway-motor-car-base"}, " ", 2}
+      {"", {"entity-name.railway-motor-car-base"}, " ", tostring(2)}
   data.raw["locomotive"]["railway-motor-car-nuclear"].weight = 325
   data.raw["locomotive"]["railway-motor-car-nuclear"].max_power = "1.2MW"
   data.raw["locomotive"]["railway-motor-car-nuclear"].max_speed = 2.5

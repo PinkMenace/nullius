@@ -2028,14 +2028,15 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-railway-motorcar-1",
+    localised_name = {"entity-name.railway-motor-car-base"},
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "large-crafting",
     energy_required = 15,
     ingredients = {
       {type = "item", name = "nullius-locomotive-1", amount = 1},
       {type = "item", name = "nullius-large-chest-1", amount = 1},
-	  {type = "item", name = "nullius-small-assembler-1", amount = 1}
+	    {type = "item", name = "nullius-small-assembler-1", amount = 1}
     },
     results = {
 			{type = "item", name = "railway-motor-car-base", amount = 1}
@@ -2044,8 +2045,9 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-railway-motorcar-2",
+    localised_name = {"entity-name.railway-motor-car-nuclear"},
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "large-crafting",
     energy_required = 25,
     ingredients = {
