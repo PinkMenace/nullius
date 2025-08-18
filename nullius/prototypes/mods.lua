@@ -793,6 +793,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-teleporter",
+    localised_name = {"teleporter"},
     enabled = false,
     category = "nanotechnology",
     energy_required = 60,
