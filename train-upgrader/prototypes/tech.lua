@@ -14,7 +14,7 @@ data:extend({
         recipe = "tu-receiver"
       }
     },
-    prerequisites = {"rail-signals", "construction-robotics"},
+    prerequisites = {"automated-rail-transportation", "construction-robotics"},
     unit = {
       count = 100,
       ingredients = {
