@@ -1901,7 +1901,10 @@ data:extend({
 
   {
     type = "ammo-category",
-    name = "nullius-conscription"
+    name = "nullius-conscription",
+    icon = "__nullius__/graphics/icons/card1.png",
+    icon_size = 128,
+    subgroup = "military-equipment"
   },
   {
     type = "fuel-category",
@@ -1916,6 +1919,7 @@ data:extend({
     name = "nullius-drone",
     icon = "__nullius__/graphics/icons/scout-2.png",
     icon_size = 64,
+    subgroup = "military-equipment"
   },
   -- Old categories
   -- {

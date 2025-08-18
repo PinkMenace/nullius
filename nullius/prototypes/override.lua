@@ -343,6 +343,13 @@ data.raw["inserter"]["inserter"].next_upgrade = "bob-turbo-inserter"
 data.raw["inserter"]["inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["inserter"].localised_description = {"entity-description.inserterToggleInfo"}
+-- data.raw["inserter"]["inserter"].custom_tooltip_fields = { --Potential alternative
+--   {
+--     name = {"", "Toggle long inserter"},
+--     value = {"", "Shift+L"}
+--   }
+-- }
 
 data.raw.item["bob-turbo-inserter"].subgroup = "inserter"
 data.raw.item["bob-turbo-inserter"].order = "nullius-c"
@@ -360,6 +367,7 @@ data.raw["inserter"]["bob-turbo-inserter"].next_upgrade = "bulk-inserter"
 data.raw["inserter"]["bob-turbo-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["bob-turbo-inserter"].localised_description = {"entity-description.inserterToggleInfo"}
 
 -- data.raw.item["turbo-filter-inserter"].subgroup = "inserter"
 -- data.raw.item["turbo-filter-inserter"].order = "nullius-d"
@@ -394,6 +402,8 @@ data.raw["inserter"]["bulk-inserter"].next_upgrade = "bob-express-bulk-inserter"
 data.raw["inserter"]["bulk-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["bulk-inserter"].localised_description = {"entity-description.inserterToggleInfo"}
+
 data.raw.recipe["inserter"].order = "x"
 
 -- data.raw.item["bulk-filter-inserter"].subgroup = "inserter"
@@ -429,6 +439,7 @@ data.raw["inserter"]["bob-express-bulk-inserter"].next_upgrade = nil
 data.raw["inserter"]["bob-express-bulk-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["bob-express-bulk-inserter"].localised_description = {"entity-description.inserterToggleInfo"}
 
 -- data.raw.item["express-bulk-filter-inserter"].subgroup = "inserter"
 -- data.raw.item["express-bulk-filter-inserter"].order = "nullius-h"

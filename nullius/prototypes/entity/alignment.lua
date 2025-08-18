@@ -46,6 +46,7 @@ data:extend({
     type = "projectile",
     name = "nullius-align-identification-card",
     flags = {"not-on-map"},
+    hidden_in_factoriopedia = true,
     acceleration = 0.005,
     action = {
       {
@@ -77,6 +78,7 @@ data:extend({
     type = "projectile",
     name = "nullius-align-invitation-card",
     flags = {"not-on-map"},
+    hidden_in_factoriopedia = true,
     acceleration = 0.005,
     action = {
       {
@@ -107,6 +109,7 @@ data:extend({
   {
     type = "projectile",
     name = "nullius-align-conscription-charge",
+    hidden_in_factoriopedia = true,
     flags = {"not-on-map"},
     acceleration = 0.1,
     action = {

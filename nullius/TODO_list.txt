@@ -2,16 +2,17 @@ TODO list:
 add working_sounds to entities (i think)
 Fix fluid boxes (volume and pipe connections)
 Valves, pipes and tanks: fix mentions of pressure in locales
-Rework the entity mirroring system
 Rework the checkpoint system (maybe)
 fix the others warnings in the log
 landfill variants are not the same as on 1.1
 mods compatibility
 fix factoriopedia duplicate entities (maybe wait for kiwi's modding request to go through)
-do we remove the legacy items/recipes/buildings ?
+do we remove the legacy items/recipes/buildings ? Probably not
 why does grass drone take this long to spawn grass ?? -> it also takes very long on 1.1
 update changelog and info.json(min version of dependencies) before publishing
 geothermal plant can mine petroleum in nullius 1.1 is it a bug ?
 some of the mining drills that use the electric drill graphics have the vector_to_place_result set to the burner drill value so the little is not in front of the animation BUT this is how it is in nullius 1.1 so I didn't change it
 airfilter graphics are not symmetric when rotating -> it causes the alt icon to be off center in certain orientations
 alignment issue in multiplayer -> probably need a warning message when not every player has the setting enabled
+hide the rest of military equipment and their related ammo categories that are unused (what to do if other mods reintroduces those ?)
+new branch chirality_rework -> remove all the mirror buildings, use legacy system to introduce new symmetrical fluid boxes for entities like flotation cell (see the electromagnetic plant in SA that seems to have a weird symmetry)
