@@ -948,3 +948,10 @@ for tilename,landfill in pairs(landfill_tiles) do
 	tile.can_be_part_of_blueprint = true
   end
 end
+
+if settings.startup["nullius-hide-void-alt"].value then
+  local void_buildings = {"nullius-chimney-1","nullius-chimney-2","nullius-chimney-3","nullius-outfall-1","nullius-outfall-2","nullius-outfall-3"}
+  for _, building in pairs(void_buildings) do
+    table.insert(data.raw.furnace[building].flags, "hide-alt-info")
+  end
+end

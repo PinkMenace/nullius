@@ -16,3 +16,4 @@ airfilter graphics are not symmetric when rotating -> it causes the alt icon to 
 alignment issue in multiplayer -> probably need a warning message when not every player has the setting enabled
 hide the rest of military equipment and their related ammo categories that are unused (what to do if other mods reintroduces those ?)
 new branch chirality_rework -> remove all the mirror buildings, use legacy system to introduce new symmetrical fluid boxes for entities like flotation cell (see the electromagnetic plant in SA that seems to have a weird symmetry)
+crash report for turbine crash (seems to be caused by engine itself)
