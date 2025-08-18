@@ -3,12 +3,19 @@
   [
 	  ["nullius-empty-canister", "nullius-canister"],
 	  ["nullius-duct-end-point-outtake", "nullius-duct-exhaust"],
-	  ["nullius-duct-end-point-intake", "nullius-duct-intake"]
+	  ["nullius-duct-end-point-intake", "nullius-duct-intake"],
+	  ["nullius-SNTD-old-nixie-tube", "nullius-classic-nixie-tube"],
+	  ["nullius-SNTD-nixie-tube", "nullius-reinforced-nixie-tube"],
+	  ["nullius-SNTD-nixie-tube-small", "nullius-small-reinforced-nixie-tube"]
   ],
   "tile":[
     ["angels-tile-clay-brick", "nullius-tile-clay-brick"]
   ],
   "entity": [
     ["angels-crystal-rock", "nullius-crystal-rock"]
+  ],
+  "technology": [
+    ["nullius-SNTD-nixie-tubes-basic", "nullius-reinforced-nixie-tubes-basic"],
+    ["nullius-SNTD-nixie-tubes-reinforced", "nullius-reinforced-nixie-tubes-reinforced"]
   ]
 }
