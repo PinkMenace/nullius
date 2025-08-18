@@ -20,3 +20,4 @@ crash report for turbine crash (seems to be caused by engine itself)
 someone is missing the near inserters tech with bobinserters
 someone is blocked from researching aesthetics-1 because of an invisible dependency
 weird visualization for underground pipe pack
+pumps slower than expected -> is it because of flow_scaling ?

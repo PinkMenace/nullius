@@ -994,8 +994,8 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
 
     local archetype = data.raw["pipe-to-ground"]["nullius-underground-pipe-"..lvl]
     junction.fluid_box.volume = archetype.fluid_box.volume
-	junction.minable.mining_time = (lvl * 0.5)
-	junction.hidden_in_factoriopedia = true -- TODO: confirm that those are just clutter for factoriopedia
+	  junction.minable.mining_time = (lvl * 0.5)
+	  junction.hidden_in_factoriopedia = true -- TODO: confirm that those are just clutter for factoriopedia
 
     for _,connection in pairs(junction.fluid_box.pipe_connections) do
       if ((connection.max_underground_distance ~= nil) and
@@ -1726,8 +1726,6 @@ if mods["FluidMustFlow"] then
   data.raw["pump"]["duct-intake"].minable.mining_time = 3
   data.raw["pump"]["duct-exhaust"].minable.mining_time = 3
 
-  local duct_box = data.raw["pipe-to-ground"]["duct-underground"].fluid_box
-  duct_box.pipe_connections[2].max_underground_distance = duct_box.pipe_connections[2].max_underground_distance - 2
   table.insert(data.raw.technology["nullius-barreling-3"].prerequisites,"nullius-ducts")
 end
 

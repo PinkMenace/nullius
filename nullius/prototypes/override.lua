@@ -875,6 +875,7 @@ data.raw["pump"]["pump"].resistances = {
   { type = "impact", decrease = 100, percent = 90 },
   { type = "fire", decrease = 20, percent = 50 }
 }
+--data.raw["pump"]["pump"].flow_scaling = false
 
 data.raw["mining-drill"]["burner-mining-drill"].resource_categories = {"unused-resource"}
 data.raw["mining-drill"]["electric-mining-drill"].resource_categories = {"unused-resource"}
