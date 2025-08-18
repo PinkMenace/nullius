@@ -1279,6 +1279,7 @@ data:extend({
         pipe_connections = {{ flow_direction ="output", position = {1.5, 0.5}, direction = defines.direction.east }}
       }
     },
+    forced_symmetry = "horizontal", -- TODO: decide what value
     graphics_set = {
       animation = scale_image({
           layers = {

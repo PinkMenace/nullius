@@ -17,3 +17,6 @@ alignment issue in multiplayer -> probably need a warning message when not every
 hide the rest of military equipment and their related ammo categories that are unused (what to do if other mods reintroduces those ?)
 new branch chirality_rework -> remove all the mirror buildings, use legacy system to introduce new symmetrical fluid boxes for entities like flotation cell (see the electromagnetic plant in SA that seems to have a weird symmetry)
 crash report for turbine crash (seems to be caused by engine itself)
+someone is missing the near inserters tech with bobinserters
+someone is blocked from researching aesthetics-1 because of an invisible dependency
+weird visualization for underground pipe pack
