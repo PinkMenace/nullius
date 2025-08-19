@@ -592,8 +592,7 @@ data.raw.item["one-to-one-forward-t2-pipe"].order = "nullius-bb"
 data.raw.item["one-to-one-forward-t2-pipe"].localised_name =
   {"", {"item-name.nullius-surface-two-way-junction"}, " ", tostring(1)}
 data.raw.item["one-to-one-forward-t2-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-two-way-junction"},
-  {"item-description.nullius-pressure-2"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-two-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-two-way-junction-1"].localised_name = data.raw.item["one-to-one-forward-t2-pipe"].localised_name
   
 data.raw.item["one-to-two-perpendicular-t2-pipe"].subgroup = "nullius-surface-junction"
@@ -601,8 +600,7 @@ data.raw.item["one-to-two-perpendicular-t2-pipe"].order = "nullius-bc"
 data.raw.item["one-to-two-perpendicular-t2-pipe"].localised_name =
   {"", {"item-name.nullius-surface-three-way-junction"}, " ", tostring(1)}
 data.raw.item["one-to-two-perpendicular-t2-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-three-way-junction"},
-  {"item-description.nullius-pressure-2"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-three-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-three-way-junction-1"].localised_name = data.raw.item["one-to-two-perpendicular-t2-pipe"].localised_name
   
 data.raw.item["one-to-three-forward-t2-pipe"].subgroup = "nullius-surface-junction"
@@ -610,8 +608,7 @@ data.raw.item["one-to-three-forward-t2-pipe"].order = "nullius-bd"
 data.raw.item["one-to-three-forward-t2-pipe"].localised_name =
   {"", {"item-name.nullius-surface-four-way-junction"}, " ", tostring(1)}
 data.raw.item["one-to-three-forward-t2-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-four-way-junction"},
-  {"item-description.nullius-pressure-2"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-four-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-four-way-junction-1"].localised_name = data.raw.item["one-to-three-forward-t2-pipe"].localised_name
   
 data.raw.item["underground-i-t2-pipe"].subgroup = "nullius-underground-junction"
@@ -619,8 +616,7 @@ data.raw.item["underground-i-t2-pipe"].order = "nullius-bb"
 data.raw.item["underground-i-t2-pipe"].localised_name =
   {"", {"item-name.nullius-underground-straight-junction"}, " ", tostring(1)}
 data.raw.item["underground-i-t2-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-straight-junction"},
-  {"item-description.nullius-pressure-2"}}
+  {"", {"item-description.nullius-underground-straight-junction"}}
 data.raw.recipe["nullius-underground-straight-junction-1"].localised_name = data.raw.item["underground-i-t2-pipe"].localised_name
   
 data.raw.item["underground-L-t2-pipe"].subgroup = "nullius-underground-junction"
@@ -628,8 +624,7 @@ data.raw.item["underground-L-t2-pipe"].order = "nullius-bc"
 data.raw.item["underground-L-t2-pipe"].localised_name =
   {"", {"item-name.nullius-underground-elbow-junction"}, " ", tostring(1)}
 data.raw.item["underground-L-t2-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-elbow-junction"},
-  {"item-description.nullius-pressure-2"}}
+  {"", {"item-description.nullius-underground-elbow-junction"}}
 data.raw.recipe["nullius-underground-elbow-junction-1"].localised_name = data.raw.item["underground-L-t2-pipe"].localised_name
   
 data.raw.item["underground-t-t2-pipe"].subgroup = "nullius-underground-junction"
@@ -637,8 +632,7 @@ data.raw.item["underground-t-t2-pipe"].order = "nullius-bd"
 data.raw.item["underground-t-t2-pipe"].localised_name =
   {"", {"item-name.nullius-underground-three-way-junction"}, " ", tostring(1)}
 data.raw.item["underground-t-t2-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-three-way-junction"},
-  {"item-description.nullius-pressure-2"}}
+  {"", {"item-description.nullius-underground-three-way-junction"}}
 data.raw.recipe["nullius-underground-three-way-junction-1"].localised_name = data.raw.item["underground-t-t2-pipe"].localised_name
 
 data.raw.item["one-to-one-forward-t3-pipe"].subgroup = "nullius-surface-junction"
@@ -646,8 +640,7 @@ data.raw.item["one-to-one-forward-t3-pipe"].order = "nullius-cb"
 data.raw.item["one-to-one-forward-t3-pipe"].localised_name =
   {"", {"item-name.nullius-surface-two-way-junction"}, " ", tostring(2)}
 data.raw.item["one-to-one-forward-t3-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-two-way-junction"},
-  {"item-description.nullius-pressure-3"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-two-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-two-way-junction-2"].localised_name = data.raw.item["one-to-one-forward-t3-pipe"].localised_name
   
 data.raw.item["one-to-two-perpendicular-t3-pipe"].subgroup = "nullius-surface-junction"
@@ -655,8 +648,7 @@ data.raw.item["one-to-two-perpendicular-t3-pipe"].order = "nullius-cc"
 data.raw.item["one-to-two-perpendicular-t3-pipe"].localised_name =
   {"", {"item-name.nullius-surface-three-way-junction"}, " ", tostring(2)}
 data.raw.item["one-to-two-perpendicular-t3-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-three-way-junction"},
-  {"item-description.nullius-pressure-3"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-three-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-three-way-junction-2"].localised_name = data.raw.item["one-to-two-perpendicular-t3-pipe"].localised_name
   
 data.raw.item["one-to-three-forward-t3-pipe"].subgroup = "nullius-surface-junction"
@@ -664,8 +656,7 @@ data.raw.item["one-to-three-forward-t3-pipe"].order = "nullius-cd"
 data.raw.item["one-to-three-forward-t3-pipe"].localised_name =
   {"", {"item-name.nullius-surface-four-way-junction"}, " ", tostring(2)}
 data.raw.item["one-to-three-forward-t3-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-four-way-junction"},
-  {"item-description.nullius-pressure-3"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-four-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-four-way-junction-2"].localised_name = data.raw.item["one-to-three-forward-t3-pipe"].localised_name
   
 data.raw.item["underground-i-t3-pipe"].subgroup = "nullius-underground-junction"
@@ -673,8 +664,7 @@ data.raw.item["underground-i-t3-pipe"].order = "nullius-cb"
 data.raw.item["underground-i-t3-pipe"].localised_name =
   {"", {"item-name.nullius-underground-straight-junction"}, " ", tostring(2)}
 data.raw.item["underground-i-t3-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-straight-junction"},
-  {"item-description.nullius-pressure-3"}}
+  {"", {"item-description.nullius-underground-straight-junction"}}
 data.raw.recipe["nullius-underground-straight-junction-2"].localised_name = data.raw.item["underground-i-t3-pipe"].localised_name
   
 data.raw.item["underground-L-t3-pipe"].subgroup = "nullius-underground-junction"
@@ -682,8 +672,7 @@ data.raw.item["underground-L-t3-pipe"].order = "nullius-cc"
 data.raw.item["underground-L-t3-pipe"].localised_name =
   {"", {"item-name.nullius-underground-elbow-junction"}, " ", tostring(2)}
 data.raw.item["underground-L-t3-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-elbow-junction"},
-  {"item-description.nullius-pressure-3"}}
+  {"", {"item-description.nullius-underground-elbow-junction"}}
 data.raw.recipe["nullius-underground-elbow-junction-2"].localised_name = data.raw.item["underground-L-t3-pipe"].localised_name
   
 data.raw.item["underground-t-t3-pipe"].subgroup = "nullius-underground-junction"
@@ -691,8 +680,7 @@ data.raw.item["underground-t-t3-pipe"].order = "nullius-cd"
 data.raw.item["underground-t-t3-pipe"].localised_name =
   {"", {"item-name.nullius-underground-three-way-junction"}, " ", tostring(2)}
 data.raw.item["underground-t-t3-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-three-way-junction"},
-  {"item-description.nullius-pressure-3"}}
+  {"", {"item-description.nullius-underground-three-way-junction"}}
 data.raw.recipe["nullius-underground-three-way-junction-2"].localised_name = data.raw.item["underground-t-t3-pipe"].localised_name
   
 
@@ -701,8 +689,7 @@ data.raw.item["one-to-one-forward-pipe"].order = "nullius-db"
 data.raw.item["one-to-one-forward-pipe"].localised_name =
   {"", {"item-name.nullius-surface-two-way-junction"}, " ", tostring(3)}
 data.raw.item["one-to-one-forward-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-two-way-junction"},
-  {"item-description.nullius-pressure-4"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-two-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-two-way-junction-3"].localised_name = data.raw.item["one-to-one-forward-pipe"].localised_name
   
 data.raw.item["one-to-two-perpendicular-pipe"].subgroup = "nullius-surface-junction"
@@ -710,8 +697,7 @@ data.raw.item["one-to-two-perpendicular-pipe"].order = "nullius-dc"
 data.raw.item["one-to-two-perpendicular-pipe"].localised_name =
   {"", {"item-name.nullius-surface-three-way-junction"}, " ", tostring(3)}
 data.raw.item["one-to-two-perpendicular-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-three-way-junction"},
-  {"item-description.nullius-pressure-4"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-three-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-three-way-junction-3"].localised_name = data.raw.item["one-to-two-perpendicular-pipe"].localised_name
   
 data.raw.item["one-to-three-forward-pipe"].subgroup = "nullius-surface-junction"
@@ -719,8 +705,7 @@ data.raw.item["one-to-three-forward-pipe"].order = "nullius-dd"
 data.raw.item["one-to-three-forward-pipe"].localised_name =
   {"", {"item-name.nullius-surface-four-way-junction"}, " ", tostring(3)}
 data.raw.item["one-to-three-forward-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-four-way-junction"},
-  {"item-description.nullius-pressure-4"}, {"item-description.nullius-underground-ctrl-r"}}
+  {"", {"item-description.nullius-surface-four-way-junction"},{"item-description.nullius-underground-ctrl-r"}}
 data.raw.recipe["nullius-surface-four-way-junction-3"].localised_name = data.raw.item["one-to-three-forward-pipe"].localised_name
   
 data.raw.item["one-to-four-pipe"].subgroup = "nullius-surface-junction"
@@ -728,8 +713,7 @@ data.raw.item["one-to-four-pipe"].order = "nullius-de"
 data.raw.item["one-to-four-pipe"].localised_name =
   {"", {"item-name.nullius-surface-five-way-junction"}, " ", tostring(3)}
 data.raw.item["one-to-four-pipe"].localised_description =
-  {"", {"item-description.nullius-surface-five-way-junction"},
-  {"item-description.nullius-pressure-4"}}
+  {"", {"item-description.nullius-surface-five-way-junction"}}
 data.raw.recipe["nullius-surface-five-way-junction-3"].localised_name = data.raw.item["one-to-four-pipe"].localised_name
   
 data.raw.item["underground-i-pipe"].subgroup = "nullius-underground-junction"
@@ -737,8 +721,7 @@ data.raw.item["underground-i-pipe"].order = "nullius-db"
 data.raw.item["underground-i-pipe"].localised_name =
   {"", {"item-name.nullius-underground-straight-junction"}, " ", tostring(3)}
 data.raw.item["underground-i-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-straight-junction"},
-  {"item-description.nullius-pressure-4"}}
+  {"", {"item-description.nullius-underground-straight-junction"}}
 data.raw.recipe["nullius-underground-straight-junction-3"].localised_name = data.raw.item["underground-i-pipe"].localised_name
   
 data.raw.item["underground-L-pipe"].subgroup = "nullius-underground-junction"
@@ -746,8 +729,7 @@ data.raw.item["underground-L-pipe"].order = "nullius-dc"
 data.raw.item["underground-L-pipe"].localised_name =
   {"", {"item-name.nullius-underground-elbow-junction"}, " ", tostring(3)}
 data.raw.item["underground-L-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-elbow-junction"},
-  {"item-description.nullius-pressure-4"}}
+  {"", {"item-description.nullius-underground-elbow-junction"}}
 data.raw.recipe["nullius-underground-elbow-junction-3"].localised_name = data.raw.item["underground-L-pipe"].localised_name
   
 data.raw.item["underground-t-pipe"].subgroup = "nullius-underground-junction"
@@ -755,8 +737,7 @@ data.raw.item["underground-t-pipe"].order = "nullius-dd"
 data.raw.item["underground-t-pipe"].localised_name =
   {"", {"item-name.nullius-underground-three-way-junction"}, " ", tostring(3)}
 data.raw.item["underground-t-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-three-way-junction"},
-  {"item-description.nullius-pressure-4"}}
+  {"", {"item-description.nullius-underground-three-way-junction"}}
 data.raw.recipe["nullius-underground-three-way-junction-3"].localised_name = data.raw.item["underground-t-pipe"].localised_name
   
 data.raw.item["underground-cross-pipe"].subgroup = "nullius-underground-junction"
@@ -764,8 +745,7 @@ data.raw.item["underground-cross-pipe"].order = "nullius-de"
 data.raw.item["underground-cross-pipe"].localised_name =
   {"", {"item-name.nullius-underground-four-way-junction"}, " ", tostring(3)}
 data.raw.item["underground-cross-pipe"].localised_description =
-  {"", {"item-description.nullius-underground-four-way-junction"},
-  {"item-description.nullius-pressure-4"}}
+  {"", {"item-description.nullius-underground-four-way-junction"}}
 data.raw.recipe["nullius-underground-four-way-junction-3"].localised_name = data.raw.item["underground-cross-pipe"].localised_name
   
 

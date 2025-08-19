@@ -1,7 +1,6 @@
 TODO list:
 add working_sounds to entities (i think)
 Fix fluid boxes (volume and pipe connections)
-Valves, pipes and tanks: fix mentions of pressure in locales
 Rework the checkpoint system (maybe)
 fix the others warnings in the log
 landfill variants are not the same as on 1.1
@@ -16,8 +15,6 @@ airfilter graphics are not symmetric when rotating -> it causes the alt icon to 
 alignment issue in multiplayer -> probably need a warning message when not every player has the setting enabled
 hide the rest of military equipment and their related ammo categories that are unused (what to do if other mods reintroduces those ?)
 new branch chirality_rework -> remove all the mirror buildings, use legacy system to introduce new symmetrical fluid boxes for entities like flotation cell (see the electromagnetic plant in SA that seems to have a weird symmetry)
-crash report for turbine crash (seems to be caused by engine itself)
 weird visualization for underground pipe pack
-pumps slower than expected -> is it because of flow_scaling ?
 solar collectors stopped ?
 removing landfill -> shallow water remains: maybe change that/rework the landfill system anyway

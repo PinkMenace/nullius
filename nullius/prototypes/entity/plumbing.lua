@@ -494,11 +494,11 @@ data:extend({
     crafting_speed = 1,
     fixed_recipe = "nullius-freshwater",
     energy_source = {
-	  type = "electric",
-	  usage_priority = "secondary-input",
-	  emissions = 0.02,
-	  drain = "20kW"
-	},
+	    type = "electric",
+	    usage_priority = "secondary-input",
+	    emissions = 0.02,
+	    drain = "20kW"
+	  },
     energy_usage = "280kW",
     ingredient_count = 1,
     minable = {mining_time = 1, result = "nullius-well-1"},
@@ -2654,7 +2654,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "15kW",
-    pumping_speed = 50,
+    pumping_speed = 20,
     impact_category = data.raw.pump["pump"].impact_category,
     open_sound = data.raw.pump["pump"].open_sound,
     close_sound = data.raw.pump["pump"].close_sound,
@@ -2821,7 +2821,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "20kW",
-    pumping_speed = 100,
+    pumping_speed = 50,
     impact_category = data.raw.pump["pump"].impact_category,
     open_sound = data.raw.pump["pump"].open_sound,
     close_sound = data.raw.pump["pump"].close_sound,
@@ -2976,8 +2976,8 @@ data:extend({
     fluid_box = {
       volume = 500,
       pipe_connections = {
-        { position = {0, 0.1}, flow_direction = "output", direction = defines.direction.south },
-        { position = {0, -0.1}, flow_direction = "input", direction = defines.direction.north }
+        { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
+        { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -2986,7 +2986,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "10kW",
-    pumping_speed = 40,
+    pumping_speed = 16,
     impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,
@@ -2996,71 +2996,71 @@ data:extend({
 
     animations = {
       north = {
-		layers = {
-		  {
+		    layers = {
+		      {
             filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
-		    scale = 0.5,
-			animation_speed = 0.5,
-			shift = {0, -0.5}
-		  },
-		  {
+		        scale = 0.5,
+			      animation_speed = 0.5,
+			      shift = {0, -0.5}
+		      },
+		      {
             filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-north.png",
             priority = "extra-high",
             frame_count = 16,
-			line_length = 4,
+			      line_length = 4,
             width = 64,
             height = 64,
-			animation_speed = 0.5,
+			      animation_speed = 0.5,
             tint = {0.75, 0.85, 0.95},
             shift = {0, -0.05}
-		  }
-		}
+		      }
+		    }
       },
       east = {
         filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-east.png",
         priority = "extra-high",
-		frame_count = 16,
-		line_length = 4,
+		    frame_count = 16,
+		    line_length = 4,
         width = 64,
         height = 64,
-		animation_speed = 0.5,
+		    animation_speed = 0.5,
         tint = {0.75, 0.85, 0.95}
       },
       south = {
-		layers = {
-		  {
+		    layers = {
+		      {
             filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
-		    scale = 0.5,
-			animation_speed = 0.5,
-			shift = {0, -0.5}
-		  },
-		  {
+		        scale = 0.5,
+			      animation_speed = 0.5,
+			      shift = {0, -0.5}
+		      },
+		      {
             filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-south.png",
             priority = "extra-high",
-			frame_count = 16,
-			line_length = 4,
+			      frame_count = 16,
+			      line_length = 4,
             width = 64,
             height = 64,
-			animation_speed = 0.5,
+			      animation_speed = 0.5,
             tint = {0.75, 0.85, 0.95},
             shift = {0, -0.05}
-		  }
-		}
+		      }
+		    }
       },
       west = {
         filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-west.png",
         priority = "extra-high",
-		frame_count = 16,
-		line_length = 4,
+		    frame_count = 16,
+		    line_length = 4,
         width = 64,
         height = 64,
-		animation_speed = 0.5,
+		    animation_speed = 0.5,
         tint = {0.75, 0.85, 0.95}
       }
     }
@@ -3087,8 +3087,8 @@ data:extend({
     fluid_box = {
       volume = 500,
       pipe_connections = {
-        { position = {0, 0.1}, flow_direction = "output", direction = defines.direction.south },
-        { position = {0, -0.1}, flow_direction = "input", direction = defines.direction.north }
+        { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
+        { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
       },
 	  pipe_covers = pipecoverspictures()
     },
@@ -3097,7 +3097,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "15kW",
-    pumping_speed = 80,
+    pumping_speed = 32,
     impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,
@@ -3107,71 +3107,71 @@ data:extend({
 
     animations = {
       north = {
-		layers = {
-		  {
+		    layers = {
+		      {
             filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
-		    scale = 0.5,
-			animation_speed = 0.667,
-			shift = {0, -0.5}
-		  },
-		  {
+		        scale = 0.5,
+			      animation_speed = 0.667,
+			      shift = {0, -0.5}
+		      },
+		      {
             filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-north.png",
             priority = "extra-high",
             frame_count = 16,
-			line_length = 4,
+			      line_length = 4,
             width = 64,
             height = 64,
-			animation_speed = 0.667,
+			      animation_speed = 0.667,
             tint = {1, 1, 0.85},
             shift = {0, -0.05}
-		  }
-		}
+		      }
+		    }
       },
       east = {
         filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-east.png",
         priority = "extra-high",
-		frame_count = 16,
-		line_length = 4,
+		    frame_count = 16,
+		    line_length = 4,
         width = 64,
         height = 64,
-		animation_speed = 0.667,
+		    animation_speed = 0.667,
         tint = {1, 1, 0.85}
       },
       south = {
-		layers = {
-		  {
+		    layers = {
+		      {
             filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
             repeat_count = 16,
             width = 128,
             height = 64,
-		    scale = 0.5,
-			animation_speed = 0.667,
-			shift = {0, -0.5}
-		  },
-		  {
+		        scale = 0.5,
+			      animation_speed = 0.667,
+			      shift = {0, -0.5}
+		      },
+		      {
             filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-south.png",
             priority = "extra-high",
-			frame_count = 16,
-			line_length = 4,
+			      frame_count = 16,
+			      line_length = 4,
             width = 64,
             height = 64,
-			animation_speed = 0.667,
+			      animation_speed = 0.667,
             tint = {1, 1, 0.85},
             shift = {0, -0.05}
-		  }
-		}
+		      }
+		    }
       },
       west = {
         filename = "__angelsrefininggraphics__/graphics/entity/water-pump/pump-west.png",
         priority = "extra-high",
-		frame_count = 16,
-		line_length = 4,
+		    frame_count = 16,
+		    line_length = 4,
         width = 64,
         height = 64,
-		animation_speed = 0.667,
+		    animation_speed = 0.667,
         tint = {1, 1, 0.85}
       }
     }
@@ -3180,7 +3180,7 @@ data:extend({
   {
     type = "pipe",
     name = "nullius-pipe-2",
-	  localised_description = {"entity-description.nullius-pipe", tostring(60), tostring(4360), tostring(1260)},
+	  localised_description = {"entity-description.nullius-pipe"},
     icons = data.raw.item["nullius-pipe-2"].icons,
     flags = {"placeable-neutral", "player-creation"},
     icon_draw_specification = {scale = 0.5},
@@ -3218,7 +3218,7 @@ data:extend({
   {
     type = "pipe",
     name = "nullius-pipe-3",
-	  localised_description = {"entity-description.nullius-pipe", tostring(80), tostring(5370), tostring(4260)},
+	  localised_description = {"entity-description.nullius-pipe"},
     icons = data.raw.item["nullius-pipe-3"].icons,
     flags = {"placeable-neutral", "player-creation"},
     icon_draw_specification = {scale = 0.5},
@@ -3256,7 +3256,7 @@ data:extend({
   {
     type = "pipe",
     name = "nullius-pipe-4",
-	  localised_description = {"entity-description.nullius-pipe", tostring(100), tostring(6720), tostring(5180)},
+	  localised_description = {"entity-description.nullius-pipe"},
     icons = data.raw.item["nullius-pipe-4"].icons,
     flags = {"placeable-neutral", "player-creation"},
     icon_draw_specification = {scale = 0.5},
@@ -3293,7 +3293,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "nullius-underground-pipe-2",
-	  localised_description = {"entity-description.nullius-underground-pipe", tostring(60)},
+	  localised_description = {"entity-description.nullius-underground-pipe"},
     icons = data.raw.item["nullius-underground-pipe-2"].icons,
     flags = {"placeable-neutral", "player-creation"},
     icon_draw_specification = {scale = 0.5},
@@ -3333,7 +3333,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "nullius-underground-pipe-3",
-	  localised_description = {"entity-description.nullius-underground-pipe", tostring(80)},
+	  localised_description = {"entity-description.nullius-underground-pipe"},
     icons = data.raw.item["nullius-underground-pipe-3"].icons,
     flags = {"placeable-neutral", "player-creation"},
     icon_draw_specification = {scale = 0.5},
@@ -3373,7 +3373,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "nullius-underground-pipe-4",
-	  localised_description = {"entity-description.nullius-underground-pipe", tostring(100)},
+	  localised_description = {"entity-description.nullius-underground-pipe"},
     icons = data.raw.item["nullius-underground-pipe-4"].icons,
     flags = {"placeable-neutral", "player-creation"},
     icon_draw_specification = {scale = 0.5},

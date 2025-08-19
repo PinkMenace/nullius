@@ -825,7 +825,7 @@ data.raw["logistic-container"]["active-provider-chest"].minable.mining_time = 1
 
 data.raw.item["pipe"].localised_name = {"entity-name.nullius-pipe-1"}
 data.raw.item["pipe"].localised_description =
-    {"entity-description.nullius-pipe", tostring(40), tostring(2290), tostring(450)}
+    {"entity-description.nullius-pipe"}
 data.raw["pipe"]["pipe"].localised_name = {"entity-name.nullius-pipe-1"}
 data.raw["pipe"]["pipe"].localised_description =
     data.raw.item["pipe"].localised_description
@@ -833,7 +833,7 @@ data.raw["pipe"]["pipe"].minable.mining_time = 0.2
 data.raw.item["pipe-to-ground"].localised_name =
     {"entity-name.nullius-underground-pipe-1"}
 data.raw.item["pipe-to-ground"].localised_description =
-    {"entity-description.nullius-underground-pipe", tostring(40)}
+    {"entity-description.nullius-underground-pipe"}
 data.raw["pipe-to-ground"]["pipe-to-ground"].localised_name =
     {"entity-name.nullius-underground-pipe-1"}
 data.raw["pipe-to-ground"]["pipe-to-ground"].localised_description =
