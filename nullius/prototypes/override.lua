@@ -967,3 +967,4 @@ if settings.startup["nullius-hide-void-alt"].value then
 end
 
 data.raw["utility-constants"]["default"].max_fluid_flow = 500
+data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true

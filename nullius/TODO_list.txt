@@ -18,3 +18,4 @@ new branch chirality_rework -> remove all the mirror buildings, use legacy syste
 weird visualization for underground pipe pack
 solar collectors stopped ?
 removing landfill -> shallow water remains: maybe change that/rework the landfill system anyway
+hide the alignment stuff when the setting is off: satellite shwos in the rocket inv slot and other stuff in factoriopedia

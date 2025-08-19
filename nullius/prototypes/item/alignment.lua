@@ -222,7 +222,7 @@ data:extend({
     subgroup = "alignment",
     order = "nullius-h",
     stack_size = 5,
-	place_result = "nullius-align-concordance-transmitter"
+	  place_result = "nullius-align-concordance-transmitter"
   },
   {
     type = "item",
@@ -234,7 +234,11 @@ data:extend({
     subgroup = "alignment",
     order = "nullius-i",
     stack_size = 1,
-    rocket_launch_product = {"nullius-astronomy-pack", 42}
+    weight = 1000000,
+    send_to_orbit_mode = "automated",
+    rocket_launch_products = {
+      {type = "item", name = "nullius-astronomy-pack", amount = 42}
+    }
   },
 
   {

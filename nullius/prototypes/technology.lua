@@ -12894,6 +12894,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-rocket"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-landing-pad"
       }
     },
     unit = {

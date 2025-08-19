@@ -493,6 +493,11 @@ data:extend({
     module_slots = 4,
     fixed_recipe = "nullius-rocket",
     show_recipe_icon = false,
+    icon_draw_specification = {shift = {0, 2}},
+    icons_positioning =
+    {
+      {inventory_index = defines.inventory.crafter_modules, shift = {0, 3.3}}
+    },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     minable = {mining_time = 8, result = "nullius-silo"},
     max_health = 5000,
@@ -522,6 +527,8 @@ data:extend({
     times_to_blink = 3,
     light_blinking_speed = 1 / (3 * 60),
     door_opening_speed = 1 / (4.25 * 60),
+    can_launch_without_landing_pads = true,
+    to_be_inserted_to_rocket_inventory_size = 1,
 
     base_engine_light = data.raw["rocket-silo"]["rocket-silo"].base_engine_light,
     shadow_sprite = data.raw["rocket-silo"]["rocket-silo"].shadow_sprite,
