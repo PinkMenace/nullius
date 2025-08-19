@@ -968,3 +968,6 @@ end
 
 data.raw["utility-constants"]["default"].max_fluid_flow = 500
 data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true
+data.raw["artillery-flare"]["artillery-flare"].shot_category = "artillery-shell" --regular remote will only fire artillery shells
+data.raw["custom-input"]["give-artillery-targeting-remote"].enabled = false
+data.raw["shortcut"]["give-artillery-targeting-remote"].hidden = true
