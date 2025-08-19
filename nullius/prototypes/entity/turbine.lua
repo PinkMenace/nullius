@@ -235,7 +235,7 @@ local furnace1cb = {
   fluid_boxes = {
     {
       production_type = "input",
-	    pipe_connections = {{ flow_direction = "input", position = {0, -2}, direction = defines.direction.north }},
+	    pipe_connections = {{ flow_direction = "input-output", position = {0, -2}, direction = defines.direction.north }},
       pipe_covers = pipecoverspictures(),
       volume = 500,
       secondary_draw_orders = { north = -1 }

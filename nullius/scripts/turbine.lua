@@ -97,8 +97,8 @@ local function replace_turbine(entity, force, newname)
   local entry = storage.nullius_turbines[entity.unit_number]
   if (entry ~= nil) then
     connector_contents = save_fluid_contents(entry.connector)
-	generator_contents = save_fluid_contents(entry.generator)
-	remove_turbine(entity.unit_number)
+	  generator_contents = save_fluid_contents(entry.generator)
+	  remove_turbine(entity.unit_number)
   end
 
   if (newname ~= nil) then
@@ -280,7 +280,6 @@ function entity_paste_event(event)
 end
 
 script.on_event(defines.events.on_entity_settings_pasted, entity_paste_event)
-
 
 function dolly_moved_entity(event)
   if (storage.nullius_turbines == nil) then return end
