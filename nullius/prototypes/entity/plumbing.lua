@@ -2654,7 +2654,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "15kW",
-    pumping_speed = 20,
+    pumping_speed = 50,
     impact_category = data.raw.pump["pump"].impact_category,
     open_sound = data.raw.pump["pump"].open_sound,
     close_sound = data.raw.pump["pump"].close_sound,
@@ -2821,7 +2821,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "20kW",
-    pumping_speed = 50,
+    pumping_speed = 100,
     impact_category = data.raw.pump["pump"].impact_category,
     open_sound = data.raw.pump["pump"].open_sound,
     close_sound = data.raw.pump["pump"].close_sound,
@@ -2986,7 +2986,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "10kW",
-    pumping_speed = 16,
+    pumping_speed = 40,
     impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,
@@ -3097,7 +3097,7 @@ data:extend({
       usage_priority = "primary-input"
     },
     energy_usage = "15kW",
-    pumping_speed = 32,
+    pumping_speed = 80,
     impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,

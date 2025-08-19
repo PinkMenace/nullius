@@ -965,3 +965,5 @@ if settings.startup["nullius-hide-void-alt"].value then
     table.insert(data.raw.furnace[building].flags, "hide-alt-info")
   end
 end
+
+data.raw["utility-constants"]["default"].max_fluid_flow = 500
