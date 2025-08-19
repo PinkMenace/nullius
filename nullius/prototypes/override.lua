@@ -946,9 +946,18 @@ for tilename,landfill in pairs(landfill_tiles) do
   local tile = data.raw.tile[tilename]
   if ((tile ~= nil) and (tile.placeable_by == nil)) then
     tile.placeable_by = {item=landfill, count=1}
-	tile.can_be_part_of_blueprint = true
+	  tile.can_be_part_of_blueprint = true
+	  tile.minable = {
+	    mining_time = 1,
+	    result = landfill
+	  }
   end
 end
+data.raw.tile["landfill"].minable = {
+  mining_time = 1,
+  result = "nullius-land-fill-gravel"
+}
+data.raw.tile["landfill"].is_foundation = false
 
 if settings.startup["nullius-hide-void-alt"].value then
   local void_buildings = {"nullius-chimney-1","nullius-chimney-2","nullius-chimney-3","nullius-outfall-1","nullius-outfall-2","nullius-outfall-3"}
