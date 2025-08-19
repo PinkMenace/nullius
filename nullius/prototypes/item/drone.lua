@@ -36,6 +36,7 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, flar
         type = "capsule",
         name = prefix.."-remote"..suffix,
         icons = remote_icons,
+        flags = {"spawnable"}, --"only-in-cursor", "not-stackable", 
         capsule_action = {
           type = "artillery-remote",
           flare = prefix.."-flare"..suffix
@@ -61,7 +62,7 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, flar
       subgroup = group,
       order = "nullius-"..suborder,
       stack_size = stack,
-      ammo_category = "nullius-drone", --flare,
+      ammo_category = flare,
       ammo_type = {
         target_type = "position",
         action = {
@@ -213,6 +214,7 @@ local function create_miner(mineral, suborder, group, landfill, iname, isize, it
       type = "capsule",
       name = "nullius-guide-remote-"..mineral,
       icons = remote_icons,
+      flags = {"spawnable"}, --"only-in-cursor","not-stackable",
       capsule_action = {
         type = "artillery-remote",
         flare = "nullius-guide-flare-"..mineral
@@ -469,6 +471,7 @@ data:extend({
     name = "nullius-scout-remote",
     icon = ICONPATH .. "scout-remote.png",
     icon_size = 64,
+    flags = {"spawnable"}, --"only-in-cursor", "not-stackable", 
     capsule_action = {
       type = "artillery-remote",
       flare = "nullius-scout-flare"
