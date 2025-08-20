@@ -31,6 +31,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-logistic-train-stop",
+    localised_name = {"entity-name.logistic-train-stop"},
     enabled = false,
     category = "medium-crafting",
     always_show_made_in = true,
@@ -53,6 +54,7 @@ if mods["LTN_Combinator_Modernized"] then
     {
       type = "recipe",
       name = "nullius-ltn-combinator",
+      localised_name = {"entity-name.ltn-combinator"},
       enabled = false,
       always_show_made_in = true,
       category = "tiny-crafting",
