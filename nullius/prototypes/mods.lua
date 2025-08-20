@@ -1858,6 +1858,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bot-upgrade-chest",
+    localised_name = {"entity-name.logistic-chest-botUpgrader"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1879,9 +1880,10 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fuel-train-stop",
+    localised_name = {"entity-name.fuel-train-stop"},
     enabled = false,
-	always_show_made_in = true,
-	no_productivity = true,
+	  always_show_made_in = true,
+	  no_productivity = true,
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
@@ -1941,7 +1943,7 @@ data:extend({
     type = "recipe",
     name = "nullius-companion",
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 90,
     ingredients = {
@@ -1956,7 +1958,7 @@ data:extend({
     type = "recipe",
     name = "nullius-companion-reactor-equipment",
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 30,
     ingredients = {
@@ -2080,8 +2082,9 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-item-sensor",
+    localised_name = {"entity-name.item-sensor"},
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "small-crafting",
     energy_required = 5,
     ingredients = {
