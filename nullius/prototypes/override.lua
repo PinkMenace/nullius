@@ -973,7 +973,7 @@ data.raw["artillery-flare"]["artillery-flare"].shot_category = "artillery-shell"
 data.raw["custom-input"]["give-artillery-targeting-remote"].enabled = false
 data.raw["custom-input"]["give-discharge-defense-remote"].enabled = false
 data.raw["shortcut"]["give-artillery-targeting-remote"].hidden = true
-data.raw["shortcut"]["discharge-defense-equipment"].hidden = true
+data.raw["shortcut"]["give-discharge-defense-remote"].hidden = true
 
 local scTechs = {
   ["construction-robotics"] = nil, --"nullius-construction-robot-1" -- we have bots at the start
