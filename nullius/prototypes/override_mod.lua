@@ -499,6 +499,7 @@ end
 end
 
 if mods["train-pubsub"] then
+data.raw["item-subgroup"]["transport"].group = "logistics"
 data.raw.technology["train-manager"].order = "nullius-dl"
 data.raw.technology["train-manager"].unit = {
   count = 300,

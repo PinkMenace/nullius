@@ -729,6 +729,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-publisher",
+    localised_name = {"entity-name.train-publisher"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -744,6 +745,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-subscriber-train-stop",
+    localised_name = {"entity-name.subscriber-train-stop"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -760,6 +762,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-publisher-train-stop",
+    localised_name = {"entity-name.publisher-train-stop"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -776,6 +779,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-config",
+    localised_name = {"entity-name.train-config"},
     enabled = false,
     always_show_made_in = true,
     category = "tiny-crafting",
