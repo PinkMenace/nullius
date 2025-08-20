@@ -973,8 +973,8 @@ data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = tru
 data.raw["artillery-flare"]["artillery-flare"].shot_category = "artillery-shell" --regular remote will only fire artillery shells
 data.raw["custom-input"]["give-artillery-targeting-remote"].enabled = false
 data.raw["custom-input"]["give-discharge-defense-remote"].enabled = false
-data.raw["shortcut"]["give-artillery-targeting-remote"].hidden = true
-data.raw["shortcut"]["give-discharge-defense-remote"].hidden = true
+data.raw["shortcut"]["give-artillery-targeting-remote"] = nil --.hidden = true
+data.raw["shortcut"]["give-discharge-defense-remote"] = nil --.hidden = true
 
 local scTechs = {
   ["construction-robotics"] = nil, --"nullius-construction-robot-1" -- we have bots at the start
