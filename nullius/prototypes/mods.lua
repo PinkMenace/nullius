@@ -83,6 +83,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-aai-signal-sender",
+    localised_name = {"entity-name.aai-signal-sender"},
     category = "huge-crafting",
     always_show_made_in = true,
     energy_required = 12,
@@ -98,6 +99,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-aai-signal-receiver",
+    localised_name = {"entity-name.aai-signal-receiver"},
     category = "huge-crafting",
     always_show_made_in = true,
     energy_required = 15,

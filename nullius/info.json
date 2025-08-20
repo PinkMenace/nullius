@@ -33,6 +33,7 @@
 	  "(?) railway-motor-car >= 0.6.0",
 	  "(?) LogisticTrainNetwork >= 2.3.4",
 	  "(?) LTN_Combinator_Modernized >= 2.2.5",
+	  "(?) aai-signal-transmission >= 0.5.1",
 	  
     "! aai-industry",
 	  "! angelsbioprocessing",
