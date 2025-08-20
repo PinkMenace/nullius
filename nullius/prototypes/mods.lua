@@ -919,6 +919,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-1",
+    localised_name = {"item-name.jetpack-1"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -937,6 +938,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-2",
+    localised_name = {"item-name.jetpack-2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -956,6 +958,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-3",
+    localised_name = {"item-name.jetpack-3"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -975,6 +978,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-4",
+    localised_name = {"item-name.jetpack-4"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",

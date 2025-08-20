@@ -18,8 +18,8 @@
     "? underground-pipe-pack >= 1.1.2",
 	  "(?) cargo-ships >= 1.0.21",
     "(?) boblibrary >= 1.1.4",
-    "(?) IRobot >= 1.1.0",
-	  "(?) jetpack >= 0.3.14",
+    "(?) IRobot >= 2.0.0",
+	  "(?) jetpack >= 0.4.12",
 	  
 	  "(?) FluidMustFlow >= 1.4.3",
 	  "(?) factorissimo-2-notnotmelon >= 3.9.6",
