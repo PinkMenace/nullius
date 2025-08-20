@@ -975,7 +975,7 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
     local archetype = data.raw["pipe-to-ground"]["nullius-underground-pipe-"..lvl]
     junction.fluid_box.volume = archetype.fluid_box.volume
 	  junction.minable.mining_time = (lvl * 0.5)
-	  junction.hidden_in_factoriopedia = true -- TODO: confirm that those are just clutter for factoriopedia
+	  junction.hidden_in_factoriopedia = true
 
     for _,connection in pairs(junction.fluid_box.pipe_connections) do
       if ((connection.max_underground_distance ~= nil) and
@@ -987,11 +987,11 @@ for _,junction in pairs(data.raw["pipe-to-ground"]) do
 end
 
 local northpipe = {
-    filename = "__base__/graphics/entity/pipe-covers/hr-pipe-cover-north.png",
+    filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north.png",
     width = 128,
     height = 128,
     scale = 0.5,
-	shift = {0, -1}
+	  shift = {0, -1}
 }
 
 for i=1,9 do
@@ -1005,31 +1005,6 @@ for i=1,9 do
   relief.hidden_in_factoriopedia = true
   topup.minable.mining_time = 0.8
   relief.minable.mining_time = 0.8
-
-  -- topup.pictures.picture.north.layers = { -- TODO: handle this ?
-  --   northpipe,
-  --   topup.pictures.picture.north.layers[1],
-	-- topup.pictures.picture.north.layers[2],
-	-- topup.pictures.picture.north.layers[3]
-  -- }
-  -- topup.pictures.picture.south.layers = {
-  --   northpipe,
-  --   topup.pictures.picture.south.layers[1],
-	-- topup.pictures.picture.south.layers[2],
-	-- topup.pictures.picture.south.layers[3]
-  -- }
-  -- relief.pictures.picture.north.layers = {
-  --   northpipe,
-  --   relief.pictures.picture.north.layers[1],
-	-- relief.pictures.picture.north.layers[2],
-	-- relief.pictures.picture.north.layers[3]
-  -- }
-  -- relief.pictures.picture.south.layers = {
-  --   northpipe,
-  --   relief.pictures.picture.south.layers[1],
-	-- relief.pictures.picture.south.layers[2],
-	-- relief.pictures.picture.south.layers[3]
-  -- }
 end
 end
 
@@ -1995,18 +1970,18 @@ if mods["cargo-ships"] then
   end
 
   data.raw["electric-pole"]["floating-electric-pole"].maximum_wire_distance = 32.5
-  data.raw["car"]["indep-boat"].burner.fuel_category = "vehicle"
-  data.raw["car"]["indep-boat"].burner.fuel_inventory_size = 1
-  data.raw["car"]["indep-boat"].burner.burnt_inventory_size = 1
-  data.raw["car"]["indep-boat"].burner.effectivity = 1.5
-  data.raw["locomotive"]["boat_engine"].burner.fuel_category = "vehicle"
-  data.raw["locomotive"]["boat_engine"].burner.fuel_inventory_size = 1
-  data.raw["locomotive"]["boat_engine"].burner.burnt_inventory_size = 1
-  data.raw["locomotive"]["boat_engine"].burner.effectivity = 1.5
-  data.raw["locomotive"]["cargo_ship_engine"].burner.fuel_category = "vehicle"
-  data.raw["locomotive"]["cargo_ship_engine"].burner.fuel_inventory_size = 3
-  data.raw["locomotive"]["cargo_ship_engine"].burner.burnt_inventory_size = 3
-  data.raw["locomotive"]["cargo_ship_engine"].burner.effectivity = 2
+  data.raw["car"]["indep-boat"].energy_source.fuel_categories = {"vehicle"}
+  data.raw["car"]["indep-boat"].energy_source.fuel_inventory_size = 1
+  data.raw["car"]["indep-boat"].energy_source.burnt_inventory_size = 1
+  data.raw["car"]["indep-boat"].energy_source.effectivity = 1.5
+  data.raw["locomotive"]["boat_engine"].energy_source.fuel_categories = {"vehicle"}
+  data.raw["locomotive"]["boat_engine"].energy_source.fuel_inventory_size = 1
+  data.raw["locomotive"]["boat_engine"].energy_source.burnt_inventory_size = 1
+  data.raw["locomotive"]["boat_engine"].energy_source.effectivity = 1.5
+  data.raw["locomotive"]["cargo_ship_engine"].energy_source.fuel_categories = {"vehicle"}
+  data.raw["locomotive"]["cargo_ship_engine"].energy_source.fuel_inventory_size = 3
+  data.raw["locomotive"]["cargo_ship_engine"].energy_source.burnt_inventory_size = 3
+  data.raw["locomotive"]["cargo_ship_engine"].energy_source.effectivity = 2
 
 
   data.raw.technology["water_transport"].order = "nullius-cn"
@@ -2034,7 +2009,7 @@ if mods["cargo-ships"] then
 
   data.raw.technology["automated_water_transport"].order = "nullius-di"
   data.raw.technology["automated_water_transport"].prerequisites =
-      {"cargo_ships", "nullius-concrete-1", "nullius-weaving-1"}
+      {"cargo_ships", "nullius-concrete-1", "nullius-weaving-1","nullius-checkpoint-sensor"}
   data.raw.technology["automated_water_transport"].unit = {
     count = 100, time = 30,
     ingredients = {
@@ -2054,20 +2029,20 @@ if mods["cargo-ships"] then
     }
   }
 
-  data.raw.technology["water_transport_signals"].order = "nullius-dj"
-  data.raw.technology["water_transport_signals"].prerequisites =
-      {"automated_water_transport", "nullius-checkpoint-sensor"}
-  data.raw.technology["water_transport_signals"].unit = {
-    count = 80, time = 30,
-    ingredients = {
-      {"nullius-geology-pack", 1}, {"nullius-climatology-pack", 1},
-      {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 2}
-    }
-  }
+  -- data.raw.technology["water_transport_signals"].order = "nullius-dj"
+  -- data.raw.technology["water_transport_signals"].prerequisites =
+  --     {"automated_water_transport", "nullius-checkpoint-sensor"}
+  -- data.raw.technology["water_transport_signals"].unit = {
+  --   count = 80, time = 30,
+  --   ingredients = {
+  --     {"nullius-geology-pack", 1}, {"nullius-climatology-pack", 1},
+  --     {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 2}
+  --   }
+  -- }
 
   data.raw.technology["oversea-energy-distribution"].order = "nullius-dk"
   data.raw.technology["oversea-energy-distribution"].prerequisites =
-      {"water_transport_signals", "tank_ship", "nullius-energy-distribution-3"}
+      {"water_transport", "tank_ship", "nullius-energy-distribution-3"}
   data.raw.technology["oversea-energy-distribution"].unit = {
     count = 150, time = 30,
     ingredients = {
@@ -2094,7 +2069,7 @@ if mods["cargo-ships"] then
   data.raw["rail-planner"]["waterway"].order = "nullius-b"
   data.raw["item-with-entity-data"]["boat_engine"].order = "nullius-l"
   data.raw["item-with-entity-data"]["cargo_ship_engine"].order = "nullius-m"
-  data.raw["item-with-entity-data"]["indep-boat"].order = "nullius-i"
+  --data.raw["item-with-entity-data"]["indep-boat"].order = "nullius-i"
 
   data.raw["item-with-entity-data"]["boat"].order = "nullius-h"
   data.raw.recipe["boat"].order = "nullius-h"
@@ -2152,7 +2127,7 @@ if mods["cargo-ships"] then
   data.raw.recipe["buoy"].energy_required = 5
   data.raw.recipe["buoy"].ingredients = {
     {type="item", name="rail-signal", amount=1},
-    {type="item", name="empty-barrel", amount=1},
+    {type="item", name="barrel", amount=1},
     {type="item", name="nullius-steel-cable", amount=5},
     {type="item", name="concrete", amount=5},
 	{type="fluid", name="nullius-nitrogen", amount=250, fluidbox_index=1}
@@ -2194,7 +2169,7 @@ if mods["cargo-ships"] then
   }
 
 
-  if settings.startup["deep_oil"].value then
+  if settings.startup["offshore_oil_enabled"].value then
     data.raw.technology["deep_sea_oil_extraction"].order = "nullius-dk"
     data.raw.technology["deep_sea_oil_extraction"].prerequisites =
         {"oversea-energy-distribution", "nullius-plumbing-4"}
@@ -2209,7 +2184,7 @@ if mods["cargo-ships"] then
 
     data.raw.item["oil_rig"].subgroup = "water-intake"
     data.raw.item["oil_rig"].order = "nullius-dr"
-	data.raw.recipe["oil_rig"].order = "nullius-dr"
+	  data.raw.recipe["oil_rig"].order = "nullius-dr"
     data.raw.recipe["oil_rig"].category = "huge-crafting"
     data.raw.recipe["oil_rig"].always_show_made_in = true
     data.raw.recipe["oil_rig"].energy_required = 60

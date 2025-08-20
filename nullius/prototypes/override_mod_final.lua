@@ -254,7 +254,7 @@ if (mods["RenaiTransportation"] and
 end
 
 
-if (mods["cargo-ships"] and settings.startup["deep_oil"].value) then
+if (mods["cargo-ships"] and settings.startup["offshore_oil_enabled"].value) then
   data.raw.technology["deep_sea_oil_extraction"].unit = {
     count = 200, time = 30,
     ingredients = {
