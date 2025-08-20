@@ -968,6 +968,23 @@ end
 
 data.raw["utility-constants"]["default"].max_fluid_flow = 500
 data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true
+
 data.raw["artillery-flare"]["artillery-flare"].shot_category = "artillery-shell" --regular remote will only fire artillery shells
 data.raw["custom-input"]["give-artillery-targeting-remote"].enabled = false
+data.raw["custom-input"]["give-discharge-defense-remote"].enabled = false
 data.raw["shortcut"]["give-artillery-targeting-remote"].hidden = true
+data.raw["shortcut"]["discharge-defense-equipment"].hidden = true
+
+local scTechs = {
+  ["construction-robotics"] = nil, --"nullius-construction-robot-1" -- we have bots at the start
+  ["personal-roboport-equipment"] = nil,
+  ["electronics"] = nil,
+  ["circuit-network"] = nil,
+  ["exoskeleton-equipment"] = "nullius-cybernetics-4",
+  ["spidertron"] = "nullius-personal-transportation-4"
+}
+for _, sc in pairs(data.raw.shortcut) do
+  if sc.technology_to_unlock ~= nil then
+    sc.technology_to_unlock = scTechs[sc.technology_to_unlock]
+  end
+end
