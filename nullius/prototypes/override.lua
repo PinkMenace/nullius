@@ -951,13 +951,14 @@ for tilename,landfill in pairs(landfill_tiles) do
 	    mining_time = 1,
 	    result = landfill
 	  }
+	  tile.is_foundation = true
   end
 end
 data.raw.tile["landfill"].minable = {
   mining_time = 1,
   result = "nullius-land-fill-gravel"
 }
-data.raw.tile["landfill"].is_foundation = false
+data.raw.tile["landfill"].is_foundation = true
 
 if settings.startup["nullius-hide-void-alt"].value then
   local void_buildings = {"nullius-chimney-1","nullius-chimney-2","nullius-chimney-3","nullius-outfall-1","nullius-outfall-2","nullius-outfall-3"}
