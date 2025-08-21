@@ -3900,6 +3900,7 @@ if mods["ch-concentrated-solar"] then
     {
       type = "recipe",
       name = "nullius-heliostat-mirror",
+      localised_name = {"entity-name.chcs-heliostat-mirror"},
       enabled = false,
       always_show_made_in = true,
       category = "hand-casting",
@@ -3921,7 +3922,7 @@ if mods["ch-concentrated-solar"] then
       enabled = false,
       always_show_made_in = true,
       category = "machine-casting",
-	  subgroup = "boxed-heat-energy",
+	    subgroup = "boxed-heat-energy",
       energy_required = 50,
       ingredients = {
 	    {type = "item", name = "nullius-box-aluminum-sheet", amount = 8},
@@ -3937,16 +3938,17 @@ if mods["ch-concentrated-solar"] then
     {
       type = "recipe",
       name = "nullius-solar-tower",
+      localised_name = {"entity-name.chcs-solar-power-tower"},
       enabled = false,
       always_show_made_in = true,
       category = "huge-crafting",
       energy_required = 60,
       ingredients = {
-	    {type = "item", name = "nullius-thermal-tank-2", amount = 3},
+	      {type = "item", name = "nullius-thermal-tank-2", amount = 3},
         {type = "item", name = "nullius-box-heat-pipe-2", amount = 10},
-		{type = "item", name = "nullius-box-steel-beam", amount = 24},
-		{type = "item", name = "nullius-box-reinforced-concrete", amount = 8},
-		{type = "item", name = "nullius-pump-2", amount = 8},
+		    {type = "item", name = "nullius-box-steel-beam", amount = 24},
+		    {type = "item", name = "nullius-box-reinforced-concrete", amount = 8},
+		    {type = "item", name = "nullius-pump-2", amount = 8},
         {type = "item", name = "nullius-large-beacon-1", amount = 1}
       },
       results = {
@@ -3957,13 +3959,13 @@ if mods["ch-concentrated-solar"] then
     {
       type = "technology",
       name = "nullius-concentrated-solar-energy",
-	  order = "nullius-eo",
-	  icons = {{
-        icon = "__ch-concentrated-solar__/graphics/technology/concentrated-solar-energy.png",
-		icon_size = 256,
-		icon_mipmaps = 4
-      }},
-	  localised_name = {"technology-name.chcs-concentrated-solar-energy"},
+	    order = "nullius-eo",
+	    icons = {{
+          icon = "__ch-concentrated-solar__/graphics/technology/concentrated-solar-energy.png",
+		  icon_size = 256,
+		  icon_mipmaps = 4
+        }},
+	    localised_name = {"technology-name.chcs-concentrated-solar-energy"},
       localised_description = {"technology-description.chcs-concentrated-solar-energy"},
       effects = {
         {
@@ -3988,7 +3990,7 @@ if mods["ch-concentrated-solar"] then
         ingredients = {
           {"nullius-geology-pack", 1}, {"nullius-climatology-pack", 1},
           {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1},
-		  {"nullius-chemical-pack", 1}
+		      {"nullius-chemical-pack", 1}
         },
         time = 35
       },

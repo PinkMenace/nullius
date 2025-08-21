@@ -39,6 +39,7 @@
 	"(?) Inventory Sensor >= 2.0.6",
 	"(?) holographic_signs >= 2.0.8",
 	"(?) rec-blue-plus >= 1.4.8",
+	"(?) ch-concentrated-solar >= 0.5.1",
 	  
     "! aai-industry",
 	"! angelsbioprocessing",
