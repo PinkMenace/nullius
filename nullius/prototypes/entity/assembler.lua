@@ -128,6 +128,7 @@ data:extend({
     icon_size = 64,
     icons = data.raw.item["nullius-medium-assembler-1"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    disabled_when_recipe_not_researched = false,
     icon_draw_specification = {shift = {0, -0.2}},
     minable = {mining_time = 0.8, result = "nullius-medium-assembler-1"},
     max_health = 300,
