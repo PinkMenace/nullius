@@ -3860,6 +3860,7 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
     {
       type = "recipe",
       name = "nullius-blueprint-deployer",
+      localised_name = {"entity-name.blueprint-deployer"},
       enabled = false,
       always_show_made_in = true,
       category = "small-crafting",
@@ -3876,13 +3877,14 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
     {
       type = "recipe",
       name = "nullius-recursive-blueprints-scanner",
+      localised_name = {"entity-name.recursive-blueprints-scanner"},
       enabled = false,
       always_show_made_in = true,
       category = "large-crafting",
       energy_required = 20,
       ingredients = {
         {type = "item", name = "radar", amount = 1},
-		{type = "item", name = "nullius-small-miner-2", amount = 1},
+		    {type = "item", name = "nullius-small-miner-2", amount = 1},
         {type = "item", name = "nullius-sensor-1", amount = 4}
       },
       results = {

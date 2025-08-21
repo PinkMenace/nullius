@@ -38,6 +38,7 @@
 	"(?) botReplacer >= 2.0.0",
 	"(?) Inventory Sensor >= 2.0.6",
 	"(?) holographic_signs >= 2.0.8",
+	"(?) rec-blue-plus >= 1.4.8",
 	  
     "! aai-industry",
 	"! angelsbioprocessing",
@@ -51,6 +52,8 @@
 	"(?) miniloader >= 1.15.7",
 	"(?) FuelTrainStop >= 1.1.0",
 	"(?) crafting_combinator >= 0.16.3",
-	"(?) Shuttle_Train_Continued >= 1.1.0"
+	"(?) Shuttle_Train_Continued >= 1.1.0",
+	"(?) railloader >= 1.1.6",
+	"(?) DisplayPlates >= 1.5.1"
   ]
 }
