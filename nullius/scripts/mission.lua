@@ -146,7 +146,7 @@ function set_mission_goal(goal, amount, force)
   local oldstatus = status[goal]
   count[goal] = math.min(math.max(amount, 0), (mission_target[goal] * 4))
   status[goal] = (math.floor(100 *
-      ((100 * count[goal]) / mission_target[goal])) / 100)
+      ((100 * count[goal]) / mission_target[goal])) / 100) -- only shows 2 digits after the dot
 
   if ((goal >= 3) and (goal <= 5)) then
     local algae_oxygen = (40 * count[3]) / (count[3] + (mission_target[3] / 2))
@@ -226,18 +226,18 @@ function update_oxygen()
   local vent_force = nil
   local vent_total = storage.nullius_oxygen_legacy
   for _, force in pairs(game.forces) do
-	if (force.research_enabled) then
-	  local stats = force.get_fluid_production_statistics("nauvis")
-	  local vent_score = 0
-	  for gasname,multiplier in pairs(oxygen_equivalent) do
-	    vent_score = (vent_score + ((stats.get_input_count(gasname) -
-	        stats.get_output_count(gasname)) * multiplier))
-	  end
-	  vent_total = vent_total + vent_score
-	  if ((vent_force == nil) or (vent_score > vent_best)) then
-	    vent_best = vent_score
-		vent_force = force
-	  end
+	  if (force.research_enabled) then
+	    local stats = force.get_fluid_production_statistics("nauvis")
+	    local vent_score = 0
+	    for gasname,multiplier in pairs(oxygen_equivalent) do
+	      vent_score = (vent_score + ((stats.get_input_count(gasname) -
+	          stats.get_output_count(gasname)) * multiplier))
+	    end
+	    vent_total = vent_total + vent_score
+	    if ((vent_force == nil) or (vent_score > vent_best)) then
+	      vent_best = vent_score
+	  	  vent_force = force
+	    end
     end
   end
 
