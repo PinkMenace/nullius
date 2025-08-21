@@ -660,7 +660,7 @@ data:extend({
       {type="item", name="aai-basic-loader", amount=1},
       {type="item", name="underground-belt", amount=1},
       {type="item", name="inserter", amount=4},
-	  {type="fluid", name="nullius-lubricant", amount=30},
+	    {type="fluid", name="nullius-lubricant", amount=30},
     },
     results = {
 			{type = "item", name = "aai-loader", amount = 1}

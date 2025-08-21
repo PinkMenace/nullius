@@ -1,1 +1,47 @@
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025
+  Features:
+    - 
+  Changes:
+    - 
+  Balancing:
+    - 
+  Bugfixes:
+    - 
+  Graphics:
+    - 
+  Info:
+    - 
+  Modding:
+    - 
+---------------------------------------------------------------------------------------------------
 
+Changelog:
+Updated to 2.0
+Added landing pad: Now the results of rocket launches will be collected there
+Reworked the inserters: Removed filter inserters, now base inserters have filters except tier 1, their recipes have been adapted
+Same thing with aai loaders
+
+Re-introduced red and green wires so there is a seamless transition to 2.0
+Removed the dependency on angels, now only depends on the graphics
+Now uses the Valve prototype for valves
+Added essential techs
+Added display panels and selector combinator
+Tweaked description texts of landing entities to make them less ambiguous
+Added a trigger tech "Salvage lab wreckage"
+Added icons for drones ammo categories
+Renamed the extension tech to inserter extension
+Added description to inserters 
+Added command to flip all valves
+Reworked voiding recipes icons to make them standout more in factoriopedia
+Added setting to hide the voiding recipe icon from chimneys and outfalls
+Removed mentions of the old pressure system
+Increased the pumping speeds of pumps (and max flow rate)
+Removed regular artillery shortcut and discharge defense shortcut
+Changed required techs for most shortcuts
+Added wire connexions to assemblers, boxer and nanofab
+Allowed medium assembler 1 to craft disabled recipes (to prevent a bug when a broken item is being fixed in early game)
+
+-----------
+Safefill: added setting to enable mining of waterfill
