@@ -41,6 +41,7 @@
 	"(?) rec-blue-plus >= 1.4.8",
 	"(?) ch-concentrated-solar >= 0.5.1",
 	"(?) Mini_Trains >= 2.0.0",
+	"(?) fcpu >= 0.4.33",
 	  
     "! aai-industry",
 	"! angelsbioprocessing",

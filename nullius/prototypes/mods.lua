@@ -4424,6 +4424,7 @@ if mods["fcpu"] then
     {
       type = "recipe",
       name = "nullius-fcpu",
+      localised_name = {"entity-name.fcpu"},
       enabled = false,
       always_show_made_in = true,
       category = "tiny-crafting",
@@ -4440,15 +4441,15 @@ if mods["fcpu"] then
     {
       type = "technology",
       name = "nullius-fcpu",
-        localised_name = {"technology-name.fcpu"},
-        localised_description = {"technology-description.fcpu"},
+      localised_name = {"technology-name.fcpu"},
+      localised_description = {"technology-description.fcpu"},
       icon_size = 128,
       icon = "__fcpu__/graphics/technology/fcpu.png",
       effects =
       {
         {
         type = "unlock-recipe",
-        recipe = "fcpu"
+        recipe = "nullius-fcpu"
         }
       },
       prerequisites = {"nullius-computation", "nullius-electronics-2"},
