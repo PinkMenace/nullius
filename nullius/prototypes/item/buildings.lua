@@ -3597,14 +3597,17 @@ data:extend({
     category = "huge-crafting",
     energy_required = 180,
     ingredients = {
-      {type="item", name="nullius-drone-launcher-2", amount=5},
       {type="item", name="nullius-hangar-3", amount=2},
       {type="item", name="nullius-beacon-3", amount=4},
       {type="item", name="nullius-box-wall", amount=10},
+      {type="item", name="nullius-box-steel-beam", amount=10},
+      {type="item", name="nullius-armor-plate", amount=50},
       {type="item", name="nullius-box-heat-pipe-3", amount=4},
       {type="item", name="nullius-box-hazard-concrete", amount=30},
-      {type="item", name="nullius-box-productivity-module-2", amount=1},
-      {type="item", name="nullius-lab-3", amount=1}
+      --{type="item", name="nullius-box-productivity-module-2", amount=1},
+      {type="item", name="nullius-large-supply-chest-2", amount=8},
+      {type="item", name="nullius-box-sensor-2", amount=4},
+      {type="item", name="nullius-multi-tool-2", amount=15},
     },
     results = {
       {type = "item", name = "nullius-landing-pad", amount = 1}

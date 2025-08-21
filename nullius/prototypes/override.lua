@@ -989,3 +989,5 @@ for _, sc in pairs(data.raw.shortcut) do
     sc.technology_to_unlock = scTechs[sc.technology_to_unlock]
   end
 end
+
+data.raw["cargo-landing-pad"]["cargo-landing-pad"].localised_name = {"item-name.nullius-landing-pad"}
