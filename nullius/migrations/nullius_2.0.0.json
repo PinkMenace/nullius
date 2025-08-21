@@ -6,7 +6,25 @@
 	  ["nullius-duct-end-point-intake", "nullius-duct-intake"],
 	  ["nullius-SNTD-old-nixie-tube", "nullius-classic-nixie-tube"],
 	  ["nullius-SNTD-nixie-tube", "nullius-reinforced-nixie-tube"],
-	  ["nullius-SNTD-nixie-tube-small", "nullius-small-reinforced-nixie-tube"]
+	  ["nullius-SNTD-nixie-tube-small", "nullius-small-reinforced-nixie-tube"],
+	  
+	  ["nullius-box-filter-inserter-2", "nullius-box-inserter-2"],
+	  ["nullius-unbox-filter-inserter-2", "nullius-unbox-inserter-2"],
+	  ["nullius-box-filter-inserter-3", "nullius-box-inserter-3"],
+	  ["nullius-unbox-filter-inserter-3", "nullius-unbox-inserter-3"],
+	  ["nullius-box-filter-inserter-4", "nullius-box-inserter-4"],
+	  ["nullius-unbox-filter-inserter-4", "nullius-unbox-inserter-4"],
+	  ["nullius-filter-inserter-2", "nullius-inserter-2"],
+	  ["nullius-filter-inserter-3", "nullius-inserter-3"],
+	  ["nullius-filter-inserter-4", "nullius-inserter-4"],
+	  ["nullius-boxed-filter-inserter-2", "nullius-boxed-inserter-2"],
+	  ["nullius-boxed-filter-inserter-3", "nullius-boxed-inserter-3"],
+	  ["nullius-boxed-filter-inserter-4", "nullius-boxed-inserter-4"]
+  ],
+  "item": [
+    ["nullius-box-filter-inserter-2", "nullius-box-inserter-2"],
+    ["nullius-box-filter-inserter-3", "nullius-box-inserter-3"],
+    ["nullius-box-filter-inserter-4", "nullius-box-inserter-4"]
   ],
   "tile":[
     ["angels-tile-clay-brick", "nullius-tile-clay-brick"]
