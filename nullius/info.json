@@ -42,6 +42,7 @@
 	"(?) ch-concentrated-solar >= 0.5.1",
 	"(?) Mini_Trains >= 2.0.0",
 	"(?) fcpu >= 0.4.33",
+	"(?) reskins-bobs >= 2.3.5",
 	  
     "! aai-industry",
 	"! angelsbioprocessing",
@@ -58,6 +59,9 @@
 	"(?) Shuttle_Train_Continued >= 1.1.0",
 	"(?) railloader >= 1.1.6",
 	"(?) DisplayPlates >= 1.5.1",
-	"(?) beautiful_bridge_railway >= 1.1.1"
+	"(?) beautiful_bridge_railway >= 1.1.1",
+	"(?) Induction Charging >= 2.0.0",
+	"(?) stack-combinator >= 1.6.2",
+	"(?) GCKI >= 0.16.0"
   ]
 }

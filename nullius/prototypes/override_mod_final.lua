@@ -1,68 +1,60 @@
 local ICONPATH = "__nullius__/graphics/icons/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 
-if mods["bobplates"] then
-data.raw.fluid["liquid-fuel"].subgroup = "unused-fluid"
-data.raw.item["liquid-fuel-barrel"].subgroup = "unused-fluid"
-data.raw.recipe["fill-liquid-fuel-barrel"].subgroup = "unused-fluid"
-data.raw.recipe["empty-liquid-fuel-barrel"].subgroup = "unused-fluid"
-end
-
-
 if mods["reskins-bobs"] then
 if settings.startup["reskins-lib-icon-tier-labeling"].value == true then
   local icon_style = settings.startup["reskins-lib-icon-tier-labeling-style"].value
   if settings.startup["reskins-bobs-do-inserter-tier-labeling"].value == true then
-  data.raw.item["turbo-inserter"].icons[4].icon =
+  data.raw.item["bob-turbo-inserter"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["turbo-inserter"].icons[5].icon =
+  data.raw.item["bob-turbo-inserter"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["turbo-filter-inserter"].icons[6].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["turbo-filter-inserter"].icons[7].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["express-stack-inserter"].icons[4].icon =
+  -- data.raw.item["turbo-filter-inserter"].icons[6].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
+  -- data.raw.item["turbo-filter-inserter"].icons[7].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
+  data.raw.item["bob-express-bulk-inserter"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["express-stack-inserter"].icons[5].icon =
+  data.raw.item["bob-express-bulk-inserter"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["express-stack-filter-inserter"].icons[6].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["express-stack-filter-inserter"].icons[7].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
+  -- data.raw.item["express-stack-filter-inserter"].icons[6].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
+  -- data.raw.item["express-stack-filter-inserter"].icons[7].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
 
   if (mods["RenaiTransportation"] and
       settings.startup["RTThrowersSetting"].value) then
-  data.raw.item["RTThrower-turbo-inserter-Item"].icons[4].icon =
+  data.raw.item["RTThrower-bob-turbo-inserter-Item"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["RTThrower-turbo-inserter-Item"].icons[5].icon =
+  data.raw.item["RTThrower-bob-turbo-inserter-Item"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["RTThrower-turbo-filter-inserter-Item"].icons[6].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["RTThrower-turbo-filter-inserter-Item"].icons[7].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
-  data.raw.item["RTThrower-express-stack-inserter-Item"].icons[4].icon =
+  -- data.raw.item["RTThrower-turbo-filter-inserter-Item"].icons[6].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
+  -- data.raw.item["RTThrower-turbo-filter-inserter-Item"].icons[7].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/2.png"
+  data.raw.item["RTThrower-bob-express-bulk-inserter-Item"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["RTThrower-express-stack-inserter-Item"].icons[5].icon =
+  data.raw.item["RTThrower-bob-express-bulk-inserter-Item"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["RTThrower-express-stack-filter-inserter-Item"].icons[6].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["RTThrower-express-stack-filter-inserter-Item"].icons[7].icon =
-      "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
+  -- data.raw.item["RTThrower-express-stack-filter-inserter-Item"].icons[6].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
+  -- data.raw.item["RTThrower-express-stack-filter-inserter-Item"].icons[7].icon =
+  --     "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   end
   end
 
   if settings.startup["reskins-bobs-do-belt-entity-tier-labeling"].value == true then
-  data.raw.item["ultimate-transport-belt"].icons[4].icon =
+  data.raw.item["bob-ultimate-transport-belt"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["ultimate-transport-belt"].icons[5].icon =
+  data.raw.item["bob-ultimate-transport-belt"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   data.raw.item["bob-ultimate-underground-belt"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   data.raw.item["bob-ultimate-underground-belt"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["ultimate-splitter"].icons[4].icon =
+  data.raw.item["bob-ultimate-splitter"].icons[4].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
-  data.raw.item["ultimate-splitter"].icons[5].icon =
+  data.raw.item["bob-ultimate-splitter"].icons[5].icon =
       "__reskins-library__/graphics/icons/tiers/"..icon_style.."/4.png"
   end
 
