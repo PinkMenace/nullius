@@ -2253,14 +2253,15 @@ if mods["Mini_Trains"] then
   mtl1.icon_size = nil
   mtl1.minable.result = "nullius-small-locomotive-1"
   mtl1.resistances = data.raw.locomotive["nullius-locomotive-1"].resistances
-  mtl1.burner = {
-    fuel_category = "vehicle",
+  mtl1.energy_source = {
+    type = "burner",
+    fuel_categories = {"vehicle"},
     effectivity = 0.9,
     fuel_inventory_size = 1,
     burnt_inventory_size = 2,
-    smoke = data.raw.locomotive["mini-locomotive"].burner.smoke
+    smoke = data.raw.locomotive["mini-locomotive"].energy_source.smoke
   }
-  mtl1.pictures.layers[1].tint = {r = 0.8, g = 0.8, b = 0.6}
+  mtl1.pictures.rotated.layers[1].tint = {r = 0.8, g = 0.8, b = 0.6}
   mtl1.color = {r = 0.9, g = 0.85, b = 0}
   mtl1.weight = 500
   mtl1.max_speed = 0.50925925925925926
@@ -2276,9 +2277,9 @@ if mods["Mini_Trains"] then
   mtl2.localised_description = {"entity-description.nullius-locomotive-2"}
   mtl2.icons = data.raw.item["nullius-small-locomotive-2"].icons
   mtl2.minable.result = "nullius-small-locomotive-2"
-  mtl2.burner.effectivity = 0.95
-  mtl2.burner.fuel_inventory_size = 2
-  mtl2.pictures.layers[1].tint = {r = 0.9, g = 0.7, b = 0.7}
+  mtl2.energy_source.effectivity = 0.95
+  mtl2.energy_source.fuel_inventory_size = 2
+  mtl2.pictures.rotated.layers[1].tint = {r = 0.9, g = 0.7, b = 0.7}
   mtl2.color = {r = 0.95, g = 0.1, b = 0}
   mtl2.weight = 800
   mtl2.max_speed = 1.0416666666666667
@@ -2294,8 +2295,8 @@ if mods["Mini_Trains"] then
   mtl3.localised_description = {"entity-description.nullius-locomotive-3"}
   mtl3.icons = data.raw.item["nullius-small-locomotive-3"].icons
   mtl3.minable.result = "nullius-small-locomotive-3"
-  mtl3.burner.effectivity = 1
-  mtl3.pictures.layers[1].tint = {r = 0.8, g = 0.8, b = 1}
+  mtl3.energy_source.effectivity = 1
+  mtl3.pictures.rotated.layers[1].tint = {r = 0.8, g = 0.8, b = 1}
   mtl3.color = {r = 0.2, g = 0.3, b = 0.8}
   mtl3.weight = 1200
   mtl3.max_speed = 1.75925925925926
@@ -2312,8 +2313,7 @@ if mods["Mini_Trains"] then
   mtls.icons = data.raw.item["nullius-small-solar-locomotive"].icons
   mtls.minable.result = "nullius-small-solar-locomotive"
   mtls.energy_source = {type = "void"}
-  mtls.burner = nil
-  mtls.pictures.layers[1].tint = {r = 0.8, g = 1, b = 0.8}
+  mtls.pictures.rotated.layers[1].tint = {r = 0.8, g = 1, b = 0.8}
   mtls.color = {r = 0.2, g = 0.8, b = 0.3}
   mtls.max_speed = 1.0416666666666667
   mtls.max_power = "280kW"
@@ -2329,7 +2329,7 @@ if mods["Mini_Trains"] then
   mtc1.minable.result = "nullius-small-cargo-wagon-1"
   mtc1.resistances = data.raw["cargo-wagon"]["nullius-cargo-wagon-1"].resistances
   mtc1.max_speed = (data.raw["cargo-wagon"]["nullius-cargo-wagon-1"].max_speed * 0.95)
-  mtc1.pictures.layers[1].tint = {r = 0.8, g = 0.8, b = 0.6}
+  mtc1.pictures.rotated.layers[1].tint = {r = 0.8, g = 0.8, b = 0.6}
   mtc1.color = {r = 0.9, g = 0.85, b = 0}
   mtc1.inventory_size = 12
   mtc1.weight = 250
@@ -2344,7 +2344,7 @@ if mods["Mini_Trains"] then
   mtc2.minable.result = "nullius-small-cargo-wagon-2"
   mtc2.resistances = data.raw["cargo-wagon"]["nullius-cargo-wagon-2"].resistances
   mtc2.max_speed = (data.raw["cargo-wagon"]["nullius-cargo-wagon-2"].max_speed * 0.95)
-  mtc2.pictures.layers[1].tint = {r = 0.9, g = 0.7, b = 0.7}
+  mtc2.pictures.rotated.layers[1].tint = {r = 0.9, g = 0.7, b = 0.7}
   mtc2.color = {r = 0.95, g = 0.1, b = 0}
   mtc2.inventory_size = 25
   mtc2.weight = 500
@@ -2359,7 +2359,7 @@ if mods["Mini_Trains"] then
   mtc3.minable.result = "nullius-small-cargo-wagon-3"
   mtc3.resistances = data.raw["cargo-wagon"]["nullius-cargo-wagon-3"].resistances
   mtc3.max_speed = (data.raw["cargo-wagon"]["nullius-cargo-wagon-3"].max_speed * 0.95)
-  mtc3.pictures.layers[1].tint = {r = 0.8, g = 0.8, b = 1}
+  mtc3.pictures.rotated.layers[1].tint = {r = 0.8, g = 0.8, b = 1}
   mtc3.color = {r = 0.2, g = 0.3, b = 0.8}
   mtc3.inventory_size = 50
   mtc3.weight = 750
@@ -2377,7 +2377,7 @@ if mods["Mini_Trains"] then
   mtf1.minable.result = "nullius-small-fluid-wagon-1"
   mtf1.resistances = data.raw["fluid-wagon"]["nullius-fluid-wagon-1"].resistances
   mtf1.max_speed = (data.raw["fluid-wagon"]["nullius-fluid-wagon-1"].max_speed * 0.95)
-  mtf1.pictures.layers[1].tint = {r = 0.8, g = 0.8, b = 0.6}
+  mtf1.pictures.rotated.layers[1].tint = {r = 0.8, g = 0.8, b = 0.6}
   mtf1.color = {r = 0.9, g = 0.85, b = 0}
   mtf1.capacity = 12000
   mtf1.weight = 300
@@ -2392,7 +2392,7 @@ if mods["Mini_Trains"] then
   mtf2.minable.result = "nullius-small-fluid-wagon-2"
   mtf2.resistances = data.raw["fluid-wagon"]["nullius-fluid-wagon-2"].resistances
   mtf2.max_speed = (data.raw["fluid-wagon"]["nullius-fluid-wagon-2"].max_speed * 0.95)
-  mtf2.pictures.layers[1].tint = {r = 0.9, g = 0.7, b = 0.7}
+  mtf2.pictures.rotated.layers[1].tint = {r = 0.9, g = 0.7, b = 0.7}
   mtf2.color = {r = 0.95, g = 0.1, b = 0}
   mtf2.capacity = 40000
   mtf2.weight = 600
@@ -2407,7 +2407,7 @@ if mods["Mini_Trains"] then
   mtf3.minable.result = "nullius-small-fluid-wagon-3"
   mtf3.resistances = data.raw["fluid-wagon"]["nullius-fluid-wagon-3"].resistances
   mtf3.max_speed = (data.raw["fluid-wagon"]["nullius-fluid-wagon-3"].max_speed * 0.95)
-  mtf3.pictures.layers[1].tint = {r = 0.8, g = 0.8, b = 1}
+  mtf3.pictures.rotated.layers[1].tint = {r = 0.8, g = 0.8, b = 1}
   mtf3.color = {r = 0.2, g = 0.3, b = 0.8}
   mtf3.capacity = 125000
   mtf3.weight = 900

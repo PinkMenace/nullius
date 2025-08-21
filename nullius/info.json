@@ -40,6 +40,7 @@
 	"(?) holographic_signs >= 2.0.8",
 	"(?) rec-blue-plus >= 1.4.8",
 	"(?) ch-concentrated-solar >= 0.5.1",
+	"(?) Mini_Trains >= 2.0.0",
 	  
     "! aai-industry",
 	"! angelsbioprocessing",
@@ -55,6 +56,7 @@
 	"(?) crafting_combinator >= 0.16.3",
 	"(?) Shuttle_Train_Continued >= 1.1.0",
 	"(?) railloader >= 1.1.6",
-	"(?) DisplayPlates >= 1.5.1"
+	"(?) DisplayPlates >= 1.5.1",
+	"(?) beautiful_bridge_railway >= 1.1.1"
   ]
 }

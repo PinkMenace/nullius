@@ -4095,10 +4095,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-locomotive-1",
-	  icons = {{
-	    icon = "__Mini_Trains__/data/icons/cab64.png",
+	    icons = {{
+	      icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 0.65, g = 0.65, b = 0.4 }
+		  tint = { r = 0.65, g = 0.65, b = 0.4 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-bb",
@@ -4108,10 +4108,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-locomotive-2",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 1, g = 0.7, b = 0.7 }
+		  tint = { r = 1, g = 0.7, b = 0.7 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-bc",
@@ -4121,10 +4121,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-locomotive-3",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 0.8, b = 1 }
+		  tint = { r = 0.8, g = 0.8, b = 1 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-bd",
@@ -4134,10 +4134,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-solar-locomotive",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 1, b = 0.8 }
+		  tint = { r = 0.8, g = 1, b = 0.8 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-be",
@@ -4147,10 +4147,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-cargo-wagon-1",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cargo64.png",
         icon_size = 64,
-		tint = { r = 0.65, g = 0.65, b = 0.4 }
+		  tint = { r = 0.65, g = 0.65, b = 0.4 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-cb",
@@ -4160,10 +4160,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-cargo-wagon-2",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cargo64.png",
         icon_size = 64,
-		tint = { r = 1, g = 0.7, b = 0.7 }
+		  tint = { r = 1, g = 0.7, b = 0.7 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-cc",
@@ -4173,10 +4173,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-cargo-wagon-3",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cargo64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 0.8, b = 1 }
+		  tint = { r = 0.8, g = 0.8, b = 1 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-cd",
@@ -4186,10 +4186,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-fluid-wagon-1",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/fluid64.png",
         icon_size = 64,
-		tint = { r = 0.65, g = 0.65, b = 0.4 }
+		  tint = { r = 0.65, g = 0.65, b = 0.4 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-db",
@@ -4199,10 +4199,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-fluid-wagon-2",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/fluid64.png",
         icon_size = 64,
-		tint = { r = 1, g = 0.7, b = 0.7 }
+		  tint = { r = 1, g = 0.7, b = 0.7 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-dc",
@@ -4212,10 +4212,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-fluid-wagon-3",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/fluid64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 0.8, b = 1 }
+		  tint = { r = 0.8, g = 0.8, b = 1 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-dd",
@@ -4399,10 +4399,10 @@ if mods["Mini_Trains"] then
       type = "technology",
       name = "nullius-light-rail",
       order = "nullius-cn",
-	  icons = {{
+	    icons = {{
         icon = "__Mini_Trains__/data/icons/tech256.png",
         icon_size = 256
-	  }},
+	    }},
       effects = {
 	    { type = "unlock-recipe", recipe = "nullius-small-locomotive-1" },
         { type = "unlock-recipe", recipe = "nullius-small-cargo-wagon-1" }
