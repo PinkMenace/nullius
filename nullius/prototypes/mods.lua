@@ -2247,6 +2247,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-holographic-sign",
+    localised_name = {"entity-name.hs_holo_sign"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -2255,7 +2256,7 @@ data:extend({
       {type = "item", name = "constant-combinator", amount = 2},
       {type = "item", name = "small-lamp", amount = 3},
       {type = "item", name = "nullius-aluminum-plate", amount = 1},
-	  {type = "item", name = "nullius-glass", amount = 2}
+	    {type = "item", name = "nullius-glass", amount = 2}
     },
     results = {
 			{type = "item", name = "hs_holo_sign", amount = 1}
