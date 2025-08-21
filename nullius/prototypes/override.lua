@@ -991,3 +991,4 @@ for _, sc in pairs(data.raw.shortcut) do
 end
 
 data.raw["cargo-landing-pad"]["cargo-landing-pad"].localised_name = {"item-name.nullius-landing-pad"}
+data.raw["inserter"]["inserter"].filter_count = 0
