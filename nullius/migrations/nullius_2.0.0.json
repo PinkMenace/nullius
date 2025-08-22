@@ -30,7 +30,11 @@
     ["angels-tile-clay-brick", "nullius-tile-clay-brick"]
   ],
   "entity": [
-    ["angels-crystal-rock", "nullius-crystal-rock"]
+    ["angels-crystal-rock", "nullius-crystal-rock"],
+    ["nullius-priority-valve","nullius-legacy-priority-valve"],
+    ["nullius-one-way-valve","nullius-legacy-one-way-valve"],
+    ["nullius-top-up-valve","nullius-legacy-top-up-valve"],
+    ["nullius-relief-valve","nullius-legacy-relief-valve"]
   ],
   "technology": [
     ["nullius-SNTD-nixie-tubes-basic", "nullius-reinforced-nixie-tubes-basic"],
