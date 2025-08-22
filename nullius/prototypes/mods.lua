@@ -1,6 +1,78 @@
 local ICONPATH = "__nullius__/graphics/icons/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 
+if mods["elevated-rails"] then
+data:extend({
+  {
+    type = "technology",
+    name = "nullius-elevated-rails",
+    order = "nullius-em",
+    icon = "__elevated-rails__/graphics/technology/elevated-rail.png",
+    icon_size = 256,
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-rail-support"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-rail-ramp"
+      },
+      {
+        type = "rail-planner-allow-elevated-rails",
+        modifier = true
+      },
+    },
+    prerequisites = {"nullius-architecture-1"},
+    unit = {
+      count = 560,
+      ingredients = {
+        {"nullius-geology-pack", 1},
+        {"nullius-climatology-pack", 1},
+        {"nullius-mechanical-pack", 2},
+        {"nullius-chemical-pack", 1}
+      },
+      time = 35
+    }
+  },
+  {
+    type = "recipe",
+    name = "nullius-rail-support",
+    localised_name = {"entity-name.nullius-rail-pylon"},
+    enabled = false,
+    category = "large-crafting",
+    always_show_made_in = true,
+    show_amount_in_title = false,
+    always_show_products = true,
+    energy_required = 8,
+    ingredients = {
+      {type = "item", name = "stone-wall", amount = 6},
+      {type = "item", name = "nullius-pylon-2", amount = 1}
+    },
+    results = {{type="item", name="rail-support", amount = 1}}
+  },
+  {
+    type = "recipe",
+    name = "nullius-rail-ramp",
+    localised_name = {"entity-name.rail-ramp"},
+    enabled = false,
+    category = "large-crafting",
+    always_show_made_in = true,
+    show_amount_in_title = false,
+    always_show_products = true,
+    energy_required = 20,
+    ingredients = {
+      {type = "item", name = "stone-wall", amount = 8},
+      {type = "item", name = "nullius-steel-beam", amount = 10},
+      {type = "item", name = "rail-support", amount = 1},
+      {type = "item", name = "rail", amount = 8}
+    },
+    results = {{type="item", name="rail-ramp", amount = 1}}
+  }
+})
+end
+
 if mods["LogisticTrainNetwork"] then
 data:extend({
   {

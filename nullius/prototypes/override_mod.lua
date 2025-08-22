@@ -2,6 +2,24 @@ local ICONPATH = "__nullius__/graphics/icons/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 
 
+if mods["elevated-rails"] then
+  data.raw["item"]["rail-support"].subgroup = "railway"
+  data.raw["item"]["rail-support"].order = "nullius-dm"
+  data.raw["item"]["rail-support"].localised_name = {"entity-name.nullius-rail-pylon"}
+  data.raw["rail-support"]["rail-support"].subgroup = "railway"
+  data.raw["rail-support"]["rail-support"].order = "nullius-dm"
+  data.raw["rail-support"]["rail-support"].localised_name = {"entity-name.nullius-rail-pylon"}
+  data.raw["rail-planner"]["rail-ramp"].subgroup = "railway"
+  data.raw["rail-planner"]["rail-ramp"].order = "nullius-dn"
+  data.raw["rail-ramp"]["rail-ramp"].subgroup = "railway"
+  data.raw["rail-ramp"]["rail-ramp"].order = "nullius-dn"
+table.insert(
+  data.raw.technology["nullius-freight-transportation-2"].prerequisites,
+  "nullius-elevated-rails"
+)
+end
+
+
 if mods["LogisticTrainNetwork"] then
 data.raw["train-stop"]["logistic-train-stop"].subgroup = "railway"
 data.raw["train-stop"]["logistic-train-stop"].order = "nullius-ecb"

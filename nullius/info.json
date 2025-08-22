@@ -16,6 +16,7 @@
     "boblogistics >= 2.0.2",
     "? RecipeBook >= 2.7.1",
     "? underground-pipe-pack >= 1.1.2",
+    "? elevated-rails >= 2.0",
 	  "(?) cargo-ships >= 0.2.2",
     "(?) boblibrary >= 1.1.4",
     "(?) IRobot >= 1.1.0",
