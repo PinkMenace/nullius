@@ -752,9 +752,8 @@ function husbandry_effect(event)
   if (old_status == nil) then old_status = 0 end
   if (old_status == 0) then
     game.forces["enemy"].reset_evolution()
-  elseif (game.forces["enemy"].evolution_factor < 0.8) then
-    game.forces["enemy"].evolution_factor =
-	    game.forces["enemy"].evolution_factor + 0.01
+  elseif (game.forces["enemy"].get_evolution_factor() < 0.8) then
+    game.forces["enemy"].set_evolution_factor(game.forces["enemy"].get_evolution_factor() + 0.01)
   end
 
   local source = event.source_entity

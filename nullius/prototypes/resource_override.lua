@@ -158,12 +158,12 @@ data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings = {
 }
 
 
-if (mods["cargo-ships"] and settings.startup["deep_oil"].value) then
-resource_autoplace.initialize_patch_set("deep_oil", false)
+if (mods["cargo-ships"] and settings.startup["offshore_oil_enabled"].value) then
+resource_autoplace.initialize_patch_set("offshore-oil", false)
 
-data.raw.resource["deep_oil"].autoplace =
+data.raw.resource["offshore-oil"].autoplace =
     resource_autoplace.resource_autoplace_settings {
-      name = "deep_oil",
+      name = "offshore-oil",
       order = "a-c-c",
       base_density = 8.2,
       base_spots_per_km2 = 1.8,
@@ -175,7 +175,7 @@ data.raw.resource["deep_oil"].autoplace =
       has_starting_area_placement = false
     }
 
-data.raw.resource["deep_oil"].minable = {
+data.raw.resource["offshore-oil"].minable = {
   mining_time = 1,
   results = {{
     type = "fluid",
@@ -187,14 +187,14 @@ data.raw.resource["deep_oil"].minable = {
   }}
 }
 
-data.raw.resource["deep_oil"].map_color = {r=0.7, g=0.5, b=0.3}
-data.raw.resource["deep_oil"].mining_visualisation_tint = {r = 1.0, g = 0.7, b = 0.4, a = 1.0}
-data.raw.resource["deep_oil"].localised_name = {"entity-name.nullius-hydrothermal-vent"}
-data.raw.resource["deep_oil"].localised_description = {"entity-description.nullius-hydrothermal-vent"}
+data.raw.resource["offshore-oil"].map_color = {r=0.7, g=0.5, b=0.3}
+data.raw.resource["offshore-oil"].mining_visualisation_tint = {r = 1.0, g = 0.7, b = 0.4, a = 1.0}
+data.raw.resource["offshore-oil"].localised_name = {"entity-name.nullius-hydrothermal-vent"}
+data.raw.resource["offshore-oil"].localised_description = {"entity-description.nullius-hydrothermal-vent"}
 
-table.insert(data.raw.resource["deep_oil"].collision_mask, 'ground-tile')
+table.insert(data.raw.resource["offshore-oil"].collision_mask, 'ground-tile')
 
-data.raw.resource["deep_oil"].stages = { sheet = {
+data.raw.resource["offshore-oil"].stages = { sheet = {
   filename = "__angelsrefininggraphics__/graphics/entity/patches/gas.png",
   tint = {0.4, 0.2, 0, 0.4},
   priority = "extra-high",
@@ -205,11 +205,11 @@ data.raw.resource["deep_oil"].stages = { sheet = {
 }}
 
 data.raw["map-gen-presets"]["default"]["rich-resources"].basic_settings.
-    autoplace_controls["deep_oil"] = { richness = "very-good"}
+    autoplace_controls["offshore-oil"] = { richness = "very-good"}
 data.raw["map-gen-presets"]["default"]["rail-world"].basic_settings.
-    autoplace_controls["deep_oil"] = { frequency = 0.33333333333, size = 3 }
+    autoplace_controls["offshore-oil"] = { frequency = 0.33333333333, size = 3 }
 data.raw["map-gen-presets"]["default"]["ribbon-world"].basic_settings.
-    autoplace_controls["deep_oil"] = { frequency = 3, size = 0.5, richness = 2 }
+    autoplace_controls["offshore-oil"] = { frequency = 3, size = 0.5, richness = 2 }
 
 if (not settings.startup["no_oil_for_oil_rig"].value) then
   data.raw.resource["nullius-fumarole"].infinite = false
@@ -219,7 +219,7 @@ if (not settings.startup["no_oil_for_oil_rig"].value) then
 end
 end
 
--- Alien Biomes Patch -- TODO: do a bug report: alien biomes crashes when the disable all vegetation setting is enabled
+-- Alien Biomes Patch (alien biomes 0.7.4 crashes when the disable all vegetation setting is enabled)
 local block_decorative_words = {"grass", "asterisk", "fluff", "garballo", "bush", "croton", "pita", "cane"}
 for _, prototype in pairs(data.raw['optimized-decorative']) do
   for _, word in pairs(block_decorative_words) do

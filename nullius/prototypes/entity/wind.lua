@@ -166,6 +166,7 @@ data:extend({
     icon_size = 64,
     order = "bb",
     flags = {"placeable-neutral", "player-creation", "not-on-map"},
+    hidden_in_factoriopedia = true,
     collision_box = {{-30.5, -30.5}, {30.5, 30.5}},
     collision_mask = { layers = {layer_43 = true}},
     selection_box = {{-0.9, -0.9}, {0.9, 0.9}},

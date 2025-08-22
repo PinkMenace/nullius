@@ -66,8 +66,8 @@ local function create_boxed_item(base_name, group, box_order,
       always_show_products = true,
       allow_as_intermediate = false,
       no_productivity = true,
-	  hide_from_stats = true,
-	  requester_paste_multiplier = 5,
+	    hide_from_stats = true,
+	    requester_paste_multiplier = 5,
       energy_required = 1,
       ingredients = {
         {type="item", name= full_name, amount = 4*ratio}
@@ -90,8 +90,8 @@ local function create_boxed_item(base_name, group, box_order,
       allow_decomposition = false,
       allow_as_intermediate = false,
       no_productivity = true,
-	  hide_from_stats = true,
-	  requester_paste_multiplier = 4,
+	    hide_from_stats = true,
+	    requester_paste_multiplier = 4,
       energy_required = 0.2,
       ingredients = {
         {type="item", name="nullius-box-"..base_name, amount = 1}
@@ -136,6 +136,8 @@ data.raw.item["refined-hazard-concrete"].stack_size = 500
 data.raw.item["copper-cable"].localised_name = {"item-name.nullius-insulated-wire"}
 data.raw.item["copper-cable"].stack_size = 200
 data.raw.item["big-electric-pole"].stack_size = 50
+data.raw.item["programmable-speaker"].stack_size = 50
+data.raw.item["power-switch"].stack_size = 50
 
 data.raw.item["constant-combinator"].localised_name = {"entity-name.nullius-memory-circuit"}
 data.raw.item["arithmetic-combinator"].localised_name = {"entity-name.nullius-arithmetic-circuit"}

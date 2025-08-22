@@ -32,20 +32,20 @@ function update_small_beacon(entity)
   local proxies = entity.surface.find_entities_filtered{area=bound,
       type = "item-request-proxy"}
   for _,proxy in pairs(proxies) do
-	if (proxy.valid and (proxy.proxy_target == entity) and
-	     (proxy.item_requests ~= nil)) then
-	  local found = false
-	  modrequest = { }
-	  for modind, modval in pairs(proxy.item_requests) do
-	    modrequest[modind] = modval
-		found = true
+	  if (proxy.valid and (proxy.proxy_target == entity) and
+	       (proxy.item_requests ~= nil)) then
+	    local found = false
+	    modrequest = {}
+	    for _, req in pairs(proxy.insert_plan) do
+	      table.insert(modrequest, {id = table.deepcopy(req.id), items = table.deepcopy(req.items)})
+        found = true
+      end
+	    if (not found) then
+	      modrequest = nil
+	    end
+	    proxy.destroy()
+	    break
 	  end
-	  if (not found) then
-	    modrequest = nil
-	  end
-	  proxy.destroy()
-	  break
-	end
   end
 
   local newname = "nullius-beacon-"..tier

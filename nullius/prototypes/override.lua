@@ -343,6 +343,13 @@ data.raw["inserter"]["inserter"].next_upgrade = "bob-turbo-inserter"
 data.raw["inserter"]["inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["inserter"].localised_description = {"entity-description.inserterToggleInfo"}
+-- data.raw["inserter"]["inserter"].custom_tooltip_fields = { --Potential alternative
+--   {
+--     name = {"", "Toggle long inserter"},
+--     value = {"", "Shift+L"}
+--   }
+-- }
 
 data.raw.item["bob-turbo-inserter"].subgroup = "inserter"
 data.raw.item["bob-turbo-inserter"].order = "nullius-c"
@@ -360,6 +367,7 @@ data.raw["inserter"]["bob-turbo-inserter"].next_upgrade = "bulk-inserter"
 data.raw["inserter"]["bob-turbo-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["bob-turbo-inserter"].localised_description = {"entity-description.inserterToggleInfo"}
 
 -- data.raw.item["turbo-filter-inserter"].subgroup = "inserter"
 -- data.raw.item["turbo-filter-inserter"].order = "nullius-d"
@@ -394,6 +402,8 @@ data.raw["inserter"]["bulk-inserter"].next_upgrade = "bob-express-bulk-inserter"
 data.raw["inserter"]["bulk-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["bulk-inserter"].localised_description = {"entity-description.inserterToggleInfo"}
+
 data.raw.recipe["inserter"].order = "x"
 
 -- data.raw.item["bulk-filter-inserter"].subgroup = "inserter"
@@ -429,6 +439,7 @@ data.raw["inserter"]["bob-express-bulk-inserter"].next_upgrade = nil
 data.raw["inserter"]["bob-express-bulk-inserter"].resistances = {
   { type = "impact", decrease = 100, percent = 90 }
 }
+data.raw["inserter"]["bob-express-bulk-inserter"].localised_description = {"entity-description.inserterToggleInfo"}
 
 -- data.raw.item["express-bulk-filter-inserter"].subgroup = "inserter"
 -- data.raw.item["express-bulk-filter-inserter"].order = "nullius-h"
@@ -814,7 +825,7 @@ data.raw["logistic-container"]["active-provider-chest"].minable.mining_time = 1
 
 data.raw.item["pipe"].localised_name = {"entity-name.nullius-pipe-1"}
 data.raw.item["pipe"].localised_description =
-    {"entity-description.nullius-pipe", tostring(40), tostring(2290), tostring(450)}
+    {"entity-description.nullius-pipe"}
 data.raw["pipe"]["pipe"].localised_name = {"entity-name.nullius-pipe-1"}
 data.raw["pipe"]["pipe"].localised_description =
     data.raw.item["pipe"].localised_description
@@ -822,7 +833,7 @@ data.raw["pipe"]["pipe"].minable.mining_time = 0.2
 data.raw.item["pipe-to-ground"].localised_name =
     {"entity-name.nullius-underground-pipe-1"}
 data.raw.item["pipe-to-ground"].localised_description =
-    {"entity-description.nullius-underground-pipe", tostring(40)}
+    {"entity-description.nullius-underground-pipe"}
 data.raw["pipe-to-ground"]["pipe-to-ground"].localised_name =
     {"entity-name.nullius-underground-pipe-1"}
 data.raw["pipe-to-ground"]["pipe-to-ground"].localised_description =
@@ -864,6 +875,7 @@ data.raw["pump"]["pump"].resistances = {
   { type = "impact", decrease = 100, percent = 90 },
   { type = "fire", decrease = 20, percent = 50 }
 }
+--data.raw["pump"]["pump"].flow_scaling = false
 
 data.raw["mining-drill"]["burner-mining-drill"].resource_categories = {"unused-resource"}
 data.raw["mining-drill"]["electric-mining-drill"].resource_categories = {"unused-resource"}
@@ -934,6 +946,49 @@ for tilename,landfill in pairs(landfill_tiles) do
   local tile = data.raw.tile[tilename]
   if ((tile ~= nil) and (tile.placeable_by == nil)) then
     tile.placeable_by = {item=landfill, count=1}
-	tile.can_be_part_of_blueprint = true
+	  tile.can_be_part_of_blueprint = true
+	  tile.minable = {
+	    mining_time = 1,
+	    result = landfill
+	  }
+	  tile.is_foundation = true
   end
 end
+data.raw.tile["landfill"].minable = {
+  mining_time = 1,
+  result = "nullius-land-fill-gravel"
+}
+data.raw.tile["landfill"].is_foundation = true
+
+if settings.startup["nullius-hide-void-alt"].value then
+  local void_buildings = {"nullius-chimney-1","nullius-chimney-2","nullius-chimney-3","nullius-outfall-1","nullius-outfall-2","nullius-outfall-3"}
+  for _, building in pairs(void_buildings) do
+    table.insert(data.raw.furnace[building].flags, "hide-alt-info")
+  end
+end
+
+data.raw["utility-constants"]["default"].max_fluid_flow = 500
+data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true
+
+data.raw["artillery-flare"]["artillery-flare"].shot_category = "artillery-shell" --regular remote will only fire artillery shells
+data.raw["custom-input"]["give-artillery-targeting-remote"].enabled = false
+data.raw["custom-input"]["give-discharge-defense-remote"].enabled = false
+data.raw["shortcut"]["give-artillery-targeting-remote"] = nil --.hidden = true
+data.raw["shortcut"]["give-discharge-defense-remote"] = nil --.hidden = true
+
+local scTechs = {
+  ["construction-robotics"] = nil, --"nullius-construction-robot-1" -- we have bots at the start
+  ["personal-roboport-equipment"] = nil,
+  ["electronics"] = nil,
+  ["circuit-network"] = nil,
+  ["exoskeleton-equipment"] = "nullius-cybernetics-4",
+  ["spidertron"] = "nullius-personal-transportation-4"
+}
+for _, sc in pairs(data.raw.shortcut) do
+  if sc.technology_to_unlock ~= nil then
+    sc.technology_to_unlock = scTechs[sc.technology_to_unlock]
+  end
+end
+
+data.raw["cargo-landing-pad"]["cargo-landing-pad"].localised_name = {"item-name.nullius-landing-pad"}
+data.raw["inserter"]["inserter"].filter_count = 0

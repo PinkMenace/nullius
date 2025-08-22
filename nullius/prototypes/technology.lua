@@ -2607,7 +2607,7 @@ data:extend({
     type = "technology",
     name = "nullius-aesthetics-1",
     order = "nullius-df",
-	icons = data.raw["selection-tool"]["nullius-rock-picker"].icons,
+	  icons = data.raw["selection-tool"]["nullius-rock-picker"].icons,
     effects = {
       {
         type = "unlock-recipe",
@@ -12894,6 +12894,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-rocket"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "nullius-landing-pad"
       }
     },
     unit = {

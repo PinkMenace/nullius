@@ -392,12 +392,12 @@ data:extend({
 })
 
 
-if (mods["cargo-ships"] and settings.startup["deep_oil"].value) then
+if (mods["cargo-ships"] and settings.startup["offshore_oil_enabled"].value) then
 data:extend({
   {
     type = "autoplace-control",
-    name = "deep_oil",
-	localised_name = {"autoplace-control-names.nullius-hydrothermal"},
+    name = "offshore-oil",
+	  localised_name = {"autoplace-control-names.nullius-hydrothermal"},
     category = "resource",
     richness = true,
     order = "a-c-c"

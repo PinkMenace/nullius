@@ -530,13 +530,13 @@ function built_tiles(event, entity)
 
   for _,t in pairs(event.tiles) do
     local row = grid[t.position.x]
-	if (row ~= nil) then
-	  local cell = row[t.position.y]
-	  if (cell ~= nil) then
-	    cell.change = true
-		cell.oldname = t.old_tile.name
+	  if (row ~= nil) then
+	    local cell = row[t.position.y]
+	    if (cell ~= nil) then
+	      cell.change = true
+		    cell.oldname = t.old_tile.name
+	    end
 	  end
-	end
   end
 
   local newtiles = { }
@@ -544,50 +544,50 @@ function built_tiles(event, entity)
   for _,t in pairs(filltiles) do
     local tx = t.position.x
     local row = grid[tx]
-	if (row ~= nil) then
-	  local ty = t.position.y
-	  local cell = row[ty]
-	  if ((cell ~= nil) and (cell.change or (cell.coast ~= nil))) then
-	    local water = false
-		local adjacent = false
-		for i=-1,1 do
-		  if (not water) then
-		    local r = grid[tx+i]
-			if (r == nil) then
-			  water = true
-			else
-		      for j=-1,1 do
-			    local c = r[ty+j]
-			    if (c == nil) then
-				  water = true
-				elseif (c.change) then
-				  adjacent = true				
-				elseif (c.oldname:find("water")) then
-				  water = true
-				end
+	  if (row ~= nil) then
+	    local ty = t.position.y
+	    local cell = row[ty]
+	    if ((cell ~= nil) and (cell.change or (cell.coast ~= nil))) then
+	      local water = false
+		    local adjacent = false
+		    for i=-1,1 do
+		      if (not water) then
+		        local r = grid[tx+i]
+			      if (r == nil) then
+			        water = true
+			      else
+		          for j=-1,1 do
+			          local c = r[ty+j]
+			            if (c == nil) then
+				            water = true
+				          elseif (c.change) then
+				            adjacent = true				
+				          elseif (c.oldname:find("water")) then
+				            water = true
+				          end
+		          end
+			      end
 		      end
-			end
-		  end
-		end
+		    end
 
         local newname = nil
         if (water) then
-		  if (cell.change) then
-		    newname = coastname
-		  end
-		elseif (cell.change or adjacent) then
-		  if (cell.coast ~= nil) then
-		    newname = landfill_map(cell.coast, t.name)
-		  else
-		    newname = landfill_map(tilename, t.name)
-		  end
-		end
-		if (newname ~= nil) then
-		  newind = newind + 1
-	      newtiles[newind] = { name = newname, position = t.position }
-		end
+		      if (cell.change) then
+		        newname = coastname
+		      end
+		    elseif (cell.change or adjacent) then
+		      if (cell.coast ~= nil) then
+		        newname = landfill_map(cell.coast, t.name)
+		      else
+		        newname = landfill_map(tilename, t.name)
+		      end
+		    end
+		    if (newname ~= nil) then
+		      newind = newind + 1
+	        newtiles[newind] = { name = newname, position = t.position }
+		    end
+	    end
 	  end
-	end
   end
 
   for tx,row in pairs(grid) do
@@ -602,56 +602,55 @@ function built_tiles(event, entity)
 	      depth = 3
 	    elseif (oname == "water-green") then
 	      depth = 2
-		  green = true
+		    green = true
 	    elseif (oname == "deepwater-green") then
 	      depth = 3
-		  green = true
+		    green = true
 	    end
 
-        if (depth > 1) then
+      if (depth > 1) then
 	      local proximity = 3
-          if (depth > 2) then
-		    for i=-2,2 do
-		      local r = grid[tx+i]
-			  if (r ~= nil) then
-		        for j=-2,2 do
-		          local c = r[ty+j]
-				  if ((c ~= nil) and c.change) then
-				    if ((i > -2) and (i < 2) and (j > -2) and (j < 2)) then
-				      proximity = 1
-				    elseif (proximity > 2) then
-				      proximity = 2
-				    end
-				  end
-			    end
+        if (depth > 2) then
+		      for i=-2,2 do
+		        local r = grid[tx+i]
+			      if (r ~= nil) then
+		          for j=-2,2 do
+		            local c = r[ty+j]
+			          if ((c ~= nil) and c.change) then
+			            if ((i > -2) and (i < 2) and (j > -2) and (j < 2)) then
+			              proximity = 1
+			            elseif (proximity > 2) then
+			              proximity = 2
+			            end
+			          end
+			        end
+		        end
 		      end
-		    end
-		  else
-		    for i=-1,1 do
-		      local r = grid[tx+i]
-			  if (r ~= nil) then
-		        for j=-1,1 do
-		          local c = r[ty+j]
-				  if ((c ~= nil) and c.change) then
-			        proximity = 1
-				  end
-			    end
-		      end
-		    end
-		  end
-
-		  if (proximity < 3) then
-		    local newname = nil
-		    if (proximity > 1) then
-		      newname = ((green and "water-green") or "water")
 		    else
-		      newname = ((green and "water-mud") or "water-shallow")
+		      for i=-1,1 do
+		        local r = grid[tx+i]
+			      if (r ~= nil) then
+		          for j=-1,1 do
+		            local c = r[ty+j]
+			          if ((c ~= nil) and c.change) then
+			            proximity = 1
+			          end
+			        end
+		        end
+		      end
 		    end
-		    newind = newind + 1
+		    if (proximity < 3) then
+		      local newname = nil
+		      if (proximity > 1) then
+		        newname = ((green and "water-green") or "water")
+		      else
+		        newname = ((green and "water-mud") or "water-shallow")
+		      end
+		      newind = newind + 1
 	        newtiles[newind] = { name = newname, position = cell.position }
+		    end
 		  end
-		end
-      end
+    end
     end
   end
 

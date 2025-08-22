@@ -1,7 +1,51 @@
+require ("circuit-connector-sprites")
+
 local ICONPATH = "__nullius__/graphics/icons/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 
 local BASEENTITY = "__base__/graphics/entity/"
+
+local function scale_wire_position(wire_pos, scale)
+  for _, wire_type in pairs(wire_pos) do
+    if wire_type.x then
+      wire_type.x = wire_type.x*scale
+      wire_type.y = wire_type.y*scale
+    else
+      wire_type[1] = wire_type[1]*scale
+      wire_type[2] = wire_type[2]*scale
+    end
+  end
+end
+
+local function offset_sprite(sprite, scale, only_shift)
+  if sprite == nil then return end
+  if sprite.shift ~= nil then
+    sprite.shift = {sprite.shift[1]*scale,sprite.shift[2]*scale}
+  else
+    --sprite.shift = {2,2} -- what value do we set if no shift ?
+  end
+  if sprite.scale and not only_shift then
+    sprite.scale = sprite.scale * scale
+  end
+end
+
+local function scale_connector_points(original, scale, only_shift)
+  local result = table.deepcopy(original)
+  for _, connector in pairs(result) do
+    scale_wire_position(connector.points.wire, scale)
+    scale_wire_position(connector.points.shadow, scale)
+    offset_sprite(connector.sprites.connector_main,scale, only_shift)
+    offset_sprite(connector.sprites.connector_shadow,scale, only_shift)
+    offset_sprite(connector.sprites.wire_pins,scale, only_shift)
+    offset_sprite(connector.sprites.wire_pins_shadow,scale, only_shift)
+    offset_sprite(connector.sprites.led_blue_off,scale, only_shift)
+    offset_sprite(connector.sprites.led_red,scale, only_shift)
+    offset_sprite(connector.sprites.led_green,scale, only_shift)
+    offset_sprite(connector.sprites.led_blue,scale, only_shift)
+    offset_sprite(connector.sprites.led_light,scale, only_shift)
+  end
+  return result
+end
 
 data:extend({
   {
@@ -11,6 +55,7 @@ data:extend({
     icon_size = 64,
     icons = data.raw.item["nullius-small-assembler-1"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {0, -0.1}, scale = 0.8},
     minable = {mining_time = 0.6, result = "nullius-small-assembler-1"},
     max_health = 200,
     dying_explosion = "medium-explosion",
@@ -71,7 +116,9 @@ data:extend({
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 0.8
-    }
+    },
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = scale_connector_points(circuit_connector_definitions["assembling-machine"], 0.7)
   },
 
   {
@@ -81,6 +128,8 @@ data:extend({
     icon_size = 64,
     icons = data.raw.item["nullius-medium-assembler-1"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    disabled_when_recipe_not_researched = false,
+    icon_draw_specification = {shift = {0, -0.2}},
     minable = {mining_time = 0.8, result = "nullius-medium-assembler-1"},
     max_health = 300,
     dying_explosion = "medium-explosion",
@@ -161,7 +210,9 @@ data:extend({
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 1.2
-    }
+    },
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["assembling-machine"]
   },
 
   {
@@ -170,6 +221,7 @@ data:extend({
 	  order = "nullius-mdb",
     icons = data.raw.item["nullius-large-assembler-1"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {0, -0.4}, scale = 1.2},
     minable = {mining_time = 1.5, result = "nullius-large-assembler-1"},
     max_health = 600,
     dying_explosion = "medium-explosion",
@@ -250,7 +302,9 @@ data:extend({
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
       apparent_volume = 1.6
-    }
+    },
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = scale_connector_points(circuit_connector_definitions["assembling-machine"], 1.4)
   }
 })
 
@@ -262,6 +316,7 @@ data:extend({
     icon_size = 64,
     icons = data.raw.item["nullius-small-assembler-2"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {0, -0.1}, scale = 0.8},
     minable = {mining_time = 0.9, result = "nullius-small-assembler-2"},
     max_health = 300,
     dying_explosion = "medium-explosion",
@@ -305,7 +360,9 @@ data:extend({
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-small-assembler-1"].working_sound
+    working_sound = data.raw["assembling-machine"]["nullius-small-assembler-1"].working_sound,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = data.raw["assembling-machine"]["nullius-small-assembler-1"].circuit_connector
   },
 
   {
@@ -315,6 +372,7 @@ data:extend({
     icon_size = 64,
     icons = data.raw.item["nullius-small-assembler-3"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {0, -0.1}, scale = 0.8},
     minable = {mining_time = 1.2, result = "nullius-small-assembler-3"},
     max_health = 400,
     dying_explosion = "medium-explosion",
@@ -368,7 +426,9 @@ data:extend({
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-small-assembler-1"].working_sound
+    working_sound = data.raw["assembling-machine"]["nullius-small-assembler-1"].working_sound,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = data.raw["assembling-machine"]["nullius-small-assembler-1"].circuit_connector
   },
 
   {
@@ -378,6 +438,7 @@ data:extend({
     icon_size = 64,
     icons = data.raw.item["nullius-medium-assembler-2"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {0, -0.2}},
     minable = {mining_time = 1.2, result = "nullius-medium-assembler-2"},
     max_health = 450,
     dying_explosion = "medium-explosion",
@@ -433,7 +494,9 @@ data:extend({
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-medium-assembler-1"].working_sound
+    working_sound = data.raw["assembling-machine"]["nullius-medium-assembler-1"].working_sound,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = data.raw["assembling-machine"]["nullius-medium-assembler-1"].circuit_connector
   },
 
   {
@@ -443,6 +506,7 @@ data:extend({
     icon_size = 64,
     icons = data.raw.item["nullius-medium-assembler-3"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {0, -0.2}},
     minable = {mining_time = 1.6, result = "nullius-medium-assembler-3"},
     max_health = 600,
     dying_explosion = "medium-explosion",
@@ -497,7 +561,9 @@ data:extend({
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-medium-assembler-1"].working_sound
+    working_sound = data.raw["assembling-machine"]["nullius-medium-assembler-1"].working_sound,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = data.raw["assembling-machine"]["nullius-medium-assembler-1"].circuit_connector
   },
 
   {
@@ -506,6 +572,7 @@ data:extend({
 	  order = "nullius-mdc",
     icons = data.raw.item["nullius-large-assembler-2"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {0, -0.3}, scale = 1.2},
     minable = {mining_time = 2, result = "nullius-large-assembler-2"},
     max_health = 800,
     dying_explosion = "medium-explosion",
@@ -560,7 +627,9 @@ data:extend({
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
     close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
     impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-large-assembler-1"].working_sound
+    working_sound = data.raw["assembling-machine"]["nullius-large-assembler-1"].working_sound,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = data.raw["assembling-machine"]["nullius-large-assembler-1"].circuit_connector
   }
 })
 
@@ -609,6 +678,7 @@ data:extend({
 	  order = data.raw.item["nullius-nanofabricator-1"].order .. "b",
 	  localised_description = {"entity-description.nullius-nanofabricator"},
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {-0.1, 0}, scale = 1.2},
     minable = {mining_time = 2, result = "nullius-nanofabricator-1"},
     max_health = 300,
     corpse = "big-remnants",
@@ -690,6 +760,8 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = scale_connector_points(circuit_connector_definitions["recycler"], 0.15, true)
   }
 })
 
@@ -718,6 +790,7 @@ data:extend({
 	  order = data.raw.item["nullius-nanofabricator-2"].order .. "b",
 	  localised_description = {"entity-description.nullius-nanofabricator"},
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    icon_draw_specification = {shift = {-0.1, 0}, scale = 1.2},
     minable = {mining_time = 2.5, result = "nullius-nanofabricator-2"},
     max_health = 400,
     corpse = "big-remnants",
@@ -799,6 +872,19 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = data.raw["assembling-machine"]["nullius-nanofabricator-1"].circuit_connector
+    --circuit_connector = scale_connector_points(circuit_connector_definitions["recycler"], 2, true) -- other attempts
+    -- circuit_connector = circuit_connector_definitions.create_vector
+    -- (
+    --   universal_connector_template,
+    --   {
+    --     { variation = 24, main_offset = util.by_pixel(-26, -16), shadow_offset = util.by_pixel(0, 0), show_shadow = false },
+    --     { variation = 26, main_offset = util.by_pixel(-25, 20), shadow_offset = util.by_pixel(-23, 24), show_shadow = true },
+    --     { variation = 24, main_offset = util.by_pixel(-25, -26), shadow_offset = util.by_pixel(4, -10), show_shadow = false },
+    --     { variation = 30, main_offset = util.by_pixel(0, 20), shadow_offset = util.by_pixel(2, 24), show_shadow = true },
+    --   }
+    -- )
   }
 })
 
@@ -870,6 +956,8 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = data.raw["assembling-machine"]["nullius-nanofabricator-2"].circuit_connector
   },
 
   {
@@ -931,6 +1019,8 @@ data:extend({
         },
       }, 0.52)
     },
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["inserter"]
   }
 })
 

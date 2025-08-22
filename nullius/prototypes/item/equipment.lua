@@ -3572,6 +3572,8 @@ data:extend({
     subgroup = "space",
     order = "nullius-l",
     stack_size = 1,
+    weight = 1000000,
+    send_to_orbit_mode = "automated",
     rocket_launch_products = {
       {type = "item", name = "nullius-box-astronomy-pack", amount = 1000},
       {type = "item", name = "nullius-box-physics-pack", amount = 200},

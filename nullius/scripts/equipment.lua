@@ -517,15 +517,15 @@ function update_generators()
 		  if ((burninv ~= nil) and burninv.valid) then
 		    local content = burninv.get_contents()
 			local lastfuel = nil
-			for fuelname,_ in pairs(content) do
-			  lastfuel = fuelname
-			  local fuelnum = burninv.get_insertable_count(fuelname)
+			for _,fuel in pairs(content) do
+			  lastfuel = fuel.name
+			  local fuelnum = burninv.get_insertable_count(fuel.name)
 			  if (fuelnum > 0) then
-			    fuelnum = c.remove_item({name=fuelname, count=fuelnum})
+			    fuelnum = c.remove_item({name=fuel.name, count=fuelnum})
 				if (fuelnum > 0) then
-				  local actual = burninv.insert({name=fuelname, count=fuelnum})
+				  local actual = burninv.insert({name=fuel.name, count=fuelnum})
 				  if (actual < fuelnum) then
-					c.insert({name=fuelname, count=(fuelnum - actual)})
+					c.insert({name=fuel.name, count=(fuelnum - actual)})
 				  end
 				end
 			  end
@@ -567,11 +567,11 @@ function update_generators()
 			if ((spentinv ~= nil) and spentinv.valid and
 			    (not spentinv.is_empty())) then
 		      local spent = spentinv.get_contents()
-			  for itemname,itemcount in pairs(spent) do
-			    if (c.can_insert({name=itemname, count=itemcount})) then
-			      local diff = c.insert({name=itemname, count=itemcount})
+			  for _,item in pairs(spent) do
+			    if (c.can_insert({name=item.name, count=item.count})) then
+			      local diff = c.insert({name=item.name, count=item.count})
 				  if (diff > 0) then
-				    spentinv.remove({name=itemname, count=diff})
+				    spentinv.remove({name=item.name, count=diff})
 				  end
 				end
 			  end

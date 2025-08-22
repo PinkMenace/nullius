@@ -225,7 +225,7 @@ local function schedule_absorb_faction(oldforce, newforce, target)
   })
 end
 
-function align_satellite_launch(rocket)
+function align_satellite_launch(rocket) --todo: rename as pod and test if it works
   if (not storage.nullius_alignment) then return end
   if (storage.nullius_align_satellite_winner ~= nil) then return end
   local newforce = rocket.force

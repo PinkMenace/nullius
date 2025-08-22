@@ -348,7 +348,7 @@ local function create_flare(base_name, suffix)
       name = prefix.."-flare"..suffix,
       icons = data.raw.capsule[prefix.."-remote"..suffix].icons,
       hidden_in_factoriopedia = true,
-      shot_category = "nullius-drone", -- prefix.."-drone"..suffix,
+      shot_category = prefix.."-drone"..suffix,
       flags = {"placeable-off-grid", "not-on-map"},
       map_color = {r=1, g=0.5, b=0},
       life_time = 60 * 60,

@@ -159,7 +159,8 @@ data:extend({
       {type = "item", name = "inserter", amount = 1},
       {type = "item", name = "nullius-motor-1", amount = 1},
       {type = "item", name = "nullius-steel-gear", amount = 1},
-      {type = "item", name = "nullius-aluminum-rod", amount = 1}
+      {type = "item", name = "nullius-aluminum-rod", amount = 1},
+      {type = "item", name = "decider-combinator", amount = 1}
     },
     results = {
 			{type="item", name="bob-turbo-inserter", amount = 1}
@@ -177,7 +178,8 @@ data:extend({
       {type = "item", name = "nullius-box-inserter-1", amount = 1},
       {type = "item", name = "nullius-box-motor-1", amount = 1},
       {type = "item", name = "nullius-box-steel-gear", amount = 1},
-      {type = "item", name = "nullius-box-aluminum-rod", amount = 1}
+      {type = "item", name = "nullius-box-aluminum-rod", amount = 1},
+      {type = "item", name = "nullius-box-logic-circuit", amount = 1}
     },
     results = {
 			{type="item", name="nullius-box-inserter-2", amount = 1}
@@ -227,7 +229,8 @@ data:extend({
       {type = "item", name = "bob-turbo-inserter", amount = 1},
       {type = "item", name = "nullius-motor-2", amount = 1},
       {type = "item", name = "nullius-bearing", amount = 1},
-      {type = "item", name = "nullius-rubber", amount = 2}
+      {type = "item", name = "nullius-rubber", amount = 2},
+      {type = "item", name = "nullius-sensor-1", amount = 1}
     },
     results = {
 			{type="item", name="bulk-inserter", amount = 1}
@@ -245,7 +248,8 @@ data:extend({
       {type = "item", name = "nullius-box-inserter-2", amount = 1},
       {type = "item", name = "nullius-box-motor-2", amount = 1},
       {type = "item", name = "nullius-box-bearing", amount = 1},
-      {type = "item", name = "nullius-box-rubber", amount = 2}
+      {type = "item", name = "nullius-box-rubber", amount = 2},
+      {type = "item", name = "nullius-box-sensor-1", amount = 1}
     },
     results = {
 			{type="item", name="nullius-box-inserter-3", amount = 1}
@@ -295,7 +299,8 @@ data:extend({
       {type = "item", name = "bulk-inserter", amount = 2},
       {type = "item", name = "nullius-motor-3", amount = 1},
       {type = "item", name = "nullius-titanium-rod", amount = 2},
-      {type = "item", name = "nullius-carbon-composite", amount = 3}
+      {type = "item", name = "nullius-carbon-composite", amount = 3},
+      {type = "item", name = "nullius-sensor-2", amount = 1}
     },
     results = {
 			{type="item", name="bob-express-bulk-inserter", amount = 1}
@@ -313,7 +318,8 @@ data:extend({
       {type = "item", name = "nullius-box-inserter-3", amount = 2},
       {type = "item", name = "nullius-box-motor-3", amount = 1},
       {type = "item", name = "nullius-box-titanium-rod", amount = 2},
-      {type = "item", name = "nullius-box-carbon-composite", amount = 3}
+      {type = "item", name = "nullius-box-carbon-composite", amount = 3},
+      {type = "item", name = "nullius-box-sensor-2", amount = 1}
     },
     results = {
 			{type="item", name="nullius-box-inserter-4", amount = 1}

@@ -13,5 +13,11 @@ data:extend({
 		minimum_value = 0.01,
 		maximum_value = 100.0,
         hidden = true
-    }
+    },
+    {
+        type = "bool-setting",
+        name = "nullius-hide-void-alt",
+        setting_type = "startup",
+        default_value = false
+    },
 })

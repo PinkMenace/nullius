@@ -835,7 +835,7 @@ data:extend({
     always_show_made_in = true,
     show_amount_in_title = false,
     always_show_products = true,
-	no_productivity = true,
+	  no_productivity = true,
     category = "bulk-smelting",
     subgroup = "boxed-dumping",
     order = "nullius-fc",
@@ -876,7 +876,7 @@ data:extend({
     always_show_made_in = true,
     show_amount_in_title = false,
     always_show_products = true,
-	no_productivity = true,
+	  no_productivity = true,
     category = "ore-crushing",
     subgroup = "boxed-dumping",
     order = "nullius-h",
@@ -994,7 +994,7 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-terraforming-drone-tan", amount=5},
       {type="item", name="nullius-box-land-fill-sand", amount=2500},
-	  {type="item", name="nullius-box-rocket-fuel", amount=4}
+	    {type="item", name="nullius-box-rocket-fuel", amount=4}
     },
     results = {
       {type="item", name="nullius-shallow-excavation-drone", amount=3},
@@ -1009,12 +1009,17 @@ data:extend({
     collision_mask = { layers = {ground_tile = true}},
     layer = 40,
     map_color={r=158, g=129, b=81},
+    is_foundation = true,
     vehicle_friction_modifier = 1.4,
     walking_speed_modifier = 1,
     transitions = transitions.cliff_transitions(),
     transitions_between_transitions = transitions.cliff_transitions_between_transitions(),
     walking_sound = data.raw.tile["landfill"].walking_sound,
     absorptions_per_second = {pollution = 0},
+    minable = {
+      mining_time = 1,
+      name = "nullius-land-fill-sand"
+    },
     variants = {
       empty_transitions = true,
       material_background = {
@@ -1068,12 +1073,17 @@ data:extend({
     collision_mask = { layers = {ground_tile = true}},
     layer = 39,
     map_color={r=121, g=103, b=65},
+    is_foundation = true,
     vehicle_friction_modifier = 1.2,
     walking_speed_modifier = 1,
     transitions = transitions.cliff_transitions(),
     transitions_between_transitions = transitions.cliff_transitions_between_transitions(),
     walking_sound = data.raw.tile["landfill"].walking_sound,
     absorptions_per_second = {pollution = 0},
+    minable = {
+      mining_time = 1,
+      name = "nullius-land-fill-bauxite"
+    },
     variants = {
       empty_transitions = true,
       material_background = {
@@ -1127,12 +1137,17 @@ data:extend({
     collision_mask = { layers = {ground_tile = true}},
     layer = 36,
     map_color={r=119, g=73, b=68},
+    is_foundation = true,
     vehicle_friction_modifier = 1.1,
     walking_speed_modifier = 1,
     transitions = transitions.cliff_transitions(),
     transitions_between_transitions = transitions.cliff_transitions_between_transitions(),
     walking_sound = data.raw.tile["landfill"].walking_sound,
     absorptions_per_second = {pollution = 0},
+    minable = {
+      mining_time = 1,
+      name = "nullius-land-fill-iron"
+    },
     variants = {
       empty_transitions = true,
       material_background = {
@@ -1186,12 +1201,17 @@ data:extend({
     collision_mask = { layers = {ground_tile = true}},
     layer = 38,
     map_color={r=161, g=140, b=119},
+    is_foundation = true,
     vehicle_friction_modifier = 1,
     walking_speed_modifier = 1,
     transitions = transitions.cliff_transitions(),
     transitions_between_transitions = transitions.cliff_transitions_between_transitions(),
     walking_sound = data.raw.tile["landfill"].walking_sound,
     absorptions_per_second = {pollution = 0},
+    minable = {
+      mining_time = 1,
+      name = "nullius-land-fill-limestone"
+    },
     variants = {
       empty_transitions = true,
       material_background = {
@@ -1243,7 +1263,7 @@ data:extend({
   {
     type = "tile",
     name = "nullius-white-concrete",
-	localised_name = {"item-name.nullius-white-concrete"},
+	  localised_name = {"item-name.nullius-white-concrete"},
     order = "nullius-ccw",
     minable = {mining_time = 0.1, result = "nullius-white-concrete"},
     collision_mask = { layers = {ground_tile = true}},
@@ -1256,14 +1276,14 @@ data:extend({
     transition_overlay_layer_offset = data.raw.tile["refined-concrete"].transition_overlay_layer_offset,
     decorative_removal_probability = data.raw.tile["refined-concrete"].decorative_removal_probability,
     transitions = data.raw.tile["refined-concrete"].transitions,
-	transitions_between_transitions = data.raw.tile["refined-concrete"].transitions_between_transitions,
+	  transitions_between_transitions = data.raw.tile["refined-concrete"].transitions_between_transitions,
     mined_sound = data.raw.tile["refined-concrete"].mined_sound,
-	walking_sound = data.raw.tile["refined-concrete"].walking_sound,
-	build_sound = data.raw.tile["refined-concrete"].build_sound,
-	scorch_mark_color = data.raw.tile["refined-concrete"].scorch_mark_color,
-	absorptions_per_second = data.raw.tile["refined-concrete"].absorptions_per_second,
-	trigger_effect = data.raw.tile["refined-concrete"].trigger_effect,
-	
+	  walking_sound = data.raw.tile["refined-concrete"].walking_sound,
+	  build_sound = data.raw.tile["refined-concrete"].build_sound,
+	  scorch_mark_color = data.raw.tile["refined-concrete"].scorch_mark_color,
+	  absorptions_per_second = data.raw.tile["refined-concrete"].absorptions_per_second,
+	  trigger_effect = data.raw.tile["refined-concrete"].trigger_effect,
+	  
     variants = {
       empty_transitions = true,
       material_background = {

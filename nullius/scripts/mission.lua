@@ -146,7 +146,7 @@ function set_mission_goal(goal, amount, force)
   local oldstatus = status[goal]
   count[goal] = math.min(math.max(amount, 0), (mission_target[goal] * 4))
   status[goal] = (math.floor(100 *
-      ((100 * count[goal]) / mission_target[goal])) / 100)
+      ((100 * count[goal]) / mission_target[goal])) / 100) -- only shows 2 digits after the dot
 
   if ((goal >= 3) and (goal <= 5)) then
     local algae_oxygen = (40 * count[3]) / (count[3] + (mission_target[3] / 2))
@@ -226,18 +226,18 @@ function update_oxygen()
   local vent_force = nil
   local vent_total = storage.nullius_oxygen_legacy
   for _, force in pairs(game.forces) do
-	if (force.research_enabled) then
-	  local stats = force.get_fluid_production_statistics("nauvis")
-	  local vent_score = 0
-	  for gasname,multiplier in pairs(oxygen_equivalent) do
-	    vent_score = (vent_score + ((stats.get_input_count(gasname) -
-	        stats.get_output_count(gasname)) * multiplier))
-	  end
-	  vent_total = vent_total + vent_score
-	  if ((vent_force == nil) or (vent_score > vent_best)) then
-	    vent_best = vent_score
-		vent_force = force
-	  end
+	  if (force.research_enabled) then
+	    local stats = force.get_fluid_production_statistics("nauvis")
+	    local vent_score = 0
+	    for gasname,multiplier in pairs(oxygen_equivalent) do
+	      vent_score = (vent_score + ((stats.get_input_count(gasname) -
+	          stats.get_output_count(gasname)) * multiplier))
+	    end
+	    vent_total = vent_total + vent_score
+	    if ((vent_force == nil) or (vent_score > vent_best)) then
+	      vent_best = vent_score
+	  	  vent_force = force
+	    end
     end
   end
 
@@ -310,15 +310,20 @@ function create_mission(force)
   end
 end
 
-function rocket_launched(event)
-  local rocket = event.rocket
-  if (rocket and rocket.valid) then
+function cargo_pod_finished(event)
+  local pod = event.cargo_pod
+  if (pod and pod.valid) then
     create_mission(force)
-    local payload = rocket.get_inventory(defines.inventory.rocket).get_contents()
-    if (payload["nullius-probe"] ~= nil) then
-      bump_mission_goal(1, 1, rocket.force)
-	elseif (payload["nullius-align-concordance-satellite"] ~= nil) then
-	  align_satellite_launch(rocket)
+    local inv = pod.get_inventory(defines.inventory.item_main)
+    local payload = inv.get_contents()
+    for _, slot in pairs(payload) do
+      if slot.name == "nullius-probe" then
+        bump_mission_goal(1, 1, pod.force)
+        break
+      elseif slot.name == "nullius-align-concordance-satellite" then
+        align_satellite_launch(pod)
+        break
+      end
     end
   end
 end
@@ -335,5 +340,5 @@ function gui_clicked(event)
   end
 end
 
-script.on_event(defines.events.on_rocket_launched, rocket_launched)
+script.on_event(defines.events.on_cargo_pod_finished_ascending, cargo_pod_finished)
 script.on_event(defines.events.on_gui_click, gui_clicked)

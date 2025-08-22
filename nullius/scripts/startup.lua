@@ -255,3 +255,10 @@ script.on_event(defines.events.on_research_finished,
 	update_checkpoint_list(techname)
   end
 )
+
+commands.add_command("flip_valves", nil, function(command)
+  for _, v in pairs(game.surfaces["nauvis"].find_entities_filtered{type = "valve"}) do
+    v.rotate()
+    v.rotate()
+  end
+end)

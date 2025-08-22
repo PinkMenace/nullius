@@ -247,3 +247,7 @@ data.raw.item["nullius-energy-barrel"] = nil
 data.raw.recipe["nullius-energy-barrel"] = nil
 data.raw.recipe["empty-nullius-energy-barrel"] = nil
 data.raw.technology["fluid-handling"].effects = { }
+
+data.raw["spider-vehicle"]["spidertron"].hidden_in_factoriopedia = true
+data.raw["car"]["car"].hidden_in_factoriopedia = true
+data.raw["car"]["tank"].hidden_in_factoriopedia = true

@@ -213,12 +213,12 @@ function reset_checkpoints(force)
       (not storage.nullius_alignment)) then
     for suffix, count in pairs(broken_data) do
       local broken_name = "nullius-broken-" .. suffix
-	  if (not broken_disabled(broken_name)) then
-	    checknum = checknum + 1
-		checkset[checknum] = {name=broken_name, category=CAT_BROKEN,
-		    reqs={{ CHK_ITEM, STT_CONSUME, count, {{ broken_name }} }}}
+	    if (not broken_disabled(broken_name)) then
+	      checknum = checknum + 1
+		    checkset[checknum] = {name=broken_name, category=CAT_BROKEN,
+		      reqs={{ CHK_ITEM, STT_CONSUME, count, {{ broken_name }} }}}
+	    end
 	  end
-	end
   end
 
   storage.checkpoint_list[force.index] = checkset
@@ -367,45 +367,45 @@ local function update_checkpoint_force(force, tick)
 
   if ((progress >= count) or (count < 1)) then
     if (tech ~= nil) then
-	  if ((force.current_research == nil) or
-          (force.current_research.name ~= tech.name)) then
-	    force.print({"technology-description.nullius-complete-checkpoint",
-		    "[technology="..tech.name.."]"}, {1, 0.75, 0.4})
-	  end
-	  if ((force.current_research ~= nil) and (force.current_research.name ~= tech.name)) then
-		-- When checkpoint is in research queue, researching item
-		-- clears anything else in queue that has it as a dependency.
-		-- Try to restore the original queue afterwards.
-		local saved_queue = { }
-		local saved_count = 1
-		local found = nil
-	    for ind,q in pairs(force.research_queue) do
-		  if (ind > 1) then
-		    if (q.name == tech.name) then
-			  found = saved_count
-			else
-			  saved_count = saved_count + 1
-			  saved_queue[saved_count] = q
-			end
-		  else
-		    saved_queue[1] = q
-		  end
-		end
-		tech.researched = true
-		if ((found ~= nil) and (found < saved_count)) then
-		  force.research_queue = saved_queue
-		end
+	    if ((force.current_research == nil) or
+            (force.current_research.name ~= tech.name)) then
+	      force.print({"technology-description.nullius-complete-checkpoint",
+		      "[technology="..tech.name.."]"}, {1, 0.75, 0.4})
+	    end
+	    if ((force.current_research ~= nil) and (force.current_research.name ~= tech.name)) then
+		    -- When checkpoint is in research queue, researching item
+		    -- clears anything else in queue that has it as a dependency.
+		    -- Try to restore the original queue afterwards.
+		    local saved_queue = { }
+		    local saved_count = 1
+		    local found = nil
+	      for ind,q in pairs(force.research_queue) do
+		      if (ind > 1) then
+		        if (q.name == tech.name) then
+		  	      found = saved_count
+		  	    else
+		  	      saved_count = saved_count + 1
+		  	      saved_queue[saved_count] = q
+		  	    end
+		      else
+		        saved_queue[1] = q
+		      end
+		    end
+		    tech.researched = true
+		    if ((found ~= nil) and (found < saved_count)) then
+		      force.research_queue = saved_queue
+		    end
+	    else
+          tech.researched = true
+	    end
 	  else
-        tech.researched = true
+	    broken_finished(check.name)
 	  end
-	else
-	  broken_finished(check.name)
-	end
   elseif (tech ~= nil) then
     progress = (progress / count)
     if ((force.current_research ~= nil) and
         (force.current_research.name == tech.name)) then
-	  force.research_progress = progress
+	    force.research_progress = progress
     else
       -- force.set_saved_technology_progress(tech, progress)
       force.technologies[tech.name].saved_progress = progress

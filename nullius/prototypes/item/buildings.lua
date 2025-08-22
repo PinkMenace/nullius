@@ -3560,7 +3560,7 @@ data:extend({
     type = "recipe",
     name = "nullius-silo",
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "huge-crafting",
     energy_required = 180,
     ingredients = {
@@ -3575,6 +3575,46 @@ data:extend({
     },
     results = {
       {type = "item", name = "nullius-silo", amount = 1}
+    }
+  },
+  
+  {
+    type = "item",
+    name = "nullius-landing-pad",
+    icon = "__base__/graphics/icons/cargo-landing-pad.png",
+    icon_size = 64,
+    
+    subgroup = "space",
+    order = "nullius-c",
+    place_result = "cargo-landing-pad",
+    stack_size = 1
+  },
+  {
+    type = "recipe",
+    name = "nullius-landing-pad",
+    enabled = false,
+	  always_show_made_in = true,
+    category = "huge-crafting",
+    energy_required = 180,
+    ingredients = {
+      {type="item", name="nullius-hangar-3", amount=2},
+      {type="item", name="nullius-beacon-3", amount=4},
+      {type="item", name="nullius-box-wall", amount=10},
+      {type="item", name="nullius-box-steel-beam", amount=10},
+      {type="item", name="nullius-box-plastic", amount=25},
+      {type="item", name="nullius-box-rubber", amount=25},
+      {type="item", name="nullius-box-textile", amount=25},
+      {type="item", name="nullius-box-heat-pipe-3", amount=4},
+      {type="item", name="nullius-box-hazard-concrete", amount=30},
+      {type="item", name="nullius-large-supply-chest-2", amount=8},
+      {type="item", name="nullius-box-sensor-2", amount=4},
+      {type="item", name="nullius-box-logistic-bot-3", amount=5},
+      --{type="item", name="nullius-box-productivity-module-2", amount=1},
+      --{type="item", name="nullius-multi-tool-2", amount=15},
+      --{type="item", name="nullius-armor-plate", amount=50}, --unlocked too late
+    },
+    results = {
+      {type = "item", name = "nullius-landing-pad", amount = 1}
     }
   },
 

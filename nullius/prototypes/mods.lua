@@ -103,6 +103,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-logistic-train-stop",
+    localised_name = {"entity-name.logistic-train-stop"},
     enabled = false,
     category = "medium-crafting",
     always_show_made_in = true,
@@ -125,6 +126,7 @@ if mods["LTN_Combinator_Modernized"] then
     {
       type = "recipe",
       name = "nullius-ltn-combinator",
+      localised_name = {"entity-name.ltn-combinator"},
       enabled = false,
       always_show_made_in = true,
       category = "tiny-crafting",
@@ -153,6 +155,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-aai-signal-sender",
+    localised_name = {"entity-name.aai-signal-sender"},
     category = "huge-crafting",
     always_show_made_in = true,
     energy_required = 12,
@@ -168,6 +171,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-aai-signal-receiver",
+    localised_name = {"entity-name.aai-signal-receiver"},
     category = "huge-crafting",
     always_show_made_in = true,
     energy_required = 15,
@@ -728,7 +732,7 @@ data:extend({
       {type="item", name="aai-basic-loader", amount=1},
       {type="item", name="underground-belt", amount=1},
       {type="item", name="inserter", amount=4},
-	  {type="fluid", name="nullius-lubricant", amount=30},
+	    {type="fluid", name="nullius-lubricant", amount=30},
     },
     results = {
 			{type = "item", name = "aai-loader", amount = 1}
@@ -797,6 +801,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-publisher",
+    localised_name = {"entity-name.train-publisher"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -812,6 +817,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-subscriber-train-stop",
+    localised_name = {"entity-name.subscriber-train-stop"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -828,6 +834,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-publisher-train-stop",
+    localised_name = {"entity-name.publisher-train-stop"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -844,6 +851,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-train-config",
+    localised_name = {"entity-name.train-config"},
     enabled = false,
     always_show_made_in = true,
     category = "tiny-crafting",
@@ -865,6 +873,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-teleporter",
+    localised_name = {"teleporter"},
     enabled = false,
     category = "nanotechnology",
     energy_required = 60,
@@ -990,6 +999,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-1",
+    localised_name = {"item-name.jetpack-1"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1008,6 +1018,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-2",
+    localised_name = {"item-name.jetpack-2"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1027,6 +1038,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-3",
+    localised_name = {"item-name.jetpack-3"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1046,6 +1058,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-jetpack-4",
+    localised_name = {"item-name.jetpack-4"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1567,6 +1580,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse",
+    localised_name = {"entity-name.storehouse-basic"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1583,6 +1597,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse",
+    localised_name = {"entity-name.warehouse-basic"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1600,6 +1615,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-storage",
+    localised_name = {"entity-name.storehouse-storage"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1615,6 +1631,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-storage",
+    localised_name = {"entity-name.warehouse-storage"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1630,6 +1647,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-passive-provider",
+    localised_name = {"entity-name.storehouse-passive-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1645,6 +1663,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-passive-provider",
+    localised_name = {"entity-name.warehouse-passive-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1660,6 +1679,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-requester",
+    localised_name = {"entity-name.storehouse-requester"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1675,6 +1695,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-requester",
+    localised_name = {"entity-name.warehouse-requester"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1690,6 +1711,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-buffer",
+    localised_name = {"entity-name.storehouse-buffer"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1705,6 +1727,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-buffer",
+    localised_name = {"entity-name.warehouse-buffer"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1720,6 +1743,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-storehouse-active-provider",
+    localised_name = {"entity-name.storehouse-active-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "large-crafting",
@@ -1735,6 +1759,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-warehouse-active-provider",
+    localised_name = {"entity-name.warehouse-active-provider"},
     enabled = false,
     always_show_made_in = true,
     category = "huge-crafting",
@@ -1905,6 +1930,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-bot-upgrade-chest",
+    localised_name = {"entity-name.logistic-chest-botUpgrader"},
     enabled = false,
     always_show_made_in = true,
     category = "medium-crafting",
@@ -1926,9 +1952,10 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fuel-train-stop",
+    localised_name = {"entity-name.fuel-train-stop"},
     enabled = false,
-	always_show_made_in = true,
-	no_productivity = true,
+	  always_show_made_in = true,
+	  no_productivity = true,
     category = "medium-crafting",
     energy_required = 2,
     ingredients = {
@@ -1988,7 +2015,7 @@ data:extend({
     type = "recipe",
     name = "nullius-companion",
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 90,
     ingredients = {
@@ -2003,7 +2030,7 @@ data:extend({
     type = "recipe",
     name = "nullius-companion-reactor-equipment",
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "medium-crafting",
     energy_required = 30,
     ingredients = {
@@ -2087,14 +2114,15 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-railway-motorcar-1",
+    localised_name = {"entity-name.railway-motor-car-base"},
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "large-crafting",
     energy_required = 15,
     ingredients = {
       {type = "item", name = "nullius-locomotive-1", amount = 1},
       {type = "item", name = "nullius-large-chest-1", amount = 1},
-	  {type = "item", name = "nullius-small-assembler-1", amount = 1}
+	    {type = "item", name = "nullius-small-assembler-1", amount = 1}
     },
     results = {
 			{type = "item", name = "railway-motor-car-base", amount = 1}
@@ -2103,8 +2131,9 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-railway-motorcar-2",
+    localised_name = {"entity-name.railway-motor-car-nuclear"},
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "large-crafting",
     energy_required = 25,
     ingredients = {
@@ -2125,8 +2154,9 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-item-sensor",
+    localised_name = {"entity-name.item-sensor"},
     enabled = false,
-	always_show_made_in = true,
+	  always_show_made_in = true,
     category = "small-crafting",
     energy_required = 5,
     ingredients = {
@@ -2289,6 +2319,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-holographic-sign",
+    localised_name = {"entity-name.hs_holo_sign"},
     enabled = false,
     always_show_made_in = true,
     category = "small-crafting",
@@ -2297,7 +2328,7 @@ data:extend({
       {type = "item", name = "constant-combinator", amount = 2},
       {type = "item", name = "small-lamp", amount = 3},
       {type = "item", name = "nullius-aluminum-plate", amount = 1},
-	  {type = "item", name = "nullius-glass", amount = 2}
+	    {type = "item", name = "nullius-glass", amount = 2}
     },
     results = {
 			{type = "item", name = "hs_holo_sign", amount = 1}
@@ -3901,6 +3932,7 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
     {
       type = "recipe",
       name = "nullius-blueprint-deployer",
+      localised_name = {"entity-name.blueprint-deployer"},
       enabled = false,
       always_show_made_in = true,
       category = "small-crafting",
@@ -3917,13 +3949,14 @@ if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
     {
       type = "recipe",
       name = "nullius-recursive-blueprints-scanner",
+      localised_name = {"entity-name.recursive-blueprints-scanner"},
       enabled = false,
       always_show_made_in = true,
       category = "large-crafting",
       energy_required = 20,
       ingredients = {
         {type = "item", name = "radar", amount = 1},
-		{type = "item", name = "nullius-small-miner-2", amount = 1},
+		    {type = "item", name = "nullius-small-miner-2", amount = 1},
         {type = "item", name = "nullius-sensor-1", amount = 4}
       },
       results = {
@@ -3939,6 +3972,7 @@ if mods["ch-concentrated-solar"] then
     {
       type = "recipe",
       name = "nullius-heliostat-mirror",
+      localised_name = {"entity-name.chcs-heliostat-mirror"},
       enabled = false,
       always_show_made_in = true,
       category = "hand-casting",
@@ -3960,7 +3994,7 @@ if mods["ch-concentrated-solar"] then
       enabled = false,
       always_show_made_in = true,
       category = "machine-casting",
-	  subgroup = "boxed-heat-energy",
+	    subgroup = "boxed-heat-energy",
       energy_required = 50,
       ingredients = {
 	    {type = "item", name = "nullius-box-aluminum-sheet", amount = 8},
@@ -3976,16 +4010,17 @@ if mods["ch-concentrated-solar"] then
     {
       type = "recipe",
       name = "nullius-solar-tower",
+      localised_name = {"entity-name.chcs-solar-power-tower"},
       enabled = false,
       always_show_made_in = true,
       category = "huge-crafting",
       energy_required = 60,
       ingredients = {
-	    {type = "item", name = "nullius-thermal-tank-2", amount = 3},
+	      {type = "item", name = "nullius-thermal-tank-2", amount = 3},
         {type = "item", name = "nullius-box-heat-pipe-2", amount = 10},
-		{type = "item", name = "nullius-box-steel-beam", amount = 24},
-		{type = "item", name = "nullius-box-reinforced-concrete", amount = 8},
-		{type = "item", name = "nullius-pump-2", amount = 8},
+		    {type = "item", name = "nullius-box-steel-beam", amount = 24},
+		    {type = "item", name = "nullius-box-reinforced-concrete", amount = 8},
+		    {type = "item", name = "nullius-pump-2", amount = 8},
         {type = "item", name = "nullius-large-beacon-1", amount = 1}
       },
       results = {
@@ -3996,13 +4031,13 @@ if mods["ch-concentrated-solar"] then
     {
       type = "technology",
       name = "nullius-concentrated-solar-energy",
-	  order = "nullius-eo",
-	  icons = {{
-        icon = "__ch-concentrated-solar__/graphics/technology/concentrated-solar-energy.png",
-		icon_size = 256,
-		icon_mipmaps = 4
-      }},
-	  localised_name = {"technology-name.chcs-concentrated-solar-energy"},
+	    order = "nullius-eo",
+	    icons = {{
+          icon = "__ch-concentrated-solar__/graphics/technology/concentrated-solar-energy.png",
+		  icon_size = 256,
+		  icon_mipmaps = 4
+        }},
+	    localised_name = {"technology-name.chcs-concentrated-solar-energy"},
       localised_description = {"technology-description.chcs-concentrated-solar-energy"},
       effects = {
         {
@@ -4027,7 +4062,7 @@ if mods["ch-concentrated-solar"] then
         ingredients = {
           {"nullius-geology-pack", 1}, {"nullius-climatology-pack", 1},
           {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1},
-		  {"nullius-chemical-pack", 1}
+		      {"nullius-chemical-pack", 1}
         },
         time = 35
       },
@@ -4132,10 +4167,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-locomotive-1",
-	  icons = {{
-	    icon = "__Mini_Trains__/data/icons/cab64.png",
+	    icons = {{
+	      icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 0.65, g = 0.65, b = 0.4 }
+		  tint = { r = 0.65, g = 0.65, b = 0.4 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-bb",
@@ -4145,10 +4180,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-locomotive-2",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 1, g = 0.7, b = 0.7 }
+		  tint = { r = 1, g = 0.7, b = 0.7 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-bc",
@@ -4158,10 +4193,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-locomotive-3",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 0.8, b = 1 }
+		  tint = { r = 0.8, g = 0.8, b = 1 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-bd",
@@ -4171,10 +4206,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-solar-locomotive",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cab64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 1, b = 0.8 }
+		  tint = { r = 0.8, g = 1, b = 0.8 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-be",
@@ -4184,10 +4219,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-cargo-wagon-1",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cargo64.png",
         icon_size = 64,
-		tint = { r = 0.65, g = 0.65, b = 0.4 }
+		  tint = { r = 0.65, g = 0.65, b = 0.4 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-cb",
@@ -4197,10 +4232,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-cargo-wagon-2",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cargo64.png",
         icon_size = 64,
-		tint = { r = 1, g = 0.7, b = 0.7 }
+		  tint = { r = 1, g = 0.7, b = 0.7 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-cc",
@@ -4210,10 +4245,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-cargo-wagon-3",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/cargo64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 0.8, b = 1 }
+		  tint = { r = 0.8, g = 0.8, b = 1 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-cd",
@@ -4223,10 +4258,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-fluid-wagon-1",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/fluid64.png",
         icon_size = 64,
-		tint = { r = 0.65, g = 0.65, b = 0.4 }
+		  tint = { r = 0.65, g = 0.65, b = 0.4 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-db",
@@ -4236,10 +4271,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-fluid-wagon-2",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/fluid64.png",
         icon_size = 64,
-		tint = { r = 1, g = 0.7, b = 0.7 }
+		  tint = { r = 1, g = 0.7, b = 0.7 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-dc",
@@ -4249,10 +4284,10 @@ if mods["Mini_Trains"] then
     {
       type = "item",
       name = "nullius-small-fluid-wagon-3",
-	  icons = {{
+	    icons = {{
 	    icon = "__Mini_Trains__/data/icons/fluid64.png",
         icon_size = 64,
-		tint = { r = 0.8, g = 0.8, b = 1 }
+		  tint = { r = 0.8, g = 0.8, b = 1 }
 	  }},
       subgroup = "light-rail",
       order = "nullius-dd",
@@ -4436,10 +4471,10 @@ if mods["Mini_Trains"] then
       type = "technology",
       name = "nullius-light-rail",
       order = "nullius-cn",
-	  icons = {{
+	    icons = {{
         icon = "__Mini_Trains__/data/icons/tech256.png",
         icon_size = 256
-	  }},
+	    }},
       effects = {
 	    { type = "unlock-recipe", recipe = "nullius-small-locomotive-1" },
         { type = "unlock-recipe", recipe = "nullius-small-cargo-wagon-1" }
@@ -4461,6 +4496,7 @@ if mods["fcpu"] then
     {
       type = "recipe",
       name = "nullius-fcpu",
+      localised_name = {"entity-name.fcpu"},
       enabled = false,
       always_show_made_in = true,
       category = "tiny-crafting",
@@ -4477,15 +4513,15 @@ if mods["fcpu"] then
     {
       type = "technology",
       name = "nullius-fcpu",
-        localised_name = {"technology-name.fcpu"},
-        localised_description = {"technology-description.fcpu"},
+      localised_name = {"technology-name.fcpu"},
+      localised_description = {"technology-description.fcpu"},
       icon_size = 128,
       icon = "__fcpu__/graphics/technology/fcpu.png",
       effects =
       {
         {
         type = "unlock-recipe",
-        recipe = "fcpu"
+        recipe = "nullius-fcpu"
         }
       },
       prerequisites = {"nullius-computation", "nullius-electronics-2"},
