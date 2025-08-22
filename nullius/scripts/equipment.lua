@@ -142,40 +142,42 @@ function update_player_upgrades(player)
 	  local armor = armorinv[i]
 	  if (armor.valid_for_read and (armor.grid ~= nil)) then
 	    for _,equip in pairs(armor.grid.equipment) do
-	      local name = equip.name
-		  if (string.sub(name, 1, 8) == "nullius-") then
-		    local midfix = string.sub(name, 9, 16)
-            if (midfix == "upgrade-") then
-		      local suffix = string.sub(name, 17, -1)
-		      local upgrade = upgrade_data[suffix]
-		      if (upgrade ~= nil) then
-		        for _,bonus in pairs(upgrade) do
-		          local ind = bonus[1]
-			      bonuses[ind] = bonuses[ind] + bonus[2]
-				  if (ind == UPG_COST) then
-				    costnum = costnum + 1
-				    if (costlist == nil) then costlist = { } end
-				    costlist[costnum] = equip
-				  end
-				end
-			  end
-			elseif (midfix == "refueler") then
-			  refueler = true
-			end
-		  end
+	        if equip.type ~= "equipment-ghost" then
+	            local name = equip.name
+		        if (string.sub(name, 1, 8) == "nullius-") then
+		            local midfix = string.sub(name, 9, 16)
+                    if (midfix == "upgrade-") then
+		                local suffix = string.sub(name, 17, -1)
+		                local upgrade = upgrade_data[suffix]
+		                if (upgrade ~= nil) then
+		                    for _,bonus in pairs(upgrade) do
+		                        local ind = bonus[1]
+			                    bonuses[ind] = bonuses[ind] + bonus[2]
+				                if (ind == UPG_COST) then
+									costnum = costnum + 1
+				                    if (costlist == nil) then costlist = { } end
+				                    costlist[costnum] = equip
+								end
+							end
+			            end
+					elseif (midfix == "refueler") then
+			            refueler = true
+					end
+		        end
 
-		  drain = drain + equip.prototype.energy_source.drain
-		  if (equip.prototype.energy_production > 0) then
-		    production = production + equip.prototype.energy_production
-			if (equip.burner ~= nil) then
-			  local burninv = equip.burner.inventory
-			  if ((burninv ~= nil) and burninv.valid) then
-			    generatornum = generatornum + 1
-				if (generators == nil) then generators = { } end
-				generators[generatornum] = equip
-			  end
+		        drain = drain + equip.prototype.energy_source.drain
+		        if (equip.prototype.energy_production > 0) then
+		            production = production + equip.prototype.energy_production
+					if (equip.burner ~= nil) then
+			            local burninv = equip.burner.inventory
+			            if ((burninv ~= nil) and burninv.valid) then
+			                generatornum = generatornum + 1
+							if (generators == nil) then generators = { } end
+							generators[generatornum] = equip
+			            end
+					end
+		        end
 			end
-		  end
 		end
 	  end
 	end
