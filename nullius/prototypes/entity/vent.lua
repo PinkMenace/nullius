@@ -601,7 +601,7 @@ data:extend({
         {
           apply_recipe_tint = "primary",
           constant_speed = true,
-          render_layer = "wires",
+          render_layer = "wires-above",
           north_position = {-0.22, -6.82},
           east_position = {-0.22, -6.95},
           south_position = {-0.03, -6.95},
@@ -613,6 +613,65 @@ data:extend({
               width = 90,
               height = 188,
               scale = 0.8
+          }
+        },
+        {
+          render_layer = "elevated-higher-object",
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped-chimney.png",
+                priority = "extra-high",
+                frame_count = 1,
+                width = 142,
+                height = 429,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              },
+            }
+          },
+          east_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped-chimney.png",
+                priority = "extra-high",
+                width = 142,
+                height = 429,
+                x = 142,
+                frame_count = 1,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              }
+            }
+          },
+          south_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped-chimney.png",
+                priority = "extra-high",
+                width = 142,
+                height = 429,
+                x = 284,
+                frame_count = 1,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              }
+            }
+          },
+          west_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped-chimney.png",
+                priority = "extra-high",
+                width = 142,
+                height = 429,
+                x = 426,
+                frame_count = 1,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              }
+            }
           }
         }
       }
@@ -659,7 +718,7 @@ nc3.graphics_set.working_visualisations[2] = {
   always_draw = true
 }
 nc3.graphics_set_flipped = nil
-nc3.forced_symmetry = nil
+--nc3.forced_symmetry = nil
 
 data:extend({
   nc3,
