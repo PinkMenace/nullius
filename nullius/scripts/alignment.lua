@@ -309,7 +309,7 @@ local function get_tech_progress(force, tech)
       (tech.name == force.current_research.name)) then
 	progress = force.research_progress
   else
-	progress = force.get_saved_technology_progress(tech.name)
+	progress = force.technologies[tech.name].saved_progress
   end
   if ((progress ~= nil) and (progress > 0)) then return progress end
   return 0
@@ -333,7 +333,7 @@ local function merge_faction_techs(oldforce, newforce, surface, pos)
 		  if (tech.name == newforce.current_research.name) then
 		    newforce.research_progress = progress
 		  else
-		    newforce.set_saved_technology_progress(tech.name, progress)
+		    newforce.technologies[tech.name].saved_progress = progress
 		  end
 		else
 		  if (not newtech.researched) then newtech.researched = true end
