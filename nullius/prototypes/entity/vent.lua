@@ -156,6 +156,129 @@ data:extend({
         }
       }
     },
+    graphics_set_flipped = {
+  	  animation = {
+        north = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              frame_count = 1,
+              width = 142,
+              height = 429,
+              shift = {0.06, -1.62},
+              scale = 0.5 * 0.85
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              frame_count = 1,
+              shift = {1.68, 0.37},
+              scale = 0.5 * 0.85
+            }
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 142,
+              frame_count = 1,
+              shift = {-0.1, -1.67},
+              scale = 0.5 * 0.85
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 382,
+              frame_count = 1,
+              shift = {1.52, 0.32},
+              scale = 0.5 * 0.85
+            }
+          }
+        },
+        south = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 284,
+              frame_count = 1,
+              shift = {-0.06, -1.83},
+              scale = 0.5 * 0.85
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 764,
+              frame_count = 1,
+              shift = {1.56, 0.16},
+              scale = 0.5 * 0.85
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 426,
+              frame_count = 1,
+              shift = {0.1, -1.78},
+              scale = 0.5 * 0.85
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 1146,
+              frame_count = 1,
+              shift = {1.72, 0.21},
+              scale = 0.5 * 0.85
+            }
+          }
+        }
+      },
+  
+      working_visualisations = {
+        {
+          apply_recipe_tint = "primary",
+          constant_speed = true,
+          render_layer = "wires",
+          north_position = {-0.09, -5.45},
+          east_position = {-0.29, -5.59},
+          south_position = {-0.1, -5.8},
+          west_position = {0.09, -5.61},
+          animation = {
+              filename = BASEENTITY .. "chemical-plant/chemical-plant-smoke-outer.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 90,
+              height = 188,
+              scale = 0.6,
+              animation_speed = 0.25
+          },
+        }
+      }
+    },
     impact_category = "metal",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
@@ -312,6 +435,127 @@ data:extend({
         }
       }
     },
+    graphics_set_flipped = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              frame_count = 1,
+              width = 142,
+              height = 429,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+        east = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 142,
+              frame_count = 1,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 382,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 284,
+              frame_count = 1,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 764,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__nullius__/graphics/entity/chimney/flare-stack-flipped.png",
+              priority = "extra-high",
+              width = 142,
+              height = 429,
+              x = 426,
+              frame_count = 1,
+              shift = util.by_pixel(0, -65),
+              scale = 0.5,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__angelspetrochemgraphics__/graphics/entity/flare-stack/flare-stack-shadow.png",
+              priority = "extra-high",
+              width = 382,
+              height = 135,
+              x = 1146,
+              frame_count = 1,
+              shift = util.by_pixel(61, 10),
+              scale = 0.5,
+            },
+          },
+        },
+      },
+      working_visualisations = {
+        {
+          apply_recipe_tint = "primary",
+          constant_speed = true,
+          render_layer = "wires",
+          north_position = {-0.22, -6.82},
+          east_position = {-0.22, -6.95},
+          south_position = {-0.03, -6.95},
+          west_position = {-0.03, -6.82},
+          animation = {
+              filename = BASEENTITY .. "chemical-plant/chemical-plant-smoke-outer.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 90,
+              height = 188,
+              scale = 0.8
+          }
+        }
+      }
+    },
     impact_category = "metal",
     repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
@@ -384,6 +628,8 @@ nc3.graphics_set.working_visualisations[1] = scale_image(nc3.graphics_set.workin
 nc3.graphics_set.working_visualisations[1].north_position = nc3.graphics_set.working_visualisations[1].south_position
 nc3.graphics_set.working_visualisations[1].east_position =  nc3.graphics_set.working_visualisations[1].south_position
 nc3.graphics_set.working_visualisations[1].west_position =  nc3.graphics_set.working_visualisations[1].south_position
+nc3.graphics_set_flipped = nil
+nc3.forced_symmetry = nil
 
 data:extend({
   nmc1,
