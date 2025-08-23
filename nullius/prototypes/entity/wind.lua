@@ -63,7 +63,7 @@ for i=1,3 do
       },
       collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
       selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
-      collision_mask = { layers = {layer_43 = true, item = true, object = true, player = true, water_tile = true}},
+      collision_mask = { layers = {layer_43 = true, item = true, object = true, player = true, water_tile = true, elevated_rail = true}},
       energy_source = {
         type = "electric",
         usage_priority = "primary-output",
@@ -124,7 +124,7 @@ for i=1,3 do
       },
       collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
       selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
-      collision_mask = { layers = {layer_43 = true, item = true, object = true, player = true, water_tile = true}},
+      collision_mask = { layers = {layer_43 = true, item = true, object = true, player = true, water_tile = true, elevated_rail = true}},
       energy_source = {
         type = "electric",
         usage_priority = "primary-output",

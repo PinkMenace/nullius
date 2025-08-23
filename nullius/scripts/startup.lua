@@ -121,14 +121,14 @@ script.on_init(
   function()
     init_wind()
     init_geothermal()
-	reset_config()
+	  reset_config()
     if (remote.interfaces["freeplay"] ~= nil) then
       remote.call("freeplay", "set_skip_intro", true)
       remote.call("freeplay", "set_disable_crashsite", true)
       remote.call("freeplay", "set_chart_distance", 250)
     end
     init_mission_global()
-	on_load_mod_interface()
+	  on_load_mod_interface()
   end
 )
 

@@ -7,6 +7,7 @@ data:extend({
 	  icons = data.raw.item["nullius-chimney-1"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.6, result = "nullius-chimney-1"},
+    collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 100,
     fast_replaceable_group = "nullius-chimney",
     next_upgrade = "nullius-chimney-2",
@@ -138,7 +139,7 @@ data:extend({
         {
           apply_recipe_tint = "primary",
           constant_speed = true,
-          render_layer = "wires",
+          render_layer = "wires-above",
           north_position = {-0.09, -5.45},
           east_position = {-0.29, -5.59},
           south_position = {-0.1, -5.8},
@@ -163,9 +164,10 @@ data:extend({
   {
     type = "furnace",
     name = "nullius-chimney-2",
-	icons = data.raw.item["nullius-chimney-2"].icons,
+	  icons = data.raw.item["nullius-chimney-2"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.9, result = "nullius-chimney-2"},
+    collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 200,
     fast_replaceable_group = "nullius-chimney",
     corpse = "small-remnants",
@@ -294,7 +296,7 @@ data:extend({
         {
           apply_recipe_tint = "primary",
           constant_speed = true,
-          render_layer = "wires",
+          render_layer = "wires-above",
           north_position = {-0.22, -6.82},
           east_position = {-0.22, -6.95},
           south_position = {-0.03, -6.95},
@@ -306,6 +308,65 @@ data:extend({
               width = 90,
               height = 188,
               scale = 0.8
+          }
+        },
+        {
+          render_layer = "elevated-higher-object",
+          always_draw = true,
+          north_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-chimney.png",
+                priority = "extra-high",
+                frame_count = 1,
+                width = 142,
+                height = 429,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              }
+            },
+          },
+          east_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-chimney.png",
+                priority = "extra-high",
+                width = 142,
+                height = 429,
+                x = 142,
+                frame_count = 1,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              }
+            },
+          },
+          south_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-chimney.png",
+                priority = "extra-high",
+                width = 142,
+                height = 429,
+                x = 284,
+                frame_count = 1,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              }
+            },
+          },
+          west_animation = {
+            layers = {
+              {
+                filename = "__nullius__/graphics/entity/chimney/flare-stack-chimney.png",
+                priority = "extra-high",
+                width = 142,
+                height = 429,
+                x = 426,
+                frame_count = 1,
+                shift = util.by_pixel(0, -65),
+                scale = 0.5,
+              }
+            },
           }
         }
       }
@@ -382,6 +443,11 @@ nc3.graphics_set.working_visualisations[1] = scale_image(nc3.graphics_set.workin
 nc3.graphics_set.working_visualisations[1].north_position = nc3.graphics_set.working_visualisations[1].south_position
 nc3.graphics_set.working_visualisations[1].east_position =  nc3.graphics_set.working_visualisations[1].south_position
 nc3.graphics_set.working_visualisations[1].west_position =  nc3.graphics_set.working_visualisations[1].south_position
+nc3.graphics_set.working_visualisations[2] = {
+  animation = scale_image(nc3.graphics_set.working_visualisations[2].south_animation, 1.5),
+  render_layer = "elevated-higher-object",
+  always_draw = true
+}
 
 data:extend({
   nmc1,
@@ -477,13 +543,13 @@ data:extend({
   {
     type = "furnace",
     name = "nullius-outfall-2",
-	icons = data.raw.item["nullius-outfall-2"].icons,
+	  icons = data.raw.item["nullius-outfall-2"].icons,
     collision_mask = {layers = {object = true, ground_tile = true}},
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.8, result = "nullius-outfall-2"},
     max_health = 300,
     fast_replaceable_group = "nullius-outfall",
-	next_upgrade = "nullius-outfall-3",
+	  next_upgrade = "nullius-outfall-3",
     corpse = "small-remnants",
     collision_box = {{-1.4, -2.45}, {1.4, 0.3}},
     selection_box = {{-1.6, -2.49}, {1.6, 0.49}},

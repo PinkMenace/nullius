@@ -3433,6 +3433,7 @@ data:extend({
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 4, result = "nullius-reactor"},
+    collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 500,
     corpse = "nuclear-reactor-remnants",
     dying_explosion = "nuclear-reactor-explosion",
@@ -3445,7 +3446,7 @@ data:extend({
     heat_lower_layer_picture = data.raw.reactor["nuclear-reactor"].heat_lower_layer_picture,
     picture = data.raw.reactor["nuclear-reactor"].picture,
     light = {intensity = 0.8, size = 9.9, shift = {0.0, 0.0}},
-	use_fuel_glow_color = true,
+	  use_fuel_glow_color = true,
     working_light_picture = {
         filename = ENTITYPATH.."reactor/reactor-lights.png",
         blend_mode = "additive",

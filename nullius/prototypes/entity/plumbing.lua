@@ -4,6 +4,7 @@ local ENTITYPATH = "__nullius__/graphics/entity/"
 local BASEENTITY = "__base__/graphics/entity/"
 
 require("pipe_graphics")
+collision_mask_util = require("collision-mask-util")
 
 local op = data.raw["offshore-pump"]["offshore-pump"]
 local si1 = {
@@ -2027,6 +2028,7 @@ data:extend({
     icons = data.raw.item["nullius-large-tank-1"].icons,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
     minable = {hardness = 2, mining_time = 3, result = "nullius-large-tank-1"},
+    collision_mask = collision_mask_util.get_default_mask("rocket-silo"), -- generic tall building
     max_health = 1000,
     corpse = "medium-remnants",
     collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
@@ -2122,6 +2124,7 @@ data:extend({
     icons = data.raw.item["nullius-large-tank-2"].icons,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
     minable = {hardness = 2.5, mining_time = 3, result = "nullius-large-tank-2"},
+    collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 1200,
     corpse = "medium-remnants",
     collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
@@ -2155,6 +2158,7 @@ data:extend({
     icons = data.raw.item["nullius-large-tank-3"].icons,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
     minable = {hardness = 3, mining_time = 3, result = "nullius-large-tank-3"},
+    collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 1500,
     corpse = "medium-remnants",
     collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
