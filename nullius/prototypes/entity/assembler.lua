@@ -692,6 +692,7 @@ data:extend({
     fast_replaceable_group = "nanofabricator",
     next_upgrade = "nullius-nanofabricator-2",
     crafting_speed = 1,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -803,6 +804,7 @@ data:extend({
     crafting_categories = {"nanotechnology"},
     fast_replaceable_group = "nanofabricator",
     crafting_speed = 2,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

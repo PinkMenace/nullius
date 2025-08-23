@@ -17,6 +17,7 @@ data:extend({
     result_inventory_size = 1,
     crafting_speed = 1,
     source_inventory_size = 0,
+    forced_symmetry = "horizontal",
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
@@ -163,7 +164,7 @@ data:extend({
   {
     type = "furnace",
     name = "nullius-chimney-2",
-	icons = data.raw.item["nullius-chimney-2"].icons,
+	  icons = data.raw.item["nullius-chimney-2"].icons,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.9, result = "nullius-chimney-2"},
     max_health = 200,
@@ -175,6 +176,7 @@ data:extend({
     result_inventory_size = 1,
     crafting_speed = 5,
     source_inventory_size = 0,
+    forced_symmetry = "horizontal",
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }

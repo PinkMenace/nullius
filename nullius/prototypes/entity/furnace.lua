@@ -1279,7 +1279,7 @@ data:extend({
         pipe_connections = {{ flow_direction ="output", position = {1.5, 0.5}, direction = defines.direction.east }}
       }
     },
-    forced_symmetry = "horizontal", -- TODO: decide what value
+    forced_symmetry = "horizontal",
     graphics_set = {
       animation = scale_image({
           layers = {
@@ -1445,6 +1445,7 @@ data:extend({
     selection_box = {{-2, -2}, {2, 2}},
     crafting_categories = {"ore-flotation"},
     crafting_speed = 2,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -1653,6 +1654,7 @@ data:extend({
     selection_box = {{-2, -2}, {2, 2}},
     crafting_categories = {"ore-flotation"},
     crafting_speed = 4,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
