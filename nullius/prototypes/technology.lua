@@ -1925,24 +1925,24 @@ data:extend({
     ignore_tech_cost_multiplier = true
   },
 
-  {
-    type = "technology",
-    name = "nullius-chirality-1",
-	localised_description = {"", {"technology-description.nullius-chirality", tostring(1),
-	    {"technology-description.nullius-chirality-1"}}, "\n",
-		{"technology-description.nullius-checkpoint-mirror"}},
-    order = "nullius-cm",
-    icon_size = 254,
-    icon = TECHPATH .. "chiral.png",
-    effects = { },
-    unit = {
-      count = 10,
-      ingredients = {{"nullius-climatology-pack", 1}, {"nullius-mechanical-pack", 1}},
-      time = 6
-    },
-    prerequisites = {"nullius-boiling-1", "bob-long-inserters-1"},
-    ignore_tech_cost_multiplier = true
-  },
+  -- {
+  --   type = "technology",
+  --   name = "nullius-chirality-1",
+	-- localised_description = {"", {"technology-description.nullius-chirality", tostring(1),
+	--     {"technology-description.nullius-chirality-1"}}, "\n",
+	-- 	{"technology-description.nullius-checkpoint-mirror"}},
+  --   order = "nullius-cm",
+  --   icon_size = 254,
+  --   icon = TECHPATH .. "chiral.png",
+  --   effects = { },
+  --   unit = {
+  --     count = 10,
+  --     ingredients = {{"nullius-climatology-pack", 1}, {"nullius-mechanical-pack", 1}},
+  --     time = 6
+  --   },
+  --   prerequisites = {"nullius-boiling-1", "bob-long-inserters-1"},
+  --   ignore_tech_cost_multiplier = true
+  -- },
   {
     type = "technology",
     name = "nullius-solar-thermal-power-1",
@@ -2184,7 +2184,7 @@ data:extend({
       ingredients = {{"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1}},
       time = 10
     },
-    prerequisites = {"nullius-electrical-engineering", "nullius-chirality-1"},
+    prerequisites = {"nullius-electrical-engineering", "nullius-boiling-1", "bob-long-inserters-1"},
     ignore_tech_cost_multiplier = true
   },
   {
@@ -3917,25 +3917,25 @@ data:extend({
     },
     prerequisites = {"nullius-barreling-2", "nullius-sulfur-processing-1"}
   },
-  {
-    type = "technology",
-    name = "nullius-chirality-2",
-	localised_description = {"technology-description.nullius-chirality", tostring(2),
-	    {"technology-description.nullius-chirality-2"}},
-    order = "nullius-dl",
-    icon_size = 254,
-    icon = TECHPATH .. "chiral.png",
-    effects = { },
-    unit = {
-      count = 160,
-      ingredients = {
-        {"nullius-climatology-pack", 1},
-        {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1}
-      },
-      time = 30
-    },
-    prerequisites = {"nullius-empiricism-2", "nullius-flotation-2"}
-  },
+  -- {
+  --   type = "technology",
+  --   name = "nullius-chirality-2",
+	-- localised_description = {"technology-description.nullius-chirality", tostring(2),
+	--     {"technology-description.nullius-chirality-2"}},
+  --   order = "nullius-dl",
+  --   icon_size = 254,
+  --   icon = TECHPATH .. "chiral.png",
+  --   effects = { },
+  --   unit = {
+  --     count = 160,
+  --     ingredients = {
+  --       {"nullius-climatology-pack", 1},
+  --       {"nullius-mechanical-pack", 1}, {"nullius-electrical-pack", 1}
+  --     },
+  --     time = 30
+  --   },
+  --   prerequisites = {"nullius-empiricism-2", "nullius-flotation-2"}
+  -- },
   {
     type = "technology",
     name = "nullius-explosives-1",
@@ -4084,7 +4084,7 @@ data:extend({
       },
       time = 30
     },
-    prerequisites = {"nullius-plumbing-4", "nullius-chirality-2", "nullius-checkpoint-chemical-engineering"},
+    prerequisites = {"nullius-plumbing-4", "nullius-empiricism-2", "nullius-flotation-2", "nullius-checkpoint-chemical-engineering"},
     essential = true
   },
 
@@ -4187,7 +4187,7 @@ data:extend({
       },
       time = 30
     },
-    prerequisites = {"nullius-experimental-chemistry", "nullius-checkpoint-chirality"},
+    prerequisites = {"nullius-experimental-chemistry", "nullius-empiricism-2", "nullius-flotation-2"},
   },
 
   {
@@ -4739,24 +4739,24 @@ data:extend({
     },
     prerequisites = {"nullius-metalworking-3"},
   },
-  {
-    type = "technology",
-    name = "nullius-chirality-3",
-	localised_description = {"technology-description.nullius-chirality", tostring(3),
-	    {"technology-description.nullius-chirality-3"}},
-    order = "nullius-ef",
-    icon_size = 254,
-    icon = TECHPATH .. "chiral.png",
-    effects = { },
-    unit = {
-      count = 200,
-      ingredients = {
-        {"nullius-mechanical-pack", 1}, {"nullius-chemical-pack", 1}
-      },
-      time = 30
-    },
-    prerequisites = {"nullius-organic-chemistry-4", "nullius-limestone-processing-3", "nullius-empiricism-3"},
-  },
+  -- {
+  --   type = "technology",
+  --   name = "nullius-chirality-3",
+	-- localised_description = {"technology-description.nullius-chirality", tostring(3),
+	--     {"technology-description.nullius-chirality-3"}},
+  --   order = "nullius-ef",
+  --   icon_size = 254,
+  --   icon = TECHPATH .. "chiral.png",
+  --   effects = { },
+  --   unit = {
+  --     count = 200,
+  --     ingredients = {
+  --       {"nullius-mechanical-pack", 1}, {"nullius-chemical-pack", 1}
+  --     },
+  --     time = 30
+  --   },
+  --   prerequisites = {"nullius-organic-chemistry-4", "nullius-limestone-processing-3", "nullius-empiricism-3"},
+  -- },
 
   {
     type = "technology",
@@ -4852,7 +4852,7 @@ data:extend({
       },
       time = 30
     },
-    prerequisites = {"nullius-venting-2", "nullius-titanium-production-1", "nullius-chirality-3"}
+    prerequisites = {"nullius-venting-2", "nullius-titanium-production-1", "nullius-organic-chemistry-4", "nullius-limestone-processing-3", "nullius-empiricism-3"}
   },
   {
     type = "technology",
@@ -4947,7 +4947,7 @@ data:extend({
       },
       time = 30
     },
-    prerequisites = {"nullius-chirality-3", "nullius-illumination-2"}
+    prerequisites = {"nullius-organic-chemistry-4", "nullius-limestone-processing-3", "nullius-empiricism-3", "nullius-illumination-2"}
   },
   {
     type = "technology",

@@ -146,9 +146,9 @@ end
 
 local function scan_surge_priority(name)
   local offs = 9
-  if (string.sub(name, 9, 15) == "mirror-") then
-    offs = 16
-  end
+  -- if (string.sub(name, 9, 15) == "mirror-") then
+  --   offs = 16
+  -- end
   local offs2 = offs + 5
   local priority = string.sub(name, offs, offs2)
   if (priority == "surge-") then

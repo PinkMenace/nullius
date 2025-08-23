@@ -7,8 +7,8 @@ function entity_added(entity, handbuilt)
     if (entity.name == "entity-ghost") then
       local result = check_pipette(handbuilt)
       if (result ~= nil) then entity = result end
-      check_mirror(entity)
-	end
+      --check_mirror(entity)
+	  end
     return
   end
 

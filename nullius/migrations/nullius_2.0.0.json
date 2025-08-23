@@ -24,7 +24,9 @@
   "item": [
     ["nullius-box-filter-inserter-2", "nullius-box-inserter-2"],
     ["nullius-box-filter-inserter-3", "nullius-box-inserter-3"],
-    ["nullius-box-filter-inserter-4", "nullius-box-inserter-4"]
+    ["nullius-box-filter-inserter-4", "nullius-box-inserter-4"],
+    ["red-wire", "nullius-red-wire"],
+    ["green-wire", "nullius-green-wire"]
   ],
   "tile":[
     ["angels-tile-clay-brick", "nullius-tile-clay-brick"]

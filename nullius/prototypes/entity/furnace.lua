@@ -1279,7 +1279,7 @@ data:extend({
         pipe_connections = {{ flow_direction ="output", position = {1.5, 0.5}, direction = defines.direction.east }}
       }
     },
-    forced_symmetry = "horizontal", -- TODO: decide what value
+    forced_symmetry = "horizontal",
     graphics_set = {
       animation = scale_image({
           layers = {
@@ -1445,6 +1445,7 @@ data:extend({
     selection_box = {{-2, -2}, {2, 2}},
     crafting_categories = {"ore-flotation"},
     crafting_speed = 2,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -1653,6 +1654,7 @@ data:extend({
     selection_box = {{-2, -2}, {2, 2}},
     crafting_categories = {"ore-flotation"},
     crafting_speed = 4,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -1860,150 +1862,6 @@ end
 tint_flotation_cell(1, 0.4, {0.77, 0.77, 0.60})
 tint_flotation_cell(2, 0.5, {0.8, 0.8, 1})
 tint_flotation_cell(3, 0.6, nil)
-
-local mfc1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-flotation-cell-1"])
-mfc1.name = "nullius-mirror-flotation-cell-1"
-mfc1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-mfc1.placeable_by = {item = "nullius-flotation-cell-1", count = 1}
-mfc1.next_upgrade = "nullius-mirror-flotation-cell-2"
-mfc1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-flotation-cell-1"}}
-mfc1.fluid_boxes[1].pipe_connections[1].position = {-1.5, 0.5}
-mfc1.fluid_boxes[2].pipe_connections[1].position = {0.5, 1.5}
-mfc1.fluid_boxes[3].pipe_connections[1].position = {1.5, -0.5}
-mfc1.fluid_boxes[4].pipe_connections[1].position = {-0.5, -1.5}
-
-data:extend({
-  mfc1,
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-flotation-cell-2",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-flotation-cell-2"}},
-	icons = {
-	  data.raw.item["nullius-flotation-cell-2"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-flotation-cell"},
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1.5, result = "nullius-flotation-cell-2"},
-	placeable_by = {item = "nullius-flotation-cell-2", count = 1},
-    fast_replaceable_group = "flotation-cell",
-    next_upgrade = "nullius-mirror-flotation-cell-3",
-    max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.75, -1.75}, {1.75, 1.75}},
-    selection_box = {{-2, -2}, {2, 2}},
-    crafting_categories = {"ore-flotation"},
-    crafting_speed = 2,
-    energy_source = data.raw["assembling-machine"]["nullius-flotation-cell-2"].energy_source,
-    energy_usage = "385kW",
-    resistances = data.raw["assembling-machine"]["nullius-flotation-cell-2"].resistances,
-    module_slots = 2,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    graphics_set = {
-      animation = data.raw["assembling-machine"]["nullius-flotation-cell-2"].graphics_set.animation,
-      working_visualisations = data.raw["assembling-machine"]["nullius-flotation-cell-2"].graphics_set.working_visualisations,
-    },
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-flotation-cell-1"].working_sound,
-
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1.5, 0.5}, direction = defines.direction.west }}
-      },
-      {
-        production_type = "input",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {0.5, 1.5}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1.5, -0.5}, direction = defines.direction.east }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-0.5, -1.5}, direction = defines.direction.north }}
-      }
-    }
-  },
-
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-flotation-cell-3",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-flotation-cell-3"}},
-	icons = {
-	  data.raw.item["nullius-flotation-cell-3"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-flotation-cell"},
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 2, result = "nullius-flotation-cell-3"},
-	placeable_by = {item = "nullius-flotation-cell-3", count = 1},
-    fast_replaceable_group = "flotation-cell",
-    max_health = 500,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.75, -1.75}, {1.75, 1.75}},
-    selection_box = {{-2, -2}, {2, 2}},
-    crafting_categories = {"ore-flotation"},
-    crafting_speed = 4,
-    energy_usage = "770kW",
-    module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    graphics_set = data.raw["assembling-machine"]["nullius-flotation-cell-3"].graphics_set,
-    energy_source = data.raw["assembling-machine"]["nullius-flotation-cell-3"].energy_source,
-    resistances = data.raw["assembling-machine"]["nullius-flotation-cell-3"].resistances,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-flotation-cell-1"].working_sound,
-
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1.5, 0.5}, direction = defines.direction.west }}
-      },
-      {
-        production_type = "input",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {0.5, 1.5}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1.5, -0.5}, direction = defines.direction.east }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = floatpipepics,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-0.5, -1.5}, direction = defines.direction.north }}
-      }
-    }
-  }
-})
 
 
 if mods["reskins-bobs"] then

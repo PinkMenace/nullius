@@ -1147,43 +1147,43 @@ data:extend({
     prerequisites = {"nullius-chemical-engineering-2"},
     ignore_tech_cost_multiplier = true
   },
-  {
-    type = "technology",
-    name = "nullius-checkpoint-chirality",
-    localised_name = {"technology-name.nullius-checkpoint", {"technology-name.nullius-demonstration",
-	    {"technology-name.nullius-chirality"}}},
-    localised_description = {"",
-	    {"technology-description.nullius-checkpoint-mirror"}, "\n",
-	    {"technology-description.nullius-checkpoint-configure",
-	        {"technology-description.nullius-item", tostring(2), "nullius-electrolyzer-2",
-			    {"entity-name.nullius-mirror-surge-electrolyzer-2"}}}, "\n",
-	    {"technology-description.nullius-checkpoint-configure",
-	        {"technology-description.nullius-item", tostring(2), "nullius-flotation-cell-2",
-			    {"entity-name.nullius-mirror-flotation-cell-2"}}}, "\n",
-	    {"technology-description.nullius-checkpoint-configure",
-	        {"technology-description.nullius-item", tostring(2), "nullius-combustion-chamber-2",
-			    {"entity-name.nullius-mirror-combustion-chamber-2"}}}},
-    order = "nullius-yd",
-    icons = {
-      {
-        icon = BASEICON .. "blueprint.png",
-        icon_size = 64,
+  -- {
+  --   type = "technology",
+  --   name = "nullius-checkpoint-chirality",
+  --   localised_name = {"technology-name.nullius-checkpoint", {"technology-name.nullius-demonstration",
+	--     {"technology-name.nullius-chirality"}}},
+  --   localised_description = {"",
+	--     {"technology-description.nullius-checkpoint-mirror"}, "\n",
+	--     {"technology-description.nullius-checkpoint-configure",
+	--         {"technology-description.nullius-item", tostring(2), "nullius-electrolyzer-2",
+	-- 		    {"entity-name.nullius-mirror-surge-electrolyzer-2"}}}, "\n",
+	--     {"technology-description.nullius-checkpoint-configure",
+	--         {"technology-description.nullius-item", tostring(2), "nullius-flotation-cell-2",
+	-- 		    {"entity-name.nullius-mirror-flotation-cell-2"}}}, "\n",
+	--     {"technology-description.nullius-checkpoint-configure",
+	--         {"technology-description.nullius-item", tostring(2), "nullius-combustion-chamber-2",
+	-- 		    {"entity-name.nullius-mirror-combustion-chamber-2"}}}},
+  --   order = "nullius-yd",
+  --   icons = {
+  --     {
+  --       icon = BASEICON .. "blueprint.png",
+  --       icon_size = 64,
         
-      },
-	  {
-        icon = "__nullius__/graphics/technology/chiral.png",
-	    icon_size = 254,
-		scale = 0.25
-      }
-    },
-    unit = {
-      count = 1,
-      ingredients = {{"nullius-checkpoint", 1}, {"nullius-requirement-build", 1}, {"nullius-electrical-pack", 1}},
-      time = 1
-    },
-    prerequisites = {"nullius-chirality-2"},
-    ignore_tech_cost_multiplier = true
-  },
+  --     },
+	--   {
+  --       icon = "__nullius__/graphics/technology/chiral.png",
+	--     icon_size = 254,
+	-- 	scale = 0.25
+  --     }
+  --   },
+  --   unit = {
+  --     count = 1,
+  --     ingredients = {{"nullius-checkpoint", 1}, {"nullius-requirement-build", 1}, {"nullius-electrical-pack", 1}},
+  --     time = 1
+  --   },
+  --   prerequisites = {"nullius-chirality-2"},
+  --   ignore_tech_cost_multiplier = true
+  -- },
 
   {
     type = "technology",

@@ -692,6 +692,7 @@ data:extend({
     fast_replaceable_group = "nanofabricator",
     next_upgrade = "nullius-nanofabricator-2",
     crafting_speed = 1,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -767,22 +768,7 @@ data:extend({
 
 data.raw["assembling-machine"]["nullius-nanofabricator-1"].graphics_set.animation.layers[1].tint = {0.6, 0.75, 0.75}
 
-local mnf1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-nanofabricator-1"])
-mnf1.name = "nullius-mirror-nanofabricator-1"
-mnf1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-mnf1.order = data.raw.item["nullius-nanofabricator-1"].order .. "c"
-mnf1.placeable_by = {item = "nullius-nanofabricator-1", count = 1}
-mnf1.next_upgrade = "nullius-mirror-nanofabricator-2"
-mnf1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-nanofabricator-1"}}
-mnf1.fluid_boxes[1].pipe_connections[1].position = {-1.5, 0.5}
-mnf1.fluid_boxes[2].pipe_connections[1].position = {-0.5, -1.5}
-mnf1.fluid_boxes[3].pipe_connections[1].position = {0.5, 1.5}
-mnf1.fluid_boxes[4].pipe_connections[1].position = {1.5, -0.5}
-
 data:extend({
-  mnf1,
   {
     type = "assembling-machine",
     name = "nullius-nanofabricator-2",
@@ -803,6 +789,7 @@ data:extend({
     crafting_categories = {"nanotechnology"},
     fast_replaceable_group = "nanofabricator",
     crafting_speed = 2,
+    forced_symmetry = "horizontal",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -889,77 +876,6 @@ data:extend({
 })
 
 data:extend({
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-nanofabricator-2",
-	  localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-nanofabricator-2"}},
-	  icons = {
-	  data.raw.item["nullius-nanofabricator-2"].icons[1],
-      { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-    },
-	  order = data.raw.item["nullius-nanofabricator-2"].order .. "c",
-	  localised_description = {"entity-description.nullius-nanofabricator"},
-    flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 2.5, result = "nullius-nanofabricator-2"},
-	  placeable_by = {item = "nullius-nanofabricator-2", count = 1},
-    max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    resistances = { { type = "impact", decrease = 50, percent = 80 } },
-    collision_box = {{-1.75, -1.75}, {1.75, 1.75}},
-    selection_box = {{-2, -2}, {2, 2}},
-    module_slots = 4,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    crafting_categories = {"nanotechnology"},
-    fast_replaceable_group = "nanofabricator",
-    crafting_speed = 2,
-    energy_source = data.raw["assembling-machine"]["nullius-nanofabricator-2"].energy_source,
-    energy_usage = "940kW",
-    graphics_set = {
-        animation = data.raw["assembling-machine"]["nullius-nanofabricator-2"].graphics_set.animation,
-    },
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-nanofabricator-1"].working_sound,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]
-		    ["nullius-nanofabricator-1"].fluid_boxes[1].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1.5, 0.5}, direction = defines.direction.west }}
-      },
-      {
-        production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]
-		    ["nullius-nanofabricator-1"].fluid_boxes[2].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-0.5, -1.5}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]
-		    ["nullius-nanofabricator-1"].fluid_boxes[3].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {0.5, 1.5}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]
-		    ["nullius-nanofabricator-1"].fluid_boxes[4].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1.5, -0.5}, direction = defines.direction.east }}
-      },
-    },
-    fluid_boxes_off_when_no_fluid_recipe = true,
-    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
-    circuit_connector = data.raw["assembling-machine"]["nullius-nanofabricator-2"].circuit_connector
-  },
-
   {
     type = "furnace",
     name = "nullius-boxer",

@@ -921,152 +921,7 @@ data.raw["assembling-machine"]["nullius-hydro-plant-2"].graphics_set.working_vis
 data.raw["assembling-machine"]["nullius-hydro-plant-3"].graphics_set.working_visualisations[4] = nil
 data.raw["assembling-machine"]["nullius-hydro-plant-3"].graphics_set.working_visualisations[5] = nil
 
-local mhp1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-hydro-plant-1"])
-mhp1.name = "nullius-mirror-hydro-plant-1"
-mhp1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-mhp1.placeable_by = {item = "nullius-hydro-plant-1", count = 1}
-mhp1.next_upgrade = "nullius-mirror-hydro-plant-2"
-mhp1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-hydro-plant-1"}}
-mhp1.fluid_boxes[1].pipe_connections[1].position = {1, -2}
-mhp1.fluid_boxes[2].pipe_connections[1].position = {-1, -2}
-mhp1.fluid_boxes[3].pipe_connections[1].position = {-1, 2}
-mhp1.fluid_boxes[4].pipe_connections[1].position = {1, 2}
-
 data:extend({
-  mhp1,
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-hydro-plant-2",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-hydro-plant-2"}},
-	icons = {
-	  data.raw.item["nullius-hydro-plant-2"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-hydro-plant"},
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1.5, result = "nullius-hydro-plant-2"},
-	placeable_by = {item = "nullius-hydro-plant-2", count = 1},
-    max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    crafting_categories = {"nullius-water-treatment"},
-    crafting_speed = 2,
-    energy_source = {type = "electric", usage_priority = "secondary-input", emissions = 0.05, drain="20kW"},
-    energy_usage = "480kW",
-    ingredient_count = 4,
-    resistances = data.raw["assembling-machine"]["nullius-hydro-plant-2"].resistances,
-    module_slots = 2,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    fast_replaceable_group = "hydro-plant",
-    next_upgrade = "nullius-mirror-hydro-plant-3",
-    graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-2"].graphics_set,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-hydro-plant-1"].working_sound,
-
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[1].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[2].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[3].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1, 2}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[4].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1, 2}, direction = defines.direction.south }}
-      },
-    }
-  },
-
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-hydro-plant-3",
-	localised_name = {"entity-name.nullius-mirrored",
-	    {"entity-name.nullius-hydro-plant-3"}},
-	icons = {
-	  data.raw.item["nullius-hydro-plant-3"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-hydro-plant"},
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 2, result = "nullius-hydro-plant-3"},
-	placeable_by = {item = "nullius-hydro-plant-3", count = 1},
-    max_health = 500,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-2.2, -2.2}, {2.2, 2.2}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    crafting_categories = {"nullius-water-treatment"},
-    crafting_speed = 4,
-    energy_source = {type = "electric", usage_priority = "secondary-input", emissions = 0.1, drain="40kW"},
-    energy_usage = "960kW",
-    ingredient_count = 6,
-    resistances = {
-      { type = "impact", decrease = 100, percent = 90 },
-      { type = "fire", percent = 75 }
-    },
-    module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    fast_replaceable_group = "hydro-plant",
-    graphics_set = data.raw["assembling-machine"]["nullius-hydro-plant-3"].graphics_set,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-hydro-plant-1"].working_sound,
-
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[1].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "input",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[2].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[3].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1, 2}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_picture = data.raw["assembling-machine"]["nullius-hydro-plant-1"].fluid_boxes[4].pipe_picture,
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1, 2}, direction = defines.direction.south }}
-      },
-    },
-    pipe_covers = pipecoverspictures(),
-  },
-
   {
     type = "assembling-machine",
     name = "nullius-distillery-1",
@@ -1183,22 +1038,7 @@ data:extend({
   }
 })
 
-local md1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-distillery-1"])
-md1.name = "nullius-mirror-distillery-1"
-md1.order = "z-nullius-cbc"
-md1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-md1.placeable_by = {item = "nullius-distillery-1", count = 1}
-md1.next_upgrade = "nullius-mirror-distillery-2"
-md1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-distillery-1"}}
-md1.fluid_boxes[1].pipe_connections[1].position = {1, 2}
-md1.fluid_boxes[2].pipe_connections[1].position = {-1, 2}
-md1.fluid_boxes[3].pipe_connections[1].position = {2, -2}
-md1.fluid_boxes[5].pipe_connections[1].position = {-2, -2}
-
 data:extend({
-  md1,
   {
     type = "assembling-machine",
     name = "nullius-distillery-2",
@@ -1365,146 +1205,6 @@ data:extend({
 })
 
 data:extend({
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-distillery-2",
-	  order = "z-nullius-ccc",
-	  icons = {
-	    data.raw.item["nullius-distillery-2"].icons[1],
-	    { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	  },
-    localised_description = {"entity-description.nullius-distillery"},
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1.8, result = "nullius-distillery-2"},
-	  placeable_by = {item = "nullius-distillery-2", count = 1},
-    max_health = 500,
-    dying_explosion = "medium-explosion",
-    corpse = "oil-refinery-remnants",
-    collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    
-    scale_entity_info_icon = true,
-    crafting_categories = {"distillation"},
-    crafting_speed = 2,
-    energy_source = data.raw["assembling-machine"]["nullius-distillery-2"].energy_source,
-    energy_usage = "550kW",
-    resistances = data.raw["assembling-machine"]["nullius-distillery-2"].resistances,
-    working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
-    impact_category = "metal",
-    module_slots = 2,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    fast_replaceable_group = "distillery",
-    next_upgrade = "nullius-mirror-distillery-3",
-    graphics_set = data.raw["assembling-machine"]["nullius-distillery-2"].graphics_set,
-
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1, 2}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1, 2}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {2, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {0, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-2, -2}, direction = defines.direction.north }}
-      }
-    }
-  },
-
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-distillery-3",
-	order = "z-nullius-cdc",
-	icons = {
-	  data.raw.item["nullius-distillery-3"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-distillery"},
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 2.4, result = "nullius-distillery-3"},
-	placeable_by = {item = "nullius-distillery-3", count = 1},
-    max_health = 600,
-    dying_explosion = "medium-explosion",
-    corpse = "oil-refinery-remnants",
-    collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    
-    scale_entity_info_icon = true,
-    crafting_categories = {"distillation"},
-    crafting_speed = 4,
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      emissions_per_minute = {pollution = 24},
-      drain = "100kW"
-    },
-    energy_usage = "1100kW",
-
-    resistances = data.raw["assembling-machine"]["nullius-distillery-1"].resistances,
-    working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
-    impact_category = "metal",
-    module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    fast_replaceable_group = "distillery",
-    graphics_set = {
-      animation = data.raw["assembling-machine"]["oil-refinery"].graphics_set.animation,
-      working_visualisations = data.raw["assembling-machine"]["nullius-distillery-1"].graphics_set.working_visualisations,
-    },
-
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1, 2}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1, 2}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {2, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {0, -2}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-2, -2}, direction = defines.direction.north }}
-      }
-    }
-  },
-
   {
     type = "assembling-machine",
     name = "nullius-surge-electrolyzer-1",
@@ -1825,34 +1525,7 @@ data:extend({
   }
 })
 
-local mse1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"])
-mse1.name = "nullius-mirror-surge-electrolyzer-1"
-mse1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-mse1.order = data.raw.item["nullius-electrolyzer-1"].order .. "e"
-mse1.placeable_by = {item = "nullius-electrolyzer-1", count = 1}
-mse1.next_upgrade = "nullius-mirror-surge-electrolyzer-2"
-mse1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-surge-electrolyzer-1"}}
-mse1.fluid_boxes[1].pipe_connections[1].position = {1.5, -1.5}
-mse1.fluid_boxes[2].pipe_connections[1].position = {1.5, 1.5}
-mse1.fluid_boxes[3].pipe_connections[1].position = {-1.5, -1.5}
-mse1.fluid_boxes[4].pipe_connections[1].position = {-1.5, 1.5}
-
-local mpe1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-priority-electrolyzer-1"])
-mpe1.name = "nullius-mirror-priority-electrolyzer-1"
-mpe1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-mpe1.order = data.raw.item["nullius-electrolyzer-1"].order .. "c"
-mpe1.placeable_by = {item = "nullius-electrolyzer-1", count = 1}
-mpe1.next_upgrade = "nullius-mirror-priority-electrolyzer-2"
-mpe1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-priority-electrolyzer-1"}}
-mpe1.fluid_boxes = mse1.fluid_boxes
-
 data:extend({
-  mse1,
-  mpe1,
   {
     type = "assembling-machine",
     name = "nullius-priority-electrolyzer-2",
@@ -1935,115 +1608,10 @@ data:extend({
     },
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound
-  },
-
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-surge-electrolyzer-2",
-	  localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-surge-electrolyzer-2"}},
-	icons = {
-      {
-        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
-        icon_size = 32,
-        tint = {0.8, 0.9, 1}
-      },
-      {
-        icon = ICONPATH .. "flip1.png",
-        icon_size = 64
-      }
-    },
-	order = data.raw.item["nullius-electrolyzer-2"].order .. "e",
-	localised_description = {"entity-description.nullius-surge",
-	    {"entity-description.nullius-electrolyzer"}},
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1.5, result = "nullius-electrolyzer-2"},
-	placeable_by = {item = "nullius-electrolyzer-2", count = 1},
-    fast_replaceable_group = "electrolyzer",
-    next_upgrade = "nullius-mirror-surge-electrolyzer-3",
-    max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
-    selection_box = {{-2, -2}, {2, 2}},
-    crafting_categories = {"nullius-electrolysis"},
-    crafting_speed = 2,
-    energy_source = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].energy_source,
-    energy_usage = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].energy_usage,
-    resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].resistances,
-    graphics_set = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].graphics_set,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1.5, -1.5}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1.5, 1.5}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1.5, -1.5}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1.5, 1.5}, direction = defines.direction.south }}
-      }
-    }
   }
 })
 
 data:extend({
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-priority-electrolyzer-2",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-priority-electrolyzer-2"}},
-	icons = {
-      {
-        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
-        icon_size = 32,
-        tint = {0.8, 0.76, 0.85}
-      },
-      {
-        icon = ICONPATH .. "flip1.png",
-        icon_size = 64
-      }
-    },
-	order = data.raw.item["nullius-electrolyzer-2"].order .. "c",
-	localised_description = {"entity-description.nullius-priority",
-	    {"entity-description.nullius-electrolyzer"}},
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 1.5, result = "nullius-electrolyzer-2"},
-	placeable_by = {item = "nullius-electrolyzer-2", count = 1},
-    fast_replaceable_group = "electrolyzer",
-    next_upgrade = "nullius-mirror-priority-electrolyzer-3",
-    max_health = 400,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
-    selection_box = {{-2, -2}, {2, 2}},
-    crafting_categories = {"nullius-electrolysis"},
-    crafting_speed = 1.5,
-    energy_source = data.raw["assembling-machine"]["nullius-priority-electrolyzer-2"].energy_source,
-    energy_usage = data.raw["assembling-machine"]["nullius-priority-electrolyzer-2"].energy_usage,
-    resistances = data.raw["assembling-machine"]["nullius-priority-electrolyzer-2"].resistances,
-    graphics_set = data.raw["assembling-machine"]["nullius-priority-electrolyzer-2"].graphics_set,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
-    fluid_boxes = data.raw["assembling-machine"]["nullius-mirror-surge-electrolyzer-2"].fluid_boxes
-  },
-
   {
     type = "assembling-machine",
     name = "nullius-surge-electrolyzer-3",
@@ -2154,71 +1722,6 @@ data:extend({
 data:extend({
   {
     type = "assembling-machine",
-    name = "nullius-mirror-surge-electrolyzer-3",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-surge-electrolyzer-3"}},
-	icons = {
-      {
-        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
-        icon_size = 32
-      },
-      {
-        icon = ICONPATH .. "flip1.png",
-        icon_size = 64
-      }
-    },
-	order = data.raw.item["nullius-electrolyzer-3"].order .. "e",
-	localised_description = {"entity-description.nullius-surge",
-	    {"entity-description.nullius-electrolyzer"}},
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 2, result = "nullius-electrolyzer-3"},
-	placeable_by = {item = "nullius-electrolyzer-3", count = 1},
-    fast_replaceable_group = "electrolyzer",
-    max_health = 500,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
-    selection_box = {{-2, -2}, {2, 2}},
-    crafting_categories = {"nullius-electrolysis"},
-    crafting_speed = 4,
-    energy_usage = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].energy_usage,
-    energy_source = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].energy_source,
-    resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].resistances,
-    graphics_set = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].graphics_set,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1.5, -1.5}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1.5, 1.5}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1.5, -1.5}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1.5, 1.5}, direction = defines.direction.south }}
-      }
-    }
-  }
-})
-
-data:extend({
-  {
-    type = "assembling-machine",
     name = "nullius-priority-electrolyzer-3",
 	icons = {{
       icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
@@ -2298,45 +1801,6 @@ data:extend({
 })
 
 data:extend({
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-priority-electrolyzer-3",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-priority-electrolyzer-3"}},
-	icons = {
-      {
-        icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
-        icon_size = 32,
-        tint = {1, 0.85, 0.85}
-      },
-      {
-        icon = ICONPATH .. "flip1.png",
-        icon_size = 64
-      }
-    },
-	order = data.raw.item["nullius-electrolyzer-3"].order .. "c",
-	localised_description = {"entity-description.nullius-priority",
-	    {"entity-description.nullius-electrolyzer"}},
-    flags = {"placeable-neutral","player-creation"},
-    minable = {mining_time = 2, result = "nullius-electrolyzer-3"},
-	placeable_by = {item = "nullius-electrolyzer-3", count = 1},
-    fast_replaceable_group = "electrolyzer",
-    max_health = 500,
-    corpse = "big-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.8, -1.8}, {1.8, 1.8}},
-    selection_box = {{-2, -2}, {2, 2}},
-    crafting_categories = {"nullius-electrolysis"},
-    crafting_speed = 4,
-    energy_source = data.raw["assembling-machine"]["nullius-priority-electrolyzer-3"].energy_source,
-    energy_usage = data.raw["assembling-machine"]["nullius-priority-electrolyzer-3"].energy_usage,
-    resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].resistances,
-    fluid_boxes = data.raw["assembling-machine"]["nullius-mirror-surge-electrolyzer-3"].fluid_boxes,
-    graphics_set = data.raw["assembling-machine"]["nullius-priority-electrolyzer-3"].graphics_set,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound
-  },
-
   {
     type = "assembling-machine",
     name = "nullius-chemical-plant-1",
@@ -2560,22 +2024,7 @@ data:extend({
   }
 })
 
-local mcp1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-chemical-plant-1"])
-mcp1.name = "nullius-mirror-chemical-plant-1"
-mcp1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-mcp1.order = "z-nullius-bbc"
-mcp1.placeable_by = {item = "nullius-chemical-plant-1", count = 1}
-mcp1.next_upgrade = "nullius-mirror-chemical-plant-2"
-mcp1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-chemical-plant-1"}}
-mcp1.fluid_boxes[1].pipe_connections[1].position = {1, -1}
-mcp1.fluid_boxes[2].pipe_connections[1].position = {-1, -1}
-mcp1.fluid_boxes[4].pipe_connections[1].position = {1, 1}
-mcp1.fluid_boxes[5].pipe_connections[1].position = {-1, 1}
-
 data:extend({
-  mcp1,
   {
     type = "assembling-machine",
     name = "nullius-chemical-plant-2",
@@ -2676,80 +2125,6 @@ data:extend({
 data:extend({
   {
     type = "assembling-machine",
-    name = "nullius-mirror-chemical-plant-2",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-chemical-plant-2"}},
-	order = "z-nullius-bcc",
-	icons = {
-	  data.raw.item["nullius-chemical-plant-2"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-chemical-plant"},
-    flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = { mining_time = 1.6, result = "nullius-chemical-plant-2"},
-	placeable_by = {item = "nullius-chemical-plant-2", count = 1},
-    max_health = 400,
-    corpse = "chemical-plant-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    
-    module_slots = 2,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    fast_replaceable_group = "chemical-plant",
-    next_upgrade = "nullius-mirror-chemical-plant-3",
-
-    graphics_set = {
-      animation = data.raw["assembling-machine"]["nullius-chemical-plant-2"].graphics_set.animation,
-      working_visualisations = data.raw["assembling-machine"]["nullius-chemical-plant-1"].graphics_set.working_visualisations,
-    },
-    resistances = data.raw["assembling-machine"]["nullius-chemical-plant-2"].resistances,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["nullius-chemical-plant-2"].working_sound,
-    crafting_speed = 2,
-    energy_source = data.raw["assembling-machine"]["nullius-chemical-plant-2"].energy_source,
-    energy_usage = "384kW",
-    crafting_categories = {"basic-chemistry"},
-
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1, -1}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1, -1}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {
-          {flow_direction = "input-output", position = {-1, 0}, direction = defines.direction.west},
-          {flow_direction = "input-output", position = {1, 0}, direction = defines.direction.east}
-        }
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1, 1}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1, 1}, direction = defines.direction.south }}
-      }
-    }
-  },
-
-  {
-    type = "assembling-machine",
     name = "nullius-chemical-plant-3",
 	order = "z-nullius-bdb",
     icons = data.raw.item["nullius-chemical-plant-3"].icons,
@@ -2838,79 +2213,6 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {1, 1}, direction = defines.direction.south }}
-      }
-    }
-  }
-})
-
-data:extend({
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-chemical-plant-3",
-	localised_name = {"entity-name.nullius-mirrored",
-        {"entity-name.nullius-chemical-plant-3"}},
-	order = "z-nullius-bdc",
-    icons = {
-	  data.raw.item["nullius-chemical-plant-3"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-chemical-plant"},
-    flags = {"placeable-neutral","placeable-player", "player-creation"},
-    minable = { mining_time = 2, result = "nullius-chemical-plant-3"},
-	placeable_by = {item = "nullius-chemical-plant-3", count = 1},
-    max_health = 500,
-    corpse = "chemical-plant-remnants",
-    dying_explosion = "medium-explosion",
-    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    
-    module_slots = 3,
-    allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    fast_replaceable_group = "chemical-plant",
-    graphics_set = {
-      animation = data.raw["assembling-machine"]["nullius-chemical-plant-3"].graphics_set.animation,
-      working_visualisations = data.raw["assembling-machine"]["nullius-chemical-plant-1"].graphics_set.working_visualisations,
-    },
-    resistances = data.raw["assembling-machine"]["nullius-chemical-plant-3"].resistances,
-    energy_source = data.raw["assembling-machine"]["nullius-chemical-plant-3"].energy_source,
-    impact_category = "metal",
-    working_sound = data.raw["assembling-machine"]["chemical-plant"].working_sound,
-    crafting_speed = 4,
-    energy_usage = "760kW",
-    crafting_categories = {"basic-chemistry"},
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {1, -1}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="input", position = {-1, -1}, direction = defines.direction.north }}
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {
-          {flow_direction = "input-output", position = {-1, 0}, direction = defines.direction.west},
-          {flow_direction = "input-output", position = {1, 0}, direction = defines.direction.east}
-        }
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1, 1}, direction = defines.direction.south }}
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {-1, 1}, direction = defines.direction.south }}
       }
     }
   }

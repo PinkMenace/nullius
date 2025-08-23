@@ -42,6 +42,7 @@ Removed regular artillery shortcut and discharge defense shortcut
 Changed required techs for most shortcuts
 Added wire connexions to assemblers, boxer and nanofab
 Allowed medium assembler 1 to craft disabled recipes (to prevent a bug when a broken item is being fixed in early game)
+Removed mirror buildings, use 2.0 flipping instead
 
 -----------
 Safefill: added setting to enable mining of waterfill
