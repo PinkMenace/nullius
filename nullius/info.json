@@ -45,6 +45,8 @@
 	"(?) fcpu >= 0.4.33",
 	"(?) reskins-bobs >= 2.3.5",
 	  
+	"! space-age",
+	"! quality",
     "! aai-industry",
 	"! angelsbioprocessing",
 	"! angelsinfiniteores",
