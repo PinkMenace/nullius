@@ -563,42 +563,6 @@ data:extend({
   }
 })
 
-local nmc1 = util.table.deepcopy(data.raw.furnace["nullius-chimney-1"])
-nmc1.name = "nullius-mirror-chimney-1"
-table.insert(nmc1.icons,{ icon = "__nullius__/graphics/icons/flip1.png", icon_size = 64 })
-nmc1.placeable_by = {item = "nullius-chimney-1", count = 1}
-nmc1.next_upgrade = "nullius-mirror-chimney-2"
-nmc1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-chimney-1"}}
-nmc1.fluid_boxes[1].pipe_connections[1].position = {-0.5, 0.5}
-nmc1.graphics_set.animation.north = util.table.deepcopy(nmc1.graphics_set.animation.south)
-nmc1.graphics_set.animation.north.layers[1].shift = {-0.06, -1.57}
-nmc1.graphics_set.animation.north.layers[2].shift = {1.56, 0.42}
-nmc1.graphics_set.animation.east = util.table.deepcopy(nmc1.graphics_set.animation.south)
-nmc1.graphics_set.animation.east.layers[1].shift = {-0.2, -1.88}
-nmc1.graphics_set.animation.east.layers[2].shift = {1.42, 0.11}
-nmc1.graphics_set.animation.west = util.table.deepcopy(nmc1.graphics_set.animation.south)
-nmc1.graphics_set.animation.west.layers[1].shift = {0.2, -1.63}
-nmc1.graphics_set.animation.west.layers[2].shift = {1.82, 0.36}
-nmc1.graphics_set.animation.south.layers[1].shift = {0.09, -1.98}
-nmc1.graphics_set.animation.south.layers[2].shift = {1.71, 0.01}
-nmc1.graphics_set.working_visualisations[1].north_position = {-0.1, -5.54}
-nmc1.graphics_set.working_visualisations[1].east_position = {-0.24, -5.85}
-nmc1.graphics_set.working_visualisations[1].south_position = {0.05, -5.95}
-nmc1.graphics_set.working_visualisations[1].west_position = {0.16, -5.6}
-
-local nmc2 = util.table.deepcopy(data.raw.furnace["nullius-chimney-2"])
-nmc2.name = "nullius-mirror-chimney-2"
-nmc2.icons[2] = nmc1.icons[3]
-nmc2.placeable_by = {item = "nullius-chimney-2", count = 1}
-nmc2.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-chimney-2"}}
-nmc2.fluid_boxes[1].pipe_connections[1].position = {-0.5, 0.5}
-nmc2.graphics_set.animation = nmc2.graphics_set.animation.south
-nmc2.graphics_set.working_visualisations[1].north_position = nmc2.graphics_set.working_visualisations[1].south_position
-nmc2.graphics_set.working_visualisations[1].east_position =  nmc2.graphics_set.working_visualisations[1].south_position
-nmc2.graphics_set.working_visualisations[1].west_position =  nmc2.graphics_set.working_visualisations[1].south_position
-
 local nc3 = util.table.deepcopy(data.raw.furnace["nullius-chimney-2"])
 nc3.name = "nullius-chimney-3"
 nc3.icons = data.raw.item["nullius-chimney-3"].icons
@@ -632,8 +596,6 @@ nc3.graphics_set_flipped = nil
 nc3.forced_symmetry = nil
 
 data:extend({
-  nmc1,
-  nmc2,
   nc3,
   {
     type = "furnace",

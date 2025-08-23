@@ -66,9 +66,9 @@ local checkpoint_data = {
   ["concrete"] = {{ CHK_ITEM, STT_PRODUCE, 1000, {{"concrete"}} }},
   ["heat-pipe"] = {{ CHK_ITEM, STT_PRODUCE, 50, {{"nullius-heat-pipe-1"}} }},
   ["chemical-engineering"] = {{ CHK_BUILD, STT_NET, 10, {{"nullius-chemical-plant-2"}} }},
-  ["chirality"] = {{ CHK_BUILD, STT_NET, 2, {{"nullius-mirror-surge-electrolyzer-2"}} },
-			{ CHK_BUILD, STT_NET, 2, {{"nullius-mirror-flotation-cell-2"}} },
-			{ CHK_BUILD, STT_NET, 2, {{"nullius-mirror-combustion-chamber-2"}} }},
+  -- ["chirality"] = {{ CHK_BUILD, STT_NET, 2, {{"nullius-mirror-surge-electrolyzer-2"}} },
+	-- 		{ CHK_BUILD, STT_NET, 2, {{"nullius-mirror-flotation-cell-2"}} },
+	-- 		{ CHK_BUILD, STT_NET, 2, {{"nullius-mirror-combustion-chamber-2"}} }},
 
   ["propene"] = {{ CHK_FLUID, STT_CONSUME, 300000, {{"nullius-propene"}} }},
   ["titanium-ingot"] = {{ CHK_ITEM, STT_PRODUCE, 100, {{"nullius-titanium-ingot"}} }},

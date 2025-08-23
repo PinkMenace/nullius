@@ -780,18 +780,6 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "unmirror-1",
-    group = "chemistry",
-    order = "md"
-  },
-  {
-    type = "item-subgroup",
-    name = "unmirror-2",
-    group = "chemistry",
-    order = "me"
-  },
-  {
-    type = "item-subgroup",
     name = "prioritization",
     group = "chemistry",
     order = "mf"

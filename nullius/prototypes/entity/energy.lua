@@ -643,19 +643,7 @@ data:extend({
   }
 })
 
-local mcc1 = util.table.deepcopy(
-    data.raw["assembling-machine"]["nullius-combustion-chamber-1"])
-mcc1.name = "nullius-mirror-combustion-chamber-1"
-mcc1.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-mcc1.placeable_by = {item = "nullius-combustion-chamber-1", count = 1}
-mcc1.next_upgrade = "nullius-mirror-combustion-chamber-2"
-mcc1.localised_name = {"entity-name.nullius-mirrored",
-    {"entity-name.nullius-combustion-chamber-1"}}
-mcc1.fluid_boxes[1].pipe_connections[1].position = {1, 0.5}
-mcc1.fluid_boxes[2].pipe_connections[1].position = {-1, 0.5}
-
 data:extend({
-  mcc1,
   {
     type = "assembling-machine",
     name = "nullius-combustion-chamber-2",
@@ -812,63 +800,8 @@ data:extend({
 data:extend({
   {
     type = "assembling-machine",
-    name = "nullius-mirror-combustion-chamber-2",
-	icons = {
-	  data.raw.item["nullius-combustion-chamber-2"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-combustion-chamber"},
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.9, result = "nullius-combustion-chamber-2"},
-	placeable_by = {item = "nullius-combustion-chamber-2", count = 1},
-    crafting_categories = { "combustion" },
-    crafting_speed = 2.5,
-    base_productivity = 0.02,
-    max_health = 300,
-    corpse = "boiler-remnants",
-    impact_category = "metal",
-    resistances = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].resistances,
-    fast_replaceable_group = "combustion-chamber",
-    next_upgrade = "nullius-mirror-combustion-chamber-3",
-    collision_box = {{-1.29, -0.79}, {1.29, 0.79}},
-    selection_box = {{-1.5, -1}, {1.5, 1}},
-    energy_usage = "1kW",
-    energy_source = { type = "void" },
-    working_sound = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].working_sound,
-    graphics_set = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].graphics_set,
-    
-    fluid_boxes = {
-      {
-        volume = 500,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = {{flow_direction = "input", position = {1, 0.5}, direction = defines.direction.east }},
-        production_type = "input"
-      },
-      {
-        volume = 500,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = {{flow_direction = "input", position = {-1, 0.5}, direction = defines.direction.west }},
-        production_type = "input"
-      },
-      {
-        volume = 500,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = {{flow_direction = "output", position = {0, -0.5}, direction = defines.direction.north }},
-        production_type = "output"
-      },
-      {
-        volume = 500,
-        pipe_covers = pipecoverspictures(),
-        pipe_connections = {{flow_direction = "output", position = {0, 0.5}, direction = defines.direction.south }},
-        production_type = "output"
-      }
-    }
-  },
-
-  {
-    type = "assembling-machine",
     name = "nullius-combustion-chamber-3",
-	icons = data.raw.item["nullius-combustion-chamber-3"].icons,
+	  icons = data.raw.item["nullius-combustion-chamber-3"].icons,
     localised_description = {"entity-description.nullius-combustion-chamber"},
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.2, result = "nullius-combustion-chamber-3"},
@@ -984,34 +917,6 @@ data:extend({
 })
 
 data:extend({
-  {
-    type = "assembling-machine",
-    name = "nullius-mirror-combustion-chamber-3",
-	icons = {
-	  data.raw.item["nullius-combustion-chamber-3"].icons[1],
-	  { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-	},
-    localised_description = {"entity-description.nullius-combustion-chamber"},
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 1.2, result = "nullius-combustion-chamber-3"},
-	placeable_by = {item = "nullius-combustion-chamber-3", count = 1},
-    crafting_categories = { "combustion" },
-    crafting_speed = 6,
-    base_productivity = 0.04,
-    max_health = 400,
-    corpse = "boiler-remnants",
-    impact_category = "metal",
-    resistances = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].resistances,
-    fast_replaceable_group = "combustion-chamber",
-    collision_box = {{-1.29, -0.79}, {1.29, 0.79}},
-    selection_box = {{-1.5, -1}, {1.5, 1}},
-    fluid_boxes = data.raw["assembling-machine"]["nullius-mirror-combustion-chamber-2"].fluid_boxes,
-    energy_usage = "1kW",
-    energy_source = { type = "void" },
-    working_sound = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].working_sound,
-    graphics_set = data.raw["assembling-machine"]["nullius-combustion-chamber-3"].graphics_set
-  },
-
   {
     type = "assembling-machine",
     name = "nullius-surge-compressor-1",
@@ -3780,16 +3685,7 @@ data:extend({
 })
 
 local ex1 = data.raw["assembling-machine"]["nullius-heat-exchanger-1"]
-local ex1m = util.table.deepcopy(ex1)
 local boil = util.table.deepcopy(ex1)
-ex1m.name = "nullius-mirror-heat-exchanger-1"
-ex1m.localised_name = {"entity-name.nullius-mirrored",
-    {"", {"entity-name.heat-exchanger"}, " ", tostring(1)}}
-ex1m.fluid_boxes[1].pipe_connections[1].position = {1, 0.5}
-ex1m.fluid_boxes[3].pipe_connections[1].position = {-1, 0.5}
-ex1m.icons[2] = { icon = ICONPATH .. "flip1.png", icon_size = 64 }
-ex1m.placeable_by = {item = "nullius-heat-exchanger-1", count = 1}
-ex1m.next_upgrade = "nullius-mirror-heat-exchanger-2"
 local ex2 = util.table.deepcopy(ex1)
 ex2.name = "nullius-heat-exchanger-2"
 ex2.localised_name = {"", {"entity-name.heat-exchanger"}, " ", tostring(2)}
@@ -3805,15 +3701,6 @@ ex2.energy_usage = "8.5MW"
 ex2.fluid_boxes[1].volume = 500
 ex2.fluid_boxes[2].volume = 500
 ex2.fluid_boxes[3].volume = 500
-local ex2m = util.table.deepcopy(ex2)
-ex2m.name = "nullius-mirror-heat-exchanger-2"
-ex2m.localised_name = {"entity-name.nullius-mirrored",
-    {"", {"entity-name.heat-exchanger"}, " ", tostring(2)}}
-ex2m.icons[2] = ex1m.icons[2]
-ex2m.placeable_by = {item = "nullius-heat-exchanger-2", count = 1}
-ex2m.next_upgrade = "nullius-mirror-heat-exchanger-3"
-ex2m.fluid_boxes[1].pipe_connections[1].position = {1, 0.5}
-ex2m.fluid_boxes[3].pipe_connections[1].position = {-1, 0.5}
 
 local ex3 = util.table.deepcopy(ex1)
 ex3.name = "nullius-heat-exchanger-3"
@@ -3832,16 +3719,8 @@ ex3.energy_usage = "20MW"
 ex3.fluid_boxes[1].volume = 500
 ex3.fluid_boxes[2].volume = 500
 ex3.fluid_boxes[3].volume = 500
-local ex3m = util.table.deepcopy(ex3)
-ex3m.name = "nullius-mirror-heat-exchanger-3"
-ex3m.localised_name = {"entity-name.nullius-mirrored",
-    {"", {"entity-name.heat-exchanger"}, " ", tostring(3)}}
-ex3m.icons[2] = ex1m.icons[2]
-ex3m.placeable_by = {item = "nullius-heat-exchanger-3", count = 1}
-ex3m.next_upgrade = nil
-ex3m.fluid_boxes[1].pipe_connections[1].position = {1, 0.5}
-ex3m.fluid_boxes[3].pipe_connections[1].position = {-1, 0.5}
-data:extend({ ex1m, ex2, ex2m, ex3, ex3m })
+
+data:extend({ex2, ex3 })
 
 
 boil.name = "nullius-boiler-1"
@@ -3914,15 +3793,6 @@ boil.graphics_set.animation = {
 }
 boil.graphics_set.working_visualisations = data.raw["assembling-machine"]["nullius-combustion-chamber-1"].graphics_set.working_visualisations
 
-local boilm = util.table.deepcopy(boil)
-boilm.name = "nullius-mirror-boiler-1"
-boilm.localised_name = {"entity-name.nullius-mirrored", {"", {"entity-name.boiler"}, " ", tostring(1)}}
-boilm.fluid_boxes[1].pipe_connections[1].position = {1, 0.5}
-boilm.fluid_boxes[3].pipe_connections[1].position = {-1, 0.5}
-boilm.icons[2] = ex1m.icons[2]
-boilm.placeable_by = {item = "nullius-boiler-1", count = 1}
-boilm.next_upgrade = "nullius-mirror-boiler-2"
-
 local boil2 = util.table.deepcopy(boil)
 boil2.name = "nullius-boiler-2"
 boil2.localised_name = {"", {"entity-name.boiler"}, " ", tostring(2)}
@@ -3944,15 +3814,7 @@ boil2.graphics_set.animation.east.layers[1].filename = ENTITYPATH .. "boiler/boi
 boil2.graphics_set.animation.south.layers[1].filename = ENTITYPATH .. "boiler/boiler2-south.png"
 boil2.graphics_set.animation.west.layers[1].filename = ENTITYPATH .. "boiler/boiler2-west.png"
 
-local boil2m = util.table.deepcopy(boil2)
-boil2m.name = "nullius-mirror-boiler-2"
-boil2m.localised_name = {"entity-name.nullius-mirrored", {"", {"entity-name.boiler"}, " ", tostring(2)}}
-boil2m.fluid_boxes[1].pipe_connections[1].position = {1, 0.5}
-boil2m.fluid_boxes[3].pipe_connections[1].position = {-1, 0.5}
-boil2m.icons[2] = boilm.icons[2]
-boil2m.placeable_by = {item = "nullius-boiler-2", count = 1}
-boil2m.next_upgrade = nil
-data:extend({ boil, boilm, boil2, boil2m})
+data:extend({ boil, boil2})
 
 
 if mods["reskins-bobs"] then
