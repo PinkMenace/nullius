@@ -449,6 +449,7 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_boxes = data.raw["assembling-machine"]["nullius-medium-assembler-1"].fluid_boxes,
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fast_replaceable_group = "medium-assembler",
     next_upgrade = "nullius-medium-assembler-3",
     alert_icon_shift = util.by_pixel(-3, -12),
@@ -517,6 +518,7 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fluid_boxes = data.raw["assembling-machine"]["nullius-medium-assembler-1"].fluid_boxes,
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fast_replaceable_group = "medium-assembler",
     alert_icon_shift = util.by_pixel(-3, -12),
     graphics_set = {
@@ -583,6 +585,7 @@ data:extend({
     collision_box = {{-1.7, -1.7}, {1.7, 1.7}},
     selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
     fluid_boxes = data.raw["assembling-machine"]["nullius-large-assembler-1"].fluid_boxes,
+    fluid_boxes_off_when_no_fluid_recipe = true,
     fast_replaceable_group = "large-assembler",
     alert_icon_shift = util.by_pixel(-3, -12),
     graphics_set = {
