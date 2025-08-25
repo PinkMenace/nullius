@@ -14,12 +14,13 @@ Date: 2025
   Changes:
     - Reworked the inserters: Removed filter inserters, now base inserters have filters except tier 1, their recipes have been adapted
         Same thing with aai loaders
-    - Removed mirror buildings, use 2.0 flipping instead
+    - Removed mirror buildings, use 2.0 flipping instead, removed chirality research
     - Added a trigger tech "Salvage lab wreckage"
     - Removed regular artillery shortcut and discharge defense shortcut
     - Changed required techs for most shortcuts
     - Now uses the Valve prototype for valves
     - Allowed medium assembler 1 to craft disabled recipes (to prevent a bug when a broken item is being fixed in early game)
+    - Changed plumbing and pumping checkpoints to reflect lesser need for pumps in 2.0 fluid system
   Balancing:
     - Increased the pumping speeds of pumps (and max flow rate)
   Bugfixes:
