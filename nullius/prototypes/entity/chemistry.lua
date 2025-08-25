@@ -49,6 +49,13 @@ local function hydro_animation(newtint)
   }
 end
 
+-- Honestly ? Stolen straight from angels, sue me !!
+circuit_connector_definitions["nullius-hydro-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel( 50.625,  42), shadow_offset = util.by_pixel( 50.625,  42), show_shadow = true },
+})
 
 data:extend({
   {
@@ -76,6 +83,8 @@ data:extend({
     next_upgrade = "nullius-hydro-plant-2",
     module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    circuit_connector = circuit_connector_definitions["nullius-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 	  graphics_set = {
 	    animation = hydro_animation({0.77, 0.77, 0.68}),
 	    working_visualisations = scale_image({
@@ -365,6 +374,8 @@ data:extend({
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "hydro-plant",
     next_upgrade = "nullius-hydro-plant-3",
+    circuit_connector = circuit_connector_definitions["nullius-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 	  graphics_set = {
 	    	animation = hydro_animation({0.8, 0.8, 0.9}),
 	      working_visualisations = scale_image({
@@ -651,6 +662,8 @@ data:extend({
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "hydro-plant",
+    circuit_connector = circuit_connector_definitions["nullius-hydro-plant"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 	  graphics_set = {
 	      animation = hydro_animation(),
 	      working_visualisations = scale_image({
@@ -925,7 +938,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-distillery-1",
-	order = "z-nullius-cbb",
+	  order = "z-nullius-cbb",
     icons = data.raw.item["nullius-distillery-1"].icons,
     localised_description = {"entity-description.nullius-distillery"},
     flags = {"placeable-neutral","player-creation"},
@@ -951,7 +964,9 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 }
     },
     working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
-	fluid_boxes = {
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["oil-refinery"],
+	  fluid_boxes = {
       {
         production_type = "input",
         pipe_covers = pipecoverspictures(),
@@ -1042,7 +1057,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-distillery-2",
-	order = "z-nullius-ccb",
+	  order = "z-nullius-ccb",
     icons = data.raw.item["nullius-distillery-2"].icons,
     localised_description = {"entity-description.nullius-distillery"},
     flags = {"placeable-neutral","player-creation"},
@@ -1071,6 +1086,8 @@ data:extend({
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "distillery",
     next_upgrade = "nullius-distillery-3",
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["oil-refinery"],
 
     fluid_boxes = {
       {
@@ -1164,6 +1181,8 @@ data:extend({
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "distillery",
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["oil-refinery"],
     graphics_set = {
       animation = data.raw["assembling-machine"]["oil-refinery"].graphics_set.animation,
       working_visualisations = data.raw["assembling-machine"]["nullius-distillery-1"].graphics_set.working_visualisations,
@@ -1204,21 +1223,28 @@ data:extend({
   }
 })
 
+circuit_connector_definitions["nullius-electrolyser"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel( 20.875,  62), shadow_offset = util.by_pixel( 20.875,  62), show_shadow = true },
+})
+
 data:extend({
   {
     type = "assembling-machine",
     name = "nullius-surge-electrolyzer-1",
-	icons = {{
+	  icons = {{
       icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
       icon_size = 32,
       tint = {0.8, 0.8, 0.6}
     }},
-	order = data.raw.item["nullius-electrolyzer-1"].order .. "d",
+	  order = data.raw.item["nullius-electrolyzer-1"].order .. "d",
     localised_description = {"entity-description.nullius-surge",
 	    {"entity-description.nullius-electrolyzer"}},
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "nullius-electrolyzer-1"},
-	placeable_by = {item = "nullius-electrolyzer-1", count = 1},
+	  placeable_by = {item = "nullius-electrolyzer-1", count = 1},
     fast_replaceable_group = "electrolyzer",
     next_upgrade = "nullius-surge-electrolyzer-2",
     max_health = 300,
@@ -1241,6 +1267,8 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
     },
+    circuit_connector = circuit_connector_definitions["nullius-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1329,17 +1357,17 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-priority-electrolyzer-1",
-	icons = {{
+	  icons = {{
       icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
       icon_size = 32,
       tint = {0.8, 0.68, 0.51}
     }},
-	order = data.raw.item["nullius-electrolyzer-1"].order .. "b",
-	localised_description = {"entity-description.nullius-priority",
+	  order = data.raw.item["nullius-electrolyzer-1"].order .. "b",
+	  localised_description = {"entity-description.nullius-priority",
 	    {"entity-description.nullius-electrolyzer"}},
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1, result = "nullius-electrolyzer-1"},
-	placeable_by = {item = "nullius-electrolyzer-1", count = 1},
+	  placeable_by = {item = "nullius-electrolyzer-1", count = 1},
     fast_replaceable_group = "electrolyzer",
     next_upgrade = "nullius-priority-electrolyzer-2",
     max_health = 300,
@@ -1358,6 +1386,8 @@ data:extend({
     energy_usage = "990kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].resistances,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].fluid_boxes,
+    circuit_connector = circuit_connector_definitions["nullius-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1406,24 +1436,24 @@ data:extend({
         }
       }
     },
-	impact_category = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].impact_category,
+	  impact_category = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].impact_category,
     working_sound = data.raw["assembling-machine"]["nullius-surge-electrolyzer-1"].working_sound
   },
 
   {
     type = "assembling-machine",
     name = "nullius-surge-electrolyzer-2",
-	icons = {{
+	  icons = {{
       icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
       icon_size = 32,
       tint = {0.8, 0.9, 1}
     }},
-	order = data.raw.item["nullius-electrolyzer-2"].order .. "d",
-	localised_description = {"entity-description.nullius-surge",
+	  order = data.raw.item["nullius-electrolyzer-2"].order .. "d",
+	  localised_description = {"entity-description.nullius-surge",
 	    {"entity-description.nullius-electrolyzer"}},
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1.5, result = "nullius-electrolyzer-2"},
-	placeable_by = {item = "nullius-electrolyzer-2", count = 1},
+	  placeable_by = {item = "nullius-electrolyzer-2", count = 1},
     fast_replaceable_group = "electrolyzer",
     next_upgrade = "nullius-surge-electrolyzer-3",
     max_health = 400,
@@ -1446,6 +1476,8 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
     },
+    circuit_connector = circuit_connector_definitions["nullius-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1529,17 +1561,17 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-priority-electrolyzer-2",
-	icons = {{
+	  icons = {{
       icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
       icon_size = 32,
       tint = {0.8, 0.76, 0.85}
     }},
-	order = data.raw.item["nullius-electrolyzer-2"].order .. "b",
-	localised_description = {"entity-description.nullius-priority",
+	  order = data.raw.item["nullius-electrolyzer-2"].order .. "b",
+	  localised_description = {"entity-description.nullius-priority",
 	    {"entity-description.nullius-electrolyzer"}},
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 1.5, result = "nullius-electrolyzer-2"},
-	placeable_by = {item = "nullius-electrolyzer-2", count = 1},
+	  placeable_by = {item = "nullius-electrolyzer-2", count = 1},
     fast_replaceable_group = "electrolyzer",
     next_upgrade = "nullius-priority-electrolyzer-3",
     max_health = 400,
@@ -1558,6 +1590,8 @@ data:extend({
     energy_usage = "2915kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].resistances,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-electrolyzer-2"].fluid_boxes,
+    circuit_connector = circuit_connector_definitions["nullius-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1617,12 +1651,12 @@ data:extend({
     name = "nullius-surge-electrolyzer-3",
     icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
     icon_size = 32,
-	order = data.raw.item["nullius-electrolyzer-3"].order .. "d",
-	localised_description = {"entity-description.nullius-surge",
+	  order = data.raw.item["nullius-electrolyzer-3"].order .. "d",
+	  localised_description = {"entity-description.nullius-surge",
 	    {"entity-description.nullius-electrolyzer"}},
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 2, result = "nullius-electrolyzer-3"},
-	placeable_by = {item = "nullius-electrolyzer-3", count = 1},
+	  placeable_by = {item = "nullius-electrolyzer-3", count = 1},
     fast_replaceable_group = "electrolyzer",
     max_health = 500,
     corpse = "big-remnants",
@@ -1644,6 +1678,8 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
     },
+    circuit_connector = circuit_connector_definitions["nullius-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1723,17 +1759,17 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-priority-electrolyzer-3",
-	icons = {{
+	  icons = {{
       icon = "__angelspetrochemgraphics__/graphics/icons/electrolyser.png",
       icon_size = 32,
       tint = {1, 0.85, 0.85}
     }},
-	order = data.raw.item["nullius-electrolyzer-3"].order .. "b",
-	localised_description = {"entity-description.nullius-priority",
+	  order = data.raw.item["nullius-electrolyzer-3"].order .. "b",
+	  localised_description = {"entity-description.nullius-priority",
 	    {"entity-description.nullius-electrolyzer"}},
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 2, result = "nullius-electrolyzer-3"},
-	placeable_by = {item = "nullius-electrolyzer-3", count = 1},
+	  placeable_by = {item = "nullius-electrolyzer-3", count = 1},
     fast_replaceable_group = "electrolyzer",
     max_health = 500,
     corpse = "big-remnants",
@@ -1751,6 +1787,8 @@ data:extend({
     energy_usage = "7650kW",
     resistances = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].resistances,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-electrolyzer-3"].fluid_boxes,
+    circuit_connector = circuit_connector_definitions["nullius-electrolyser"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1819,6 +1857,8 @@ data:extend({
     next_upgrade = "nullius-chemical-plant-2",
     module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
     graphics_set = {
       animation = make_4way_animation_from_spritesheet({ layers =
       {
@@ -2028,7 +2068,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-chemical-plant-2",
-	order = "z-nullius-bcb",
+	  order = "z-nullius-bcb",
     icons = data.raw.item["nullius-chemical-plant-2"].icons,
     localised_description = {"entity-description.nullius-chemical-plant"},
     flags = {"placeable-neutral","placeable-player", "player-creation"},
@@ -2043,6 +2083,8 @@ data:extend({
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "chemical-plant",
     next_upgrade = "nullius-chemical-plant-3",
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
 
     graphics_set = {
       animation = make_4way_animation_from_spritesheet({ layers =
@@ -2126,7 +2168,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-chemical-plant-3",
-	order = "z-nullius-bdb",
+	  order = "z-nullius-bdb",
     icons = data.raw.item["nullius-chemical-plant-3"].icons,
     localised_description = {"entity-description.nullius-chemical-plant"},
     flags = {"placeable-neutral","placeable-player", "player-creation"},
@@ -2140,6 +2182,8 @@ data:extend({
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fast_replaceable_group = "chemical-plant",
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
     
     graphics_set = {
       animation = make_4way_animation_from_spritesheet({ layers =

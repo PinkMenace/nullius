@@ -36,6 +36,7 @@ Date: 2025
   Modding:
     - Removed the dependency on angels, now only depends on the graphics
     - Now supports elevated rails
+    - Support for quick adjustable inserters
 ---------------------------------------------------------------------------------------------------
 
 Safefill: added setting to enable mining of waterfill
