@@ -90,6 +90,35 @@ data:extend({
   }
 })
 
+circuit_connector_definitions["nullius-combustion-chamber"] = circuit_connector_definitions.create_vector
+(
+  universal_connector_template,
+  {
+    { variation =  30, main_offset = util.by_pixel(-20, 20), shadow_offset = util.by_pixel(10-20, 20), show_shadow = true },
+    { variation =  15, main_offset = util.by_pixel(10, 5), shadow_offset = util.by_pixel(0, 18.5), show_shadow = true },
+    { variation =  30, main_offset = util.by_pixel(-20, 20), shadow_offset = util.by_pixel(-25, 20), show_shadow = true },
+    { variation =  15, main_offset = util.by_pixel(10, 5), shadow_offset = util.by_pixel(10, 18.5), show_shadow = true },
+  }
+)
+
+circuit_connector_definitions["nullius-compressor"] = circuit_connector_definitions.create_vector
+(
+  universal_connector_template,
+  {
+    { variation =  24, main_offset = util.by_pixel(-15, -35), shadow_offset = util.by_pixel(-15, -35), show_shadow = true },
+    { variation =  24, main_offset = util.by_pixel(-15, -35), shadow_offset = util.by_pixel(-15, -35), show_shadow = true },
+    { variation =  24, main_offset = util.by_pixel(-15, -35), shadow_offset = util.by_pixel(-15, -35), show_shadow = true },
+    { variation =  24, main_offset = util.by_pixel(-15, -35), shadow_offset = util.by_pixel(-15, -35), show_shadow = true },
+  }
+)
+
+circuit_connector_definitions["nullius-chemical-furnace"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
+})
+
 data:extend({
   {
     type = "solar-panel",
@@ -417,6 +446,10 @@ data:extend({
     next_upgrade = "nullius-combustion-chamber-2",
     collision_box = {{-1.29, -0.79}, {1.29, 0.79}},
     selection_box = {{-1.5, -1}, {1.5, 1}},
+    
+    circuit_connector = circuit_connector_definitions["nullius-combustion-chamber"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    
     fluid_boxes = {
       {
         volume = 500,
@@ -663,6 +696,8 @@ data:extend({
     next_upgrade = "nullius-combustion-chamber-3",
     collision_box = {{-1.29, -0.79}, {1.29, 0.79}},
     selection_box = {{-1.5, -1}, {1.5, 1}},
+    circuit_connector = circuit_connector_definitions["nullius-combustion-chamber"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     fluid_boxes = {
       {
@@ -816,6 +851,8 @@ data:extend({
     energy_usage = "1kW",
     energy_source = { type = "void" },
     working_sound = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].working_sound,
+    circuit_connector = circuit_connector_definitions["nullius-combustion-chamber"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = {
       working_visualisations = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].graphics_set.working_visualisations,
@@ -917,16 +954,16 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-surge-compressor-1",
-	icons = {{
+	  icons = {{
       icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
       icon_size = 32,
       tint = {0.6, 0.6, 0.4}
     }},
-	localised_description = {"entity-description.nullius-surge",
+	  localised_description = {"entity-description.nullius-surge",
 	    {"entity-description.nullius-compressor"}},
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.8, result = "nullius-compressor-1"},
-	placeable_by = {item = "nullius-compressor-1", count = 1},
+	  placeable_by = {item = "nullius-compressor-1", count = 1},
     fast_replaceable_group = "compressor",
     next_upgrade = "nullius-surge-compressor-2",
     max_health = 200,
@@ -955,6 +992,8 @@ data:extend({
       fade_in_ticks = 4,
       fade_out_ticks = 10
     },
+    circuit_connector = circuit_connector_definitions["nullius-compressor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1071,16 +1110,16 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-priority-compressor-1",
-	icons = {{
+	  icons = {{
       icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
       icon_size = 32,
       tint = {0.6, 0.51, 0.34}
     }},
-	localised_description = {"entity-description.nullius-priority",
+	  localised_description = {"entity-description.nullius-priority",
 	    {"entity-description.nullius-compressor"}},
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.8, result = "nullius-compressor-1"},
-	placeable_by = {item = "nullius-compressor-1", count = 1},
+	  placeable_by = {item = "nullius-compressor-1", count = 1},
     fast_replaceable_group = "compressor",
     next_upgrade = "nullius-priority-compressor-2",
     max_health = 200,
@@ -1101,6 +1140,8 @@ data:extend({
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-1"].fluid_boxes,
+    circuit_connector = circuit_connector_definitions["nullius-compressor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = {
       animation = {
@@ -1201,16 +1242,16 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-surge-compressor-2",
-	icons = {{
+	  icons = {{
       icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
       icon_size = 32,
       tint = {0.65, 0.65, 0.9}
     }},
-	localised_description = {"entity-description.nullius-surge",
+	  localised_description = {"entity-description.nullius-surge",
 	    {"entity-description.nullius-compressor"}},
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.2, result = "nullius-compressor-2"},
-	placeable_by = {item = "nullius-compressor-2", count = 1},
+	  placeable_by = {item = "nullius-compressor-2", count = 1},
     fast_replaceable_group = "compressor",
     next_upgrade = "nullius-surge-compressor-3",
     max_health = 250,
@@ -1232,6 +1273,8 @@ data:extend({
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
+    circuit_connector = circuit_connector_definitions["nullius-compressor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1348,16 +1391,16 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-priority-compressor-2",
-	icons = {{
+	  icons = {{
       icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
       icon_size = 32,
       tint = {0.65, 0.55, 0.76}
     }},
-	localised_description = {"entity-description.nullius-priority",
+	  localised_description = {"entity-description.nullius-priority",
 	    {"entity-description.nullius-compressor"}},
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.2, result = "nullius-compressor-2"},
-	placeable_by = {item = "nullius-compressor-2", count = 1},
+	  placeable_by = {item = "nullius-compressor-2", count = 1},
     fast_replaceable_group = "compressor",
     next_upgrade = "nullius-priority-compressor-3",
     max_health = 250,
@@ -1378,7 +1421,9 @@ data:extend({
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["nullius-surge-compressor-2"].fluid_boxes,
-
+    circuit_connector = circuit_connector_definitions["nullius-compressor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    
     graphics_set = {
       animation = {
         north = {
@@ -1444,15 +1489,15 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-surge-compressor-3",
-	icons = {{
+	  icons = {{
       icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
       icon_size = 32
     }},
-	localised_description = {"entity-description.nullius-surge",
+	  localised_description = {"entity-description.nullius-surge",
 	    {"entity-description.nullius-compressor"}},
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.6, result = "nullius-compressor-3"},
-	placeable_by = {item = "nullius-compressor-3", count = 1},
+	  placeable_by = {item = "nullius-compressor-3", count = 1},
     fast_replaceable_group = "compressor",
     max_health = 300,
     corpse = "big-remnants",
@@ -1473,6 +1518,10 @@ data:extend({
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
+    
+    circuit_connector = circuit_connector_definitions["nullius-compressor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    
     fluid_boxes = {
       {
         production_type = "input",
@@ -1585,16 +1634,16 @@ data:extend({
   {
     type = "assembling-machine",
     name = "nullius-priority-compressor-3",
-	icons = {{
+	  icons = {{
       icon = "__angelsrefininggraphics__/graphics/icons/thermal-extractor.png",
       icon_size = 32,
       tint = {1, 0.85, 0.85}
     }},
-	localised_description = {"entity-description.nullius-priority",
+	  localised_description = {"entity-description.nullius-priority",
 	    {"entity-description.nullius-compressor"}},
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1.6, result = "nullius-compressor-3"},
-	placeable_by = {item = "nullius-compressor-3", count = 1},
+	  placeable_by = {item = "nullius-compressor-3", count = 1},
     fast_replaceable_group = "compressor",
     max_health = 300,
     corpse = "big-remnants",
@@ -1613,6 +1662,9 @@ data:extend({
     resistances = data.raw["assembling-machine"]["nullius-surge-compressor-1"].resistances,
     impact_category = "metal",
     working_sound = data.raw["assembling-machine"]["nullius-surge-compressor-1"].working_sound,
+    circuit_connector = circuit_connector_definitions["nullius-compressor"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    
     fluid_boxes = {
       {
         production_type = "input",
@@ -1857,6 +1909,8 @@ data:extend({
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-2",
+    circuit_connector = circuit_connector_definitions["nullius-chemical-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
       filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_02.png",
@@ -1920,6 +1974,8 @@ data:extend({
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-3",
+    circuit_connector = circuit_connector_definitions["nullius-chemical-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
       filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_02.png",
@@ -1969,6 +2025,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
+    circuit_connector = circuit_connector_definitions["nullius-chemical-furnace"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = { -- TODO: integrate the graphics with the heat pipes correctly
       filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_02.png",
