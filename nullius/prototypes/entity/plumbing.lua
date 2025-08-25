@@ -2667,8 +2667,7 @@ data:extend({
     fluid_wagon_connector_graphics = data.raw.pump["pump"].fluid_wagon_connector_graphics,
     fluid_animation = data.raw.pump["pump"].fluid_animation,
     glass_pictures = data.raw.pump["pump"].glass_pictures,
-    circuit_wire_connection_points = circuit_connector_definitions["pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["pump"].sprites,
+    circuit_connector = circuit_connector_definitions["pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animations = {
@@ -2834,8 +2833,7 @@ data:extend({
     fluid_wagon_connector_graphics = data.raw.pump["pump"].fluid_wagon_connector_graphics,
     fluid_animation = data.raw.pump["pump"].fluid_animation,
     glass_pictures = data.raw.pump["pump"].glass_pictures,
-    circuit_wire_connection_points = circuit_connector_definitions["pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["pump"].sprites,
+    circuit_connector = circuit_connector_definitions["pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animations = {
