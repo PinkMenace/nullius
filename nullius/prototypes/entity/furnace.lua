@@ -818,7 +818,7 @@ data:extend({
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1, -1}, direction = defines.direction.north }}
+        pipe_connections = {{ flow_direction ="output", position = {1, -1}, direction = defines.direction.east }}
       },
     },
 	  impact_category = data.raw["furnace"]["stone-furnace"].impact_category,
@@ -898,7 +898,7 @@ data:extend({
         production_type = "output",
         pipe_covers = pipecoverspictures(),
         volume = 500,
-        pipe_connections = {{ flow_direction ="output", position = {1.2, -1}, direction = defines.direction.east }}
+        pipe_connections = {{ flow_direction ="output", position = {1, -1}, direction = defines.direction.east }}
       },
     },
 	  impact_category = data.raw["assembling-machine"]["nullius-foundry-1"].impact_category,
