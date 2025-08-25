@@ -42,7 +42,7 @@ local checkpoint_data = {
   ["freight-transportation"] = {{ CHK_ITEM, STT_CONSUME, 2, {{"nullius-hydrogen-canister"}} },
 			{ CHK_ITEM, STT_CONSUME, 1, {{"nullius-water-canister"}} }},
   ["lubricant"] = {{ CHK_FLUID, STT_PRODUCE, 250, {{"nullius-lubricant"}} }},
-  ["plumbing"] = {{ CHK_BUILD, STT_NET, 10, {{"nullius-pump-1"}} },
+  ["plumbing"] = {{ CHK_BUILD, STT_NET, 1, {{"nullius-pump-1"}} },
 			{ CHK_BUILD, STT_NET, 10, {{"nullius-medium-tank-2"}} },
 			{ CHK_BUILD, STT_NET, 6, {{"nullius-relief-valve"}} }},
 
@@ -102,7 +102,7 @@ local checkpoint_data = {
   ["large-miner"] = {{ CHK_BUILD, STT_NET, 50, {{"nullius-large-miner-1"}} }},
   ["filter"] = {{ CHK_ITEM, STT_PRODUCE, 100,
 			{{"nullius-filter-2"}, {"nullius-box-filter-2", 5}} }},
-  ["pumping"] = {{ CHK_BUILD, STT_NET, 40, {{"nullius-pump-2"}} }},
+  ["pumping"] = {{ CHK_BUILD, STT_NET, 5, {{"nullius-pump-2"}} }},
   ["logistics-3"] = {{ CHK_BUILD, STT_NET, 10, {{"bob-ultimate-splitter"}} }},
   ["automation"] = {{ CHK_BUILD, STT_NET, 20, {{"nullius-large-assembler-2"}} }},
   ["mining"] = {{ CHK_ITEM, STT_CONSUME, 1200000, {{"iron-ore"},{"nullius-box-iron-ore",5}} },
