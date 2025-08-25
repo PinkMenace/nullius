@@ -50,6 +50,9 @@ data:extend({
     cannon_barrel_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_barrel_pictures,
     cannon_base_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_base_pictures,
     cannon_base_shift = data.raw["artillery-turret"]["artillery-turret"].cannon_base_shift,
+    
+    circuit_connector = circuit_connector_definitions["artillery-turret"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     base_picture = {
       layers = {
@@ -126,7 +129,10 @@ data:extend({
     cannon_barrel_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_barrel_pictures,
     cannon_base_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_base_pictures,
     cannon_base_shift = data.raw["artillery-turret"]["artillery-turret"].cannon_base_shift,
-
+  
+    circuit_connector = circuit_connector_definitions["artillery-turret"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    
     base_picture = {
       layers = {
         {

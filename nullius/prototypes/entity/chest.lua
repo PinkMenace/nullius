@@ -20,7 +20,7 @@ data:extend({
     collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
     selection_box = {{-1, -1}, {1, 1}},
     fast_replaceable_group = "container",
-	next_upgrade = "nullius-large-chest-2",
+	  next_upgrade = "nullius-large-chest-2",
     inventory_size = 100,
     impact_category = "metal",
     picture = {
