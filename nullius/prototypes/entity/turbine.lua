@@ -94,6 +94,16 @@ local function set_furnace_idle(proto, overlay, tint)
         west = horizontal
       }
   }
+  proto.graphics_set.working_visualisations = {
+    {
+      always_draw = true,
+      render_layer = "object-under", -- draw under the generator animation (only used for the preview)
+      north_animation = vertical,
+        east_animation = horizontal,
+	    south_animation = vertical,
+        west_animation = horizontal
+    }
+  }
 end
 
 local function set_generator_animation(proto, overlay, tint)
