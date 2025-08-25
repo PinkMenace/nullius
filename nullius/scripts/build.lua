@@ -113,6 +113,8 @@ function update_tick()
     update_grass()
   elseif (tickmod1 == 9) then
     update_align()
+  elseif (tickmod1 == 10) then
+    check_fixing_machines()
   elseif (tickmod1 == 11) then
     local tickmod2 = (game.tick % 15)
     if (tickmod2 == 2) then
