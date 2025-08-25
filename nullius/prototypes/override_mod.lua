@@ -226,7 +226,7 @@ data.raw.technology["factory-architecture-t3"].localised_name = {"", {"technolog
 end
 
 
-if mods["bobinserters"] and (settings.startup["bobmods-inserters-long2"].value == true) then
+if (mods["bobinserters"] or mods["quick-adjustable-inserters"] )and (settings.startup["bobmods-inserters-long2"].value == true) then
 data.raw.technology["bob-long-inserters-1"].order = "nullius-ce"
 data.raw.technology["bob-long-inserters-1"].prerequisites = {"nullius-automation"}
 data.raw.technology["bob-long-inserters-1"].unit = { count = 3,
@@ -344,7 +344,7 @@ end
 
 data.raw.technology["nullius-mass-production-1"].prerequisites = {
     "nullius-miniloader-1", "nullius-checkpoint-mineral-dust"}
-if mods["bobinserters"] and (settings.startup["bobmods-inserters-long2"].value == true) then
+if (mods["bobinserters"] or mods["quick-adjustable-inserters"]) and (settings.startup["bobmods-inserters-long2"].value == true) then
 table.insert(data.raw.technology["bob-long-inserters-2"].prerequisites,"nullius-miniloader-2")
 else
 table.insert(data.raw.technology["nullius-mineral-processing-2"].prerequisites,"nullius-miniloader-2")
@@ -463,7 +463,7 @@ end
 
 table.insert(data.raw.technology["nullius-mechanical-separation"].prerequisites,"nullius-loader-1")
 table.insert(data.raw.technology["nullius-checkpoint-mass-production"].prerequisites,"nullius-loader-2")
-if mods["bobinserters"] and (settings.startup["bobmods-inserters-long2"].value == true) then
+if (mods["bobinserters"] or mods["quick-adjustable-inserters"]) and (settings.startup["bobmods-inserters-long2"].value == true) then
 table.insert(data.raw.technology["bob-long-inserters-2"].prerequisites,"nullius-loader-3")
 else
 table.insert(data.raw.technology["nullius-mineral-processing-2"].prerequisites,"nullius-loader-3")
@@ -473,7 +473,7 @@ table.insert(data.raw.technology["nullius-inserter-capacity-5"].prerequisites,"n
 end
 
 
-if mods["bobinserters"] then
+if mods["bobinserters"] or mods["quick-adjustable-inserters"] then
 if (settings.startup["bobmods-inserters-long2"].value == true) then
 data.raw.technology["bob-near-inserters"].prerequisites = {"bob-long-inserters-1", "nullius-checkpoint-steel-ingot"}
 data.raw.technology["bob-near-inserters"].order = "nullius-cf"
@@ -1741,7 +1741,7 @@ if settings.startup["RTThrowersSetting"].value then
   table.insert(data.raw.technology["nullius-locomotion-3"].prerequisites,
     "nullius-logistic-ballistics-8")
 
-  if (mods["bobinserters"] and
+  if ((mods["bobinserters"] or mods["quick-adjustable-inserters"]) and
       (settings.startup["bobmods-inserters-more2"].value == true)) then
      table.insert(data.raw.technology["bob-more-inserters-2"].prerequisites,
 	     "nullius-logistic-ballistics-7")

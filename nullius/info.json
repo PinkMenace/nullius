@@ -44,6 +44,7 @@
 	"(?) Mini_Trains >= 2.0.0",
 	"(?) fcpu >= 0.4.33",
 	"(?) reskins-bobs >= 2.3.5",
+	"(?) quick-adjustable-inserters >= 2.0.11",
 	  
 	"! space-age",
 	"! quality",
