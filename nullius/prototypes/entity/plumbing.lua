@@ -172,22 +172,26 @@ data:extend({
       { type = "fire", percent = 75 }
     },
 
-    graphics_set = {
-      underwater_layer_offset = 30,
+    graphics_set =
+    {
+      underwater_layer_offset = 15,
       base_render_layer = "ground-patch",
-      animation = {
-        north = {
-          layers = {
+      animation =
+      {
+        north =
+        {
+          layers =
+          {
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_North.png",
               priority = "high",
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 48,
-              height = 84,
-              shift = util.by_pixel(-2*0.75, -16*0.75),
-              scale = 0.75
+              width = 90,
+              height = 162,
+              shift = util.by_pixel(-1*0.75, -15*0.75),
+              scale = 0.5*0.75
             },
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_North-shadow.png",
@@ -195,26 +199,28 @@ data:extend({
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 78,
-              height = 70,
-              shift = util.by_pixel(12*0.75, -8*0.75),
+              width = 150,
+              height = 134,
+              shift = util.by_pixel(13*0.75, -7*0.75),
               draw_as_shadow = true,
-              scale = 0.75
+              scale = 0.5*0.75
             }
           }
         },
-        east = {
-          layers = {
+        east =
+        {
+          layers =
+          {
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_East.png",
               priority = "high",
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 64,
-              height = 52,
-              shift = util.by_pixel(14*0.75-4, -2*0.75),
-              scale = 0.75
+              width = 124,
+              height = 102,
+              shift = util.by_pixel(15*0.75, -2*0.75),
+              scale = 0.5*0.75
             },
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_East-shadow.png",
@@ -222,26 +228,28 @@ data:extend({
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 88,
-              height = 34,
-              shift = util.by_pixel(28*0.75-4, 8*0.75),
+              width = 180,
+              height = 66,
+              shift = util.by_pixel(27*0.75, 8*0.75),
               draw_as_shadow = true,
-              scale = 0.75
+              scale = 0.5*0.75
             }
           }
         },
-        south = {
-          layers = {
+        south =
+        {
+          layers =
+          {
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_South.png",
               priority = "high",
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 48,
-              height = 96,
-              shift = util.by_pixel(-2*0.75, 0),
-              scale = 0.75
+              width = 92,
+              height = 192,
+              shift = util.by_pixel(-1*0.75, 0),
+              scale = 0.5*0.75
             },
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_South-shadow.png",
@@ -249,26 +257,28 @@ data:extend({
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 80,
-              height = 66,
-              shift = util.by_pixel(16*0.75, 22*0.75),
+              width = 164,
+              height = 128,
+              shift = util.by_pixel(15*0.75, 23*0.75),
               draw_as_shadow = true,
-              scale = 0.75
+              scale = 0.5*0.75
             }
           }
         },
-        west = {
-          layers = {
+        west =
+        {
+          layers =
+          {
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_West.png",
               priority = "high",
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 64,
-              height = 52,
-              shift = util.by_pixel(-16*0.75+4, -2*0.75),
-              scale = 0.75
+              width = 124,
+              height = 102,
+              shift = util.by_pixel(-15*0.75, -2*0.75),
+              scale = 0.5*0.75
             },
             {
               filename = BASEENTITY .. "offshore-pump/offshore-pump_West-shadow.png",
@@ -276,152 +286,173 @@ data:extend({
               line_length = 8,
               frame_count = 32,
               animation_speed = 0.25,
-              width = 88,
-              height = 34,
-              shift = util.by_pixel(-4*0.75+4, 8*0.75),
+              width = 172,
+              height = 66,
+              shift = util.by_pixel(-3*0.75, 8*0.75),
               draw_as_shadow = true,
-              scale = 0.75
+              scale = 0.5*0.75
             }
           }
         }
       },
-      fluid_animation = {
-        north = {
+      fluid_animation =
+      {
+        north =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_North-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 22,
-          height = 20,
-          shift = util.by_pixel(-2*0.75, -22*0.75),
-          scale = 0.75
+          width = 40,
+          height = 40,
+          shift = util.by_pixel(-1*0.75, -22*0.75),
+          scale = 0.5*0.75
         },
-        east = {
+        east =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_East-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 20,
-          height = 24,
-          shift = util.by_pixel(6*0.75-4, -10*0.75),
-          scale = 0.75
+          width = 38,
+          height = 50,
+          shift = util.by_pixel(6*0.75, -11*0.75),
+          scale = 0.5*0.75
         },
-        south = {
+        south =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_South-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 20,
-          height = 8,
-          shift = util.by_pixel(-2*0.75, -4*0.75),
-          scale = 0.75
+          width = 36,
+          height = 14,
+          shift = util.by_pixel(-1*0.75, -4*0.75),
+          scale = 0.5*0.75
         },
-        west = {
+        west =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_West-fluid.png",
           apply_runtime_tint = true,
           line_length = 8,
           frame_count = 32,
           animation_speed = 0.25,
-          width = 20,
-          height = 24,
-          shift = util.by_pixel(-8*0.75+4, -10*0.75),
-          scale = 0.75
+          width = 36,
+          height = 50,
+          shift = util.by_pixel(-7*0.75, -11*0.75),
+          scale = 0.5*0.75
         }
       },
-      glass_pictures = {
-        north = {
+      glass_pictures =
+      {
+        north =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_North-glass.png",
-          width = 18,
-          height = 20,
+          width = 36,
+          height = 40,
           shift = util.by_pixel(-2*0.75, -22*0.75),
-          scale = 0.75
+          scale = 0.5*0.75
         },
-        east = {
+        east =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_East-glass.png",
-          width = 18,
-          height = 18,
-          shift = util.by_pixel(4*0.75-4, -14*0.75),
-          scale = 0.75
+          width = 30,
+          height = 32,
+          shift = util.by_pixel(5*0.75, -13*0.75),
+          scale = 0.5*0.75
         },
-        south = {
+        south =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_South-glass.png",
-          width = 22,
-          height = 12,
-          shift = util.by_pixel(-2*0.75, -6*0.75),
-          scale = 0.75
+          width = 40,
+          height = 24,
+          shift = util.by_pixel(-1*0.75, -6*0.75),
+          scale = 0.5*0.75
         },
-        west = {
+        west =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_West-glass.png",
-          width = 16,
-          height = 16,
-          shift = util.by_pixel(-6*0.75+4, -14*0.75),
-          scale = 0.75
+          width = 30,
+          height = 32,
+          shift = util.by_pixel(-6*0.75, -14*0.75),
+          scale = 0.5*0.75
         }
       },
-      base_pictures = {
-        north = {
+      base_pictures =
+      {
+        north =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_North-legs.png",
-          width = 60,
-          height = 52,
-          shift = util.by_pixel(-2*0.75, -4*0.75),
-          scale = 0.75
+          width = 114,
+          height = 106,
+          shift = util.by_pixel(-1*0.75, -5*0.75),
+          scale = 0.5*0.75
         },
-        east = {
+        east =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_East-legs.png",
-          width = 54,
-          height = 32,
-          shift = util.by_pixel(4*0.75-4, 12*0.75),
-          scale = 0.75
+          width = 106,
+          height = 60,
+          shift = util.by_pixel(4*0.75, 13*0.75),
+          scale = 0.5*0.75
         },
-        south = {
+        south =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_South-legs.png",
-          width = 56,
-          height = 54,
+          width = 110,
+          height = 108,
           shift = util.by_pixel(-2*0.75, 6*0.75),
-          scale = 0.75
+          scale = 0.5*0.75
         },
-        west = {
+        west =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_West-legs.png",
-          width = 54,
-          height = 32,
-          shift = util.by_pixel(-6*0.75+4, 12*0.75),
-          scale = 0.75
+          width = 108,
+          height = 64,
+          shift = util.by_pixel(-6*0.75, 12*0.75),
+          scale = 0.5*0.75
         }
       },
-      underwater_pictures = {
-        north = {
+      underwater_pictures =
+      {
+        north =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_North-underwater.png",
-          width = 52,
-          height = 16,
-          shift = util.by_pixel(-2*0.75, -34*0.75),
-          scale = 0.75
+          width = 98,
+          height = 36,
+          shift = util.by_pixel(-1*0.75, -32*0.75),
+          scale = 0.5*0.75
         },
-        east = {
+        east =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_East-underwater.png",
-          width = 18,
-          height = 38,
-          shift = util.by_pixel(40*0.75-4, 16*0.75),
-          scale = 0.75
+          width = 40,
+          height = 72,
+          shift = util.by_pixel(39*0.75, 17*0.75),
+          scale = 0.5*0.75
         },
-        south = {
+        south =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_South-underwater.png",
-          width = 52,
-          height = 26,
-          shift = util.by_pixel(-2*0.75, 48*0.75),
-          scale = 0.75
+          width = 98,
+          height = 48,
+          shift = util.by_pixel(-1*0.75, 49*0.75),
+          scale = 0.5*0.75
         },
-        west = {
+        west =
+        {
           filename = BASEENTITY .. "offshore-pump/offshore-pump_West-underwater.png",
-          width = 20,
-          height = 34,
-          shift = util.by_pixel(-40*0.75+4, 18*0.75),
-          scale = 0.75
+          width = 40,
+          height = 72,
+          shift = util.by_pixel(-40*0.75, 17*0.75),
+          scale = 0.5*0.75
         }
       }
     },
+
     water_reflection = {
       pictures = {
         filename = BASEENTITY .. "offshore-pump/offshore-pump-reflection.png",
