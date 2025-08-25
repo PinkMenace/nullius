@@ -627,8 +627,7 @@ data:extend({
     working_sound = data.raw["lamp"]["small-lamp"].working_sound,
     energy_source = { type = "electric", usage_priority = "lamp" },
     signal_to_color_mapping = data.raw["lamp"]["small-lamp"].signal_to_color_mapping,
-    circuit_wire_connection_point = circuit_connector_definitions["lamp"].points,
-    circuit_connector_sprites = circuit_connector_definitions["lamp"].sprites,
+    circuit_connector = circuit_connector_definitions["lamp"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     energy_usage_per_tick = "4kW",
@@ -699,8 +698,7 @@ data:extend({
     working_sound = data.raw["lamp"]["small-lamp"].working_sound,
     energy_source = { type = "electric", usage_priority = "lamp" },
     signal_to_color_mapping = data.raw["lamp"]["small-lamp"].signal_to_color_mapping,
-    circuit_wire_connection_point = circuit_connector_definitions["lamp"].points,
-    circuit_connector_sprites = circuit_connector_definitions["lamp"].sprites,
+    circuit_connector = circuit_connector_definitions["lamp"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     energy_usage_per_tick = "8kW",
@@ -860,8 +858,7 @@ data:extend({
     hand_closed_shadow = data.raw["inserter"]["fast-inserter"].hand_closed_shadow,
     hand_open_shadow = data.raw["inserter"]["fast-inserter"].hand_open_shadow,
     platform_picture = data.raw["inserter"]["fast-inserter"].platform_picture,
-    circuit_wire_connection_points = data.raw["inserter"]["fast-inserter"].circuit_wire_connection_points,
-    circuit_connector_sprites = data.raw["inserter"]["fast-inserter"].circuit_connector_sprites,
+    circuit_connector = data.raw["inserter"]["fast-inserter"].circuit_connector,
     circuit_wire_max_distance = data.raw["inserter"]["fast-inserter"].circuit_wire_max_distance,
     default_stack_control_input_signal = data.raw["inserter"]["fast-inserter"].default_stack_control_input_signal
   },

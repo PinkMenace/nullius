@@ -165,8 +165,7 @@ data:extend({
     impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
     working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
     placeable_position_visualization = data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization,
-    circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
+    circuit_connector = circuit_connector_definitions["offshore-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
@@ -476,8 +475,7 @@ data:extend({
     impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
     working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
     placeable_position_visualization = data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization,
-    circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
+    circuit_connector = circuit_connector_definitions["offshore-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     water_reflection = data.raw["offshore-pump"]["offshore-pump"].water_reflection,
     resistances = {
@@ -1276,9 +1274,6 @@ data:extend({
     },
 
     impact_category = "metal",
-    circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     mode = "overflow",
     threshold = 0.25,
@@ -1372,9 +1367,6 @@ data:extend({
     },
 
     impact_category = "metal",
-    circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     mode = "one-way",
     flow_rate = 200,
@@ -1467,9 +1459,6 @@ data:extend({
     },
 
     impact_category = "metal",
-    circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     mode = "top-up",
     threshold = 0.5,
@@ -1563,9 +1552,6 @@ data:extend({
     },
 
     impact_category = "metal",
-    circuit_wire_connection_points = circuit_connector_definitions["offshore-pump"].points,
-    circuit_connector_sprites = circuit_connector_definitions["offshore-pump"].sprites,
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     mode = "overflow",
     threshold = 0.75,
@@ -1664,8 +1650,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     water_reflection = data.raw["storage-tank"]["storage-tank"].water_reflection,
 
@@ -1732,8 +1717,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     pictures = {
@@ -1967,8 +1951,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance
   }
 })
@@ -2005,8 +1988,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance
   }
 })
@@ -2057,8 +2039,7 @@ data:extend({
       match_volume_to_activity = true,
       max_sounds_per_prototype = 3,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     pictures = {
       picture = {
@@ -2146,8 +2127,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["nullius-large-tank-1"].working_sound,
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     pictures = table.deepcopy(data.raw["storage-tank"]["nullius-large-tank-1"].pictures)
   },
@@ -2179,8 +2159,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["nullius-large-tank-1"].working_sound,
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     pictures = table.deepcopy(data.raw["storage-tank"]["nullius-large-tank-1"].pictures)
   }
@@ -2244,8 +2223,7 @@ data:extend({
       height = 12
     },
     monitor_visualization_tint = {r=78, g=173, b=255},
-    circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-    circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+    circuit_connector = circuit_connector_definitions["pumpjack"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     base_render_layer = "lower-object-above-shadow",
     base_picture = {
@@ -2352,8 +2330,7 @@ data:extend({
       height = 12
     },
     monitor_visualization_tint = {r=78, g=173, b=255},
-    circuit_wire_connection_points = circuit_connector_definitions["pumpjack"].points,
-    circuit_connector_sprites = circuit_connector_definitions["pumpjack"].sprites,
+    circuit_connector = circuit_connector_definitions["pumpjack"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     base_render_layer = "lower-object-above-shadow",
     base_picture = {
@@ -2992,8 +2969,7 @@ data:extend({
     impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,
-    circuit_wire_connection_points = data.raw["pump"]["pump"].circuit_wire_connection_points,
-    circuit_connector_sprites = data.raw["pump"]["pump"].circuit_connector_sprites,
+    circuit_connector = circuit_connector_definitions["pump"],
     circuit_wire_max_distance = data.raw["pump"]["pump"].circuit_wire_max_distance,
 
     animations = {
@@ -3103,8 +3079,7 @@ data:extend({
     impact_category = data.raw["pump"]["pump"].impact_category,
     open_sound = data.raw["pump"]["pump"].open_sound,
     close_sound = data.raw["pump"]["pump"].close_sound,
-    circuit_wire_connection_points = data.raw["pump"]["pump"].circuit_wire_connection_points,
-    circuit_connector_sprites = data.raw["pump"]["pump"].circuit_connector_sprites,
+    circuit_connector = circuit_connector_definitions["pump"],
     circuit_wire_max_distance = data.raw["pump"]["pump"].circuit_wire_max_distance,
 
     animations = {

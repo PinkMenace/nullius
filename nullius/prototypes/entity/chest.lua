@@ -44,8 +44,7 @@ data:extend({
         }
       }
     },
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },
   {
@@ -67,8 +66,7 @@ data:extend({
     fast_replaceable_group = "container",
     inventory_size = 150,
     impact_category = "metal",
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     picture = {
@@ -121,8 +119,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -200,8 +197,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -280,8 +276,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     animation = {
       layers = {
@@ -334,8 +329,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -412,8 +406,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -491,8 +484,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     animation = {
       layers = {
@@ -547,8 +539,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -627,8 +618,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -708,8 +698,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     animation = {
       layers = {
@@ -764,8 +753,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -844,8 +832,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -925,8 +912,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     animation = {
       layers = {
@@ -979,8 +965,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -1057,8 +1042,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     animation = {
@@ -1136,8 +1120,7 @@ data:extend({
     animation_sound = data.raw["logistic-container"]["storage-chest"].animation_sound,
     impact_category = data.raw["logistic-container"]["storage-chest"].impact_category,
     opened_duration = data.raw["logistic-container"]["storage-chest"].opened_duration,
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     animation = {
       layers = {

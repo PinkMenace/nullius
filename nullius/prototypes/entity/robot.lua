@@ -398,8 +398,7 @@ data:extend({
     open_door_trigger_effect = data.raw["roboport"]["roboport"].open_door_trigger_effect,
     close_door_trigger_effect = data.raw["roboport"]["roboport"].close_door_trigger_effect,
     water_reflection = data.raw["roboport"]["roboport"].water_reflection,
-    circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
-    circuit_connector_sprites = circuit_connector_definitions["roboport"].sprites,
+    circuit_connector = circuit_connector_definitions["roboport"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = {type = "virtual", name = "signal-X"},
     default_total_logistic_output_signal = {type = "virtual", name = "signal-Y"},
@@ -518,8 +517,7 @@ data:extend({
     open_door_trigger_effect = data.raw["roboport"]["roboport"].open_door_trigger_effect,
     close_door_trigger_effect = data.raw["roboport"]["roboport"].close_door_trigger_effect,
     water_reflection = data.raw["roboport"]["roboport"].water_reflection,
-    circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
-    circuit_connector_sprites = circuit_connector_definitions["roboport"].sprites,
+    circuit_connector = circuit_connector_definitions["roboport"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = {type = "virtual", name = "signal-X"},
     default_total_logistic_output_signal = {type = "virtual", name = "signal-Y"},
@@ -637,8 +635,7 @@ data:extend({
     open_door_trigger_effect = data.raw["roboport"]["roboport"].open_door_trigger_effect,
     close_door_trigger_effect = data.raw["roboport"]["roboport"].close_door_trigger_effect,
     water_reflection = data.raw["roboport"]["roboport"].water_reflection,
-    circuit_wire_connection_point = circuit_connector_definitions["roboport"].points,
-    circuit_connector_sprites = circuit_connector_definitions["roboport"].sprites,
+    circuit_connector = circuit_connector_definitions["roboport"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = {type = "virtual", name = "signal-X"},
     default_total_logistic_output_signal = {type = "virtual", name = "signal-Y"},
@@ -756,8 +753,7 @@ data:extend({
     open_door_trigger_effect = data.raw["roboport"]["roboport"].open_door_trigger_effect,
     close_door_trigger_effect = data.raw["roboport"]["roboport"].close_door_trigger_effect,
     water_reflection = data.raw["roboport"]["roboport"].water_reflection,
-    circuit_wire_connection_point = circuit_connector_definitions["nullius-hangar-4"].points,
-    circuit_connector_sprites = circuit_connector_definitions["nullius-hangar-4"].sprites,
+    circuit_connector = circuit_connector_definitions["nullius-hangar-4"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = {type = "virtual", name = "signal-X"},
     default_total_logistic_output_signal = {type = "virtual", name = "signal-Y"},
@@ -866,8 +862,7 @@ data:extend({
     base_patch = data.raw["roboport"]["bob-logistic-zone-expander"].base_patch,
     door_animation_up = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_up,
     door_animation_down = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_down,
-	circuit_wire_connection_point = circuit_connector_definitions["nullius-relay"].points,
-    circuit_connector_sprites = circuit_connector_definitions["nullius-relay"].sprites,
+    circuit_connector = circuit_connector_definitions["nullius-relay"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     base = {
@@ -932,8 +927,7 @@ data:extend({
     base_patch = data.raw["roboport"]["bob-logistic-zone-expander"].base_patch,
     door_animation_up = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_up,
     door_animation_down = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_down,
-	circuit_wire_connection_point = circuit_connector_definitions["nullius-relay"].points,
-    circuit_connector_sprites = circuit_connector_definitions["nullius-relay"].sprites,
+    circuit_connector = circuit_connector_definitions["nullius-relay"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     base = {
@@ -998,8 +992,7 @@ data:extend({
     base_patch = data.raw["roboport"]["bob-logistic-zone-expander"].base_patch,
     door_animation_up = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_up,
     door_animation_down = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_down,
-	circuit_wire_connection_point = circuit_connector_definitions["nullius-relay"].points,
-    circuit_connector_sprites = circuit_connector_definitions["nullius-relay"].sprites,
+	  circuit_connector = circuit_connector_definitions["nullius-relay"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     base = {
@@ -1063,8 +1056,7 @@ data:extend({
     base_patch = data.raw["roboport"]["bob-logistic-zone-expander"].base_patch,
     door_animation_up = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_up,
     door_animation_down = data.raw["roboport"]["bob-logistic-zone-expander"].door_animation_down,
-	circuit_wire_connection_point = circuit_connector_definitions["nullius-relay"].points,
-    circuit_connector_sprites = circuit_connector_definitions["nullius-relay"].sprites,
+	  circuit_connector = circuit_connector_definitions["nullius-relay"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     base = {
