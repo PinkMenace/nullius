@@ -1640,7 +1640,7 @@ data:extend({
 	    {"equipment-description.nullius-night-vision-1"},
 		{"entity-description.nullius-kilojoule", tostring(150)}},
     icon = "__base__/graphics/equipment/night-vision-equipment.png",
-    icon_size = 64,
+    icon_size = 128,
     place_as_equipment_result = "nullius-night-vision-1",
     subgroup = "equipment",
     order = "nullius-cb",

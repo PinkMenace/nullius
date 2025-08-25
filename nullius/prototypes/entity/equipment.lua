@@ -942,8 +942,8 @@ data:extend({
     order = "eb",
     sprite = {
       filename = "__base__/graphics/equipment/night-vision-equipment.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
       scale = 1.2
     },
