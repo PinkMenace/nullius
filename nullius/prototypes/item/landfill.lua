@@ -1021,7 +1021,6 @@ data:extend({
       result = "nullius-land-fill-sand"
     },
     variants = {
-      empty_transitions = true,
       material_background = {
         picture = ENTITYPATH .. "landfill/sand.png",
         count = 8
@@ -1060,11 +1059,15 @@ data:extend({
           y = 160
         }
       },
-      inner_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
-      o_transition_mask = { count = 1, line_length = 2, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
-      outer_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
-      side_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
-      u_transition_mask = { count = 1, line_length = 1, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+      transition = {
+        mask_layout = {
+          inner_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
+          o_transition = { count = 1, line_length = 2, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
+          outer_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
+          side = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
+          u_transition = { count = 1, line_length = 1, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+        }
+      },
     }
   },
   {
@@ -1085,7 +1088,6 @@ data:extend({
       result = "nullius-land-fill-bauxite"
     },
     variants = {
-      empty_transitions = true,
       material_background = {
         picture = ENTITYPATH .. "landfill/dirt.png",
         count = 8
@@ -1124,11 +1126,16 @@ data:extend({
           y = 160
         }
       },
-      inner_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
-      o_transition_mask = { count = 1, line_length = 2, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
-      outer_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
-      side_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
-      u_transition_mask = { count = 1, line_length = 1, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+      transition = {
+        mask_layout = {
+          inner_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
+          o_transition = { count = 1, line_length = 2, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
+          outer_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
+          side = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
+          u_transition = { count = 1, line_length = 1, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+        }
+      }
+      
     }
   },
   {
@@ -1149,7 +1156,6 @@ data:extend({
       result = "nullius-land-fill-iron"
     },
     variants = {
-      empty_transitions = true,
       material_background = {
         picture = ENTITYPATH .. "landfill/iron.png",
         count = 8
@@ -1188,11 +1194,15 @@ data:extend({
           y = 160
         }
       },
-      inner_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
-      o_transition_mask = { count = 1, line_length = 2, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
-      outer_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
-      side_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
-      u_transition_mask = { count = 1, line_length = 1, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+      transition = {
+        mask_layout = {
+          inner_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
+          o_transition = { count = 1, line_length = 2, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
+          outer_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
+          side = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
+          u_transition = { count = 1, line_length = 1, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+        }
+      }
     }
   },
   {
@@ -1213,7 +1223,6 @@ data:extend({
       result = "nullius-land-fill-limestone"
     },
     variants = {
-      empty_transitions = true,
       material_background = {
         picture = ENTITYPATH .. "landfill/limestone.png",
         count = 8
@@ -1252,11 +1261,15 @@ data:extend({
           y = 160
         }
       },
-      inner_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
-      o_transition_mask = { count = 1, line_length = 2, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
-      outer_corner_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
-      side_mask = { count = 8, line_length = 8, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
-      u_transition_mask = { count = 1, line_length = 1, picture = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+      transition = {
+        mask_layout = {
+          inner_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 0 },
+          o_transition = { count = 1, line_length = 2, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 1152 },
+          outer_corner = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 288 },
+          side = { count = 8, line_length = 8, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 576 },
+          u_transition = { count = 1, line_length = 1, spritesheet = "__base__/graphics/terrain/masks/transition-3.png", x = 864 }
+        }
+      }
     }
   },
 
