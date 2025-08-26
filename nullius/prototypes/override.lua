@@ -89,9 +89,11 @@ data.raw.item["small-lamp"].order = "nullius-bb"
 data.raw.item["small-lamp"].place_result = "nullius-lamp-1"
 data.raw["lamp"]["small-lamp"].placeable_by = {item = "small-lamp", count = 1}
 data.raw["lamp"]["small-lamp"].minable.mining_time = 0.3
+data.raw.item["small-lamp"].icon = nil
 data.raw.item["small-lamp"].icons =
   {{icon = ENTICONPATH .. "lamp1.png", icon_size = 64}}
 label_icon("small-lamp", 1, "yellow")
+data.raw["lamp"]["small-lamp"].icon = nil
 data.raw["lamp"]["small-lamp"].icons = data.raw.item["small-lamp"].icons
 
 data.raw.item["stone-wall"].stack_size = 200
@@ -224,15 +226,15 @@ data.raw.tile["mineral-brown-sand-2"].layer = 17
 data.raw.tile["mineral-beige-sand-1"].layer = 22
 data.raw.tile["mineral-tan-dirt-6"].layer = 24
 
-for _,variant in pairs(data.raw.tile["water-mud"].variants) do
-  if (variant.picture ~= nil) then
-    variant.tint = {0.75, 1, 0.75, 1}
-  else
-    for _,subvariant in pairs(variant) do
-      subvariant.tint = {0.75, 1, 0.75, 1}
-	end
-  end
-end
+-- for _,variant in pairs(data.raw.tile["water-mud"].variants) do -- todo: this is useless ??
+--   if (variant.picture ~= nil) then
+--     variant.tint = {0.75, 1, 0.75, 1}
+--   else
+--     for _,subvariant in pairs(variant) do
+--       subvariant.tint = {0.75, 1, 0.75, 1}
+-- 	end
+--   end
+-- end
 
 data.raw.tile["grass-1"].map_color={r=54, g=57, b=12}
 data.raw.tile["grass-2"].map_color={r=68, g=65, b=14}

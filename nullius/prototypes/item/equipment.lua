@@ -3539,7 +3539,9 @@ data:extend({
     subgroup = "space",
     order = "nullius-d",
     stack_size = 1,
-    rocket_launch_product = {"nullius-box-astronomy-pack", 100}
+    rocket_launch_products = {
+      {type = "item", name = "nullius-box-astronomy-pack", amount = 100}
+    }
   },
   {
     type = "recipe",

@@ -17,8 +17,8 @@ data.raw.resource["uranium-ore"].minable.fluid_amount = nil
 data.raw.resource["uranium-ore"].minable.required_fluid = nil
 data.raw.item["rocket-fuel"].icon = "__base__/graphics/icons/rocket-fuel.png"
 data.raw.item["rocket-fuel"].icon_size = 64
-data.raw.item["copper-cable"].icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png"
-data.raw.item["copper-cable"].icon_size = 64
+data.raw.item["copper-cable"].icon = nil --"__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png"
+-- data.raw.item["copper-cable"].icon_size = 64
 data.raw.item["copper-cable"].icons = {{
   icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png",
   icon_size = 64
@@ -28,10 +28,12 @@ data.raw.item["copper-cable"].order = "nullius-d"
 
 
 data.raw.item["storage-tank"].stack_size = 50
+data.raw.item["storage-tank"].icon = nil
 data.raw.item["storage-tank"].icons = {{
   icon = "__base__/graphics/icons/storage-tank.png",
   icon_size = 64, 
 }}
+data.raw["storage-tank"]["storage-tank"].icon = nil
 data.raw["storage-tank"]["storage-tank"].icons = data.raw.item["storage-tank"].icons
 data.raw["storage-tank"]["storage-tank"].fluid_box.volume = 15000
 data.raw["storage-tank"]["storage-tank"].pictures =
@@ -39,6 +41,7 @@ data.raw["storage-tank"]["storage-tank"].pictures =
 data.raw["storage-tank"]["storage-tank"].pictures.picture.sheets[1].tint = {0.9, 0.8, 0.6}
 
 
+data.raw.item["radar"].icon = nil
 if mods["reskins-bobs"] then
 data.raw.item["radar"].icons = {
   {
@@ -66,6 +69,7 @@ data.raw.item["radar"].icons = {{
 data.raw["radar"]["radar"].pictures.layers[1].tint = {0.9, 0.9, 0.65}
 end
 data.raw.item["radar"].stack_size = 20
+data.raw["radar"]["radar"].icon = nil
 data.raw["radar"]["radar"].icons = data.raw.item["radar"].icons
 data.raw["radar"]["radar"].fast_replaceable_group = "sensor-node"
 data.raw["radar"]["radar"].next_upgrade = "nullius-sensor-node-2"
@@ -81,6 +85,7 @@ data.raw.item["big-electric-pole"].localised_name = {"entity-name.nullius-pylon-
 data.raw.item["big-electric-pole"].subgroup = "electric-pole"
 data.raw.item["big-electric-pole"].order = "nullius-cb"
 data.raw.item["big-electric-pole"].stack_size = 50
+data.raw.item["big-electric-pole"].icon = nil
 data.raw.item["big-electric-pole"].icons = {{
   icon = ENTICONPATH .. "large-pole-1.png",
   icon_size = 64
@@ -88,6 +93,7 @@ data.raw.item["big-electric-pole"].icons = {{
 label_icon("big-electric-pole", 1, "yellow")
 data.raw["electric-pole"]["big-electric-pole"].localised_name =
     data.raw.item["big-electric-pole"].localised_name
+data.raw["electric-pole"]["big-electric-pole"].icon = nil
 data.raw["electric-pole"]["big-electric-pole"].icons =
     data.raw.item["big-electric-pole"].icons
 data.raw["electric-pole"]["big-electric-pole"].maximum_wire_distance = 32.5
@@ -102,12 +108,14 @@ data.raw.item["small-electric-pole"].localised_name = {"entity-name.nullius-powe
 data.raw.item["small-electric-pole"].subgroup = "electric-pole"
 data.raw.item["small-electric-pole"].order = "nullius-bb"
 data.raw.item["small-electric-pole"].stack_size = 100
+data.raw.item["small-electric-pole"].icon = nil
 data.raw.item["small-electric-pole"].icons = {{
   icon = ENTICONPATH .. "pole1.png", icon_size = 64
 }}
 label_icon("small-electric-pole", 1, "yellow")
 data.raw["electric-pole"]["small-electric-pole"].localised_name =
     data.raw.item["small-electric-pole"].localised_name
+data.raw["electric-pole"]["small-electric-pole"].icon = nil
 data.raw["electric-pole"]["small-electric-pole"].icons =
     data.raw.item["small-electric-pole"].icons
 data.raw["electric-pole"]["small-electric-pole"].maximum_wire_distance = 8.5
@@ -119,12 +127,14 @@ data.raw.item["medium-electric-pole"].localised_name = {"entity-name.nullius-pow
 data.raw.item["medium-electric-pole"].subgroup = "electric-pole"
 data.raw.item["medium-electric-pole"].order = "nullius-bc"
 data.raw.item["medium-electric-pole"].stack_size = 100
+data.raw.item["medium-electric-pole"].icon = nil
 data.raw.item["medium-electric-pole"].icons = {{
   icon = ENTICONPATH .. "pole2.png", icon_size = 64
 }}
 label_icon("medium-electric-pole", 2, "red")
 data.raw["electric-pole"]["medium-electric-pole"].localised_name =
     data.raw.item["medium-electric-pole"].localised_name
+data.raw["electric-pole"]["medium-electric-pole"].icon = nil
 data.raw["electric-pole"]["medium-electric-pole"].icons =
     data.raw.item["medium-electric-pole"].icons
 data.raw["electric-pole"]["medium-electric-pole"].maximum_wire_distance = 11.5
@@ -136,12 +146,14 @@ data.raw.item["substation"].localised_name = {"entity-name.nullius-substation-1"
 data.raw.item["substation"].subgroup = "electric-pole"
 data.raw.item["substation"].order = "nullius-db"
 data.raw.item["substation"].stack_size = 50
+data.raw.item["substation"].icon = nil
 data.raw.item["substation"].icons = {{
   icon = ENTICONPATH .. "substation1.png", icon_size = 64
 }}
 label_icon("substation", 1, "yellow")
 data.raw["electric-pole"]["substation"].localised_name =
     data.raw.item["substation"].localised_name
+data.raw["electric-pole"]["substation"].icon = nil
 data.raw["electric-pole"]["substation"].icons = data.raw.item["substation"].icons
 data.raw["electric-pole"]["substation"].collision_box = {{-0.65, -0.65}, {0.65, 0.65}}
 data.raw["electric-pole"]["substation"].maximum_wire_distance = 24.5
@@ -149,80 +161,94 @@ data.raw["electric-pole"]["substation"].supply_area_distance = 12
 data.raw["electric-pole"]["substation"].fast_replaceable_group = "pylon"
 data.raw["electric-pole"]["substation"].next_upgrade = "nullius-substation-2"
 
-
+data.raw.item["wooden-chest"].icon = nil
 data.raw.item["wooden-chest"].icons =
     {{ icon = ENTICONPATH .. "chest1.png", icon_size = 64 }}
 data.raw.item["wooden-chest"].subgroup = "storage"
 data.raw.item["wooden-chest"].order = "nullius-bb"
 data.raw.item["wooden-chest"].stack_size = 100
 
+data.raw.item["iron-chest"].icon = nil
 data.raw.item["iron-chest"].icons =
     {{ icon = ENTICONPATH .. "chest2.png", icon_size = 64 }}
 data.raw.item["iron-chest"].subgroup = "storage"
 data.raw.item["iron-chest"].order = "nullius-bc"
 data.raw.item["iron-chest"].stack_size = 100
 
+data.raw.item["steel-chest"].icon = nil
 data.raw.item["steel-chest"].icons =
     {{ icon = ENTICONPATH .. "chest3s.png", icon_size = 64 }}
 data.raw.item["steel-chest"].subgroup = "storage"
 data.raw.item["steel-chest"].order = "nullius-bd"
 data.raw.item["steel-chest"].stack_size = 100
 	
+data.raw["container"]["wooden-chest"].icon = nil
 data.raw["container"]["wooden-chest"].icons = data.raw.item["wooden-chest"].icons
 data.raw["container"]["wooden-chest"].inventory_size = 10
+data.raw["container"]["iron-chest"].icon = nil
 data.raw["container"]["iron-chest"].icons = data.raw.item["iron-chest"].icons
 data.raw["container"]["iron-chest"].inventory_size = 20
+data.raw["container"]["steel-chest"].icon = nil
 data.raw["container"]["steel-chest"].icons = data.raw.item["steel-chest"].icons
 data.raw["container"]["steel-chest"].inventory_size = 30
 data.raw["container"]["wooden-chest"].next_upgrade = "iron-chest"
 data.raw["container"]["iron-chest"].next_upgrade = "steel-chest"
 data.raw["container"]["steel-chest"].next_upgrade = nil
 
-
+data.raw.item["storage-chest"].icon = nil
 data.raw.item["storage-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-storage1.png", icon_size = 64 }}
 data.raw.item["storage-chest"].subgroup = "small-logistic-storage"
 data.raw.item["storage-chest"].order = "nullius-bc"
 data.raw.item["storage-chest"].stack_size = 100
 
+data.raw.item["passive-provider-chest"].icon = nil
 data.raw.item["passive-provider-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-supply1.png", icon_size = 64 }}
 data.raw.item["passive-provider-chest"].subgroup = "small-logistic-storage"
 data.raw.item["passive-provider-chest"].order = "nullius-cc"
 data.raw.item["passive-provider-chest"].stack_size = 100
 
+data.raw.item["requester-chest"].icon = nil
 data.raw.item["requester-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-demand1.png", icon_size = 64 }}
 data.raw.item["requester-chest"].subgroup = "small-logistic-storage"
 data.raw.item["requester-chest"].order = "nullius-dc"
 data.raw.item["requester-chest"].stack_size = 100
 
+data.raw.item["buffer-chest"].icon = nil
 data.raw.item["buffer-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-buffer1.png", icon_size = 64 }}
 data.raw.item["buffer-chest"].subgroup = "small-logistic-storage"
 data.raw.item["buffer-chest"].order = "nullius-ec"
 data.raw.item["buffer-chest"].stack_size = 100
 
+data.raw.item["active-provider-chest"].icon = nil
 data.raw.item["active-provider-chest"].icons =
     {{ icon = ENTICONPATH .. "chest-dispatch1.png", icon_size = 64 }}
 data.raw.item["active-provider-chest"].subgroup = "small-logistic-storage"
 data.raw.item["active-provider-chest"].order = "nullius-fc"
 data.raw.item["active-provider-chest"].stack_size = 100
 
+data.raw["logistic-container"]["storage-chest"].icon = nil
 data.raw["logistic-container"]["storage-chest"].icons =
     data.raw.item["storage-chest"].icons
 data.raw["logistic-container"]["storage-chest"].inventory_size = 30
+data.raw["logistic-container"]["passive-provider-chest"].icon = nil
 data.raw["logistic-container"]["passive-provider-chest"].icons =
     data.raw.item["passive-provider-chest"].icons
 data.raw["logistic-container"]["passive-provider-chest"].inventory_size = 30
+data.raw["logistic-container"]["requester-chest"].icon = nil
 data.raw["logistic-container"]["requester-chest"].icons =
     data.raw.item["requester-chest"].icons
 data.raw["logistic-container"]["requester-chest"].inventory_size = 30
 data.raw["logistic-container"]["requester-chest"].max_logistic_slots = 10
+data.raw["logistic-container"]["buffer-chest"].icon = nil
 data.raw["logistic-container"]["buffer-chest"].icons =
     data.raw.item["buffer-chest"].icons
 data.raw["logistic-container"]["buffer-chest"].inventory_size = 30
 data.raw["logistic-container"]["buffer-chest"].max_logistic_slots = 6
+data.raw["logistic-container"]["active-provider-chest"].icon = nil
 data.raw["logistic-container"]["active-provider-chest"].icons =
     data.raw.item["active-provider-chest"].icons
 data.raw["logistic-container"]["active-provider-chest"].inventory_size = 30

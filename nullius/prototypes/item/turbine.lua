@@ -9,16 +9,16 @@ local function create_turbine_recipe(fluidname, exhaust, energy, counto, countc,
   end
   local open = {
     type = "recipe",
-	name = "nullius-burn-open-" .. fluidname,
-	localised_name = {"recipe-name.nullius-turbine-burn-open", {"fluid-name."..fullfluid}},
-	icons = localIcons,
-	icon = fluid.icon,
-    icon_size = fluid.icon_size,
-	crafting_machine_tint = { primary = fluid.flow_color },
+	  name = "nullius-burn-open-" .. fluidname,
+	  localised_name = {"recipe-name.nullius-turbine-burn-open", {"fluid-name."..fullfluid}},
+	  icons = localIcons,
+	  -- icon = fluid.icon,
+    -- icon_size = fluid.icon_size,
+	  crafting_machine_tint = { primary = fluid.flow_color },
     category = "turbine-open",
     subgroup = "turbine-open",
     hide_from_player_crafting = true,
-	hide_from_stats = true,
+	  hide_from_stats = true,
     energy_required = 1.8,
     ingredients = {{type="fluid", name=fullfluid, amount=counto}},
     results = {{type="fluid", name="nullius-energy", amount=energycounto}}
@@ -62,26 +62,24 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-open-1",
-	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(1)},
-	localised_description = {"entity-description.nullius-turbine-info",
+	  localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(1)},
+	  localised_description = {"entity-description.nullius-turbine-info",
 	    tostring(1), tostring(90), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-open"}}},
     icons = {
-	  {
-	    icon = "__base__/graphics/icons/steam-turbine.png",
-        icon_size = 64,
-        
+	    {
+	      icon = "__base__/graphics/icons/steam-turbine.png",
+        icon_size = 64,    
         tint = {0.7, 0.7, 0.6, 1}
       },
-	  {
+	    {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        
-		scale = 0.32,
+        scale = 0.32,
         shift = {1, -8},
         tint = {0.75, 0.75, 0.75, 0.8}
       }
-	},
+	  },
     subgroup = "energy-backup",
     order = "nullius-fbb",
     place_result = "nullius-turbine-open-standard-1",
@@ -90,26 +88,24 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-open-2",
-	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(2)},
-	localised_description = {"entity-description.nullius-turbine-info",
+	  localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(2)},
+	  localised_description = {"entity-description.nullius-turbine-info",
 	    tostring(2.5), tostring(95), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-open"}}},
     icons = {
-	  {
-	    icon = "__base__/graphics/icons/steam-turbine.png",
+	    {
+	      icon = "__base__/graphics/icons/steam-turbine.png",
         icon_size = 64,
-        
         tint = {0.85, 0.85, 0.75, 1}
       },
-	  {
+	    {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        
-		scale = 0.32,
+		    scale = 0.32,
         shift = {1, -8},
         tint = {0.8, 0.8, 0.8, 0.82}
       }
-	},
+	  },
     subgroup = "energy-backup",
     order = "nullius-fbc",
     place_result = "nullius-turbine-open-standard-2",
@@ -118,26 +114,24 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-open-3",
-	localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(3)},
-	localised_description = {"entity-description.nullius-turbine-info",
+	  localised_name = {"", {"entity-name.nullius-turbine-open"}, " ", tostring(3)},
+	  localised_description = {"entity-description.nullius-turbine-info",
 	    tostring(6), tostring(100), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-open"}}},
     icons = {
-	  {
-	    icon = "__base__/graphics/icons/steam-turbine.png",
+	    {
+	      icon = "__base__/graphics/icons/steam-turbine.png",
         icon_size = 64,
-        
         tint = {1, 1, 0.9, 1}
       },
-	  {
+	    {
         icon = "__base__/graphics/icons/fluid/steam.png",
         icon_size = 64,
-        
-		scale = 0.32,
+		    scale = 0.32,
         shift = {1, -8},
         tint = {0.85, 0.85, 0.85, 0.85}
       }
-	},
+	  },
     subgroup = "energy-backup",
     order = "nullius-fbd",
     place_result = "nullius-turbine-open-standard-3",
@@ -146,14 +140,13 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-closed-1",
-	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(1)},
-	localised_description = {"entity-description.nullius-turbine-info",
+	  localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(1)},
+	  localised_description = {"entity-description.nullius-turbine-info",
 	    tostring(1), tostring(85), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-closed"}}},
     icons = {{
-	  icon = "__base__/graphics/icons/steam-turbine.png",
+	    icon = "__base__/graphics/icons/steam-turbine.png",
       icon_size = 64,
-      
       tint = {0.6, 0.6, 0.7, 1}
     }},
     subgroup = "energy-backup",
@@ -164,14 +157,13 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-closed-2",
-	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(2)},
-	localised_description = {"entity-description.nullius-turbine-info",
+	  localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(2)},
+	  localised_description = {"entity-description.nullius-turbine-info",
 	    tostring(2.5), tostring(90), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-closed"}}},
     icons = {{
-	  icon = "__base__/graphics/icons/steam-turbine.png",
+	    icon = "__base__/graphics/icons/steam-turbine.png",
       icon_size = 64,
-      
       tint = {0.75, 0.75, 0.85, 1}
     }},
     subgroup = "energy-backup",
@@ -182,14 +174,13 @@ data:extend({
   {
     type = "item",
     name = "nullius-turbine-closed-3",
-	localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(3)},
-	localised_description = {"entity-description.nullius-turbine-info",
+	  localised_name = {"", {"entity-name.nullius-turbine-closed"}, " ", tostring(3)},
+	  localised_description = {"entity-description.nullius-turbine-info",
 	    tostring(6), tostring(95), {"entity-description.nullius-turbine-item",
 		    {"entity-description.nullius-turbine-closed"}}},
     icons = {{
-	  icon = "__base__/graphics/icons/steam-turbine.png",
+	    icon = "__base__/graphics/icons/steam-turbine.png",
       icon_size = 64,
-      
       tint = {0.9, 0.9, 1, 1}
     }},
     subgroup = "energy-backup",

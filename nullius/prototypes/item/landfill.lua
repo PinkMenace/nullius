@@ -1291,6 +1291,7 @@ data:extend({
         count = 8,
         scale = 0.5
       },
+      
       inner_corner = {
         picture = ENTITYPATH.."concrete/white-concrete-inner-corner.png",
         count = 16,
@@ -1303,7 +1304,7 @@ data:extend({
       },
       side = {
         picture = ENTITYPATH.."concrete/white-concrete-side.png",
-		count = 16,
+		    count = 16,
         scale = 0.5
       },
       u_transition = {
@@ -1318,10 +1319,10 @@ data:extend({
       },
       main = data.raw.tile["refined-concrete"].variants.main,
       inner_corner_mask = data.raw.tile["refined-concrete"].variants.inner_corner_mask,
-	  outer_corner_mask = data.raw.tile["refined-concrete"].variants.outer_corner_mask,
-	  side_mask = data.raw.tile["refined-concrete"].variants.side_mask,
-	  u_transition_mask = data.raw.tile["refined-concrete"].variants.u_transition_mask,
-	  o_transition_mask = data.raw.tile["refined-concrete"].variants.o_transition_mask
+	    outer_corner_mask = data.raw.tile["refined-concrete"].variants.outer_corner_mask,
+	    side_mask = data.raw.tile["refined-concrete"].variants.side_mask,
+	    u_transition_mask = data.raw.tile["refined-concrete"].variants.u_transition_mask,
+	    o_transition_mask = data.raw.tile["refined-concrete"].variants.o_transition_mask
     }
   }
 })
