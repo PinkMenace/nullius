@@ -31,6 +31,8 @@ data:extend({
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
     rotation_speed = 0.008,
     water_reflection = data.raw.radar["radar"].water_reflection,
+    circuit_connector = circuit_connector_definitions["radar"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     pictures = {
       layers = {
@@ -88,6 +90,8 @@ data:extend({
     radius_minimap_visualisation_color = { r = 0.059, g = 0.092, b = 0.235, a = 0.275 },
     rotation_speed = 0.01,
     water_reflection = data.raw.radar["radar"].water_reflection,
+    circuit_connector = circuit_connector_definitions["radar"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     pictures = {
       layers = {
@@ -791,6 +795,8 @@ data:extend({
     impact_category = data.raw["electric-turret"]["laser-turret"].impact_category,
     water_reflection = data.raw["electric-turret"]["laser-turret"].water_reflection,
     call_for_help_radius = 40,
+    circuit_connector = circuit_connector_definitions["laser-turret"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     attack_parameters = {
       type = "beam",
