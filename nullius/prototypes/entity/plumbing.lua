@@ -6,7 +6,7 @@ local BASEENTITY = "__base__/graphics/entity/"
 require("pipe_graphics")
 collision_mask_util = require("collision-mask-util")
 
-local op = data.raw["offshore-pump"]["offshore-pump"]
+local op = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"])
 local si1 = {
   type = "assembling-machine",
   name = "nullius-seawater-intake-1",
@@ -14,6 +14,22 @@ local si1 = {
   minable = {mining_time = 0.5, result = "nullius-seawater-intake-1"},
   flags = {"placeable-neutral", "player-creation"},
   collision_mask = { layers = {object = true, ground_tile = true}},
+  --collision_mask = {layers={object=true, train=true, is_object=true, is_lower_object=true}}, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
+    tile_buildability_rules =
+    {
+      {area = {{-0.6, 1.7}, {0.6, 2.3}}, required_tiles = {layers={ground_tile=true}}, colliding_tiles = {layers={water_tile=true}}, remove_on_collision = true},
+      --{area = {{-0.6, -1.3}, {0.6, 0.4}}, required_tiles = {layers={water_tile=true}}, colliding_tiles = {layers={}}},
+    },
+    
+  placeable_position_visualization =
+    {
+      filename = "__core__/graphics/cursor-boxes-32x32.png",
+      priority = "extra-high-no-scale",
+      width = 64,
+      height = 64,
+      scale = 0.5,
+      x = 3*64
+    },
   crafting_categories = {"seawater-pumping"},
   crafting_speed = 1,
   fixed_recipe = "nullius-seawater",
@@ -144,7 +160,7 @@ data:extend({
 	    type = "void"
 	  },
 	  energy_usage = "60kW",
-	  fluid_source_offset = data.raw["offshore-pump"]["offshore-pump"].fluid_source_offset,
+	  fluid_source_offset = op.fluid_source_offset,
     collision_mask = { layers = {object = true, train = true}},
     minable = {mining_time = 0.5, result = "nullius-seawater-intake-1"},
 	  placeable_by = {item = "nullius-legacy-seawater-intake-1", count = 1},
@@ -164,9 +180,9 @@ data:extend({
     },
     tile_width = 1,
     tile_height = 1,
-    impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
-    working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
-    placeable_position_visualization = data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization,
+    impact_category = op.impact_category,
+    working_sound = op.working_sound,
+    placeable_position_visualization = op.placeable_position_visualization,
     circuit_connector = circuit_connector_definitions["offshore-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     resistances = {
@@ -484,7 +500,7 @@ data:extend({
 	    type = "void"
 	  },
 	  energy_usage = "60kW",
-	  fluid_source_offset = data.raw["offshore-pump"]["offshore-pump"].fluid_source_offset,
+	  fluid_source_offset = op.fluid_source_offset,
     collision_mask = { layers = {object = true, train = true}},
     minable = {mining_time = 0.8, result = "nullius-seawater-intake-2"},
 	  placeable_by = {item = "nullius-legacy-seawater-intake-2", count = 1},
@@ -504,13 +520,13 @@ data:extend({
     },
     tile_width = 1,
     tile_height = 1,
-    graphics_set = data.raw["offshore-pump"]["offshore-pump"].graphics_set,
-    impact_category = data.raw["offshore-pump"]["offshore-pump"].impact_category,
-    working_sound = data.raw["offshore-pump"]["offshore-pump"].working_sound,
-    placeable_position_visualization = data.raw["offshore-pump"]["offshore-pump"].placeable_position_visualization,
+    graphics_set = op.graphics_set,
+    impact_category = op.impact_category,
+    working_sound = op.working_sound,
+    placeable_position_visualization = op.placeable_position_visualization,
     circuit_connector = circuit_connector_definitions["offshore-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    water_reflection = data.raw["offshore-pump"]["offshore-pump"].water_reflection,
+    water_reflection = op.water_reflection,
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
