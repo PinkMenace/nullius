@@ -1269,7 +1269,8 @@ data:extend({
     collision_mask = { layers = {ground_tile = true}},
     walking_speed_modifier = 1.6,
     vehicle_friction_modifier = 0.5,
-    layer = 66,
+    layer = 40,
+    layer_group = "ground-artificial",
     map_color={r=0.85, g=0.85, b=0.85},
     needs_correction = false,
 
@@ -1283,46 +1284,47 @@ data:extend({
 	  scorch_mark_color = data.raw.tile["refined-concrete"].scorch_mark_color,
 	  absorptions_per_second = data.raw.tile["refined-concrete"].absorptions_per_second,
 	  trigger_effect = data.raw.tile["refined-concrete"].trigger_effect,
+	  driving_sound = data.raw.tile["refined-concrete"].driving_sound,
 	  
     variants = {
-      empty_transitions = true,
       material_background = {
-	    picture = ENTITYPATH.."concrete/white-concrete.png",
+	      picture = ENTITYPATH.."concrete/white-concrete.png",
         count = 8,
         scale = 0.5
       },
       
-      inner_corner = {
-        picture = ENTITYPATH.."concrete/white-concrete-inner-corner.png",
-        count = 16,
-        scale = 0.5
+      transition = {
+        overlay_layout = {
+          inner_corner = {
+            spritesheet = ENTITYPATH.."concrete/white-concrete-inner-corner.png",
+            count = 16,
+            scale = 0.5
+          },
+          outer_corner = {
+            spritesheet = ENTITYPATH.."concrete/white-concrete-outer-corner.png",
+            count = 8,
+            scale = 0.5
+          },
+          side = {
+            spritesheet = ENTITYPATH.."concrete/white-concrete-side.png",
+		        count = 16,
+            scale = 0.5
+          },
+          u_transition = {
+            spritesheet = ENTITYPATH.."concrete/white-concrete-u.png",
+            count = 8,
+            scale = 0.5
+          },
+          o_transition = {
+            spritesheet = ENTITYPATH.."concrete/white-concrete-o.png",
+            count = 4,
+            scale = 0.5
+          },
+        },
+        mask_layout = data.raw.tile["refined-concrete"].variants.transition.mask_layout
       },
-      outer_corner = {
-        picture = ENTITYPATH.."concrete/white-concrete-outer-corner.png",
-        count = 8,
-        scale = 0.5
-      },
-      side = {
-        picture = ENTITYPATH.."concrete/white-concrete-side.png",
-		    count = 16,
-        scale = 0.5
-      },
-      u_transition = {
-        picture = ENTITYPATH.."concrete/white-concrete-u.png",
-        count = 8,
-        scale = 0.5
-      },
-      o_transition = {
-        picture = ENTITYPATH.."concrete/white-concrete-o.png",
-        count = 4,
-        scale = 0.5
-      },
+      
       main = data.raw.tile["refined-concrete"].variants.main,
-      inner_corner_mask = data.raw.tile["refined-concrete"].variants.inner_corner_mask,
-	    outer_corner_mask = data.raw.tile["refined-concrete"].variants.outer_corner_mask,
-	    side_mask = data.raw.tile["refined-concrete"].variants.side_mask,
-	    u_transition_mask = data.raw.tile["refined-concrete"].variants.u_transition_mask,
-	    o_transition_mask = data.raw.tile["refined-concrete"].variants.o_transition_mask
     }
   }
 })
