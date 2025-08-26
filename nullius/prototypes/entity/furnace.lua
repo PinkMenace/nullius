@@ -2,6 +2,48 @@ local ICONPATH = "__nullius__/graphics/icons/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 local BASEENTITY = "__base__/graphics/entity/"
 
+local function scale_wire_position(wire_pos, scale)
+  for _, wire_type in pairs(wire_pos) do
+    if wire_type.x then
+      wire_type.x = wire_type.x*scale
+      wire_type.y = wire_type.y*scale
+    else
+      wire_type[1] = wire_type[1]*scale
+      wire_type[2] = wire_type[2]*scale
+    end
+  end
+end
+
+local function offset_sprite(sprite, scale, only_shift)
+  if sprite == nil then return end
+  if sprite.shift ~= nil then
+    sprite.shift = {sprite.shift[1]*scale,sprite.shift[2]*scale}
+  else
+    --sprite.shift = {2,2} -- what value do we set if no shift ?
+  end
+  if sprite.scale and not only_shift then
+    sprite.scale = sprite.scale * scale
+  end
+end
+
+function scale_connector_points(original, scale, only_shift)
+  local result = table.deepcopy(original)
+  for _, connector in pairs(result) do
+    scale_wire_position(connector.points.wire, scale)
+    scale_wire_position(connector.points.shadow, scale)
+    offset_sprite(connector.sprites.connector_main,scale, only_shift)
+    offset_sprite(connector.sprites.connector_shadow,scale, only_shift)
+    offset_sprite(connector.sprites.wire_pins,scale, only_shift)
+    offset_sprite(connector.sprites.wire_pins_shadow,scale, only_shift)
+    offset_sprite(connector.sprites.led_blue_off,scale, only_shift)
+    offset_sprite(connector.sprites.led_red,scale, only_shift)
+    offset_sprite(connector.sprites.led_green,scale, only_shift)
+    offset_sprite(connector.sprites.led_blue,scale, only_shift)
+    offset_sprite(connector.sprites.led_light,scale, only_shift)
+  end
+  return result
+end
+
 local floatpipepics = {
     north = {
       filename = "__angelsrefininggraphics__/graphics/entity/ore-floatation-cell/pipe-north.png",
@@ -67,6 +109,8 @@ data:extend({
       emissions_per_minute = {pollution = 1},
       drain = "6kW"
     },
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["stone-furnace"],
     energy_usage = "69kW",
     graphics_set = data.raw["furnace"]["stone-furnace"].graphics_set,
     fast_replaceable_group = "small-furnace",
@@ -101,6 +145,8 @@ data:extend({
       emissions_per_minute = {pollution = 1},
       drain = "12kW"
     },
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["steel-furnace"],
     energy_usage = "138kW",
     module_slots = 1,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
@@ -140,6 +186,8 @@ data:extend({
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    circuit_connector = scale_connector_points(circuit_connector_definitions["electric-furnace"],0.6666),
 
     graphics_set = {
       animation = {
@@ -292,6 +340,9 @@ data:extend({
     energy_usage = "270kW",
     module_slots = 1,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    circuit_connector = scale_connector_points(circuit_connector_definitions["steel-furnace"],1.5),
     
     graphics_set = {
       animation = {
@@ -448,6 +499,9 @@ data:extend({
     impact_category = "metal",
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electric-furnace"],
 
     graphics_set = {
       animation = {
@@ -526,6 +580,9 @@ data:extend({
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     module_slots = 2,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    scale_connector_points(circuit_connector_definitions["electric-furnace"],1.2),
 
     graphics_set = {
       animation = {
@@ -636,6 +693,20 @@ data:extend({
   }
 })
 
+circuit_connector_definitions["nullius-foundry"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-41.125,  35.125), shadow_offset = util.by_pixel(-41.125,  35.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-41.125,  35.125), shadow_offset = util.by_pixel(-41.125,  35.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-41.125,  35.125), shadow_offset = util.by_pixel(-41.125,  35.125), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-41.125,  35.125), shadow_offset = util.by_pixel(-41.125,  35.125), show_shadow = true },
+})
+
+circuit_connector_definitions["nullius-crusher"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+  { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
+})
+
 data:extend({
   {
     type = "assembling-machine",
@@ -670,6 +741,8 @@ data:extend({
     graphics_set = data.raw["furnace"]["electric-furnace"].graphics_set,
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     impact_category = "metal",
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["electric-furnace"],
   },
 
   {
@@ -704,6 +777,9 @@ data:extend({
     working_sound = data.raw["furnace"]["electric-furnace"].working_sound,
     module_slots = 3,
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    
+    circuit_wire_max_distance = furnace_circuit_wire_max_distance,
+    circuit_connector = scale_connector_points(circuit_connector_definitions["electric-furnace"],1.2),
 
     graphics_set = {
       animation = {
@@ -756,6 +832,8 @@ data:extend({
       drain = "10kW"
     },
     energy_usage = "150kW",
+    circuit_connector = circuit_connector_definitions["nullius-foundry"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = {
       animation = {
@@ -849,6 +927,8 @@ data:extend({
       drain = "25kW"
     },
     energy_usage = "265kW",
+    circuit_connector = circuit_connector_definitions["nullius-foundry"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = {
       animation = {
@@ -926,6 +1006,8 @@ data:extend({
       drain = "50kW"
     },
     energy_usage = "525kW",
+    circuit_connector = circuit_connector_definitions["nullius-foundry"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = {
       animation = {
@@ -1009,6 +1091,9 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "physical", decrease = 50, percent = 80 }
     },
+    circuit_connector = circuit_connector_definitions["nullius-crusher"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    
     fluid_boxes = {
       {
         production_type = "input",
@@ -1092,6 +1177,8 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-crusher.ogg", volume = 0.6 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
+    circuit_connector = circuit_connector_definitions["nullius-crusher"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1169,6 +1256,8 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-crusher.ogg", volume = 0.6 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
+    circuit_connector = circuit_connector_definitions["nullius-crusher"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = {
       {
         production_type = "input",
@@ -1218,6 +1307,12 @@ data:extend({
 data.raw["assembling-machine"]["nullius-crusher-1"].graphics_set.animation.layers[1].tint = {0.6, 0.6, 0.6}
 data.raw["assembling-machine"]["nullius-crusher-2"].graphics_set.animation.layers[1].tint = {0.6, 0.65, 0.85}
 
+circuit_connector_definitions["nullius-flotation-cell"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+  { variation = 27, main_offset = util.by_pixel(-25.375,  10.875), shadow_offset = util.by_pixel(-25.375,  10.875), show_shadow = true },
+})
 
 data:extend({
   {
@@ -1247,6 +1342,8 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "acid", decrease = 50, percent = 80 }
     },
+    circuit_connector = circuit_connector_definitions["nullius-flotation-cell"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fluid_boxes = {
@@ -1457,6 +1554,8 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "acid", decrease = 50, percent = 80 }
     },
+    circuit_connector = circuit_connector_definitions["nullius-flotation-cell"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fluid_boxes = {
@@ -1666,6 +1765,8 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "acid", decrease = 50, percent = 80 }
     },
+    circuit_connector = circuit_connector_definitions["nullius-flotation-cell"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     module_slots = 3,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
     fluid_boxes = {

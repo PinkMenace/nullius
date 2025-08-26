@@ -5,48 +5,6 @@ local ENTITYPATH = "__nullius__/graphics/entity/"
 
 local BASEENTITY = "__base__/graphics/entity/"
 
-local function scale_wire_position(wire_pos, scale)
-  for _, wire_type in pairs(wire_pos) do
-    if wire_type.x then
-      wire_type.x = wire_type.x*scale
-      wire_type.y = wire_type.y*scale
-    else
-      wire_type[1] = wire_type[1]*scale
-      wire_type[2] = wire_type[2]*scale
-    end
-  end
-end
-
-local function offset_sprite(sprite, scale, only_shift)
-  if sprite == nil then return end
-  if sprite.shift ~= nil then
-    sprite.shift = {sprite.shift[1]*scale,sprite.shift[2]*scale}
-  else
-    --sprite.shift = {2,2} -- what value do we set if no shift ?
-  end
-  if sprite.scale and not only_shift then
-    sprite.scale = sprite.scale * scale
-  end
-end
-
-local function scale_connector_points(original, scale, only_shift)
-  local result = table.deepcopy(original)
-  for _, connector in pairs(result) do
-    scale_wire_position(connector.points.wire, scale)
-    scale_wire_position(connector.points.shadow, scale)
-    offset_sprite(connector.sprites.connector_main,scale, only_shift)
-    offset_sprite(connector.sprites.connector_shadow,scale, only_shift)
-    offset_sprite(connector.sprites.wire_pins,scale, only_shift)
-    offset_sprite(connector.sprites.wire_pins_shadow,scale, only_shift)
-    offset_sprite(connector.sprites.led_blue_off,scale, only_shift)
-    offset_sprite(connector.sprites.led_red,scale, only_shift)
-    offset_sprite(connector.sprites.led_green,scale, only_shift)
-    offset_sprite(connector.sprites.led_blue,scale, only_shift)
-    offset_sprite(connector.sprites.led_light,scale, only_shift)
-  end
-  return result
-end
-
 data:extend({
   {
     type = "assembling-machine",
