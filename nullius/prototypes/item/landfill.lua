@@ -1018,7 +1018,7 @@ data:extend({
     absorptions_per_second = {pollution = 0},
     minable = {
       mining_time = 1,
-      name = "nullius-land-fill-sand"
+      result = "nullius-land-fill-sand"
     },
     variants = {
       empty_transitions = true,
@@ -1082,7 +1082,7 @@ data:extend({
     absorptions_per_second = {pollution = 0},
     minable = {
       mining_time = 1,
-      name = "nullius-land-fill-bauxite"
+      result = "nullius-land-fill-bauxite"
     },
     variants = {
       empty_transitions = true,
@@ -1146,7 +1146,7 @@ data:extend({
     absorptions_per_second = {pollution = 0},
     minable = {
       mining_time = 1,
-      name = "nullius-land-fill-iron"
+      result = "nullius-land-fill-iron"
     },
     variants = {
       empty_transitions = true,
@@ -1210,7 +1210,7 @@ data:extend({
     absorptions_per_second = {pollution = 0},
     minable = {
       mining_time = 1,
-      name = "nullius-land-fill-limestone"
+      result = "nullius-land-fill-limestone"
     },
     variants = {
       empty_transitions = true,
