@@ -50,6 +50,8 @@ local si1 = {
   next_upgrade = "nullius-seawater-intake-2",
   working_sound = op.working_sound,
   impact_category = op.impact_category,
+  circuit_connector = circuit_connector_definitions["offshore-pump"],
+  circuit_wire_max_distance = default_circuit_wire_max_distance,
   graphics_set = {}
 }
 
@@ -558,6 +560,9 @@ data:extend({
     allowed_effects = {"speed", "consumption", "pollution"},
     fast_replaceable_group = "well",
     next_upgrade = "nullius-well-2",
+    
+    circuit_connector = circuit_connector_definitions["pumpjack"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     graphics_set = {
       animation = {
@@ -809,7 +814,10 @@ data:extend({
     module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
     fast_replaceable_group = "well",
-
+    
+    circuit_connector = circuit_connector_definitions["pumpjack"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    
     graphics_set = {
       animation = {
         north = {
@@ -1044,6 +1052,13 @@ lw2.energy_source = {type="electric", usage_priority="secondary-input", emission
 lw2.energy_usage = "175kW"
 lw2.crafting_speed = 5
 
+circuit_connector_definitions["nullius-air-filter"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  4, main_offset = util.by_pixel(-4.375,  -20), shadow_offset = util.by_pixel(-4.375,  -20), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  -20), shadow_offset = util.by_pixel(-4.375,  -20), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  -20), shadow_offset = util.by_pixel(-4.375,  -20), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-4.375,  -20), shadow_offset = util.by_pixel(-4.375,  62.625), show_shadow = true },
+})
+
 data:extend({
   lw1,
   lw2,
@@ -1071,6 +1086,8 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "air-filter",
     next_upgrade = "nullius-air-filter-2",
+    circuit_connector = circuit_connector_definitions["nullius-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1146,11 +1163,11 @@ data:extend({
     crafting_speed = 3,
     fixed_recipe = "nullius-air-filtration",
     energy_source = {
-	  type = "electric",
-	  usage_priority = "secondary-input",
-	  emissions = 0.03,
-	  drain = "25kW"
-	},
+	    type = "electric",
+	    usage_priority = "secondary-input",
+	    emissions = 0.03,
+	    drain = "25kW"
+	  },
     energy_usage = "375kW",
     ingredient_count = 1,
     minable = {mining_time = 0.8, result = "nullius-air-filter-2"},
@@ -1161,6 +1178,8 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "air-filter",
     next_upgrade = "nullius-air-filter-3",
+    circuit_connector = circuit_connector_definitions["nullius-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         north = {
@@ -1233,11 +1252,11 @@ data:extend({
     crafting_speed = 8,
     fixed_recipe = "nullius-air-filtration",
     energy_source = {
-	  type = "electric",
-	  usage_priority = "secondary-input",
-	  emissions = 0.1,
-	  drain = "100kW"
-	},
+	    type = "electric",
+	    usage_priority = "secondary-input",
+	    emissions = 0.1,
+	    drain = "100kW"
+	  },
     energy_usage = "1100kW",
     ingredient_count = 1,
     minable = {mining_time = 1, result = "nullius-air-filter-3"},
@@ -1247,6 +1266,8 @@ data:extend({
     collision_box = {{-1.1, -1.1}, {1.1, 1.1}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     fast_replaceable_group = "air-filter",
+    circuit_connector = circuit_connector_definitions["nullius-air-filter"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     graphics_set = {
       animation = {
         filename = "__angelspetrochemgraphics__/graphics/entity/air-filter/air-filter.png",
@@ -1648,8 +1669,17 @@ data:extend({
         shift = {0, 0}
       }
     }
-  },
+  }
+})
 
+circuit_connector_definitions["nullius-small-tank"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+  { variation = 25, main_offset = util.by_pixel(-25.125, -23), shadow_offset = util.by_pixel(-25.125, -23), show_shadow = true },
+})
+
+data:extend({
   {
     type = "storage-tank",
     name = "nullius-medium-tank-2",
@@ -1982,7 +2012,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
-    circuit_connector = circuit_connector_definitions["storage-tank"],
+    circuit_connector = circuit_connector_definitions["nullius-small-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance
   }
 })
@@ -2019,7 +2049,7 @@ data:extend({
     flow_length_in_ticks = 360,
     impact_category = "metal",
     working_sound = data.raw["storage-tank"]["storage-tank"].working_sound,
-    circuit_connector = circuit_connector_definitions["storage-tank"],
+    circuit_connector = circuit_connector_definitions["nullius-small-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance
   }
 })
@@ -2201,6 +2231,12 @@ data.raw["storage-tank"]["nullius-large-tank-1"].pictures.
 data.raw["storage-tank"]["nullius-large-tank-2"].pictures.
     picture.sheets[1].tint = {0.85, 0.85, 0.95}
 
+circuit_connector_definitions["nullius-barreling-pump"] = circuit_connector_definitions.create_vector(universal_connector_template, {
+  { variation =  6, main_offset = util.by_pixel( 0.125,  32.125), shadow_offset = util.by_pixel( 0.125,  32.125), show_shadow = true },
+  { variation =  0, main_offset = util.by_pixel( 41.25, -5.5), shadow_offset = util.by_pixel( 41.25, -5.5), show_shadow = true },
+  { variation =  10, main_offset = util.by_pixel( 0.5, -46.875), shadow_offset = util.by_pixel( 0.5, -46.875), show_shadow = true },
+  { variation =  4, main_offset = util.by_pixel(-38.75, -6.875), shadow_offset = util.by_pixel(-38.75, -6.875), show_shadow = true },
+})
 
 data:extend({
   {
@@ -2454,6 +2490,8 @@ data:extend({
         apparent_volume = 2.5
     },
     impact_category = "metal",
+    circuit_connector = circuit_connector_definitions["nullius-barreling-pump"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     fluid_boxes = {
       {
         production_type = "input",
@@ -2555,6 +2593,8 @@ data:extend({
       { type = "explosion", decrease = 20, percent = 50 }
     },
     ingredient_count = 2,
+    circuit_connector = circuit_connector_definitions["nullius-barreling-pump"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     working_sound = {
       sound = {filename = "__base__/sound/oil-refinery.ogg"},
       idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
