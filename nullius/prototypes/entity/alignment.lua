@@ -155,7 +155,7 @@ data:extend({
     layer = 234,
     map_color={r=8, g=8, b=32},
     walking_speed_modifier = 0.2,
-    absorption_per_second = 0,
+    absorptions_per_second = {pollution = 0},
     variants = {
       main = {
 	    {

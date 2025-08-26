@@ -27,8 +27,7 @@ data:extend({
     alert_when_damaged = false,
     allow_copy_paste = false,
     inventory_size = 20,
-    enable_inventory_bar = false,
-	not_inventory_moveable = true,
+    inventory_type = "normal",
     minable = {
       mining_time = 4,
       results = {
@@ -49,7 +48,7 @@ data:extend({
       shift = util.by_pixel(-50, 61),
       dice_x = 4,
       dice_y = 3,
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5,
     },
@@ -92,7 +91,7 @@ data:extend({
     max_health = 200,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	  "20x[item=small-lamp] 8x[item=nullius-solar-panel-1]"},
     minable = {
       mining_time = 1,
@@ -101,7 +100,7 @@ data:extend({
         {type="item", name="nullius-solar-panel-1", amount=8}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-0.9, -0.1}, {1.4, 1.2}},
     selection_box = {{-0.9, -0.1}, {1.4, 1.2}},
     dying_explosion = "big-explosion",
@@ -112,7 +111,7 @@ data:extend({
       width = 348,
       height = 136,
       shift = util.by_pixel(-27, 31),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5,
     },
@@ -149,7 +148,7 @@ data:extend({
     max_health = 200,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "1x[item=nullius-small-furnace-2] 2x[item=nullius-chimney-1] "
 	    .. "2x[item=nullius-outfall-1] 2x[item=storage-tank]"},
     minable = {
@@ -161,7 +160,7 @@ data:extend({
         {type="item", name="storage-tank", amount=2}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-1.6, -1.6}, {1.3, 1.3}},
     selection_box = {{-1.6, -1.6}, {1.3, 1.3}},
     dying_explosion = "big-explosion",
@@ -172,7 +171,7 @@ data:extend({
       width = 450,
       height = 296,
       shift = util.by_pixel(-52, 8),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5,
     },
@@ -209,7 +208,7 @@ data:extend({
     max_health = 100,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "3x[item=nullius-air-filter-1] 3x[item=nullius-broken-air-filter]"},
     minable = {
       mining_time = 1,
@@ -218,7 +217,7 @@ data:extend({
         {type="item", name="nullius-broken-air-filter", amount=3}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-1.2, -1.0}, {1.2, 0.7}},
     selection_box = {{-1.2, -1.0}, {1.2, 0.7}},
     dying_explosion = "big-explosion",
@@ -229,7 +228,7 @@ data:extend({
       width = 352,
       height = 206,
       shift = util.by_pixel(-41, 13),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5,
     },
@@ -266,7 +265,7 @@ data:extend({
     max_health = 100,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "2x[item=nullius-seawater-intake-1] 4x[item=storage-tank]"},
     minable = {
       mining_time = 1,
@@ -275,7 +274,7 @@ data:extend({
         {type="item", name="storage-tank", amount=4}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-1.1, -0.6}, {1.0, 1.0}},
     selection_box = {{-1.1, -0.6}, {1.0, 1.0}},
     dying_explosion = "big-explosion",
@@ -286,7 +285,7 @@ data:extend({
       width = 396,
       height = 214,
       shift = util.by_pixel(-56, -1),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -324,7 +323,7 @@ data:extend({
     max_health = 100,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "18x[item=nullius-broken-solar-panel] 10x[item=nullius-aluminum-ingot]"},
     minable = {
       mining_time = 1,
@@ -333,7 +332,7 @@ data:extend({
         {type="item", name="nullius-aluminum-ingot", amount=10}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-0.8, -1.4}, {0.7, 1.4}},
     selection_box = {{-0.8, -1.4}, {0.7, 1.4}},
     dying_explosion = "big-explosion",
@@ -344,7 +343,7 @@ data:extend({
       width = 350,
       height = 284,
       shift = util.by_pixel(-44, 10),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -382,7 +381,7 @@ data:extend({
     max_health = 50,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "40x[item=nullius-pipe-2] 24x[item=nullius-underground-pipe-2]"
 		.. "3x[item=nullius-priority-valve] 3x[item=nullius-pump-1]"},
     minable = {
@@ -394,7 +393,7 @@ data:extend({
         {type="item", name="nullius-pump-1", amount=3}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-0.7, -0.8}, {1.2, 0.6}},
     selection_box = {{-0.7, -0.8}, {1.2, 0.6}},
     dying_explosion = "medium-explosion",
@@ -405,7 +404,7 @@ data:extend({
       width = 274,
       height = 172,
       shift = util.by_pixel(-8, 3),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -443,13 +442,13 @@ data:extend({
     max_health = 50,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "20x[item=nullius-aluminum-ingot]"},
     minable = {
       mining_time = 0.5,
       results = { {type="item", name="nullius-aluminum-ingot", amount=20} }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-0.9, -0.8}, {1.1, 0.6}},
     selection_box = {{-0.9, -0.8}, {1.1, 0.6}},
     dying_explosion = "medium-explosion",
@@ -460,7 +459,7 @@ data:extend({
       width = 256,
       height = 150,
       shift = util.by_pixel(-12, -2),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -497,7 +496,7 @@ data:extend({
     max_health = 100,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "1x[item=nullius-lab-1] 20x[item=nullius-red-wire] 2x[item=nullius-broken-sensor-node]"},
     minable = {
       mining_time = 1,
@@ -507,7 +506,7 @@ data:extend({
         {type="item", name="nullius-broken-sensor-node", amount=2}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-2.2, -1.2}, {2.2, 1.2}},
     selection_box = {{-2.5, -1.5}, {2.5, 1.5}},
     dying_explosion = "medium-explosion",
@@ -518,7 +517,7 @@ data:extend({
       width = 700,
       height = 344,
       shift = util.by_pixel(-49, 11),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -555,7 +554,7 @@ data:extend({
     max_health = 50,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "30x[item=small-electric-pole] 10x[item=big-electric-pole]" ..
 		"30x[item=nullius-broken-pylon] 5x[item=programmable-speaker]"},
     minable = {
@@ -567,7 +566,7 @@ data:extend({
 		{type="item", name="programmable-speaker", amount=5}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-1.5, -0.9}, {0.9, 0.9}},
     selection_box = {{-1.5, -0.9}, {0.9, 0.9}},
     dying_explosion = "medium-explosion",
@@ -578,7 +577,7 @@ data:extend({
       width = 384,
       height = 360,
       shift = util.by_pixel(-28, -38),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -617,13 +616,12 @@ data:extend({
     alert_when_damaged = false,
     allow_copy_paste = false,
     inventory_size = 10,
-    enable_inventory_bar = false,
-	not_inventory_moveable = true,
+    inventory_type = "normal",
     minable = {
       mining_time = 0.5,
       results = { {type="item", name="nullius-large-chest-1", amount=1} }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     dying_explosion = "medium-explosion",
@@ -634,7 +632,7 @@ data:extend({
       width = 220,
       height = 148,
       shift = util.by_pixel(-6, 12),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -674,13 +672,12 @@ data:extend({
     alert_when_damaged = false,
     allow_copy_paste = false,
     inventory_size = 10,
-    enable_inventory_bar = false,
-	not_inventory_moveable = true,
+    inventory_type = "normal",
     minable = {
       mining_time = 0.5,
       results = { {type="item", name="nullius-large-chest-1", amount=1} }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     dying_explosion = "medium-explosion",
@@ -691,7 +688,7 @@ data:extend({
       width = 218,
       height = 186,
       shift = util.by_pixel(-10, 5),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -729,7 +726,7 @@ data:extend({
     max_health = 100,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "3x[item=nullius-small-miner-1] 12x[item=nullius-broken-grid-battery]"},
     minable = {
       mining_time = 0.5,
@@ -738,7 +735,7 @@ data:extend({
 		{type="item", name="nullius-broken-grid-battery", amount=12}
 	  }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-1.2, -0.7}, {1.2, 0.7}},
     selection_box = {{-1.5, -1}, {1.5, 1}},
     dying_explosion = "medium-explosion",
@@ -749,7 +746,7 @@ data:extend({
       width = 446,
       height = 234,
       shift = util.by_pixel(-31, 12),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
@@ -786,7 +783,7 @@ data:extend({
     max_health = 100,
     alert_when_damaged = false,
     allow_copy_paste = false,
-	localised_description = {"entity-description.nullius-minable",
+	  localised_description = {"entity-description.nullius-minable",
 	    "1x[item=nullius-medium-assembler-1] 3x[item=nullius-broken-assembler] "
 		.. "6x[item=nullius-grid-battery-1]"},
     minable = {
@@ -797,7 +794,7 @@ data:extend({
         {type="item", name="nullius-grid-battery-1", amount=6}
       }
     },
-	placeable_by = {item = "nullius-probe", count = 1},
+	  placeable_by = {item = "nullius-probe", count = 1},
     collision_box = {{-0.7, -1.2}, {0.7, 1.2}},
     selection_box = {{-1, -1.5}, {1, 1.5}},
     dying_explosion = "medium-explosion",
@@ -808,7 +805,7 @@ data:extend({
       width = 290,
       height = 238,
       shift = util.by_pixel(-8, -10),
-      frame_count = 1,
+      --frame_count = 1,
       line_length = 1,
       scale = 0.5
     },
