@@ -2448,5 +2448,16 @@ if mods["Mini_Trains"] then
   data.raw.item["nullius-small-fluid-wagon-3"].place_result = "nullius-small-fluid-wagon-3"
 end
 
+if mods["cybersyn"] then
+  data.raw.recipe["cybersyn-combinator"].ingredients = {
+    {type = "item", name = "arithmetic-combinator", amount = 2 },
+		{type = "item", name = "copper-cable", amount = 10 },
+  }
+end
 
-
+if mods["cybersyn-combinator"] then
+  data.raw.recipe["cybersyn-constant-combinator"].ingredients = {
+    {type = "item", name = "constant-combinator", amount = 1 },
+		{type = "item", name = "decider-combinator", amount = 1 },
+  }
+end
