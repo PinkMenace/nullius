@@ -11,6 +11,7 @@ Date: 2025
     - Added wire connexions to assemblers, boxer and nanofab
     - Added display panels and selector combinator
     - Added setting to hide the voiding recipe icon from chimneys and outfalls
+    - Added circuit connections to most buildings
   Changes:
     - Reworked the inserters: Removed filter inserters, now base inserters have filters except tier 1, their recipes have been adapted
         Same thing with aai loaders

@@ -2337,6 +2337,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
+    circuit_connector = circuit_connector_definitions["storage-tank"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     picture = {
       layers = {
         {
@@ -2427,6 +2429,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
+    circuit_connector = circuit_connector_definitions["storage-tank"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     picture = {
       layers = {
         {
@@ -2517,6 +2521,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
+    circuit_connector = circuit_connector_definitions["storage-tank"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
     picture = {
       layers = {
         {
@@ -3380,6 +3386,13 @@ stirling3h.layers[1].tint = nil
 stirling3v.layers[1].tint = nil
 end
 
+circuit_connector_definitions["nullius-solar-collector"] = circuit_connector_definitions.create_single
+(
+  universal_connector_template,
+  { variation = 19, main_offset = util.by_pixel(75, 35), shadow_offset = util.by_pixel(75, 30), show_shadow = true }
+)
+
+
 data:extend({
   stirling2h,
   stirling2v,
@@ -3440,7 +3453,9 @@ data:extend({
     open_sound = data.raw.reactor["nuclear-reactor"].open_sound,
     close_sound = data.raw.reactor["nuclear-reactor"].close_sound,
     working_sound = data.raw.reactor["nuclear-reactor"].working_sound,
-    meltdown_action = data.raw.reactor["nuclear-reactor"].meltdown_action
+    meltdown_action = data.raw.reactor["nuclear-reactor"].meltdown_action,
+    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["nuclear-reactor"],
   },
 
   {
@@ -3458,6 +3473,8 @@ data:extend({
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
     neighbour_collision_increase = 0.1,
+    circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
+    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
       { type = "fire", decrease = 25, percent = 60 },
       { type = "impact", decrease = 50, percent = 80 },
@@ -3536,6 +3553,8 @@ data:extend({
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
     neighbour_collision_increase = 0.1,
+    circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
+    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
       { type = "fire", decrease = 25, percent = 60 },
       { type = "impact", decrease = 50, percent = 80 },
@@ -3613,6 +3632,8 @@ data:extend({
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
     neighbour_collision_increase = 0.1,
+    circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
+    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
       { type = "fire", decrease = 25, percent = 60 },
       { type = "impact", decrease = 50, percent = 80 },
@@ -3688,9 +3709,11 @@ data:extend({
     max_health = 200,
     resistances = data.raw["assembling-machine"]["nullius-combustion-chamber-1"].resistances,
     fast_replaceable_group = "heat-exchanger",
-	next_upgrade = "nullius-heat-exchanger-2",
+	  next_upgrade = "nullius-heat-exchanger-2",
     collision_box = {{-1.29, -0.79}, {1.29, 0.79}},
     selection_box = {{-1.5, -1}, {1.5, 1}},
+    circuit_connector = circuit_connector_definitions["nullius-combustion-chamber"],
+    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     fluid_boxes = {
       {
         volume = 500,
