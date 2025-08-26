@@ -264,8 +264,8 @@ data:extend({
     vector_to_place_result = {-0.5, -1.3},
     fast_replaceable_group = "small-miner",
     next_upgrade = "nullius-small-miner-2",
-
-    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
+    
+    circuit_connector = circuit_connector_definitions["burner-mining-drill"],
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },
 
@@ -427,7 +427,7 @@ data:extend({
       }
     },
 
-    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
+    circuit_connector = scale_connector_points(circuit_connector_definitions["burner-mining-drill"],1.5),
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },
 
@@ -470,7 +470,7 @@ data:extend({
     },
     module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
+    circuit_connector = scale_connector_points(circuit_connector_definitions["electric-mining-drill"],0.6666),
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     graphics_set = {
@@ -923,7 +923,7 @@ data:extend({
     radius_visualisation_picture = data.raw["mining-drill"]["nullius-small-miner-2"].radius_visualisation_picture,
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
+    circuit_connector = scale_connector_points(circuit_connector_definitions["electric-mining-drill"],0.6666),
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     graphics_set = {
@@ -1512,7 +1512,7 @@ data:extend({
     },
     module_slots = 1,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
+    circuit_connector = scale_connector_points(circuit_connector_definitions["electric-mining-drill"],1.2),
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     graphics_set = {
@@ -2150,7 +2150,7 @@ data:extend({
     radius_visualisation_picture = data.raw["mining-drill"]["nullius-large-miner-1"].radius_visualisation_picture,
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
+    circuit_connector = scale_connector_points(circuit_connector_definitions["electric-mining-drill"],1.2),
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     graphics_set = {
