@@ -343,8 +343,7 @@ data:extend({
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {-1, 2}, direction = defines.direction.south }}
       }
-    },
-    pipe_covers = pipecoverspictures(),
+    }
   }
 })
 
@@ -634,8 +633,7 @@ data:extend({
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {-1, 2}, direction = defines.direction.south }}
       },
-    },
-    pipe_covers = pipecoverspictures(),
+    }
   },
 
   {
@@ -922,8 +920,7 @@ data:extend({
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {-1, 2}, direction = defines.direction.south }}
       },
-    },
-    pipe_covers = pipecoverspictures(),
+    }
   }
 })
 
@@ -949,7 +946,6 @@ data:extend({
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     
-    scale_entity_info_icon = true,
     crafting_categories = {"distillation"},
     crafting_speed = 1,
     energy_source = {
@@ -1068,7 +1064,6 @@ data:extend({
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     
-    scale_entity_info_icon = true,
     crafting_categories = {"distillation"},
     crafting_speed = 2,
     energy_source = {
@@ -1164,7 +1159,6 @@ data:extend({
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     
-    scale_entity_info_icon = true,
     crafting_categories = {"distillation"},
     crafting_speed = 4,
     energy_source = {
@@ -1319,9 +1313,9 @@ data:extend({
     },
 	impact_category = "metal",
 	working_sound = {
-      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.15 },
-      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.4 },
-      audible_distance_modifier = 0.75
+      sound = { filename = "__angelspetrochemgraphics__/sound/electrolyser.ogg", volume = 0.15, audible_distance_modifier = 0.75 },
+      idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.4, audible_distance_modifier = 0.75 },
+      
     },
     fluid_boxes = {
       {
@@ -1348,8 +1342,7 @@ data:extend({
         volume = 500,
         pipe_connections = {{ flow_direction ="output", position = {1.5, 1.5}, direction = defines.direction.south }}
       }
-    },
-    pipe_covers = pipecoverspictures()
+    }
   }
 })
 

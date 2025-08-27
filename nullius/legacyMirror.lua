@@ -826,7 +826,9 @@ data:extend{
 	  placeable_by = {item = "nullius-combustion-chamber-2", count = 1},
     crafting_categories = { "combustion" },
     crafting_speed = 2.5,
-    base_productivity = 0.02,
+    effect_receiver = {
+      base_effect = {productivity = 0.02}
+    },
     max_health = 300,
     corpse = "boiler-remnants",
     impact_category = "metal",
@@ -884,7 +886,9 @@ data:extend{
 	  placeable_by = {item = "nullius-combustion-chamber-3", count = 1},
     crafting_categories = { "combustion" },
     crafting_speed = 6,
-    base_productivity = 0.04,
+    effect_receiver = {
+      base_effect = {productivity = 0.04}
+    },
     max_health = 400,
     corpse = "boiler-remnants",
     impact_category = "metal",

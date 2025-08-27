@@ -476,13 +476,12 @@ data:extend({
     energy_source = { type = "void" },
     working_sound = {
       sound = { filename = "__base__/sound/boiler.ogg", volume = 0.8 },
-      max_sounds_per_type = 3
+      max_sounds_per_prototype = 3
     },
     
     graphics_set = {
       animation = {
         north = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-N-idle.png",
@@ -491,6 +490,7 @@ data:extend({
                 height = 221,
                 shift = util.by_pixel(-1.25, 5.25),
                 tint = {0.77, 0.77, 0.66, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -500,12 +500,12 @@ data:extend({
                 height = 164,
                 scale = 0.5,
                 shift = util.by_pixel(20.5, 9),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         east = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-E-idle.png",
@@ -514,6 +514,7 @@ data:extend({
                 height = 301,
                 shift = util.by_pixel(-3, 1.25),
                 tint = {0.77, 0.77, 0.66, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -523,12 +524,12 @@ data:extend({
                 height = 194,
                 scale = 0.5,
                 shift = util.by_pixel(30, 9.5),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         south = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-S-idle.png",
@@ -537,6 +538,7 @@ data:extend({
                 height = 192,
                 shift = util.by_pixel(4, 13),
                 tint = {0.77, 0.77, 0.66, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -546,12 +548,12 @@ data:extend({
                 height = 131,
                 scale = 0.5,
                 shift = util.by_pixel(29.75, 15.75),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         west = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-W-idle.png",
@@ -560,6 +562,7 @@ data:extend({
                 height = 273,
                 shift = util.by_pixel(1.5, 7.75),
                 tint = {0.77, 0.77, 0.66, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -569,6 +572,7 @@ data:extend({
                 height = 218,
                 scale = 0.5,
                 shift = util.by_pixel(19.5, 6.5),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
@@ -679,7 +683,9 @@ data:extend({
     minable = {mining_time = 0.9, result = "nullius-combustion-chamber-2"},
     crafting_categories = { "combustion" },
     crafting_speed = 2.5,
-    base_productivity = 0.02,
+    effect_receiver = {
+      base_effect = {productivity = 0.02}
+    },
     max_health = 300,
     corpse = "boiler-remnants",
     impact_category = "metal",
@@ -729,7 +735,6 @@ data:extend({
       working_visualisations = data.raw["assembling-machine"]["nullius-combustion-chamber-1"].graphics_set.working_visualisations,
       animation = {
         north = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-N-idle.png",
@@ -738,6 +743,7 @@ data:extend({
                 height = 221,
                 shift = util.by_pixel(-1.25, 5.25),
                 tint = {0.8, 0.8, 1, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -747,12 +753,12 @@ data:extend({
                 height = 164,
                 scale = 0.5,
                 shift = util.by_pixel(20.5, 9),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         east = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-E-idle.png",
@@ -761,6 +767,7 @@ data:extend({
                 height = 301,
                 shift = util.by_pixel(-3, 1.25),
                 tint = {0.8, 0.8, 1, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -770,12 +777,12 @@ data:extend({
                 height = 194,
                 scale = 0.5,
                 shift = util.by_pixel(30, 9.5),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         south = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-S-idle.png",
@@ -784,6 +791,7 @@ data:extend({
                 height = 192,
                 shift = util.by_pixel(4, 13),
                 tint = {0.8, 0.8, 1, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -793,12 +801,12 @@ data:extend({
                 height = 131,
                 scale = 0.5,
                 shift = util.by_pixel(29.75, 15.75),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         west = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-W-idle.png",
@@ -807,6 +815,7 @@ data:extend({
                 height = 273,
                 shift = util.by_pixel(1.5, 7.75),
                 tint = {0.8, 0.8, 1, 1},
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -816,6 +825,7 @@ data:extend({
                 height = 218,
                 scale = 0.5,
                 shift = util.by_pixel(19.5, 6.5),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
@@ -835,7 +845,9 @@ data:extend({
     minable = {mining_time = 1.2, result = "nullius-combustion-chamber-3"},
     crafting_categories = { "combustion" },
     crafting_speed = 6,
-    base_productivity = 0.04,
+    effect_receiver = {
+      base_effect = {productivity = 0.04}
+    },
     max_health = 400,
     corpse = "boiler-remnants",
     impact_category = "metal",
@@ -854,7 +866,6 @@ data:extend({
       working_visualisations = data.raw["assembling-machine"]["nullius-combustion-chamber-2"].graphics_set.working_visualisations,
       animation = {
         north = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-N-idle.png",
@@ -862,6 +873,7 @@ data:extend({
                 width = 269,
                 height = 221,
                 shift = util.by_pixel(-1.25, 5.25),
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -871,12 +883,12 @@ data:extend({
                 height = 164,
                 scale = 0.5,
                 shift = util.by_pixel(20.5, 9),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         east = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-E-idle.png",
@@ -884,6 +896,7 @@ data:extend({
                 width = 216,
                 height = 301,
                 shift = util.by_pixel(-3, 1.25),
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -893,12 +906,12 @@ data:extend({
                 height = 194,
                 scale = 0.5,
                 shift = util.by_pixel(30, 9.5),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         south = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-S-idle.png",
@@ -906,6 +919,7 @@ data:extend({
                 width = 260,
                 height = 192,
                 shift = util.by_pixel(4, 13),
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -915,12 +929,12 @@ data:extend({
                 height = 131,
                 scale = 0.5,
                 shift = util.by_pixel(29.75, 15.75),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
         },
         west = {
-          frame_count = 1,
           layers = {
             {
                 filename = BASEENTITY .. "boiler/boiler-W-idle.png",
@@ -928,6 +942,7 @@ data:extend({
                 width = 196,
                 height = 273,
                 shift = util.by_pixel(1.5, 7.75),
+                frame_count = 1,
                 scale = 0.5
             },
             {
@@ -937,6 +952,7 @@ data:extend({
                 height = 218,
                 scale = 0.5,
                 shift = util.by_pixel(19.5, 6.5),
+                frame_count = 1,
                 draw_as_shadow = true
             }
           }
@@ -3816,7 +3832,7 @@ boil.energy_source = {
 }
 boil.energy_usage = "3400kW"
 boil.graphics_set.animation = {
-  north = { frame_count = 1,
+  north = { 
     layers = {
       {
         filename = ENTITYPATH .. "boiler/boiler-north.png",
@@ -3824,12 +3840,13 @@ boil.graphics_set.animation = {
         width = 269,
         height = 221,
         shift = util.by_pixel(-1.25, 5.25),
+        frame_count = 1,
         scale = 0.5
       },
       data.raw["assembling-machine"]["nullius-combustion-chamber-1"].graphics_set.animation.north.layers[2]
     }
   },
-  east = { frame_count = 1,
+  east = { 
     layers = {
       {
         filename = ENTITYPATH .. "boiler/boiler-east.png",
@@ -3837,12 +3854,13 @@ boil.graphics_set.animation = {
         width = 216,
         height = 301,
         shift = util.by_pixel(-3, 1.25),
+        frame_count = 1,
         scale = 0.5
       },
       data.raw["assembling-machine"]["nullius-combustion-chamber-1"].graphics_set.animation.east.layers[2]
     }
   },
-  south = { frame_count = 1,
+  south = { 
     layers = {
       {
         filename = ENTITYPATH .. "boiler/boiler-south.png",
@@ -3850,12 +3868,13 @@ boil.graphics_set.animation = {
         width = 260,
         height = 192,
         shift = util.by_pixel(4, 13),
+        frame_count = 1,
         scale = 0.5
       },
       data.raw["assembling-machine"]["nullius-combustion-chamber-1"].graphics_set.animation.south.layers[2]
     }
   },
-  west = { frame_count = 1,
+  west = { 
     layers = {
       {
         filename = ENTITYPATH .. "boiler/boiler-west.png",
@@ -3863,6 +3882,7 @@ boil.graphics_set.animation = {
         width = 196,
         height = 273,
         shift = util.by_pixel(1.5, 7.75),
+        frame_count = 1,
         scale = 0.5
       },
       data.raw["assembling-machine"]["nullius-combustion-chamber-1"].graphics_set.animation.west.layers[2]
