@@ -51,34 +51,36 @@ function scale_image(img, scale, offs)
       return
     end
     lookup[img] = true
-    for _, field in pairs(img) do
-      scale_subtable(field, scale, offs)
+    for fieldName, field in pairs(img) do
+      if fieldName ~= "stripes" then
+        scale_subtable(field, scale, offs)
+      end
     end
     if (img.filename ~= nil) then
-	  img.shift = scale_shift(img.shift, scale)
+	    img.shift = scale_shift(img.shift, scale)
       if (img.scale ~= nil) then
         img.scale = img.scale * scale
       else
         img.scale = scale
       end
-	  if (offs ~= nil) then
-	    if (img.shift ~= nil) then
-		  if (img.shift.x ~= nil) then
-		    img.shift.x = img.shift.x + offs.x
-		    img.shift.y = img.shift.y + offs.y
-		  else
-		    img.shift[1] = img.shift[1] + offs.x
-			img.shift[2] = img.shift[2] + offs.y
-		  end
-		else
-		  img.shift = offs
-		end
-	  end
+	    if (offs ~= nil) then
+	      if (img.shift ~= nil) then
+		      if (img.shift.x ~= nil) then
+		        img.shift.x = img.shift.x + offs.x
+		        img.shift.y = img.shift.y + offs.y
+		      else
+		        img.shift[1] = img.shift[1] + offs.x
+			      img.shift[2] = img.shift[2] + offs.y
+		      end
+		    else
+		      img.shift = offs
+		    end
+	    end
     end
-	img.north_position = scale_shift(img.north_position, scale)
-	img.east_position = scale_shift(img.east_position, scale)
-	img.south_position = scale_shift(img.south_position, scale)
-	img.west_position = scale_shift(img.west_position, scale)
+	  img.north_position = scale_shift(img.north_position, scale)
+	  img.east_position = scale_shift(img.east_position, scale)
+	  img.south_position = scale_shift(img.south_position, scale)
+	  img.west_position = scale_shift(img.west_position, scale)
   end
   scale_subtable(ret, scale, offs)
   return ret

@@ -22,7 +22,6 @@ local function make_particle(inputname, inputtint)
   {
   type = "optimized-particle",
   name = inputname.."-particle",
-  flags = {"not-on-map"},
   life_time = 180,
   pictures = {
     {

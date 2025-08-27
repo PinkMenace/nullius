@@ -1419,6 +1419,7 @@ android1.order = "nullius-akb"
 local android2 = util.table.deepcopy(android1)
 android2.name = "nullius-android-2"
 android2.localised_name = {"", {"item-name.nullius-android"}, " ", tostring(2)}
+android2.icon = nil
 android2.icons = data.raw.item["nullius-android-2"].icons
 android2.order = "nullius-akc"
 android2.selection_box = {{-0.4, -1.55}, {0.4, 0.2}}
