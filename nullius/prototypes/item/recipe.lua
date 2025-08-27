@@ -1176,7 +1176,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-wall",
-    localised_name = {"item-name.nullius-wall"},
+    localised_name = {"entity-name.stone-wall"},
     enabled = false,
     category = "large-crafting",
     always_show_made_in = true,
@@ -1212,7 +1212,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-gate",
-    localised_name = {"item-name.nullius-gate"},
+    localised_name = {"entity-name.gate"},
     enabled = false,
     category = "large-crafting",
     always_show_made_in = true,
