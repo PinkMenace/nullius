@@ -112,12 +112,8 @@ circuit_connector_definitions["nullius-compressor"] = circuit_connector_definiti
   }
 )
 
-circuit_connector_definitions["nullius-chemical-furnace"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
-  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
-  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
-  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true },
-})
+circuit_connector_definitions["nullius-geothermal-reactor"] = circuit_connector_definitions.create_single(universal_connector_template, 
+  { variation =  4, main_offset = util.by_pixel(-4.75,  33), shadow_offset = util.by_pixel(-4.75,  33), show_shadow = true })
 
 data:extend({
   {
@@ -1909,7 +1905,7 @@ data:extend({
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-2",
-    circuit_connector = circuit_connector_definitions["nullius-chemical-furnace"],
+    circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
@@ -1974,7 +1970,7 @@ data:extend({
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-3",
-    circuit_connector = circuit_connector_definitions["nullius-chemical-furnace"],
+    circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
@@ -2025,7 +2021,7 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
-    circuit_connector = circuit_connector_definitions["nullius-chemical-furnace"],
+    circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = { -- TODO: integrate the graphics with the heat pipes correctly
@@ -2337,8 +2333,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
-    circuit_connector = circuit_connector_definitions["storage-tank"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["storage-tank"][1],
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     picture = {
       layers = {
         {
@@ -2429,8 +2425,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
-    circuit_connector = circuit_connector_definitions["storage-tank"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["storage-tank"][1],
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     picture = {
       layers = {
         {
@@ -2521,8 +2517,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     light = {intensity = 0.4, size = 2.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
-    circuit_connector = circuit_connector_definitions["storage-tank"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["storage-tank"][1],
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     picture = {
       layers = {
         {
@@ -2605,6 +2601,9 @@ local function thermal_tank(tier, vert)
       { position = {-1, 0}, direction = defines.direction.west }
     }
   end
+  
+  tank.circuit_connector = circuit_connector_definitions["storage-tank"][1]
+  tank.circuit_wire_max_distance = default_circuit_wire_max_distance
 
   tank.icons = {
     {
