@@ -8,13 +8,13 @@ data:extend({
     to_build = "nullius-wind-build-1",
     icon = ACHIEVEMENTPATH .. "breezy.png",
     icon_size = 128,
-    until_second = 45 * 60 -- 45 minutes
+    within = 45 * 60 * 60 -- 45 minutes
   },
   {
     type = "complete-objective-achievement",
     name = "nullius-accelerated-timeline",
     order = "ac",
-    until_second = 60 * 60 * 24 * 6, -- 6 days
+    within = 60 * 60 * 60 * 24 * 6, -- 6 days
     objective_condition = "game-finished",
     icon = "__base__/graphics/achievement/there-is-no-spoon.png",
     icon_size = 128
@@ -75,7 +75,7 @@ data.raw["research-achievement"]["tech-maniac"].hidden = true
 data.raw["research-achievement"]["tech-maniac"].order = "b"
 data.raw["complete-objective-achievement"]["smoke-me-a-kipper-i-will-be-back-for-breakfast"].hidden = true
 data.raw["complete-objective-achievement"]["smoke-me-a-kipper-i-will-be-back-for-breakfast"].order = "b"
-data.raw["complete-objective-achievement"]["smoke-me-a-kipper-i-will-be-back-for-breakfast"].until_second = 60
+data.raw["complete-objective-achievement"]["smoke-me-a-kipper-i-will-be-back-for-breakfast"].within = 60 * 60
 data.raw["complete-objective-achievement"]["smoke-me-a-kipper-i-will-be-back-for-breakfast"].allowed_without_fight = false
 data.raw["group-attack-achievement"]["it-stinks-and-they-dont-like-it"].hidden = true
 data.raw["construct-with-robots-achievement"]["automated-construction"].hidden = true

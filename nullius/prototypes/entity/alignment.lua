@@ -3,9 +3,10 @@ if (settings.startup["nullius-alignment"].value) then
 
 local turret = util.table.deepcopy(data.raw["ammo-turret"]["gun-turret"])
 turret.name = "nullius-align-conscription-turret"
+turret.icon = nil
 turret.icons = data.raw.item["nullius-align-conscription-turret"].icons
 turret.minable.result = "nullius-align-conscription-turret"
-turret.minable.max_health = 1000
+--turret.minable.max_health = 1000
 turret.resistances = {
   { type = "impact", decrease = 10, percent = 50 },
   { type = "laser", decrease = 5, percent = 25 },

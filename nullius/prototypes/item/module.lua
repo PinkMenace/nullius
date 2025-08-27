@@ -217,9 +217,7 @@ data:extend({
     tier = 0,
     order = "nullius-cb",
     stack_size = 50,
-    effect = { productivity = 0.03, speed = -0.05, consumption = 0.1 },
-    limitation = {},
-    limitation_message_key = "production-module-not-usable"
+    effect = { productivity = 0.03, speed = -0.05, consumption = 0.1 }
   },
   {
     type = "module",
@@ -231,9 +229,7 @@ data:extend({
     tier = 1,
     order = "nullius-cc",
     stack_size = 50,
-    effect = { productivity = 0.05, speed = -0.15, consumption = 0.4 },
-    limitation = {},
-    limitation_message_key = "production-module-not-usable"
+    effect = { productivity = 0.05, speed = -0.15, consumption = 0.4 }
   },
   {
     type = "module",
@@ -245,9 +241,7 @@ data:extend({
     tier = 2,
     order = "nullius-cd",
     stack_size = 50,
-    effect = { productivity = 0.07, speed = -0.25, consumption = 0.7 },
-    limitation = {},
-    limitation_message_key = "production-module-not-usable"
+    effect = { productivity = 0.07, speed = -0.25, consumption = 0.7 }
   },
   {
     type = "module",
@@ -259,9 +253,7 @@ data:extend({
     tier = 3,
     order = "nullius-ce",
     stack_size = 50,
-    effect = { productivity = 0.08, speed = -0.4, consumption = 1 },
-    limitation = {},
-    limitation_message_key = "production-module-not-usable"
+    effect = { productivity = 0.08, speed = -0.4, consumption = 1 }
   },
   {
     type = "module",
@@ -274,9 +266,7 @@ data:extend({
     tier = 1,
     order = "nullius-db",
     stack_size = 50,
-    effect = { productivity = 0.04 },
-    limitation = {},
-    limitation_message_key = "production-module-not-usable"
+    effect = { productivity = 0.04 }
   },
   {
     type = "module",
@@ -289,9 +279,7 @@ data:extend({
     tier = 2,
     order = "nullius-dc",
     stack_size = 50,
-    effect = { productivity = 0.06, consumption = 0.05 },
-    limitation = {},
-    limitation_message_key = "production-module-not-usable"
+    effect = { productivity = 0.06, consumption = 0.05 }
   },
   {
     type = "module",
@@ -304,9 +292,7 @@ data:extend({
     tier = 3,
     order = "nullius-dd",
     stack_size = 50,
-    effect = { productivity = 0.07, consumption = 0.1 },
-    limitation = {},
-    limitation_message_key = "production-module-not-usable"
+    effect = { productivity = 0.07, consumption = 0.1 }
   },
 
   {

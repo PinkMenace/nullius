@@ -1402,7 +1402,6 @@ data:extend({
         cooldown = 20,
         range = 0,
         ammo_type = {
-          category = "capsule",
           target_type = "position",
           action = {
             type = "direct",

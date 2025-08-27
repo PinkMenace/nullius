@@ -15,7 +15,7 @@ function accumulator_picture(tint, repeat_count)
         repeat_count = repeat_count,
         shift = util.by_pixel(0, -11),
         tint = tint,
-        animation_speed = 0.5,
+        --animation_speed = 0.5,
         scale = 0.75
       },
       {
@@ -2116,13 +2116,14 @@ data:extend({
     working_sound = data.raw["heat-pipe"]["heat-pipe"].working_sound,
     impact_category = data.raw["heat-pipe"]["heat-pipe"].impact_category,
     damaged_trigger_effect = data.raw["heat-pipe"]["heat-pipe"].damaged_trigger_effect,
-    min_temperature_gradient = 4,
+    
     heat_buffer = {
       max_temperature = 250,
       specific_heat = "100kJ",
       max_transfer = "30MW",
       minimum_glow_temperature = 150,
       connections = data.raw["heat-pipe"]["heat-pipe"].heat_buffer.connections,
+      min_temperature_gradient = 4,
       heat_glow = data.raw["heat-pipe"]["heat-pipe"].heat_buffer.heat_glow
     },
 
@@ -2193,13 +2194,14 @@ data:extend({
     working_sound = data.raw["heat-pipe"]["heat-pipe"].working_sound,
     impact_category = data.raw["heat-pipe"]["heat-pipe"].impact_category,
     damaged_trigger_effect = data.raw["heat-pipe"]["heat-pipe"].damaged_trigger_effect,
-    min_temperature_gradient = 2,
+    
     heat_buffer = {
       max_temperature = 500,
       specific_heat = "250kJ",
       max_transfer = "80MW",
       minimum_glow_temperature = 200,
       connections = data.raw["heat-pipe"]["heat-pipe"].heat_buffer.connections,
+      min_temperature_gradient = 2,
       heat_glow = data.raw["heat-pipe"]["heat-pipe"].heat_buffer.heat_glow
     },
 
@@ -2271,13 +2273,14 @@ data:extend({
     damaged_trigger_effect = data.raw["heat-pipe"]["heat-pipe"].damaged_trigger_effect,
     connection_sprites = data.raw["heat-pipe"]["heat-pipe"].connection_sprites,
     heat_glow_sprites = data.raw["heat-pipe"]["heat-pipe"].heat_glow_sprites,
-    min_temperature_gradient = 1,
+    
     heat_buffer = {
       max_temperature = 1500,
       specific_heat = "500kJ",
       max_transfer = "200MW",
       minimum_glow_temperature = 250,
       connections = data.raw["heat-pipe"]["heat-pipe"].heat_buffer.connections,
+      min_temperature_gradient = 1,
       heat_glow = data.raw["heat-pipe"]["heat-pipe"].heat_buffer.heat_glow
     }
   }
@@ -3268,8 +3271,8 @@ data:extend({
           scale = 0.5
       },
       {
-        type = "animation",
-        name = "nullius-stirling-horizontal-shadow",
+        --type = "animation",
+        --name = "nullius-stirling-horizontal-shadow",
           filename = BASEENTITY .. "steam-engine/steam-engine-H-shadow.png",
           width = 508,
           height = 160,
@@ -3487,7 +3490,7 @@ data:extend({
     consumption = "150W",
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
-    neighbour_collision_increase = 0.1,
+    --neighbour_collision_increase = 0.1,
     circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
     circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
@@ -3567,7 +3570,7 @@ data:extend({
     consumption = "300W",
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
-    neighbour_collision_increase = 0.1,
+    --neighbour_collision_increase = 0.1,
     circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
     circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
@@ -3646,7 +3649,7 @@ data:extend({
     consumption = "600W",
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
-    neighbour_collision_increase = 0.1,
+    --neighbour_collision_increase = 0.1,
     circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
     circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {

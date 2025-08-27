@@ -140,11 +140,10 @@ for i=1,3 do
           filename = TURBINEP .. "hd"..i.."/base.png",
           width = 600,
           height = 800,
-          frame_count = 1,
           line_length = 1,
           shift = {0.15*scale, -11*scale},
           scale = scale,
-          animation_speed = 0.2
+          --animation_speed = 0.2
       },
       working_sound = {
         sound = {

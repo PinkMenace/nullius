@@ -62,8 +62,8 @@ data:extend({
     close_sound = data.raw.locomotive["locomotive"].close_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
-    sound_minimum_speed = 0.5,
-    sound_scaling_ratio = 0.35,
+    --sound_minimum_speed = 0.5,
+    --sound_scaling_ratio = 0.35,
 
     pictures = {
       slope_angle_between_frames = data.raw.locomotive["locomotive"].pictures.slope_angle_between_frames,
@@ -165,8 +165,8 @@ data:extend({
     close_sound = data.raw.locomotive["locomotive"].close_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
-    sound_minimum_speed = 0.5,
-    sound_scaling_ratio = 0.35,
+    --sound_minimum_speed = 0.5,
+    --sound_scaling_ratio = 0.35,
 
     pictures = {
       rotated = {
@@ -241,8 +241,8 @@ data:extend({
     close_sound = data.raw.locomotive["locomotive"].close_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
-    sound_minimum_speed = 0.5,
-    sound_scaling_ratio = 0.35,
+    --sound_minimum_speed = 0.5,
+    --sound_scaling_ratio = 0.35,
 
     pictures = {
       rotated = {
@@ -310,8 +310,8 @@ data:extend({
     close_sound = data.raw.locomotive["locomotive"].close_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
-    sound_minimum_speed = 0.5,
-    sound_scaling_ratio = 0.35,
+    --sound_minimum_speed = 0.5,
+    --sound_scaling_ratio = 0.35,
 
     pictures = {
       rotated = {
@@ -379,7 +379,7 @@ data:extend({
     close_sound = data.raw["cargo-wagon"]["cargo-wagon"].close_sound,
     impact_category = data.raw["cargo-wagon"]["cargo-wagon"].impact_category,
     water_reflection = data.raw["cargo-wagon"]["cargo-wagon"].water_reflection,
-    sound_minimum_speed = 1,
+    --sound_minimum_speed = 1,
     pictures = data.raw["cargo-wagon"]["cargo-wagon"].pictures,
     horizontal_doors = data.raw["cargo-wagon"]["cargo-wagon"].horizontal_doors,
     vertical_doors = data.raw["cargo-wagon"]["cargo-wagon"].vertical_doors
@@ -430,7 +430,7 @@ data:extend({
     close_sound = data.raw["cargo-wagon"]["cargo-wagon"].close_sound,
     impact_category = data.raw["cargo-wagon"]["cargo-wagon"].impact_category,
     water_reflection = data.raw["cargo-wagon"]["cargo-wagon"].water_reflection,
-    sound_minimum_speed = 1,
+    --sound_minimum_speed = 1,
     pictures = data.raw["cargo-wagon"]["cargo-wagon"].pictures,
     horizontal_doors = data.raw["cargo-wagon"]["cargo-wagon"].horizontal_doors,
     vertical_doors = data.raw["cargo-wagon"]["cargo-wagon"].vertical_doors
@@ -481,7 +481,7 @@ data:extend({
     close_sound = data.raw["cargo-wagon"]["cargo-wagon"].close_sound,
     impact_category = data.raw["cargo-wagon"]["cargo-wagon"].impact_category,
     water_reflection = data.raw["cargo-wagon"]["cargo-wagon"].water_reflection,
-    sound_minimum_speed = 1,
+    --sound_minimum_speed = 1,
     pictures = data.raw["cargo-wagon"]["cargo-wagon"].pictures,
     horizontal_doors = data.raw["cargo-wagon"]["cargo-wagon"].horizontal_doors,
     vertical_doors = data.raw["cargo-wagon"]["cargo-wagon"].vertical_doors
@@ -529,7 +529,7 @@ data:extend({
     crash_trigger = data.raw["fluid-wagon"]["fluid-wagon"].crash_trigger,
     impact_category = data.raw["fluid-wagon"]["fluid-wagon"].impact_category,
     water_reflection = data.raw["fluid-wagon"]["fluid-wagon"].water_reflection,
-    sound_minimum_speed = 0.1,
+    --sound_minimum_speed = 0.1,
   
     pictures = {
       rotated = {
@@ -608,7 +608,7 @@ data:extend({
     crash_trigger = data.raw["fluid-wagon"]["fluid-wagon"].crash_trigger,
     impact_category = data.raw["fluid-wagon"]["fluid-wagon"].impact_category,
     water_reflection = data.raw["fluid-wagon"]["fluid-wagon"].water_reflection,
-    sound_minimum_speed = 0.1,
+    --sound_minimum_speed = 0.1,
     pictures = data.raw["fluid-wagon"]["nullius-fluid-wagon-1"].pictures
   },
 
@@ -655,7 +655,7 @@ data:extend({
     crash_trigger = data.raw["fluid-wagon"]["fluid-wagon"].crash_trigger,
     impact_category = data.raw["fluid-wagon"]["fluid-wagon"].impact_category,
     water_reflection = data.raw["fluid-wagon"]["fluid-wagon"].water_reflection,
-    sound_minimum_speed = 0.1,
+    --sound_minimum_speed = 0.1,
     pictures = data.raw["fluid-wagon"]["nullius-fluid-wagon-1"].pictures
   },
 
@@ -719,9 +719,8 @@ data:extend({
     close_sound = data.raw["artillery-wagon"]["artillery-wagon"].close_sound,
     impact_category = data.raw["artillery-wagon"]["artillery-wagon"].impact_category,
     water_reflection = data.raw["artillery-wagon"]["artillery-wagon"].water_reflection,
-    rotating_sound = { sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.2 }},
-    rotating_stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" },
-    sound_minimum_speed = 0.1,
+    rotating_sound = { sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.2}, stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" }},
+    --sound_minimum_speed = 0.1,
 
     pictures = {
       rotated = {
@@ -816,8 +815,7 @@ data:extend({
     close_sound = data.raw["artillery-wagon"]["artillery-wagon"].close_sound,
     impact_category = data.raw["artillery-wagon"]["artillery-wagon"].impact_category,
     water_reflection = data.raw["artillery-wagon"]["artillery-wagon"].water_reflection,
-    rotating_sound = { sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.2 }},
-    rotating_stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" },
-    sound_minimum_speed = 0.1
+    rotating_sound = { sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.2 },stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" }},
+    --sound_minimum_speed = 0.1
   }
 })

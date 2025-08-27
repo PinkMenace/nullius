@@ -51,7 +51,7 @@ data:extend({
     repairing_sound = data.raw["construction-robot"]["construction-robot"].repairing_sound,
     working_sound = data.raw["construction-robot"]["construction-robot"].working_sound,
     water_reflection = data.raw["construction-robot"]["construction-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22},
     idle = data.raw["construction-robot"]["construction-robot"].idle,
     idle_with_cargo = data.raw["construction-robot"]["construction-robot"].idle_with_cargo,
@@ -95,7 +95,7 @@ data:extend({
     repairing_sound = data.raw["construction-robot"]["construction-robot"].repairing_sound,
     working_sound = data.raw["construction-robot"]["construction-robot"].working_sound,
     water_reflection = data.raw["construction-robot"]["construction-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22},
     idle = data.raw["construction-robot"]["bob-construction-robot-2"].idle,
     idle_with_cargo = data.raw["construction-robot"]["bob-construction-robot-2"].idle_with_cargo,
@@ -139,7 +139,7 @@ data:extend({
     repairing_sound = data.raw["construction-robot"]["construction-robot"].repairing_sound,
     working_sound = data.raw["construction-robot"]["construction-robot"].working_sound,
     water_reflection = data.raw["construction-robot"]["construction-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22},
     idle = data.raw["construction-robot"]["bob-construction-robot-3"].idle,
     idle_with_cargo = data.raw["construction-robot"]["bob-construction-robot-3"].idle_with_cargo,
@@ -183,7 +183,7 @@ data:extend({
     repairing_sound = data.raw["construction-robot"]["construction-robot"].repairing_sound,
     working_sound = data.raw["construction-robot"]["construction-robot"].working_sound,
     water_reflection = data.raw["construction-robot"]["construction-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     construction_vector = {0.30, 0.22},
     idle = data.raw["construction-robot"]["bob-construction-robot-5"].idle,
     idle_with_cargo = data.raw["construction-robot"]["bob-construction-robot-5"].idle_with_cargo,
@@ -223,7 +223,7 @@ data:extend({
     max_to_charge = 0.9,
     working_sound = data.raw["logistic-robot"]["logistic-robot"].working_sound,
     water_reflection = data.raw["logistic-robot"]["logistic-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     idle = data.raw["logistic-robot"]["logistic-robot"].idle,
     idle_with_cargo = data.raw["logistic-robot"]["logistic-robot"].idle_with_cargo,
     in_motion = data.raw["logistic-robot"]["logistic-robot"].in_motion,
@@ -260,7 +260,7 @@ data:extend({
     max_to_charge = 0.95,
     working_sound = data.raw["logistic-robot"]["logistic-robot"].working_sound,
     water_reflection = data.raw["logistic-robot"]["logistic-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     idle = data.raw["logistic-robot"]["bob-logistic-robot-2"].idle,
     idle_with_cargo = data.raw["logistic-robot"]["bob-logistic-robot-2"].idle_with_cargo,
     in_motion = data.raw["logistic-robot"]["bob-logistic-robot-2"].in_motion,
@@ -297,7 +297,7 @@ data:extend({
     max_to_charge = 0.95,
     working_sound = data.raw["logistic-robot"]["logistic-robot"].working_sound,
     water_reflection = data.raw["logistic-robot"]["logistic-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     idle = data.raw["logistic-robot"]["bob-logistic-robot-3"].idle,
     idle_with_cargo = data.raw["logistic-robot"]["bob-logistic-robot-3"].idle_with_cargo,
     in_motion = data.raw["logistic-robot"]["bob-logistic-robot-3"].in_motion,
@@ -334,7 +334,7 @@ data:extend({
     max_to_charge = 0.95,
     working_sound = data.raw["logistic-robot"]["logistic-robot"].working_sound,
     water_reflection = data.raw["logistic-robot"]["logistic-robot"].water_reflection,
-    cargo_centered = {0.0, 0.2},
+    --cargo_centered = {0.0, 0.2},
     idle = data.raw["logistic-robot"]["bob-logistic-robot-5"].idle,
     idle_with_cargo = data.raw["logistic-robot"]["bob-logistic-robot-5"].idle_with_cargo,
     in_motion = data.raw["logistic-robot"]["bob-logistic-robot-5"].in_motion,
@@ -419,7 +419,6 @@ data:extend({
           width = 294,
           height = 201,
           draw_as_shadow = true,
-          force_hr_shadow = true,
           shift = util.by_pixel(28.5*0.75, 19.25*0.75),
           scale = 0.5*0.75
         }
@@ -430,7 +429,6 @@ data:extend({
         priority = "medium",
         width = 138,
         height = 100,
-        frame_count = 1,
         shift = util.by_pixel(1.5*0.75, 5*0.75),
         scale = 0.5*0.75
     },
@@ -538,7 +536,6 @@ data:extend({
           width = 294,
           height = 201,
           draw_as_shadow = true,
-          force_hr_shadow = true,
           shift = util.by_pixel(28.5*0.75, 19.25*0.75),
           scale = 0.5*0.75
         }
@@ -549,7 +546,6 @@ data:extend({
         priority = "medium",
         width = 138,
         height = 100,
-        frame_count = 1,
         shift = util.by_pixel(1.5*0.75, 5*0.75),
         scale = 0.5*0.75
     },
@@ -656,7 +652,6 @@ data:extend({
           width = 294,
           height = 201,
           draw_as_shadow = true,
-          force_hr_shadow = true,
           shift = util.by_pixel(28.5*0.75, 19.25*0.75),
           scale = 0.5*0.75
         }
@@ -667,7 +662,6 @@ data:extend({
         priority = "medium",
         width = 138,
         height = 100,
-        frame_count = 1,
         shift = util.by_pixel(1.5*0.75, 5*0.75),
         scale = 0.5*0.75
     },
@@ -774,7 +768,6 @@ data:extend({
           width = 294,
           height = 201,
           draw_as_shadow = true,
-          force_hr_shadow = true,
           shift = util.by_pixel(28.5*0.5, 19.25*0.5),
           scale = 0.5*0.5
         }
@@ -785,7 +778,6 @@ data:extend({
         priority = "medium",
         width = 138,
         height = 100,
-        frame_count = 1,
         shift = util.by_pixel(1.5*0.5, 5*0.5),
         scale = 0.5*0.5
     },

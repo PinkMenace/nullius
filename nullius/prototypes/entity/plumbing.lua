@@ -59,7 +59,6 @@ local si1 = {
     filter = "nullius-seawater",
     pipe_connections = {{position = {0, 1}, flow_direction = "output", direction = defines.direction.south}}
   }},
-  pipe_covers = pipecoverspictures(),
   module_slots = 1,
   allowed_effects = {"speed", "consumption", "pollution"},
   fast_replaceable_group = "seawater-intake",
@@ -571,7 +570,6 @@ data:extend({
         }
       }
     },
-    pipe_covers = pipecoverspictures(),
     module_slots = 1,
     allowed_effects = {"speed", "consumption", "pollution"},
     fast_replaceable_group = "well",
@@ -826,7 +824,6 @@ data:extend({
         }
       }
     },
-    pipe_covers = pipecoverspictures(),
     module_slots = 2,
     allowed_effects = {"speed", "consumption", "pollution"},
     fast_replaceable_group = "well",
@@ -1164,8 +1161,7 @@ data:extend({
         volume = 500,
         pipe_connections = {{ position = {0, 1}, flow_direction = "output", direction = defines.direction.south }}
       },
-    },
-    pipe_covers = pipecoverspictures()
+    }
   }
 })
 
@@ -1255,8 +1251,7 @@ data:extend({
         volume = 500,
         pipe_connections = {{ position = {0, 1}, flow_direction = "output", direction = defines.direction.south }}
       },
-    },
-    pipe_covers = pipecoverspictures()
+    }
   },
 
   {
@@ -1311,8 +1306,7 @@ data:extend({
         volume = 500,
         pipe_connections = {{ position = {0, 1}, flow_direction = "output", direction = defines.direction.south }}
       },
-    },
-    pipe_covers = pipecoverspictures()
+    }
   },
   
   ---------------------------------------- VALVES -----------------------------------------------
@@ -1322,7 +1316,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-inspector.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.6, mining_time = 0.2, result = "nullius-priority-valve"},
+    minable = {mining_time = 0.2, result = "nullius-priority-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -1415,7 +1409,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.5, mining_time = 0.2, result = "nullius-one-way-valve"},
+    minable = {mining_time = 0.2, result = "nullius-one-way-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -1507,7 +1501,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-underflow.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.6, mining_time = 0.2, result = "nullius-top-up-valve"},
+    minable = {mining_time = 0.2, result = "nullius-top-up-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -1546,7 +1540,7 @@ data:extend({
 			    {
             filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-underflow.png",
             priority = "extra-high",
-            frames = 1,
+            frame_count = 1,
             width = 64,
             height = 64
 			    }
@@ -1600,7 +1594,7 @@ data:extend({
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-return.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.6, mining_time = 0.2, result = "nullius-relief-valve"},
+    minable = {mining_time = 0.2, result = "nullius-relief-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -1833,7 +1827,7 @@ data:extend({
     name = "nullius-small-tank-1",
     icons = data.raw.item["nullius-small-tank-1"].icons,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 0.7, mining_time = 0.3, result = "nullius-small-tank-1"},
+    minable = {mining_time = 0.3, result = "nullius-small-tank-1"},
     max_health = 200,
     corpse = "medium-remnants",
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
@@ -2040,7 +2034,7 @@ data:extend({
     name = "nullius-small-tank-2",
     icons = data.raw.item["nullius-small-tank-2"].icons,
     flags = {"placeable-player", "player-creation"},
-    minable = {hardness = 1, mining_time = 0.3, result = "nullius-small-tank-2"},
+    minable = {mining_time = 0.3, result = "nullius-small-tank-2"},
     max_health = 250,
     corpse = "medium-remnants",
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
@@ -2086,7 +2080,7 @@ data:extend({
     name = "nullius-large-tank-1",
     icons = data.raw.item["nullius-large-tank-1"].icons,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
-    minable = {hardness = 2, mining_time = 3, result = "nullius-large-tank-1"},
+    minable = {mining_time = 3, result = "nullius-large-tank-1"},
     collision_mask = collision_mask_util.get_default_mask("rocket-silo"), -- generic tall building
     max_health = 1000,
     corpse = "medium-remnants",
@@ -2181,7 +2175,7 @@ data:extend({
     name = "nullius-large-tank-2",
     icons = data.raw.item["nullius-large-tank-2"].icons,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
-    minable = {hardness = 2.5, mining_time = 3, result = "nullius-large-tank-2"},
+    minable = {mining_time = 3, result = "nullius-large-tank-2"},
     collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 1200,
     corpse = "medium-remnants",
@@ -2214,7 +2208,7 @@ data:extend({
     name = "nullius-large-tank-3",
     icons = data.raw.item["nullius-large-tank-3"].icons,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
-    minable = {hardness = 3, mining_time = 3, result = "nullius-large-tank-3"},
+    minable = {mining_time = 3, result = "nullius-large-tank-3"},
     collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 1500,
     corpse = "medium-remnants",
@@ -2522,7 +2516,6 @@ data:extend({
         pipe_connections = {{flow_direction ="output", position = {0, -1}, direction = defines.direction.north}}
       }
     },
-    pipe_covers = pipecoverspictures(),
 
     graphics_set = {
       animation = {
@@ -2631,7 +2624,6 @@ data:extend({
         pipe_connections = {{flow_direction ="output", position = {0, -1}, direction = defines.direction.north}}
       }
     },
-    pipe_covers = pipecoverspictures(),
     graphics_set = {
       animation = {
         north = {

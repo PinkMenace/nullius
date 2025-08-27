@@ -1375,7 +1375,7 @@ data:extend({
           {
             type = "destroy-cliffs",
             radius = 5.5,
-            explosion = "explosion"
+            explosion_at_cliff = "explosion" --todo
           },
           {
             type = "nested-result",
@@ -1436,7 +1436,7 @@ data:extend({
           {
             type = "destroy-cliffs",
             radius = 21,
-            explosion = "explosion"
+            explosion_at_cliff = "explosion"
           },
           data.raw.projectile["atomic-rocket"].action.action_delivery.target_effects[3],
           data.raw.projectile["atomic-rocket"].action.action_delivery.target_effects[4],

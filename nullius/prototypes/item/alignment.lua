@@ -23,7 +23,6 @@ data:extend({
         projectile_creation_distance = 0.5,
         range = 16,
         ammo_type = {
-          category = "grenade",
           target_type = "position",
           action = {
             {
@@ -71,7 +70,6 @@ data:extend({
         projectile_creation_distance = 0.25,
         range = 16,
         ammo_type = {
-          category = "grenade",
           target_type = "position",
           action = {
             {
@@ -102,7 +100,7 @@ data:extend({
   {
     type = "capsule",
     name = "nullius-align-transponder",
-	icons = {{
+	  icons = {{
       icon = "__base__/graphics/icons/rocket-part.png",
       icon_size = 64,
     }},
@@ -118,7 +116,6 @@ data:extend({
         cooldown = 600,
         range = 0,
         ammo_type = {
-          category = "capsule",
           target_type = "position",
           action = {
             type = "direct",
@@ -127,7 +124,7 @@ data:extend({
               target_effects = {
                 {
                   type = "camera-effect",
-                  effect = "screen-burn",
+                  --effect = "screen-burn",
                   duration = 20,
                   ease_in_duration = 10,
                   ease_out_duration = 10,
@@ -136,9 +133,9 @@ data:extend({
                   full_strength_max_distance = 500,
                   max_distance = 2000
                 },
-				{
+				        {
                   type = "script",
-				  effect_id = "nullius-align-transponder"
+				          effect_id = "nullius-align-transponder"
                 }
               }
             }
@@ -150,7 +147,7 @@ data:extend({
   {
     type = "ammo",
     name = "nullius-align-conscription-charge",
-	icons = {{
+	  icons = {{
       icon = "__base__/graphics/icons/piercing-shotgun-shell.png",
       icon_size = 64,
     }},
@@ -170,7 +167,7 @@ data:extend({
             starting_speed = 0.6,
             source_effects = {
               type = "create-explosion",
-			  entity_name = "spark-explosion"
+			        entity_name = "spark-explosion"
             }
           }
         }
