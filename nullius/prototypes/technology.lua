@@ -372,7 +372,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-one-way-valve-1"
+        recipe = "nullius-one-way-valve"
       },
       {
         type = "unlock-recipe",

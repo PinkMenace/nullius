@@ -910,7 +910,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-one-way-valve-1",
+    name = "nullius-one-way-valve",
     localised_name = {"", {"entity-name.nullius-one-way-valve"}, " ", tostring(1)},
     enabled = false,
     category = "small-crafting",
