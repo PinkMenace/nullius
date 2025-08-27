@@ -2328,7 +2328,7 @@ data:extend({
     localised_description = {"entity-description.nullius-thermal-tank-1"},
     icons = data.raw.item["nullius-thermal-tank-1"].icons,
     flags = {"placeable-neutral", "player-creation", "not-upgradable"},
-    hidden = true,
+    hidden_in_factoriopedia = true,
     minable = { mining_time = 1, result = "nullius-thermal-tank-1" },
     placeable_by = {item = "nullius-thermal-tank-1", count = 1},
     subgroup = "heat-storage",
@@ -2373,25 +2373,25 @@ data:extend({
         },
       }
     },
-    working_light_picture = {
-      layers = {
-        {
-          filename = ENTITYPATH .. "thermaltank/thermaltank1.png",
-          width = 180,
-          height = 180,
-          scale = 0.73,
-          shift = {0.28,-0.3}
-        },
-        {
-          filename = ENTITYPATH .. "thermaltank/thermaltank-shadow.png",
-          width = 230,
-          height = 180,
-          scale = 0.73,
-          shift = {0.28,-0.3},
-          draw_as_shadow = true,
-        },
-      }
-    },
+    -- working_light_picture = {
+    --   layers = {
+    --     {
+    --       filename = ENTITYPATH .. "thermaltank/thermaltank1.png",
+    --       width = 180,
+    --       height = 180,
+    --       scale = 0.73,
+    --       shift = {0.28,-0.3}
+    --     },
+    --     {
+    --       filename = ENTITYPATH .. "thermaltank/thermaltank-shadow.png",
+    --       width = 230,
+    --       height = 180,
+    --       scale = 0.73,
+    --       shift = {0.28,-0.3},
+    --       draw_as_shadow = true,
+    --     },
+    --   }
+    -- },
     neighbour_bonus = 0,
     heat_buffer = {
       max_temperature = 250,
@@ -2420,7 +2420,7 @@ data:extend({
     localised_description = {"entity-description.nullius-thermal-tank-2"},
     icons = data.raw.item["nullius-thermal-tank-2"].icons,
     flags = {"placeable-neutral", "player-creation", "not-upgradable"},
-    hidden = true,
+    hidden_in_factoriopedia = true,
     minable = { mining_time = 1.5, result = "nullius-thermal-tank-2" },
     placeable_by = {item = "nullius-thermal-tank-2", count = 1},
     subgroup = "heat-storage",
@@ -2465,25 +2465,25 @@ data:extend({
         },
       }
     },
-    working_light_picture = {
-      layers = {
-        {
-          filename = ENTITYPATH .. "thermaltank/thermaltank2.png",
-          width = 180,
-          height = 180,
-          scale = 0.73,
-          shift = {0.28,-0.3}
-        },
-        {
-          filename = ENTITYPATH .. "thermaltank/thermaltank-shadow.png",
-          width = 230,
-          height = 180,
-          scale = 0.73,
-          shift = {0.28,-0.3},
-          draw_as_shadow = true,
-        },
-      }
-    },
+    -- working_light_picture = {
+    --   layers = {
+    --     {
+    --       filename = ENTITYPATH .. "thermaltank/thermaltank2.png",
+    --       width = 180,
+    --       height = 180,
+    --       scale = 0.73,
+    --       shift = {0.28,-0.3}
+    --     },
+    --     {
+    --       filename = ENTITYPATH .. "thermaltank/thermaltank-shadow.png",
+    --       width = 230,
+    --       height = 180,
+    --       scale = 0.73,
+    --       shift = {0.28,-0.3},
+    --       draw_as_shadow = true,
+    --     },
+    --   }
+    -- },
     neighbour_bonus = 0,
     heat_buffer = {
       max_temperature = 500,
@@ -2512,7 +2512,7 @@ data:extend({
     localised_description = {"entity-description.nullius-thermal-tank-3"},
     icons = data.raw.item["nullius-thermal-tank-3"].icons,
     flags = {"placeable-neutral", "player-creation", "not-upgradable"},
-    hidden = true,
+    hidden_in_factoriopedia = true,
     minable = { mining_time = 2, result = "nullius-thermal-tank-3" },
     placeable_by = {item = "nullius-thermal-tank-3", count = 1},
     subgroup = "heat-storage",
@@ -2557,25 +2557,25 @@ data:extend({
         },
       }
     },
-    working_light_picture = {
-      layers = {
-        {
-          filename = ENTITYPATH .. "thermaltank/thermaltank3.png",
-          width = 180,
-          height = 180,
-          scale = 0.73,
-          shift = {0.3,-0.3}
-        },
-        {
-          filename = ENTITYPATH .. "thermaltank/thermaltank-shadow.png",
-          width = 230,
-          height = 180,
-          scale = 0.73,
-          shift = {0.3,-0.3},
-          draw_as_shadow = true,
-        },
-      }
-    },
+    -- working_light_picture = { --is drawn over circuit connector
+    --   layers = {
+    --     {
+    --       filename = ENTITYPATH .. "thermaltank/thermaltank3.png",
+    --       width = 180,
+    --       height = 180,
+    --       scale = 0.73,
+    --       shift = {0.3,-0.3}
+    --     },
+    --     {
+    --       filename = ENTITYPATH .. "thermaltank/thermaltank-shadow.png",
+    --       width = 230,
+    --       height = 180,
+    --       scale = 0.73,
+    --       shift = {0.3,-0.3},
+    --       draw_as_shadow = true,
+    --     },
+    --   }
+    -- },
     neighbour_bonus = 0,
     heat_buffer = {
       max_temperature = 1500,
@@ -2621,8 +2621,11 @@ local function thermal_tank(tier, vert)
     }
   end
   
-  tank.circuit_connector = circuit_connector_definitions["storage-tank"][1]
   tank.circuit_wire_max_distance = default_circuit_wire_max_distance
+  tank.circuit_connector = circuit_connector_definitions.create_single(
+      universal_connector_template,
+        { variation = 25, main_offset = util.by_pixel(-33.5, 15.5), shadow_offset = util.by_pixel(-33.5, 19.5), show_shadow = false }
+    )
 
   tank.icons = {
     {
@@ -2672,7 +2675,7 @@ data:extend({
     localised_description = {"entity-description.nullius-thermal-tank-1"},
     icons = data.raw.item["nullius-thermal-tank-1"].icons,
     flags = {"placeable-neutral", "player-creation", "not-upgradable", "not-deconstructable" },
-    hidden = true,
+    hidden_in_factoriopedia = true,
     minable = { mining_time = 1, result = "nullius-thermal-tank-1" },
     subgroup = "heat-storage",
     order = "ubc",
@@ -2683,6 +2686,9 @@ data:extend({
       { type = "fire", decrease = 100, percent = 90 },
       { type = "impact", decrease = 50, percent = 80 }
     },
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
+    
     fast_replaceable_group = "thermal-tank",
     two_direction_only = true,
     fluid_box = {
@@ -2790,6 +2796,8 @@ data:extend({
     max_health = 300,
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     resistances = {
       { type = "fire", decrease = 80, percent = 90 },
       { type = "impact", decrease = 50, percent = 80 }
@@ -2821,6 +2829,8 @@ data:extend({
     max_health = 400,
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     resistances = {
       { type = "fire", decrease = 100, percent = 90 },
       { type = "impact", decrease = 60, percent = 80 }
