@@ -18,6 +18,7 @@ turret.attack_parameters.range = 32
 
 local radar = util.table.deepcopy(data.raw["radar"]["radar"])
 radar.name = "nullius-align-concordance-transmitter"
+radar.icon = nil
 radar.icons = data.raw.item["nullius-align-concordance-transmitter"].icons
 radar.integration_patch = scale_image(radar.integration_patch, 2)
 radar.pictures = scale_image(radar.pictures, 2)

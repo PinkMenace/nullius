@@ -73,7 +73,6 @@ data:extend({
         { filename = "__base__/sound/assembling-machine-t1-2.ogg", volume = 0.8 }
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 0.8
     },
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = scale_connector_points(circuit_connector_definitions["assembling-machine"], 0.7)
@@ -166,7 +165,7 @@ data:extend({
         { filename = "__base__/sound/assembling-machine-t1-2.ogg", volume = 0.8 }
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.2
+      --apparent_volume = 1.2
     },
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["assembling-machine"]
@@ -258,7 +257,7 @@ data:extend({
         { filename = "__base__/sound/assembling-machine-t1-2.ogg", volume = 0.8 }
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-      apparent_volume = 1.6
+      --apparent_volume = 1.6
     },
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = scale_connector_points(circuit_connector_definitions["assembling-machine"], 1.4)
@@ -865,7 +864,6 @@ data:extend({
         { filename = "__base__/sound/assembling-machine-t1-2.ogg", volume = 0.6 }
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.5 },
-      apparent_volume = 0.5
     },
     graphics_set = {
       animation = scale_image({

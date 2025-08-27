@@ -100,9 +100,9 @@ data:extend({
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
     crafting_categories = {"dry-smelting"},
-    result_inventory_size = 1,
+    --result_inventory_size = 1,
+    --source_inventory_size = 1,
     crafting_speed = 0.25,
-    source_inventory_size = 1,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -136,9 +136,9 @@ data:extend({
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.8, -1}, {0.8, 1}},
     crafting_categories = {"dry-smelting"},
-    result_inventory_size = 1,
+    --result_inventory_size = 1,
+    --source_inventory_size = 1,
     crafting_speed = 0.5,
-    source_inventory_size = 1,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -238,7 +238,7 @@ data:extend({
                 height = 202,
                 repeat_count = 12,
                 draw_as_glow = true,
-                util.by_pixel(1*0.6666, 0),
+                shift = util.by_pixel(1*0.6666, 0),
                 scale = 0.6666*0.5
               }
             }
@@ -328,9 +328,9 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    result_inventory_size = 1,
+    --result_inventory_size = 1,
+    --source_inventory_size = 1,
     crafting_speed = 1,
-    source_inventory_size = 1,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -380,7 +380,6 @@ data:extend({
               width = 57,
               height = 81,
               frame_count = 48,
-              direction_count = 1,
               shift = util.by_pixel(-0.75*1.5, 5.75*1.5),
               scale = 0.75
           }
@@ -411,7 +410,6 @@ data:extend({
             width = 128,
             height = 150,
             frame_count = 1,
-            direction_count = 1,
             shift = util.by_pixel(0, -5*1.5),
             blend_mode = "additive",
             scale = 0.75
@@ -582,7 +580,7 @@ data:extend({
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     
     circuit_wire_max_distance = furnace_circuit_wire_max_distance,
-    scale_connector_points(circuit_connector_definitions["electric-furnace"],1.2),
+    circuit_connector = scale_connector_points(circuit_connector_definitions["electric-furnace"],1.2),
 
     graphics_set = {
       animation = {
@@ -1734,8 +1732,7 @@ data:extend({
     working_sound = {
       sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-    },
-    pipe_covers = pipecoverspictures()
+    }
   },
 
   {
@@ -1945,8 +1942,7 @@ data:extend({
     working_sound = {
       sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
-    },
-    pipe_covers = pipecoverspictures()
+    }
   }
 })
 

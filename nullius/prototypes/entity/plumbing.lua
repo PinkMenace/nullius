@@ -167,7 +167,7 @@ data:extend({
     max_health = 150,
     corpse = "small-remnants",
     dying_explosion = "offshore-pump-explosion",
-    fluid = "nullius-seawater",
+    --fluid = "nullius-seawater",
     collision_box = {{-0.6, -1.05}, {0.6, 0.3}},
     selection_box = {{-1, -1.49}, {1, 0.49}},
     pumping_speed = 2,
@@ -507,7 +507,7 @@ data:extend({
     max_health = 300,
     corpse = "small-remnants",
     dying_explosion = "offshore-pump-explosion",
-    fluid = "nullius-seawater",
+    --fluid = "nullius-seawater",
     collision_box = {{-0.6, -1.05}, {0.6, 0.3}},
     selection_box = {{-1, -1.49}, {1, 0.49}},
     pumping_speed = 10,
@@ -2501,9 +2501,9 @@ data:extend({
     },
     ingredient_count = 2,
     working_sound = {
-        sound = {filename = "__base__/sound/oil-refinery.ogg"},
+        sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 2.5},
         idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-        apparent_volume = 2.5
+        --apparent_volume = 2.5
     },
     impact_category = "metal",
     circuit_connector = circuit_connector_definitions["nullius-barreling-pump"],
@@ -2612,9 +2612,9 @@ data:extend({
     circuit_connector = circuit_connector_definitions["nullius-barreling-pump"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     working_sound = {
-      sound = {filename = "__base__/sound/oil-refinery.ogg"},
+      sound = {filename = "__base__/sound/oil-refinery.ogg", volume = 2.5},
       idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-      apparent_volume = 2.5
+      --apparent_volume = 2.5
     },
     impact_category = "metal",
     fluid_boxes = {
@@ -3461,7 +3461,7 @@ data:extend({
         {
           position = {0, 0},
           connection_type = "underground",
-          max_underground_distance = 23, 
+          max_underground_distance = 23,
           direction = defines.direction.south
         }
       },

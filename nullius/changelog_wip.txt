@@ -7,20 +7,17 @@ Date: 2025
     - Added landing pad: Now the results of rocket launches will be collected there
     - Re-introduced red and green wires so there is a seamless transition to 2.0
     - Added essential techs
-    - Added command to flip all valves
-    - Added wire connexions to assemblers, boxer and nanofab
+    - Added command to flip all valves (i will remove it when i'm convinced it's not needed anymore)
     - Added display panels and selector combinator
     - Added setting to hide the voiding recipe icon from chimneys and outfalls
     - Added circuit connections to most buildings
   Changes:
     - Reworked the inserters: Removed filter inserters, now base inserters have filters except tier 1, their recipes have been adapted
-        Same thing with aai loaders
     - Removed mirror buildings, use 2.0 flipping instead, removed chirality research
     - Added a trigger tech "Salvage lab wreckage"
     - Removed regular artillery shortcut and discharge defense shortcut
     - Changed required techs for most shortcuts
     - Now uses the Valve prototype for valves
-    - Allowed medium assembler 1 to craft disabled recipes (to prevent a bug when a broken item is being fixed in early game)
     - Changed plumbing and pumping checkpoints to reflect lesser need for pumps in 2.0 fluid system
   Balancing:
     - Increased the pumping speeds of pumps (and max flow rate)

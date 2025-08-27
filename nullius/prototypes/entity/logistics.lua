@@ -649,9 +649,7 @@ data:extend({
             priority = "high",
             width = 83,
             height = 70,
-            frame_count = 1,
-            axially_symmetrical = false,
-            direction_count = 1,
+            --axially_symmetrical = false,
             shift = util.by_pixel(0.2,2.4),
             scale = 0.4
         },
@@ -660,9 +658,7 @@ data:extend({
             priority = "high",
             width = 76,
             height = 47,
-            frame_count = 1,
-            axially_symmetrical = false,
-            direction_count = 1,
+            --axially_symmetrical = false,
             shift = util.by_pixel(3.2, 3.8),
             draw_as_shadow = true,
             scale = 0.4
@@ -674,9 +670,7 @@ data:extend({
         priority = "high",
         width = 90,
         height = 78,
-        frame_count = 1,
-        axially_symmetrical = false,
-        direction_count = 1,
+        --axially_symmetrical = false,
         shift = util.by_pixel(0, -5.6),
         scale = 0.4
     }
@@ -720,9 +714,7 @@ data:extend({
             priority = "high",
             width = 83,
             height = 70,
-            frame_count = 1,
-            axially_symmetrical = false,
-            direction_count = 1,
+            --axially_symmetrical = false,
             shift = util.by_pixel(0.275,3.3),
             scale = 0.55
         },
@@ -731,9 +723,7 @@ data:extend({
             priority = "high",
             width = 76,
             height = 47,
-            frame_count = 1,
-            axially_symmetrical = false,
-            direction_count = 1,
+            --axially_symmetrical = false,
             shift = util.by_pixel(4.4, 5.225),
             draw_as_shadow = true,
             scale = 0.55
@@ -745,9 +735,7 @@ data:extend({
         priority = "high",
         width = 90,
         height = 78,
-        frame_count = 1,
-        axially_symmetrical = false,
-        direction_count = 1,
+        --axially_symmetrical = false,
         shift = util.by_pixel(0, -7.7),
         scale = 0.55
     }

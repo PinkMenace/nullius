@@ -240,8 +240,7 @@ function pipepics(dir)
         width = 48,
         height = 30,
         frame_count = 60,
-        axially_symmetrical = false,
-        direction_count = 1
+        --axially_symmetrical = false,
     }
   }
 end

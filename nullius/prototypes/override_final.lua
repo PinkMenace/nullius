@@ -262,7 +262,7 @@ data.raw["logistic-container"]["active-provider-chest"].next_upgrade = nil
 data.raw["pipe"]["pipe"].next_upgrade = "nullius-pipe-2"
 data.raw["pipe-to-ground"]["pipe-to-ground"].next_upgrade = "nullius-underground-pipe-2"
 data.raw["pipe"]["pipe"].fluid_box.volume = 400
-data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.max_underground_distance = 11
+data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.pipe_connections[2].max_underground_distance = 11
 data.raw.item["pipe"].stack_size = 200
 data.raw.item["pipe-to-ground"].stack_size = 100
 
