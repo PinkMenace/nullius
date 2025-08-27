@@ -701,7 +701,7 @@ nc3.fluid_boxes = {{
 nc3.energy_source = {
   type = "electric",
   usage_priority = "secondary-input",
-  emissions = 0.1,
+  emissions_per_minute = {pollution = 0.1},
   drain = "5kW"
 }
 nc3.energy_usage = "295kW"
@@ -904,7 +904,7 @@ no3.crafting_speed = 10
 no3.energy_source = {
   type = "electric",
   usage_priority = "secondary-input",
-  emissions = 0.1,
+  emissions_per_minute = {pollution = 0.1},
   drain = "5kW"
 }
 no3.energy_usage = "195kW"

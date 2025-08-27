@@ -38,7 +38,7 @@ local si1 = {
   energy_source = {
     type = "electric",
 	  usage_priority = "secondary-input",
-	  emissions = 0.01,
+	  emissions_per_minute = {pollution = 0.01},
 	  drain = "10kW"
   },
   energy_usage = "190kW",
@@ -544,7 +544,7 @@ data:extend({
     energy_source = {
 	    type = "electric",
 	    usage_priority = "secondary-input",
-	    emissions = 0.02,
+	    emissions_per_minute = {pollution = 0.02},
 	    drain = "20kW"
 	  },
     energy_usage = "280kW",
@@ -799,7 +799,7 @@ data:extend({
     energy_source = {
 	  type = "electric",
 	  usage_priority = "secondary-input",
-	  emissions = 0.05,
+	  emissions_per_minute = {pollution = 0.05},
 	  drain = "100kW"
 	},
     energy_usage = "1100kW",
@@ -1052,7 +1052,7 @@ lw1.hidden = true
 lw1.placeable_by = {item = "nullius-legacy-well-1", count = 1}
 lw1.fast_replaceable_group = nil
 lw1.next_upgrade = nil
-lw1.energy_source = {type="electric", usage_priority="secondary-input", emissions=0.01, drain="1kW"}
+lw1.energy_source = {type="electric", usage_priority="secondary-input", emissions_per_minute = {pollution = 0.01}, drain="1kW"}
 lw1.energy_usage = "49kW"
 lw1.crafting_speed = 1.25
 
@@ -1064,7 +1064,7 @@ lw2.flags = {"placeable-neutral", "player-creation", "not-upgradable", "not-blue
 lw2.hidden = true
 lw2.placeable_by = {item = "nullius-legacy-well-2", count = 1}
 lw2.fast_replaceable_group = nil
-lw2.energy_source = {type="electric", usage_priority="secondary-input", emissions=0.02, drain="5kW"}
+lw2.energy_source = {type="electric", usage_priority="secondary-input", emissions_per_minute = {pollution = 0.02}, drain="5kW"}
 lw2.energy_usage = "175kW"
 lw2.crafting_speed = 5
 
@@ -1089,7 +1089,7 @@ data:extend({
     energy_source = {
 	    type = "electric",
 	    usage_priority = "secondary-input",
-	    emissions = 0.01,
+	    emissions_per_minute = {pollution = 0.01},
 	    drain = "5kW"
 	  },
     energy_usage = "115kW",
@@ -1181,7 +1181,7 @@ data:extend({
     energy_source = {
 	    type = "electric",
 	    usage_priority = "secondary-input",
-	    emissions = 0.03,
+	    emissions_per_minute = {pollution = 0.03},
 	    drain = "25kW"
 	  },
     energy_usage = "375kW",
@@ -1270,7 +1270,7 @@ data:extend({
     energy_source = {
 	    type = "electric",
 	    usage_priority = "secondary-input",
-	    emissions = 0.1,
+	    emissions_per_minute = {pollution = 0.1},
 	    drain = "100kW"
 	  },
     energy_usage = "1100kW",

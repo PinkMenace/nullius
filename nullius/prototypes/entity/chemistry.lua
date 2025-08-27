@@ -72,7 +72,7 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"nullius-water-treatment"},
     crafting_speed = 1,
-    energy_source = {type = "electric", usage_priority = "secondary-input", emissions = 0.01, drain="10kW"},
+    energy_source = {type = "electric", usage_priority = "secondary-input", emissions_per_minute = {pollution = 0.01}, drain="10kW"},
     energy_usage = "240kW",
     ingredient_count = 3,
     resistances = {
@@ -363,7 +363,7 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"nullius-water-treatment"},
     crafting_speed = 2,
-    energy_source = {type = "electric", usage_priority = "secondary-input", emissions = 0.05, drain="20kW"},
+    energy_source = {type = "electric", usage_priority = "secondary-input", emissions_per_minute = {pollution = 0.05}, drain="20kW"},
     energy_usage = "480kW",
     ingredient_count = 4,
     resistances = {
@@ -652,7 +652,7 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"nullius-water-treatment"},
     crafting_speed = 4,
-    energy_source = {type = "electric", usage_priority = "secondary-input", emissions = 0.1, drain="40kW"},
+    energy_source = {type = "electric", usage_priority = "secondary-input", emissions_per_minute = {pollution = 0.1}, drain="40kW"},
     energy_usage = "960kW",
     ingredient_count = 6,
     resistances = {

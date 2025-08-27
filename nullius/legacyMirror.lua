@@ -105,7 +105,7 @@ data:extend{
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"nullius-water-treatment"},
     crafting_speed = 2,
-    energy_source = {type = "electric", usage_priority = "secondary-input", emissions = 0.05, drain="20kW"},
+    energy_source = {type = "electric", usage_priority = "secondary-input", emissions_per_minute = {pollution = 0.05}, drain="20kW"},
     energy_usage = "480kW",
     ingredient_count = 4,
     resistances = data.raw["assembling-machine"]["nullius-hydro-plant-2"].resistances,
@@ -170,7 +170,7 @@ data:extend{
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     crafting_categories = {"nullius-water-treatment"},
     crafting_speed = 4,
-    energy_source = {type = "electric", usage_priority = "secondary-input", emissions = 0.1, drain="40kW"},
+    energy_source = {type = "electric", usage_priority = "secondary-input", emissions_per_minute = {pollution = 0.1}, drain="40kW"},
     energy_usage = "960kW",
     ingredient_count = 6,
     resistances = {
@@ -214,7 +214,6 @@ data:extend{
         pipe_connections = {{ flow_direction ="output", position = {1, 2}, direction = defines.direction.south }}
       },
     },
-    pipe_covers = pipecoverspictures(),
   },
    {
     type = "assembling-machine",
@@ -235,7 +234,6 @@ data:extend{
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     
-    scale_entity_info_icon = true,
     crafting_categories = {"distillation"},
     crafting_speed = 2,
     energy_source = data.raw["assembling-machine"]["nullius-distillery-2"].energy_source,
@@ -302,7 +300,6 @@ data:extend{
     collision_box = {{-2.3, -2.3}, {2.3, 2.3}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     
-    scale_entity_info_icon = true,
     crafting_categories = {"distillation"},
     crafting_speed = 4,
     energy_source = {
