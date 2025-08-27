@@ -1531,7 +1531,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-iron-ingot-1",
+    name = "nullius-iron-ingot",
     localised_name = {"recipe-name.nullius-iron-ingot-1"},
     enabled = false,
     category = "dry-smelting",
@@ -1638,7 +1638,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-thermite",
-	localised_name = {"recipe-name.nullius-aluminothermic", {"item-name.nullius-iron-ingot"}},
+	  localised_name = {"recipe-name.nullius-aluminothermic", {"item-name.nullius-iron-ingot"}},
     icons = {
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/ingot-iron.png",
@@ -1723,7 +1723,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-steel-ingot-1",
+    name = "nullius-steel-ingot",
     localised_name = {"recipe-name.nullius-steel-ingot-1"},
     enabled = false,
     category = "machine-casting",
@@ -4985,7 +4985,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-aluminum-ingot-1",
+    name = "nullius-aluminum-ingot",
     localised_name = {"recipe-name.nullius-aluminum-ingot-1"},
     enabled = false,
     category = "dry-smelting",

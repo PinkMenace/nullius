@@ -21,7 +21,10 @@
 	  ["nullius-boxed-filter-inserter-3", "nullius-boxed-inserter-3"],
 	  ["nullius-boxed-filter-inserter-4", "nullius-boxed-inserter-4"],
 	  
-	  ["nullius-one-way-valve-1", "nullius-one-way-valve"]
+	  ["nullius-one-way-valve-1", "nullius-one-way-valve"],
+	  ["nullius-iron-ingot-1", "nullius-iron-ingot"],
+	  ["nullius-steel-ingot-1", "nullius-steel-ingot"],
+	  ["nullius-aluminum-ingot-1", "nullius-aluminum-ingot"]
   ],
   "item": [
     ["nullius-box-filter-inserter-2", "nullius-box-inserter-2"],

@@ -69,7 +69,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-iron-ingot-1"
+        recipe = "nullius-iron-ingot"
       }
     },
     unit = {
@@ -963,7 +963,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-steel-ingot-1"
+        recipe = "nullius-steel-ingot"
       },
       {
         type = "unlock-recipe",
@@ -1627,7 +1627,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-aluminum-ingot-1"
+        recipe = "nullius-aluminum-ingot"
       }
     },
     unit = {
