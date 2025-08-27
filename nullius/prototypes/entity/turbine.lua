@@ -309,6 +309,11 @@ local generator1ob = {
   energy_source = { type = "electric", usage_priority = "tertiary" },
   smoke = data.raw.generator["steam-turbine"].smoke,
   working_sound = data.raw.generator["steam-turbine"].working_sound,
+  perceived_performance = {
+    minimum = 0.25,
+    performance_to_activity_rate = 0.5
+  },
+  
   horizontal_animation = generator_horizontal,
   vertical_animation = generator_vertical,
   fluid_box = {
