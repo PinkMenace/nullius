@@ -476,8 +476,6 @@ data:extend({
     graphics_set = {
       drilling_vertical_movement_duration = 10 / 0.4,
       animation_progress = 1,
-      min_animation_progress = 0,
-      max_animation_progress = 30,
 
       status_colors = data.raw["mining-drill"]["electric-mining-drill"].graphics_set.status_colors,
       circuit_connector_layer = "object",
@@ -494,7 +492,7 @@ data:extend({
               height = 208,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*0.6666),
               repeat_count = 5,
               scale = 0.6666*0.5,
@@ -508,7 +506,7 @@ data:extend({
               height = 66,
               frame_count = 5,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(-3*0.6666, -44*0.6666),
               scale = 0.6666*0.5
             },
@@ -537,7 +535,7 @@ data:extend({
               height = 188,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*0.6666),
               repeat_count = 5,
               scale = 0.6666*0.5,
@@ -551,7 +549,7 @@ data:extend({
               height = 74,
               frame_count = 5,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(30*0.6666, -8*0.6666),
               scale = 0.6666*0.5
             },
@@ -580,7 +578,7 @@ data:extend({
               height = 192,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -1*0.6666),
               repeat_count = 5,
               scale = 0.6666*0.5,
@@ -611,7 +609,7 @@ data:extend({
               height = 188,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*0.6666),
               repeat_count = 5,
               scale = 0.6666*0.5,
@@ -625,7 +623,7 @@ data:extend({
               height = 60,
               frame_count = 5,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(-31*0.6666, -13*0.6666),
               scale = 0.6666*0.5
             },
@@ -813,7 +811,7 @@ data:extend({
             height = 148,
             frame_count = 1,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(21*0.6666, 10*0.6666),
             scale = 0.5*0.6666,
             tint = {0.6, 0.7, 0.8}
@@ -854,7 +852,7 @@ data:extend({
             height = 140,
             frame_count = 1,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(-22*0.6666, 12*0.6666),
             scale = 0.6666*0.5,
             tint = {0.6, 0.7, 0.8}
@@ -913,7 +911,10 @@ data:extend({
     energy_usage = "400kW",
     monitor_visualization_tint = {r=78, g=173, b=255},
     fast_replaceable_group = "small-miner",
-    base_productivity = 0.05,
+    --base_productivity = 0.05,
+    effect_receiver = {
+      base_effect = {productivity = 0.05}
+    },
 
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
@@ -929,8 +930,6 @@ data:extend({
     graphics_set = {
       drilling_vertical_movement_duration = 10 / 0.4,
       animation_progress = 1,
-      min_animation_progress = 0,
-      max_animation_progress = 30,
 
       status_colors = data.raw["mining-drill"]["electric-mining-drill"].graphics_set.status_colors,
       circuit_connector_layer = "object",
@@ -1160,8 +1159,7 @@ data:extend({
     graphics_set = {
       drilling_vertical_movement_duration = 10 / 0.4,
       animation_progress = 1,
-      min_animation_progress = 0,
-      max_animation_progress = 30,
+      
       status_colors = data.raw["mining-drill"]["electric-mining-drill"].graphics_set.status_colors,
       circuit_connector_layer = "object",
       circuit_connector_secondary_draw_order = { north = 14, east = 30, south = 30, west = 30 },
@@ -1177,7 +1175,7 @@ data:extend({
                 height = 208,
                 frame_count = 1,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(0, -4),
                 repeat_count = 5,
                 scale = 0.5,
@@ -1197,7 +1195,7 @@ data:extend({
                 height = 188,
                 frame_count = 1,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(0, -4),
                 repeat_count = 5,
                 scale = 0.5,
@@ -1217,7 +1215,7 @@ data:extend({
                 height = 192,
                 frame_count = 1,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(0, -1),
                 repeat_count = 5,
                 scale = 0.5,
@@ -1236,7 +1234,7 @@ data:extend({
                 height = 188,
                 frame_count = 1,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(0, -4),
                 repeat_count = 5,
                 scale = 0.5,
@@ -1271,7 +1269,7 @@ data:extend({
                   frame_count = 30,
                   animation_speed = 0.4,
                   frame_sequence = drill_animation_sequence,
-                  direction_count = 1,
+
                   shift = util.by_pixel(1, -11),
                   scale = 0.5,
                   tint = {0.6, 0.7, 0.8}
@@ -1290,7 +1288,7 @@ data:extend({
                   frame_count = 30,
                   animation_speed = 0.4,
                   frame_sequence = drill_animation_sequence,
-                  direction_count = 1,
+
                   shift = util.by_pixel(2, -12),
                   scale = 0.5,
                   tint = {0.6, 0.7, 0.8}
@@ -1309,7 +1307,7 @@ data:extend({
                   frame_count = 30,
                   animation_speed = 0.4,
                   frame_sequence = drill_animation_sequence,
-                  direction_count = 1,
+
                   shift = util.by_pixel(1, -11),
                   scale = 0.5,
                   tint = {0.6, 0.7, 0.8}
@@ -1328,7 +1326,7 @@ data:extend({
                   frame_count = 30,
                   animation_speed = 0.4,
                   frame_sequence = drill_animation_sequence,
-                  direction_count = 1,
+
                   shift = util.by_pixel(2, -12),
                   scale = 0.5,
                   tint = {0.6, 0.7, 0.8}
@@ -1354,7 +1352,7 @@ data:extend({
               frame_count = 30,
               animation_speed = 0.4,
               frame_sequence = drill_animation_sequence,
-              direction_count = 1,
+
               shift = util.by_pixel(-3, 3),
               scale = 0.5,
               tint = {0.6, 0.7, 0.8}
@@ -1368,7 +1366,7 @@ data:extend({
               frame_count = 30,
               animation_speed = 0.4,
               frame_sequence = drill_animation_sequence,
-              direction_count = 1,
+
               shift = util.by_pixel(-3, 3),
               scale = 0.5,
               tint = {0.6, 0.7, 0.8}
@@ -1387,7 +1385,7 @@ data:extend({
               height = 148,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(21, 10),
               scale = 0.5,
               tint = {0.6, 0.7, 0.8}
@@ -1418,7 +1416,7 @@ data:extend({
               height = 140,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(-22, 12),
               scale = 0.5,
               tint = {0.6, 0.7, 0.8}
@@ -1457,7 +1455,10 @@ data:extend({
     energy_usage = "750kW",
     module_slots = 2,
     allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-    base_productivity = 0.05,
+    --base_productivity = 0.05,
+    effect_receiver = {
+      base_effect = {productivity = 0.05}
+    },
 
     radius_visualisation_picture = data.raw["mining-drill"]["electric-mining-drill"].radius_visualisation_picture,
     monitor_visualization_tint = {r=78, g=173, b=255},
@@ -1518,8 +1519,6 @@ data:extend({
     graphics_set = {
       drilling_vertical_movement_duration = 10 / 0.4,
       animation_progress = 1,
-      min_animation_progress = 0,
-      max_animation_progress = 30,
 
       status_colors = data.raw["mining-drill"]["electric-mining-drill"].graphics_set.status_colors,
 
@@ -1537,7 +1536,6 @@ data:extend({
               height = 208,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
               shift = util.by_pixel(0, -4*1.3333),
               repeat_count = 5,
               scale = 0.6666,
@@ -1551,7 +1549,6 @@ data:extend({
               height = 66,
               frame_count = 5,
               animation_speed = 0.4,
-              direction_count = 1,
               shift = util.by_pixel(-3*1.3333, -44*1.3333),
               scale = 0.6666
             },
@@ -1580,7 +1577,7 @@ data:extend({
               height = 188,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*1.3333),
               repeat_count = 5,
               scale = 0.6666,
@@ -1594,7 +1591,7 @@ data:extend({
               height = 74,
               frame_count = 5,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(30*1.3333, -8*1.3333),
               scale = 0.6666
             },
@@ -1623,7 +1620,7 @@ data:extend({
               height = 192,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -1*1.3333),
               repeat_count = 5,
               scale = 0.6666,
@@ -1654,7 +1651,7 @@ data:extend({
               height = 188,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*1.3333),
               repeat_count = 5,
               scale = 0.6666,
@@ -1668,7 +1665,7 @@ data:extend({
               height = 60,
               frame_count = 5,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(-31*1.3333, -13*1.3333),
               scale = 0.6666
             },
@@ -1708,7 +1705,7 @@ data:extend({
             height = 72,
             frame_count = 30,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(0, 3*1.3333),
             scale = 0.6666
           },
@@ -1733,7 +1730,7 @@ data:extend({
                 height = 58,
                 frame_count = 10,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(-1*1.3333, -44*1.3333),
                 scale = 0.6666
               }
@@ -1759,7 +1756,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(1*1.3333, -11*1.3333),
                 scale = 0.6666,
                 tint = {0.6, 0.7, 0.8}
@@ -1790,7 +1787,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(2*1.3333, -12*1.3333),
                 scale = 0.6666,
                 tint = {0.6, 0.7, 0.8}
@@ -1821,7 +1818,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(1*1.3333, -11*1.3333),
                 scale = 0.6666,
                 tint = {0.6, 0.7, 0.8}
@@ -1852,7 +1849,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(2*1.3333, -12*1.3333),
                 scale = 0.6666,
                 tint = {0.6, 0.7, 0.8}
@@ -1888,7 +1885,7 @@ data:extend({
             height = 132,
             frame_count = 30,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(-3*1.3333, 9*1.3333),
             scale = 0.6666
           },
@@ -1914,7 +1911,7 @@ data:extend({
                 height = 56,
                 frame_count = 10,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(24*1.3333, -12*1.3333),
                 scale = 0.6666
               }
@@ -1930,7 +1927,7 @@ data:extend({
                 height = 36,
                 frame_count = 10,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(-2*1.3333, 20*1.3333),
                 scale = 0.6666
               }
@@ -1946,7 +1943,7 @@ data:extend({
                 height = 54,
                 frame_count = 10,
                 animation_speed = 0.4,
-                direction_count = 1,
+
                 shift = util.by_pixel(-25*1.3333, -11*1.3333),
                 scale = 0.6666
               }
@@ -1967,7 +1964,7 @@ data:extend({
             frame_count = 30,
             animation_speed = 0.4,
             frame_sequence = drill_animation_sequence,
-            direction_count = 1,
+
             shift = util.by_pixel(-3*1.3333, 3*1.3333),
             scale = 0.6666,
             tint = {0.6, 0.7, 0.8}
@@ -1981,7 +1978,7 @@ data:extend({
             frame_count = 30,
             animation_speed = 0.4,
             frame_sequence = drill_animation_sequence,
-            direction_count = 1,
+
             shift = util.by_pixel(-3*1.3333, 3*1.3333),
             scale = 0.6666,
             tint = {0.6, 0.7, 0.8}
@@ -2000,7 +1997,7 @@ data:extend({
             height = 148,
             frame_count = 1,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(21*1.3333, 10*1.3333),
             scale = 0.6666,
             tint = {0.6, 0.7, 0.8}
@@ -2041,7 +2038,7 @@ data:extend({
             height = 140,
             frame_count = 1,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(-22*1.3333, 12*1.3333),
             scale = 0.6666,
             tint = {0.6, 0.7, 0.8}
@@ -2052,7 +2049,7 @@ data:extend({
         {
           apply_tint = "status",
           always_draw = true,
-          draw_as_sprite = true,
+          -- draw_as_sprite = true,
           -- draw_as_light = true,
           north_animation = {
             filename = BASEENTITY .. "electric-mining-drill/electric-mining-drill-N-light.png",
@@ -2140,7 +2137,10 @@ data:extend({
     energy_usage = "1.2MW",
     monitor_visualization_tint = {r=78, g=173, b=255},
     fast_replaceable_group = "large-miner",
-    base_productivity = 0.05,
+    --base_productivity = 0.05,
+    effect_receiver = {
+      base_effect = {productivity = 0.05}
+    },
 
     damaged_trigger_effect = data.raw["mining-drill"]["electric-mining-drill"].damaged_trigger_effect,
     working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound,
@@ -2156,8 +2156,6 @@ data:extend({
     graphics_set = {
       drilling_vertical_movement_duration = 10 / 0.4,
       animation_progress = 1,
-      min_animation_progress = 0,
-      max_animation_progress = 30,
       status_colors = data.raw["mining-drill"]["electric-mining-drill"].graphics_set.status_colors,
       circuit_connector_layer = "object",
       circuit_connector_secondary_draw_order = { north = 14, east = 30, south = 30, west = 30 },
@@ -2173,7 +2171,7 @@ data:extend({
               height = 208,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*1.3333),
               repeat_count = 5,
               scale = 0.6666
@@ -2192,7 +2190,7 @@ data:extend({
               height = 188,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*1.3333),
               repeat_count = 5,
               scale = 0.6666
@@ -2211,7 +2209,7 @@ data:extend({
               height = 192,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -1*1.3333),
               repeat_count = 5,
               scale = 0.6666
@@ -2229,7 +2227,7 @@ data:extend({
               height = 188,
               frame_count = 1,
               animation_speed = 0.4,
-              direction_count = 1,
+
               shift = util.by_pixel(0, -4*1.3333),
               repeat_count = 5,
               scale = 0.6666
@@ -2263,7 +2261,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(1*1.3333, -11*1.3333),
                 scale = 0.6666
               },
@@ -2281,7 +2279,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(2*1.3333, -12*1.3333),
                 scale = 0.6666
               },
@@ -2299,7 +2297,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(1*1.3333, -11*1.3333),
                 scale = 0.6666
               },
@@ -2317,7 +2315,7 @@ data:extend({
                 frame_count = 30,
                 animation_speed = 0.4,
                 frame_sequence = drill_animation_sequence,
-                direction_count = 1,
+
                 shift = util.by_pixel(2*1.3333, -12*1.3333),
                 scale = 0.6666
               },
@@ -2342,7 +2340,7 @@ data:extend({
             frame_count = 30,
             animation_speed = 0.4,
             frame_sequence = drill_animation_sequence,
-            direction_count = 1,
+
             shift = util.by_pixel(-3*1.3333, 3*1.3333),
             scale = 0.6666
           },
@@ -2355,7 +2353,7 @@ data:extend({
             frame_count = 30,
             animation_speed = 0.4,
             frame_sequence = drill_animation_sequence,
-            direction_count = 1,
+
             shift = util.by_pixel(-3*1.3333, 3*1.3333),
             scale = 0.6666
           }
@@ -2373,7 +2371,7 @@ data:extend({
             height = 148,
             frame_count = 1,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(21*1.3333, 10*1.3333),
             scale = 0.6666
           },
@@ -2402,7 +2400,7 @@ data:extend({
             height = 140,
             frame_count = 1,
             animation_speed = 0.4,
-            direction_count = 1,
+
             shift = util.by_pixel(-22*1.3333, 12*1.3333),
             scale = 0.6666
           }
@@ -2430,7 +2428,7 @@ if mods["reskins-bobs"] then
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(0, -12*0.6666),
     tint = {240, 160, 0},
     scale = 0.6666
@@ -2444,7 +2442,7 @@ if mods["reskins-bobs"] then
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(0, -12*0.6666),
     blend_mode = "additive",
     scale = 0.6666
@@ -2462,7 +2460,7 @@ if mods["reskins-bobs"] then
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(2*0.6666, -12*0.6666),
     tint = {240, 160, 0},
     scale = 0.6666
@@ -2476,7 +2474,7 @@ if mods["reskins-bobs"] then
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(2*0.6666, -12*0.6666),
     blend_mode = "additive",
     scale = 0.6666
@@ -2494,7 +2492,7 @@ small_miner.working_visualisations[6].east_animation = { layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(-2*0.6666, 4*0.6666),
     tint = {240, 160, 0},
     scale = 0.6666
@@ -2508,7 +2506,7 @@ small_miner.working_visualisations[6].east_animation = { layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(-2*0.6666, 4*0.6666),
     blend_mode = "additive",
     scale = 0.6666
@@ -2554,7 +2552,7 @@ medium_miner.working_visualisations[3].north_animation.layers = {
         frame_count = 30,
         animation_speed = 0.4,
         frame_sequence = drill_animation_sequence,
-        direction_count = 1,
+
         shift = util.by_pixel(1, -11),
         tint = {240, 160, 0},
         scale = 0.5
@@ -2568,7 +2566,7 @@ medium_miner.working_visualisations[3].north_animation.layers = {
         frame_count = 30,
         animation_speed = 0.4,
         frame_sequence = drill_animation_sequence,
-        direction_count = 1,
+
         shift = util.by_pixel(1, -11),
         blend_mode = "additive",
         scale = 0.5
@@ -2586,7 +2584,7 @@ medium_miner.working_visualisations[3].east_animation.layers = {
         frame_count = 30,
         animation_speed = 0.4,
         frame_sequence = drill_animation_sequence,
-        direction_count = 1,
+
         shift = util.by_pixel(2, -12),
         tint = {240, 160, 0},
         scale = 0.5
@@ -2600,7 +2598,7 @@ medium_miner.working_visualisations[3].east_animation.layers = {
         frame_count = 30,
         animation_speed = 0.4,
         frame_sequence = drill_animation_sequence,
-        direction_count = 1,
+
         shift = util.by_pixel(2, -12),
         blend_mode = "additive",
         scale = 0.5
@@ -2618,7 +2616,7 @@ medium_miner.working_visualisations[6].east_animation = { layers = {
         frame_count = 30,
         animation_speed = 0.4,
         frame_sequence = drill_animation_sequence,
-        direction_count = 1,
+
         shift = util.by_pixel(-3, 3),
         tint = {240, 160, 0},
         scale = 0.5
@@ -2632,7 +2630,7 @@ medium_miner.working_visualisations[6].east_animation = { layers = {
         frame_count = 30,
         animation_speed = 0.4,
         frame_sequence = drill_animation_sequence,
-        direction_count = 1,
+
         shift = util.by_pixel(-3, 3),
         blend_mode = "additive",
         scale = 0.5
@@ -2678,7 +2676,7 @@ large_miner.working_visualisations[3].north_animation.layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(1*1.3333, -11*1.3333),
     tint = {240, 160, 0},
     scale = 0.6666
@@ -2692,7 +2690,7 @@ large_miner.working_visualisations[3].north_animation.layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(1*1.3333, -11*1.3333),
     blend_mode = "additive",
     scale = 0.6666
@@ -2710,7 +2708,7 @@ large_miner.working_visualisations[3].east_animation.layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(2*1.3333, -12*1.3333),
     tint = {240, 160, 0},
     scale = 0.6666
@@ -2724,7 +2722,7 @@ large_miner.working_visualisations[3].east_animation.layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(2*1.3333, -12*1.3333),
     blend_mode = "additive",
     scale = 0.6666
@@ -2742,7 +2740,7 @@ large_miner.working_visualisations[6].east_animation = { layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(-3*1.3333, 3*1.3333),
     tint = {240, 160, 0},
     scale = 0.6666
@@ -2756,7 +2754,7 @@ large_miner.working_visualisations[6].east_animation = { layers = {
     frame_count = 30,
     animation_speed = 0.4,
     frame_sequence = drill_animation_sequence,
-    direction_count = 1,
+
     shift = util.by_pixel(-3*1.3333, 3*1.3333),
     blend_mode = "additive",
     scale = 0.6666
