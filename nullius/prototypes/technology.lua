@@ -266,7 +266,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-crushed-sandstone"
+        recipe = "nullius-sand"
       },
       {
         type = "unlock-recipe",
@@ -995,7 +995,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-crushed-limestone-1"
+        recipe = "nullius-crushed-limestone"
       }
     },
     unit = {
@@ -1247,11 +1247,11 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-silica-1"
+        recipe = "nullius-silica"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-silica-glass"
+        recipe = "nullius-glass"
       }
     },
     unit = {
@@ -1673,7 +1673,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-silicon-ingot-1"
+        recipe = "nullius-silicon-ingot"
       },
       {
         type = "unlock-recipe",

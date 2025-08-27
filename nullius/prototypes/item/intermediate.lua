@@ -923,7 +923,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-crushed-limestone-1",
+    name = "nullius-crushed-limestone",
     localised_name = {"", {"item-name.nullius-crushed-limestone"}, " ", tostring(1)},
     enabled = false,
     icon_size = 32,
@@ -1078,7 +1078,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-crushed-sandstone",
+    name = "nullius-sand",
     localised_name = {"item-name.nullius-sand"},
     enabled = false,
     category = "hand-crushing",
@@ -2720,7 +2720,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-silica-1",
+    name = "nullius-silica",
     localised_name = {"recipe-name.nullius-silica-1"},
     enabled = false,
     category = "ore-flotation",
@@ -2876,7 +2876,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-silica-glass",
+    name = "nullius-glass",
     localised_name = {"recipe-name.nullius-silica-glass"},
     show_amount_in_title = false,
     always_show_products = true,
@@ -5260,7 +5260,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-silicon-ingot-1",
+    name = "nullius-silicon-ingot",
     localised_name = {"recipe-name.nullius-silicon-ingot-1"},
     enabled = false,
     show_amount_in_title = false,
