@@ -40,12 +40,11 @@ data:extend({
     graphics_set = {
       module_icons_suppressed = true,
       animation_progress = 1,
-      min_animation_progress = 0,
       module_tint_mode = "mix",
       no_modules_tint = {1, 0, 0},
       random_animation_offset = true,
       apply_module_tint = "secondary",
-      apply_module_tint_to_light = "none",
+      --apply_module_tint_to_light = "none",
 
       animation_list = {
         {
@@ -88,8 +87,7 @@ data:extend({
         {
           render_layer = "object",
           apply_tint = true,
-          draw_as_sprite = true,
-          draw_as_light = true,
+          --draw_as_sprite = true,
           always_draw = false,
           animation = {
             filename = BASEENTITY .. "beacon/beacon-light.png",
@@ -100,6 +98,7 @@ data:extend({
             animation_speed = 0.5,
             scale = 0.4,
             shift = util.by_pixel(0.5*0.8, -18*0.8),
+            draw_as_light = true,
             blend_mode = "additive"
           }
         }
@@ -154,8 +153,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-1.png",
                   line_length = 3,
@@ -163,6 +161,7 @@ data:extend({
                   height = 42,
                   variation_count = 3,
                   shift = util.by_pixel(-18*0.8, 13*0.8),
+                  draw_as_light = true,
                   scale = 0.4
                 }
               }
@@ -207,12 +206,11 @@ data:extend({
     graphics_set =  {
       module_icons_suppressed = true,
       animation_progress = 1,
-      min_animation_progress = 0,
       module_tint_mode = "mix",
       no_modules_tint = {1, 0, 0},
       random_animation_offset = true,
       apply_module_tint = "secondary",
-      apply_module_tint_to_light = "none",
+      --apply_module_tint_to_light = "none",
 
       animation_list = {
         {
@@ -255,8 +253,7 @@ data:extend({
         {
           render_layer = "object",
           apply_tint = true,
-          draw_as_sprite = true,
-          draw_as_light = true,
+          --draw_as_sprite = true,
           always_draw = false,
           animation = {
             filename = BASEENTITY .. "beacon/beacon-light.png",
@@ -268,6 +265,7 @@ data:extend({
             scale = 0.45,
             shift = util.by_pixel(0.5*0.9, -18*0.9),
             blend_mode = "additive",
+            draw_as_light = true,
           }
         }
       },
@@ -321,8 +319,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-1.png",
                   line_length = 3,
@@ -330,6 +327,7 @@ data:extend({
                   height = 42,
                   variation_count = 3,
                   shift = util.by_pixel(-18*0.9, 13*0.9),
+                  draw_as_light = true,
                   scale = 0.45
                 }
               }
@@ -377,8 +375,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-2.png",
                   line_length = 3,
@@ -386,6 +383,7 @@ data:extend({
                   height = 46,
                   variation_count = 3,
                   shift = util.by_pixel(22*0.9, -16*0.9),
+                  draw_as_light = true,
                   scale = 0.45
                 }
               }
@@ -429,12 +427,11 @@ data:extend({
     graphics_set =  {
       module_icons_suppressed = true,
       animation_progress = 1,
-      min_animation_progress = 0,
       module_tint_mode = "mix",
       no_modules_tint = {1, 0, 0},
       random_animation_offset = true,
       apply_module_tint = "secondary",
-      apply_module_tint_to_light = "none",
+      --apply_module_tint_to_light = "none",
 
       animation_list = {
         {
@@ -476,8 +473,7 @@ data:extend({
         {
           render_layer = "object",
           apply_tint = true,
-          draw_as_sprite = true,
-          draw_as_light = true,
+          --draw_as_sprite = true,
           always_draw = false,
           animation = {
             filename = BASEENTITY .. "beacon/beacon-light.png",
@@ -489,6 +485,7 @@ data:extend({
             scale = 0.5,
             shift = util.by_pixel(0.5, -18),
             blend_mode = "additive",
+            draw_as_light = true,
           }
         }
       },
@@ -542,8 +539,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-1.png",
                   line_length = 3,
@@ -551,6 +547,7 @@ data:extend({
                   height = 42,
                   variation_count = 3,
                   shift = util.by_pixel(-18, 13),
+                  draw_as_light = true,
                   scale = 0.5
                 }
               }
@@ -598,8 +595,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-2.png",
                   line_length = 3,
@@ -607,6 +603,7 @@ data:extend({
                   height = 46,
                   variation_count = 3,
                   shift = util.by_pixel(22, -16),
+                  draw_as_light = true,
                   scale = 0.5
                 }
               }
@@ -650,12 +647,11 @@ data:extend({
     graphics_set =  {
       module_icons_suppressed = true,
       animation_progress = 1,
-      min_animation_progress = 0,
       module_tint_mode = "mix",
       no_modules_tint = {1, 0, 0},
       random_animation_offset = true,
       apply_module_tint = "secondary",
-      apply_module_tint_to_light = "none",
+      --apply_module_tint_to_light = "none",
 
       animation_list = {
         {
@@ -698,8 +694,7 @@ data:extend({
         {
           render_layer = "object",
           apply_tint = true,
-          draw_as_sprite = true,
-          draw_as_light = true,
+          --draw_as_sprite = true,
           always_draw = false,
           animation = {
             filename = BASEENTITY .. "beacon/beacon-light.png",
@@ -711,6 +706,7 @@ data:extend({
             scale = 0.6,
             shift = util.by_pixel(0.5*1.2, -18*1.2),
             blend_mode = "additive",
+            draw_as_light = true,
           }
         }
       },
@@ -764,8 +760,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-1.png",
                   line_length = 3,
@@ -773,6 +768,7 @@ data:extend({
                   height = 42,
                   variation_count = 3,
                   shift = util.by_pixel(-18*1.2, 13*1.2),
+                  draw_as_light = true,
                   scale = 0.6
                 }
               }
@@ -815,12 +811,11 @@ data:extend({
     graphics_set =  {
       module_icons_suppressed = true,
       animation_progress = 1,
-      min_animation_progress = 0,
       module_tint_mode = "mix",
       no_modules_tint = {1, 0, 0},
       random_animation_offset = true,
       apply_module_tint = "secondary",
-      apply_module_tint_to_light = "none",
+      --apply_module_tint_to_light = "none",
 
       animation_list = {
         {
@@ -862,8 +857,7 @@ data:extend({
         {
           render_layer = "object",
           apply_tint = true,
-          draw_as_sprite = true,
-          draw_as_light = true,
+          --draw_as_sprite = true,
           always_draw = false,
           animation = {
             filename = BASEENTITY .. "beacon/beacon-light.png",
@@ -875,6 +869,7 @@ data:extend({
             scale = 0.665,
             shift = util.by_pixel(0.5*1.33, -18*1.33),
             blend_mode = "additive",
+            draw_as_light = true,
           }
         }
       },
@@ -928,8 +923,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-1.png",
                   line_length = 3,
@@ -937,6 +931,7 @@ data:extend({
                   height = 42,
                   variation_count = 3,
                   shift = util.by_pixel(-18*1.33, 13*1.33),
+                  draw_as_light = true,
                   scale = 0.665
                 }
               }
@@ -984,8 +979,7 @@ data:extend({
               },
               {
                 apply_module_tint = "secondary",
-                draw_as_light = true,
-                draw_as_sprite = false,
+                --draw_as_sprite = false,
                 pictures = {
                   filename = BASEENTITY .. "beacon/beacon-module-lights-2.png",
                   line_length = 3,
@@ -993,6 +987,7 @@ data:extend({
                   height = 46,
                   variation_count = 3,
                   shift = util.by_pixel(22*1.33, -16*1.33),
+                  draw_as_light = true,
                   scale = 0.665
                 }
               }
