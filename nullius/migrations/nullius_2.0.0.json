@@ -22,9 +22,27 @@
 	  ["nullius-boxed-filter-inserter-4", "nullius-boxed-inserter-4"],
 	  
 	  ["nullius-one-way-valve-1", "nullius-one-way-valve"],
+	  
 	  ["nullius-iron-ingot-1", "nullius-iron-ingot"],
 	  ["nullius-steel-ingot-1", "nullius-steel-ingot"],
-	  ["nullius-aluminum-ingot-1", "nullius-aluminum-ingot"]
+	  ["nullius-aluminum-ingot-1", "nullius-aluminum-ingot"],
+	  ["nullius-titanium-ingot-1", "nullius-titanium-ingot"],
+	  
+	  ["nullius-iron-plate-1", "nullius-iron-plate"],
+	  ["nullius-steel-plate-1", "nullius-steel-plate"],
+	  ["nullius-aluminum-plate-1", "nullius-aluminum-plate"],
+	  
+	  ["nullius-iron-rod-1", "nullius-iron-rod"],
+	  ["nullius-steel-rod-1", "nullius-steel-rod"],
+	  ["nullius-aluminum-rod-1", "nullius-aluminum-rod"],
+	  
+	  ["nullius-iron-sheet-1", "nullius-iron-sheet"],
+	  ["nullius-steel-sheet-1", "nullius-steel-sheet"],
+	  ["nullius-aluminum-sheet-1", "nullius-aluminum-sheet"],
+	  
+	  ["nullius-iron-wire-1", "nullius-iron-wire"],
+	  ["nullius-aluminum-wire-1", "nullius-aluminum-wire"]
+	  
   ],
   "item": [
     ["nullius-box-filter-inserter-2", "nullius-box-inserter-2"],

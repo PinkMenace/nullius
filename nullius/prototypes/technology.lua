@@ -125,15 +125,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-iron-plate-1"
+        recipe = "nullius-iron-plate"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-iron-rod-1"
+        recipe = "nullius-iron-rod"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-iron-sheet-1"
+        recipe = "nullius-iron-sheet"
       },
       {
         type = "unlock-recipe",
@@ -212,7 +212,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-iron-wire-1"
+        recipe = "nullius-iron-wire"
       },
       {
         type = "unlock-recipe",
@@ -967,7 +967,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-steel-plate-1"
+        recipe = "nullius-steel-plate"
       }
     },
     unit = {
@@ -1089,7 +1089,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-steel-rod-1"
+        recipe = "nullius-steel-rod"
       },
       {
         type = "unlock-recipe",
@@ -1097,7 +1097,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-steel-sheet-1"
+        recipe = "nullius-steel-sheet"
       },
       {
         type = "unlock-recipe",
@@ -1770,19 +1770,19 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-aluminum-plate-1"
+        recipe = "nullius-aluminum-plate"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-aluminum-rod-1"
+        recipe = "nullius-aluminum-rod"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-aluminum-sheet-1"
+        recipe = "nullius-aluminum-sheet"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-aluminum-wire-1"
+        recipe = "nullius-aluminum-wire"
       }
     },
     unit = {
@@ -4868,7 +4868,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-titanium-ingot-1"
+        recipe = "nullius-titanium-ingot"
       },
       {
         type = "unlock-recipe",

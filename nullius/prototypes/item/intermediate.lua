@@ -3199,7 +3199,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-iron-rod-1",
+    name = "nullius-iron-rod",
     localised_name = {"item-name.nullius-iron-rod"},
     enabled = false,
     show_amount_in_title = false,
@@ -3264,7 +3264,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-steel-rod-1",
+    name = "nullius-steel-rod",
     localised_name = {"item-name.nullius-steel-rod"},
     enabled = false,
     show_amount_in_title = false,
@@ -3327,7 +3327,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-aluminum-rod-1",
+    name = "nullius-aluminum-rod",
     localised_name = {"item-name.nullius-aluminum-rod"},
     enabled = false,
     show_amount_in_title = false,
@@ -3450,7 +3450,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-aluminum-plate-1",
+    name = "nullius-aluminum-plate",
     localised_name = {"item-name.nullius-aluminum-plate"},
     enabled = false,
     show_amount_in_title = false,
@@ -3513,7 +3513,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-iron-plate-1",
+    name = "nullius-iron-plate",
     localised_name = {"item-name.nullius-iron-plate"},
     enabled = false,
     show_amount_in_title = false,
@@ -3578,7 +3578,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-steel-plate-1",
+    name = "nullius-steel-plate",
     localised_name = {"item-name.nullius-steel-plate"},
     enabled = false,
     show_amount_in_title = false,
@@ -3682,7 +3682,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-iron-sheet-1",
+    name = "nullius-iron-sheet",
     localised_name = {"item-name.nullius-iron-sheet"},
     enabled = false,
     category = "hand-casting",
@@ -3752,7 +3752,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-steel-sheet-1",
+    name = "nullius-steel-sheet",
     localised_name = {"item-name.nullius-steel-sheet"},
     enabled = false,
     category = "hand-casting",
@@ -3822,7 +3822,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-aluminum-sheet-1",
+    name = "nullius-aluminum-sheet",
     localised_name = {"item-name.nullius-aluminum-sheet"},
     enabled = false,
     category = "hand-casting",
@@ -4066,7 +4066,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-iron-wire-1",
+    name = "nullius-iron-wire",
     localised_name = {"item-name.nullius-iron-wire"},
     enabled = false,
     category = "hand-casting",
@@ -4137,7 +4137,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-aluminum-wire-1",
+    name = "nullius-aluminum-wire",
     localised_name = {"item-name.nullius-aluminum-wire"},
     enabled = false,
     category = "hand-casting",
@@ -7196,8 +7196,8 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-titanium-ingot-1",
-	localised_name = {"", {"item-name.nullius-titanium-ingot"}, " ", tostring(1)},
+    name = "nullius-titanium-ingot",
+	  localised_name = {"", {"item-name.nullius-titanium-ingot"}, " ", tostring(1)},
     enabled = false,
     category = "ore-flotation",
     order = "nullius-db",
