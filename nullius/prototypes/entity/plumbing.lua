@@ -1345,7 +1345,7 @@ data:extend({
     
     mode = "overflow",
     threshold = 0.25,
-    flow_rate = 200,
+    flow_rate = 50,
     
     animations = {
       north = {
@@ -1437,7 +1437,7 @@ data:extend({
     impact_category = "metal",
     
     mode = "one-way",
-    flow_rate = 200,
+    flow_rate = 50,
     
     animations = {
       north = {
@@ -1530,7 +1530,7 @@ data:extend({
     
     mode = "top-up",
     threshold = 0.5,
-    flow_rate = 200,
+    flow_rate = 50,
     
     animations = {
       north = {
@@ -1623,7 +1623,7 @@ data:extend({
     
     mode = "overflow",
     threshold = 0.75,
-    flow_rate = 200,
+    flow_rate = 50,
     
     animations = {
       north = {
