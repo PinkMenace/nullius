@@ -2,7 +2,7 @@ local invisible = {
   filename = "__nullius__/graphics/icons/blank.png",
   width = 32,
   height = 32,
-  frame_count = 1,
+  --frame_count = 1,
   line_length = 1
 }
 
@@ -87,6 +87,7 @@ local function set_furnace_idle(proto, overlay, tint)
   local vertical = turbine_frame(true, overlay, tint)
   local horizontal = turbine_frame(false, overlay, tint)
   proto.graphics_set = {
+    always_draw_idle_animation = true,
     idle_animation = {
 	    north = vertical,
         east = horizontal,
@@ -94,16 +95,16 @@ local function set_furnace_idle(proto, overlay, tint)
         west = horizontal
       }
   }
-  proto.graphics_set.working_visualisations = {
-    {
-      always_draw = true,
-      render_layer = "object-under", -- draw under the generator animation (only used for the preview)
-      north_animation = vertical,
-        east_animation = horizontal,
-	    south_animation = vertical,
-        west_animation = horizontal
-    }
-  }
+  -- proto.graphics_set.working_visualisations = {
+    -- {
+    --   always_draw = true,
+    --   render_layer = "object-under", -- draw under the generator animation (only used for the preview)
+    --   north_animation = vertical,
+    --     east_animation = horizontal,
+	  --   south_animation = vertical,
+    --     west_animation = horizontal
+    -- }
+  -- }
 end
 
 local function set_generator_animation(proto, overlay, tint)
@@ -227,10 +228,8 @@ local furnace1cb = {
   close_sound = data.raw.generator["steam-turbine"].close_sound,
   impact_category = data.raw.generator["steam-turbine"].impact_category,
   water_reflection = data.raw.generator["steam-turbine"].water_reflection,
-  bottleneck_ignore = true,
   show_recipe_icon = false,
   show_recipe_icon_on_map = false,
-  always_draw_idle_animation = true,
   additional_pastable_entities = {
       "nullius-turbine-open-backup-1", "nullius-turbine-closed-backup-1",
 	  "nullius-turbine-open-standard-1", "nullius-turbine-closed-standard-1",
@@ -310,8 +309,6 @@ local generator1ob = {
   energy_source = { type = "electric", usage_priority = "tertiary" },
   smoke = data.raw.generator["steam-turbine"].smoke,
   working_sound = data.raw.generator["steam-turbine"].working_sound,
-  min_perceived_performance = 0.25,
-  performance_to_sound_speedup = 0.5,
   horizontal_animation = generator_horizontal,
   vertical_animation = generator_vertical,
   fluid_box = {
@@ -388,7 +385,6 @@ local vent1 = {
   hidden = true,
   selectable_in_game = false,
   allow_copy_paste = false,
-  bottleneck_ignore = true,
   show_recipe_icon = false,
   show_recipe_icon_on_map = false,
   crafting_categories = {"nullius-power-sink"},
