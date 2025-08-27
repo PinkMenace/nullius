@@ -1335,8 +1335,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, -0}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1428,8 +1428,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, 0}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1520,8 +1520,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, 0}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
@@ -1613,8 +1613,8 @@ data:extend({
     fluid_box = {
       volume = 100,
       pipe_connections = {
-        {flow_direction = "output", position = {0, 0.1}, direction = defines.direction.south},
-        {flow_direction = "input-output", position = {0, -0.1}, direction = defines.direction.north }
+        {flow_direction = "output", position = {0, 0}, direction = defines.direction.south},
+        {flow_direction = "input-output", position = {0, 0}, direction = defines.direction.north }
       },
 	    pipe_covers = pipecoverspictures()
     },
