@@ -119,6 +119,7 @@ for i=1,3 do
       placeable_by = {item = "nullius-wind-turbine-"..i, count = 1},
       max_health = 800*scale,
       corpse = "big-remnants",
+      hidden_in_factoriopedia = true,
       resistances = {
         { type = "impact", decrease = 100, percent = 90 }
       },
