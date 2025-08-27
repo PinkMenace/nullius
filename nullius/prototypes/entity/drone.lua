@@ -20,8 +20,10 @@ data:extend({
     open_sound = data.raw["artillery-turret"]["artillery-turret"].open_sound,
     close_sound = data.raw["artillery-turret"]["artillery-turret"].close_sound,
     mined_sound = {filename = "__core__/sound/deconstruct-large.ogg",volume = 0.8},
-    rotating_sound = { sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.6 }},
-    rotating_stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" },
+    rotating_sound = { 
+      sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.6 },
+      stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" },
+    },
     max_health = 1000,
     corpse = "artillery-turret-remnants",
     dying_explosion = "artillery-turret-explosion",
@@ -45,7 +47,7 @@ data:extend({
     cannon_barrel_recoil_shiftings_load_correction_matrix = data.raw["artillery-turret"]["artillery-turret"].cannon_barrel_recoil_shiftings_load_correction_matrix,
     impact_category = data.raw["artillery-turret"]["artillery-turret"].impact_category,
     water_reflection = data.raw["artillery-turret"]["artillery-turret"].water_reflection,
-    base_shift = util.by_pixel(0, -22),
+    --base_shift = util.by_pixel(0, -22),
     base_picture_render_layer = "lower-object-above-shadow",
     cannon_barrel_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_barrel_pictures,
     cannon_base_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_base_pictures,
@@ -63,7 +65,6 @@ data:extend({
             width = 207,
             height = 199,
             frame_count = 1,
-            direction_count = 1,
             shift = util.by_pixel(-0, 22),
             scale = 0.5,
             tint = {0.7, 0.7, 0.9}
@@ -75,7 +76,6 @@ data:extend({
             width = 277,
             height = 149,
             frame_count = 1,
-            direction_count = 1,
             shift = util.by_pixel(18, 38),
             draw_as_shadow = true,
             scale = 0.5
@@ -99,8 +99,10 @@ data:extend({
     open_sound = data.raw["artillery-turret"]["artillery-turret"].open_sound,
     close_sound = data.raw["artillery-turret"]["artillery-turret"].close_sound,
     mined_sound = {filename = "__core__/sound/deconstruct-large.ogg",volume = 0.8},
-    rotating_sound = { sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.6 }},
-    rotating_stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" },
+    rotating_sound = { 
+      sound = { filename = "__base__/sound/fight/artillery-rotation-loop.ogg", volume = 0.6 },
+      stopped_sound = { filename = "__base__/sound/fight/artillery-rotation-stop.ogg" },
+    },
     max_health = 1200,
     corpse = "artillery-turret-remnants",
     dying_explosion = "artillery-turret-explosion",
@@ -124,7 +126,7 @@ data:extend({
     cannon_barrel_recoil_shiftings_load_correction_matrix = data.raw["artillery-turret"]["artillery-turret"].cannon_barrel_recoil_shiftings_load_correction_matrix,
     impact_category = data.raw["artillery-turret"]["artillery-turret"].impact_category,
     water_reflection = data.raw["artillery-turret"]["artillery-turret"].water_reflection,
-    base_shift = util.by_pixel(0, -22),
+    --base_shift = util.by_pixel(0, -22),
     base_picture_render_layer = "lower-object-above-shadow",
     cannon_barrel_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_barrel_pictures,
     cannon_base_pictures = data.raw["artillery-turret"]["artillery-turret"].cannon_base_pictures,
@@ -142,7 +144,6 @@ data:extend({
             width = 207,
             height = 199,
             frame_count = 1,
-            direction_count = 1,
             shift = util.by_pixel(-0, 22),
             scale = 0.5
         },
@@ -153,7 +154,6 @@ data:extend({
             width = 277,
             height = 149,
             frame_count = 1,
-            direction_count = 1,
             shift = util.by_pixel(18, 38),
             draw_as_shadow = true,
             scale = 0.5
@@ -402,8 +402,8 @@ local function create_projectile(base_name, suffix, drone_picture, drone_shadow)
       map_color = {r=1, g=1, b=0},
       chart_picture = data.raw["artillery-projectile"]["artillery-projectile"].chart_picture,
       height_from_ground = 280 / 64,
-      drone_picture,
-      drone_shadow,
+      picture = drone_picture,
+      shadow = drone_shadow,
 
       action = {
         type = "direct",
