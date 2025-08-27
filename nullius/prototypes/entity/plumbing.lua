@@ -65,8 +65,8 @@ local si1 = {
   next_upgrade = "nullius-seawater-intake-2",
   working_sound = op.working_sound,
   impact_category = op.impact_category,
-  circuit_connector = circuit_connector_definitions["offshore-pump"],
-  circuit_wire_max_distance = default_circuit_wire_max_distance,
+  -- circuit_connector = circuit_connector_definitions["offshore-pump"],
+  -- circuit_wire_max_distance = default_circuit_wire_max_distance,
   graphics_set = {}
 }
 
@@ -182,8 +182,8 @@ data:extend({
     impact_category = op.impact_category,
     working_sound = op.working_sound,
     placeable_position_visualization = op.placeable_position_visualization,
-    circuit_connector = circuit_connector_definitions["offshore-pump"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["offshore-pump"],
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", percent = 75 }
@@ -523,8 +523,8 @@ data:extend({
     impact_category = op.impact_category,
     working_sound = op.working_sound,
     placeable_position_visualization = op.placeable_position_visualization,
-    circuit_connector = circuit_connector_definitions["offshore-pump"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["offshore-pump"],
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     water_reflection = op.water_reflection,
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },

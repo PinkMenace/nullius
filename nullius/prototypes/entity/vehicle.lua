@@ -528,6 +528,8 @@ data:extend({
     door_opening_speed = 1 / (4.25 * 60),
     can_launch_without_landing_pads = true,
     to_be_inserted_to_rocket_inventory_size = 1,
+    circuit_connector = circuit_connector_definitions["rocket-silo"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
 
     base_engine_light = data.raw["rocket-silo"]["rocket-silo"].base_engine_light,
     shadow_sprite = data.raw["rocket-silo"]["rocket-silo"].shadow_sprite,

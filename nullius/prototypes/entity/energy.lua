@@ -1921,8 +1921,8 @@ data:extend({
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-2",
-    circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"], -- we decided to not have those for the geothermal plant
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
       filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_02.png",
@@ -1986,8 +1986,8 @@ data:extend({
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
     next_upgrade = "nullius-geothermal-build-3",
-    circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = {
       filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_02.png",
@@ -2037,8 +2037,8 @@ data:extend({
     working_sound = data.raw["mining-drill"]["nullius-geothermal-build-1"].working_sound,
     impact_category = "metal",
     fast_replaceable_group = "geothermal-plant",
-    circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
-    circuit_wire_max_distance = default_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["nullius-geothermal-reactor"],
+    -- circuit_wire_max_distance = default_circuit_wire_max_distance,
     light = {intensity = 0.4, size = 9.9, shift = {0.0, 0.0}, color = {r = 1.0, g = 0.5, b = 0.0}},
     working_light_picture = { -- TODO: integrate the graphics with the heat pipes correctly
       filename = "__angelssmeltinggraphics__/graphics/entity/chemical-furnace/chemical-furnace-base_02.png",
@@ -3491,8 +3491,8 @@ data:extend({
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
     --neighbour_collision_increase = 0.1,
-    circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
-    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["nullius-solar-collector"], -- we decided not to have circuit connections for this building
+    -- circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
       { type = "fire", decrease = 25, percent = 60 },
       { type = "impact", decrease = 50, percent = 80 },
@@ -3571,8 +3571,8 @@ data:extend({
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
     --neighbour_collision_increase = 0.1,
-    circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
-    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
+    -- circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
       { type = "fire", decrease = 25, percent = 60 },
       { type = "impact", decrease = 50, percent = 80 },
@@ -3650,8 +3650,8 @@ data:extend({
     energy_source = { type = "void" },
     neighbour_bonus = 0.1,
     --neighbour_collision_increase = 0.1,
-    circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
-    circuit_wire_max_distance = reactor_circuit_wire_max_distance,
+    -- circuit_connector = circuit_connector_definitions["nullius-solar-collector"],
+    -- circuit_wire_max_distance = reactor_circuit_wire_max_distance,
     resistances = {
       { type = "fire", decrease = 25, percent = 60 },
       { type = "impact", decrease = 50, percent = 80 },
