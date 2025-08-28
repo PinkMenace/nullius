@@ -460,7 +460,7 @@ data:extend({
       {element_tint["carbon"], element_tint["carbon"], element_tint["hydrogen"]}
     ),
     enabled = false,
-	allow_decomposition = false,
+	  allow_decomposition = false,
     allow_as_intermediate = false,
     category = "distillation",
     subgroup = "biology-oil",
@@ -640,7 +640,7 @@ data:extend({
     },
     enabled = false,
     allow_decomposition = false,
-	show_amount_in_title = false,
+	  show_amount_in_title = false,
     always_show_products = true,
     category = "nanotechnology",
     subgroup = "biology-bacteria",

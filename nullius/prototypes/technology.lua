@@ -561,7 +561,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-carbon-monoxide-to-graphite"
+        recipe = "nullius-graphite"
       }
     },
     unit = {
@@ -4697,7 +4697,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-textile-1"
+        recipe = "nullius-textile"
       }
     },
     unit = {

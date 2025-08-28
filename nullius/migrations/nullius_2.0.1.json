@@ -28,6 +28,9 @@
 	["nullius-calcium-chloride-dehydration", "nullius-calcium-chloride"],
 	["nullius-cement-1", "nullius-cement"],
 	["nullius-crushed-stone", "nullius-gravel"],
-	["nullius-gravel-disposal", "nullius-mineral-dust"]
+	["nullius-gravel-disposal", "nullius-mineral-dust"],
+	
+	["nullius-carbon-monoxide-to-graphite", "nullius-graphite"],
+	["nullius-textile-1", "nullius-textile"]
   ]
 }

@@ -7025,7 +7025,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-textile-1",
+    name = "nullius-textile",
     localised_name = {"", {"item-name.nullius-textile"}, " ", tostring(1)},
     enabled = false,
     always_show_made_in = true,

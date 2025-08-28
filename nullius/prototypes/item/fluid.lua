@@ -3205,7 +3205,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-carbon-monoxide-to-graphite",
+    name = "nullius-graphite",
+    localised_name = {"recipe-name.nullius-carbon-monoxide-to-graphite"},
     icons = {
       {
         icon = "__base__/graphics/icons/coal-dark-background.png",
@@ -3235,7 +3236,8 @@ data:extend({
     results = {
       {type="item", name="nullius-graphite", amount=1},
       {type="fluid", name="nullius-water", amount=4}
-    }
+    },
+    main_product = "nullius-graphite"
   },
   {
     type = "recipe",
