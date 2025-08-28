@@ -90,6 +90,23 @@
 	["nullius-rail", "rail"],
 	["nullius-train-stop", "train-stop"],
 	["nullius-rail-signal", "rail-signal"],
-	["nullius-chain-signal", "rail-chain-signal"]
+	["nullius-chain-signal", "rail-chain-signal"],
+	["nullius-iron-pipe", "pipe"],
+	["nullius-underground-pipe-1", "pipe-to-ground"],
+	["nullius-steel-pipe", "nullius-pipe-2"],
+	["nullius-medium-tank-1", "storage-tank"],
+	["nullius-pump-3", "pump"],
+	["nullius-sensor-node-1", "radar"],
+	["nullius-repair-pack", "repair-pack"],
+	["nullius-barrel-1", "barrel"],
+	["nullius-rocket-fuel", "rocket-fuel"],
+	["nullius-insulated-wire-1", "copper-cable"],
+	["nullius-stone-block", "stone-brick"],
+	["nullius-concrete-1", "concrete"],
+	["nullius-reinforced-concrete", "refined-concrete"],
+	["nullius-wall", "stone-wall"],
+	["nullius-gate", "gate"],
+	["nullius-hazard-concrete", "refined-hazard-concrete"],
+	["nullius-explosive", "cliff-explosives"]
   ]
 }

@@ -38,6 +38,23 @@ clutterpedia["nullius-rail"] =                  {name = "rail",                 
 clutterpedia["nullius-train-stop"] =            {name = "train-stop",                       tech = "nullius-freight-logistics"}
 clutterpedia["nullius-rail-signal"] =           {name = "rail-signal",                      tech = "nullius-traffic-control"}
 clutterpedia["nullius-chain-signal"] =          {name = "rail-chain-signal",                tech = "nullius-traffic-control"}
+clutterpedia["nullius-iron-pipe"] =             {name = "pipe",                             tech = "nullius-plumbing-1"}
+clutterpedia["nullius-underground-pipe-1"] =    {name = "pipe-to-ground",                   tech = "nullius-plumbing-2"}
+clutterpedia["nullius-steel-pipe"] =            {name = "nullius-pipe-2",                   tech = "nullius-plumbing-3"} --- not vanilla !!
+clutterpedia["nullius-medium-tank-1"] =         {name = "storage-tank",                     tech = "nullius-plumbing-1"}
+clutterpedia["nullius-pump-3"] =                {name = "pump",                             tech = "nullius-pumping-3"}
+clutterpedia["nullius-sensor-node-1"] =         {name = "radar",                            tech = "nullius-sensors-2"}
+clutterpedia["nullius-repair-pack"] =           {name = "repair-pack",                      tech = "nullius-maintenance"}
+clutterpedia["nullius-barrel-1"] =              {name = "barrel",                           tech = "nullius-barreling-1"}
+clutterpedia["nullius-rocket-fuel"] =           {name = "rocket-fuel",                      tech = "nullius-rocket-science-1"}
+clutterpedia["nullius-insulated-wire-1"] =      {name = "copper-cable",                     tech = "nullius-insulation-1"}
+clutterpedia["nullius-stone-block"] =           {name = "stone-brick",                      tech = "nullius-masonry-2"}
+clutterpedia["nullius-concrete-1"] =            {name = "concrete",                         tech = "nullius-concrete-1"}
+clutterpedia["nullius-reinforced-concrete"] =   {name = "refined-concrete",                 tech = "nullius-concrete-2"}
+clutterpedia["nullius-wall"] =                  {name = "stone-wall",                       tech = "nullius-architecture-1"}
+clutterpedia["nullius-gate"] =                  {name = "gate",                             tech = "nullius-architecture-1"}
+clutterpedia["nullius-hazard-concrete"] =       {name = "refined-hazard-concrete",          tech = "nullius-aesthetics-2"}
+clutterpedia["nullius-explosive"] =             {name = "cliff-explosives",                 tech = "nullius-explosives-2"}
 
 
 function generate_migrations()

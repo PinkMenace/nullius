@@ -880,7 +880,7 @@ data:extend({
     type = "recipe",
     name = "nullius-explosive-2",
 	  localised_name = {"", {"item-name.nullius-explosive"}, " ", tostring(2)},
-	icons = {
+	  icons = {
       {
         icon = "__base__/graphics/icons/explosives.png",
         icon_size = 64,
@@ -890,11 +890,10 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-aluminium.png",
         icon_size = 64,
-        
-		scale = 0.3,
+		    scale = 0.3,
         shift = {-7, -7}
       }
-	},
+	  },
     order = "nullius-xd",
     enabled = false,
     always_show_made_in = true,
@@ -923,9 +922,9 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-boxed-explosive-2",
-	localised_name = {"recipe-name.nullius-boxed",
+	  localised_name = {"recipe-name.nullius-boxed",
 	    {"", {"item-name.nullius-explosive"}, " ", tostring(2)}},
-	icons = {
+	  icons = {
       {
         icon = ICONPATH .. "crate.png",
         icon_size = 64
@@ -939,11 +938,10 @@ data:extend({
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/powder-aluminium.png",
         icon_size = 64,
-        
-		scale = 0.27,
+		    scale = 0.27,
         shift = {-6, -6}
       }
-	},
+	  },
     enabled = false,
     always_show_made_in = true,
     category = "basic-chemistry",

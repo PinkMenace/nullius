@@ -1254,7 +1254,7 @@ data:extend({
     type = "recipe",
     name = "nullius-barrel-1",
 	  localised_name = {"", {"item-name.barrel"}, " ", tostring(1)},
-	icons = {
+	  icons = {
       {
         icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
         icon_size = 64,

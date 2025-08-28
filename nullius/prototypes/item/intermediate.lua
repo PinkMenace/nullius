@@ -4349,7 +4349,7 @@ data:extend({
     type = "recipe",
     name = "nullius-insulated-wire-2",
     localised_name = {"", {"item-name.nullius-insulated-wire"}, " ", tostring(2)},
-	icons = {
+	  icons = {
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/wire-coil-tin.png",
         icon_size = 64,
