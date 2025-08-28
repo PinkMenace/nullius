@@ -57,6 +57,18 @@ clutterpedia["nullius-hazard-concrete"] =       {name = "refined-hazard-concrete
 clutterpedia["nullius-explosive"] =             {name = "cliff-explosives",                 tech = "nullius-explosives-2"}
 
 
+-- Attempt at fluids renamings
+clutterpedia["nullius-desalination"] =                      {name = "nullius-water",                tech = "nullius-desalination", main_product = true}
+clutterpedia["nullius-seawater-filtration"] =               {name = "nullius-saline",               tech = "nullius-water-filtration-1"}
+clutterpedia["nullius-hydrogen-chloride-neutralization"] =  {name = "nullius-brine",                tech = "nullius-inorganic-chemistry-1"}
+clutterpedia["nullius-air-separation-1"] =                  {name = "nullius-nitrogen",             tech = "nullius-air-separation-1", main_product = true}
+clutterpedia["nullius-residual-separation"] =               {name = "nullius-argon",                tech = "nullius-air-separation-2", main_product = true}
+clutterpedia["nullius-carbon-dioxide-to-monoxide"] =        {name = "nullius-carbon-monoxide",      tech = "nullius-carbon-sequestration-2"}
+clutterpedia["nullius-carbon-dioxide-to-methane"] =         {name = "nullius-methane",              tech = "nullius-carbon-sequestration-1"}
+clutterpedia["nullius-methane-to-ethylene"] =               {name = "nullius-ethylene",             tech = "nullius-organic-chemistry-1"}
+--clutterpedia["nullius-hydrogen-chloride-electrolysis"] =    {name = "nullius-chlorine",             tech = "nullius-electrolysis-3"} -- far in the tech tree
+
+
 function generate_migrations()
     local contents = "\n---- Generated migrations ----\n"
     for ogRecipe, entry in pairs(clutterpedia) do
@@ -70,6 +82,9 @@ function recipe_renaming()
         local recipe = data.raw.recipe[ogRecipeName]
         data.raw.recipe[ogRecipeName] = nil
         recipe.name = entry.name
+        if entry.main_product then
+            recipe.main_product = entry.name
+        end
         data:extend{recipe}
         for _,effect in pairs(data.raw.technology[entry.tech].effects) do
             if effect.type == "unlock-recipe" and effect.recipe == ogRecipeName then
