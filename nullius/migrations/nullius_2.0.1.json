@@ -23,6 +23,11 @@
 	["nullius-silica-1", "nullius-silica"],
 	["nullius-silicon-ingot-1", "nullius-silicon-ingot"],
 	["nullius-silica-glass", "nullius-glass"],
-	["nullius-crushed-limestone-1", "nullius-crushed-limestone"]
+	["nullius-crushed-limestone-1", "nullius-crushed-limestone"],
+	["nullius-gypsum-1", "nullius-gypsum"],
+	["nullius-calcium-chloride-dehydration", "nullius-calcium-chloride"],
+	["nullius-cement-1", "nullius-cement"],
+	["nullius-crushed-stone", "nullius-gravel"],
+	["nullius-gravel-disposal", "nullius-mineral-dust"]
   ]
 }

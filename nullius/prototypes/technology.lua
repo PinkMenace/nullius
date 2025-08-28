@@ -270,7 +270,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-crushed-stone"
+        recipe = "nullius-gravel"
       },
       {
         type = "unlock-recipe",
@@ -1436,7 +1436,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-gravel-disposal"
+        recipe = "nullius-mineral-dust"
       },
       {
         type = "unlock-recipe",
@@ -3126,7 +3126,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-cement-1"
+        recipe = "nullius-cement"
       },
       {
         type = "unlock-recipe",
@@ -4393,7 +4393,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-gypsum-1"
+        recipe = "nullius-gypsum"
       },
       {
         type = "unlock-recipe",
@@ -4401,7 +4401,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-calcium-chloride-dehydration"
+        recipe = "nullius-calcium-chloride"
       },
       {
         type = "unlock-recipe",

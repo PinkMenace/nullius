@@ -1111,7 +1111,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-crushed-stone",
+    name = "nullius-gravel",
     localised_name = {"item-name.nullius-gravel"},
     enabled = false,
     icon_size = 32,
@@ -1156,7 +1156,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-gravel-disposal",
+    name = "nullius-mineral-dust",
     localised_name = {"recipe-name.nullius-gravel-disposal"},
     show_amount_in_title = false,
     always_show_products = true,
@@ -2148,7 +2148,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-gypsum-1",
+    name = "nullius-gypsum",
     localised_name = {"recipe-name.nullius-gypsum-1"},
     icons = {
       {
@@ -2434,10 +2434,10 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-calcium-chloride-dehydration",
+    name = "nullius-calcium-chloride",
     localised_name = {"recipe-name.nullius-dehydration", {"item-name.nullius-calcium-chloride"}},
     enabled = false,
-	no_productivity = true,
+	  no_productivity = true,
     category = "distillation",
     order = "nullius-ic",
     crafting_machine_tint = {
@@ -5818,7 +5818,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-cement-1",
+    name = "nullius-cement",
     localised_name = {"recipe-name.nullius-cement-1"},
     enabled = false,
     show_amount_in_title = false,
