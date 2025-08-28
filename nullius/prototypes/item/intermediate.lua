@@ -144,7 +144,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-geology-pack-1",
+    name = "nullius-geology-pack",
 	  localised_name = {"", {"item-name.nullius-geology-pack"}, " ", tostring(1)},
     show_amount_in_title = false,
     always_show_products = true,
@@ -246,7 +246,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-mechanical-pack-1",
+    name = "nullius-mechanical-pack",
     localised_name = {"", {"item-name.nullius-mechanical-pack"}, " ", tostring(1)},
     enabled = false,
     always_show_made_in = true,
@@ -4621,7 +4621,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-refractory-brick-1",
+    name = "nullius-refractory-brick",
     localised_name = {"", {"item-name.nullius-refractory-brick"}, " ", tostring(1)},
     order = "nullius-cb",
     enabled = false,

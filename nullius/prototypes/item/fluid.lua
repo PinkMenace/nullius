@@ -1116,12 +1116,12 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-climatology-pack-1",
-	localised_name = {"", {"item-name.nullius-climatology-pack"}, " ", tostring(1)},
+    name = "nullius-climatology-pack",
+	  localised_name = {"", {"item-name.nullius-climatology-pack"}, " ", tostring(1)},
     show_amount_in_title = false,
     always_show_products = true,
     enabled = false,
-	allow_decomposition = false,
+	  allow_decomposition = false,
     category = "nullius-water-treatment",
     energy_required = 60,
     ingredients = {
@@ -1637,7 +1637,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-soda-ash-1",
+    name = "nullius-soda-ash",
     localised_name = {"recipe-name.nullius-soda-ash-1"},
     enabled = false,
     category = "basic-chemistry",
@@ -1723,7 +1723,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-sodium-sulfate-1",
+    name = "nullius-sodium-sulfate",
     localised_name = {"recipe-name.nullius-sodium-sulfate-1"},
     icons = {
       {
@@ -5335,7 +5335,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-hydrogen-canister-1",
+    name = "nullius-hydrogen-canister",
     localised_name = {"item-name.nullius-hydrogen-canister"},
     icons = {
       {

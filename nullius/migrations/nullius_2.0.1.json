@@ -31,6 +31,15 @@
 	["nullius-gravel-disposal", "nullius-mineral-dust"],
 	
 	["nullius-carbon-monoxide-to-graphite", "nullius-graphite"],
-	["nullius-textile-1", "nullius-textile"]
+	["nullius-textile-1", "nullius-textile"],
+	["nullius-soda-ash-1", "nullius-soda-ash"],
+	["nullius-sodium-sulfate-1", "nullius-sodium-sulfate"],
+	["nullius-hydrogen-canister-1", "nullius-hydrogen-canister"],
+	["nullius-geology-pack-1", "nullius-geology-pack"],
+	["nullius-climatology-pack-1", "nullius-climatology-pack"],
+	["nullius-mechanical-pack-1", "nullius-mechanical-pack"],
+	["nullius-refractory-brick-1", "nullius-refractory-brick"]
+	
+	
   ]
 }

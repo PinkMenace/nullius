@@ -47,7 +47,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-geology-pack-1"
+        recipe = "nullius-geology-pack"
       }
     },
     unit = {
@@ -102,7 +102,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-climatology-pack-1"
+        recipe = "nullius-climatology-pack"
       }
     },
     unit = {
@@ -684,7 +684,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-mechanical-pack-1"
+        recipe = "nullius-mechanical-pack"
       }
     },
     unit = {
@@ -1407,7 +1407,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-refractory-brick-1"
+        recipe = "nullius-refractory-brick"
       },
       {
         type = "unlock-recipe",
@@ -1846,7 +1846,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-hydrogen-canister-1"
+        recipe = "nullius-hydrogen-canister"
       },
       {
         type = "unlock-recipe",
@@ -2927,7 +2927,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-soda-ash-1"
+        recipe = "nullius-soda-ash"
       }
     },
     unit = {
@@ -4310,7 +4310,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-sodium-sulfate-1"
+        recipe = "nullius-sodium-sulfate"
       },
       {
         type = "unlock-recipe",
