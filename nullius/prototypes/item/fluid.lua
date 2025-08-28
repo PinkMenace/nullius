@@ -1963,7 +1963,7 @@ data:extend({
       nil
     ),
     enabled = false,
-	allow_decomposition = false,
+	  allow_decomposition = false,
     category = "nullius-water-treatment",
     subgroup = "waste-management",
     order = "nullius-eb",
@@ -2594,7 +2594,7 @@ data:extend({
     results = {
       {type="item", name="nullius-salt", amount=18},
       {type="item", name="nullius-lithium-chloride", amount=1},
-	  {type="item", name="nullius-calcium-chloride", amount=1},
+	    {type="item", name="nullius-calcium-chloride", amount=1},
       {type="fluid", name="nullius-saline", amount=120},
       {type="fluid", name="nullius-steam", amount=200}
     },
@@ -2785,7 +2785,7 @@ data:extend({
     category = "distillation",
     subgroup = "air-filtration",
     order = "nullius-cob",
-	crafting_machine_tint = { primary = data.raw.fluid["nullius-nitrogen"].flow_color },
+	  crafting_machine_tint = { primary = data.raw.fluid["nullius-nitrogen"].flow_color },
     energy_required = 4,
     ingredients = {
       {type="fluid", name="nullius-air", amount=400}
@@ -2958,7 +2958,7 @@ data:extend({
       nil
     ),
     enabled = false,
-	allow_decomposition = false,
+	  allow_decomposition = false,
     category = "distillation",
     subgroup = "inorganic-chemistry",
     order = "nullius-eb",
@@ -2984,7 +2984,7 @@ data:extend({
       nil
     ),
     enabled = false,
-	allow_decomposition = false,
+	  allow_decomposition = false,
     category = "distillation",
     subgroup = "inorganic-chemistry",
     order = "nullius-ec",
@@ -3034,7 +3034,7 @@ data:extend({
       nil
     ),
     enabled = false,
-	allow_decomposition = false,
+	  allow_decomposition = false,
     category = "distillation",
     subgroup = "inorganic-chemistry",
     order = "nullius-ed",

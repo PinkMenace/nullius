@@ -15243,7 +15243,7 @@ data:extend({
     type = "technology",
     name = "nullius-air-separation-5",
     order = "nullius-gj",
-	icons = data.raw.recipe["nullius-oxygen-separation"].icons,
+	  icons = data.raw.recipe["nullius-oxygen-separation"].icons,
     effects = {
       {
         type = "unlock-recipe",

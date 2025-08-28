@@ -107,6 +107,32 @@
 	["nullius-wall", "stone-wall"],
 	["nullius-gate", "gate"],
 	["nullius-hazard-concrete", "refined-hazard-concrete"],
-	["nullius-explosive", "cliff-explosives"]
+	["nullius-explosive", "cliff-explosives"],
+	
+	
+	["nullius-desalination", "nullius-water"],
+	["nullius-seawater-filtration", "nullius-saline"],
+	["nullius-hydrogen-chloride-neutralization", "nullius-brine"],
+	["nullius-air-separation-1", "nullius-nitrogen"],
+	["nullius-residual-separation", "nullius-argon"],
+	["nullius-carbon-dioxide-to-monoxide", "nullius-carbon-monoxide"],
+	["nullius-carbon-dioxide-to-methane", "nullius-methane"],
+	["nullius-methane-to-ethylene", "nullius-ethylene"],
+	["nullius-hydrogen-chloride-electrolysis", "nullius-chlorine"],
+	["nullius-salt-electrolysis", "nullius-sodium"],
+	["nullius-brine-electrolysis", "nullius-sodium-hydroxide"],
+	["nullius-trace-separation", "nullius-helium"],
+	["nullius-volcanic-separation-1", "nullius-sulfur-dioxide"],
+	["nullius-volcanic-separation-2", "nullius-acid-boric"],
+	["nullius-volcanic-separation-3", "nullius-trace-gas"],
+	["nullius-air-separation-2", "nullius-residual-gas"],
+	["nullius-calcium-chloride-1", "nullius-calcium-chloride-solution"],
+	["nullius-hydrogen-combustion-1", "nullius-steam"],
+	["nullius-sand-disposal", "nullius-wastewater"],
+	["nullius-wastewater-filtration", "nullius-sludge"],
+	["nullius-water-electrolysis", "nullius-hydrogen"],
+	["nullius-oxygen-separation", "nullius-oxygen"],
+	["nullius-dust-disposal-1", "nullius-carbon-dioxide"]
+
   ]
 }
