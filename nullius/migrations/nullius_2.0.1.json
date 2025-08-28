@@ -38,8 +38,17 @@
 	["nullius-geology-pack-1", "nullius-geology-pack"],
 	["nullius-climatology-pack-1", "nullius-climatology-pack"],
 	["nullius-mechanical-pack-1", "nullius-mechanical-pack"],
-	["nullius-refractory-brick-1", "nullius-refractory-brick"]
+	["nullius-refractory-brick-1", "nullius-refractory-brick"],
 	
-	
+	["nullius-protocell-1", "nullius-protocell"],
+	["nullius-bacteria-1", "nullius-bacteria"],
+	["nullius-sugar-1", "nullius-sugar"],
+	["nullius-wood-chipping", "nullius-wood-chip"],
+	["nullius-algae-1", "nullius-algae"],
+	["nullius-grass-1", "nullius-grass"],
+	["nullius-tree-1", "nullius-tree"],
+	["nullius-worm-1", "nullius-worm"],
+	["nullius-fish-1", "nullius-fish"],
+	["nullius-arthropod-1", "nullius-arthropod"]
   ]
 }

@@ -55,7 +55,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-sugar-1",
+    name = "nullius-sugar",
     localised_name = {"", {"item-name.nullius-sugar"}, " ", tostring(1)},
     icons = {
       {
@@ -326,7 +326,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "nullius-protocell-1",
+    name = "nullius-protocell",
     localised_name = {"", {"fluid-name.nullius-protocell"}, " ", tostring(1)},
     enabled = false,
     category = "nanotechnology",
@@ -624,7 +624,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-bacteria-1",
+    name = "nullius-bacteria",
     localised_name = {"", {"fluid-name.nullius-bacteria"}, " ", tostring(1)},
     icons = {
       {
@@ -1136,7 +1136,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-algae-1",
+    name = "nullius-algae",
     localised_name = {"", {"item-name.nullius-algae"}, " ", tostring(1)},
     icons = {
       {
@@ -1603,7 +1603,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-grass-1",
+    name = "nullius-grass",
     localised_name = {"", {"item-name.nullius-grass"}, " ", tostring(1)},
     icons = {
       {
@@ -2571,7 +2571,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-worm-1",
+    name = "nullius-worm",
     localised_name = {"", {"item-name.nullius-worm"}, " ", tostring(1)},
     icons = {
       {
@@ -3146,7 +3146,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-tree-1",
+    name = "nullius-tree",
     localised_name = {"", {"item-name.nullius-tree"}, " ", tostring(1)},
     icons = {
       {
@@ -3368,7 +3368,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-wood-chipping",
+    name = "nullius-wood-chip",
     localised_name = {"recipe-name.nullius-wood-chipping"},
     icons = {
       {
@@ -3388,7 +3388,7 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     category = "bio-harvesting",
-	subgroup = "biology-material",
+	  subgroup = "biology-material",
     order = "nullius-cd",
     energy_required = 1,
     ingredients = {
@@ -3401,7 +3401,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-boxed-wood-chipping",
-	localised_name = {"recipe-name.nullius-boxed", {"recipe-name.nullius-wood-chipping"}},
+	  localised_name = {"recipe-name.nullius-boxed", {"recipe-name.nullius-wood-chipping"}},
     icons = {
       {
         icon = ICONPATH .. "crate.png",
@@ -3825,7 +3825,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-fish-1",
+    name = "nullius-fish",
     localised_name = {"", {"item-name.nullius-fish"}, " ", tostring(1)},
     icons = {
       {
@@ -4303,7 +4303,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-arthropod-1",
+    name = "nullius-arthropod",
     localised_name = {"", {"item-name.nullius-arthropod"}, " ", tostring(1)},
     icons = {
       {

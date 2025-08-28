@@ -13097,7 +13097,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-sugar-1"
+        recipe = "nullius-sugar"
       },
       {
         type = "unlock-recipe",
@@ -13407,7 +13407,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "nullius-protocell-1"
+        recipe = "nullius-protocell"
       },
       {
         type = "unlock-recipe",
@@ -13415,7 +13415,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-bacteria-1"
+        recipe = "nullius-bacteria"
       },
       {
         type = "unlock-recipe",
@@ -13518,7 +13518,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-algae-1"
+        recipe = "nullius-algae"
       },
       {
         type = "unlock-recipe",
@@ -13868,7 +13868,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-grass-1"
+        recipe = "nullius-grass"
       },
       {
         type = "unlock-recipe",
@@ -14199,7 +14199,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-worm-1"
+        recipe = "nullius-worm"
       },
       {
         type = "unlock-recipe",
@@ -14511,7 +14511,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-tree-1"
+        recipe = "nullius-tree"
       },
       {
         type = "unlock-recipe",
@@ -14523,7 +14523,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-wood-chipping"
+        recipe = "nullius-wood-chip"
       },
       {
         type = "unlock-recipe",
@@ -14647,7 +14647,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-fish-1"
+        recipe = "nullius-fish"
       },
       {
         type = "unlock-recipe",
@@ -14876,7 +14876,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-arthropod-1"
+        recipe = "nullius-arthropod"
       },
       {
         type = "unlock-recipe",
