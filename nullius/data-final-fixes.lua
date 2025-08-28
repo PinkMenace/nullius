@@ -10,3 +10,5 @@ for _, recipe in pairs(data.raw.recipe) do
         recipe.GCKI_ignore = nil
     end
 end
+
+require("clutterpedia")
