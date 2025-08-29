@@ -970,7 +970,6 @@ if settings.startup["nullius-hide-void-alt"].value then
 end
 
 data.raw["utility-constants"]["default"].max_fluid_flow = 500
-data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true
 
 data.raw["artillery-flare"]["artillery-flare"].shot_category = "artillery-shell" --regular remote will only fire artillery shells
 data.raw["custom-input"]["give-artillery-targeting-remote"].enabled = false
@@ -993,6 +992,10 @@ for _, sc in pairs(data.raw.shortcut) do
 end
 
 data.raw["cargo-landing-pad"]["cargo-landing-pad"].localised_name = {"item-name.nullius-landing-pad"}
+--data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true
+data.raw.item["cargo-landing-pad"].subgroup = "space"
+data.raw.item["cargo-landing-pad"].order = "nullius-c"
+
 data.raw["inserter"]["inserter"].filter_count = 0
 
 data.raw["offshore-pump"]["offshore-pump"] = nil
