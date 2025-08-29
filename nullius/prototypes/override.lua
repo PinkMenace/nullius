@@ -82,19 +82,24 @@ data.raw["programmable-speaker"]["programmable-speaker"].energy_source = {
 data.raw["programmable-speaker"]["programmable-speaker"].energy_usage_per_tick = "250W"
 data.raw["programmable-speaker"]["programmable-speaker"].minable.mining_time = 1
 
-data.raw["lamp"]["small-lamp"].localised_name = {"entity-name.nullius-lamp-1"}
 data.raw.item["small-lamp"].localised_name = {"entity-name.nullius-lamp-1"}
 data.raw.item["small-lamp"].subgroup = "railway"
 data.raw.item["small-lamp"].order = "nullius-bb"
-data.raw.item["small-lamp"].place_result = "nullius-lamp-1"
-data.raw["lamp"]["small-lamp"].placeable_by = {item = "small-lamp", count = 1}
-data.raw["lamp"]["small-lamp"].minable.mining_time = 0.3
+--data.raw.item["small-lamp"].place_result = "nullius-lamp-1"
 data.raw.item["small-lamp"].icon = nil
 data.raw.item["small-lamp"].icons =
   {{icon = ENTICONPATH .. "lamp1.png", icon_size = 64}}
 label_icon("small-lamp", 1, "yellow")
-data.raw["lamp"]["small-lamp"].icon = nil
-data.raw["lamp"]["small-lamp"].icons = data.raw.item["small-lamp"].icons
+
+-- data.raw["lamp"]["small-lamp"].localised_name = {"entity-name.nullius-lamp-1"}
+-- data.raw["lamp"]["small-lamp"].placeable_by = {item = "small-lamp", count = 1}
+-- data.raw["lamp"]["small-lamp"].minable.mining_time = 0.3
+-- data.raw["lamp"]["small-lamp"].icon = nil
+-- data.raw["lamp"]["small-lamp"].icons = data.raw.item["small-lamp"].icons
+
+data.raw["lamp"]["small-lamp"] = data.raw["lamp"]["nullius-lamp-1"] -- rename nullius-lamp-1 to small-lamp (better to follow the same pattern as everything else (helps with factoriopedia clutter))
+data.raw["lamp"]["nullius-lamp-1"] = nil
+data.raw["lamp"]["small-lamp"].name = "small-lamp"
 
 data.raw.item["stone-wall"].stack_size = 200
 data.raw.item["stone-wall"].subgroup = "concrete"
@@ -970,7 +975,6 @@ if settings.startup["nullius-hide-void-alt"].value then
 end
 
 data.raw["utility-constants"]["default"].max_fluid_flow = 500
-data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true
 
 data.raw["artillery-flare"]["artillery-flare"].shot_category = "artillery-shell" --regular remote will only fire artillery shells
 data.raw["custom-input"]["give-artillery-targeting-remote"].enabled = false
@@ -993,6 +997,10 @@ for _, sc in pairs(data.raw.shortcut) do
 end
 
 data.raw["cargo-landing-pad"]["cargo-landing-pad"].localised_name = {"item-name.nullius-landing-pad"}
+--data.raw["cargo-landing-pad"]["cargo-landing-pad"].hidden_in_factoriopedia = true
+data.raw.item["cargo-landing-pad"].subgroup = "space"
+data.raw.item["cargo-landing-pad"].order = "nullius-c"
+
 data.raw["inserter"]["inserter"].filter_count = 0
 
 data.raw["offshore-pump"]["offshore-pump"] = nil

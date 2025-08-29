@@ -3578,20 +3578,21 @@ data:extend({
     }
   },
   
-  {
-    type = "item",
-    name = "nullius-landing-pad",
-    icon = "__base__/graphics/icons/cargo-landing-pad.png",
-    icon_size = 64,
+  -- {
+  --   type = "item", -- removed, using base game item instead
+  --   name = "nullius-landing-pad",
+  --   icon = "__base__/graphics/icons/cargo-landing-pad.png",
+  --   icon_size = 64,
     
-    subgroup = "space",
-    order = "nullius-c",
-    place_result = "cargo-landing-pad",
-    stack_size = 1
-  },
+  --   subgroup = "space",
+  --   order = "nullius-c",
+  --   place_result = "cargo-landing-pad",
+  --   stack_size = 1
+  -- },
   {
     type = "recipe",
     name = "nullius-landing-pad",
+    localised_name = {"item-name.nullius-landing-pad"},
     enabled = false,
 	  always_show_made_in = true,
     category = "huge-crafting",
@@ -3614,7 +3615,8 @@ data:extend({
       --{type="item", name="nullius-armor-plate", amount=50}, --unlocked too late
     },
     results = {
-      {type = "item", name = "nullius-landing-pad", amount = 1}
+      --{type = "item", name = "nullius-landing-pad", amount = 1}
+      {type = "item", name = "cargo-landing-pad", amount = 1}
     }
   },
 
