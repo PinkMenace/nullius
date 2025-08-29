@@ -1079,6 +1079,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    order = "fd",
+    name = "fill-biology-bacteria",
+    group = "barreling",
+  },
+  {
+    type = "item-subgroup",
     order = "g",
     name = "fill-inorganic-chemistry",
     group = "barreling",
@@ -1130,6 +1136,12 @@ data:extend({
     type = "item-subgroup",
     order = "ec",
     name = "empty-biochemistry",
+    group = "unbarreling",
+  },
+  {
+    type = "item-subgroup",
+    order = "ed",
+    name = "empty-biology-bacteria",
     group = "unbarreling",
   },
   {

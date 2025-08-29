@@ -28,8 +28,8 @@ data.raw.item["stone"].subgroup = "masonry-material"
 data.raw.item["stone"].order = "nullius-k"
 data.raw.item["stone"].stack_size = 50
 
-data.raw.item["nullius-red-wire"].order = "nullius-c"
-data.raw.item["nullius-green-wire"].order = "nullius-d"
+data.raw.item["nullius-red-wire"].order = "nullius-ca"
+data.raw.item["nullius-green-wire"].order = "nullius-ca"
 data.raw.item["power-switch"].order = "nullius-h"
 data.raw["power-switch"]["power-switch"].localised_description = {"",
     {"entity-description.power-switch"}, {"entity-description.nullius-power-switch",

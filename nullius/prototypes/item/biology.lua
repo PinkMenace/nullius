@@ -363,7 +363,7 @@ data:extend({
     },
     enabled = false,
     category = "nanotechnology",
-    order = "nullius-fc",
+    order = "nullius-h",
     energy_required = 8,
     ingredients = {
       {type="fluid", name="nullius-bacteria", amount=12},

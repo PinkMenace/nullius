@@ -621,8 +621,10 @@ data:extend({
       icon = ICONPATH .. "bacteria.png",
       icon_size = 64
     }},
-    subgroup = "biochemistry",
-    order = "nullius-i",
+    --subgroup = "biochemistry",
+    --order = "nullius-i",
+    subgroup = "biology-bacteria",
+    order = "nullius-ca",
     base_color = {r = 0.8, g = 0.5, b = 0.3},
     flow_color = {r = 0.8, g = 0.5, b = 0.3},
     heat_capacity = "0.08kJ",
