@@ -479,7 +479,7 @@ script.on_event(defines.events.on_player_crafted_item,
 	    local num = math.floor(odds)
 	    if ((odds - num) > math.random()) then num = num + 1 end
 	    if (num >= 1) then
-		  if recipe.prototype.allow_productivity then
+		  if recipe.prototype.allowed_effects["productivity"] then
 	        player.insert({name=event.item_stack.name, count=num})
 		  end
 	    end
