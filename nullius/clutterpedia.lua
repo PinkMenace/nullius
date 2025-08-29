@@ -73,25 +73,25 @@ clutterpedia["nullius-carbon-dioxide-to-monoxide"] =        {name = "nullius-car
 clutterpedia["nullius-carbon-dioxide-to-methane"] =         {name = "nullius-methane",              tech = "nullius-carbon-sequestration-1", locale = true}
 clutterpedia["nullius-methane-to-ethylene"] =               {name = "nullius-ethylene",             tech = "nullius-organic-chemistry-1", locale = true}
 
-clutterpedia["nullius-hydrogen-chloride-electrolysis"] =    {name = "nullius-chlorine",             tech = "nullius-electrolysis-3",  main_product = true, locale = true}
+--clutterpedia["nullius-hydrogen-chloride-electrolysis"] =    {name = "nullius-chlorine",             tech = "nullius-electrolysis-3",  main_product = true, locale = true}
 clutterpedia["nullius-salt-electrolysis"] =                 {name = "nullius-sodium",               tech = "nullius-sodium-processing"}
-clutterpedia["nullius-brine-electrolysis"] =                {name = "nullius-sodium-hydroxide",     tech = "nullius-electrolysis-2",  main_product = true, locale = true}
+--clutterpedia["nullius-brine-electrolysis"] =                {name = "nullius-sodium-hydroxide",     tech = "nullius-electrolysis-2",  main_product = true, locale = true}
 clutterpedia["nullius-trace-separation"] =                  {name = "nullius-helium",               tech = "nullius-air-separation-3",  main_product = true, locale = true}
 
-clutterpedia["nullius-volcanic-separation-1"] =             {name = "nullius-sulfur-dioxide",       tech = "nullius-sulfur-processing-1",  main_product = true}
-clutterpedia["nullius-volcanic-separation-2"] =             {name = "nullius-acid-boric",           tech = "nullius-sulfur-processing-2",  main_product = true}
-clutterpedia["nullius-volcanic-separation-3"] =             {name = "nullius-trace-gas",            tech = "nullius-volcanism-2",  main_product = true}
+--clutterpedia["nullius-volcanic-separation-1"] =             {name = "nullius-sulfur-dioxide",       tech = "nullius-sulfur-processing-1",  main_product = true}
+--clutterpedia["nullius-volcanic-separation-2"] =             {name = "nullius-acid-boric",           tech = "nullius-sulfur-processing-2",  main_product = true}
+--clutterpedia["nullius-volcanic-separation-3"] =             {name = "nullius-trace-gas",            tech = "nullius-volcanism-2",  main_product = true}
 
-clutterpedia["nullius-air-separation-2"] =                  {name = "nullius-residual-gas",         tech = "nullius-air-separation-2",  main_product = true, locale = true}
+--clutterpedia["nullius-air-separation-2"] =                  {name = "nullius-residual-gas",         tech = "nullius-air-separation-2",  main_product = true, locale = true}
 clutterpedia["nullius-calcium-chloride-1"] =                {name = "nullius-calcium-chloride-solution",tech = "nullius-limestone-processing-2"}
-clutterpedia["nullius-hydrogen-combustion-1"] =             {name = "nullius-steam",                tech = "nullius-energy-storage-1", main_product = true}
-clutterpedia["nullius-sand-disposal"] =                     {name = "nullius-wastewater",           tech = "nullius-waste-management"}
-clutterpedia["nullius-wastewater-filtration"] =             {name = "nullius-sludge",               tech = "nullius-water-filtration-3", main_product = true}
+--clutterpedia["nullius-hydrogen-combustion-1"] =             {name = "nullius-steam",                tech = "nullius-energy-storage-1", main_product = true}
+--clutterpedia["nullius-sand-disposal"] =                     {name = "nullius-wastewater",           tech = "nullius-waste-management"}
+--clutterpedia["nullius-wastewater-filtration"] =             {name = "nullius-sludge",               tech = "nullius-water-filtration-3", main_product = true}
 
-clutterpedia["nullius-water-electrolysis"] =                {name = "nullius-hydrogen",             tech = "nullius-electrolysis-2", main_product = true, locale = true}
-clutterpedia["nullius-oxygen-separation"] =                 {name = "nullius-oxygen",               tech = "nullius-air-separation-5", main_product = true, locale = true}
+--clutterpedia["nullius-water-electrolysis"] =                {name = "nullius-hydrogen",             tech = "nullius-electrolysis-2", main_product = true, locale = true}
+--clutterpedia["nullius-oxygen-separation"] =                 {name = "nullius-oxygen",               tech = "nullius-air-separation-5", main_product = true, locale = true}
 
-clutterpedia["nullius-dust-disposal-1"] =                   {name = "nullius-carbon-dioxide",       tech = "nullius-waste-management", main_product = true} -- that would change the main product from sludge!!
+--clutterpedia["nullius-dust-disposal-1"] =                   {name = "nullius-carbon-dioxide",       tech = "nullius-waste-management", main_product = true} -- that would change the main product from sludge!!
 --clutterpedia["nullius-air-filtration"] =                    {name = "nullius-air",                  tech = "nullius-air-filtration-1"}
 --clutterpedia["nullius-salination"] =                        {name = "nullius-seawater",             tech = "nullius-sodium-processing", main_product = true} -- seawater is a fixed recipe for intakes !
 
