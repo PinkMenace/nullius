@@ -108,6 +108,11 @@
 	["nullius-gate", "gate"],
 	["nullius-hazard-concrete", "refined-hazard-concrete"],
 	["nullius-explosive", "cliff-explosives"],
+	["nullius-lamp-1a", "small-lamp"],
+	["nullius-stone-recovery", "stone"],
+	["nullius-methanol-canister-1", "processed-fuel"],
+	
+	["nullius-android-1", "character"],
 	
 	
 	["nullius-desalination", "nullius-water"],
@@ -134,5 +139,9 @@
 	["nullius-oxygen-separation", "nullius-oxygen"],
 	["nullius-dust-disposal-1", "nullius-carbon-dioxide"]
 
+  ],
+  
+  "item":[
+    ["nullius-android-1", "character"]
   ]
 }

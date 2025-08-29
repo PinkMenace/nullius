@@ -7538,7 +7538,7 @@ data:extend({
     allow_as_intermediate = false,
     allow_decomposition = false,
     category = "ore-flotation",
-	subgroup = "ore-recovery",
+	  subgroup = "ore-recovery",
     order = "nullius-of",
     energy_required = 30,
     ingredients = {

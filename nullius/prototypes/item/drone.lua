@@ -842,7 +842,8 @@ data:extend({
   },
   {
     type = "item",
-    name = "nullius-android-1",
+    --name = "nullius-android-1",
+    name = "character",
     localised_name = {"", {"item-name.nullius-android"}, " ", tostring(1)},
     localised_description = {"item-description.nullius-android"},
     icons = {{
@@ -886,14 +887,15 @@ data:extend({
       {type = "item", name = "nullius-large-cargo-pod-2", amount = 2}
     },
     results = {
-				{type="item", name="nullius-android-1", amount = 1}
+				--{type="item", name="nullius-android-1", amount = 1}
+				{type="item", name="character", amount = 1}
 			}
   },
   {
     type = "recipe",
     name = "nullius-legacy-android-1",
     enabled = false,
-	hidden = true,
+	  hidden = true,
     allow_decomposition = false,
     allow_as_intermediate = false,
     always_show_made_in = true,
@@ -911,7 +913,8 @@ data:extend({
       {type = "item", name = "bob-express-bulk-inserter", amount = 4}
     },
     results = {
-				{type="item", name="nullius-android-1", amount = 1}
+				--{type="item", name="nullius-android-1", amount = 1}
+				{type="item", name="character", amount = 1}
 			}
   },
   {
@@ -922,7 +925,8 @@ data:extend({
     category = "nanotechnology",
     energy_required = 400,
     ingredients = {
-      {type = "item", name = "nullius-android-1", amount = 1},
+      --{type = "item", name = "nullius-android-1", amount = 1},
+      {type = "item", name = "character", amount = 1},
       {type = "item", name = "nullius-chassis-5", amount = 1},
       {type = "item", name = "nullius-construction-bot-4", amount = 2},
       {type = "item", name = "nullius-leg-augmentation-3", amount = 1},
@@ -938,14 +942,15 @@ data:extend({
     type = "recipe",
     name = "nullius-legacy-android-2",
     enabled = false,
-	hidden = true,
+	  hidden = true,
     allow_decomposition = false,
     allow_as_intermediate = false,
     always_show_made_in = true,
     category = "nanotechnology",
     energy_required = 400,
     ingredients = {
-      {type = "item", name = "nullius-android-1", amount = 1},
+      --{type = "item", name = "nullius-android-1", amount = 1},
+      {type = "item", name = "character", amount = 1},
       {type = "item", name = "nullius-chassis-5", amount = 1},
       {type = "item", name = "nullius-construction-bot-4", amount = 2},
       {type = "item", name = "nullius-leg-augmentation-3", amount = 1},

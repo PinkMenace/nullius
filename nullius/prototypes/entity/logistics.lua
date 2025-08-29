@@ -618,6 +618,7 @@ data:extend({
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.3, result = "small-lamp"},
     max_health = 100,
+    hidden_in_factoriopedia = true,
     fast_replaceable_group = "lamp",
     next_upgrade = "nullius-lamp-2",
     corpse = "lamp-remnants",

@@ -2,7 +2,8 @@ function add_chart_tag(player, character)
   if ((player == nil) or (character == nil)) then
     return
   end
-  local icon = "nullius-android-1"
+  --local icon = "nullius-android-1"
+  local icon = "character"
   if (character.name == "nullius-android-2") then
     icon = "nullius-android-2"
   end
