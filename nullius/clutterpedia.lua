@@ -58,6 +58,7 @@ clutterpedia["nullius-explosive"] =             {name = "cliff-explosives",     
 clutterpedia["nullius-lamp-1a"] =               {name = "small-lamp",                       tech = "nullius-illumination-1"}
 clutterpedia["nullius-stone-recovery"] =        {name = "stone",                            tech = "nullius-waste-reclamation"}
 clutterpedia["nullius-methanol-canister-1"] =   {name = "processed-fuel",                   tech = "nullius-hydrocarbon-combustion-2", main_product = true} -- not vanilla, comes from aai-industry
+clutterpedia["nullius-landing-pad"] =           {name = "cargo-landing-pad",                tech = "nullius-rocket-science-2"}
 
 clutterpedia["nullius-android-1"] =             {name = "character",                        tech = "nullius-artificial-intelligence-1"} -- don't forget to also rename the item nullius-android-1 in item/drone.lua AND the item migration ! And in script/body.lua !!
 
