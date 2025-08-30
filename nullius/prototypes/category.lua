@@ -897,6 +897,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    order = "ca",
+    name = "air-filtration-recipe",
+    group = "fluids",
+  },
+  {
+    type = "item-subgroup",
     order = "db",
     name = "carbon",
     group = "fluids",

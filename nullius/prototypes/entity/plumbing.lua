@@ -1082,7 +1082,7 @@ data:extend({
     flags = {"placeable-neutral", "player-creation"},
     crafting_categories = {"air-filtration"},
     crafting_speed = 1,
-    fixed_recipe = "nullius-air-filtration",
+    fixed_recipe = "nullius-air",
     energy_source = {
 	    type = "electric",
 	    usage_priority = "secondary-input",
@@ -1173,7 +1173,7 @@ data:extend({
     flags = {"placeable-neutral", "player-creation"},
     crafting_categories = {"air-filtration"},
     crafting_speed = 3,
-    fixed_recipe = "nullius-air-filtration",
+    fixed_recipe = "nullius-air",
     energy_source = {
 	    type = "electric",
 	    usage_priority = "secondary-input",
@@ -1261,7 +1261,7 @@ data:extend({
     flags = {"placeable-neutral", "player-creation"},
     crafting_categories = {"air-filtration"},
     crafting_speed = 8,
-    fixed_recipe = "nullius-air-filtration",
+    fixed_recipe = "nullius-air",
     energy_source = {
 	    type = "electric",
 	    usage_priority = "secondary-input",
