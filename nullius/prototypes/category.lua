@@ -768,6 +768,18 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "electrolyzer-mode-priority",
+    group = "chemistry",
+    order = "hcm"
+  },
+  {
+    type = "item-subgroup",
+    name = "electrolyzer-mode-surge",
+    group = "chemistry",
+    order = "hcn"
+  },
+  {
+    type = "item-subgroup",
     name = "energy-storage",
     group = "chemistry",
     order = "hd"
@@ -777,6 +789,24 @@ data:extend({
     name = "energy-backup",
     group = "chemistry",
     order = "he"
+  },
+  {
+    type = "item-subgroup",
+    name = "energy-backup-mode-backup",
+    group = "chemistry",
+    order = "hea"
+  },
+  {
+    type = "item-subgroup",
+    name = "energy-backup-mode-standard",
+    group = "chemistry",
+    order = "heb"
+  },
+  {
+    type = "item-subgroup",
+    name = "energy-backup-mode-exhaust",
+    group = "chemistry",
+    order = "hec"
   },
   {
     type = "item-subgroup",
