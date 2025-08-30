@@ -124,6 +124,7 @@ local function finish_furnace(furnace, generator, overlay,
 	      {"entity-description.nullius-turbine-" .. openness},
 	      {"entity-description.nullius-turbine-" .. priority}}}
   furnace.order = data.raw.item[furnace.minable.result].order .. suborder
+  furnace.subgroup = "energy-backup-mode-" .. priority
   generator.name = "nullius-turbine-generator-" .. suffix
   generator.localised_name = furnace.localised_name
   generator.localised_description = furnace.localised_description
@@ -151,7 +152,7 @@ local function turbine_variants(tier, furnacecb, generatorob,
   furnaceob.placeable_by.item = "nullius-turbine-open-" .. tier
   furnaceob.crafting_categories = {"turbine-open"}
   furnaceob.fluid_boxes[3] = nil
-  furnaceob.fluid_boxes[1].volume = 500
+  furnaceob.fluid_boxes[1].volume = 1000
   furnaceob.fluid_boxes[1].pipe_connections = {
     { flow_direction = "input-output", position = {0, 2}, direction = defines.direction.south },
     { flow_direction = "input-output", position = {0, -2}, direction = defines.direction.north }
@@ -246,7 +247,7 @@ local furnace1cb = {
       production_type = "input",
 	    pipe_connections = {{ flow_direction = "input-output", position = {0, -2}, direction = defines.direction.north }},
       pipe_covers = pipecoverspictures(),
-      volume = 500,
+      volume = 1000,
       secondary_draw_orders = { north = -1 }
     },
     {
@@ -262,7 +263,7 @@ local furnace1cb = {
       production_type = "output",
 	    pipe_connections = {{ flow_direction = "output", position = {0, 2}, direction = defines.direction.south }},
       pipe_covers = pipecoverspictures(),
-      volume = 500,
+      volume = 2000,
       secondary_draw_orders = { north = -1 }
     }
   }
@@ -273,18 +274,18 @@ furnace2cb.minable = {mining_time = 1.2, result = "nullius-turbine-closed-2"}
 furnace2cb.placeable_by = {item = "nullius-turbine-closed-2", count = 1}
 furnace2cb.max_health = 400
 furnace2cb.crafting_speed = 2.4
-furnace2cb.fluid_boxes[1].volume = 500
+furnace2cb.fluid_boxes[1].volume = 1000
 furnace2cb.fluid_boxes[2].volume = 500
-furnace2cb.fluid_boxes[3].volume = 500
+furnace2cb.fluid_boxes[3].volume = 2000
 
 local furnace3cb = util.table.deepcopy(furnace1cb)
 furnace3cb.minable = {mining_time = 1.6, result = "nullius-turbine-closed-3"}
 furnace3cb.placeable_by = {item = "nullius-turbine-closed-3", count = 1}
 furnace3cb.max_health = 500
 furnace3cb.crafting_speed = 5.4
-furnace3cb.fluid_boxes[1].volume = 500
+furnace3cb.fluid_boxes[1].volume = 1000
 furnace3cb.fluid_boxes[2].volume = 500
-furnace3cb.fluid_boxes[3].volume = 500
+furnace3cb.fluid_boxes[3].volume = 2000
 
 
 local generator1ob = {

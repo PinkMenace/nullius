@@ -87,7 +87,7 @@ local checkpoint_data = {
 			{ CHK_BUILD, STT_NET, 4, {{"nullius-relay-construction-2"}} }},
   ["large-tank"] = {{ CHK_BUILD, STT_NET, 4, {{"nullius-large-tank-2"}} }},
   ["substation"] = {{ CHK_BUILD, STT_NET, 4, {{"nullius-substation-2"}} }},
-  ["logistics-2"] = {{ CHK_BUILD, STT_NET, 40, {{"stack-inserter"}} },
+  ["logistics-2"] = {{ CHK_BUILD, STT_NET, 40, {{"bulk-inserter"}} },
 			{ CHK_BUILD, STT_NET, 40, {{"express-underground-belt"}} }},
   ["lab-2"] = {{ CHK_BUILD, STT_NET, 10, {{"nullius-lab-2"}} }},
   ["productivity-module"] = {{ CHK_ITEM, STT_PRODUCE, 50, {{"nullius-productivity-module-1"}} }},
