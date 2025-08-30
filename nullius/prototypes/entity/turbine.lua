@@ -124,6 +124,7 @@ local function finish_furnace(furnace, generator, overlay,
 	      {"entity-description.nullius-turbine-" .. openness},
 	      {"entity-description.nullius-turbine-" .. priority}}}
   furnace.order = data.raw.item[furnace.minable.result].order .. suborder
+  furnace.subgroup = "energy-backup-mode-" .. priority
   generator.name = "nullius-turbine-generator-" .. suffix
   generator.localised_name = furnace.localised_name
   generator.localised_description = furnace.localised_description
