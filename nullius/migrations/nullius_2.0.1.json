@@ -119,15 +119,13 @@
 	["nullius-desalination", "nullius-water"],
 	["nullius-seawater-filtration", "nullius-saline"],
 	["nullius-hydrogen-chloride-neutralization", "nullius-brine"],
-	["nullius-air-separation-1", "nullius-nitrogen"],
-	["nullius-residual-separation", "nullius-argon"],
 	["nullius-carbon-dioxide-to-monoxide", "nullius-carbon-monoxide"],
 	["nullius-carbon-dioxide-to-methane", "nullius-methane"],
 	["nullius-methane-to-ethylene", "nullius-ethylene"],
 	
 	["nullius-salt-electrolysis", "nullius-sodium"],
-	["nullius-trace-separation", "nullius-helium"],
-	["nullius-calcium-chloride-1", "nullius-calcium-chloride-solution"]
+	["nullius-calcium-chloride-1", "nullius-calcium-chloride-solution"],
+	["nullius-air-filtration", "nullius-air"]
 
   ],
   
