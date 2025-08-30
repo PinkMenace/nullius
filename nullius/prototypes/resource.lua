@@ -312,7 +312,7 @@ data:extend({
 
     flags = {"placeable-neutral"},
     category = "basic-fluid",
-    subgroup = "air-filtration",
+    subgroup = "mineable-fluids",
     infinite = true,
     highlight = true,
     minimum = 75000,
