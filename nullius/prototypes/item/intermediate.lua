@@ -8385,7 +8385,7 @@ data:extend({
     inventory_move_sound = data.raw["item"]["red-wire"].inventory_move_sound,
     pick_sound = data.raw["item"]["red-wire"].pick_sound,
     drop_sound = data.raw["item"]["red-wire"].drop_sound,
-    stack_size = 50
+    stack_size = 200
   },
   {
     type = "item",
@@ -8399,7 +8399,7 @@ data:extend({
     inventory_move_sound = data.raw["item"]["green-wire"].inventory_move_sound,
     pick_sound = data.raw["item"]["green-wire"].pick_sound,
     drop_sound = data.raw["item"]["green-wire"].drop_sound,
-    stack_size = 50
+    stack_size = 200
   },
 
 })
