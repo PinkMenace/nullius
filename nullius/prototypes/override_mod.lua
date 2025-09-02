@@ -1467,10 +1467,10 @@ for _, recipe in pairs(data.raw.recipe) do
       local order = "nullius-"..newmaterial.order
       local sz = string.sub(recipe.name, 11, 15)
       if (sz == "large") then
-        recipe.ingredients = {{"textplate-small-"..material, 4}}
+        recipe.ingredients = {{type = "item", name = "textplate-small-"..material, amount = 4}}
         order = order.."c"
       else
-        recipe.ingredients = {{newmaterial.material, 1}}
+        recipe.ingredients = {{type = "item", name = newmaterial.material, amount = 1}}
         order = order.."b"
       end
 
