@@ -106,6 +106,9 @@ local function init_tech(force)
     if ((string.sub(tech.name, 1, 8) ~= "nullius-") and
       (string.sub(tech.order, 1, 8) ~= "nullius-")) then
       tech.enabled = false
+    elseif not tech.enabled then
+      log("Re enabling tech: " .. tech.name)
+      tech.enabled = true
     end
   end
 
