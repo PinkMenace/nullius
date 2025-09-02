@@ -53,8 +53,8 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-3.png",
         tint = {0.898, 0.773, 0.688},
-        icon_size = 32,
-        scale = 0.5,
+        icon_size = 64,
+        scale = 0.25,
         shift = {-12, -12}
       }
     },
@@ -87,8 +87,8 @@ data:extend({
       {
         icon = "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-2.png",
         tint = {0.690, 0.611, 0.427},
-        icon_size = 32,
-        scale = 0.5,
+        icon_size = 64,
+        scale = 0.25,
         shift = {-12, -12}
       }
     },
