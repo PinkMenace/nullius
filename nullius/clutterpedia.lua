@@ -96,6 +96,180 @@ clutterpedia["nullius-air-filtration"] =                    {name = "nullius-air
 --clutterpedia["nullius-salination"] =                        {name = "nullius-seawater",             tech = "nullius-sodium-processing", main_product = true} -- seawater is a fixed recipe for intakes !
 
 
+---------------------------------------------------- Mods ----------------------------------------------------
+if mods["elevated-rails"] then
+    clutterpedia["nullius-rail-support"] =                      {name = "rail-support",                 tech = "nullius-elevated-rails"}
+    clutterpedia["nullius-rail-ramp"] =                         {name = "rail-ramp",                    tech = "nullius-elevated-rails"}
+end
+if mods["LogisticTrainNetwork"] then
+    clutterpedia["nullius-logistic-train-stop"] =               {name = "logistic-train-stop",          tech = "nullius-logistic-train-network"}
+end
+if mods["LTN_Combinator_Modernized"] then
+    clutterpedia["nullius-ltn-combinator"] =                    {name = "ltn-combinator",               tech = {"nullius-logistic-train-network","nullius-traffic-control"}}
+end
+if mods["aai-signal-transmission"] then
+    clutterpedia["nullius-aai-signal-sender"] =                 {name = "aai-signal-sender",            tech = "nullius-aai-signal-transmission"}
+    clutterpedia["nullius-aai-signal-receiver"] =               {name = "aai-signal-receiver",          tech = "nullius-aai-signal-transmission"}
+end
+if mods["Factorissimo2"] or mods["factorissimo-2-notnotmelon"] then
+    clutterpedia["nullius-factory-1"] =                         {name = "factory-1",                    tech = "factory-architecture-t1"}
+    clutterpedia["nullius-factory-2"] =                         {name = "factory-2",                    tech = "factory-architecture-t2"}
+    clutterpedia["nullius-factory-3"] =                         {name = "factory-3",                    tech = "factory-architecture-t3"}
+    if mods["factorissimo-2-notnotmelon"] then
+    clutterpedia["nullius-factory-circuit-connector"] =         {name = "factory-circuit-connector",    tech = "factory-connection-type-circuit"}
+    else
+    clutterpedia["nullius-factory-requester-chest"] =           {name = "factory-requester-chest",      tech = "factory-requester-chest"}
+    clutterpedia["nullius-factory-input-pipe"] =                {name = "factory-input-pipe",           tech = "factory-connection-type-fluid"}
+    clutterpedia["nullius-factory-output-pipe"] =               {name = "factory-output-pipe",          tech = "factory-connection-type-fluid"}
+    clutterpedia["nullius-factory-circuit-input"] =             {name = "factory-circuit-input",        tech = "factory-connection-type-circuit"}
+    clutterpedia["nullius-factory-circuit-output"] =            {name = "factory-circuit-output",       tech = "factory-connection-type-circuit"}
+    end
+end
+if mods["aai-loaders"] then
+    clutterpedia["nullius-loader-1"] =                          {name = "aai-basic-loader",             tech = "nullius-loader-1"}
+    clutterpedia["nullius-loader-2"] =                          {name = "aai-loader",                   tech = "nullius-loader-2"}
+    clutterpedia["nullius-loader-3"] =                          {name = "aai-fast-loader",              tech = "nullius-loader-3"}
+    clutterpedia["nullius-loader-4"] =                          {name = "aai-express-loader",           tech = "nullius-loader-4"}
+    clutterpedia["nullius-loader-5"] =                          {name = "aai-ultimate-loader",          tech = "nullius-loader-5"}
+end
+if mods["train-pubsub"] then
+    clutterpedia["nullius-train-publisher"] =                   {name = "train-publisher",              tech = "train-manager"}
+    clutterpedia["nullius-subscriber-train-stop"] =             {name = "subscriber-train-stop",        tech = "train-manager"}
+    clutterpedia["nullius-publisher-train-stop"] =              {name = "publisher-train-stop",         tech = "train-manager"}
+    clutterpedia["nullius-train-config"] =                      {name = "train-config",                 tech = "train-manager"}
+end
+if mods["Teleporters"] then
+    clutterpedia["nullius-teleporter"] =                        {name = "teleporter",                   tech = "teleporter"}
+end
+if mods["jetpack"] then
+    clutterpedia["nullius-jetpack-1"] =                         {name = "jetpack-1",                    tech = "nullius-jetpack-1"}
+    clutterpedia["nullius-jetpack-2"] =                         {name = "jetpack-2",                    tech = "nullius-jetpack-2"}
+    clutterpedia["nullius-jetpack-3"] =                         {name = "jetpack-3",                    tech = "nullius-jetpack-3"}
+    clutterpedia["nullius-jetpack-4"] =                         {name = "jetpack-4",                    tech = "nullius-jetpack-4"}
+end
+if mods["underground-pipe-pack"] then
+    clutterpedia["nullius-surface-two-way-junction-1"] =        {name = "one-to-one-forward-t2-pipe",       tech = "advanced-underground-piping"}
+    clutterpedia["nullius-surface-three-way-junction-1"] =      {name = "one-to-two-perpendicular-t2-pipe", tech = "advanced-underground-piping"}
+    clutterpedia["nullius-surface-four-way-junction-1"] =       {name = "one-to-three-forward-t2-pipe",     tech = "advanced-underground-piping"}
+    clutterpedia["nullius-underground-straight-junction-1"] =   {name = "underground-i-t2-pipe",            tech = "advanced-underground-piping"}
+    clutterpedia["nullius-underground-elbow-junction-1"] =      {name = "underground-L-t2-pipe",            tech = "advanced-underground-piping"}
+    clutterpedia["nullius-underground-three-way-junction-1"] =  {name = "underground-t-t2-pipe",            tech = "advanced-underground-piping"}
+    clutterpedia["nullius-adjustable-relief-valve"] =           {name = "80-overflow-valve",                tech = "advanced-underground-piping"}
+    clutterpedia["nullius-adjustable-top-up-valve"] =           {name = "80-top-up-valve",                  tech = "advanced-underground-piping"}
+    clutterpedia["nullius-surface-two-way-junction-2"] =        {name = "one-to-one-forward-t3-pipe",       tech = "advanced-underground-piping-t2"}
+    clutterpedia["nullius-surface-three-way-junction-2"] =      {name = "one-to-two-perpendicular-t3-pipe", tech = "advanced-underground-piping-t2"}
+    clutterpedia["nullius-surface-four-way-junction-2"] =       {name = "one-to-three-forward-t3-pipe",     tech = "advanced-underground-piping-t2"}
+    clutterpedia["nullius-underground-straight-junction-2"] =   {name = "underground-i-t3-pipe",            tech = "advanced-underground-piping-t2"}
+    clutterpedia["nullius-underground-elbow-junction-2"] =      {name = "underground-L-t3-pipe",            tech = "advanced-underground-piping-t2"}
+    clutterpedia["nullius-underground-three-way-junction-2"] =  {name = "underground-t-t3-pipe",            tech = "advanced-underground-piping-t2"}
+    clutterpedia["nullius-surface-two-way-junction-3"] =        {name = "one-to-one-forward-pipe",          tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-surface-three-way-junction-3"] =      {name = "one-to-two-perpendicular-pipe",    tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-surface-four-way-junction-3"] =       {name = "one-to-three-forward-pipe",        tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-surface-five-way-junction-3"] =       {name = "one-to-four-pipe",                 tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-underground-straight-junction-3"] =   {name = "underground-i-pipe",               tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-underground-elbow-junction-3"] =      {name = "underground-L-pipe",               tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-underground-three-way-junction-3"] =  {name = "underground-t-pipe",               tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-underground-four-way-junction-3"] =   {name = "underground-cross-pipe",           tech = "advanced-underground-piping-t3"}
+    clutterpedia["nullius-underground-pump"] =                  {name = "underground-mini-pump",            tech = "advanced-underground-piping-t3"}
+end
+if mods["Warehousing"] then
+    clutterpedia["nullius-storehouse"] =                        {name = "storehouse-basic",                 tech = "nullius-warehousing-1"}
+    clutterpedia["nullius-warehouse"] =                         {name = "warehouse-basic",                  tech = "nullius-warehousing-2"}
+    clutterpedia["nullius-warehouse-passive-provider"] =        {name = "warehouse-passive-provider",       tech = "nullius-warehousing-3"}
+    clutterpedia["nullius-warehouse-storage"] =                 {name = "warehouse-storage",                tech = "nullius-warehousing-3"}
+    clutterpedia["nullius-warehouse-requester"] =               {name = "warehouse-requester",              tech = "nullius-warehousing-3"}
+    clutterpedia["nullius-storehouse-passive-provider"] =       {name = "storehouse-passive-provider",      tech = "nullius-warehousing-3"}
+    clutterpedia["nullius-storehouse-storage"] =                {name = "storehouse-storage",               tech = "nullius-warehousing-3"}
+    clutterpedia["nullius-storehouse-requester"] =              {name = "storehouse-requester",             tech = "nullius-warehousing-3"}
+    clutterpedia["nullius-warehouse-buffer"] =                  {name = "warehouse-buffer",                 tech = "nullius-warehousing-4"}
+    clutterpedia["nullius-warehouse-active-provider"] =         {name = "warehouse-active-provider",        tech = "nullius-warehousing-4"}
+    clutterpedia["nullius-storehouse-buffer"] =                 {name = "storehouse-buffer",                tech = "nullius-warehousing-4"}
+    clutterpedia["nullius-storehouse-active-provider"] =        {name = "storehouse-active-provider",       tech = "nullius-warehousing-4"}
+end
+if mods["botReplacer"] then
+    clutterpedia["nullius-bot-upgrade-chest"] =                 {name = "logistic-chest-botUpgrader",       tech = "nullius-logistic-robot-2"}
+end
+if mods["railway-motor-car"] then
+    clutterpedia["nullius-railway-motorcar-1"] =                {name = "railway-motor-car-base",           tech = "nullius-personal-transportation-1"}
+    clutterpedia["nullius-railway-motorcar-2"] =                {name = "railway-motor-car-nuclear",        tech = "nullius-personal-transportation-4"}
+end
+if mods["Inventory Sensor"] then
+    clutterpedia["nullius-item-sensor"] =                       {name = "item-sensor",                      tech = "nullius-sensors-2"}
+end
+if mods["UPSFriendlyNixieTubeDisplay"] then
+    clutterpedia["nullius-classic-nixie-tube"] =                {name = "classic-nixie-tube",               tech = "nullius-reinforced-nixie-tubes-basic"}
+    clutterpedia["nullius-reinforced-nixie-tube"] =             {name = "reinforced-nixie-tube",            tech = "nullius-reinforced-nixie-tubes-reinforced"}
+    clutterpedia["nullius-small-reinforced-nixie-tube"] =       {name = "small-reinforced-nixie-tube",      tech = "nullius-reinforced-nixie-tubes-reinforced"}
+end
+if mods["holographic_signs"] then
+    clutterpedia["nullius-holographic-sign"] =                  {name = "hs_holo_sign",                     tech = "nullius-holographics"}
+end
+if mods["FluidMustFlow"] then
+    clutterpedia["nullius-duct-small"] =                        {name = "duct-small",                       tech = "nullius-ducts"}
+    clutterpedia["nullius-duct-curve"] =                        {name = "duct-curve",                       tech = "nullius-ducts"}
+    clutterpedia["nullius-duct-t-junction"] =                   {name = "duct-t-junction",                  tech = "nullius-ducts"}
+    clutterpedia["nullius-duct-cross"] =                        {name = "duct-cross",                       tech = "nullius-ducts"}
+    clutterpedia["nullius-duct-exhaust"] =                      {name = "duct-exhaust",                     tech = "nullius-ducts"}
+    clutterpedia["nullius-duct-intake"] =                       {name = "duct-intake",                      tech = "nullius-ducts"}
+    clutterpedia["nullius-duct-underground"] =                  {name = "duct-underground",                 tech = "nullius-ducts"}
+    clutterpedia["nullius-non-return-duct"] =                   {name = "non-return-duct",                  tech = "nullius-ducts"}
+    if not settings.startup["fmf-enable-duct-auto-join"].value then
+    clutterpedia["nullius-duct"] =                              {name = "duct",                             tech = "nullius-ducts"}
+    clutterpedia["nullius-duct-long"] =                         {name = "duct-long",                        tech = "nullius-ducts"}
+    end
+end
+if mods["RenaiTransportation"] then
+    if settings.startup["RTThrowersSetting"].value then
+    clutterpedia["nullius-open-chest"] =                        {name = "OpenContainer",                    tech = "nullius-logistic-ballistics-1"}
+    clutterpedia["nullius-closed-chest"] =                      {name = "wooden-chest",                     tech = "nullius-logistic-ballistics-1"}
+    
+    clutterpedia["nullius-thrower-1"] =                         {name = "RTThrower-inserter-Item",          tech = "nullius-logistic-ballistics-1"}
+    clutterpedia["nullius-thrower-2"] =                         {name = "RTThrower-bob-turbo-inserter-Item",tech = "nullius-logistic-ballistics-5"}
+    clutterpedia["nullius-thrower-3"] =                         {name = "RTThrower-bulk-inserter-Item",     tech = "nullius-logistic-ballistics-7"}
+    clutterpedia["nullius-thrower-4"] =                         {name = "RTThrower-bob-express-bulk-inserter-Item",tech = "nullius-logistic-ballistics-8"}
+    
+    clutterpedia["nullius-player-thrower"] =                    {name = "PlayerLauncher",                   tech = "nullius-logistic-ballistics-2"}
+    clutterpedia["nullius-hatch"] =                             {name = "HatchRT",                          tech = "nullius-logistic-ballistics-3"}
+    clutterpedia["nullius-bounce-plate"] =                      {name = "RTBouncePlate",                    tech = "nullius-logistic-ballistics-4"}
+    clutterpedia["nullius-directed-bounce-plate"] =             {name = "DirectedBouncePlate",              tech = "nullius-logistic-ballistics-4"}
+    clutterpedia["nullius-ejector-hatch"] =                     {name = "RTThrower-EjectorHatchRT",         tech = "nullius-logistic-ballistics-6"}
+    clutterpedia["nullius-director-bounce-plate"] =             {name = "DirectorBouncePlate",              tech = "nullius-logistic-ballistics-6"}
+    end
+    if settings.startup["RTZiplineSetting"].value then
+    clutterpedia["nullius-zipline-trolley"] =                   {name = "RTZiplineTrolley",                 tech = "nullius-ziplining-1"}
+    clutterpedia["nullius-zipline-control"] =                   {name = "RTZiplineControls",                tech = "nullius-ziplining-1"}
+    clutterpedia["nullius-zipline-crank-control"] =             {name = "RTZiplineCrankControls",           tech = "nullius-ziplining-1"}
+    clutterpedia["nullius-zipline-trolley-2"] =                 {name = "RTZiplineTrolley2",                tech = "nullius-ziplining-2"}
+    clutterpedia["nullius-zipline-smart-control"] =             {name = "RTProgrammableZiplineControls",    tech = "nullius-ziplining-2"}
+    clutterpedia["nullius-zipline-terminal"] =                  {name = "RTZiplineTerminal",                tech = "nullius-ziplining-2"}
+    clutterpedia["nullius-zipline-trolley-3"] =                 {name = "RTZiplineTrolley3",                tech = "nullius-ziplining-3"}
+    clutterpedia["nullius-zipline-trolley-4"] =                 {name = "RTZiplineTrolley4",                tech = "nullius-ziplining-4"}
+    clutterpedia["nullius-zipline-trolley-5"] =                 {name = "RTZiplineTrolley5",                tech = "nullius-ziplining-5"}
+    end
+    if settings.startup["RTTrainRampSetting"].value then
+    clutterpedia["nullius-train-ramp"] =                        {name = "RTTrainRamp",                      tech = "nullius-freight-ballistics-1"}
+    clutterpedia["nullius-impact-unloader"] =                   {name = "RTImpactUnloader",                 tech = "nullius-freight-ballistics-3"}
+    clutterpedia["nullius-impact-wagon"] =                      {name = "RTImpactWagon",                    tech = "nullius-freight-ballistics-3"}
+    clutterpedia["nullius-magnetic-ramp"] =                     {name = "RTMagnetTrainRamp",                tech = "nullius-freight-ballistics-4"}
+    if settings.startup["RTThrowersSetting"].value then
+        clutterpedia["nullius-train-bounce-plate"] =            {name = "RTTrainBouncePlate",               tech = "nullius-freight-ballistics-2"}
+        clutterpedia["nullius-train-directed-bounce-plate"] =   {name = "RTTrainDirectedBouncePlate",       tech = "nullius-freight-ballistics-2"}
+    end
+    end
+end
+if (mods["rec-blue-plus"] or mods["recursive-blueprints"]) then
+    clutterpedia["nullius-blueprint-deployer"] =                {name = "blueprint-deployer",               tech = "nullius-construction-robot-1"}
+    clutterpedia["nullius-recursive-blueprints-scanner"] =      {name = "recursive-blueprints-scanner",     tech = "nullius-sensors-2"}
+end
+if mods["ch-concentrated-solar"] then
+    clutterpedia["nullius-heliostat-mirror"] =                  {name = "chcs-heliostat-mirror",            tech = "nullius-concentrated-solar-energy"}
+    clutterpedia["nullius-solar-tower"] =                       {name = "chcs-solar-power-tower",           tech = "nullius-concentrated-solar-energy"}
+end
+if mods["fcpu"] then
+    clutterpedia["nullius-fcpu"] =                              {name = "fcpu",                             tech = "nullius-fcpu"}
+end
+
+
 function generate_migrations()
     local contents = "\n---- Generated migrations ----\n"
     for ogRecipe, entry in pairs(clutterpedia) do
@@ -116,9 +290,15 @@ function recipe_renaming()
             recipe.localised_name = {"recipe-name."..ogRecipeName}
         end
         data:extend{recipe}
-        for _,effect in pairs(data.raw.technology[entry.tech].effects) do
-            if effect.type == "unlock-recipe" and effect.recipe == ogRecipeName then
-                effect.recipe = entry.name
+        local techs = entry.tech
+        if type(entry.tech) ~= "table" then
+            techs = {entry.tech}
+        end
+        for _,tech in pairs(techs) do
+            for _,effect in pairs(data.raw.technology[tech].effects) do
+                if effect.type == "unlock-recipe" and effect.recipe == ogRecipeName then
+                    effect.recipe = entry.name
+                end
             end
         end
     end
