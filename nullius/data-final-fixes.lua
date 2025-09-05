@@ -10,3 +10,9 @@ for _, recipe in pairs(data.raw.recipe) do
         recipe.GCKI_ignore = nil
     end
 end
+
+for _,recipe in pairs(data.raw.recipe) do
+    if string.sub(recipe.name, 1, 14) == "nullius-boxed-" or string.sub(recipe.name, 1, 14) == "nullius-unbox-" then
+        recipe.hide_from_signal_gui = false
+    end
+end

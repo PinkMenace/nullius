@@ -507,7 +507,7 @@ data:extend({
       }
     },
     crafting_categories = {
-      "small-crafting", "medium-crafting", "large-crafting",
+      "small-crafting","medium-crafting", "large-crafting",
       "small-assembly", "medium-assembly", "large-assembly", "medium-only-assembly",
       "small-fluid-assembly", "large-fluid-assembly"
     },

@@ -26,6 +26,7 @@ Date: 2025
   Graphics:
     - Added icons for drones ammo categories
     - Reworked voiding recipes icons to make them standout more in factoriopedia
+    - Altered lime recipe so that it's distinguishable from the item in the signals gui
   Info:
     - Added description to inserters 
     - Renamed the extension tech to inserter extension
