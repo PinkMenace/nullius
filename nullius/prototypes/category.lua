@@ -982,13 +982,13 @@ data:extend({
   {
     type = "item-subgroup",
     order = "l",
-    name = "compression",
+    name = "decompression",
     group = "fluids",
   },
   {
     type = "item-subgroup",
     order = "m",
-    name = "decompression",
+    name = "compression",
     group = "fluids",
   },
   {

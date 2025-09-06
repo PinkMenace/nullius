@@ -65,8 +65,8 @@ clutterpedia["nullius-android-1"] =             {name = "character",            
 
 -- Attempt at fluids renamings
 clutterpedia["nullius-desalination"] =                      {name = "nullius-water",                tech = "nullius-desalination", main_product = true}
-clutterpedia["nullius-seawater-filtration"] =               {name = "nullius-saline",               tech = "nullius-water-filtration-1"}
-clutterpedia["nullius-hydrogen-chloride-neutralization"] =  {name = "nullius-brine",                tech = "nullius-inorganic-chemistry-1"}
+--clutterpedia["nullius-seawater-filtration"] =               {name = "nullius-saline",               tech = "nullius-water-filtration-1"}
+--clutterpedia["nullius-hydrogen-chloride-neutralization"] =  {name = "nullius-brine",                tech = "nullius-inorganic-chemistry-1"}
 --clutterpedia["nullius-air-separation-1"] =                  {name = "nullius-nitrogen",             tech = "nullius-air-separation-1", main_product = true, locale = true}
 --clutterpedia["nullius-residual-separation"] =               {name = "nullius-argon",                tech = "nullius-air-separation-2", main_product = true, locale = true}
 clutterpedia["nullius-carbon-dioxide-to-monoxide"] =        {name = "nullius-carbon-monoxide",      tech = "nullius-carbon-sequestration-2"}
