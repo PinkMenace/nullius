@@ -20,4 +20,10 @@ data:extend({
         setting_type = "startup",
         default_value = false
     },
+    {
+        type = "bool-setting",
+        name = "nullius-hide-recipe-signals",
+        setting_type = "startup",
+        default_value = false
+    },
 })
