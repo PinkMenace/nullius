@@ -37,6 +37,9 @@ function label_icon(name, tier, color, etype)
 end
 
 function add_recipe_gear_icon(icons)
+  if settings.startup["nullius-hide-recipe-signals"].value == true then
+    return icons
+  end
   icons = table.deepcopy(icons)
   table.insert(icons,{
       --icon = "__base__/graphics/icons/iron-gear-wheel.png",
