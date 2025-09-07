@@ -36,6 +36,18 @@ function label_icon(name, tier, color, etype)
   end
 end
 
+function add_recipe_gear_icon(icons)
+  icons = table.deepcopy(icons)
+  table.insert(icons,{
+      --icon = "__base__/graphics/icons/iron-gear-wheel.png",
+      icon = "__nullius__/graphics/icons/factorio-logo-gear.png",
+      icon_size = 64,
+      scale = 0.25,
+      shift = {-10, 10}
+    })
+  return icons
+end
+
 function scale_shift(vec, scale)
   if (vec == nil) then return nil end
   vec[1] = vec[1] * scale
