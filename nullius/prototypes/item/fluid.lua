@@ -1401,6 +1401,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-hydrogen-chloride",
+    icons = add_recipe_gear_icon(data.raw.fluid["nullius-hydrogen-chloride"].icons),
     enabled = false,
     category = "basic-chemistry",
     subgroup = "chlorine-chemistry",
@@ -1413,7 +1414,7 @@ data:extend({
     always_show_products = true,
     energy_required = 1,
     no_productivity = true,
-    hide_from_signal_gui = false, -- todo: icon
+    hide_from_signal_gui = false,
     ingredients = {
       {type="fluid", name="nullius-hydrogen", amount=30},
       {type="fluid", name="nullius-chlorine", amount=30}
@@ -1454,6 +1455,7 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-acid-hydrochloric",
+    icons = add_recipe_gear_icon(data.raw.fluid["nullius-acid-hydrochloric"].icons),
     enabled = false,
     category = "basic-chemistry",
     subgroup = "chlorine-chemistry",
@@ -1464,7 +1466,7 @@ data:extend({
     },
     show_amount_in_title = false,
     always_show_products = true,
-    hide_from_signal_gui = false, -- todo: icon
+    hide_from_signal_gui = false,
     energy_required = 1,
     ingredients = {
       {type="fluid", name="nullius-hydrogen-chloride", amount=35},
@@ -1931,9 +1933,15 @@ data:extend({
     type = "recipe",
     name = "nullius-seawater-filtration",
     localised_name = {"recipe-name.nullius-seawater-filtration"},
+    icons = add_recipe_gear_icon({
+      {
+        icon = "__base__/graphics/icons/fluid/water.png",
+        icon_size = 64,
+      }
+    }),
     order = "nullius-b",
     enabled = false,
-    hide_from_signal_gui = false, -- todo: icon
+    hide_from_signal_gui = false,
     category = "nullius-water-treatment",
     subgroup = "nullius-water-treatment",
     energy_required = 1,
@@ -1950,9 +1958,15 @@ data:extend({
     type = "recipe",
     name = "nullius-freshwater-filtration",
     localised_name = {"recipe-name.nullius-freshwater-filtration"},
+    icons = add_recipe_gear_icon({
+      {
+        icon = FLUIDPATH .. "purewater.png",
+        icon_size = 64
+      }
+    }),
     order = "nullius-c",
     enabled = false,
-    hide_from_signal_gui = false, -- todo: icon
+    hide_from_signal_gui = false,
     category = "nullius-water-treatment",
     subgroup = "nullius-water-treatment",
     energy_required = 1,
@@ -3172,7 +3186,7 @@ data:extend({
       {{"__angelspetrochemgraphics__/graphics/icons/molecules/carbon-dioxide.png", 72}}
     ),
     enabled = false,
-    hide_from_signal_gui = false, -- todo: maybe useless ?
+    --hide_from_signal_gui = false,
     category = "basic-chemistry",
     subgroup = "carbon",
     order = "nullius-bc",
@@ -3750,7 +3764,7 @@ data:extend({
     enabled = false,
     show_amount_in_title = false,
     always_show_products = true,
-    --hide_from_signal_gui = false, -- todo: probably useless
+    --hide_from_signal_gui = false,
     category = "basic-chemistry",
 	  order = "nullius-bb",
     crafting_machine_tint = {
@@ -5366,7 +5380,7 @@ data:extend({
     icon_size = 64,
 	  enabled = false,
 	  no_productivity = true,
-	  hide_from_signal_gui = false, -- todo: maybe remove it
+	  hide_from_signal_gui = false, -- maybe remove it
 	  category = "nullius-unbarrel",
 	  subgroup = "canister-emptying",
     order = "nullius-e",
@@ -7811,12 +7825,16 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fusion-recycling",
-    icon = ICONPATH .. "fusion-spent.png",
-    icon_size = 64,
+    icons = add_recipe_gear_icon({
+      {
+        icon = ICONPATH .. "fusion-spent.png",
+        icon_size = 64
+      },
+    }),
     enabled = false,
     show_amount_in_title = false,
     always_show_products = true,
-    hide_from_signal_gui = false, -- todo: maybe icon
+    hide_from_signal_gui = false,
     category = "basic-chemistry",
     subgroup = "nuclear",
     order = "nullius-cc",
@@ -7858,12 +7876,16 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-breeder-recycling",
-    icon = ICONPATH .. "breeder-spent.png",
-    icon_size = 64,
+    icons = add_recipe_gear_icon({
+      {
+        icon = ICONPATH .. "breeder-spent.png",
+        icon_size = 64
+      },
+    }),
     enabled = false,
     show_amount_in_title = false,
     always_show_products = true,
-    hide_from_signal_gui = false, -- todo: maybe icon
+    hide_from_signal_gui = false,
     category = "distillation",
     subgroup = "nuclear",
     order = "nullius-dc",

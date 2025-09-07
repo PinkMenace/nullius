@@ -2184,7 +2184,6 @@ data:extend({
     type = "recipe",
     name = "nullius-gypsum",
     localised_name = {"recipe-name.nullius-gypsum-1"},
-    hide_from_signal_gui = false, --todo: check if this is still needed after renaming to merge the factoriopedia entry
     icons = {
       {
         icon = "__angelsrefininggraphics__/graphics/icons/crushed/crushed-4.png",
@@ -3962,7 +3961,6 @@ data:extend({
     always_show_made_in = true,
     show_amount_in_title = false,
     always_show_products = true,
-    --hide_from_signal_gui = false, --useless
     energy_required = 4,
     ingredients = {
       {type = "item", name = "nullius-iron-plate", amount = 2},
@@ -8372,9 +8370,12 @@ data:extend({
   {
     type = "recipe",
     name = "nullius-fission-recycling",
-    icon = "__base__/graphics/icons/depleted-uranium-fuel-cell.png",
-    icon_size = 64,
-    
+    icons = add_recipe_gear_icon({
+      {
+        icon = "__base__/graphics/icons/depleted-uranium-fuel-cell.png",
+        icon_size = 64
+      },
+    }),
     enabled = false,
     show_amount_in_title = false,
     always_show_products = true,
