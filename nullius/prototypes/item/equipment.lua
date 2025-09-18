@@ -3509,6 +3509,7 @@ data:extend({
     name = "nullius-rocket",
     enabled = false,
     always_show_made_in = true,
+    hide_from_player_crafting = true,
     category = "rocketry",
     energy_required = 400,
     ingredients = {
@@ -3538,6 +3539,8 @@ data:extend({
     subgroup = "space",
     order = "nullius-d",
     stack_size = 1,
+    weight = 1000000,
+    send_to_orbit_mode = "automated",
     rocket_launch_products = {
       {type = "item", name = "nullius-box-astronomy-pack", amount = 100}
     }
