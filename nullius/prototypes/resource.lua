@@ -11,10 +11,14 @@ resource_autoplace.initialize_patch_set("nullius-sandstone", true)
 resource_autoplace.initialize_patch_set("nullius-limestone", false)
 resource_autoplace.initialize_patch_set("nullius-fumarole", false)
 
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-bauxite"] = {}
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-sandstone"] = {}
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-limestone"] = {}
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-fumarole"] = {}
+local nauvis_map_gen_settings = data.raw.planet["nauvis"].map_gen_settings
+for _, resource in ipairs({"iron-ore", "nullius-bauxite", "nullius-sandstone",
+                           "nullius-limestone"}) do
+  nauvis_map_gen_settings.autoplace_settings["entity"]["settings"][resource] = {}
+  nauvis_map_gen_settings.autoplace_controls[resource] = {}
+end
+nauvis_map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-fumarole"] = {}
+nauvis_map_gen_settings.autoplace_controls["nullius-geothermal"] = {}
 
 
 local function make_particle(inputname, inputtint)
