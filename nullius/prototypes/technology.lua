@@ -3955,6 +3955,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "empty-nullius-chlorine-barrel"
+      },
+      {
+        type = "cliff-deconstruction-enabled",
+        modifier = true
       }
     },
     unit = {
