@@ -223,6 +223,14 @@ data.raw.technology["factory-architecture-t1"].localised_name = {"", {"technolog
 data.raw.technology["factory-architecture-t2"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", tostring(2)}
 data.raw.technology["nullius-architecture-1"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", tostring(3)}
 data.raw.technology["factory-architecture-t3"].localised_name = {"", {"technology-name.nullius-architecture"}, " ", tostring(4)}
+
+for _, item in pairs({"factory-1", "factory-2"}) do
+  for i, flag in pairs(data.raw.item[item].flags) do
+    if flag == "not-stackable" then
+      table.remove(data.raw.item[item].flags, i)
+    end
+  end
+end
 end
 
 

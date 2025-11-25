@@ -37,6 +37,7 @@ Date: 2025
     - Removed the dependency on angels, now only depends on the graphics
     - Now supports elevated rails
     - Support for quick adjustable inserters
+    - Made factorissimo's factory buildings stackable again so the nullius recipes can be made in an assembler
 ---------------------------------------------------------------------------------------------------
 
 Safefill: added setting to enable mining of waterfill
