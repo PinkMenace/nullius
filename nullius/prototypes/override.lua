@@ -1005,3 +1005,11 @@ data.raw["inserter"]["inserter"].filter_count = 0
 
 data.raw["offshore-pump"]["offshore-pump"] = nil
 data.raw["item"]["offshore-pump"].place_result = nil
+
+-- Parameter recipes and items:
+for n = 0, 9 do
+  local pr = data.raw.recipe["parameter-" .. n]
+  pr.order = "nullius-" .. pr.order
+  local pi = data.raw.item["parameter-" .. n]
+  pi.order = "nullius-" .. pi.order
+end
