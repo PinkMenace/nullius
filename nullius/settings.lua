@@ -26,4 +26,18 @@ data:extend({
         setting_type = "startup",
         default_value = false
     },
+    {
+        type = "bool-setting",
+        name = "nullius-match-wind-turbine-activity-sound",
+        setting_type = "startup",
+        default_value = true
+    },
+    {
+        type = "double-setting",
+        name = "nullius-wind-turbine-volume",
+        setting_type = "startup",
+        default_value = 1.0,
+		minimum_value = 0.0,
+		maximum_value = 1.0,
+    }
 })
