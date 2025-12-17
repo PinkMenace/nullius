@@ -2079,7 +2079,7 @@ data:extend({
     type = "storage-tank",
     name = "nullius-large-tank-1",
     icons = data.raw.item["nullius-large-tank-1"].icons,
-    flags = {"placeable-player", "player-creation", "not-rotatable"},
+    flags = {"placeable-player", "player-creation"}, -- , "not-rotatable"
     minable = {mining_time = 3, result = "nullius-large-tank-1"},
     collision_mask = collision_mask_util.get_default_mask("rocket-silo"), -- generic tall building
     max_health = 1000,
@@ -2174,7 +2174,7 @@ data:extend({
     type = "storage-tank",
     name = "nullius-large-tank-2",
     icons = data.raw.item["nullius-large-tank-2"].icons,
-    flags = {"placeable-player", "player-creation", "not-rotatable"},
+    flags = {"placeable-player", "player-creation"}, -- "not-rotatable"
     minable = {mining_time = 3, result = "nullius-large-tank-2"},
     collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 1200,
@@ -2207,7 +2207,7 @@ data:extend({
     type = "storage-tank",
     name = "nullius-large-tank-3",
     icons = data.raw.item["nullius-large-tank-3"].icons,
-    flags = {"placeable-player", "player-creation", "not-rotatable"},
+    flags = {"placeable-player", "player-creation"}, -- , "not-rotatable"
     minable = {mining_time = 3, result = "nullius-large-tank-3"},
     collision_mask = collision_mask_util.get_default_mask("rocket-silo"),
     max_health = 1500,
