@@ -290,8 +290,8 @@ data:extend({
       },
       {
         icon = "__boblogistics__/graphics/icons/pipe/copper-tungsten-pipe.png",
-        icon_size = 32,
-		scale = 0.9
+        icon_size = 64,
+		    scale = 0.45
       },
       {
         icon = "__angelssmeltinggraphics__/graphics/icons/ingot-steel.png",

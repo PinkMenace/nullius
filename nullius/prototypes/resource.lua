@@ -11,10 +11,14 @@ resource_autoplace.initialize_patch_set("nullius-sandstone", true)
 resource_autoplace.initialize_patch_set("nullius-limestone", false)
 resource_autoplace.initialize_patch_set("nullius-fumarole", false)
 
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-bauxite"] = {}
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-sandstone"] = {}
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-limestone"] = {}
-data.raw.planet["nauvis"].map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-fumarole"] = {}
+local nauvis_map_gen_settings = data.raw.planet["nauvis"].map_gen_settings
+for _, resource in ipairs({"iron-ore", "nullius-bauxite", "nullius-sandstone",
+                           "nullius-limestone"}) do
+  nauvis_map_gen_settings.autoplace_settings["entity"]["settings"][resource] = {}
+  nauvis_map_gen_settings.autoplace_controls[resource] = {}
+end
+nauvis_map_gen_settings.autoplace_settings["entity"]["settings"]["nullius-fumarole"] = {}
+nauvis_map_gen_settings.autoplace_controls["nullius-geothermal"] = {}
 
 
 local function make_particle(inputname, inputtint)
@@ -305,9 +309,9 @@ data:extend({
   {
     type = "resource",
     name = "nullius-fumarole",
-    icons = data.raw.fluid["nullius-volcanic-gas"].icons,
+    icons = combine_icons(data.raw.fluid["nullius-volcanic-gas"].icons, {{icon = data.raw.fluid["nullius-steam"].icon, icon_size = 64}}, 0.85, 0.25, nil, {-10, -10}),
     map_color = {r=1, g=0.5, b=0},
-	mining_visualisation_tint = {r = 1.0, g = 0.7, b = 0.4, a = 1.0},
+	  mining_visualisation_tint = {r = 1.0, g = 0.7, b = 0.4, a = 1.0},
     map_grid = false,
 
     flags = {"placeable-neutral"},

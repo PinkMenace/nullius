@@ -103,9 +103,9 @@ for i=1,3 do
       working_sound = {
         sound = {
           filename = "__base__/sound/train-wheels.ogg",
-          volume = scale
+          volume = scale * settings.startup["nullius-wind-turbine-volume"].value
         },
-        match_speed_to_activity = true
+        match_speed_to_activity = settings.startup["nullius-match-wind-turbine-activity-sound"].value
       }
     },
 
@@ -149,9 +149,9 @@ for i=1,3 do
       working_sound = {
         sound = {
           filename = "__base__/sound/train-wheels.ogg",
-          volume = scale
+          volume = scale * settings.startup["nullius-wind-turbine-volume"].value
         },
-        match_speed_to_activity = true,
+        match_speed_to_activity = settings.startup["nullius-match-wind-turbine-activity-sound"].value
       }
     }
   })

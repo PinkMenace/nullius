@@ -204,7 +204,7 @@ function build_thermal_tank(entity, level)
   local position = entity.position
   local force = entity.force
   local surface = entity.surface
-  --entity.destroy()
+  entity.destroy()
   surface.create_entity{name = "nullius-thermal-tank-"..dirname.."-"..level,
     position = position, force = force, direction = direction, fast_replace = true}
 end

@@ -35,6 +35,7 @@ Date: 2025
     - Added display panels and selector combinator
     - Added setting to hide the voiding recipe icon from chimneys and outfalls
     - Added circuit connections to most buildings
+    - Added settings to control the sound of wind turbines
   Changes:
     - Reworked the inserters: Removed filter inserters, now base inserters have filters except tier 1, their recipes have been adapted
     - Removed mirror buildings, use 2.0 flipping instead, removed chirality research
@@ -43,6 +44,7 @@ Date: 2025
     - Changed required techs for most shortcuts
     - Now uses the Valve prototype for valves
     - Changed plumbing and pumping checkpoints to reflect lesser need for pumps in 2.0 fluid system
+    - Made tanks rotatable/flippable
   Balancing:
     - Increased the pumping speeds of pumps (and max flow rate)
   Bugfixes:
@@ -61,6 +63,7 @@ Date: 2025
     - Removed the dependency on angels, now only depends on the graphics
     - Now supports elevated rails
     - Support for quick adjustable inserters
+    - Made factorissimo's factory buildings stackable again so the nullius recipes can be made in an assembler
 ---------------------------------------------------------------------------------------------------
 
 Safefill: added setting to enable mining of waterfill

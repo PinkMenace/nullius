@@ -774,7 +774,7 @@ local resource_table = {
       density = 85, radius = 18, depth = 8 },
   { name = "nullius-sandstone", amount = 150,
       density = 90, radius = 17, depth = 8 },
-  { name = "lambent-nil-phosphorite", mod = "lambent-nil",
+  { name = "nullius-phosphorite", mod = "lambent-nil",
       amount = 10, density = 25, radius = 4, depth = 2 }
 }
 
