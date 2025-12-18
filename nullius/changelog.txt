@@ -22,8 +22,6 @@ Date: 18.12.2025
     - Made tanks rotatable/flippable
   Balancing:
     - Increased the pumping speeds of pumps (and max flow rate)
-  Bugfixes:
-    - 
   Graphics:
     - Added icons for drones ammo categories
     - Reworked voiding recipes icons to make them standout more in factoriopedia
