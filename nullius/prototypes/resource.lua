@@ -309,9 +309,9 @@ data:extend({
   {
     type = "resource",
     name = "nullius-fumarole",
-    icons = data.raw.fluid["nullius-volcanic-gas"].icons,
+    icons = combine_icons(data.raw.fluid["nullius-volcanic-gas"].icons, {{icon = data.raw.fluid["nullius-steam"].icon, icon_size = 64}}, 0.85, 0.25, nil, {-10, -10}),
     map_color = {r=1, g=0.5, b=0},
-	mining_visualisation_tint = {r = 1.0, g = 0.7, b = 0.4, a = 1.0},
+	  mining_visualisation_tint = {r = 1.0, g = 0.7, b = 0.4, a = 1.0},
     map_grid = false,
 
     flags = {"placeable-neutral"},

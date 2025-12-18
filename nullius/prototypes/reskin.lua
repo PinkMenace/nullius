@@ -51,6 +51,55 @@ function add_recipe_gear_icon(icons)
   return icons
 end
 
+function combine_icons(icons1, icons2, scale1, scale2, shift1, shift2)
+  -- if type(icons2) ~= "table" then
+  --   icons2 = {{
+  --     icon = icons2,
+  --     icon_size = 64
+  --   }}
+  -- end
+  local combined = table.deepcopy(icons1)
+  for _, icon in pairs(combined) do
+    if (scale1 ~= nil) then
+      icon.scale = (icon.scale or 1) * scale1
+    end
+    if (shift1 ~= nil) then
+      if (icon.shift ~= nil) then
+        if (icon.shift.x ~= nil) then
+          icon.shift.x = icon.shift.x + shift1[1]
+          icon.shift.y = icon.shift.y + shift1[2]
+        else
+          icon.shift[1] = icon.shift[1] + shift1[1]
+          icon.shift[2] = icon.shift[2] + shift1[2]
+        end
+      else
+        icon.shift = shift1
+      end
+    end
+  end
+  for _, icon in pairs(icons2) do
+    icon = table.deepcopy(icon)
+    if scale2 ~= nil then
+      icon.scale = (icon.scale or 1) * scale2
+    end
+    if shift2 ~= nil then
+      if (icon.shift ~= nil) then
+        if (icon.shift.x ~= nil) then
+          icon.shift.x = icon.shift.x + shift2[1]
+          icon.shift.y = icon.shift.y + shift2[2]
+        else
+          icon.shift[1] = icon.shift[1] + shift2[1]
+          icon.shift[2] = icon.shift[2] + shift2[2]
+        end
+      else
+        icon.shift = shift2
+      end
+    end
+    table.insert(combined, icon)
+  end
+  return combined
+end
+
 function scale_shift(vec, scale)
   if (vec == nil) then return nil end
   vec[1] = vec[1] * scale
