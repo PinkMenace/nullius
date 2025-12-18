@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 18.12.2025
+  Changes:
+    - Renamed a lot of recipe's internal names in order to merge them with their products in factoriopedia
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 18.12.2025
   Features:
@@ -22,8 +27,6 @@ Date: 18.12.2025
     - Made tanks rotatable/flippable
   Balancing:
     - Increased the pumping speeds of pumps (and max flow rate)
-  Bugfixes:
-    - 
   Graphics:
     - Added icons for drones ammo categories
     - Reworked voiding recipes icons to make them standout more in factoriopedia
