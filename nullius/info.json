@@ -7,7 +7,7 @@
   "description": "In this Factorio prequel, you're an android terraforming planets and seeding them with life. Replaces all recipes and technology. No life means no coal, oil, wood, biters, or free oxygen, requiring varied renewable energy sources. For reliability, you'll focus on abundant elements from the air, sea, or common minerals such as iron ore, bauxite, sandstone, and limestone. Advanced technology enables asteroid mining of rarer elements.",
   "homepage": "https://discord.gg/tZY2Rkte8Y",
   "dependencies": [
-    "base >= 2.0.58",
+    "base >= 2.0.72",
     "alien-biomes >= 0.7.4",
 	"angelsrefininggraphics >= 1.0.0",
     "angelssmeltinggraphics >= 1.0.0",
