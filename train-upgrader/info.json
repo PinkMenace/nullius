@@ -7,6 +7,6 @@
   "description": "Easily automate the replacement of large numbers of active locomotives and wagons in your rail system.  Useful in combination with mods that add multiple tiers of locomotives or wagons.",
   "homepage": "https://discord.gg/tZY2Rkte8Y",
   "dependencies": [
-    "base >= 2.0.64"
+    "base >= 2.0.72"
   ]
 }
