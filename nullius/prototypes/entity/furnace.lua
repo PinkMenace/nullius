@@ -705,6 +705,50 @@ circuit_connector_definitions["nullius-crusher"] = circuit_connector_definitions
   { variation = 30, main_offset = util.by_pixel( 35.875, -31.625), shadow_offset = util.by_pixel( 35.875, -31.625), show_shadow = true },
 })
 
+local function get_foundry_graphics_set(is_flipped, speed, tint)
+	local flipped = is_flipped == true and "-flipped" or ""
+  local graphics_set = {
+    animation = {
+      layers = {
+        util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-animation" .. flipped, {
+          priority = "high",
+          frame_count = 49,
+          animation_speed = speed,
+          scale = 0.5,
+          tint = tint,
+        }),
+        util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-animation-shadow" .. flipped, {
+          priority = "high",
+          frame_count = 49,
+          animation_speed = speed,
+          draw_as_shadow = true,
+          scale = 0.5,
+        }),
+        util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-lights" .. flipped, {
+          priority = "high",
+          frame_count = 49,
+          animation_speed = speed,
+          draw_as_light = true,
+          scale = 0.5,
+        }),
+      },
+    },
+    working_visualisations = {
+      -- Integration patch.
+      {
+        always_draw = true,
+        render_layer = "floor",
+        animation = util.sprite_load("__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-integration-patch" .. flipped, {
+          priority = "high",
+          scale = 0.5,
+        }),
+      },
+    }
+  }
+
+  return graphics_set
+end
+
 data:extend({
   {
     type = "assembling-machine",
@@ -835,50 +879,10 @@ data:extend({
     circuit_connector = circuit_connector_definitions["nullius-foundry"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     
-    graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.4,
-            shift = util.by_pixel(0, -2),
-            scale = 0.5,
-            tint = {0.6, 0.8, 0.7}
-          },
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
-            priority = "high",
-            width = 248,
-            height = 206,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.4,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.5, 8.5),
-            scale = 0.5
-          }
-        }
-      },
-      working_visualisations = {
-        {
-          always_draw = true,
-          animation = {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-light.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            shift = util.by_pixel(0, -2),
-            draw_as_light = true,
-            scale = 0.5,
-          },
-        },
-      }
-    },
+    graphics_set = get_foundry_graphics_set(false, 0.4, {0.6, 0.8, 0.7}),
+    --graphics_set_flipped = get_foundry_graphics_set(true, 0.4, {0.6, 0.8, 0.7}),
+    --forced_symmetry = "horizontal",
+
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 50, percent = 80 }
@@ -930,37 +934,10 @@ data:extend({
     circuit_connector = circuit_connector_definitions["nullius-foundry"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     
-    graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            shift = util.by_pixel(0, -2),
-            scale = 0.5,
-            tint = {0.7, 0.8, 1}
-          },
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
-            priority = "high",
-            width = 248,
-            height = 206,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.5,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.5, 8.5),
-            scale = 0.5
-          }
-        }
-      },
-      working_visualisations = data.raw["assembling-machine"]["nullius-foundry-1"].graphics_set.working_visualisations
-    },
+    graphics_set = get_foundry_graphics_set(false, 0.5, {0.7, 0.8, 1}),
+    --graphics_set_flipped = get_foundry_graphics_set(true, 0.5, {0.7, 0.8, 1}),
+    --forced_symmetry = "horizontal",
+   
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 50, percent = 80 }
@@ -1009,36 +986,10 @@ data:extend({
     circuit_connector = circuit_connector_definitions["nullius-foundry"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     
-    graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-base.png",
-            priority = "high",
-            width = 205,
-            height = 244,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.6,
-            shift = util.by_pixel(0, -2),
-            scale = 0.5
-          },
-          {
-            filename = "__angelssmeltinggraphics__/graphics/entity/casting-machine/casting-machine-shadow.png",
-            priority = "high",
-            width = 248,
-            height = 206,
-            line_length = 7,
-            frame_count = 49,
-            animation_speed = 0.6,
-            draw_as_shadow = true,
-            shift = util.by_pixel(11.5, 8.5),
-            scale = 0.5
-          }
-        }
-      },
-      working_visualisations = data.raw["assembling-machine"]["nullius-foundry-1"].graphics_set.working_visualisations,
-    },
+    graphics_set = get_foundry_graphics_set(false, 0.6),
+    --graphics_set_flipped = get_foundry_graphics_set(true, 0.6),
+    --forced_symmetry = "horizontal",
+    
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 50, percent = 80 }
