@@ -2207,7 +2207,7 @@ data:extend({
             scale = 0.52
         }
       }}),
-      working_visualisations = data.raw["assembling-machine"]["nullius-chemical-plant-1"].working_visualisations,
+      working_visualisations = data.raw["assembling-machine"]["nullius-chemical-plant-1"].graphics_set.working_visualisations,
     },
     resistances = {
       { type = "impact", decrease = 100, percent = 90 }

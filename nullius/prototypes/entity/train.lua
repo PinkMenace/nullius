@@ -3,6 +3,15 @@ local ENTITYPATH = "__nullius__/graphics/entity/"
 
 local BASEENTITY = "__base__/graphics/entity/"
 
+-- Conditional evaluation.
+-- e_rails(f) = f() if elevated rails is loaded, nil otherwise.
+local e_rails
+if mods["elevated-rails"] ~= nil then
+  e_rails = function(thunk) return thunk() end
+else
+  e_rails = function(thunk) end
+end
+
 data:extend({
   {
     type = "locomotive",
@@ -56,12 +65,15 @@ data:extend({
     wheels = data.raw.locomotive["locomotive"].wheels,
     stop_trigger = data.raw.locomotive["locomotive"].stop_trigger,
     drive_over_tie_trigger = data.raw.locomotive["locomotive"].drive_over_tie_trigger,
+    drive_over_elevated_tie_trigger = data.raw.locomotive["locomotive"].drive_over_elevated_die_trigger,
     impact_category = data.raw.locomotive["locomotive"].impact_category,
     working_sound = data.raw.locomotive["locomotive"].working_sound,
     open_sound = data.raw.locomotive["locomotive"].open_sound,
     close_sound = data.raw.locomotive["locomotive"].close_sound,
+    elevated_rail_sound = data.raw.locomotive["locomotive"].elevated_rail_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
+    elevated_selection_priority = data.raw.locomotive["locomotive"].elevated_selection_priority,
     --sound_minimum_speed = 0.5,
     --sound_scaling_ratio = 0.35,
 
@@ -107,7 +119,12 @@ data:extend({
             }
           )
         }
-      }
+      },
+      sloped = e_rails(function()
+        local sprites = util.table.deepcopy(data.raw["locomotive"]["locomotive"].pictures.sloped)
+        sprites.layers[1].tint = {0.62, 0.6, 0.5}
+        return sprites
+      end)
     }
   }
 })
@@ -159,12 +176,15 @@ data:extend({
     wheels = data.raw.locomotive["locomotive"].wheels,
     stop_trigger = data.raw.locomotive["locomotive"].stop_trigger,
     drive_over_tie_trigger = data.raw.locomotive["locomotive"].drive_over_tie_trigger,
+    drive_over_elevated_tie_trigger = data.raw.locomotive["locomotive"].drive_over_elevated_die_trigger,
     impact_category = data.raw.locomotive["locomotive"].impact_category,
     working_sound = data.raw.locomotive["locomotive"].working_sound,
     open_sound = data.raw.locomotive["locomotive"].open_sound,
     close_sound = data.raw.locomotive["locomotive"].close_sound,
+    elevated_rail_sound = data.raw.locomotive["locomotive"].elevated_rail_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
+    elevated_selection_priority = data.raw.locomotive["locomotive"].elevated_selection_priority,
     --sound_minimum_speed = 0.5,
     --sound_scaling_ratio = 0.35,
 
@@ -185,7 +205,12 @@ data:extend({
           data.raw.locomotive["nullius-locomotive-1"].pictures.rotated.layers[2],
           data.raw.locomotive["nullius-locomotive-1"].pictures.rotated.layers[3]
         }
-      }
+      },
+      sloped = e_rails(function()
+        local sprites = util.table.deepcopy(data.raw["locomotive"]["locomotive"].pictures.sloped)
+        sprites.layers[1].tint = {1, 0.9, 0.8}
+        return sprites
+      end)
     }
   },
 
@@ -235,12 +260,15 @@ data:extend({
     wheels = data.raw.locomotive["locomotive"].wheels,
     stop_trigger = data.raw.locomotive["locomotive"].stop_trigger,
     drive_over_tie_trigger = data.raw.locomotive["locomotive"].drive_over_tie_trigger,
+    drive_over_elevated_tie_trigger = data.raw.locomotive["locomotive"].drive_over_elevated_die_trigger,
     impact_category = data.raw.locomotive["locomotive"].impact_category,
     working_sound = data.raw.locomotive["locomotive"].working_sound,
     open_sound = data.raw.locomotive["locomotive"].open_sound,
     close_sound = data.raw.locomotive["locomotive"].close_sound,
+    elevated_rail_sound = data.raw.locomotive["locomotive"].elevated_rail_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
+    elevated_selection_priority = data.raw.locomotive["locomotive"].elevated_selection_priority,
     --sound_minimum_speed = 0.5,
     --sound_scaling_ratio = 0.35,
 
@@ -261,7 +289,12 @@ data:extend({
           data.raw.locomotive["nullius-locomotive-1"].pictures.rotated.layers[2],
           data.raw.locomotive["nullius-locomotive-1"].pictures.rotated.layers[3]
         }
-      }
+      },
+      sloped = e_rails(function()
+        local sprites = util.table.deepcopy(data.raw["locomotive"]["locomotive"].pictures.sloped)
+        sprites.layers[1].tint = {0.9, 0.95, 1}
+        return sprites
+      end)
     }
   },
 
@@ -304,12 +337,15 @@ data:extend({
     wheels = data.raw.locomotive["locomotive"].wheels,
     stop_trigger = data.raw.locomotive["locomotive"].stop_trigger,
     drive_over_tie_trigger = data.raw.locomotive["locomotive"].drive_over_tie_trigger,
+    drive_over_elevated_tie_trigger = data.raw.locomotive["locomotive"].drive_over_elevated_die_trigger,
     impact_category = data.raw.locomotive["locomotive"].impact_category,
     working_sound = data.raw.locomotive["locomotive"].working_sound,
     open_sound = data.raw.locomotive["locomotive"].open_sound,
     close_sound = data.raw.locomotive["locomotive"].close_sound,
+    elevated_rail_sound = data.raw.locomotive["locomotive"].elevated_rail_sound,
     water_reflection = data.raw.locomotive["locomotive"].water_reflection,
     tie_distance = 50,
+    elevated_selection_priority = data.raw.locomotive["locomotive"].elevated_selection_priority,
     --sound_minimum_speed = 0.5,
     --sound_scaling_ratio = 0.35,
 
@@ -330,7 +366,12 @@ data:extend({
           data.raw.locomotive["nullius-locomotive-1"].pictures.rotated.layers[2],
           data.raw.locomotive["nullius-locomotive-1"].pictures.rotated.layers[3]
         }
-      }
+      },
+      sloped = e_rails(function()
+        local sprites = util.table.deepcopy(data.raw["locomotive"]["locomotive"].pictures.sloped)
+        sprites.layers[1].tint = {0.9, 1, 0.95}
+        return sprites
+      end)
     }
   },
 
@@ -532,6 +573,8 @@ data:extend({
     --sound_minimum_speed = 0.1,
   
     pictures = {
+      slope_angle_between_frames = data.raw["fluid-wagon"]["fluid-wagon"].pictures.slope_angle_between_frames,
+      slope_back_equals_front = data.raw["fluid-wagon"]["fluid-wagon"].pictures.slope_back_equals_front,
       rotated = {
         layers = {
           util.sprite_load("__base__/graphics/entity/fluid-wagon/fluid-wagon",
@@ -559,7 +602,12 @@ data:extend({
             }
           )
         }
-      }
+      },
+      sloped = e_rails(function()
+        local sprites = util.table.deepcopy(data.raw["fluid-wagon"]["fluid-wagon"].pictures.sloped)
+        sprites.layers[1].apply_runtime_tint = true
+        return sprites
+      end)
     }
   }
 })
@@ -723,6 +771,7 @@ data:extend({
     --sound_minimum_speed = 0.1,
 
     pictures = {
+      slope_angle_between_frames = data.raw["artillery-wagon"]["artillery-wagon"].pictures.slope_angle_between_frames,
       rotated = {
         layers = {
           util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-base",
@@ -750,7 +799,13 @@ data:extend({
           ),
           data.raw["artillery-wagon"]["artillery-wagon"].pictures.rotated.layers[2]
         }
-      }
+      },
+      sloped = e_rails(function()
+        local sprites = util.table.deepcopy(data.raw["artillery-wagon"]["artillery-wagon"].pictures.sloped)
+        sprites.layers[1].tint = {0.7, 0.7, 0.9}
+        sprites.layers[2].tint = {0.7, 0.7, 0.9}
+        return sprites
+      end)
     }
   },
 
