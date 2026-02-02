@@ -1,3 +1,6 @@
+require("legacyAngels")
+require("legacyValves")
+
 require("prototypes.reskin")
 require("prototypes.category")
 require("prototypes.item.fluid")
@@ -16,7 +19,8 @@ require("prototypes.item.broken")
 require("prototypes.item.void")
 require("prototypes.item.landfill")
 require("prototypes.item.boxing")
-require("prototypes.entity.furnace")
+
+require("prototypes.entity.furnace") 
 require("prototypes.entity.assembler")
 require("prototypes.entity.miner")
 require("prototypes.entity.plumbing")
@@ -47,4 +51,3 @@ require("prototypes.inputs")
 require("prototypes.achievements")
 
 data.raw["map-settings"]["map-settings"].pollution.enabled = false
-data.raw["map-settings"]["map-settings"].difficulty_settings.research_queue_setting = "always"

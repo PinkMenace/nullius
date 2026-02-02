@@ -5,7 +5,6 @@ local connector_offset = {
   [defines.direction.west] = {x = -2.15, y = 0}
 }
 
-
 local function turbine_priority(name)
   local priority = string.sub(name, -9, -2)
   if (priority == "-backup-") then
@@ -33,9 +32,9 @@ function build_turbine(entity)
   if (not (entity.valid and entity.supports_direction)) then return end
 
   local entry = { }
-  if (global.nullius_turbines == nil) then
-    global.nullius_turbines = { }
-  elseif (global.nullius_turbines[entity.unit_number] == entry) then
+  if (storage.nullius_turbines == nil) then
+    storage.nullius_turbines = { }
+  elseif (storage.nullius_turbines[entity.unit_number] == entry) then
     return
   end
 
@@ -49,8 +48,8 @@ function build_turbine(entity)
   local priority = turbine_priority(entity.name)
   if ((typestr == nil) or (priority == nil)) then return end
 
-  script.register_on_entity_destroyed(entity)
-  global.nullius_turbines[entity.unit_number] = entry
+  script.register_on_object_destroyed(entity)
+  storage.nullius_turbines[entity.unit_number] = entry
 
   local pos = entity.position
   entry.connector = entity.surface.create_entity{
@@ -65,9 +64,9 @@ function build_turbine(entity)
 
   if (priority == "exhaust") then
     local revdir = rotate_right[rotate_right[dir]]
-	local roffs = connector_offset[revdir]
+	  local roffs = connector_offset[revdir]
     entry.vent = entity.surface.create_entity{
-        name = "nullius-turbine-vent" .. "-" .. tier,
+      name = "nullius-turbine-vent" .. "-" .. tier,
 	    force = entity.force, direction = revdir,
 	    position = {x = (pos.x + roffs.x), y = (pos.y + roffs.y)}}
   end
@@ -80,10 +79,10 @@ local function destroy_if_valid(entity)
 end
 
 function remove_turbine(unit)
-  if (global.nullius_turbines == nil) then return false end
-  local entry = global.nullius_turbines[unit]
+  if (storage.nullius_turbines == nil) then return false end
+  local entry = storage.nullius_turbines[unit]
   if (entry == nil) then return false end
-  global.nullius_turbines[unit] = nil
+  storage.nullius_turbines[unit] = nil
   destroy_if_valid(entry.connector)
   destroy_if_valid(entry.generator)
   destroy_if_valid(entry.vent)
@@ -95,11 +94,11 @@ local function replace_turbine(entity, force, newname)
   local furnace_contents = save_fluid_contents(entity)
   local connector_contents = nil
   local generator_contents = nil
-  local entry = global.nullius_turbines[entity.unit_number]
+  local entry = storage.nullius_turbines[entity.unit_number]
   if (entry ~= nil) then
     connector_contents = save_fluid_contents(entry.connector)
-	generator_contents = save_fluid_contents(entry.generator)
-	remove_turbine(entity.unit_number)
+	  generator_contents = save_fluid_contents(entry.generator)
+	  remove_turbine(entity.unit_number)
   end
 
   if (newname ~= nil) then
@@ -114,7 +113,7 @@ local function replace_turbine(entity, force, newname)
 
   build_turbine(entity)
   restore_fluid_contents(entity, furnace_contents)
-  local newentry = global.nullius_turbines[entity.unit_number]
+  local newentry = storage.nullius_turbines[entity.unit_number]
   if (newentry ~= nil) then
     restore_fluid_contents(newentry.connector, connector_contents)
 	restore_fluid_contents(newentry.generator, generator_contents)
@@ -147,9 +146,9 @@ end
 
 local function scan_surge_priority(name)
   local offs = 9
-  if (string.sub(name, 9, 15) == "mirror-") then
-    offs = 16
-  end
+  -- if (string.sub(name, 9, 15) == "mirror-") then
+  --   offs = 16
+  -- end
   local offs2 = offs + 5
   local priority = string.sub(name, offs, offs2)
   if (priority == "surge-") then
@@ -253,10 +252,10 @@ function entity_paste_event(event)
 
   if (string.sub(tname, 9, 16) == "turbine-") then
     if (string.sub(sname, 9, 16) ~= "turbine-") then return end
-	local ttyp = turbine_type(tname)
+	  local ttyp = turbine_type(tname)
     local tpri = turbine_priority(tname)
     if ((ttyp == nil) or (tpri == nil)) then return end
-	local spri = turbine_priority(sname)
+	  local spri = turbine_priority(sname)
     if ((spri == nil) or (spri == tpri)) then return end
 
     local newname = "nullius-turbine-" .. ttyp .. "-" ..
@@ -268,36 +267,35 @@ function entity_paste_event(event)
     end
   elseif (is_surge_entity(tname) and is_surge_entity(sname)) then
     local tsurge = scan_surge_priority(tname)
-	local ssurge = scan_surge_priority(sname)
+	  local ssurge = scan_surge_priority(sname)
     if ((tsurge == nil) or (ssurge == nil)) then return end
-	if (tsurge.priority == ssurge.priority) then return end
+	  if (tsurge.priority == ssurge.priority) then return end
     toggle_surge(target, tname, force)
   elseif (is_hangar_entity(tname) and is_hangar_entity(sname)) then
     local thang = scan_hangar_name(tname)
-	local shang = scan_hangar_name(sname)
-	if (thang.iscon == shang.iscon) then return end
-	toggle_hangar(target, tname, force)
+	  local shang = scan_hangar_name(sname)
+	  if (thang.iscon == shang.iscon) then return end
+	  toggle_hangar(target, tname, force)
   end
 end
 
 script.on_event(defines.events.on_entity_settings_pasted, entity_paste_event)
 
-
 function dolly_moved_entity(event)
-  if (global.nullius_turbines == nil) then return end
+  if (storage.nullius_turbines == nil) then return end
   if (event == nil) then return end
   local entity = event.moved_entity
   if ((entity == nil) or (not entity.valid)) then return end
   if (string.sub(entity.name, 1, 16) ~= "nullius-turbine-") then return end
-  local entry = global.nullius_turbines[entity.unit_number]
+  local entry = storage.nullius_turbines[entity.unit_number]
   if (entry == nil) then return end
   replace_turbine(entity, force, nil)
 end
 
 
 function convert_all_turbines()
-  if (global.nullius_turbines == nil) then
-    global.nullius_turbines = { }
+  if (storage.nullius_turbines == nil) then
+    storage.nullius_turbines = { }
   end
   for _,surface in pairs(game.surfaces) do
     local turbines = surface.find_entities_filtered{name=

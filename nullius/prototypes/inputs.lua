@@ -11,13 +11,6 @@ data:extend({
   },
   {
     type = "custom-input",
-    name = "nullius-mirror",
-    order = "nullius-ibc",
-    key_sequence = "PAD *",
-	include_selected_prototype = true
-  },
-  {
-    type = "custom-input",
     name = "nullius-upload-mind",
     order = "nullius-icb",
     key_sequence = "U",

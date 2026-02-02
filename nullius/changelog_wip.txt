@@ -1,0 +1,69 @@
+changelog in construction
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025
+  Changes:
+    -Renamed a lot of recipe's internal names in order to merge them with their products in factoriopedia
+  Comments:
+    Here is the list of renames I was unsure of, in the end I did not do most of them, but I keep a record of the ideas: (also see the commented lines in clutterpedia.lua)
+  -wastewater -> sand disposal (does it make sense to have one main recipe though ??
+  -air -> nullius-air-filtration (have to rename the fixed recipe for air filters)
+  -seawater -> salination (have to rename the fixed recipe for air filters)
+  -sludge -> wastewater filtration/dust disolution
+  -carbon dioxide -> oxygenated air separation ?/dust disolution sulfuric(that would changes the main_product of the original recipe)
+  -hydrogen -> water electrolysis
+  -oxygen -> oxygenated air separation/steam electrolysis
+  -steam -> hydrogen combustion
+  -calcium chloride solution -> calcium chloride 1
+  -residual gas -> air separation 2
+  -sulfur dioxide -> volcanic separation 1
+  -boric acid -> volcanic separation 2
+  -trace gas -> volcanic separation 3
+  -sodium hydroxide -> brine electrolysis
+  -sodium -> salt electrolysis 
+  -chlorine -> hydrogen chloride electrolysis
+  -helium -> trace separation
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025
+  Features:
+    - Updated to 2.0
+    - Added landing pad: Now the results of rocket launches will be collected there
+    - Re-introduced red and green wires so there is a seamless transition to 2.0
+    - Added essential techs
+    - Added command to flip all valves (i will remove it when i'm convinced it's not needed anymore)
+    - Added display panels and selector combinator
+    - Added setting to hide the voiding recipe icon from chimneys and outfalls
+    - Added circuit connections to most buildings
+    - Added settings to control the sound of wind turbines
+  Changes:
+    - Reworked the inserters: Removed filter inserters, now base inserters have filters except tier 1, their recipes have been adapted
+    - Removed mirror buildings, use 2.0 flipping instead, removed chirality research
+    - Added a trigger tech "Salvage lab wreckage"
+    - Removed regular artillery shortcut and discharge defense shortcut
+    - Changed required techs for most shortcuts
+    - Now uses the Valve prototype for valves
+    - Changed plumbing and pumping checkpoints to reflect lesser need for pumps in 2.0 fluid system
+    - Made tanks rotatable/flippable
+  Balancing:
+    - Increased the pumping speeds of pumps (and max flow rate)
+  Bugfixes:
+    - 
+  Graphics:
+    - Added icons for drones ammo categories
+    - Reworked voiding recipes icons to make them standout more in factoriopedia
+    - Altered lime recipe icon so that it's distinguishable from the item in the signals gui
+    - Altered recipe icons for: nuclear fuel cell recycling, hydrochloric acid, hydrogen chloride,seawater filtration, freshwater filtration for signal gui
+  Info:
+    - Added description to inserters 
+    - Renamed the extension tech to inserter extension
+    - Tweaked description texts of landing entities to make them less ambiguous
+    - Removed mentions of the old pressure system
+  Modding:
+    - Removed the dependency on angels, now only depends on the graphics
+    - Now supports elevated rails
+    - Support for quick adjustable inserters
+    - Made factorissimo's factory buildings stackable again so the nullius recipes can be made in an assembler
+---------------------------------------------------------------------------------------------------
+
+Safefill: added setting to enable mining of waterfill
