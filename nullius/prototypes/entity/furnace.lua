@@ -880,8 +880,8 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = get_foundry_graphics_set(false, 0.4, {0.6, 0.8, 0.7}),
-    --graphics_set_flipped = get_foundry_graphics_set(true, 0.4, {0.6, 0.8, 0.7}),
-    --forced_symmetry = "horizontal",
+    graphics_set_flipped = get_foundry_graphics_set(true, 0.4, {0.6, 0.8, 0.7}),
+    forced_symmetry = "horizontal",
 
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
@@ -935,8 +935,8 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = get_foundry_graphics_set(false, 0.5, {0.7, 0.8, 1}),
-    --graphics_set_flipped = get_foundry_graphics_set(true, 0.5, {0.7, 0.8, 1}),
-    --forced_symmetry = "horizontal",
+    graphics_set_flipped = get_foundry_graphics_set(true, 0.5, {0.7, 0.8, 1}),
+    forced_symmetry = "horizontal",
    
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
@@ -987,8 +987,8 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     
     graphics_set = get_foundry_graphics_set(false, 0.6),
-    --graphics_set_flipped = get_foundry_graphics_set(true, 0.6),
-    --forced_symmetry = "horizontal",
+    graphics_set_flipped = get_foundry_graphics_set(true, 0.6),
+    forced_symmetry = "horizontal",
     
     resistances = {
       { type = "impact", decrease = 100, percent = 90 },
