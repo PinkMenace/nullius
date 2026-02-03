@@ -198,15 +198,19 @@ data:extend({
           },
           -- u_transition = {
           --   spritesheet = "__base__/graphics/terrain/stone-path/stone-path-u.png",
-          --   count = 10,
+          --   count = 8,
+          --   tile_height = 2,
+          --   scale = 0.5
           -- },
           -- o_transition = {
           --   spritesheet = "__base__/graphics/terrain/stone-path/stone-path-o.png",
-          --   count = 10,
+          --   count = 4,
+          --   scale = 0.5,
           -- },
         },
       },
     },
+    
     walking_sound = {
       {
         filename = "__base__/sound/walking/concrete-1.ogg",
