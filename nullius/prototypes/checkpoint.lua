@@ -830,7 +830,7 @@ data:extend({
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
 		    tostring(2),"train-stop", {"entity-name.train-stop"}}}, "\n",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
-		    tostring(150),"rail", {"item-name.rail"}}}},
+		    tostring(150),"rail", {"technology-description.nullius-straight-rail"}}}},
     order = "nullius-yd",
     icons = {
       {
