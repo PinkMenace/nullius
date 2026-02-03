@@ -3456,45 +3456,6 @@ data:extend({
   },
 
   {
-    type = "spidertron-remote",
-    name = "nullius-mecha-remote",
-    icon = "__base__/graphics/icons/spidertron-remote.png",
-    icon_color_indicator_mask = "__base__/graphics/icons/spidertron-remote-mask.png",
-    icon_size = 64,
-    
-    subgroup = "vehicle",
-    order = "nullius-df",
-    stack_size = 1,
-    
-    select = {
-      border_color = {1,0,0},
-      cursor_box_type = "spidertron-remote-selected",
-      mode = "controllable"
-    },
-    alt_select = {
-      border_color = {1,0,0},
-      cursor_box_type = "spidertron-remote-selected",
-      mode = "controllable"
-    }
-  },
-  {
-    type = "recipe",
-    name = "nullius-mecha-remote",
-    enabled = false,
-    always_show_made_in = true,
-    no_productivity = true,
-    category = "tiny-crafting",
-    energy_required = 20,
-    ingredients = {
-      {type = "item", name = "nullius-scout-remote", amount = 1},
-      {type = "item", name = "nullius-processor-2", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-mecha-remote", amount = 1}
-    }
-  },
-
-  {
     type = "item",
     name = "nullius-rocket",
     icon = "__base__/graphics/icons/rocket.png",

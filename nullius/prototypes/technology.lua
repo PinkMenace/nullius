@@ -12674,10 +12674,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-mecha"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-mecha-remote"
       }
     },
     unit = {
