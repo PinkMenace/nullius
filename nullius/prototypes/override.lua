@@ -983,16 +983,20 @@ data.raw["shortcut"]["give-artillery-targeting-remote"] = nil --.hidden = true
 data.raw["shortcut"]["give-discharge-defense-remote"] = nil --.hidden = true
 
 local scTechs = {
-  ["construction-robotics"] = nil, --"nullius-construction-robot-1" -- we have bots at the start
-  ["personal-roboport-equipment"] = nil,
-  ["electronics"] = nil,
-  ["circuit-network"] = nil,
+  ["construction-robotics"] = "nil", --"nullius-construction-robot-1" -- we have bots at the start
+  ["personal-roboport-equipment"] = "nil",
+  ["electronics"] = "nil",
+  ["circuit-network"] = "nil",
   ["exoskeleton-equipment"] = "nullius-cybernetics-4",
   ["spidertron"] = "nullius-personal-transportation-4"
 }
 for _, sc in pairs(data.raw.shortcut) do
-  if sc.technology_to_unlock ~= nil then
-    sc.technology_to_unlock = scTechs[sc.technology_to_unlock]
+  if sc.technology_to_unlock ~= nil and scTechs[sc.technology_to_unlock] ~= nil then
+    if scTechs[sc.technology_to_unlock] == "nil" then
+      sc.technology_to_unlock = nil
+    else
+      sc.technology_to_unlock = scTechs[sc.technology_to_unlock]
+    end
   end
 end
 

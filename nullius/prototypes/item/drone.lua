@@ -1,7 +1,9 @@
 local ICONPATH = "__nullius__/graphics/icons/"
 local ENTITYPATH = "__nullius__/graphics/entity/"
 
-local function create_drone(base_name, group, suborder, base_suffix, stack, flare, drone_icons, remote_icons, number)
+local item_sounds = require("__base__.prototypes.item_sounds")
+
+local function create_drone(base_name, group, suborder, base_suffix, stack, tech, flare, drone_icons, remote_icons, number)
   local prefix = "nullius-"..base_name
   local suffix = ""
   if (base_suffix ~= nil) then
@@ -36,15 +38,33 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, flar
         type = "capsule",
         name = prefix.."-remote"..suffix,
         icons = remote_icons,
-        flags = {"spawnable"}, --"only-in-cursor", "not-stackable", 
+        flags = {"spawnable", "only-in-cursor", "not-stackable"},
+        hidden_in_factoriopedia = true,
         capsule_action = {
           type = "artillery-remote",
           flare = prefix.."-flare"..suffix
         },
         subgroup = group.."-remote",
         order = "nullius-"..suborder,
+        
+        inventory_move_sound = item_sounds.artillery_remote_inventory_move,
+        pick_sound = item_sounds.mechanical_inventory_pickup,
+        drop_sound = item_sounds.artillery_remote_inventory_move,
         stack_size = 1
-      }
+      },
+      {
+        type = "shortcut",
+        name = prefix.."-remote"..suffix,
+        order = "nullius-"..suborder, --"e[spidertron-remote]",
+        action = "spawn-item",
+        localised_name = {"item-name."..prefix.."-remote"..suffix},
+        --associated_control_input = "give-spidertron-remote",
+        technology_to_unlock = tech,
+        unavailable_until_unlocked = true,
+        item_to_spawn = prefix.."-remote"..suffix,
+        icons = remote_icons,
+        small_icons = remote_icons,
+      },
     })
   end
 
@@ -85,8 +105,8 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, flar
 end
 
 
-local function create_terraform(suffix, tile, suborder)
-  create_drone("terraforming", "drone", "d"..suborder, suffix, 5)
+local function create_terraform(suffix, tile, suborder, tech)
+  create_drone("terraforming", "drone", "d"..suborder, suffix, 5, tech)
   data:extend({
     {
       type = "recipe",
@@ -104,31 +124,15 @@ local function create_terraform(suffix, tile, suborder)
       results = {
 			  {type="item", name="nullius-terraforming-drone-"..suffix, amount = 1}
       }
-    },
-    {
-      type = "recipe",
-      name = "nullius-terraforming-remote-"..suffix,
-      enabled = false,
-      always_show_made_in = true,
-      no_productivity = true,
-      category = "small-crafting",
-      energy_required = 10,
-      ingredients = {
-        {type = "item", name = "nullius-shallow-excavation-remote", amount = 1},
-        {type = "item", name = "nullius-productivity-module-1", amount = 1}
-      },
-      results = {
-				{type="item", name="nullius-terraforming-remote-"..suffix, amount = 1}
-			}
     }
   })
 end
 
-local function create_paving(suffix, landfill, suborder, tile)
+local function create_paving(suffix, landfill, suborder, tech, tile)
   if (tile == nil) then
     tile = suffix
   end
-  create_drone("paving", "paving", "b"..suborder, suffix, 5)
+  create_drone("paving", "paving", "b"..suborder, suffix, 5, tech)
   data:extend({
     {
       type = "recipe",
@@ -146,27 +150,11 @@ local function create_paving(suffix, landfill, suborder, tile)
       results = {
 				{type="item", name="nullius-paving-drone-"..suffix, amount = 1}
 			}
-    },
-    {
-      type = "recipe",
-      name = "nullius-paving-remote-"..suffix,
-      enabled = false,
-      always_show_made_in = true,
-      no_productivity = true,
-      category = "small-crafting",
-      energy_required = 5,
-      ingredients = {
-        {type = "item", name = "nullius-terraforming-remote-"..landfill, amount = 1},
-        {type = "item", name = "nullius-productivity-module-2", amount = 1}
-      },
-      results = {
-				{type="item", name="nullius-paving-remote-"..suffix, amount = 1}
-			}
     }
   })
 end
 
-local function create_miner(mineral, suborder, group, landfill, iname, isize, itint)
+local function create_miner(mineral, suborder, group, tech, iname, isize, itint)
   local drone_icons1 = {
     {
       icon = ICONPATH .. "asteroid-miner-1.png",
@@ -207,38 +195,40 @@ local function create_miner(mineral, suborder, group, landfill, iname, isize, it
     }
   }
   local sg = "asteroid-"..group
-  create_drone("guide", sg, suborder.."b", mineral, 10, "nullius-guide-drone-"..mineral, drone_icons1, remote_icons, 1)
-  create_drone("guide", sg, suborder.."c", mineral, 5, "nullius-guide-drone-"..mineral, drone_icons2, remote_icons, 2)
+  create_drone("guide", sg, suborder.."b", mineral, 10, tech, "nullius-guide-drone-"..mineral, drone_icons1, remote_icons, 1)
+  create_drone("guide", sg, suborder.."c", mineral, 5, tech, "nullius-guide-drone-"..mineral, drone_icons2, remote_icons, 2)
   data:extend({
     {
       type = "capsule",
       name = "nullius-guide-remote-"..mineral,
       icons = remote_icons,
-      flags = {"spawnable"}, --"only-in-cursor","not-stackable",
+      flags = {"spawnable", "only-in-cursor","not-stackable"},
+      hidden_in_factoriopedia = true,
       capsule_action = {
         type = "artillery-remote",
         flare = "nullius-guide-flare-"..mineral
       },
       subgroup = sg,
       order = "nullius-"..suborder.."e",
+      inventory_move_sound = item_sounds.artillery_remote_inventory_move,
+      pick_sound = item_sounds.mechanical_inventory_pickup,
+      drop_sound = item_sounds.artillery_remote_inventory_move,
       stack_size = 1
     },
     {
-      type = "recipe",
-      name = "nullius-guide-remote-"..mineral,
-      enabled = false,
-      always_show_made_in = true,
-      no_productivity = true,
-      category = "small-crafting",
-      energy_required = 10,
-      ingredients = {
-        {type = "item", name = "nullius-terraforming-remote-"..landfill, amount = 1},
-        {type = "item", name = "nullius-yield-module-3", amount = 1}
+        type = "shortcut",
+        name = "nullius-guide-remote-"..mineral,
+        order = "nullius-"..suborder.."e", --"e[spidertron-remote]",
+        action = "spawn-item",
+        
+        localised_name = {"item-name." .. "nullius-guide-remote-"..mineral},
+        --associated_control_input = "give-spidertron-remote",
+        technology_to_unlock = tech,
+        unavailable_until_unlocked = true,
+        item_to_spawn = "nullius-guide-remote-"..mineral,
+        icons = remote_icons,
+        small_icons = remote_icons,
       },
-      results = {
-				{type="item", name="nullius-guide-remote-"..mineral, amount = 1}
-			}
-    },
     {
       type = "recipe",
       name = "nullius-guide-drone-"..mineral.."-redeploy",
@@ -294,7 +284,7 @@ local function create_miner(mineral, suborder, group, landfill, iname, isize, it
 end
 
 
-local function create_bio_drone(base, suborder, iname)
+local function create_bio_drone(base, suborder, iname, tech)
   local drone_icons = {
     {
       icon = "__base__/graphics/icons/defender.png",
@@ -320,12 +310,12 @@ local function create_bio_drone(base, suborder, iname)
       shift = {0, -1}
     }
   }
-  create_drone(base, "farming", suborder, nil, 5, nil, drone_icons, remote_icons)
+  create_drone(base, "farming", suborder, nil, 5, tech, nil, drone_icons, remote_icons)
 end
 
 local function create_farmer(base, suborder, species, spore, spore_count,
-    remote, modtype, iname, drone_tier, bot_tier, cost1, cost2, cost3, cost4)
-  create_bio_drone(base, "b"..suborder, iname)
+    tech, iname, drone_tier, bot_tier, cost1, cost2, cost3, cost4)
+  create_bio_drone(base, "b"..suborder, iname, tech)
   data:extend({
     {
       type = "recipe",
@@ -344,91 +334,75 @@ local function create_farmer(base, suborder, species, spore, spore_count,
       results = {
 				{type="item", name="nullius-"..base.."-drone", amount = 1}
 			}
-    },
-    {
-      type = "recipe",
-      name = "nullius-"..base.."-remote",
-      enabled = false,
-      always_show_made_in = true,
-      no_productivity = true,
-      category = "small-crafting",
-      energy_required = 10,
-      ingredients = {
-        {type = "item", name = "nullius-"..remote, amount = 1},
-        {type = "item", name = "nullius-"..modtype, amount = 1}
-      },
-      results = {
-				{type="item", name="nullius-"..base.."-remote", amount = 1}
-			}
     }
   })
 end
 
 
-create_drone("scout", "drone", "bb", "1", 10, "nullius-scout-drone")
-create_drone("scout", "drone", "bc", "2", 10, "nullius-scout-drone")
-create_drone("demolition", "drone", "cb", nil, 10)
-create_drone("shallow-excavation", "drone", "cc", nil, 10)
-create_drone("excavation", "drone", "cd", nil, 10)
+create_drone("scout", "drone", "bb", "1", 10, "nullius-exploration-1", "nullius-scout-drone")
+create_drone("scout", "drone", "bc", "2", 10, "nullius-exploration-1", "nullius-scout-drone")
+create_drone("demolition", "drone", "cb", nil, 10, "nullius-terraforming-1")
+create_drone("shallow-excavation", "drone", "cc", nil, 10, "nullius-terraforming-1")
+create_drone("excavation", "drone", "cd", nil, 10, "nullius-terraforming-1")
 
-create_terraform("grey", "gravel", "b")
-create_terraform("tan", "sand", "c")
-create_terraform("brown", "bauxite", "d")
-create_terraform("red", "iron", "e")
-create_terraform("beige", "limestone", "f")
+create_terraform("grey", "gravel", "b", "nullius-terraforming-2")
+create_terraform("tan", "sand", "c", "nullius-terraforming-2")
+create_terraform("brown", "bauxite", "d", "nullius-terraforming-2")
+create_terraform("red", "iron", "e", "nullius-terraforming-2")
+create_terraform("beige", "limestone", "f", "nullius-terraforming-2")
 
-create_paving("grey", "grey", "b", "reinforced")
-create_paving("white", "beige", "c")
-create_paving("red", "red", "d")
-create_paving("blue", "beige", "e")
-create_paving("yellow", "tan", "f")
-create_paving("green", "beige", "g")
-create_paving("purple", "red", "h")
-create_paving("brown", "brown", "i")
-create_paving("black", "grey", "j")
-create_paving("hazard", "tan", "k")
+create_paving("grey", "grey", "b", "nullius-terraforming-3", "reinforced")
+create_paving("white", "beige", "c", "nullius-terraforming-3")
+create_paving("red", "red", "d", "nullius-terraforming-3")
+create_paving("blue", "beige", "e", "nullius-terraforming-3")
+create_paving("yellow", "tan", "f", "nullius-terraforming-3")
+create_paving("green", "beige", "g", "nullius-terraforming-3")
+create_paving("purple", "red", "h", "nullius-terraforming-3")
+create_paving("brown", "brown", "i", "nullius-terraforming-3")
+create_paving("black", "grey", "j", "nullius-terraforming-3")
+create_paving("hazard", "tan", "k", "nullius-terraforming-3")
 
-create_miner("iron", "b", 1, "red", "__base__/graphics/icons/iron-ore.png", 64)
-create_miner("sandstone", "c", 1, "tan",
+create_miner("iron", "b", 1, "nullius-asteroid-mining-1", "__base__/graphics/icons/iron-ore.png", 64)
+create_miner("sandstone", "c", 1, "nullius-asteroid-mining-1",
     "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-2.png", 64, {184, 125, 73})
-create_miner("bauxite", "d", 1, "brown", "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png", 32)
-create_miner("limestone", "e", 2, "beige",
+create_miner("bauxite", "d", 1, "nullius-asteroid-mining-1", "__angelssmeltinggraphics__/graphics/icons/ore-bauxite.png", 32)
+create_miner("limestone", "e", 2, "nullius-asteroid-mining-1",
     "__angelsrefininggraphics__/graphics/icons/angels-ore6/angels-ore6-3.png", 64, {0.898, 0.773, 0.688})
-create_miner("copper", "f", 2, "grey", "__base__/graphics/icons/copper-ore.png", 64)
-create_miner("uranium", "g", 2, "grey", "__base__/graphics/icons/uranium-ore.png", 64)
+create_miner("copper", "f", 2, "nullius-asteroid-mining-1", "__base__/graphics/icons/copper-ore.png", 64)
+create_miner("uranium", "g", 2, "nullius-asteroid-mining-1", "__base__/graphics/icons/uranium-ore.png", 64)
 
-create_farmer("algaculture", "b", "algae", "algae-spore", 60, "scout-remote",
-    "productivity-module-1", ICONPATH .. "algae.png", 1, 1,
+create_farmer("algaculture", "b", "algae", "algae-spore", 60, "nullius-ecology-1",
+    ICONPATH .. "algae.png", 1, 1,
     {type = "item", name = "nullius-box-mineral-dust", amount = 10}, 
     {type = "item", name = "nullius-bacteria-barrel", amount = 1})
-create_farmer("horticulture", "c", "grass", "box-grass-seed", 20, "algaculture-remote",
-    "productivity-module-1", ICONPATH .. "grass.png", 1, 1,
+create_farmer("horticulture", "c", "grass", "box-grass-seed", 20, "nullius-ecology-2",
+    ICONPATH .. "grass.png", 1, 1,
     {type = "item", name = "nullius-fertilizer", amount = 20}, 
     {type = "item", name = "nullius-water-barrel", amount = 10}, 
     {type = "item", name = "nullius-bacteria-barrel", amount = 1})
-create_farmer("arboriculture", "d", "tree", "tree-seed", 40, "horticulture-remote",
-    "productivity-module-2", "__base__/graphics/icons/tree-08.png", 2, 1,
+create_farmer("arboriculture", "d", "tree", "tree-seed", 40, "nullius-ecology-4",
+    "__base__/graphics/icons/tree-08.png", 2, 1,
     {type = "item", name = "nullius-fertilizer", amount = 30}, 
     {type = "item", name = "nullius-water-barrel", amount = 15}, 
     {type = "item", name = "nullius-worm", amount = 10})
-create_farmer("entomology", "e", "worm", "worm-egg", 40, "algaculture-remote",
-    "productivity-module-2", "__base__/graphics/icons/small-worm.png", 1, 2,
+create_farmer("entomology", "e", "worm", "worm-egg", 40, "nullius-ecology-3",
+    "__base__/graphics/icons/small-worm.png", 1, 2,
     {type = "item", name = "nullius-grass", amount = 30}, 
     {type = "item", name = "nullius-sludge-barrel", amount = 5}, 
     {type = "item", name = "nullius-bacteria-barrel", amount = 2})
-create_farmer("aquaculture", "f", "fish", "fish-egg", 50, "entomology-remote",
-    "productivity-module-2", "__base__/graphics/icons/fish.png", 2, 2,
+create_farmer("aquaculture", "f", "fish", "fish-egg", 50, "nullius-ecology-5",
+    "__base__/graphics/icons/fish.png", 2, 2,
     {type = "item", name = "nullius-algae", amount = 40}, 
     {type = "item", name = "nullius-worm", amount = 20})
-create_farmer("husbandry", "g", "arthropod", "arthropod-egg", 30, "aquaculture-remote",
-    "productivity-module-3", "__base__/graphics/icons/small-biter.png", 2, 3,
+create_farmer("husbandry", "g", "arthropod", "arthropod-egg", 30, "nullius-ecology-6",
+    "__base__/graphics/icons/small-biter.png", 2, 3,
     {type = "item", name = "nullius-box-wood", amount = 15}, 
     {type = "item", name = "nullius-fish", amount = 40}, 
     {type = "item", name = "nullius-arthropod", amount = 5}, 
     {type = "item", name = "nullius-shackle", amount = 6})
 
-create_bio_drone("sequestration-coal", "cb", "__base__/graphics/icons/coal-1.png")
-create_bio_drone("sequestration-petroleum", "cc", "__base__/graphics/icons/fluid/crude-oil.png")
+create_bio_drone("sequestration-coal", "cb", "__base__/graphics/icons/coal-1.png", "nullius-carbon-sequestration-4")
+create_bio_drone("sequestration-petroleum", "cc", "__base__/graphics/icons/fluid/crude-oil.png", "nullius-carbon-sequestration-4")
 
 
 data:extend({
@@ -471,29 +445,34 @@ data:extend({
     name = "nullius-scout-remote",
     icon = ICONPATH .. "scout-remote.png",
     icon_size = 64,
-    flags = {"spawnable"}, --"only-in-cursor", "not-stackable", 
+    flags = {"spawnable", "only-in-cursor", "not-stackable"},
+    hidden_in_factoriopedia = true,
     capsule_action = {
       type = "artillery-remote",
       flare = "nullius-scout-flare"
     },
     subgroup = "drone-remote",
     order = "nullius-b",
+    inventory_move_sound = item_sounds.artillery_remote_inventory_move,
+    pick_sound = item_sounds.mechanical_inventory_pickup,
+    drop_sound = item_sounds.artillery_remote_inventory_move,
     stack_size = 1
   },
   {
-    type = "recipe",
+    type = "shortcut",
     name = "nullius-scout-remote",
-    enabled = false,
-    category = "small-crafting",
-    always_show_made_in = true,
-    energy_required = 10,
-    ingredients = {
-      {type = "item", name = "nullius-sensor-2", amount = 1},
-      {type = "item", name = "programmable-speaker", amount = 1}
-    },
-    results = {
-				{type="item", name="nullius-scout-remote", amount = 1}
-			}
+    order = "nullius-b", --"e[spidertron-remote]",
+    action = "spawn-item",
+    
+    localised_name = {"item-name.nullius-scout-remote"},
+    --associated_control_input = "give-spidertron-remote",
+    technology_to_unlock = "nullius-exploration-1",
+    unavailable_until_unlocked = true,
+    item_to_spawn = "nullius-scout-remote",
+    icon = ICONPATH .. "scout-remote.png",
+    icon_size = 64,
+    small_icon = ICONPATH .. "scout-remote.png",
+    small_icon_size = 64,
   },
 
   {
@@ -518,7 +497,7 @@ data:extend({
     name = "nullius-legacy-demolition-drone",
     enabled = false,
     always_show_made_in = true,
-	hidden = true,
+	  hidden = true,
     allow_decomposition = false,
     allow_as_intermediate = false,
     category = "small-crafting",
@@ -530,22 +509,6 @@ data:extend({
     },
     results = {
 				{type="item", name="nullius-demolition-drone", amount = 1}
-			}
-  },
-  {
-    type = "recipe",
-    name = "nullius-demolition-remote",
-    enabled = false,
-    always_show_made_in = true,
-    no_productivity = true,
-    category = "small-crafting",
-    energy_required = 10,
-    ingredients = {
-      {type = "item", name = "nullius-scout-remote", amount = 1},
-      {type = "item", name = "nullius-processor-1", amount = 1}
-    },
-    results = {
-				{type="item", name="nullius-demolition-remote", amount = 1}
 			}
   },
 
@@ -571,7 +534,7 @@ data:extend({
     name = "nullius-excavation-drone",
     enabled = false,
     always_show_made_in = true,
-	no_productivity = true,
+	  no_productivity = true,
     category = "small-crafting",
     energy_required = 4,
     ingredients = {
@@ -587,7 +550,7 @@ data:extend({
     name = "nullius-legacy-excavation-drone",
     enabled = false,
     always_show_made_in = true,
-	hidden = true,
+	  hidden = true,
     allow_decomposition = false,
     allow_as_intermediate = false,
     category = "small-crafting",
@@ -598,38 +561,6 @@ data:extend({
     },
     results = {
 				{type="item", name="nullius-excavation-drone", amount = 1}
-			}
-  },
-  {
-    type = "recipe",
-    name = "nullius-shallow-excavation-remote",
-    enabled = false,
-    always_show_made_in = true,
-    no_productivity = true,
-    category = "small-crafting",
-    energy_required = 5,
-    ingredients = {
-      {type = "item", name = "nullius-demolition-remote", amount = 1},
-      {type = "item", name = "nullius-processor-2", amount = 1}
-    },
-    results = {
-				{type="item", name="nullius-shallow-excavation-remote", amount = 1}
-			}
-  },
-  {
-    type = "recipe",
-    name = "nullius-excavation-remote",
-    enabled = false,
-    always_show_made_in = true,
-    no_productivity = true,
-    category = "small-crafting",
-    energy_required = 3,
-    ingredients = {
-      {type = "item", name = "nullius-shallow-excavation-remote", amount = 1},
-      {type = "item", name = "nullius-red-wire", amount = 1}
-    },
-    results = {
-				{type="item", name="nullius-excavation-remote", amount = 1}
 			}
   },
 

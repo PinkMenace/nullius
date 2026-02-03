@@ -8531,10 +8531,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-scout-drone-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-scout-remote"
       }
     },
     unit = {
@@ -12572,23 +12568,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-demolition-remote"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-shallow-excavation-drone"
       },
       {
         type = "unlock-recipe",
         recipe = "nullius-excavation-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-shallow-excavation-remote"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-excavation-remote"
       }
     },
     unit = {
@@ -12617,15 +12601,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-terraforming-remote-grey"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-terraforming-drone-tan"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-terraforming-remote-tan"
       },
       {
         type = "unlock-recipe",
@@ -12633,23 +12609,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-terraforming-remote-brown"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-terraforming-drone-red"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-terraforming-remote-red"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-terraforming-drone-beige"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-terraforming-remote-beige"
       }
     },
     unit = {
@@ -12793,15 +12757,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-paving-remote-grey"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-paving-drone-white"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-paving-remote-white"
       },
       {
         type = "unlock-recipe",
@@ -12809,15 +12765,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-paving-remote-red"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-paving-drone-blue"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-paving-remote-blue"
       },
       {
         type = "unlock-recipe",
@@ -12825,15 +12773,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-paving-remote-yellow"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-paving-drone-green"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-paving-remote-green"
       },
       {
         type = "unlock-recipe",
@@ -12841,15 +12781,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-paving-remote-purple"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-paving-drone-brown"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-paving-remote-brown"
       },
       {
         type = "unlock-recipe",
@@ -12857,15 +12789,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-paving-remote-black"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-paving-drone-hazard"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-paving-remote-hazard"
       }
     },
     unit = {
@@ -13048,30 +12972,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-asteroid-miner-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-guide-remote-iron"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-guide-remote-sandstone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-guide-remote-bauxite"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-guide-remote-limestone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-guide-remote-copper"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-guide-remote-uranium"
       }
     },
     unit = {
@@ -13558,7 +13458,7 @@ data:extend({
     type = "technology",
     name = "nullius-ecology-1",
     order = "nullius-gf",
-	icons = {
+	  icons = {
       {
         icon = ICONPATH .. "target.png",
         icon_size = 64
@@ -13566,8 +13466,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        
-		scale = 0.95
+		    scale = 0.95
       },
       {
         icon = ICONPATH .. "algae.png",
@@ -13580,10 +13479,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-algaculture-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-algaculture-remote"
       }
     },
     unit = {
@@ -13908,7 +13803,7 @@ data:extend({
     type = "technology",
     name = "nullius-ecology-2",
     order = "nullius-gg",
-	icons = {
+	  icons = {
       {
         icon = ICONPATH .. "target.png",
         icon_size = 64
@@ -13916,8 +13811,7 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        
-		scale = 0.95
+		    scale = 0.95
       },
       {
         icon = ICONPATH .. "grass.png",
@@ -13930,10 +13824,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-horticulture-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-horticulture-remote"
       }
     },
     unit = {
@@ -14232,7 +14122,7 @@ data:extend({
     type = "technology",
     name = "nullius-ecology-3",
     order = "nullius-gh",
-	icons = {
+	  icons = {
       {
         icon = ICONPATH .. "target.png",
         icon_size = 64
@@ -14240,13 +14130,11 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        
-		scale = 0.95
+		    scale = 0.95
       },
       {
-		icon = "__base__/graphics/icons/small-worm.png",
+		    icon = "__base__/graphics/icons/small-worm.png",
         icon_size = 64,
-        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14255,10 +14143,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-entomology-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-entomology-remote"
       }
     },
     unit = {
@@ -14588,7 +14472,7 @@ data:extend({
     type = "technology",
     name = "nullius-ecology-4",
     order = "nullius-gi",
-	icons = {
+	  icons = {
       {
         icon = ICONPATH .. "target.png",
         icon_size = 64
@@ -14596,13 +14480,11 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        
-		scale = 0.95
+		    scale = 0.95
       },
       {
-		icon = "__base__/graphics/icons/tree-08.png",
+		    icon = "__base__/graphics/icons/tree-08.png",
         icon_size = 64,
-        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14611,10 +14493,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-arboriculture-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-arboriculture-remote"
       }
     },
     unit = {
@@ -14680,7 +14558,7 @@ data:extend({
     type = "technology",
     name = "nullius-ecology-5",
     order = "nullius-gi",
-	icons = {
+	  icons = {
       {
         icon = ICONPATH .. "target.png",
         icon_size = 64
@@ -14688,13 +14566,11 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        
-		scale = 0.95
+		    scale = 0.95
       },
       {
-		icon = "__base__/graphics/icons/fish.png",
+		    icon = "__base__/graphics/icons/fish.png",
         icon_size = 64,
-        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14703,10 +14579,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-aquaculture-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-aquaculture-remote"
       }
     },
     unit = {
@@ -14914,7 +14786,7 @@ data:extend({
     type = "technology",
     name = "nullius-ecology-6",
     order = "nullius-gj",
-	icons = {
+	  icons = {
       {
         icon = ICONPATH .. "target.png",
         icon_size = 64
@@ -14922,13 +14794,11 @@ data:extend({
       {
         icon = "__base__/graphics/icons/defender.png",
         icon_size = 64,
-        
-		scale = 0.95
+		    scale = 0.95
       },
       {
-		icon = "__base__/graphics/icons/small-biter.png",
+		    icon = "__base__/graphics/icons/small-biter.png",
         icon_size = 64,
-        
         scale = 0.7,
         shift = {4, 4}
       }
@@ -14937,10 +14807,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-husbandry-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-husbandry-remote"
       }
     },
     unit = {
@@ -15177,8 +15043,8 @@ data:extend({
       count = 300,
       ingredients = {
         {"nullius-biochemistry-pack", 1}, {"nullius-microbiology-pack", 1},
-		{"nullius-botany-pack", 1}, {"nullius-nematology-pack", 2},
-		{"nullius-dendrology-pack", 1}, {"nullius-ichthyology-pack", 1}
+		    {"nullius-botany-pack", 1}, {"nullius-nematology-pack", 2},
+		    {"nullius-dendrology-pack", 1}, {"nullius-ichthyology-pack", 1}
       },
       time = 600
     },
@@ -15218,15 +15084,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-sequestration-coal-remote"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-sequestration-petroleum-drone"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-sequestration-petroleum-remote"
       }
     },
     unit = {

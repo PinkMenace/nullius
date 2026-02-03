@@ -2349,22 +2349,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "nullius-sequestration-coal-remote",
-    enabled = false,
-    always_show_made_in = true,
-    no_productivity = true,
-    category = "small-crafting",
-    energy_required = 10,
-    ingredients = {
-      {type = "item", name = "nullius-terraforming-remote-grey", amount = 1},
-      {type = "item", name = "nullius-yield-module-3", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-sequestration-coal-remote", amount = 1}
-    }
-  },
-  {
-    type = "recipe",
     name = "nullius-sequestration-petroleum-drone",
     enabled = false,
     always_show_made_in = true,
@@ -2382,23 +2366,6 @@ data:extend({
     },
     main_product = "nullius-sequestration-petroleum-drone"
   },
-  {
-    type = "recipe",
-    name = "nullius-sequestration-petroleum-remote",
-    enabled = false,
-    always_show_made_in = true,
-    no_productivity = true,
-    category = "small-crafting",
-    energy_required = 10,
-    ingredients = {
-      {type = "item", name = "nullius-terraforming-remote-tan", amount = 1},
-      {type = "item", name = "nullius-yield-module-3", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-sequestration-petroleum-remote", amount = 1}
-    }
-  },
-
   {
     type = "item",
     name = "nullius-worm-genome",
