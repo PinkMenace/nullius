@@ -27,3 +27,5 @@ else
         end
     end
 end
+
+require("simulations.menu_simulations")
