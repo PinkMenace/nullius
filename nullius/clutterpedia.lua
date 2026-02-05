@@ -304,5 +304,5 @@ function recipe_renaming()
     end
 end
 
-generate_migrations()
+--generate_migrations()
 recipe_renaming()

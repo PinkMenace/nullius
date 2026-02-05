@@ -27,3 +27,5 @@ else
         end
     end
 end
+
+data.raw["utility-constants"]["default"].main_menu_simulations = nil

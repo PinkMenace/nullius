@@ -3,6 +3,7 @@ Version: 2.0.1
 Date: 18.12.2025
   Changes:
     - Renamed a lot of recipe's internal names in order to merge them with their products in factoriopedia
+    - Removed the mecha and drone remotes as physical items, now you get them from the shortcut bar
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 18.12.2025
