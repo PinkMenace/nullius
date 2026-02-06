@@ -1017,3 +1017,8 @@ for n = 0, 9 do
   local pi = data.raw.item["parameter-" .. n]
   pi.order = "nullius-" .. pi.order
 end
+
+data.raw["pipe"]["pipe"].fluid_box.max_pipeline_extent = 64
+data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.max_pipeline_extent = 64
+
+data.raw["utility-constants"]["default"].default_pipeline_extent = 672
