@@ -1039,3 +1039,11 @@ data.raw["pipe"]["nullius-pipe-4"].fluid_box.max_pipeline_extent = pipe_extents[
 data.raw["pipe-to-ground"]["nullius-underground-pipe-4"].fluid_box.max_pipeline_extent = pipe_extents[4]
 
 data.raw["utility-constants"]["default"].default_pipeline_extent = pipe_extents[4]
+
+
+local pump_energy_multiplier = settings.startup["nullius-pump-energy-multiplier"].value
+local pump_energy_usage = {15*pump_energy_multiplier, 20*pump_energy_multiplier, 30*pump_energy_multiplier}
+
+data.raw["pump"]["nullius-pump-1"].energy_usage = tostring(pump_energy_usage[1]) .. "kW"
+data.raw["pump"]["nullius-pump-2"].energy_usage = tostring(pump_energy_usage[2]) .. "kW"
+data.raw["pump"]["pump"].energy_usage = tostring(pump_energy_usage[3]) .. "kW"
