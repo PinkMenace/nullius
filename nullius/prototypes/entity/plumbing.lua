@@ -3256,7 +3256,6 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
-      max_pipeline_extent = 180,
       pipe_connections = {
         { position = {0, 0}, direction = defines.direction.north },
         { position = {0, 0},  direction = defines.direction.east },
@@ -3295,7 +3294,6 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
-      max_pipeline_extent = 250,
       pipe_connections = {
         { position = {0, 0}, direction = defines.direction.north },
         { position = {0, 0},  direction = defines.direction.east },
@@ -3371,7 +3369,6 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(),
-      max_pipeline_extent = 180,
       pipe_connections = {
         { position = {0, 0}, direction = defines.direction.north },
         {
@@ -3412,7 +3409,6 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(),
-      max_pipeline_extent = 250,
       pipe_connections = {
         { position = {0, 0}, direction = defines.direction.north },
         {

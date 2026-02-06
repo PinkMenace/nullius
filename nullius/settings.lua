@@ -39,5 +39,13 @@ data:extend({
         default_value = 1.0,
 		minimum_value = 0.0,
 		maximum_value = 1.0,
+    },
+    {
+        type = "int-setting",
+        name = "nullius-min-pipeline-extent",
+        setting_type = "startup",
+        default_value = 90,
+        minimum_value = 1,
+        maximum_value = 1000
     }
 })
