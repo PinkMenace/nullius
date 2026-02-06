@@ -1706,10 +1706,10 @@ data:extend({
       volume = 30000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {-1, -1},  direction = defines.direction.north },
-        { position = {1, 1},    direction = defines.direction.east },
-        { position = {1, 1},    direction = defines.direction.south },
-        { position = {-1, -1},  direction = defines.direction.west }
+        { position = {-1, -1},  direction = defines.direction.north, connection_category = {"tier3","tier4"} },
+        { position = {1, 1},    direction = defines.direction.east, connection_category = {"tier3","tier4"} },
+        { position = {1, 1},    direction = defines.direction.south, connection_category = {"tier3","tier4"} },
+        { position = {-1, -1},  direction = defines.direction.west, connection_category = {"tier3","tier4"} }
       }
     },
     two_direction_only = true,
@@ -1773,10 +1773,10 @@ data:extend({
       volume = 60000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {-1, -1},  direction = defines.direction.north },
-        { position = {1, 1},    direction = defines.direction.east },
-        { position = {1, 1},    direction = defines.direction.south },
-        { position = {-1, -1},  direction = defines.direction.west }
+        { position = {-1, -1},  direction = defines.direction.north, connection_category = {"tier3","tier4"} },
+        { position = {1, 1},    direction = defines.direction.east, connection_category = {"tier3","tier4"} },
+        { position = {1, 1},    direction = defines.direction.south, connection_category = {"tier3","tier4"} },
+        { position = {-1, -1},  direction = defines.direction.west, connection_category = {"tier3","tier4"} }
       }
     },
     two_direction_only = true,
@@ -2091,10 +2091,10 @@ data:extend({
       volume = 125000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -2}, direction = defines.direction.north },
-        { position = {2, 0},  direction = defines.direction.east },
-        { position = {-2, 0}, direction = defines.direction.west },
-        { position = {0, 2},  direction = defines.direction.south },
+        { position = {0, -2}, direction = defines.direction.north, connection_category = "tier4" },
+        { position = {2, 0},  direction = defines.direction.east, connection_category = "tier4" },
+        { position = {-2, 0}, direction = defines.direction.west, connection_category = "tier4" },
+        { position = {0, 2},  direction = defines.direction.south, connection_category = "tier4" },
       },
     },
     fast_replaceable_group = "large-tank",
@@ -2186,10 +2186,10 @@ data:extend({
       volume = 250000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -2}, direction = defines.direction.north },
-        { position = {2, 0},  direction = defines.direction.east },
-        { position = {-2, 0}, direction = defines.direction.west },
-        { position = {0, 2},  direction = defines.direction.south },
+        { position = {0, -2}, direction = defines.direction.north, connection_category = "tier4" },
+        { position = {2, 0},  direction = defines.direction.east, connection_category = "tier4" },
+        { position = {-2, 0}, direction = defines.direction.west, connection_category = "tier4" },
+        { position = {0, 2},  direction = defines.direction.south, connection_category = "tier4" },
       },
     },
     fast_replaceable_group = "large-tank",
@@ -2219,10 +2219,10 @@ data:extend({
       volume = 500000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, -2}, direction = defines.direction.north },
-        { position = {2, 0},  direction = defines.direction.east },
-        { position = {-2, 0}, direction = defines.direction.west },
-        { position = {0, 2},  direction = defines.direction.south },
+        { position = {0, -2}, direction = defines.direction.north, connection_category = "tier4" },
+        { position = {2, 0},  direction = defines.direction.east, connection_category = "tier4" },
+        { position = {-2, 0}, direction = defines.direction.west, connection_category = "tier4" },
+        { position = {0, 2},  direction = defines.direction.south, connection_category = "tier4" },
       },
     },
     fast_replaceable_group = "large-tank",
@@ -3256,11 +3256,12 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
+      max_pipeline_extent = 180,
       pipe_connections = {
-        { position = {0, 0}, direction = defines.direction.north },
-        { position = {0, 0},  direction = defines.direction.east },
-        { position = {0, 0},  direction = defines.direction.south },
-        { position = {0, 0}, direction = defines.direction.west }
+        { position = {0, 0}, direction = defines.direction.north, connection_category = {"default", "tier2"} },
+        { position = {0, 0},  direction = defines.direction.east, connection_category = {"default", "tier2"} },
+        { position = {0, 0},  direction = defines.direction.south, connection_category = {"default", "tier2"} },
+        { position = {0, 0}, direction = defines.direction.west, connection_category = {"default", "tier2"} }
       },
       hide_connection_info = true
     },
@@ -3294,11 +3295,12 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
+      max_pipeline_extent = 250,
       pipe_connections = {
-        { position = {0, 0}, direction = defines.direction.north },
-        { position = {0, 0},  direction = defines.direction.east },
-        { position = {0, 0},  direction = defines.direction.south },
-        { position = {0, 0}, direction = defines.direction.west }
+        { position = {0, 0}, direction = defines.direction.north, connection_category = {"default", "tier3"} },
+        { position = {0, 0},  direction = defines.direction.east, connection_category = {"default", "tier3"} },
+        { position = {0, 0},  direction = defines.direction.south, connection_category = {"default", "tier3"} },
+        { position = {0, 0}, direction = defines.direction.west, connection_category = {"default", "tier3"} }
       },
       hide_connection_info = true
     },
@@ -3332,10 +3334,10 @@ data:extend({
       volume = 400,
       pipe_covers = pipecoverspictures(), -- in case a real pipe is connected to a ghost
       pipe_connections = {
-        { position = {0, 0}, direction = defines.direction.north },
-        { position = {0, 0},  direction = defines.direction.east },
-        { position = {0, 0},  direction = defines.direction.south },
-        { position = {0, 0}, direction = defines.direction.west }
+        { position = {0, 0}, direction = defines.direction.north, connection_category = {"default", "tier4"} },
+        { position = {0, 0},  direction = defines.direction.east, connection_category = {"default", "tier4"} },
+        { position = {0, 0},  direction = defines.direction.south, connection_category = {"default", "tier4"} },
+        { position = {0, 0}, direction = defines.direction.west, connection_category = {"default", "tier4"} }
       },
       hide_connection_info = true
     },
@@ -3369,8 +3371,9 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = 180,
       pipe_connections = {
-        { position = {0, 0}, direction = defines.direction.north },
+        { position = {0, 0}, direction = defines.direction.north, connection_category = {"default", "tier2"} },
         {
           connection_type = "underground",
           position = {0, 0},
@@ -3409,8 +3412,9 @@ data:extend({
     fluid_box = {
       volume = 400,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = 250,
       pipe_connections = {
-        { position = {0, 0}, direction = defines.direction.north },
+        { position = {0, 0}, direction = defines.direction.north, connection_category = {"default", "tier3"} },
         {
           connection_type = "underground",
           position = {0, 0},
@@ -3449,7 +3453,7 @@ data:extend({
       volume = 400,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { position = {0, 0}, direction = defines.direction.north },
+        { position = {0, 0}, direction = defines.direction.north, connection_category = {"default", "tier4"} },
         {
           position = {0, 0},
           connection_type = "underground",
