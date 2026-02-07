@@ -1705,6 +1705,7 @@ data:extend({
     fluid_box = {
       volume = 30000,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = pipe_extents[1],
       pipe_connections = {
         { position = {-1, -1},  direction = defines.direction.north },
         { position = {1, 1},    direction = defines.direction.east },
@@ -1772,6 +1773,7 @@ data:extend({
     fluid_box = {
       volume = 60000,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = pipe_extents[2],
       pipe_connections = {
         { position = {-1, -1},  direction = defines.direction.north },
         { position = {1, 1},    direction = defines.direction.east },
@@ -1836,6 +1838,7 @@ data:extend({
     fluid_box = {
       volume = 10000,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = pipe_extents[2],
       pipe_connections = {
         { position = {0.5, -0.5}, direction = defines.direction.north },
         { position = {0.5, 0.5},  direction = defines.direction.south },
@@ -2043,6 +2046,7 @@ data:extend({
     fluid_box = {
       volume = 20000,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = pipe_extents[3],
       pipe_connections = {
         { position = {0.5, -0.5}, direction = defines.direction.north },
         { position = {0.5, 0.5},  direction = defines.direction.south},
@@ -2090,6 +2094,7 @@ data:extend({
     fluid_box = {
       volume = 125000,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = pipe_extents[1] / 2,
       pipe_connections = {
         { position = {0, -2}, direction = defines.direction.north },
         { position = {2, 0},  direction = defines.direction.east },
@@ -2185,6 +2190,7 @@ data:extend({
     fluid_box = {
       volume = 250000,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = pipe_extents[1],
       pipe_connections = {
         { position = {0, -2}, direction = defines.direction.north },
         { position = {2, 0},  direction = defines.direction.east },
@@ -2218,6 +2224,7 @@ data:extend({
     fluid_box = {
       volume = 500000,
       pipe_covers = pipecoverspictures(),
+      max_pipeline_extent = pipe_extents[2],
       pipe_connections = {
         { position = {0, -2}, direction = defines.direction.north },
         { position = {2, 0},  direction = defines.direction.east },

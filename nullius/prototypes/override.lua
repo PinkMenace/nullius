@@ -1018,14 +1018,6 @@ for n = 0, 9 do
   pi.order = "nullius-" .. pi.order
 end
 
-local pipe_extents = {}
-local last_extent = settings.startup["nullius-min-pipeline-extent"].value
-table.insert(pipe_extents, last_extent)
-for i = 2, 4 do
-  last_extent = last_extent * 2 + 2
-  table.insert(pipe_extents, last_extent)
-end
-
 data.raw["pipe"]["pipe"].fluid_box.max_pipeline_extent = pipe_extents[1]
 data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.max_pipeline_extent = pipe_extents[1]
 
@@ -1039,6 +1031,8 @@ data.raw["pipe"]["nullius-pipe-4"].fluid_box.max_pipeline_extent = pipe_extents[
 data.raw["pipe-to-ground"]["nullius-underground-pipe-4"].fluid_box.max_pipeline_extent = pipe_extents[4]
 
 data.raw["utility-constants"]["default"].default_pipeline_extent = pipe_extents[4]
+
+data.raw["storage-tank"]["storage-tank"].fluid_box.max_pipeline_extent = pipe_extents[1] / 2
 
 
 local pump_energy_multiplier = settings.startup["nullius-pump-energy-multiplier"].value

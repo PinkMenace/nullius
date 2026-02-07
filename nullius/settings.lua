@@ -41,14 +41,6 @@ data:extend({
 		maximum_value = 1.0,
     },
     {
-        type = "int-setting",
-        name = "nullius-min-pipeline-extent",
-        setting_type = "startup",
-        default_value = 90,
-        minimum_value = 1,
-        maximum_value = 1000
-    },
-    {
         type = "double-setting",
         name = "nullius-pump-energy-multiplier",
         setting_type = "startup",
