@@ -28,4 +28,4 @@ else
     end
 end
 
-data.raw["utility-constants"]["default"].main_menu_simulations = nil
+data.raw["utility-constants"]["default"].main_menu_simulations = require("menu-simulations.menu-simulations")
