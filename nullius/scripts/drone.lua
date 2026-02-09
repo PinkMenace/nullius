@@ -265,6 +265,7 @@ function miner_effect(event, ore, size, richness, goal_ind, goal_amount)
     if (e.valid and (e.type == "mining-drill")) then
     e.active = false
       e.active = true
+      e.update_connections()
   end
   end
 
