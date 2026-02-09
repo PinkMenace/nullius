@@ -2707,15 +2707,26 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    fluid_box = {
-      volume = 500,
-      pipe_covers = pipecoverspictures(),
-      pipe_connections =
-      {
-        { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
-        { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
-      }
-    },
+    -- fluid_box = {
+    --   volume = 500,
+    --   pipe_covers = pipecoverspictures(),
+    --   pipe_connections =
+    --   {
+    --     { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
+    --     { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
+    --   }
+    -- },
+    fluid_box =
+        {
+          volume = 500,
+          pipe_covers = pipecoverspictures(),
+          pipe_connections =
+          {
+            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
+            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
+          },
+          hide_connection_info = true,
+        },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"
@@ -2873,15 +2884,26 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    fluid_box = {
-      volume = 500,
-      pipe_covers = pipecoverspictures(),
-      pipe_connections =
-      {
-        { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
-        { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
-      }
-    },
+    -- fluid_box = {
+    --   volume = 500,
+    --   pipe_covers = pipecoverspictures(),
+    --   pipe_connections =
+    --   {
+    --     { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
+    --     { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
+    --   }
+    -- },
+    fluid_box =
+        {
+          volume = 500,
+          pipe_covers = pipecoverspictures(),
+          pipe_connections =
+          {
+            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
+            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
+          },
+          hide_connection_info = true,
+        },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"
@@ -3038,14 +3060,25 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    fluid_box = {
-      volume = 500,
-      pipe_connections = {
-        { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
-        { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
-      },
-	  pipe_covers = pipecoverspictures()
-    },
+    -- fluid_box = {
+    --   volume = 500,
+    --   pipe_connections = {
+    --     { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
+    --     { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
+    --   },
+	  -- pipe_covers = pipecoverspictures()
+    -- },
+    fluid_box =
+        {
+          volume = 500,
+          pipe_covers = pipecoverspictures(),
+          pipe_connections =
+          {
+            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
+            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
+          },
+          hide_connection_info = true,
+        },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"
@@ -3148,14 +3181,25 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    fluid_box = {
-      volume = 500,
-      pipe_connections = {
-        { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
-        { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
-      },
-	  pipe_covers = pipecoverspictures()
-    },
+    -- fluid_box = {
+    --   volume = 500,
+    --   pipe_connections = {
+    --     { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
+    --     { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
+    --   },
+    -- pipe_covers = pipecoverspictures()
+    -- },
+      fluid_box =
+        {
+          volume = 500,
+          pipe_covers = pipecoverspictures(),
+          pipe_connections =
+          {
+            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
+            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
+          },
+          hide_connection_info = true,
+        },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"

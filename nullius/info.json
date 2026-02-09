@@ -13,6 +13,7 @@
     "angelssmeltinggraphics >= 2.0.0",
     "angelspetrochemgraphics >= 2.0.1",
     "boblogistics >= 2.0.6",
+    "configurable-valves >= 0.3.3",
     "? RecipeBook >= 4.0.2",
     "? underground-pipe-pack >= 1.1.2",
     "? elevated-rails >= 2.0",
