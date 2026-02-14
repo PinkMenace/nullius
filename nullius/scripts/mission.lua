@@ -1,4 +1,5 @@
 local mod_gui = require("mod-gui")
+local artillery_remote = require("scripts.artillery_remote")
 
 local objective_name = {
     "probe", "oxygen", "algae", "grass", "tree",
@@ -329,7 +330,8 @@ function cargo_pod_finished(event)
 end
 
 function gui_clicked(event)
-  if event.element.valid and event.element.name == "nullius_mission_button" then
+  if not event.element.valid then return end
+  if event.element.name == "nullius_mission_button" then
     local player = game.players[event.player_index]
     if (storage.nullius_mission_show[event.player_index]) then
       storage.nullius_mission_show[event.player_index] = false
@@ -337,6 +339,13 @@ function gui_clicked(event)
       storage.nullius_mission_show[event.player_index] = true
     end
     update_mission_player(player)
+  elseif event.element.name == "nullius-remote-gui-close" then
+    artillery_remote.handle_remote_gui_close(event.player_index)
+  elseif string.sub(event.element.name, 1, 20) == "nullius-make-remote-" then
+    artillery_remote.handle_make_remote(
+      event.player_index,
+      string.sub(event.element.name, 21, -1)
+    )
   end
 end
 
