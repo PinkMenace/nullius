@@ -27,5 +27,15 @@ data:extend({
     name = "nullius-next-body",
     order = "nullius-icd",
     key_sequence = "CONTROL + U"
+  },
+  {
+    type = "shortcut",
+    name = "nullius-remote-gui",
+    icon = "__nullius__/graphics/icons/scout-remote.png",
+    small_icon = "__nullius__/graphics/icons/scout-remote.png",
+    technology_to_unlock = "nullius-exploration-1",
+    unavailable_until_unlocked = true,
+    order = "nulius-icf",
+    action = "lua"
   }
 })
