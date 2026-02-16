@@ -258,6 +258,10 @@ local function handle_remote_gui_shortcut(event_data)
   -- Open dialog box for the remote gui
   local player = game.get_player(event_data.player_index)
   local gui = player.gui
+  if gui.center["nullius-remote-gui-window"] then
+    -- Already open
+    return
+  end
   local frame = gui.center.add{
     type="frame",
     name="nullius-remote-gui-window",
