@@ -1282,7 +1282,7 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-steel-sheet", amount=2},
 	  {type="item", name="nullius-plastic", amount=1},
-      {type="item", name="nullius-one-way-valve", amount=1}
+      {type="item", name="nullius-configurable-valve", amount=1}
     },
     results = {
 			{type="item", name="barrel", amount = 3}
@@ -1323,7 +1323,7 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-box-steel-sheet", amount=2},
 	  {type="item", name="nullius-box-plastic", amount=1},
-      {type="item", name="nullius-box-one-way-valve", amount=1}
+      {type="item", name="nullius-box-configurable-valve", amount=1}
     },
     results = {
 			{type="item", name="nullius-box-barrel", amount = 3}
@@ -1345,7 +1345,7 @@ data:extend({
     energy_required = 6,
     ingredients = {
       {type="item", name="nullius-small-tank-1", amount=1},
-      {type="item", name="nullius-one-way-valve", amount=3}
+      {type="item", name="nullius-configurable-valve", amount=3}
     },
     results = {
 			{type="item", name="barrel", amount = 6}
@@ -1366,7 +1366,7 @@ data:extend({
     energy_required = 30,
     ingredients = {
       {type="item", name="nullius-box-small-tank-1", amount=1},
-      {type="item", name="nullius-box-one-way-valve", amount=3}
+      {type="item", name="nullius-box-configurable-valve", amount=3}
     },
     results = {
 			{type="item", name="nullius-box-barrel", amount = 6}
@@ -1415,7 +1415,7 @@ data:extend({
     energy_required = 5,
     ingredients = {
       {type="item", name="nullius-small-tank-1", amount=1},
-      {type="item", name="nullius-one-way-valve", amount=3}
+      {type="item", name="nullius-configurable-valve", amount=3}
     },
     results = {
 			{type="item", name="barrel", amount = 6}
@@ -1438,7 +1438,7 @@ data:extend({
     energy_required = 25,
     ingredients = {
       {type="item", name="nullius-box-small-tank-1", amount=1},
-      {type="item", name="nullius-box-one-way-valve", amount=3}
+      {type="item", name="nullius-box-configurable-valve", amount=3}
     },
     results = {
 			{type="item", name="nullius-box-barrel", amount = 6}
@@ -1476,7 +1476,7 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-steel-sheet", amount=2},
 	  {type="item", name="nullius-plastic", amount=1},
-      {type="item", name="nullius-one-way-valve", amount=1}
+      {type="item", name="nullius-configurable-valve", amount=1}
     },
     results = {
 			{type="item", name="barrel", amount = 3}
@@ -1517,7 +1517,7 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-box-steel-sheet", amount=2},
 	  {type="item", name="nullius-box-plastic", amount=1},
-      {type="item", name="nullius-box-one-way-valve", amount=1}
+      {type="item", name="nullius-box-configurable-valve", amount=1}
     },
     results = {
 			{type="item", name="nullius-box-barrel", amount = 3}

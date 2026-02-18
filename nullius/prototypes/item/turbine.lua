@@ -234,7 +234,7 @@ data:extend({
     ingredients = {
       {type = "item", name = "nullius-turbine-open-1", amount = 1},
       {type = "item", name = "nullius-small-tank-1", amount = 1},
-	  {type = "item", name = "nullius-top-up-valve", amount = 1}
+	    {type = "item", name = "nullius-configurable-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-turbine-closed-1", amount = 1}
@@ -251,7 +251,7 @@ data:extend({
     ingredients = {
       {type = "item", name = "nullius-box-turbine-open-1", amount = 1},
 	  {type = "item", name = "nullius-box-small-tank-1", amount = 1},
-	  {type = "item", name = "nullius-box-top-up-valve", amount = 1}
+	  {type = "item", name = "nullius-box-configurable-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-turbine-closed-1", amount = 1}

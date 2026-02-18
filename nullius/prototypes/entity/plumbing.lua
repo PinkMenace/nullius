@@ -6,6 +6,9 @@ local BASEENTITY = "__base__/graphics/entity/"
 require("pipe_graphics")
 collision_mask_util = require("collision-mask-util")
 
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
+
 local op = table.deepcopy(data.raw["offshore-pump"]["offshore-pump"])
 local si1 = {
   type = "assembling-machine",
@@ -1311,12 +1314,137 @@ data:extend({
   
   ---------------------------------------- VALVES -----------------------------------------------
   {
+        type = "pump",
+        name = "nullius-configurable-valve",
+        icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
+        icon_size = 32,
+        flags = {"placeable-player", "player-creation"}, -- "hide-alt-info"
+        minable = {mining_time = 0.2, result = "nullius-configurable-valve"},
+        max_health = 80,
+        corpse = "small-remnants",
+        resistances = {
+          { type = "impact", decrease = 100, percent = 90 },
+          { type = "fire", percent = 75 }
+        },
+        fast_replaceable_group = "pipe",
+    
+        localised_description = {"",
+          {"entity-description.configurable-valve"},
+          " ",
+          {"configurable-valves.more-in-factoriopedia"},
+        },
+        factoriopedia_description = {"",
+          {"entity-description.configurable-valve"},
+          {"configurable-valves.valve-examples"},
+          {"configurable-valves.valve-shortcuts"},
+        },
+        
+        dying_explosion = "pump-explosion",
+        collision_box = {{-0.29, -0.45}, {0.29, 0.45}},
+        selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+        icon_draw_specification = {scale = 0.5},
+        working_sound =
+        {
+          sound = { filename = "__base__/sound/pump.ogg", volume = 0.3 },
+        },
+        damaged_trigger_effect = hit_effects.entity(),
+        
+        fluid_box =
+        {
+          volume = 100, -- 400
+          pipe_covers = pipecoverspictures(),
+          pipe_connections =
+          {
+            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
+            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
+          },
+          hide_connection_info = true, --
+        },
+        energy_source = { type = "void" },
+        energy_usage = "29kW",
+        pumping_speed = 50,
+        impact_category = "metal",
+        open_sound = sounds.machine_open,
+        close_sound = sounds.machine_close,
+
+        animations = {
+            north = {
+	        	    layers = {
+	        	      {
+                  filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+                  frame_count = 1,
+                  width = 128,
+                  height = 64,
+                  scale = 0.5,
+                  shift = {0, -0.5}
+	        		    },
+	        		    {
+                  filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
+                  priority = "extra-high",
+                  frame_count = 1,
+                  width = 64,
+                  height = 64
+	        		    }
+	        	    }
+            },
+            east = {
+                filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
+                priority = "extra-high",
+                x = 64,
+                frame_count = 1,
+                width = 64,
+                height = 64,
+                shift = {0, 0}
+            },
+            south = {
+	        	    layers = {
+	        	      {
+                  filename = "__boblogistics__/graphics/entity/pipe/steel/pipe-straight-vertical.png",
+                  frame_count = 1,
+                  width = 128,
+                  height = 64,
+	        		      scale = 0.5,
+	        		      shift = {0, -0.5}
+	        		    },
+	        	      {
+                  filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
+                  priority = "extra-high",
+                  x = 128,
+                  frame_count = 1,
+                  width = 64,
+                  height = 64,
+                  shift = {0, -0.05}
+	        		    }
+	        	    }
+            },
+            west = {
+              filename = "__angelspetrochemgraphics__/graphics/entity/valve/valve-overflow.png",
+              priority = "extra-high",
+              x = 192,
+              frame_count = 1,
+              width = 64,
+              height = 64,
+              shift = {0, 0}
+            }
+        },
+
+        circuit_connector = circuit_connector_definitions.create_vector(universal_connector_template, {
+          { variation = 24, main_offset = util.by_pixel(-15/2-3, -8.5/2), shadow_offset = util.by_pixel(0, -0.5), show_shadow = false },
+          { variation = 26, main_offset = util.by_pixel(13.5/2, 4.5/2), shadow_offset = util.by_pixel(-7, -12.5), show_shadow = true },
+          { variation = 24, main_offset = util.by_pixel(-14.5/2-3, -8.5/2), shadow_offset = util.by_pixel(-12.5, 6), show_shadow = false },
+          { variation = 26, main_offset = util.by_pixel(-16/2, 3.5/2), shadow_offset = util.by_pixel(-14, 13.5), show_shadow = true },
+        }),
+        circuit_wire_max_distance = default_circuit_wire_max_distance
+    },
+    
+  {
     type = "valve",
     name = "nullius-priority-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-inspector.png",
     icon_size = 32,
+    hidden = true,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "nullius-priority-valve"},
+    minable = {mining_time = 0.2, result = "nullius-configurable-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -1408,8 +1536,9 @@ data:extend({
     name = "nullius-one-way-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
     icon_size = 32,
+    hidden = true,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "nullius-one-way-valve"},
+    minable = {mining_time = 0.2, result = "nullius-configurable-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -1500,8 +1629,9 @@ data:extend({
     name = "nullius-top-up-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-underflow.png",
     icon_size = 32,
+    hidden = true,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "nullius-top-up-valve"},
+    minable = {mining_time = 0.2, result = "nullius-configurable-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -1593,8 +1723,9 @@ data:extend({
     name = "nullius-relief-valve",
     icon = "__angelspetrochemgraphics__/graphics/icons/valve-return.png",
     icon_size = 32,
+    hidden = true,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "nullius-relief-valve"},
+    minable = {mining_time = 0.2, result = "nullius-configurable-valve"},
     max_health = 80,
     corpse = "small-remnants",
     resistances = {
@@ -2707,26 +2838,15 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    -- fluid_box = {
-    --   volume = 500,
-    --   pipe_covers = pipecoverspictures(),
-    --   pipe_connections =
-    --   {
-    --     { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
-    --     { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
-    --   }
-    -- },
-    fluid_box =
-        {
-          volume = 500,
-          pipe_covers = pipecoverspictures(),
-          pipe_connections =
-          {
-            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
-            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
-          },
-          hide_connection_info = true,
-        },
+    fluid_box = {
+      volume = 500,
+      pipe_covers = pipecoverspictures(),
+      pipe_connections =
+      {
+        { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
+        { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
+      }
+    },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"
@@ -2884,26 +3004,15 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    -- fluid_box = {
-    --   volume = 500,
-    --   pipe_covers = pipecoverspictures(),
-    --   pipe_connections =
-    --   {
-    --     { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
-    --     { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
-    --   }
-    -- },
-    fluid_box =
-        {
-          volume = 500,
-          pipe_covers = pipecoverspictures(),
-          pipe_connections =
-          {
-            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
-            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
-          },
-          hide_connection_info = true,
-        },
+    fluid_box = {
+      volume = 500,
+      pipe_covers = pipecoverspictures(),
+      pipe_connections =
+      {
+        { position = {0, -0.5}, flow_direction = "output", direction = defines.direction.north },
+        { position = {0, 0.5}, flow_direction = "input", direction = defines.direction.south }
+      }
+    },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"
@@ -3060,25 +3169,14 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    -- fluid_box = {
-    --   volume = 500,
-    --   pipe_connections = {
-    --     { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
-    --     { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
-    --   },
-	  -- pipe_covers = pipecoverspictures()
-    -- },
-    fluid_box =
-        {
-          volume = 500,
-          pipe_covers = pipecoverspictures(),
-          pipe_connections =
-          {
-            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
-            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
-          },
-          hide_connection_info = true,
-        },
+    fluid_box = {
+      volume = 500,
+      pipe_connections = {
+        { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
+        { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
+      },
+	  pipe_covers = pipecoverspictures()
+    },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"
@@ -3181,25 +3279,14 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "fire", decrease = 20, percent = 50 }
     },
-    -- fluid_box = {
-    --   volume = 500,
-    --   pipe_connections = {
-    --     { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
-    --     { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
-    --   },
-    -- pipe_covers = pipecoverspictures()
-    -- },
-      fluid_box =
-        {
-          volume = 500,
-          pipe_covers = pipecoverspictures(),
-          pipe_connections =
-          {
-            {connection_type = "linked", flow_direction = "output", linked_connection_id=31113 + 1 },
-            {connection_type = "linked", flow_direction = "input", linked_connection_id=31113 - 1 }
-          },
-          hide_connection_info = true,
-        },
+    fluid_box = {
+      volume = 500,
+      pipe_connections = {
+        { position = {0, 0}, flow_direction = "output", direction = defines.direction.south },
+        { position = {0, 0}, flow_direction = "input", direction = defines.direction.north }
+      },
+    pipe_covers = pipecoverspictures()
+    },
     energy_source = {
       type = "electric",
       usage_priority = "primary-input"

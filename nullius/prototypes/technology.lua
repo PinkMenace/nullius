@@ -372,11 +372,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-one-way-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-priority-valve"
+        recipe = "nullius-configurable-valve"
       },
       {
         type = "unlock-recipe",
@@ -821,14 +817,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-pump-1"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-relief-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-top-up-valve"
       }
     },
     unit = {
@@ -3892,7 +3880,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-one-way-valve-2"
+        recipe = "nullius-configurable-valve-2"
       },
       {
         type = "unlock-recipe",
@@ -6153,11 +6141,11 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-box-one-way-valve"
+        recipe = "nullius-box-configurable-valve"
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-unbox-one-way-valve"
+        recipe = "nullius-unbox-configurable-valve"
       },
       {
         type = "unlock-recipe",
@@ -6563,30 +6551,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-unbox-hazard-concrete"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-box-priority-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-priority-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-box-top-up-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-top-up-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-box-relief-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-relief-valve"
       },
       {
         type = "unlock-recipe",
@@ -8135,19 +8099,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-boxed-one-way-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-priority-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-relief-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-top-up-valve"
+        recipe = "nullius-boxed-configurable-valve"
       },
       {
         type = "unlock-recipe",

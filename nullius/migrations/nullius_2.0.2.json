@@ -1,0 +1,14 @@
+{
+    "item": [
+        ["nullius-relief-valve", "nullius-configurable-valve"],
+        ["nullius-top-up-valve", "nullius-configurable-valve"],
+        ["nullius-one-way-valve", "nullius-configurable-valve"],
+        ["nullius-priority-valve", "nullius-configurable-valve"]
+    ],
+    "recipe": [
+        ["nullius-one-way-valve", "nullius-configurable-valve"],
+        ["nullius-boxed-one-way-valve", "nullius-boxed-configurable-valve"],
+        ["nullius-box-one-way-valve", "nullius-box-configurable-valve"],
+        ["nullius-unbox-one-way-valve", "nullius-unbox-configurable-valve"]
+    ]
+}

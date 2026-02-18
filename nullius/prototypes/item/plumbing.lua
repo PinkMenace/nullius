@@ -586,7 +586,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       {type = "item", name = "nullius-motor-1", amount = 1},
-      {type = "item", name = "nullius-one-way-valve", amount = 1}
+      {type = "item", name = "nullius-configurable-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-pump-1", amount = 1}
@@ -602,7 +602,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       {type = "item", name = "nullius-box-motor-1", amount = 1},
-      {type = "item", name = "nullius-box-one-way-valve", amount = 1}
+      {type = "item", name = "nullius-box-configurable-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-box-pump-1", amount = 1}
@@ -655,7 +655,7 @@ data:extend({
       {type = "item", name = "nullius-pump-2", amount = 2},
       {type = "item", name = "nullius-motor-3", amount = 1},
       {type = "item", name = "nullius-pipe-4", amount = 2},
-      {type = "item", name = "nullius-top-up-valve", amount = 2},
+      {type = "item", name = "nullius-configurable-valve", amount = 2},
       {type = "item", name = "power-switch", amount = 1}
     },
     results = {
@@ -674,7 +674,7 @@ data:extend({
       {type = "item", name = "nullius-box-pump-2", amount = 2},
       {type = "item", name = "nullius-box-motor-3", amount = 1},
       {type = "item", name = "nullius-box-pipe-4", amount = 2},
-      {type = "item", name = "nullius-box-top-up-valve", amount = 2},
+      {type = "item", name = "nullius-box-configurable-valve", amount = 2},
       {type = "item", name = "nullius-box-power-switch", amount = 1}
     },
     results = {
@@ -719,7 +719,7 @@ data:extend({
     energy_required = 2,
     ingredients = {
       {type = "item", name = "nullius-pump-2", amount = 1},
-      {type = "item", name = "nullius-one-way-valve", amount = 2}
+      {type = "item", name = "nullius-configurable-valve", amount = 2}
     },
     results = {
       {type = "item", name = "nullius-small-pump-1", amount = 2}
@@ -737,7 +737,7 @@ data:extend({
     energy_required = 10,
     ingredients = {
       {type = "item", name = "nullius-box-pump-2", amount = 1},
-      {type = "item", name = "nullius-box-one-way-valve", amount = 2}
+      {type = "item", name = "nullius-box-configurable-valve", amount = 2}
     },
     results = {
       {type = "item", name = "nullius-box-small-pump-1", amount = 2}
@@ -826,7 +826,7 @@ data:extend({
       {type = "item", name = "stone-brick", amount = 3},
       {type = "item", name = "pipe", amount = 3},
       {type = "item", name = "nullius-iron-rod", amount = 2},
-      {type = "item", name = "nullius-one-way-valve", amount = 1}
+      {type = "item", name = "nullius-configurable-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-chimney-1", amount = 1}
@@ -867,101 +867,70 @@ data:extend({
       {type = "item", name = "nullius-chimney-3", amount = 1}
     }
   },
-
   {
-    type = "item",
-    name = "nullius-one-way-valve",
-    icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
-    icon_size = 32,
-    subgroup = "valves",
-    order = "nullius-db",
-    place_result = "nullius-one-way-valve",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "nullius-priority-valve",
-    icon = "__angelspetrochemgraphics__/graphics/icons/valve-inspector.png",
-    icon_size = 32,
-    subgroup = "valves",
-    order = "nullius-dc",
-    place_result = "nullius-priority-valve",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "nullius-top-up-valve",
-    icon = "__angelspetrochemgraphics__/graphics/icons/valve-underflow.png",
-    icon_size = 32,
-    subgroup = "valves",
-    order = "nullius-dd",
-    place_result = "nullius-top-up-valve",
-    stack_size = 200
-  },
-  {
-    type = "item",
-    name = "nullius-relief-valve",
-    icon = "__angelspetrochemgraphics__/graphics/icons/valve-return.png",
-    icon_size = 32,
-    subgroup = "valves",
-    order = "nullius-de",
-    place_result = "nullius-relief-valve",
-    stack_size = 200
-  },
-  {
-    type = "recipe",
-    name = "nullius-one-way-valve",
-    localised_name = {"", {"entity-name.nullius-one-way-valve"}, " ", tostring(1)},
-    enabled = false,
-    category = "small-crafting",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    order = "nullius-dbb",
-    energy_required = 4,
-    ingredients = {
-      {type = "item", name = "pipe", amount = 1},
-      {type = "item", name = "nullius-iron-sheet", amount = 1}
+      type = "item",
+      name = "nullius-configurable-valve",
+      icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
+      icon_size = 32,
+      subgroup = "valves",
+      order = "nullius-de",
+      place_result = "nullius-configurable-valve",
+      stack_size = 200
     },
-    results = {
-      {type = "item", name = "nullius-one-way-valve", amount = 1}
-    }
-  },
-  {
-    type = "recipe",
-    name = "nullius-one-way-valve-2",
-    localised_name = {"", {"entity-name.nullius-one-way-valve"}, " ", tostring(2)},
-	icons = {
-	  {
-	    icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
-        icon_size = 32
-	  },
-      {
-	    icon = ICONPATH .. "rubber.png",
-        icon_size = 64,
-        scale = 0.28,
-        shift = {10, -10}
+    {
+      type = "recipe",
+      name = "nullius-configurable-valve",
+      localised_name = {"", {"entity-name.nullius-configurable-valve"}, " ", tostring(1)},
+      enabled = false,
+      category = "small-crafting",
+      always_show_made_in = true,
+      show_amount_in_title = false,
+      always_show_products = true,
+      order = "nullius-dbb",
+      energy_required = 4,
+      ingredients = {
+        {type = "item", name = "pipe", amount = 1},
+        {type = "item", name = "nullius-iron-sheet", amount = 1}
+      },
+      results = {
+        {type = "item", name = "nullius-configurable-valve", amount = 1}
       }
-	},
-    enabled = false,
-    category = "small-assembly",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    order = "nullius-dbc",
-    energy_required = 6,
-    ingredients = {
-      {type = "item", name = "nullius-pipe-2", amount = 2},
-      {type = "item", name = "nullius-rubber", amount = 1},
-      {type = "item", name = "nullius-steel-sheet", amount = 1}
     },
-    results = {
-      {type = "item", name = "nullius-one-way-valve", amount = 5}
-    }
-  },
+    {
+      type = "recipe",
+      name = "nullius-configurable-valve-2",
+      localised_name = {"", {"entity-name.nullius-configurable-valve"}, " ", tostring(2)},
+    	icons = {
+    	  {
+    	    icon = "__angelspetrochemgraphics__/graphics/icons/valve-overflow.png",
+          icon_size = 32
+    	  },
+        {
+    	    icon = ICONPATH .. "rubber.png",
+          icon_size = 64,
+          scale = 0.28,
+          shift = {10, -10}
+        }
+    	},
+      enabled = false,
+      category = "small-assembly",
+      always_show_made_in = true,
+      show_amount_in_title = false,
+      always_show_products = true,
+      order = "nullius-dbc",
+      energy_required = 6,
+      ingredients = {
+        {type = "item", name = "nullius-pipe-2", amount = 2},
+        {type = "item", name = "nullius-rubber", amount = 1},
+        {type = "item", name = "nullius-steel-sheet", amount = 1}
+      },
+      results = {
+        {type = "item", name = "nullius-configurable-valve", amount = 5}
+      }
+    },
   {
     type = "recipe",
-    name = "nullius-boxed-one-way-valve",
+    name = "nullius-boxed-configurable-valve",
     enabled = false,
     category = "medium-only-assembly",
     subgroup = "boxed-plumbing",
@@ -975,115 +944,9 @@ data:extend({
       {type = "item", name = "nullius-box-steel-sheet", amount = 1}
     },
     results = {
-      {type = "item", name = "nullius-box-one-way-valve", amount = 5}
+      {type = "item", name = "nullius-box-configurable-valve", amount = 5}
     }
   },
-  {
-    type = "recipe",
-    name = "nullius-relief-valve",
-    enabled = false,
-    category = "tiny-crafting",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    energy_required = 2,
-    ingredients = {
-      {type = "item", name = "nullius-priority-valve", amount = 1},
-      {type = "item", name = "nullius-iron-wire", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-relief-valve", amount = 1}
-    }
-  },
-  {
-    type = "recipe",
-    name = "nullius-boxed-relief-valve",
-    enabled = false,
-    category = "medium-only-assembly",
-    subgroup = "boxed-plumbing",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    energy_required = 10,
-    ingredients = {
-      {type = "item", name = "nullius-box-priority-valve", amount = 2},
-      {type = "item", name = "nullius-box-steel-wire", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-box-relief-valve", amount = 2}
-    }
-  },
-  {
-    type = "recipe",
-    name = "nullius-top-up-valve",
-    enabled = false,
-    category = "tiny-crafting",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    energy_required = 2,
-    ingredients = {
-      {type = "item", name = "nullius-priority-valve", amount = 1},
-      {type = "item", name = "nullius-plastic", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-top-up-valve", amount = 1}
-    }
-  },
-  {
-    type = "recipe",
-    name = "nullius-boxed-top-up-valve",
-    enabled = false,
-    category = "medium-only-assembly",
-    subgroup = "boxed-plumbing",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    energy_required = 10,
-    ingredients = {
-      {type = "item", name = "nullius-box-priority-valve", amount = 2},
-      {type = "item", name = "nullius-box-rubber", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-box-top-up-valve", amount = 2}
-    }
-  },
-  {
-    type = "recipe",
-    name = "nullius-priority-valve",
-    enabled = false,
-    category = "tiny-crafting",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    energy_required = 2,
-    ingredients = {
-      {type = "item", name = "nullius-one-way-valve", amount = 1},
-      {type = "item", name = "nullius-iron-wire", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-priority-valve", amount = 1}
-    }
-  },
-  {
-    type = "recipe",
-    name = "nullius-boxed-priority-valve",
-    enabled = false,
-    category = "medium-only-assembly",
-    subgroup = "boxed-plumbing",
-    always_show_made_in = true,
-    show_amount_in_title = false,
-    always_show_products = true,
-    energy_required = 10,
-    ingredients = {
-      {type = "item", name = "nullius-box-one-way-valve", amount = 2},
-      {type = "item", name = "nullius-box-steel-wire", amount = 1}
-    },
-    results = {
-      {type = "item", name = "nullius-box-priority-valve", amount = 2}
-    }
-  },
-
   {
     type = "item",
     name = "nullius-outfall-1",
@@ -1137,7 +1000,7 @@ data:extend({
     energy_required = 4,
     ingredients = {
       {type = "item", name = "pipe-to-ground", amount = 1},
-      {type = "item", name = "nullius-one-way-valve", amount = 1}
+      {type = "item", name = "nullius-configurable-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-outfall-1", amount = 1}
@@ -1637,7 +1500,7 @@ data:extend({
     ingredients = {
       {type = "item", name = "nullius-small-furnace-1", amount = 1},
       {type = "item", name = "storage-tank", amount = 1},
-      {type = "item", name = "nullius-priority-valve", amount = 2},
+      {type = "item", name = "nullius-configurable-valve", amount = 2},
       {type = "item", name = "nullius-chimney-1", amount = 1},
       {type = "item", name = "nullius-filter-1", amount = 2}
     },
@@ -1833,7 +1696,7 @@ data:extend({
       {type = "item", name = "nullius-small-assembler-1", amount = 1},
       {type = "item", name = "storage-tank", amount = 1},
       {type = "item", name = "nullius-filter-1", amount = 1},
-      {type = "item", name = "nullius-priority-valve", amount = 1},
+      {type = "item", name = "nullius-configurable-valve", amount = 1},
       {type = "item", name = "nullius-glass", amount = 3}
     },
     results = {
@@ -1936,7 +1799,7 @@ data:extend({
       {type = "item", name = "small-electric-pole", amount = 3},
       {type = "item", name = "storage-tank", amount = 1},
       {type = "item", name = "nullius-filter-1", amount = 1},
-      {type = "item", name = "nullius-priority-valve", amount = 2}
+      {type = "item", name = "nullius-configurable-valve", amount = 2}
     },
     results = {
       {type = "item", name = "nullius-electrolyzer-1", amount = 1}
@@ -2237,7 +2100,7 @@ data:extend({
       {type="item", name="nullius-medium-tank-2", amount=3},
       {type="item", name="nullius-steel-cable", amount=3},
       {type="item", name="concrete", amount=8},
-      {type="item", name="nullius-relief-valve", amount=1}
+      {type="item", name="nullius-configurable-valve", amount=1}
     },
     results = {
       {type = "item", name = "nullius-large-tank-1", amount = 1}
@@ -2379,7 +2242,7 @@ data:extend({
       {type = "item", name = "nullius-underground-pipe-2", amount = 4},
       {type = "item", name = "nullius-filter-1", amount = 3},
       {type = "item", name = "nullius-pump-2", amount = 1},
-      {type = "item", name = "nullius-top-up-valve", amount = 1},
+      {type = "item", name = "nullius-configurable-valve", amount = 1},
       {type = "item", name = "stone-brick", amount = 12}
     },
     results = {
@@ -2440,7 +2303,7 @@ data:extend({
       {type = "item", name = "nullius-well-1", amount = 3},
       {type = "item", name = "nullius-steel-sheet", amount = 8},
       {type = "item", name = "nullius-refractory-brick", amount = 40},
-      {type = "item", name = "nullius-relief-valve", amount = 1}
+      {type = "item", name = "nullius-configurable-valve", amount = 1}
     },
     results = {
       {type = "item", name = "nullius-extractor-1", amount = 1}
@@ -2545,7 +2408,7 @@ data:extend({
     ingredients = {
       {type = "item", name = "nullius-pump-2", amount = 1},
       {type = "item", name = "nullius-medium-tank-2", amount = 1},
-      {type = "item", name = "nullius-top-up-valve", amount = 1},
+      {type = "item", name = "nullius-configurable-valve", amount = 1},
       {type = "item", name = "power-switch", amount = 1}
     },
     results = {
@@ -2565,7 +2428,7 @@ data:extend({
       {type = "item", name = "nullius-compressor-1", amount = 5},
       {type = "item", name = "nullius-air-filter-2", amount = 1},
       {type = "item", name = "nullius-large-tank-2", amount = 1},
-      {type = "item", name = "nullius-relief-valve", amount = 6},
+      {type = "item", name = "nullius-configurable-valve", amount = 6},
 	  {type = "item", name = "nullius-sensor-1", amount = 1}
     },
 	  results = {
@@ -3125,7 +2988,7 @@ data:extend({
       {type = "item", name = "inserter", amount = 1},
       {type = "item", name = "nullius-iron-sheet", amount = 3},
       {type = "item", name = "nullius-pipe-2", amount = 5},
-      {type = "item", name = "nullius-top-up-valve", amount = 2}
+      {type = "item", name = "nullius-configurable-valve", amount = 2}
     },
     results = {
       {type = "item", name = "nullius-barrel-pump-1", amount = 1}

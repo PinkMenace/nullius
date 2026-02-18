@@ -249,7 +249,7 @@ data:extend({
     energy_required = 5,
     ingredients = {
       {type = "item", name = "nullius-broken-chemical-plant", amount = 1},
-      {type = "item", name = "nullius-one-way-valve", amount = 2}
+      {type = "item", name = "nullius-configurable-valve", amount = 2}
     },
     results = {
 			{type="item", name="nullius-chemical-plant-1", amount = 1}

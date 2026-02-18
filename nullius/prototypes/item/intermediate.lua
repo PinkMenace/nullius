@@ -5596,7 +5596,7 @@ data:extend({
     ingredients = {
       {type="item", name="barrel", amount=1},
       {type="item", name="nullius-aluminum-sheet", amount=2},
-      {type="item", name="nullius-top-up-valve", amount=1}
+      {type="item", name="nullius-configurable-valve", amount=1}
     },
     results = {
       {type = "item", name = "nullius-canister", amount = 5}
@@ -5615,7 +5615,7 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-box-barrel", amount=1},
       {type="item", name="nullius-box-aluminum-sheet", amount=2},
-      {type="item", name="nullius-box-top-up-valve", amount=1}
+      {type="item", name="nullius-box-configurable-valve", amount=1}
     },
     results = {
       {type = "item", name = "nullius-box-canister", amount = 5}
@@ -5636,7 +5636,7 @@ data:extend({
     ingredients = {
       {type="item", name="barrel", amount=1},
       {type="item", name="nullius-aluminum-sheet", amount=2},
-      {type="item", name="nullius-top-up-valve", amount=1}
+      {type="item", name="nullius-configurable-valve", amount=1}
     },
     results = {
       {type = "item", name = "nullius-canister", amount = 5}
@@ -5658,7 +5658,7 @@ data:extend({
     ingredients = {
       {type="item", name="nullius-box-barrel", amount=1},
       {type="item", name="nullius-box-aluminum-sheet", amount=2},
-      {type="item", name="nullius-box-top-up-valve", amount=1}
+      {type="item", name="nullius-box-configurable-valve", amount=1}
     },
     results = {
       {type = "item", name = "nullius-box-canister", amount = 5}
