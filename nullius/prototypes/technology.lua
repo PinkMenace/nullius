@@ -376,10 +376,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-priority-valve"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-broken-chemical-plant"
       }
     },
@@ -822,14 +818,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "nullius-pump-1"
       },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-relief-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-top-up-valve"
-      }
     },
     unit = {
       count = 2,
@@ -6566,30 +6554,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "nullius-box-priority-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-priority-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-box-top-up-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-top-up-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-box-relief-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-unbox-relief-valve"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "nullius-box-barrel"
       },
       {
@@ -8136,18 +8100,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "nullius-boxed-one-way-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-priority-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-relief-valve"
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "nullius-boxed-top-up-valve"
       },
       {
         type = "unlock-recipe",

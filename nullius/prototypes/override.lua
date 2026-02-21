@@ -1057,3 +1057,15 @@ data.raw["pump"]["pump"].fluid_box =
     },
     hide_connection_info = true,
   }
+
+data.raw["pump"]["pump"].localised_description = {"",
+          {"entity-description.configurable-valve"},
+          " ",
+          {"configurable-valves.more-in-factoriopedia"},
+        }
+        
+data.raw["pump"]["pump"].factoriopedia_description = {"",
+          {"entity-description.configurable-valve"},
+          {"configurable-valves.valve-examples"},
+          {"configurable-valves.valve-shortcuts"}
+        }

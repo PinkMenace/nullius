@@ -383,13 +383,13 @@ data:extend({
     allow_copy_paste = false,
 	  localised_description = {"entity-description.nullius-minable",
 	    "40x[item=nullius-pipe-2] 24x[item=nullius-underground-pipe-2]"
-		.. "3x[item=nullius-priority-valve] 3x[item=nullius-pump-1]"},
+		.. "3x[item=nullius-one-way-valve] 3x[item=nullius-pump-1]"},
     minable = {
       mining_time = 0.5,
       results = {
         {type="item", name="nullius-pipe-2", amount=40},
         {type="item", name="nullius-underground-pipe-2", amount=24},
-        {type="item", name="nullius-priority-valve", amount=3},
+        {type="item", name="nullius-one-way-valve", amount=3},
         {type="item", name="nullius-pump-1", amount=3}
       }
     },
