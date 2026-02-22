@@ -868,9 +868,18 @@ label_icon("pipe-to-ground", 1, "grey")
 end
 
 data.raw["pump"]["pump"].localised_name = {"entity-name.nullius-pump-3"}
-data.raw["pump"]["pump"].localised_description = {"entity-description.nullius-pump-3"}
-data.raw.item["pump"].localised_name = {"entity-name.nullius-pump-3"}
-data.raw.item["pump"].localised_description = {"entity-description.nullius-pump-3"}
+data.raw["pump"]["pump"].localised_description = {"",
+          {"entity-description.nullius-pump-3"},
+          {"entity-description.nullius-configurable-pump"},
+          " ",
+          {"configurable-valves.more-in-factoriopedia"},
+        }
+data.raw["pump"]["pump"].factoriopedia_description = {"",
+          {"entity-description.nullius-pump-3"},
+          {"entity-description.nullius-configurable-pump"},
+          {"configurable-valves.valve-examples"},
+          {"configurable-valves.valve-shortcuts"},
+        }
 data.raw.item["pump"].subgroup = "pumping"
 data.raw.item["pump"].order = "nullius-bd"
 data.raw["pump"]["pump"].energy_source.drain = nil
@@ -1057,15 +1066,3 @@ data.raw["pump"]["pump"].fluid_box =
     },
     hide_connection_info = true,
   }
-
-data.raw["pump"]["pump"].localised_description = {"",
-          {"entity-description.configurable-valve"},
-          " ",
-          {"configurable-valves.more-in-factoriopedia"},
-        }
-        
-data.raw["pump"]["pump"].factoriopedia_description = {"",
-          {"entity-description.configurable-valve"},
-          {"configurable-valves.valve-examples"},
-          {"configurable-valves.valve-shortcuts"}
-        }
