@@ -52,19 +52,6 @@ local function create_drone(base_name, group, suborder, base_suffix, stack, tech
         drop_sound = item_sounds.artillery_remote_inventory_move,
         stack_size = 1
       },
-      {
-        type = "shortcut",
-        name = prefix.."-remote"..suffix,
-        order = "nullius-"..suborder, --"e[spidertron-remote]",
-        action = "spawn-item",
-        localised_name = {"item-name."..prefix.."-remote"..suffix},
-        --associated_control_input = "give-spidertron-remote",
-        technology_to_unlock = tech,
-        unavailable_until_unlocked = true,
-        item_to_spawn = prefix.."-remote"..suffix,
-        icons = remote_icons,
-        small_icons = remote_icons,
-      },
     })
   end
 
@@ -215,20 +202,6 @@ local function create_miner(mineral, suborder, group, tech, iname, isize, itint)
       drop_sound = item_sounds.artillery_remote_inventory_move,
       stack_size = 1
     },
-    {
-        type = "shortcut",
-        name = "nullius-guide-remote-"..mineral,
-        order = "nullius-"..suborder.."e", --"e[spidertron-remote]",
-        action = "spawn-item",
-        
-        localised_name = {"item-name." .. "nullius-guide-remote-"..mineral},
-        --associated_control_input = "give-spidertron-remote",
-        technology_to_unlock = tech,
-        unavailable_until_unlocked = true,
-        item_to_spawn = "nullius-guide-remote-"..mineral,
-        icons = remote_icons,
-        small_icons = remote_icons,
-      },
     {
       type = "recipe",
       name = "nullius-guide-drone-"..mineral.."-redeploy",
@@ -457,22 +430,6 @@ data:extend({
     pick_sound = item_sounds.mechanical_inventory_pickup,
     drop_sound = item_sounds.artillery_remote_inventory_move,
     stack_size = 1
-  },
-  {
-    type = "shortcut",
-    name = "nullius-scout-remote",
-    order = "nullius-b", --"e[spidertron-remote]",
-    action = "spawn-item",
-    
-    localised_name = {"item-name.nullius-scout-remote"},
-    --associated_control_input = "give-spidertron-remote",
-    technology_to_unlock = "nullius-exploration-1",
-    unavailable_until_unlocked = true,
-    item_to_spawn = "nullius-scout-remote",
-    icon = ICONPATH .. "scout-remote.png",
-    icon_size = 64,
-    small_icon = ICONPATH .. "scout-remote.png",
-    small_icon_size = 64,
   },
 
   {

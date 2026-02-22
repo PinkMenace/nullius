@@ -1,3 +1,6 @@
+
+artillery_remote = require("scripts.artillery_remote")
+
 function fuel_companion_drones(surface)
   local entities = surface.find_entities_filtered{
       name="companion", type="spider-vehicle"}
@@ -309,7 +312,8 @@ script.on_event(defines.events.on_research_finished,
         broken_crafted("nullius-broken-electrolyzer")
       end
     end
-	update_checkpoint_list(techname)
+    update_checkpoint_list(techname)
+    artillery_remote.reset_remote_gui()
   end
 )
 
