@@ -649,11 +649,11 @@ data:extend({
 	    {"technology-name.nullius-plumbing"}}},
     localised_description = {"",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
-		    tostring(1),"nullius-pump-1", {"entity-name.nullius-pump-1"}}}, "\n",
+		    tostring(5),"nullius-pump-1", {"entity-name.nullius-pump-1"}}}, "\n",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
 		    tostring(10),"nullius-medium-tank-2", {"entity-name.nullius-medium-tank-2"}}}, "\n",
 	    {"technology-description.nullius-build", {"technology-description.nullius-item",
-		    tostring(6),"nullius-relief-valve", {"entity-name.nullius-relief-valve"}}}},
+		    tostring(3),"nullius-one-way-valve", {"entity-name.nullius-one-way-valve"}}}},
     order = "nullius-yc",
     icons = {
       {
@@ -1883,7 +1883,7 @@ data:extend({
     localised_name = {"technology-name.nullius-checkpoint", {"technology-name.nullius-deployment",
 	    {"technology-name.nullius-pumping"}}},
     localised_description = {"technology-description.nullius-build",
-	    {"technology-description.nullius-item", tostring(5), "nullius-pump-2", {"entity-name.nullius-pump-2"}}},
+	    {"technology-description.nullius-item", tostring(15), "nullius-pump-2", {"entity-name.nullius-pump-2"}}},
     order = "nullius-yf",
     icons = {
       {
