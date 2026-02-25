@@ -22,7 +22,7 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "poison", decrease = 50, percent = 80 }
     },
-
+    allow_remote_driving = true,
     max_health = 500,
     energy_per_hit_point = 2,
     guns = nil,
@@ -100,7 +100,7 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "poison", decrease = 50, percent = 80 }
     },
-
+    allow_remote_driving = true,
     max_health = 600,
     energy_per_hit_point = 2,
     guns = { "nullius-car-gun" },
@@ -178,7 +178,7 @@ data:extend({
       { type = "impact", decrease = 100, percent = 90 },
       { type = "poison", decrease = 50, percent = 80 }
     },
-
+    allow_remote_driving = true,
     max_health = 800,
     energy_per_hit_point = 2,
     guns = { "nullius-car-gun-2", "nullius-car-launcher" },
@@ -253,6 +253,7 @@ data:extend({
       { type = "laser", decrease = 10, percent = 60 },
       { type = "acid", decrease = 5, percent = 50 }
     },
+    allow_remote_driving = true,
 
     max_health = 2500,
     energy_per_hit_point = 0.25,
@@ -319,6 +320,7 @@ data:extend({
       { type = "laser", decrease = 10, percent = 60 },
       { type = "acid", decrease = 5, percent = 50 }
     },
+    allow_remote_driving = true,
 
     max_health = 8000,
     energy_per_hit_point = 0.1,
@@ -405,6 +407,8 @@ data:extend({
       { type = "laser", decrease = 10, percent = 60 },
       { type = "acid", decrease = 5, percent = 50 }
     },
+    allow_remote_driving = true,
+
     mined_sound = data.raw["spider-vehicle"]["spidertron"].mined_sound,
     open_sound = data.raw["spider-vehicle"]["spidertron"].open_sound,
     close_sound = data.raw["spider-vehicle"]["spidertron"].close_sound,
@@ -458,6 +462,7 @@ data:extend({
       { type = "laser", decrease = 20, percent = 60 },
       { type = "acid", decrease = 10, percent = 50 }
     },
+    allow_remote_driving = true,
     mined_sound = data.raw["spider-vehicle"]["spidertron"].mined_sound,
     open_sound = data.raw["spider-vehicle"]["spidertron"].open_sound,
     close_sound = data.raw["spider-vehicle"]["spidertron"].close_sound,
